@@ -35,7 +35,7 @@ Modules in `semfd/`:
 - `closure.py`: certified closure.
 - `maintain.py`: bound propagation under updates.
 - `composite.py`: two-attribute left-hand sides.
-- `planner.py`: two rules that choose between certifying and resolving, evaluated in E13 and not used by the system.
+- `planner.py`: two rules that choose between certifying and resolving (per-candidate cap: E1b variant; run-level budget: E13), not used by the system.
 - `baselines.py`: the baselines.
 - `data.py`: dataset loaders and probe injection.
 
