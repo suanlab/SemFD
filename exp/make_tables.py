@@ -678,6 +678,22 @@ def paper_numbers():
         add(f"E11 no-audit mean (condition (i) mass) below oracle g3 {key} (natural, tolerant LHS, seed 0)",
             f"{len(under)} of {len(nat)}; max shortfall {max((f['g3'] - f['mass_i'] for f in under), default=0):.3f}; "
             f"true FDs among them {sum(f['g3'] <= 0.05 for f in under)}; crossing delta=0.05 {sum(f['mass_i'] <= 0.05 < f['g3'] for f in under)}")
+    pp = R / "e12_hidden_alias.json"
+    if pp.exists():
+        e12 = load(pp)
+        rr, cf = e12["runs"], e12["config"]
+        def ours(v, key):
+            return [r["ours"][v][key] for r in rr]
+        add(f"E12 hidden aliases (GeoNames {cf['n_cities']} cities, rho={cf['rho']}, {len(rr)} seeds)",
+            f"injected mass {min(r['injected_mass'] for r in rr):.3f}-{max(r['injected_mass'] for r in rr):.3f} "
+            f"(available {min(r['hidden_alias_mass_available'] for r in rr):.3f}-{max(r['hidden_alias_mass_available'] for r in rr):.3f}); "
+            f"g3 {min(r['g3'] for r in rr):.3f}-{max(r['g3'] for r in rr):.3f} (false at delta={cf['delta']}: {sum(not r['truth'] for r in rr)}/{len(rr)}); "
+            f"string g3 {min(r['g3_string'] for r in rr):.3f}-{max(r['g3_string'] for r in rr):.3f}; "
+            f"neighbor-only (nu_bar={cf['nu_bar']}) certified {sum(ours('ann_nubar', 'certified'))}/{len(rr)}, "
+            f"U {min(ours('ann_nubar', 'ub')):.3f}-{max(ours('ann_nubar', 'ub')):.3f}, measured nu {min(ours('ann_nubar', 'nu')):.3f}-{max(ours('ann_nubar', 'nu')):.3f}, "
+            f"calls {min(ours('ann_nubar', 'calls'))}-{max(ours('ann_nubar', 'calls'))}; "
+            f"inverse certified {sum(ours('inverse', 'certified'))}/{len(rr)}, U {min(ours('inverse', 'ub')):.3f}-{max(ours('inverse', 'ub')):.3f}, "
+            f"calls {min(ours('inverse', 'calls'))}-{max(ours('inverse', 'calls'))}")
     pp = R / "e1b_geonames_640k.json"
     if pp.exists():
         rr = load(pp)

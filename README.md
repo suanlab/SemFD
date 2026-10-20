@@ -58,6 +58,7 @@ Experiments in `exp/`:
 | `mb_probe.py` | MusicBrainz feasibility check |
 | `e10_updates.py` | certificates under updates |
 | `e11_partial_inverse.py` | incomplete inverse access and the audit split |
+| `e12_hidden_alias.py` | hidden aliases: neighbor-only mode fails where the inverse rejects |
 | `e3_refine.py` | self-refining witness (power) |
 
 ## Reproduce

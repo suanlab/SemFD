@@ -49,6 +49,8 @@ run e10_small exp/e10_updates.py --ins 0.004 --dele 0.002 --seeds 3 --tag _small
 run e10_large exp/e10_updates.py --ins 0.02 --dele 0.01 --seeds 3 --tag _large
 run e10_small128k exp/e10_updates.py --ins 0.004 --dele 0.002 --n-cities 128000 --seeds 1 --tag _small128k
 run e3_refine exp/e3_refine.py --reps 200
+# review-v6 addition: hidden aliases (neighbor-only mode fails, inverse rejects)
+run e12_hidden_alias exp/e12_hidden_alias.py --seeds 3
 # E8 (LLM oracle; needs llama-cpp-python and the GGUF in $E8_MODEL). Sequential and long: run separately:
 #   OMP_NUM_THREADS=1 nice -n 15 .venv/bin/python -I exp/e8_llm_oracle.py --canon --procs 4 --threads 6
 #   .venv/bin/python -I exp/e8_llm_oracle.py --offline --seeds 3

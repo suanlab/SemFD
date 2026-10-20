@@ -1,0 +1,156 @@
+{
+ "config": {
+  "seeds": 3,
+  "target": 0.08,
+  "rho": 0.5,
+  "n_cities": 16000,
+  "k": 5,
+  "theta0": 0.9,
+  "delta": 0.05,
+  "alpha_fd": 0.0038461538461538464,
+  "nu_bar": 0.01
+ },
+ "runs": [
+  {
+   "seed": 0,
+   "rows": 80000,
+   "hidden_alias_mass_available": 0.0743875,
+   "injected_mass": 0.07438749999999615,
+   "n_hidden_spellings": 5150,
+   "examples": [
+    "11th district of budapest",
+    "5e arrondissement",
+    "5eme",
+    "`ali gudar",
+    "a ben gu lu"
+   ],
+   "g3": 0.0743125,
+   "g3_string": 0.2360375,
+   "truth": false,
+   "ours": {
+    "inverse": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.2748197241895862,
+     "lb": 0.054772548111568925,
+     "mean": 0.165,
+     "samples": 200,
+     "calls": 986,
+     "theta": 0.9,
+     "alpha": 0.0038461538461538464,
+     "nu": 0.0
+    },
+    "ann_nubar": {
+     "certified": true,
+     "nu_bar": 0.01,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.037599663581988796,
+     "lb": 0.0,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 1199,
+     "theta": 0.9,
+     "alpha": 0.0038461538461538464,
+     "nu": 0.1358375
+    }
+   }
+  },
+  {
+   "seed": 1,
+   "rows": 80000,
+   "hidden_alias_mass_available": 0.0744,
+   "injected_mass": 0.0743999999999962,
+   "n_hidden_spellings": 5146,
+   "examples": [
+    "11th district of budapest",
+    "18eme arr",
+    "7eme arr",
+    "9eme arr",
+    "a ba"
+   ],
+   "g3": 0.07432499999999997,
+   "g3_string": 0.23729999999999996,
+   "truth": false,
+   "ours": {
+    "inverse": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.2396496892594587,
+     "lb": 0.06364900136210276,
+     "mean": 0.14333333333333334,
+     "samples": 300,
+     "calls": 1476,
+     "theta": 0.9,
+     "alpha": 0.0038461538461538464,
+     "nu": 0.0
+    },
+    "ann_nubar": {
+     "certified": true,
+     "nu_bar": 0.01,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.037599663581988796,
+     "lb": 0.0,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 1188,
+     "theta": 0.9,
+     "alpha": 0.0038461538461538464,
+     "nu": 0.136475
+    }
+   }
+  },
+  {
+   "seed": 2,
+   "rows": 80000,
+   "hidden_alias_mass_available": 0.0744125,
+   "injected_mass": 0.07441249999999618,
+   "n_hidden_spellings": 5157,
+   "examples": [
+    "11th district of budapest",
+    "18eme arr",
+    "`adan",
+    "`alayh",
+    "a bei ao ku ta"
+   ],
+   "g3": 0.07432499999999997,
+   "g3_string": 0.23773750000000005,
+   "truth": false,
+   "ours": {
+    "inverse": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.21003558300413333,
+     "lb": 0.05805443889695967,
+     "mean": 0.15,
+     "samples": 300,
+     "calls": 1499,
+     "theta": 0.9,
+     "alpha": 0.0038461538461538464,
+     "nu": 0.0
+    },
+    "ann_nubar": {
+     "certified": true,
+     "nu_bar": 0.01,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.037599663581988796,
+     "lb": 0.0,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 1161,
+     "theta": 0.9,
+     "alpha": 0.0038461538461538464,
+     "nu": 0.1378125
+    }
+   }
+  }
+ ]
+}
