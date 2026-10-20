@@ -57,6 +57,7 @@ for m in unary pairs; do
   run e13_geonames_$m exp/e13_planner.py --dataset geonames --kw "$G16" --tag _16k --mode $m
   run e13_tax_$m exp/e13_planner.py --dataset tax --mode $m
   run e13_ndc_$m exp/e13_planner.py --dataset ndc --mode $m; done
+run e15_slack exp/e15_slack.py
 # E8 (LLM oracle; needs llama-cpp-python and the GGUF in $E8_MODEL). Sequential and long: run separately:
 #   OMP_NUM_THREADS=1 nice -n 15 .venv/bin/python -I exp/e8_llm_oracle.py --canon --procs 4 --threads 6
 #   .venv/bin/python -I exp/e8_llm_oracle.py --offline --seeds 3

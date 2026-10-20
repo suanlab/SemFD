@@ -694,8 +694,9 @@ def paper_numbers():
             if pp.exists() and (R / base_file).exists():
                 rr, bb = load(pp), load(R / base_file)
                 pc, bc = np.mean([r["calls"] for r in rr]), np.mean([r[base_key] for r in bb])
+                per = [r["calls"] / next(q[base_key] for q in bb if q["seed"] == r["seed"]) for r in rr]
                 add(f"E13 run-level planner {key} {mode} ({len(rr)} seeds)",
-                    f"calls {pc:,.0f} vs certificate only {bc:,.0f} ({pc / bc:.2f}x), canon-all {np.mean([r['canon_all'] for r in rr]):,.0f}; "
+                    f"calls {pc:,.0f} vs certificate only {bc:,.0f} ({pc / bc:.2f}x; per seed {min(per):.2f}-{max(per):.2f}x), canon-all {np.mean([r['canon_all'] for r in rr]):,.0f}; "
                     f"resolved candidates {[r['resolved_cands'] for r in rr]} of {rr[0]['n_cands']}; resolved oracles {rr[0]['resolved_oracles']}; "
                     f"false {sum(len(r['false']) for r in rr)}, missed {sum(len(r['missed']) for r in rr)} (certificate only: "
                     + (f"false {sum(r['ours']['false'] for r in bb)}, missed {sum(r['ours']['missed'] if mode == 'pairs' else r['ours']['missed_true'] for r in bb)})"))
