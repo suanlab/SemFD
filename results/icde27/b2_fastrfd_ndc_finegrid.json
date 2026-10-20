@@ -1,0 +1,30 @@
+{
+ "dataset": "ndc116620",
+ "rows": 116620,
+ "n_cands": 66,
+ "n_true": 10,
+ "runs": [
+  {
+   "t": 0.0001,
+   "sec": 251.2137853000313,
+   "n": 3,
+   "false": 1,
+   "missed_true": 8,
+   "false_list": [
+    "brand->generic"
+   ]
+  },
+  {
+   "t": 0.0005,
+   "sec": 297.5651152320206,
+   "n": 11,
+   "false": 3,
+   "missed_true": 2,
+   "false_list": [
+    "brand->appno",
+    "brand->generic",
+    "generic->mktcat"
+   ]
+  }
+ ]
+}

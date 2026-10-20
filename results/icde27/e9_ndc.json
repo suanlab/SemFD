@@ -1,0 +1,4493 @@
+[
+ {
+  "dataset": "ndc116620",
+  "seed": 0,
+  "n_cands": 105,
+  "n_true": 36,
+  "rows": 116620,
+  "tane": {
+   "false": 1,
+   "missed": 4
+  },
+  "ours": {
+   "false": 0,
+   "missed": 5
+  },
+  "calls": 9513,
+  "calls_fwd_inv": [
+   5438,
+   4075
+  ],
+  "canon_all": 6653,
+  "sec": {
+   "tane": 1.631536416709423,
+   "certify": 232.67372988909483
+  },
+  "fds": [
+   {
+    "lhs": [
+     "labcode",
+     "labeler"
+    ],
+    "rhs": "appno",
+    "g3": 0.6144743611730407,
+    "raw_g3": 0.5956868461670383,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.9154486207796564,
+    "calls": 65
+   },
+   {
+    "lhs": [
+     "labcode",
+     "labeler"
+    ],
+    "rhs": "brand",
+    "g3": 0.8807065683416224,
+    "raw_g3": 0.8588664037043389,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0339965311239896,
+    "calls": 36
+   },
+   {
+    "lhs": [
+     "labcode",
+     "labeler"
+    ],
+    "rhs": "generic",
+    "g3": 0.8202538158120392,
+    "raw_g3": 0.7968959012176299,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0627241432410386,
+    "calls": 30
+   },
+   {
+    "lhs": [
+     "labcode",
+     "labeler"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.09551534899674152,
+    "raw_g3": 0.09083347624764193,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.1254978939172524,
+    "calls": 966
+   },
+   {
+    "lhs": [
+     "labcode",
+     "labeler"
+    ],
+    "rhs": "ptype",
+    "g3": 0.02483279025896068,
+    "raw_g3": 0.023846681529754776,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.049727169101765,
+    "calls": 850
+   },
+   {
+    "lhs": [
+     "labcode",
+     "appno"
+    ],
+    "rhs": "labeler",
+    "g3": 0.0,
+    "raw_g3": 0.04947693363059513,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 74
+   },
+   {
+    "lhs": [
+     "labcode",
+     "appno"
+    ],
+    "rhs": "brand",
+    "g3": 0.37048533699193964,
+    "raw_g3": 0.37048533699193964,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6737689161329791,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "appno"
+    ],
+    "rhs": "generic",
+    "g3": 0.2838106671239925,
+    "raw_g3": 0.2838106671239925,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.4245462210188193,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "appno"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.0018950437317784008,
+    "raw_g3": 0.0018950437317784008,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "appno"
+    ],
+    "rhs": "ptype",
+    "g3": 0.0015863488252443325,
+    "raw_g3": 0.0015863488252443325,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "brand"
+    ],
+    "rhs": "labeler",
+    "g3": 0.0,
+    "raw_g3": 0.02027096552906882,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 75
+   },
+   {
+    "lhs": [
+     "labcode",
+     "brand"
+    ],
+    "rhs": "appno",
+    "g3": 0.12157434402332357,
+    "raw_g3": 0.12157434402332357,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.19712451498914718,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "brand"
+    ],
+    "rhs": "generic",
+    "g3": 0.03973589435774305,
+    "raw_g3": 0.03973589435774305,
+    "truth": true,
+    "tane": false,
+    "certified": false,
+    "ub": 0.05172721110705192,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "brand"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.00873778082661636,
+    "raw_g3": 0.00873778082661636,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.048179112861353714,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "brand"
+    ],
+    "rhs": "ptype",
+    "g3": 0.001492025381581219,
+    "raw_g3": 0.001492025381581219,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "generic"
+    ],
+    "rhs": "labeler",
+    "g3": 0.0,
+    "raw_g3": 0.03301320528211282,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 70
+   },
+   {
+    "lhs": [
+     "labcode",
+     "generic"
+    ],
+    "rhs": "appno",
+    "g3": 0.13318470245240954,
+    "raw_g3": 0.13318470245240954,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.17366789208279756,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "generic"
+    ],
+    "rhs": "brand",
+    "g3": 0.1649459783913565,
+    "raw_g3": 0.1649459783913565,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.24273946742174066,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "generic"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.011987652203738652,
+    "raw_g3": 0.011987652203738652,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.049040350172247234,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "generic"
+    ],
+    "rhs": "ptype",
+    "g3": 0.001980792316926716,
+    "raw_g3": 0.001980792316926716,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.042140376119231805,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "mktcat"
+    ],
+    "rhs": "labeler",
+    "g3": 0.0,
+    "raw_g3": 0.10215228948722344,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 81
+   },
+   {
+    "lhs": [
+     "labcode",
+     "mktcat"
+    ],
+    "rhs": "appno",
+    "g3": 0.5830903790087463,
+    "raw_g3": 0.5830903790087463,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7717692011705988,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "mktcat"
+    ],
+    "rhs": "brand",
+    "g3": 0.8554193105813754,
+    "raw_g3": 0.8554193105813754,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.090394351323465,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "mktcat"
+    ],
+    "rhs": "generic",
+    "g3": 0.7908249013891271,
+    "raw_g3": 0.7908249013891271,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.9640873957972103,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "mktcat"
+    ],
+    "rhs": "ptype",
+    "g3": 0.011618933287600774,
+    "raw_g3": 0.011618933287600774,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.046784053850515844,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "ptype"
+    ],
+    "rhs": "labeler",
+    "g3": 0.0,
+    "raw_g3": 0.10627679643285881,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 68
+   },
+   {
+    "lhs": [
+     "labcode",
+     "ptype"
+    ],
+    "rhs": "appno",
+    "g3": 0.6074429771908764,
+    "raw_g3": 0.6074429771908764,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8218985898264943,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "ptype"
+    ],
+    "rhs": "brand",
+    "g3": 0.8755359286571771,
+    "raw_g3": 0.8755359286571771,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0980791182224745,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "ptype"
+    ],
+    "rhs": "generic",
+    "g3": 0.8141313668324472,
+    "raw_g3": 0.8141313668324472,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0409706531664782,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "ptype"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.08596295661121589,
+    "raw_g3": 0.08596295661121589,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.09654531529446352,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labeler",
+     "appno"
+    ],
+    "rhs": "labcode",
+    "g3": 0.04449494083347627,
+    "raw_g3": 0.03459955410735727,
+    "truth": true,
+    "tane": true,
+    "certified": false,
+    "ub": 0.06135559702862774,
+    "calls": 3746
+   },
+   {
+    "lhs": [
+     "labeler",
+     "appno"
+    ],
+    "rhs": "brand",
+    "g3": 0.3763762647916309,
+    "raw_g3": 0.3582061395986966,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7003545600988779,
+    "calls": 7
+   },
+   {
+    "lhs": [
+     "labeler",
+     "appno"
+    ],
+    "rhs": "generic",
+    "g3": 0.2881238209569542,
+    "raw_g3": 0.2726633510547076,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.431396831460063,
+    "calls": 16
+   },
+   {
+    "lhs": [
+     "labeler",
+     "appno"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.0025210084033613356,
+    "raw_g3": 0.002203738638312469,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04213808262850193,
+    "calls": 52
+   },
+   {
+    "lhs": [
+     "labeler",
+     "appno"
+    ],
+    "rhs": "ptype",
+    "g3": 0.0016292231178185457,
+    "raw_g3": 0.0016120734007888382,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04211166480409114,
+    "calls": 35
+   },
+   {
+    "lhs": [
+     "labeler",
+     "brand"
+    ],
+    "rhs": "labcode",
+    "g3": 0.03801234779626139,
+    "raw_g3": 0.030860915794889365,
+    "truth": true,
+    "tane": true,
+    "certified": false,
+    "ub": 0.05339196377896041,
+    "calls": 1512
+   },
+   {
+    "lhs": [
+     "labeler",
+     "brand"
+    ],
+    "rhs": "appno",
+    "g3": 0.13447950608814951,
+    "raw_g3": 0.1240181787000515,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.22845835750654,
+    "calls": 23
+   },
+   {
+    "lhs": [
+     "labeler",
+     "brand"
+    ],
+    "rhs": "generic",
+    "g3": 0.042033956439718745,
+    "raw_g3": 0.03784942548447956,
+    "truth": true,
+    "tane": true,
+    "certified": false,
+    "ub": 0.05359672233219817,
+    "calls": 976
+   },
+   {
+    "lhs": [
+     "labeler",
+     "brand"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.009792488423940982,
+    "raw_g3": 0.008540559080775112,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.0490283364257271,
+    "calls": 20
+   },
+   {
+    "lhs": [
+     "labeler",
+     "brand"
+    ],
+    "rhs": "ptype",
+    "g3": 0.0015949236837592418,
+    "raw_g3": 0.001526324815640523,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.042124133495791666,
+    "calls": 10
+   },
+   {
+    "lhs": [
+     "labeler",
+     "generic"
+    ],
+    "rhs": "labcode",
+    "g3": 0.045841193620305254,
+    "raw_g3": 0.036100154347453284,
+    "truth": true,
+    "tane": true,
+    "certified": false,
+    "ub": 0.05989210425363348,
+    "calls": 616
+   },
+   {
+    "lhs": [
+     "labeler",
+     "generic"
+    ],
+    "rhs": "appno",
+    "g3": 0.14717887154861942,
+    "raw_g3": 0.13430800891785288,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.2609048779731134,
+    "calls": 4
+   },
+   {
+    "lhs": [
+     "labeler",
+     "generic"
+    ],
+    "rhs": "brand",
+    "g3": 0.1715571943062939,
+    "raw_g3": 0.1564568684616704,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.26417528497209763,
+    "calls": 8
+   },
+   {
+    "lhs": [
+     "labeler",
+     "generic"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.013925570228091266,
+    "raw_g3": 0.011910478477105135,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04936616683811687,
+    "calls": 26
+   },
+   {
+    "lhs": [
+     "labeler",
+     "generic"
+    ],
+    "rhs": "ptype",
+    "g3": 0.002160864345738256,
+    "raw_g3": 0.002015091750986131,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.042111164973590375,
+    "calls": 4
+   },
+   {
+    "lhs": [
+     "labeler",
+     "mktcat"
+    ],
+    "rhs": "labcode",
+    "g3": 0.122226033270451,
+    "raw_g3": 0.10228948722346076,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.23085251468236806,
+    "calls": 29
+   },
+   {
+    "lhs": [
+     "labeler",
+     "mktcat"
+    ],
+    "rhs": "appno",
+    "g3": 0.5935688561138741,
+    "raw_g3": 0.5743182987480706,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.845381496051347,
+    "calls": 4
+   },
+   {
+    "lhs": [
+     "labeler",
+     "mktcat"
+    ],
+    "rhs": "brand",
+    "g3": 0.8656062424969988,
+    "raw_g3": 0.8427199451209055,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.103731955609856,
+    "calls": 3
+   },
+   {
+    "lhs": [
+     "labeler",
+     "mktcat"
+    ],
+    "rhs": "generic",
+    "g3": 0.8021951637797976,
+    "raw_g3": 0.7781083862116275,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0258356605328172,
+    "calls": 12
+   },
+   {
+    "lhs": [
+     "labeler",
+     "mktcat"
+    ],
+    "rhs": "ptype",
+    "g3": 0.012133424798490777,
+    "raw_g3": 0.011661807580174877,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.045617225814844224,
+    "calls": 5
+   },
+   {
+    "lhs": [
+     "labeler",
+     "ptype"
+    ],
+    "rhs": "labcode",
+    "g3": 0.12713942719945126,
+    "raw_g3": 0.1071342822843423,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.19595908175816323,
+    "calls": 26
+   },
+   {
+    "lhs": [
+     "labeler",
+     "ptype"
+    ],
+    "rhs": "appno",
+    "g3": 0.6164037043388784,
+    "raw_g3": 0.5982078545703996,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8807596237701725,
+    "calls": 4
+   },
+   {
+    "lhs": [
+     "labeler",
+     "ptype"
+    ],
+    "rhs": "brand",
+    "g3": 0.8844366317955754,
+    "raw_g3": 0.8629566112159149,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0697963549120402,
+    "calls": 8
+   },
+   {
+    "lhs": [
+     "labeler",
+     "ptype"
+    ],
+    "rhs": "generic",
+    "g3": 0.8241125021437146,
+    "raw_g3": 0.8014320013719773,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.041383672726,
+    "calls": 2
+   },
+   {
+    "lhs": [
+     "labeler",
+     "ptype"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.08951294803635745,
+    "raw_g3": 0.08555993826101871,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.1306890965493455,
+    "calls": 34
+   },
+   {
+    "lhs": [
+     "appno",
+     "brand"
+    ],
+    "rhs": "labcode",
+    "g3": 0.328811524609844,
+    "raw_g3": 0.328811524609844,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.538871215202306,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "brand"
+    ],
+    "rhs": "labeler",
+    "g3": 0.3163179557537301,
+    "raw_g3": 0.3247041673812382,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5169201211561991,
+    "calls": 3
+   },
+   {
+    "lhs": [
+     "appno",
+     "brand"
+    ],
+    "rhs": "generic",
+    "g3": 0.05493911850454469,
+    "raw_g3": 0.05493911850454469,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.06314660237508288,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "brand"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.0004973417938604063,
+    "raw_g3": 0.0004973417938604063,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04214610589069805,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "brand"
+    ],
+    "rhs": "ptype",
+    "g3": 0.0006602641056422387,
+    "raw_g3": 0.0006602641056422387,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04557168524429291,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "generic"
+    ],
+    "rhs": "labcode",
+    "g3": 0.4985079746184188,
+    "raw_g3": 0.4985079746184188,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7122787921149821,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "generic"
+    ],
+    "rhs": "labeler",
+    "g3": 0.4853284170811182,
+    "raw_g3": 0.4915280397873435,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6939328626647046,
+    "calls": 1
+   },
+   {
+    "lhs": [
+     "appno",
+     "generic"
+    ],
+    "rhs": "brand",
+    "g3": 0.2753129823357915,
+    "raw_g3": 0.2753129823357915,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.41099753185722815,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "generic"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.006053850111473191,
+    "raw_g3": 0.006053850111473191,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04907928385044752,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "generic"
+    ],
+    "rhs": "ptype",
+    "g3": 0.0010718573143543297,
+    "raw_g3": 0.0010718573143543297,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "mktcat"
+    ],
+    "rhs": "labcode",
+    "g3": 0.6651432001371977,
+    "raw_g3": 0.6651432001371977,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.9645919248489186,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "mktcat"
+    ],
+    "rhs": "labeler",
+    "g3": 0.6471960212656491,
+    "raw_g3": 0.6547418967587035,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.903711161711557,
+    "calls": 2
+   },
+   {
+    "lhs": [
+     "appno",
+     "mktcat"
+    ],
+    "rhs": "brand",
+    "g3": 0.4896072714800206,
+    "raw_g3": 0.4896072714800206,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7008138335844969,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "mktcat"
+    ],
+    "rhs": "generic",
+    "g3": 0.40108900703138395,
+    "raw_g3": 0.40108900703138395,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6639223091995801,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "mktcat"
+    ],
+    "rhs": "ptype",
+    "g3": 0.008746355685131157,
+    "raw_g3": 0.008746355685131157,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04421276582071475,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "ptype"
+    ],
+    "rhs": "labcode",
+    "g3": 0.6700480192076831,
+    "raw_g3": 0.6700480192076831,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8842839667249698,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "ptype"
+    ],
+    "rhs": "labeler",
+    "g3": 0.6515863488252445,
+    "raw_g3": 0.6592093980449323,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.9626546824404603,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "ptype"
+    ],
+    "rhs": "brand",
+    "g3": 0.496321385697136,
+    "raw_g3": 0.496321385697136,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7978315473579813,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "ptype"
+    ],
+    "rhs": "generic",
+    "g3": 0.40350711713256726,
+    "raw_g3": 0.40350711713256726,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7407758057703973,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "ptype"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.0183501972217458,
+    "raw_g3": 0.0183501972217458,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "generic"
+    ],
+    "rhs": "labcode",
+    "g3": 0.4392471274223976,
+    "raw_g3": 0.4392471274223976,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6548801995359905,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "generic"
+    ],
+    "rhs": "labeler",
+    "g3": 0.42641913908420515,
+    "raw_g3": 0.4310238381066712,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6645626202983125,
+    "calls": 2
+   },
+   {
+    "lhs": [
+     "brand",
+     "generic"
+    ],
+    "rhs": "appno",
+    "g3": 0.31648945292402675,
+    "raw_g3": 0.31648945292402675,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5218034094997224,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "generic"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.024095352426684924,
+    "raw_g3": 0.024095352426684924,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04969850366026395,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "generic"
+    ],
+    "rhs": "ptype",
+    "g3": 0.009346595781169587,
+    "raw_g3": 0.009346595781169587,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04660797785320809,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "mktcat"
+    ],
+    "rhs": "labcode",
+    "g3": 0.46026410564225695,
+    "raw_g3": 0.46026410564225695,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.803889987439693,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "mktcat"
+    ],
+    "rhs": "labeler",
+    "g3": 0.4462785114045619,
+    "raw_g3": 0.4558223289315726,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.722216454495435,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "mktcat"
+    ],
+    "rhs": "appno",
+    "g3": 0.32263762647916305,
+    "raw_g3": 0.32263762647916305,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.40346598192637073,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "mktcat"
+    ],
+    "rhs": "generic",
+    "g3": 0.07966901046132735,
+    "raw_g3": 0.07966901046132735,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.12217609953965908,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "mktcat"
+    ],
+    "rhs": "ptype",
+    "g3": 0.007931744126221885,
+    "raw_g3": 0.007931744126221885,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.044751774759717,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "ptype"
+    ],
+    "rhs": "labcode",
+    "g3": 0.46975647401817866,
+    "raw_g3": 0.46975647401817866,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7053059598865538,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "ptype"
+    ],
+    "rhs": "labeler",
+    "g3": 0.4559252272337506,
+    "raw_g3": 0.4656319670725433,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7353691147647868,
+    "calls": 2
+   },
+   {
+    "lhs": [
+     "brand",
+     "ptype"
+    ],
+    "rhs": "appno",
+    "g3": 0.33989881666952493,
+    "raw_g3": 0.33989881666952493,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5429542030083604,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "ptype"
+    ],
+    "rhs": "generic",
+    "g3": 0.08348482250042877,
+    "raw_g3": 0.08348482250042877,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.11612206959432017,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "ptype"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.027765391871034106,
+    "raw_g3": 0.027765391871034106,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04869873339531601,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "mktcat"
+    ],
+    "rhs": "labcode",
+    "g3": 0.6425913222431829,
+    "raw_g3": 0.6425913222431829,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.9402284532065251,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "mktcat"
+    ],
+    "rhs": "labeler",
+    "g3": 0.6291030697993483,
+    "raw_g3": 0.6349511233064655,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8721567210381127,
+    "calls": 5
+   },
+   {
+    "lhs": [
+     "generic",
+     "mktcat"
+    ],
+    "rhs": "appno",
+    "g3": 0.36582918881838444,
+    "raw_g3": 0.36582918881838444,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5457134614083389,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "mktcat"
+    ],
+    "rhs": "brand",
+    "g3": 0.30701423426513463,
+    "raw_g3": 0.30701423426513463,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5735457945919272,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "mktcat"
+    ],
+    "rhs": "ptype",
+    "g3": 0.010847196021265604,
+    "raw_g3": 0.010847196021265604,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04211218734744552,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "ptype"
+    ],
+    "rhs": "labcode",
+    "g3": 0.6675184359458068,
+    "raw_g3": 0.6675184359458068,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8750408311117437,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "ptype"
+    ],
+    "rhs": "labeler",
+    "g3": 0.6544932258617733,
+    "raw_g3": 0.6603069799348311,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8971070877619532,
+    "calls": 1
+   },
+   {
+    "lhs": [
+     "generic",
+     "ptype"
+    ],
+    "rhs": "appno",
+    "g3": 0.3983707768821815,
+    "raw_g3": 0.3983707768821815,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6756721827900352,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "ptype"
+    ],
+    "rhs": "brand",
+    "g3": 0.327096552906877,
+    "raw_g3": 0.327096552906877,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5560574009913007,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "ptype"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.05751157605899504,
+    "raw_g3": 0.05751157605899504,
+    "truth": false,
+    "tane": true,
+    "certified": false,
+    "ub": 0.06538119394025765,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "mktcat",
+     "ptype"
+    ],
+    "rhs": "labcode",
+    "g3": 0.9165923512262047,
+    "raw_g3": 0.9165923512262047,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1302498452162413,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "mktcat",
+     "ptype"
+    ],
+    "rhs": "labeler",
+    "g3": 0.8940233236151603,
+    "raw_g3": 0.896012690790602,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1108224716979245,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "mktcat",
+     "ptype"
+    ],
+    "rhs": "appno",
+    "g3": 0.7693706053850111,
+    "raw_g3": 0.7693706053850111,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.06913180598157,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "mktcat",
+     "ptype"
+    ],
+    "rhs": "brand",
+    "g3": 0.9805950951809295,
+    "raw_g3": 0.9805950951809295,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1484446988382364,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "mktcat",
+     "ptype"
+    ],
+    "rhs": "generic",
+    "g3": 0.9613616875321557,
+    "raw_g3": 0.9613616875321557,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1423742297940835,
+    "calls": 0
+   }
+  ]
+ },
+ {
+  "dataset": "ndc116620",
+  "seed": 1,
+  "n_cands": 105,
+  "n_true": 36,
+  "rows": 116620,
+  "tane": {
+   "false": 1,
+   "missed": 4
+  },
+  "ours": {
+   "false": 0,
+   "missed": 3
+  },
+  "calls": 9072,
+  "calls_fwd_inv": [
+   5223,
+   3849
+  ],
+  "canon_all": 6653,
+  "sec": {
+   "tane": 1.6632501129060984,
+   "certify": 212.28458350896835
+  },
+  "fds": [
+   {
+    "lhs": [
+     "labcode",
+     "labeler"
+    ],
+    "rhs": "appno",
+    "g3": 0.6144743611730407,
+    "raw_g3": 0.5956868461670383,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.9218718831337822,
+    "calls": 58
+   },
+   {
+    "lhs": [
+     "labcode",
+     "labeler"
+    ],
+    "rhs": "brand",
+    "g3": 0.8807065683416224,
+    "raw_g3": 0.8588664037043389,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.06213909452649,
+    "calls": 28
+   },
+   {
+    "lhs": [
+     "labcode",
+     "labeler"
+    ],
+    "rhs": "generic",
+    "g3": 0.8202538158120392,
+    "raw_g3": 0.7968959012176299,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.040715918723578,
+    "calls": 34
+   },
+   {
+    "lhs": [
+     "labcode",
+     "labeler"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.09551534899674152,
+    "raw_g3": 0.09083347624764193,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.19238739788150877,
+    "calls": 574
+   },
+   {
+    "lhs": [
+     "labcode",
+     "labeler"
+    ],
+    "rhs": "ptype",
+    "g3": 0.02483279025896068,
+    "raw_g3": 0.023846681529754776,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04966411410812073,
+    "calls": 1067
+   },
+   {
+    "lhs": [
+     "labcode",
+     "appno"
+    ],
+    "rhs": "labeler",
+    "g3": 0.0,
+    "raw_g3": 0.04947693363059513,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 92
+   },
+   {
+    "lhs": [
+     "labcode",
+     "appno"
+    ],
+    "rhs": "brand",
+    "g3": 0.37048533699193964,
+    "raw_g3": 0.37048533699193964,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5314660415445114,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "appno"
+    ],
+    "rhs": "generic",
+    "g3": 0.2838106671239925,
+    "raw_g3": 0.2838106671239925,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5448750768359807,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "appno"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.0018950437317784008,
+    "raw_g3": 0.0018950437317784008,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04200734712797345,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "appno"
+    ],
+    "rhs": "ptype",
+    "g3": 0.0015863488252443325,
+    "raw_g3": 0.0015863488252443325,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04560625396754866,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "brand"
+    ],
+    "rhs": "labeler",
+    "g3": 0.0,
+    "raw_g3": 0.02027096552906882,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 81
+   },
+   {
+    "lhs": [
+     "labcode",
+     "brand"
+    ],
+    "rhs": "appno",
+    "g3": 0.12157434402332357,
+    "raw_g3": 0.12157434402332357,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.18818476794754324,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "brand"
+    ],
+    "rhs": "generic",
+    "g3": 0.03973589435774305,
+    "raw_g3": 0.03973589435774305,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.049922799378682964,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "brand"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.00873778082661636,
+    "raw_g3": 0.00873778082661636,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04903046717905866,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "brand"
+    ],
+    "rhs": "ptype",
+    "g3": 0.001492025381581219,
+    "raw_g3": 0.001492025381581219,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "generic"
+    ],
+    "rhs": "labeler",
+    "g3": 0.0,
+    "raw_g3": 0.03301320528211282,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 76
+   },
+   {
+    "lhs": [
+     "labcode",
+     "generic"
+    ],
+    "rhs": "appno",
+    "g3": 0.13318470245240954,
+    "raw_g3": 0.13318470245240954,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.181114629759899,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "generic"
+    ],
+    "rhs": "brand",
+    "g3": 0.1649459783913565,
+    "raw_g3": 0.1649459783913565,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.28719463427011316,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "generic"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.011987652203738652,
+    "raw_g3": 0.011987652203738652,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.046511172558691964,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "generic"
+    ],
+    "rhs": "ptype",
+    "g3": 0.001980792316926716,
+    "raw_g3": 0.001980792316926716,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "mktcat"
+    ],
+    "rhs": "labeler",
+    "g3": 0.0,
+    "raw_g3": 0.10215228948722344,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 76
+   },
+   {
+    "lhs": [
+     "labcode",
+     "mktcat"
+    ],
+    "rhs": "appno",
+    "g3": 0.5830903790087463,
+    "raw_g3": 0.5830903790087463,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8376952993506234,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "mktcat"
+    ],
+    "rhs": "brand",
+    "g3": 0.8554193105813754,
+    "raw_g3": 0.8554193105813754,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.083086042622073,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "mktcat"
+    ],
+    "rhs": "generic",
+    "g3": 0.7908249013891271,
+    "raw_g3": 0.7908249013891271,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0404481158053729,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "mktcat"
+    ],
+    "rhs": "ptype",
+    "g3": 0.011618933287600774,
+    "raw_g3": 0.011618933287600774,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04189804536161212,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "ptype"
+    ],
+    "rhs": "labeler",
+    "g3": 0.0,
+    "raw_g3": 0.10627679643285881,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 72
+   },
+   {
+    "lhs": [
+     "labcode",
+     "ptype"
+    ],
+    "rhs": "appno",
+    "g3": 0.6074429771908764,
+    "raw_g3": 0.6074429771908764,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8212401550562387,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "ptype"
+    ],
+    "rhs": "brand",
+    "g3": 0.8755359286571771,
+    "raw_g3": 0.8755359286571771,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.083190208150913,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "ptype"
+    ],
+    "rhs": "generic",
+    "g3": 0.8141313668324472,
+    "raw_g3": 0.8141313668324472,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.9945562713942633,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "ptype"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.08596295661121589,
+    "raw_g3": 0.08596295661121589,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.16817705105320746,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labeler",
+     "appno"
+    ],
+    "rhs": "labcode",
+    "g3": 0.04449494083347627,
+    "raw_g3": 0.03459955410735727,
+    "truth": true,
+    "tane": true,
+    "certified": false,
+    "ub": 0.06462229240373402,
+    "calls": 3882
+   },
+   {
+    "lhs": [
+     "labeler",
+     "appno"
+    ],
+    "rhs": "brand",
+    "g3": 0.3763762647916309,
+    "raw_g3": 0.3582061395986966,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7292343086345201,
+    "calls": 10
+   },
+   {
+    "lhs": [
+     "labeler",
+     "appno"
+    ],
+    "rhs": "generic",
+    "g3": 0.2881238209569542,
+    "raw_g3": 0.2726633510547076,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.4120278817035602,
+    "calls": 10
+   },
+   {
+    "lhs": [
+     "labeler",
+     "appno"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.0025210084033613356,
+    "raw_g3": 0.002203738638312469,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04211072108945466,
+    "calls": 38
+   },
+   {
+    "lhs": [
+     "labeler",
+     "appno"
+    ],
+    "rhs": "ptype",
+    "g3": 0.0016292231178185457,
+    "raw_g3": 0.0016120734007888382,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 37
+   },
+   {
+    "lhs": [
+     "labeler",
+     "brand"
+    ],
+    "rhs": "labcode",
+    "g3": 0.03801234779626139,
+    "raw_g3": 0.030860915794889365,
+    "truth": true,
+    "tane": true,
+    "certified": false,
+    "ub": 0.05694963143932316,
+    "calls": 1537
+   },
+   {
+    "lhs": [
+     "labeler",
+     "brand"
+    ],
+    "rhs": "appno",
+    "g3": 0.13447950608814951,
+    "raw_g3": 0.1240181787000515,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.2862033349018742,
+    "calls": 14
+   },
+   {
+    "lhs": [
+     "labeler",
+     "brand"
+    ],
+    "rhs": "generic",
+    "g3": 0.042033956439718745,
+    "raw_g3": 0.03784942548447956,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04985253814611126,
+    "calls": 338
+   },
+   {
+    "lhs": [
+     "labeler",
+     "brand"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.009792488423940982,
+    "raw_g3": 0.008540559080775112,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04780994747885568,
+    "calls": 24
+   },
+   {
+    "lhs": [
+     "labeler",
+     "brand"
+    ],
+    "rhs": "ptype",
+    "g3": 0.0015949236837592418,
+    "raw_g3": 0.001526324815640523,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04557372289081895,
+    "calls": 18
+   },
+   {
+    "lhs": [
+     "labeler",
+     "generic"
+    ],
+    "rhs": "labcode",
+    "g3": 0.045841193620305254,
+    "raw_g3": 0.036100154347453284,
+    "truth": true,
+    "tane": true,
+    "certified": false,
+    "ub": 0.06055689012572855,
+    "calls": 793
+   },
+   {
+    "lhs": [
+     "labeler",
+     "generic"
+    ],
+    "rhs": "appno",
+    "g3": 0.14717887154861942,
+    "raw_g3": 0.13430800891785288,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.22769228142101106,
+    "calls": 22
+   },
+   {
+    "lhs": [
+     "labeler",
+     "generic"
+    ],
+    "rhs": "brand",
+    "g3": 0.1715571943062939,
+    "raw_g3": 0.1564568684616704,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.2619599264731667,
+    "calls": 17
+   },
+   {
+    "lhs": [
+     "labeler",
+     "generic"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.013925570228091266,
+    "raw_g3": 0.011910478477105135,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04618558180832669,
+    "calls": 15
+   },
+   {
+    "lhs": [
+     "labeler",
+     "generic"
+    ],
+    "rhs": "ptype",
+    "g3": 0.002160864345738256,
+    "raw_g3": 0.002015091750986131,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.045579988189964116,
+    "calls": 5
+   },
+   {
+    "lhs": [
+     "labeler",
+     "mktcat"
+    ],
+    "rhs": "labcode",
+    "g3": 0.122226033270451,
+    "raw_g3": 0.10228948722346076,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.2505529694466279,
+    "calls": 16
+   },
+   {
+    "lhs": [
+     "labeler",
+     "mktcat"
+    ],
+    "rhs": "appno",
+    "g3": 0.5935688561138741,
+    "raw_g3": 0.5743182987480706,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8529160890387075,
+    "calls": 8
+   },
+   {
+    "lhs": [
+     "labeler",
+     "mktcat"
+    ],
+    "rhs": "brand",
+    "g3": 0.8656062424969988,
+    "raw_g3": 0.8427199451209055,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.076523406288674,
+    "calls": 2
+   },
+   {
+    "lhs": [
+     "labeler",
+     "mktcat"
+    ],
+    "rhs": "generic",
+    "g3": 0.8021951637797976,
+    "raw_g3": 0.7781083862116275,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0397994767491807,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labeler",
+     "mktcat"
+    ],
+    "rhs": "ptype",
+    "g3": 0.012133424798490777,
+    "raw_g3": 0.011661807580174877,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04906386407884418,
+    "calls": 11
+   },
+   {
+    "lhs": [
+     "labeler",
+     "ptype"
+    ],
+    "rhs": "labcode",
+    "g3": 0.12713942719945126,
+    "raw_g3": 0.1071342822843423,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.3372639297145197,
+    "calls": 11
+   },
+   {
+    "lhs": [
+     "labeler",
+     "ptype"
+    ],
+    "rhs": "appno",
+    "g3": 0.6164037043388784,
+    "raw_g3": 0.5982078545703996,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7989154547336905,
+    "calls": 12
+   },
+   {
+    "lhs": [
+     "labeler",
+     "ptype"
+    ],
+    "rhs": "brand",
+    "g3": 0.8844366317955754,
+    "raw_g3": 0.8629566112159149,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0976790636738638,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labeler",
+     "ptype"
+    ],
+    "rhs": "generic",
+    "g3": 0.8241125021437146,
+    "raw_g3": 0.8014320013719773,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0188123238511635,
+    "calls": 4
+   },
+   {
+    "lhs": [
+     "labeler",
+     "ptype"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.08951294803635745,
+    "raw_g3": 0.08555993826101871,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.1263279353627393,
+    "calls": 74
+   },
+   {
+    "lhs": [
+     "appno",
+     "brand"
+    ],
+    "rhs": "labcode",
+    "g3": 0.328811524609844,
+    "raw_g3": 0.328811524609844,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.547764031677737,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "brand"
+    ],
+    "rhs": "labeler",
+    "g3": 0.3163179557537301,
+    "raw_g3": 0.3247041673812382,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5497716015234938,
+    "calls": 1
+   },
+   {
+    "lhs": [
+     "appno",
+     "brand"
+    ],
+    "rhs": "generic",
+    "g3": 0.05493911850454469,
+    "raw_g3": 0.05493911850454469,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.06365601020459843,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "brand"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.0004973417938604063,
+    "raw_g3": 0.0004973417938604063,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "brand"
+    ],
+    "rhs": "ptype",
+    "g3": 0.0006602641056422387,
+    "raw_g3": 0.0006602641056422387,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "generic"
+    ],
+    "rhs": "labcode",
+    "g3": 0.4985079746184188,
+    "raw_g3": 0.4985079746184188,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7558760220804305,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "generic"
+    ],
+    "rhs": "labeler",
+    "g3": 0.4853284170811182,
+    "raw_g3": 0.4915280397873435,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6518699085898225,
+    "calls": 2
+   },
+   {
+    "lhs": [
+     "appno",
+     "generic"
+    ],
+    "rhs": "brand",
+    "g3": 0.2753129823357915,
+    "raw_g3": 0.2753129823357915,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5669291488429986,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "generic"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.006053850111473191,
+    "raw_g3": 0.006053850111473191,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.045574846211067443,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "generic"
+    ],
+    "rhs": "ptype",
+    "g3": 0.0010718573143543297,
+    "raw_g3": 0.0010718573143543297,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04213430338362959,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "mktcat"
+    ],
+    "rhs": "labcode",
+    "g3": 0.6651432001371977,
+    "raw_g3": 0.6651432001371977,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8475660314273545,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "mktcat"
+    ],
+    "rhs": "labeler",
+    "g3": 0.6471960212656491,
+    "raw_g3": 0.6547418967587035,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.9544483378016795,
+    "calls": 3
+   },
+   {
+    "lhs": [
+     "appno",
+     "mktcat"
+    ],
+    "rhs": "brand",
+    "g3": 0.4896072714800206,
+    "raw_g3": 0.4896072714800206,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7786158695904061,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "mktcat"
+    ],
+    "rhs": "generic",
+    "g3": 0.40108900703138395,
+    "raw_g3": 0.40108900703138395,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.701119061798964,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "mktcat"
+    ],
+    "rhs": "ptype",
+    "g3": 0.008746355685131157,
+    "raw_g3": 0.008746355685131157,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.045569070138166856,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "ptype"
+    ],
+    "rhs": "labcode",
+    "g3": 0.6700480192076831,
+    "raw_g3": 0.6700480192076831,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.9020824566055966,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "ptype"
+    ],
+    "rhs": "labeler",
+    "g3": 0.6515863488252445,
+    "raw_g3": 0.6592093980449323,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8493455520998815,
+    "calls": 2
+   },
+   {
+    "lhs": [
+     "appno",
+     "ptype"
+    ],
+    "rhs": "brand",
+    "g3": 0.496321385697136,
+    "raw_g3": 0.496321385697136,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7960986712349618,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "ptype"
+    ],
+    "rhs": "generic",
+    "g3": 0.40350711713256726,
+    "raw_g3": 0.40350711713256726,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6959865808424013,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "ptype"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.0183501972217458,
+    "raw_g3": 0.0183501972217458,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04984249314656193,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "generic"
+    ],
+    "rhs": "labcode",
+    "g3": 0.4392471274223976,
+    "raw_g3": 0.4392471274223976,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.701114386900005,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "generic"
+    ],
+    "rhs": "labeler",
+    "g3": 0.42641913908420515,
+    "raw_g3": 0.4310238381066712,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6559462628415416,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "generic"
+    ],
+    "rhs": "appno",
+    "g3": 0.31648945292402675,
+    "raw_g3": 0.31648945292402675,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5552182792014921,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "generic"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.024095352426684924,
+    "raw_g3": 0.024095352426684924,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04957361502674172,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "generic"
+    ],
+    "rhs": "ptype",
+    "g3": 0.009346595781169587,
+    "raw_g3": 0.009346595781169587,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04203848330988706,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "mktcat"
+    ],
+    "rhs": "labcode",
+    "g3": 0.46026410564225695,
+    "raw_g3": 0.46026410564225695,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7568972434115837,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "mktcat"
+    ],
+    "rhs": "labeler",
+    "g3": 0.4462785114045619,
+    "raw_g3": 0.4558223289315726,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6880242100401269,
+    "calls": 1
+   },
+   {
+    "lhs": [
+     "brand",
+     "mktcat"
+    ],
+    "rhs": "appno",
+    "g3": 0.32263762647916305,
+    "raw_g3": 0.32263762647916305,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6103766303949834,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "mktcat"
+    ],
+    "rhs": "generic",
+    "g3": 0.07966901046132735,
+    "raw_g3": 0.07966901046132735,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.10344249956868246,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "mktcat"
+    ],
+    "rhs": "ptype",
+    "g3": 0.007931744126221885,
+    "raw_g3": 0.007931744126221885,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.041986617326561594,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "ptype"
+    ],
+    "rhs": "labcode",
+    "g3": 0.46975647401817866,
+    "raw_g3": 0.46975647401817866,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7818292139802486,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "ptype"
+    ],
+    "rhs": "labeler",
+    "g3": 0.4559252272337506,
+    "raw_g3": 0.4656319670725433,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7333229373575003,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "ptype"
+    ],
+    "rhs": "appno",
+    "g3": 0.33989881666952493,
+    "raw_g3": 0.33989881666952493,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5841487370996765,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "ptype"
+    ],
+    "rhs": "generic",
+    "g3": 0.08348482250042877,
+    "raw_g3": 0.08348482250042877,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.09319148490577632,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "ptype"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.027765391871034106,
+    "raw_g3": 0.027765391871034106,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04999581015230231,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "mktcat"
+    ],
+    "rhs": "labcode",
+    "g3": 0.6425913222431829,
+    "raw_g3": 0.6425913222431829,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.9315070395139691,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "mktcat"
+    ],
+    "rhs": "labeler",
+    "g3": 0.6291030697993483,
+    "raw_g3": 0.6349511233064655,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8703534425845536,
+    "calls": 3
+   },
+   {
+    "lhs": [
+     "generic",
+     "mktcat"
+    ],
+    "rhs": "appno",
+    "g3": 0.36582918881838444,
+    "raw_g3": 0.36582918881838444,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5814580588256759,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "mktcat"
+    ],
+    "rhs": "brand",
+    "g3": 0.30701423426513463,
+    "raw_g3": 0.30701423426513463,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5736409310250241,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "mktcat"
+    ],
+    "rhs": "ptype",
+    "g3": 0.010847196021265604,
+    "raw_g3": 0.010847196021265604,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04418832165123821,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "ptype"
+    ],
+    "rhs": "labcode",
+    "g3": 0.6675184359458068,
+    "raw_g3": 0.6675184359458068,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8393862591870871,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "ptype"
+    ],
+    "rhs": "labeler",
+    "g3": 0.6544932258617733,
+    "raw_g3": 0.6603069799348311,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8532256752063885,
+    "calls": 1
+   },
+   {
+    "lhs": [
+     "generic",
+     "ptype"
+    ],
+    "rhs": "appno",
+    "g3": 0.3983707768821815,
+    "raw_g3": 0.3983707768821815,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.561331374574005,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "ptype"
+    ],
+    "rhs": "brand",
+    "g3": 0.327096552906877,
+    "raw_g3": 0.327096552906877,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5384918025676069,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "ptype"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.05751157605899504,
+    "raw_g3": 0.05751157605899504,
+    "truth": false,
+    "tane": true,
+    "certified": false,
+    "ub": 0.06804803694132326,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "mktcat",
+     "ptype"
+    ],
+    "rhs": "labcode",
+    "g3": 0.9165923512262047,
+    "raw_g3": 0.9165923512262047,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.097617132527628,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "mktcat",
+     "ptype"
+    ],
+    "rhs": "labeler",
+    "g3": 0.8940233236151603,
+    "raw_g3": 0.896012690790602,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1099472858612647,
+    "calls": 3
+   },
+   {
+    "lhs": [
+     "mktcat",
+     "ptype"
+    ],
+    "rhs": "appno",
+    "g3": 0.7693706053850111,
+    "raw_g3": 0.7693706053850111,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.9410472056730426,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "mktcat",
+     "ptype"
+    ],
+    "rhs": "brand",
+    "g3": 0.9805950951809295,
+    "raw_g3": 0.9805950951809295,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1484446988382364,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "mktcat",
+     "ptype"
+    ],
+    "rhs": "generic",
+    "g3": 0.9613616875321557,
+    "raw_g3": 0.9613616875321557,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0896917405606068,
+    "calls": 0
+   }
+  ]
+ },
+ {
+  "dataset": "ndc116620",
+  "seed": 2,
+  "n_cands": 105,
+  "n_true": 36,
+  "rows": 116620,
+  "tane": {
+   "false": 1,
+   "missed": 4
+  },
+  "ours": {
+   "false": 0,
+   "missed": 3
+  },
+  "calls": 9403,
+  "calls_fwd_inv": [
+   5371,
+   4032
+  ],
+  "canon_all": 6653,
+  "sec": {
+   "tane": 1.5316115468740463,
+   "certify": 210.65987521968782
+  },
+  "fds": [
+   {
+    "lhs": [
+     "labcode",
+     "labeler"
+    ],
+    "rhs": "appno",
+    "g3": 0.6144743611730407,
+    "raw_g3": 0.5956868461670383,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.806646256478406,
+    "calls": 85
+   },
+   {
+    "lhs": [
+     "labcode",
+     "labeler"
+    ],
+    "rhs": "brand",
+    "g3": 0.8807065683416224,
+    "raw_g3": 0.8588664037043389,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.090599960216101,
+    "calls": 22
+   },
+   {
+    "lhs": [
+     "labcode",
+     "labeler"
+    ],
+    "rhs": "generic",
+    "g3": 0.8202538158120392,
+    "raw_g3": 0.7968959012176299,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0328135743626528,
+    "calls": 36
+   },
+   {
+    "lhs": [
+     "labcode",
+     "labeler"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.09551534899674152,
+    "raw_g3": 0.09083347624764193,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.11758012944651806,
+    "calls": 1265
+   },
+   {
+    "lhs": [
+     "labcode",
+     "labeler"
+    ],
+    "rhs": "ptype",
+    "g3": 0.02483279025896068,
+    "raw_g3": 0.023846681529754776,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.049664488306000364,
+    "calls": 715
+   },
+   {
+    "lhs": [
+     "labcode",
+     "appno"
+    ],
+    "rhs": "labeler",
+    "g3": 0.0,
+    "raw_g3": 0.04947693363059513,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 85
+   },
+   {
+    "lhs": [
+     "labcode",
+     "appno"
+    ],
+    "rhs": "brand",
+    "g3": 0.37048533699193964,
+    "raw_g3": 0.37048533699193964,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6163827427300701,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "appno"
+    ],
+    "rhs": "generic",
+    "g3": 0.2838106671239925,
+    "raw_g3": 0.2838106671239925,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5368856181870578,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "appno"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.0018950437317784008,
+    "raw_g3": 0.0018950437317784008,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "appno"
+    ],
+    "rhs": "ptype",
+    "g3": 0.0015863488252443325,
+    "raw_g3": 0.0015863488252443325,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "brand"
+    ],
+    "rhs": "labeler",
+    "g3": 0.0,
+    "raw_g3": 0.02027096552906882,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 80
+   },
+   {
+    "lhs": [
+     "labcode",
+     "brand"
+    ],
+    "rhs": "appno",
+    "g3": 0.12157434402332357,
+    "raw_g3": 0.12157434402332357,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.17705710380937317,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "brand"
+    ],
+    "rhs": "generic",
+    "g3": 0.03973589435774305,
+    "raw_g3": 0.03973589435774305,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.049968996060787384,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "brand"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.00873778082661636,
+    "raw_g3": 0.00873778082661636,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04755610579955116,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "brand"
+    ],
+    "rhs": "ptype",
+    "g3": 0.001492025381581219,
+    "raw_g3": 0.001492025381581219,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.047009868003046004,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "generic"
+    ],
+    "rhs": "labeler",
+    "g3": 0.0,
+    "raw_g3": 0.03301320528211282,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 62
+   },
+   {
+    "lhs": [
+     "labcode",
+     "generic"
+    ],
+    "rhs": "appno",
+    "g3": 0.13318470245240954,
+    "raw_g3": 0.13318470245240954,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.20800693529489656,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "generic"
+    ],
+    "rhs": "brand",
+    "g3": 0.1649459783913565,
+    "raw_g3": 0.1649459783913565,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.2703651611239539,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "generic"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.011987652203738652,
+    "raw_g3": 0.011987652203738652,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.047503801854697075,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "generic"
+    ],
+    "rhs": "ptype",
+    "g3": 0.001980792316926716,
+    "raw_g3": 0.001980792316926716,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04211034643173147,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "mktcat"
+    ],
+    "rhs": "labeler",
+    "g3": 0.0,
+    "raw_g3": 0.10215228948722344,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 70
+   },
+   {
+    "lhs": [
+     "labcode",
+     "mktcat"
+    ],
+    "rhs": "appno",
+    "g3": 0.5830903790087463,
+    "raw_g3": 0.5830903790087463,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7667768105714046,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "mktcat"
+    ],
+    "rhs": "brand",
+    "g3": 0.8554193105813754,
+    "raw_g3": 0.8554193105813754,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0762181040901784,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "mktcat"
+    ],
+    "rhs": "generic",
+    "g3": 0.7908249013891271,
+    "raw_g3": 0.7908249013891271,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.017334654046999,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "mktcat"
+    ],
+    "rhs": "ptype",
+    "g3": 0.011618933287600774,
+    "raw_g3": 0.011618933287600774,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04953244982667761,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "ptype"
+    ],
+    "rhs": "labeler",
+    "g3": 0.0,
+    "raw_g3": 0.10627679643285881,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 58
+   },
+   {
+    "lhs": [
+     "labcode",
+     "ptype"
+    ],
+    "rhs": "appno",
+    "g3": 0.6074429771908764,
+    "raw_g3": 0.6074429771908764,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8423123137897817,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "ptype"
+    ],
+    "rhs": "brand",
+    "g3": 0.8755359286571771,
+    "raw_g3": 0.8755359286571771,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0691482882069394,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "ptype"
+    ],
+    "rhs": "generic",
+    "g3": 0.8141313668324472,
+    "raw_g3": 0.8141313668324472,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0402247945362904,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labcode",
+     "ptype"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.08596295661121589,
+    "raw_g3": 0.08596295661121589,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.11013989395924638,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "labeler",
+     "appno"
+    ],
+    "rhs": "labcode",
+    "g3": 0.04449494083347627,
+    "raw_g3": 0.03459955410735727,
+    "truth": true,
+    "tane": true,
+    "certified": false,
+    "ub": 0.06221390191091173,
+    "calls": 3704
+   },
+   {
+    "lhs": [
+     "labeler",
+     "appno"
+    ],
+    "rhs": "brand",
+    "g3": 0.3763762647916309,
+    "raw_g3": 0.3582061395986966,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5422112682420928,
+    "calls": 7
+   },
+   {
+    "lhs": [
+     "labeler",
+     "appno"
+    ],
+    "rhs": "generic",
+    "g3": 0.2881238209569542,
+    "raw_g3": 0.2726633510547076,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6279504798021858,
+    "calls": 4
+   },
+   {
+    "lhs": [
+     "labeler",
+     "appno"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.0025210084033613356,
+    "raw_g3": 0.002203738638312469,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.042109235166915705,
+    "calls": 37
+   },
+   {
+    "lhs": [
+     "labeler",
+     "appno"
+    ],
+    "rhs": "ptype",
+    "g3": 0.0016292231178185457,
+    "raw_g3": 0.0016120734007888382,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 41
+   },
+   {
+    "lhs": [
+     "labeler",
+     "brand"
+    ],
+    "rhs": "labcode",
+    "g3": 0.03801234779626139,
+    "raw_g3": 0.030860915794889365,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04993029902511246,
+    "calls": 1317
+   },
+   {
+    "lhs": [
+     "labeler",
+     "brand"
+    ],
+    "rhs": "appno",
+    "g3": 0.13447950608814951,
+    "raw_g3": 0.1240181787000515,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.2597166801260477,
+    "calls": 12
+   },
+   {
+    "lhs": [
+     "labeler",
+     "brand"
+    ],
+    "rhs": "generic",
+    "g3": 0.042033956439718745,
+    "raw_g3": 0.03784942548447956,
+    "truth": true,
+    "tane": true,
+    "certified": false,
+    "ub": 0.05093184575297208,
+    "calls": 924
+   },
+   {
+    "lhs": [
+     "labeler",
+     "brand"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.009792488423940982,
+    "raw_g3": 0.008540559080775112,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04902787806309221,
+    "calls": 12
+   },
+   {
+    "lhs": [
+     "labeler",
+     "brand"
+    ],
+    "rhs": "ptype",
+    "g3": 0.0015949236837592418,
+    "raw_g3": 0.001526324815640523,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 19
+   },
+   {
+    "lhs": [
+     "labeler",
+     "generic"
+    ],
+    "rhs": "labcode",
+    "g3": 0.045841193620305254,
+    "raw_g3": 0.036100154347453284,
+    "truth": true,
+    "tane": true,
+    "certified": false,
+    "ub": 0.0629925533033082,
+    "calls": 668
+   },
+   {
+    "lhs": [
+     "labeler",
+     "generic"
+    ],
+    "rhs": "appno",
+    "g3": 0.14717887154861942,
+    "raw_g3": 0.13430800891785288,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.2522387678201628,
+    "calls": 3
+   },
+   {
+    "lhs": [
+     "labeler",
+     "generic"
+    ],
+    "rhs": "brand",
+    "g3": 0.1715571943062939,
+    "raw_g3": 0.1564568684616704,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.2857558508910605,
+    "calls": 6
+   },
+   {
+    "lhs": [
+     "labeler",
+     "generic"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.013925570228091266,
+    "raw_g3": 0.011910478477105135,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04950725589201124,
+    "calls": 25
+   },
+   {
+    "lhs": [
+     "labeler",
+     "generic"
+    ],
+    "rhs": "ptype",
+    "g3": 0.002160864345738256,
+    "raw_g3": 0.002015091750986131,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04556872155991546,
+    "calls": 15
+   },
+   {
+    "lhs": [
+     "labeler",
+     "mktcat"
+    ],
+    "rhs": "labcode",
+    "g3": 0.122226033270451,
+    "raw_g3": 0.10228948722346076,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.25926045737916115,
+    "calls": 11
+   },
+   {
+    "lhs": [
+     "labeler",
+     "mktcat"
+    ],
+    "rhs": "appno",
+    "g3": 0.5935688561138741,
+    "raw_g3": 0.5743182987480706,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.905087104533188,
+    "calls": 1
+   },
+   {
+    "lhs": [
+     "labeler",
+     "mktcat"
+    ],
+    "rhs": "brand",
+    "g3": 0.8656062424969988,
+    "raw_g3": 0.8427199451209055,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0616475306224715,
+    "calls": 3
+   },
+   {
+    "lhs": [
+     "labeler",
+     "mktcat"
+    ],
+    "rhs": "generic",
+    "g3": 0.8021951637797976,
+    "raw_g3": 0.7781083862116275,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0189145093403584,
+    "calls": 5
+   },
+   {
+    "lhs": [
+     "labeler",
+     "mktcat"
+    ],
+    "rhs": "ptype",
+    "g3": 0.012133424798490777,
+    "raw_g3": 0.011661807580174877,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04669132331100011,
+    "calls": 13
+   },
+   {
+    "lhs": [
+     "labeler",
+     "ptype"
+    ],
+    "rhs": "labcode",
+    "g3": 0.12713942719945126,
+    "raw_g3": 0.1071342822843423,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.18566187095434775,
+    "calls": 35
+   },
+   {
+    "lhs": [
+     "labeler",
+     "ptype"
+    ],
+    "rhs": "appno",
+    "g3": 0.6164037043388784,
+    "raw_g3": 0.5982078545703996,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.881450366729279,
+    "calls": 2
+   },
+   {
+    "lhs": [
+     "labeler",
+     "ptype"
+    ],
+    "rhs": "brand",
+    "g3": 0.8844366317955754,
+    "raw_g3": 0.8629566112159149,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0693509271832922,
+    "calls": 11
+   },
+   {
+    "lhs": [
+     "labeler",
+     "ptype"
+    ],
+    "rhs": "generic",
+    "g3": 0.8241125021437146,
+    "raw_g3": 0.8014320013719773,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0266080742072845,
+    "calls": 2
+   },
+   {
+    "lhs": [
+     "labeler",
+     "ptype"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.08951294803635745,
+    "raw_g3": 0.08555993826101871,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.15317119629428425,
+    "calls": 32
+   },
+   {
+    "lhs": [
+     "appno",
+     "brand"
+    ],
+    "rhs": "labcode",
+    "g3": 0.328811524609844,
+    "raw_g3": 0.328811524609844,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5997721037612149,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "brand"
+    ],
+    "rhs": "labeler",
+    "g3": 0.3163179557537301,
+    "raw_g3": 0.3247041673812382,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6068727072717521,
+    "calls": 1
+   },
+   {
+    "lhs": [
+     "appno",
+     "brand"
+    ],
+    "rhs": "generic",
+    "g3": 0.05493911850454469,
+    "raw_g3": 0.05493911850454469,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.06346938138179713,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "brand"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.0004973417938604063,
+    "raw_g3": 0.0004973417938604063,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "brand"
+    ],
+    "rhs": "ptype",
+    "g3": 0.0006602641056422387,
+    "raw_g3": 0.0006602641056422387,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "generic"
+    ],
+    "rhs": "labcode",
+    "g3": 0.4985079746184188,
+    "raw_g3": 0.4985079746184188,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7275134029078051,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "generic"
+    ],
+    "rhs": "labeler",
+    "g3": 0.4853284170811182,
+    "raw_g3": 0.4915280397873435,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7254939171897162,
+    "calls": 3
+   },
+   {
+    "lhs": [
+     "appno",
+     "generic"
+    ],
+    "rhs": "brand",
+    "g3": 0.2753129823357915,
+    "raw_g3": 0.2753129823357915,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.560890204446226,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "generic"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.006053850111473191,
+    "raw_g3": 0.006053850111473191,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04909219489030396,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "generic"
+    ],
+    "rhs": "ptype",
+    "g3": 0.0010718573143543297,
+    "raw_g3": 0.0010718573143543297,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.038645003258994184,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "mktcat"
+    ],
+    "rhs": "labcode",
+    "g3": 0.6651432001371977,
+    "raw_g3": 0.6651432001371977,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.955528390305162,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "mktcat"
+    ],
+    "rhs": "labeler",
+    "g3": 0.6471960212656491,
+    "raw_g3": 0.6547418967587035,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8586743562935799,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "mktcat"
+    ],
+    "rhs": "brand",
+    "g3": 0.4896072714800206,
+    "raw_g3": 0.4896072714800206,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7520695683523688,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "mktcat"
+    ],
+    "rhs": "generic",
+    "g3": 0.40108900703138395,
+    "raw_g3": 0.40108900703138395,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7284665562495412,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "mktcat"
+    ],
+    "rhs": "ptype",
+    "g3": 0.008746355685131157,
+    "raw_g3": 0.008746355685131157,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.049026094007217455,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "ptype"
+    ],
+    "rhs": "labcode",
+    "g3": 0.6700480192076831,
+    "raw_g3": 0.6700480192076831,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.9540755962119076,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "ptype"
+    ],
+    "rhs": "labeler",
+    "g3": 0.6515863488252445,
+    "raw_g3": 0.6592093980449323,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.882444224623592,
+    "calls": 1
+   },
+   {
+    "lhs": [
+     "appno",
+     "ptype"
+    ],
+    "rhs": "brand",
+    "g3": 0.496321385697136,
+    "raw_g3": 0.496321385697136,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7282883091888095,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "ptype"
+    ],
+    "rhs": "generic",
+    "g3": 0.40350711713256726,
+    "raw_g3": 0.40350711713256726,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6907414161301084,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "appno",
+     "ptype"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.0183501972217458,
+    "raw_g3": 0.0183501972217458,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.046680104642636916,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "generic"
+    ],
+    "rhs": "labcode",
+    "g3": 0.4392471274223976,
+    "raw_g3": 0.4392471274223976,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6391914560424277,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "generic"
+    ],
+    "rhs": "labeler",
+    "g3": 0.42641913908420515,
+    "raw_g3": 0.4310238381066712,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7082920178671407,
+    "calls": 1
+   },
+   {
+    "lhs": [
+     "brand",
+     "generic"
+    ],
+    "rhs": "appno",
+    "g3": 0.31648945292402675,
+    "raw_g3": 0.31648945292402675,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5746778556407509,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "generic"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.024095352426684924,
+    "raw_g3": 0.024095352426684924,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04863933007681606,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "generic"
+    ],
+    "rhs": "ptype",
+    "g3": 0.009346595781169587,
+    "raw_g3": 0.009346595781169587,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.046015289362262825,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "mktcat"
+    ],
+    "rhs": "labcode",
+    "g3": 0.46026410564225695,
+    "raw_g3": 0.46026410564225695,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7601097624917426,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "mktcat"
+    ],
+    "rhs": "labeler",
+    "g3": 0.4462785114045619,
+    "raw_g3": 0.4558223289315726,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.646508889904883,
+    "calls": 4
+   },
+   {
+    "lhs": [
+     "brand",
+     "mktcat"
+    ],
+    "rhs": "appno",
+    "g3": 0.32263762647916305,
+    "raw_g3": 0.32263762647916305,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5902113456950436,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "mktcat"
+    ],
+    "rhs": "generic",
+    "g3": 0.07966901046132735,
+    "raw_g3": 0.07966901046132735,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.1065367576861414,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "mktcat"
+    ],
+    "rhs": "ptype",
+    "g3": 0.007931744126221885,
+    "raw_g3": 0.007931744126221885,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.044748547143014704,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "ptype"
+    ],
+    "rhs": "labcode",
+    "g3": 0.46975647401817866,
+    "raw_g3": 0.46975647401817866,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7262234733157924,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "ptype"
+    ],
+    "rhs": "labeler",
+    "g3": 0.4559252272337506,
+    "raw_g3": 0.4656319670725433,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7900351709717582,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "ptype"
+    ],
+    "rhs": "appno",
+    "g3": 0.33989881666952493,
+    "raw_g3": 0.33989881666952493,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.567520093516822,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "ptype"
+    ],
+    "rhs": "generic",
+    "g3": 0.08348482250042877,
+    "raw_g3": 0.08348482250042877,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.11141399896268023,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "brand",
+     "ptype"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.027765391871034106,
+    "raw_g3": 0.027765391871034106,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.048936711716525375,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "mktcat"
+    ],
+    "rhs": "labcode",
+    "g3": 0.6425913222431829,
+    "raw_g3": 0.6425913222431829,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8823398281115005,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "mktcat"
+    ],
+    "rhs": "labeler",
+    "g3": 0.6291030697993483,
+    "raw_g3": 0.6349511233064655,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.891610788884488,
+    "calls": 3
+   },
+   {
+    "lhs": [
+     "generic",
+     "mktcat"
+    ],
+    "rhs": "appno",
+    "g3": 0.36582918881838444,
+    "raw_g3": 0.36582918881838444,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7139524519659104,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "mktcat"
+    ],
+    "rhs": "brand",
+    "g3": 0.30701423426513463,
+    "raw_g3": 0.30701423426513463,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.530910183613693,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "mktcat"
+    ],
+    "rhs": "ptype",
+    "g3": 0.010847196021265604,
+    "raw_g3": 0.010847196021265604,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04477157965268754,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "ptype"
+    ],
+    "rhs": "labcode",
+    "g3": 0.6675184359458068,
+    "raw_g3": 0.6675184359458068,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8468595610957621,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "ptype"
+    ],
+    "rhs": "labeler",
+    "g3": 0.6544932258617733,
+    "raw_g3": 0.6603069799348311,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8448119866188457,
+    "calls": 1
+   },
+   {
+    "lhs": [
+     "generic",
+     "ptype"
+    ],
+    "rhs": "appno",
+    "g3": 0.3983707768821815,
+    "raw_g3": 0.3983707768821815,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6339458482050759,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "ptype"
+    ],
+    "rhs": "brand",
+    "g3": 0.327096552906877,
+    "raw_g3": 0.327096552906877,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.41529012909832275,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "generic",
+     "ptype"
+    ],
+    "rhs": "mktcat",
+    "g3": 0.05751157605899504,
+    "raw_g3": 0.05751157605899504,
+    "truth": false,
+    "tane": true,
+    "certified": false,
+    "ub": 0.06525564062098634,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "mktcat",
+     "ptype"
+    ],
+    "rhs": "labcode",
+    "g3": 0.9165923512262047,
+    "raw_g3": 0.9165923512262047,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1484919785631655,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "mktcat",
+     "ptype"
+    ],
+    "rhs": "labeler",
+    "g3": 0.8940233236151603,
+    "raw_g3": 0.896012690790602,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0109879598194154,
+    "calls": 2
+   },
+   {
+    "lhs": [
+     "mktcat",
+     "ptype"
+    ],
+    "rhs": "appno",
+    "g3": 0.7693706053850111,
+    "raw_g3": 0.7693706053850111,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0109765197501457,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "mktcat",
+     "ptype"
+    ],
+    "rhs": "brand",
+    "g3": 0.9805950951809295,
+    "raw_g3": 0.9805950951809295,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1232039134331324,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "mktcat",
+     "ptype"
+    ],
+    "rhs": "generic",
+    "g3": 0.9613616875321557,
+    "raw_g3": 0.9613616875321557,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.123104516604399,
+    "calls": 0
+   }
+  ]
+ }
+]

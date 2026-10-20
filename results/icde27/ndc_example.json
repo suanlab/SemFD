@@ -1,0 +1,20 @@
+{
+ "labcode": "49035",
+ "distinct_raw_spellings": 27,
+ "distinct_layer1_spellings": 12,
+ "n_tuples": 360,
+ "oracle_entities_of_49035": [
+  "firm627"
+ ],
+ "labcodes_of_same_firm": [
+  "49035",
+  "79903"
+ ],
+ "table1_rows_present": {
+  "49035|Wal-Mart Stores Inc|OTC MONOGRAPH DRUG": 89,
+  "49035|EQUATE (Wal-Mart Stores, Inc.) (see also WAL-MART INC)|OTC MONOGRAPH DRUG": 26,
+  "49035|WalMart|OTC MONOGRAPH DRUG": 5,
+  "49035|Wal-Mart Stores Inc|ANDA": 69,
+  "79903|WALMART INC.|OTC MONOGRAPH DRUG": 55
+ }
+}

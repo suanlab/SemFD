@@ -1,0 +1,79 @@
+{
+ "dataset": "geonames16000",
+ "delta": 0.05,
+ "alpha": 0.05,
+ "n_cands": 58,
+ "n_true": 10,
+ "splits": [
+  {
+   "split": 0,
+   "S": 29,
+   "H": 29,
+   "H_true": 4,
+   "calls_S_half_delta": 40248,
+   "calls_H_direct": 13614,
+   "S_false_certified": 0,
+   "H_direct_certified_true": 4,
+   "H_covered_by_closure": 0,
+   "H_false_covered": 0,
+   "derived_violations": 0,
+   "tightness": []
+  },
+  {
+   "split": 1,
+   "S": 29,
+   "H": 29,
+   "H_true": 3,
+   "calls_S_half_delta": 16684,
+   "calls_H_direct": 10235,
+   "S_false_certified": 0,
+   "H_direct_certified_true": 3,
+   "H_covered_by_closure": 0,
+   "H_false_covered": 0,
+   "derived_violations": 0,
+   "tightness": []
+  },
+  {
+   "split": 2,
+   "S": 29,
+   "H": 29,
+   "H_true": 6,
+   "calls_S_half_delta": 10877,
+   "calls_H_direct": 8626,
+   "S_false_certified": 0,
+   "H_direct_certified_true": 6,
+   "H_covered_by_closure": 0,
+   "H_false_covered": 0,
+   "derived_violations": 0,
+   "tightness": []
+  },
+  {
+   "split": 3,
+   "S": 29,
+   "H": 29,
+   "H_true": 2,
+   "calls_S_half_delta": 40158,
+   "calls_H_direct": 19809,
+   "S_false_certified": 0,
+   "H_direct_certified_true": 2,
+   "H_covered_by_closure": 0,
+   "H_false_covered": 0,
+   "derived_violations": 0,
+   "tightness": []
+  },
+  {
+   "split": 4,
+   "S": 29,
+   "H": 29,
+   "H_true": 8,
+   "calls_S_half_delta": 9276,
+   "calls_H_direct": 16761,
+   "S_false_certified": 0,
+   "H_direct_certified_true": 8,
+   "H_covered_by_closure": 0,
+   "H_false_covered": 0,
+   "derived_violations": 0,
+   "tightness": []
+  }
+ ]
+}

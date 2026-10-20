@@ -1,0 +1,4932 @@
+[
+ {
+  "dataset": "geonames16000",
+  "seed": 0,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "alpha_per_fd": 0.0008620689655172415,
+  "theta0": 0.9,
+  "rows": 80000,
+  "n_cands": 58,
+  "n_true": 10,
+  "truth": {
+   "city->country": 0.0,
+   "city->admin1": 0.0,
+   "city->tz": 0.0,
+   "city->fcode": 0.0,
+   "city->country_e2": 0.020112499999999978,
+   "city->country_e8": 0.07997500000000002,
+   "city->country_src8": 0.07976249999999996,
+   "city->tz_src8": 0.0798375,
+   "country->city": 0.9539124999999999,
+   "country->admin1": 0.7826500000000001,
+   "country->tz": 0.12361250000000001,
+   "country->fcode": 0.42761249999999995,
+   "country->tz_src8": 0.1933125,
+   "admin1->city": 0.7378125,
+   "admin1->country": 0.0,
+   "admin1->tz": 0.004275000000000029,
+   "admin1->fcode": 0.30871249999999995,
+   "admin1->country_e2": 0.020675,
+   "admin1->country_e8": 0.082125,
+   "admin1->country_src8": 0.0798875,
+   "admin1->tz_src8": 0.0838875,
+   "tz->city": 0.9390000000000001,
+   "tz->country": 0.004937500000000039,
+   "tz->admin1": 0.7098249999999999,
+   "tz->fcode": 0.42241249999999997,
+   "tz->country_e2": 0.02553749999999999,
+   "tz->country_e8": 0.08673750000000002,
+   "tz->country_src8": 0.0844125,
+   "fcode->city": 0.9941625,
+   "fcode->country": 0.8279875,
+   "fcode->admin1": 0.9695,
+   "fcode->tz": 0.83265,
+   "fcode->country_e2": 0.83,
+   "fcode->country_e8": 0.8356125,
+   "fcode->country_src8": 0.8350124999999999,
+   "fcode->tz_src8": 0.840575,
+   "country_e2->city": 0.9548375,
+   "country_e2->admin1": 0.7873875,
+   "country_e2->tz": 0.14195000000000002,
+   "country_e2->fcode": 0.432825,
+   "country_e2->tz_src8": 0.21004999999999996,
+   "country_e8->city": 0.9573875000000001,
+   "country_e8->admin1": 0.8007875,
+   "country_e8->tz": 0.19558750000000003,
+   "country_e8->fcode": 0.44823749999999996,
+   "country_e8->tz_src8": 0.2597625,
+   "country_src8->city": 0.9570375,
+   "country_src8->admin1": 0.7996875,
+   "country_src8->tz": 0.19338750000000005,
+   "country_src8->fcode": 0.44772500000000004,
+   "country_src8->tz_src8": 0.23296249999999996,
+   "tz_src8->city": 0.9431875,
+   "tz_src8->country": 0.08398749999999999,
+   "tz_src8->admin1": 0.7331624999999999,
+   "tz_src8->fcode": 0.441825,
+   "tz_src8->country_e2": 0.10276249999999998,
+   "tz_src8->country_e8": 0.15942500000000004,
+   "tz_src8->country_src8": 0.12917500000000004
+  },
+  "b3_tane_raw": {
+   "n": 4,
+   "false": 1,
+   "missed_true": 7
+  },
+  "b3_tane_norm": {
+   "n": 4,
+   "false": 1,
+   "missed_true": 7
+  },
+  "b1_quotient": {
+   "n": 4,
+   "false": 1,
+   "missed_true": 7
+  },
+  "ours": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "ours_calls_total": 22869,
+  "ours_calls_fwd_inv": [
+   16387,
+   6482
+  ],
+  "planner": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "planner_calls_total": 23527,
+  "b9_noaudit": {
+   "n": 12,
+   "false": 2,
+   "missed_true": 0
+  },
+  "b9_calls_total": 2769,
+  "planner_resolved": 28,
+  "planner_prepass": [
+   "country",
+   "country_e2",
+   "country_e8",
+   "country_src8"
+  ],
+  "v_thresh": 2000,
+  "canon_all": 42598,
+  "ours_detail": {
+   "city->country": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.047569621269221346,
+    "lb": -0.047569621269221346,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 1272,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->admin1": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.03994510219655181,
+    "lb": -0.03260484618924785,
+    "mean": 0.005,
+    "samples": 400,
+    "calls": 1919,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->tz": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.047569621269221346,
+    "lb": -0.047569621269221346,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 945,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->fcode": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04261758580630718,
+    "lb": -0.032617585806307185,
+    "mean": 0.005,
+    "samples": 400,
+    "calls": 1133,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->country_e2": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.0494683476728313,
+    "lb": 0.00900142959879957,
+    "mean": 0.02666666666666667,
+    "samples": 1800,
+    "calls": 4925,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->country_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.14903678243394952,
+    "lb": 0.05208896727672083,
+    "mean": 0.1,
+    "samples": 900,
+    "calls": 1997,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->country_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.1170282937562604,
+    "lb": 0.050004647445386276,
+    "mean": 0.08176470588235295,
+    "samples": 1700,
+    "calls": 3182,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.1268344754209251,
+    "lb": 0.05032524734551372,
+    "mean": 0.08428571428571428,
+    "samples": 1400,
+    "calls": 2193,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1111127690948994,
+    "lb": 0.7888872309051004,
+    "mean": 0.95,
+    "samples": 100,
+    "calls": 56,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0136115158899612,
+    "lb": 0.6044335612499263,
+    "mean": 0.81,
+    "samples": 100,
+    "calls": 106,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country->tz": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.23091169068697415,
+    "lb": 0.06583408916835827,
+    "mean": 0.155,
+    "samples": 400,
+    "calls": 107,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.7328414291410059,
+    "lb": 0.25802394039613563,
+    "mean": 0.51,
+    "samples": 100,
+    "calls": 14,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.3359627271163754,
+    "lb": 0.07553888735069864,
+    "mean": 0.22,
+    "samples": 200,
+    "calls": 46,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.891688084211048,
+    "lb": 0.4261419760316571,
+    "mean": 0.66,
+    "samples": 100,
+    "calls": 174,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->country": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.047569621269221346,
+    "lb": -0.047569621269221346,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 530,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->tz": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04953713491895128,
+    "lb": -0.029537134918951276,
+    "mean": 0.01,
+    "samples": 400,
+    "calls": 477,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.5630171186843693,
+    "lb": 0.10471577255667205,
+    "mean": 0.34,
+    "samples": 100,
+    "calls": 84,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->country_e2": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.049708221128841976,
+    "lb": -0.01741826501365281,
+    "mean": 0.018,
+    "samples": 500,
+    "calls": 531,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->country_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.12194447924405202,
+    "lb": 0.05147938585571516,
+    "mean": 0.09285714285714286,
+    "samples": 1400,
+    "calls": 1137,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->country_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.11955096988473052,
+    "lb": 0.05143350320252814,
+    "mean": 0.09133333333333334,
+    "samples": 1500,
+    "calls": 846,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.1449754240119,
+    "lb": 0.053052839240109194,
+    "mean": 0.097,
+    "samples": 1000,
+    "calls": 440,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1046106859284506,
+    "lb": 0.7844173766578755,
+    "mean": 0.94,
+    "samples": 100,
+    "calls": 38,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->country": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.049506145510571135,
+    "lb": -0.02950614551057113,
+    "mean": 0.01,
+    "samples": 400,
+    "calls": 10,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9830839512326036,
+    "lb": 0.5520009307233129,
+    "mean": 0.77,
+    "samples": 100,
+    "calls": 22,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6694033524277669,
+    "lb": 0.1868740039298022,
+    "mean": 0.42,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->country_e2": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.047884889436581445,
+    "lb": -0.001516798573947372,
+    "mean": 0.022,
+    "samples": 1000,
+    "calls": 36,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->country_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.13229651165221917,
+    "lb": 0.050487692825372354,
+    "mean": 0.08916666666666667,
+    "samples": 1200,
+    "calls": 35,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->country_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.11015499964383313,
+    "lb": 0.0506547824386403,
+    "mean": 0.0863157894736842,
+    "samples": 1900,
+    "calls": 48,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1365928889979695,
+    "lb": 0.8434071110020306,
+    "mean": 0.99,
+    "samples": 100,
+    "calls": 57,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->country": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0058905236291893,
+    "lb": 0.5901300811958016,
+    "mean": 0.8,
+    "samples": 100,
+    "calls": 2,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1112301559883606,
+    "lb": 0.7887698440116393,
+    "mean": 0.95,
+    "samples": 100,
+    "calls": 17,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->tz": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9811049492539647,
+    "lb": 0.5518842465038314,
+    "mean": 0.77,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->country_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0147579847679182,
+    "lb": 0.6041007053935347,
+    "mean": 0.81,
+    "samples": 100,
+    "calls": 3,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->country_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0776777503120114,
+    "lb": 0.7328142394738897,
+    "mean": 0.9,
+    "samples": 100,
+    "calls": 3,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->country_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9978096101338289,
+    "lb": 0.5773635413383614,
+    "mean": 0.79,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0437272672251832,
+    "lb": 0.6686501699952002,
+    "mean": 0.85,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e2->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.093074707228929,
+    "lb": 0.7469252927710709,
+    "mean": 0.92,
+    "samples": 100,
+    "calls": 54,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e2->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0433951869194646,
+    "lb": 0.6564642234825696,
+    "mean": 0.85,
+    "samples": 100,
+    "calls": 32,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e2->tz": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.20433377091729216,
+    "lb": 0.05982567704228761,
+    "mean": 0.132,
+    "samples": 500,
+    "calls": 33,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e2->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6583213562317346,
+    "lb": 0.17663814216948523,
+    "mean": 0.41,
+    "samples": 100,
+    "calls": 3,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e2->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.3874327959519873,
+    "lb": 0.09796997011582817,
+    "mean": 0.235,
+    "samples": 200,
+    "calls": 22,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e8->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1303223306151806,
+    "lb": 0.8298206431573595,
+    "mean": 0.98,
+    "samples": 100,
+    "calls": 49,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e8->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.006674135847179,
+    "lb": 0.6105689802309088,
+    "mean": 0.8,
+    "samples": 100,
+    "calls": 34,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e8->tz": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.3432942359565422,
+    "lb": 0.06967439069547612,
+    "mean": 0.21,
+    "samples": 200,
+    "calls": 4,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e8->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.7334960494986729,
+    "lb": 0.2491074212581105,
+    "mean": 0.49,
+    "samples": 100,
+    "calls": 5,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e8->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.40800700664149797,
+    "lb": 0.11014920354122973,
+    "mean": 0.255,
+    "samples": 200,
+    "calls": 12,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_src8->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1187663427941847,
+    "lb": 0.8012336572058152,
+    "mean": 0.96,
+    "samples": 100,
+    "calls": 42,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_src8->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0208957341522746,
+    "lb": 0.6181715835673096,
+    "mean": 0.82,
+    "samples": 100,
+    "calls": 28,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_src8->tz": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.25350945634388533,
+    "lb": 0.058715493020625245,
+    "mean": 0.16333333333333333,
+    "samples": 300,
+    "calls": 7,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_src8->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6638123006501218,
+    "lb": 0.1852097907602189,
+    "mean": 0.43,
+    "samples": 100,
+    "calls": 1,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_src8->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.4373817429245033,
+    "lb": 0.13386591607392873,
+    "mean": 0.29,
+    "samples": 200,
+    "calls": 14,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1303867586911769,
+    "lb": 0.8296132413088231,
+    "mean": 0.98,
+    "samples": 100,
+    "calls": 42,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->country": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.10015539552019906,
+    "lb": 0.05053018301425363,
+    "mean": 0.07714285714285714,
+    "samples": 2800,
+    "calls": 55,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.926619600361001,
+    "lb": 0.4831961223758,
+    "mean": 0.72,
+    "samples": 100,
+    "calls": 18,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.7506011208496568,
+    "lb": 0.2632195335672136,
+    "mean": 0.51,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->country_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.13994639592492264,
+    "lb": 0.05025069770163003,
+    "mean": 0.10333333333333333,
+    "samples": 900,
+    "calls": 17,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->country_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.3065712787559628,
+    "lb": 0.054029474221951146,
+    "mean": 0.19,
+    "samples": 200,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->country_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.16624561608724245,
+    "lb": 0.05194144121862069,
+    "mean": 0.10571428571428572,
+    "samples": 700,
+    "calls": 12,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   }
+  },
+  "false_lists": {
+   "b3_raw": [
+    "city->tz_src8"
+   ],
+   "b3_norm": [
+    "city->tz_src8"
+   ],
+   "b1": [
+    "city->tz_src8"
+   ],
+   "ours": [],
+   "planner": [],
+   "b9": [
+    "city->country_src8",
+    "city->tz_src8"
+   ]
+  },
+  "missed_lists": {
+   "b3_raw": [
+    "admin1->country",
+    "admin1->country_e2",
+    "city->admin1",
+    "city->country",
+    "city->country_e2",
+    "tz->country",
+    "tz->country_e2"
+   ],
+   "b1": [
+    "admin1->country",
+    "admin1->country_e2",
+    "city->admin1",
+    "city->country",
+    "city->country_e2",
+    "tz->country",
+    "tz->country_e2"
+   ],
+   "ours": [],
+   "b9": []
+  },
+  "derived": {
+   "n_certified_base": 10,
+   "n_derived_total": 73,
+   "n_violating_bound": 0,
+   "list": [
+    {
+     "lhs": [
+      "city"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city"
+     ],
+     "rhs": "admin1",
+     "bound": 0.03994510219655181,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city"
+     ],
+     "rhs": "fcode",
+     "bound": 0.04261758580630718,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.0494683476728313,
+     "g3": 0.020112499999999978,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1"
+     ],
+     "rhs": "tz",
+     "bound": 0.04953713491895128,
+     "g3": 0.004275000000000029,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.049708221128841976,
+     "g3": 0.020675,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz"
+     ],
+     "rhs": "country",
+     "bound": 0.049506145510571135,
+     "g3": 0.004937500000000039,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.047884889436581445,
+     "g3": 0.02553749999999999,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country"
+     ],
+     "rhs": "admin1",
+     "bound": 0.03994510219655181,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country"
+     ],
+     "rhs": "fcode",
+     "bound": 0.04261758580630718,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.0494683476728313,
+     "g3": 0.020112499999999978,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "admin1"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "admin1"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "admin1"
+     ],
+     "rhs": "fcode",
+     "bound": 0.04261758580630718,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "admin1"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.0494683476728313,
+     "g3": 0.020112499999999978,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz"
+     ],
+     "rhs": "admin1",
+     "bound": 0.03994510219655181,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz"
+     ],
+     "rhs": "fcode",
+     "bound": 0.04261758580630718,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.047884889436581445,
+     "g3": 0.020112499999999978,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "fcode"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "fcode"
+     ],
+     "rhs": "admin1",
+     "bound": 0.03994510219655181,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "fcode"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "fcode"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.0494683476728313,
+     "g3": 0.020112499999999978,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e2"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e2"
+     ],
+     "rhs": "admin1",
+     "bound": 0.03994510219655181,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e2"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e2"
+     ],
+     "rhs": "fcode",
+     "bound": 0.04261758580630718,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e8"
+     ],
+     "rhs": "admin1",
+     "bound": 0.03994510219655181,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e8"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e8"
+     ],
+     "rhs": "fcode",
+     "bound": 0.04261758580630718,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.0494683476728313,
+     "g3": 0.0006000000000000449,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_src8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_src8"
+     ],
+     "rhs": "admin1",
+     "bound": 0.03994510219655181,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_src8"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_src8"
+     ],
+     "rhs": "fcode",
+     "bound": 0.04261758580630718,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_src8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.0494683476728313,
+     "g3": 0.018537499999999985,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz_src8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz_src8"
+     ],
+     "rhs": "admin1",
+     "bound": 0.03994510219655181,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz_src8"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz_src8"
+     ],
+     "rhs": "fcode",
+     "bound": 0.04261758580630718,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz_src8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.0494683476728313,
+     "g3": 0.018537499999999985,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "country",
+      "admin1"
+     ],
+     "rhs": "tz",
+     "bound": 0.04953713491895128,
+     "g3": 0.004275000000000029,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "country",
+      "admin1"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.049708221128841976,
+     "g3": 0.020675,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "country",
+      "tz"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.047884889436581445,
+     "g3": 0.020675,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "tz"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "tz"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.047884889436581445,
+     "g3": 0.020675,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "fcode"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "fcode"
+     ],
+     "rhs": "tz",
+     "bound": 0.04953713491895128,
+     "g3": 0.002587499999999965,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "fcode"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.049708221128841976,
+     "g3": 0.020649999999999946,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_e2"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_e2"
+     ],
+     "rhs": "tz",
+     "bound": 0.04953713491895128,
+     "g3": 0.004225000000000034,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_e8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_e8"
+     ],
+     "rhs": "tz",
+     "bound": 0.04953713491895128,
+     "g3": 0.003974999999999951,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_e8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.049708221128841976,
+     "g3": 0.005774999999999975,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_src8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_src8"
+     ],
+     "rhs": "tz",
+     "bound": 0.04953713491895128,
+     "g3": 0.003937500000000038,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_src8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.049708221128841976,
+     "g3": 0.019549999999999956,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "tz_src8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "tz_src8"
+     ],
+     "rhs": "tz",
+     "bound": 0.04953713491895128,
+     "g3": 0.00014999999999998348,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "tz_src8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.049708221128841976,
+     "g3": 0.01958749999999998,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "fcode"
+     ],
+     "rhs": "country",
+     "bound": 0.049506145510571135,
+     "g3": 0.004012499999999974,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "fcode"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.047884889436581445,
+     "g3": 0.024599999999999955,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "country_e2"
+     ],
+     "rhs": "country",
+     "bound": 0.049506145510571135,
+     "g3": 1.2499999999970868e-05,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "country_e8"
+     ],
+     "rhs": "country",
+     "bound": 0.049506145510571135,
+     "g3": 0.0002375000000000016,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "country_e8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.047884889436581445,
+     "g3": 0.013637499999999969,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "country_src8"
+     ],
+     "rhs": "country",
+     "bound": 0.049506145510571135,
+     "g3": 0.0002750000000000252,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "country_src8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.047884889436581445,
+     "g3": 0.02033750000000001,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "tz_src8"
+     ],
+     "rhs": "country",
+     "bound": 0.049506145510571135,
+     "g3": 0.004812499999999997,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "tz_src8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.047884889436581445,
+     "g3": 0.02485000000000004,
+     "violated": false
+    }
+   ]
+  },
+  "sec": {
+   "proxy": 24.00619818829,
+   "tane": 1.1492280289530754,
+   "certify": 5.111371336504817
+  }
+ },
+ {
+  "dataset": "geonames16000",
+  "seed": 1,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "alpha_per_fd": 0.0008620689655172415,
+  "theta0": 0.9,
+  "rows": 80000,
+  "n_cands": 58,
+  "n_true": 10,
+  "truth": {
+   "city->country": 0.0,
+   "city->admin1": 0.0,
+   "city->tz": 0.0,
+   "city->fcode": 0.0,
+   "city->country_e2": 0.020525000000000015,
+   "city->country_e8": 0.07863750000000003,
+   "city->country_src8": 0.07981249999999995,
+   "city->tz_src8": 0.07984999999999998,
+   "country->city": 0.955175,
+   "country->admin1": 0.786,
+   "country->tz": 0.12062499999999998,
+   "country->fcode": 0.42381250000000004,
+   "country->tz_src8": 0.19076249999999995,
+   "admin1->city": 0.7422,
+   "admin1->country": 0.0,
+   "admin1->tz": 0.0036249999999999893,
+   "admin1->fcode": 0.30955,
+   "admin1->country_e2": 0.02092499999999997,
+   "admin1->country_e8": 0.0803625,
+   "admin1->country_src8": 0.07987500000000003,
+   "admin1->tz_src8": 0.08323749999999996,
+   "tz->city": 0.9422875,
+   "tz->country": 0.005762500000000004,
+   "tz->admin1": 0.7183999999999999,
+   "tz->fcode": 0.41884999999999994,
+   "tz->country_e2": 0.026662500000000033,
+   "tz->country_e8": 0.0858875,
+   "tz->country_src8": 0.08504999999999996,
+   "fcode->city": 0.993325,
+   "fcode->country": 0.8175125,
+   "fcode->admin1": 0.9662125,
+   "fcode->tz": 0.8227875,
+   "fcode->country_e2": 0.8195125,
+   "fcode->country_e8": 0.82535,
+   "fcode->country_src8": 0.824975,
+   "fcode->tz_src8": 0.8302,
+   "country_e2->city": 0.955975,
+   "country_e2->admin1": 0.7905,
+   "country_e2->tz": 0.13875000000000004,
+   "country_e2->fcode": 0.42956249999999996,
+   "country_e2->tz_src8": 0.2073625,
+   "country_e8->city": 0.95855,
+   "country_e8->admin1": 0.803375,
+   "country_e8->tz": 0.19169999999999998,
+   "country_e8->fcode": 0.4446,
+   "country_e8->tz_src8": 0.25593750000000004,
+   "country_src8->city": 0.9582625,
+   "country_src8->admin1": 0.8028875,
+   "country_src8->tz": 0.19017499999999998,
+   "country_src8->fcode": 0.443825,
+   "country_src8->tz_src8": 0.23086249999999997,
+   "tz_src8->city": 0.946075,
+   "tz_src8->country": 0.08465,
+   "tz_src8->admin1": 0.7400625000000001,
+   "tz_src8->fcode": 0.44067500000000004,
+   "tz_src8->country_e2": 0.1038,
+   "tz_src8->country_e8": 0.15813750000000004,
+   "tz_src8->country_src8": 0.13080000000000003
+  },
+  "b3_tane_raw": {
+   "n": 4,
+   "false": 1,
+   "missed_true": 7
+  },
+  "b3_tane_norm": {
+   "n": 4,
+   "false": 1,
+   "missed_true": 7
+  },
+  "b1_quotient": {
+   "n": 4,
+   "false": 1,
+   "missed_true": 7
+  },
+  "ours": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "ours_calls_total": 21081,
+  "ours_calls_fwd_inv": [
+   15122,
+   5959
+  ],
+  "planner": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "planner_calls_total": 21735,
+  "b9_noaudit": {
+   "n": 12,
+   "false": 2,
+   "missed_true": 0
+  },
+  "b9_calls_total": 2881,
+  "planner_resolved": 28,
+  "planner_prepass": [
+   "country",
+   "country_e2",
+   "country_e8",
+   "country_src8"
+  ],
+  "v_thresh": 2000,
+  "canon_all": 42355,
+  "ours_detail": {
+   "city->country": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.047569621269221346,
+    "lb": -0.047569621269221346,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 1267,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->admin1": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.047569621269221346,
+    "lb": -0.047569621269221346,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 1432,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->tz": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.047569621269221346,
+    "lb": -0.047569621269221346,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 1011,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->fcode": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.039145933716698916,
+    "lb": -0.03414593371669891,
+    "mean": 0.0025,
+    "samples": 400,
+    "calls": 1115,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->country_e2": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.048693219553211264,
+    "lb": -0.009553520240672325,
+    "mean": 0.018571428571428572,
+    "samples": 700,
+    "calls": 2079,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->country_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.15430130465498473,
+    "lb": 0.05315498466462129,
+    "mean": 0.11,
+    "samples": 800,
+    "calls": 1959,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->country_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.11448423491387785,
+    "lb": 0.050338051464798986,
+    "mean": 0.08166666666666667,
+    "samples": 1800,
+    "calls": 3877,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.11611122164883589,
+    "lb": 0.050951926920780856,
+    "mean": 0.08277777777777778,
+    "samples": 1800,
+    "calls": 3024,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1366562660168569,
+    "lb": 0.8433437339831431,
+    "mean": 0.99,
+    "samples": 100,
+    "calls": 63,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9826666566630551,
+    "lb": 0.5525977190179281,
+    "mean": 0.77,
+    "samples": 100,
+    "calls": 119,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country->tz": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.24810672996947303,
+    "lb": 0.05417955653202815,
+    "mean": 0.15666666666666668,
+    "samples": 300,
+    "calls": 96,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.7343314254276637,
+    "lb": 0.25057007063349007,
+    "mean": 0.5,
+    "samples": 100,
+    "calls": 9,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.34118476712572954,
+    "lb": 0.06502944166540564,
+    "mean": 0.19,
+    "samples": 200,
+    "calls": 27,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9191683072118488,
+    "lb": 0.46245841585670944,
+    "mean": 0.69,
+    "samples": 100,
+    "calls": 165,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->country": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.047569621269221346,
+    "lb": -0.047569621269221346,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 487,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->tz": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.047569621269221346,
+    "lb": -0.047569621269221346,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 398,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.5473061955989291,
+    "lb": 0.08939964238860729,
+    "mean": 0.32,
+    "samples": 100,
+    "calls": 94,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->country_e2": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.047257830920191465,
+    "lb": -0.013621820240556502,
+    "mean": 0.016666666666666666,
+    "samples": 600,
+    "calls": 656,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->country_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.12303279052463134,
+    "lb": 0.050620626538704236,
+    "mean": 0.09461538461538462,
+    "samples": 1300,
+    "calls": 1125,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->country_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.12288635492443122,
+    "lb": 0.05063130707478558,
+    "mean": 0.09142857142857143,
+    "samples": 1400,
+    "calls": 881,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.15000713500535212,
+    "lb": 0.05134988701384986,
+    "mean": 0.09666666666666666,
+    "samples": 900,
+    "calls": 397,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1053941089638175,
+    "lb": 0.7746058910361824,
+    "mean": 0.94,
+    "samples": 100,
+    "calls": 52,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->country": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.045138998007693526,
+    "lb": -0.02113899800769353,
+    "mean": 0.012,
+    "samples": 500,
+    "calls": 25,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9180819020247165,
+    "lb": 0.4608963466185595,
+    "mean": 0.69,
+    "samples": 100,
+    "calls": 23,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.5960447885605937,
+    "lb": 0.12704818289846492,
+    "mean": 0.36,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->country_e2": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.049995962486530515,
+    "lb": 0.007841459536659254,
+    "mean": 0.028666666666666667,
+    "samples": 1500,
+    "calls": 70,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->country_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.09698733868870321,
+    "lb": 0.05018830190207626,
+    "mean": 0.07733333333333334,
+    "samples": 3000,
+    "calls": 90,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->country_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.11405086126141167,
+    "lb": 0.05100078882146513,
+    "mean": 0.08647058823529412,
+    "samples": 1700,
+    "calls": 44,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.136561406011399,
+    "lb": 0.8434385939886009,
+    "mean": 0.99,
+    "samples": 100,
+    "calls": 45,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->country": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9584913972170506,
+    "lb": 0.5192529604436374,
+    "mean": 0.74,
+    "samples": 100,
+    "calls": 1,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1303421631775514,
+    "lb": 0.8296578368224484,
+    "mean": 0.98,
+    "samples": 100,
+    "calls": 15,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->tz": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0217855507972455,
+    "lb": 0.6154664127120695,
+    "mean": 0.82,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->country_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0573175235341832,
+    "lb": 0.6978011505824236,
+    "mean": 0.87,
+    "samples": 100,
+    "calls": 2,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->country_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0438796552801546,
+    "lb": 0.6560280897436201,
+    "mean": 0.85,
+    "samples": 100,
+    "calls": 1,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->country_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0139589397645272,
+    "lb": 0.6147264809115534,
+    "mean": 0.81,
+    "samples": 100,
+    "calls": 1,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0648034248674318,
+    "lb": 0.700583692523897,
+    "mean": 0.88,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e2->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1180094886128336,
+    "lb": 0.8019905113871664,
+    "mean": 0.96,
+    "samples": 100,
+    "calls": 53,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e2->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.028658427348193,
+    "lb": 0.6354432517937341,
+    "mean": 0.83,
+    "samples": 100,
+    "calls": 36,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e2->tz": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.2117557887334366,
+    "lb": 0.05021746795231036,
+    "mean": 0.13,
+    "samples": 400,
+    "calls": 57,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e2->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6579858383850026,
+    "lb": 0.18488212677774143,
+    "mean": 0.43,
+    "samples": 100,
+    "calls": 4,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e2->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.5057714525513893,
+    "lb": 0.05839793311365021,
+    "mean": 0.28,
+    "samples": 100,
+    "calls": 6,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e8->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.124107736758245,
+    "lb": 0.8178286733949874,
+    "mean": 0.97,
+    "samples": 100,
+    "calls": 53,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e8->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0287290300308183,
+    "lb": 0.6395544416722146,
+    "mean": 0.83,
+    "samples": 100,
+    "calls": 16,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e8->tz": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.39537529501516744,
+    "lb": 0.10521110186689661,
+    "mean": 0.245,
+    "samples": 200,
+    "calls": 8,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e8->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8005590138560315,
+    "lb": 0.3196633965188417,
+    "mean": 0.56,
+    "samples": 100,
+    "calls": 4,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e8->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.49046634578370946,
+    "lb": 0.05550695863052471,
+    "mean": 0.28,
+    "samples": 100,
+    "calls": 4,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_src8->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1303583660979586,
+    "lb": 0.8296416339020414,
+    "mean": 0.98,
+    "samples": 100,
+    "calls": 46,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_src8->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.043048543562928,
+    "lb": 0.6567476127569996,
+    "mean": 0.85,
+    "samples": 100,
+    "calls": 31,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_src8->tz": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.3163981358727433,
+    "lb": 0.05471644726761177,
+    "mean": 0.19,
+    "samples": 200,
+    "calls": 9,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_src8->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6982447566593453,
+    "lb": 0.2135281188470638,
+    "mean": 0.46,
+    "samples": 100,
+    "calls": 5,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_src8->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.3520702610971904,
+    "lb": 0.07538327735980696,
+    "mean": 0.215,
+    "samples": 200,
+    "calls": 6,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1117115941603744,
+    "lb": 0.7882884058396255,
+    "mean": 0.95,
+    "samples": 100,
+    "calls": 43,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->country": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.15896095970374716,
+    "lb": 0.051804894498250556,
+    "mean": 0.09875,
+    "samples": 800,
+    "calls": 22,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9339004625262957,
+    "lb": 0.482671008073799,
+    "mean": 0.71,
+    "samples": 100,
+    "calls": 11,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6333582821470933,
+    "lb": 0.15689102854966905,
+    "mean": 0.4,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->country_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.1795987150718543,
+    "lb": 0.05382799474389506,
+    "mean": 0.11666666666666667,
+    "samples": 600,
+    "calls": 7,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->country_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.19313560062756263,
+    "lb": 0.05203234653612081,
+    "mean": 0.12,
+    "samples": 500,
+    "calls": 9,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->country_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.2548560124927522,
+    "lb": 0.058777072882165576,
+    "mean": 0.14,
+    "samples": 300,
+    "calls": 1,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   }
+  },
+  "false_lists": {
+   "b3_raw": [
+    "city->tz_src8"
+   ],
+   "b3_norm": [
+    "city->tz_src8"
+   ],
+   "b1": [
+    "city->tz_src8"
+   ],
+   "ours": [],
+   "planner": [],
+   "b9": [
+    "city->country_src8",
+    "city->tz_src8"
+   ]
+  },
+  "missed_lists": {
+   "b3_raw": [
+    "admin1->country",
+    "admin1->country_e2",
+    "city->admin1",
+    "city->country",
+    "city->country_e2",
+    "tz->country",
+    "tz->country_e2"
+   ],
+   "b1": [
+    "admin1->country",
+    "admin1->country_e2",
+    "city->admin1",
+    "city->country",
+    "city->country_e2",
+    "tz->country",
+    "tz->country_e2"
+   ],
+   "ours": [],
+   "b9": []
+  },
+  "derived": {
+   "n_certified_base": 10,
+   "n_derived_total": 73,
+   "n_violating_bound": 0,
+   "list": [
+    {
+     "lhs": [
+      "city"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city"
+     ],
+     "rhs": "admin1",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city"
+     ],
+     "rhs": "fcode",
+     "bound": 0.039145933716698916,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.048693219553211264,
+     "g3": 0.020525000000000015,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0036249999999999893,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.047257830920191465,
+     "g3": 0.02092499999999997,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz"
+     ],
+     "rhs": "country",
+     "bound": 0.045138998007693526,
+     "g3": 0.005762500000000004,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.049995962486530515,
+     "g3": 0.026662500000000033,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country"
+     ],
+     "rhs": "admin1",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country"
+     ],
+     "rhs": "fcode",
+     "bound": 0.039145933716698916,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.048693219553211264,
+     "g3": 0.020525000000000015,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "admin1"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "admin1"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "admin1"
+     ],
+     "rhs": "fcode",
+     "bound": 0.039145933716698916,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "admin1"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.047257830920191465,
+     "g3": 0.020525000000000015,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz"
+     ],
+     "rhs": "country",
+     "bound": 0.045138998007693526,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz"
+     ],
+     "rhs": "admin1",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz"
+     ],
+     "rhs": "fcode",
+     "bound": 0.039145933716698916,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.048693219553211264,
+     "g3": 0.020525000000000015,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "fcode"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "fcode"
+     ],
+     "rhs": "admin1",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "fcode"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "fcode"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.048693219553211264,
+     "g3": 0.020525000000000015,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e2"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e2"
+     ],
+     "rhs": "admin1",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e2"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e2"
+     ],
+     "rhs": "fcode",
+     "bound": 0.039145933716698916,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e8"
+     ],
+     "rhs": "admin1",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e8"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e8"
+     ],
+     "rhs": "fcode",
+     "bound": 0.039145933716698916,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.048693219553211264,
+     "g3": 0.0007125000000000048,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_src8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_src8"
+     ],
+     "rhs": "admin1",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_src8"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_src8"
+     ],
+     "rhs": "fcode",
+     "bound": 0.039145933716698916,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_src8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.048693219553211264,
+     "g3": 0.018900000000000028,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz_src8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz_src8"
+     ],
+     "rhs": "admin1",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz_src8"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz_src8"
+     ],
+     "rhs": "fcode",
+     "bound": 0.039145933716698916,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz_src8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.048693219553211264,
+     "g3": 0.018850000000000033,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "country",
+      "admin1"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0036249999999999893,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "country",
+      "admin1"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.047257830920191465,
+     "g3": 0.02092499999999997,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "country",
+      "tz"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.049995962486530515,
+     "g3": 0.020974999999999966,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "tz"
+     ],
+     "rhs": "country",
+     "bound": 0.045138998007693526,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "tz"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.047257830920191465,
+     "g3": 0.02092499999999997,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "fcode"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "fcode"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0022999999999999687,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "fcode"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.047257830920191465,
+     "g3": 0.020887499999999948,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_e2"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_e2"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.003550000000000053,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_e8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_e8"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.003375000000000017,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_e8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.047257830920191465,
+     "g3": 0.0061875000000000124,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_src8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_src8"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0034250000000000114,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_src8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.047257830920191465,
+     "g3": 0.019850000000000034,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "tz_src8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "tz_src8"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 9.999999999998899e-05,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "tz_src8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.047257830920191465,
+     "g3": 0.01981250000000001,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "fcode"
+     ],
+     "rhs": "country",
+     "bound": 0.045138998007693526,
+     "g3": 0.0050000000000000044,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "fcode"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.049995962486530515,
+     "g3": 0.025887499999999952,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "country_e2"
+     ],
+     "rhs": "country",
+     "bound": 0.045138998007693526,
+     "g3": 2.5000000000052758e-05,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "country_e8"
+     ],
+     "rhs": "country",
+     "bound": 0.045138998007693526,
+     "g3": 0.0001875000000000071,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "country_e8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.049995962486530515,
+     "g3": 0.0138625,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "country_src8"
+     ],
+     "rhs": "country",
+     "bound": 0.045138998007693526,
+     "g3": 0.00031250000000004885,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "country_src8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.049995962486530515,
+     "g3": 0.020774999999999988,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "tz_src8"
+     ],
+     "rhs": "country",
+     "bound": 0.045138998007693526,
+     "g3": 0.005512500000000031,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "tz_src8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.049995962486530515,
+     "g3": 0.02576250000000002,
+     "violated": false
+    }
+   ]
+  },
+  "sec": {
+   "proxy": 21.85787272080779,
+   "tane": 1.2780412938445807,
+   "certify": 5.153350412845612
+  }
+ },
+ {
+  "dataset": "geonames16000",
+  "seed": 2,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "alpha_per_fd": 0.0008620689655172415,
+  "theta0": 0.9,
+  "rows": 80000,
+  "n_cands": 58,
+  "n_true": 10,
+  "truth": {
+   "city->country": 0.0,
+   "city->admin1": 0.0,
+   "city->tz": 0.0,
+   "city->fcode": 0.0,
+   "city->country_e2": 0.01902499999999996,
+   "city->country_e8": 0.07753750000000004,
+   "city->country_src8": 0.07986249999999995,
+   "city->tz_src8": 0.07982500000000003,
+   "country->city": 0.9512,
+   "country->admin1": 0.7840125,
+   "country->tz": 0.11898750000000002,
+   "country->fcode": 0.43251249999999997,
+   "country->tz_src8": 0.18918749999999995,
+   "admin1->city": 0.7337750000000001,
+   "admin1->country": 0.0,
+   "admin1->tz": 0.004262499999999947,
+   "admin1->fcode": 0.30823750000000005,
+   "admin1->country_e2": 0.019275000000000042,
+   "admin1->country_e8": 0.07898749999999999,
+   "admin1->country_src8": 0.0799375,
+   "admin1->tz_src8": 0.08374999999999999,
+   "tz->city": 0.9361625,
+   "tz->country": 0.0057874999999999455,
+   "tz->admin1": 0.715125,
+   "tz->fcode": 0.42656249999999996,
+   "tz->country_e2": 0.025024999999999964,
+   "tz->country_e8": 0.08443750000000005,
+   "tz->country_src8": 0.08536250000000001,
+   "fcode->city": 0.9933375,
+   "fcode->country": 0.82455,
+   "fcode->admin1": 0.9672875,
+   "fcode->tz": 0.8287375,
+   "fcode->country_e2": 0.82605,
+   "fcode->country_e8": 0.8318375,
+   "fcode->country_src8": 0.8318625,
+   "fcode->tz_src8": 0.835725,
+   "country_e2->city": 0.952225,
+   "country_e2->admin1": 0.788175,
+   "country_e2->tz": 0.13611249999999997,
+   "country_e2->fcode": 0.4373125,
+   "country_e2->tz_src8": 0.2047875,
+   "country_e8->city": 0.9548375,
+   "country_e8->admin1": 0.800675,
+   "country_e8->tz": 0.18866249999999996,
+   "country_e8->fcode": 0.45281249999999995,
+   "country_e8->tz_src8": 0.2531,
+   "country_src8->city": 0.9543,
+   "country_src8->admin1": 0.801025,
+   "country_src8->tz": 0.18955,
+   "country_src8->fcode": 0.452325,
+   "country_src8->tz_src8": 0.2296125,
+   "tz_src8->city": 0.9409875,
+   "tz_src8->country": 0.08476249999999996,
+   "tz_src8->admin1": 0.737525,
+   "tz_src8->fcode": 0.44815000000000005,
+   "tz_src8->country_e2": 0.10229999999999995,
+   "tz_src8->country_e8": 0.15683749999999996,
+   "tz_src8->country_src8": 0.13055000000000005
+  },
+  "b3_tane_raw": {
+   "n": 4,
+   "false": 1,
+   "missed_true": 7
+  },
+  "b3_tane_norm": {
+   "n": 4,
+   "false": 1,
+   "missed_true": 7
+  },
+  "b1_quotient": {
+   "n": 4,
+   "false": 1,
+   "missed_true": 7
+  },
+  "ours": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "ours_calls_total": 21326,
+  "ours_calls_fwd_inv": [
+   15283,
+   6043
+  ],
+  "planner": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "planner_calls_total": 22084,
+  "b9_noaudit": {
+   "n": 12,
+   "false": 2,
+   "missed_true": 0
+  },
+  "b9_calls_total": 3004,
+  "planner_resolved": 28,
+  "planner_prepass": [
+   "country_e8",
+   "country_src8"
+  ],
+  "v_thresh": 2000,
+  "canon_all": 42405,
+  "ours_detail": {
+   "city->country": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.047569621269221346,
+    "lb": -0.047569621269221346,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 1208,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->admin1": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.0426081298712155,
+    "lb": -0.0326081298712155,
+    "mean": 0.005,
+    "samples": 400,
+    "calls": 1998,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->tz": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.047569621269221346,
+    "lb": -0.047569621269221346,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 963,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->fcode": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.047569621269221346,
+    "lb": -0.047569621269221346,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 815,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->country_e2": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04518207725179202,
+    "lb": -0.021182077251792015,
+    "mean": 0.012,
+    "samples": 500,
+    "calls": 1570,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->country_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.11942781469819391,
+    "lb": 0.05052138192890408,
+    "mean": 0.088,
+    "samples": 1500,
+    "calls": 3615,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->country_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.1275899960788778,
+    "lb": 0.05174829747362853,
+    "mean": 0.08642857142857142,
+    "samples": 1400,
+    "calls": 2906,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "city->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.10954750721863081,
+    "lb": 0.05038009597229216,
+    "mean": 0.0863157894736842,
+    "samples": 1900,
+    "calls": 3125,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1303606825684236,
+    "lb": 0.8296393174315765,
+    "mean": 0.98,
+    "samples": 100,
+    "calls": 63,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0287418905856047,
+    "lb": 0.6427326228484789,
+    "mean": 0.83,
+    "samples": 100,
+    "calls": 90,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country->tz": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.17572346950539983,
+    "lb": 0.05479824182834245,
+    "mean": 0.12,
+    "samples": 600,
+    "calls": 145,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.7648994479219464,
+    "lb": 0.29219017066587927,
+    "mean": 0.54,
+    "samples": 100,
+    "calls": 10,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.32403350593550406,
+    "lb": 0.057941618244501836,
+    "mean": 0.195,
+    "samples": 200,
+    "calls": 18,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0286124891500035,
+    "lb": 0.6474842853126639,
+    "mean": 0.83,
+    "samples": 100,
+    "calls": 131,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->country": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.047569621269221346,
+    "lb": -0.047569621269221346,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 541,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->tz": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04260244738676489,
+    "lb": -0.0326024473867649,
+    "mean": 0.005,
+    "samples": 400,
+    "calls": 502,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.537413338191267,
+    "lb": 0.08904682434631375,
+    "mean": 0.32,
+    "samples": 100,
+    "calls": 89,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->country_e2": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04564986289858143,
+    "lb": -0.009288906305906681,
+    "mean": 0.018571428571428572,
+    "samples": 700,
+    "calls": 691,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->country_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.1263364774301734,
+    "lb": 0.0531029465621713,
+    "mean": 0.09142857142857143,
+    "samples": 1400,
+    "calls": 1077,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->country_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.13211941359263818,
+    "lb": 0.05073466933202361,
+    "mean": 0.09818181818181818,
+    "samples": 1100,
+    "calls": 722,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "admin1->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.1665791695948792,
+    "lb": 0.053698221702406936,
+    "mean": 0.11142857142857143,
+    "samples": 700,
+    "calls": 302,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0917631677801725,
+    "lb": 0.7631243790503187,
+    "mean": 0.92,
+    "samples": 100,
+    "calls": 52,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->country": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.047569621269221346,
+    "lb": -0.047569621269221346,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 13,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8450849693080537,
+    "lb": 0.3666481940325942,
+    "mean": 0.61,
+    "samples": 100,
+    "calls": 22,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6559370421730695,
+    "lb": 0.1840177295466185,
+    "mean": 0.41,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->country_e2": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.0489516499923181,
+    "lb": -0.006730748387566567,
+    "mean": 0.022857142857142857,
+    "samples": 700,
+    "calls": 30,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->country_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.11809198084310943,
+    "lb": 0.05041467676339754,
+    "mean": 0.08058823529411764,
+    "samples": 1700,
+    "calls": 54,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz->country_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.12859474226021528,
+    "lb": 0.05160777537157499,
+    "mean": 0.09,
+    "samples": 1300,
+    "calls": 36,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1427024683349163,
+    "lb": 0.8572975316650837,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 39,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->country": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9994144828571243,
+    "lb": 0.5814388094386405,
+    "mean": 0.79,
+    "samples": 100,
+    "calls": 2,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.117627632977954,
+    "lb": 0.802372367022046,
+    "mean": 0.96,
+    "samples": 100,
+    "calls": 19,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->tz": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0123774300976096,
+    "lb": 0.6021247261113598,
+    "mean": 0.81,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->country_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0930616179164665,
+    "lb": 0.7469383820835336,
+    "mean": 0.92,
+    "samples": 100,
+    "calls": 6,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->country_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9910700808956415,
+    "lb": 0.5734542530952121,
+    "mean": 0.78,
+    "samples": 100,
+    "calls": 5,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->country_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9828753335993028,
+    "lb": 0.5558248645200284,
+    "mean": 0.77,
+    "samples": 100,
+    "calls": 5,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "fcode->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.021352724151465,
+    "lb": 0.6289327893096897,
+    "mean": 0.82,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e2->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1305644692985402,
+    "lb": 0.8294355307014599,
+    "mean": 0.98,
+    "samples": 100,
+    "calls": 51,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e2->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0073282600348255,
+    "lb": 0.622377014415926,
+    "mean": 0.8,
+    "samples": 100,
+    "calls": 22,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e2->tz": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.21163663035525387,
+    "lb": 0.05735682271651643,
+    "mean": 0.145,
+    "samples": 400,
+    "calls": 28,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e2->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6961864069298307,
+    "lb": 0.21845944709734882,
+    "mean": 0.45,
+    "samples": 100,
+    "calls": 10,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e2->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.36262550607384003,
+    "lb": 0.08303991275638362,
+    "mean": 0.22,
+    "samples": 200,
+    "calls": 16,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e8->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0985800637159326,
+    "lb": 0.7614199362840675,
+    "mean": 0.93,
+    "samples": 100,
+    "calls": 68,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e8->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.043124199514068,
+    "lb": 0.6728397366452604,
+    "mean": 0.85,
+    "samples": 100,
+    "calls": 18,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e8->tz": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.3323885557642554,
+    "lb": 0.0645488416084955,
+    "mean": 0.19,
+    "samples": 200,
+    "calls": 20,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e8->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.7816598122014813,
+    "lb": 0.2961790877200023,
+    "mean": 0.54,
+    "samples": 100,
+    "calls": 1,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_e8->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.566293025717221,
+    "lb": 0.101030494889712,
+    "mean": 0.33,
+    "samples": 100,
+    "calls": 4,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_src8->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1241537647302946,
+    "lb": 0.8158462352697053,
+    "mean": 0.97,
+    "samples": 100,
+    "calls": 49,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_src8->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9756315518900183,
+    "lb": 0.5569370071555002,
+    "mean": 0.76,
+    "samples": 100,
+    "calls": 23,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_src8->tz": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.3356098308656421,
+    "lb": 0.06371730091849176,
+    "mean": 0.195,
+    "samples": 200,
+    "calls": 13,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_src8->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6965147170110695,
+    "lb": 0.2151088427255532,
+    "mean": 0.45,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "country_src8->tz_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.5177604927894123,
+    "lb": 0.06481833359303829,
+    "mean": 0.29,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->city": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1048667720271257,
+    "lb": 0.7751332279728741,
+    "mean": 0.94,
+    "samples": 100,
+    "calls": 44,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->country": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.12227736010440385,
+    "lb": 0.0502568955226571,
+    "mean": 0.09142857142857143,
+    "samples": 1400,
+    "calls": 34,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->admin1": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.955729681986599,
+    "lb": 0.5118611184232895,
+    "mean": 0.74,
+    "samples": 100,
+    "calls": 26,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->fcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6047138755990835,
+    "lb": 0.13471693779029345,
+    "mean": 0.37,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->country_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.15782920601302533,
+    "lb": 0.05059486944854862,
+    "mean": 0.09625,
+    "samples": 800,
+    "calls": 20,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->country_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.3291767189313448,
+    "lb": 0.060761561244737305,
+    "mean": 0.195,
+    "samples": 200,
+    "calls": 8,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   },
+   "tz_src8->country_src8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.23183837784715838,
+    "lb": 0.061914041930435884,
+    "mean": 0.145,
+    "samples": 400,
+    "calls": 7,
+    "theta": 0.9,
+    "alpha": 0.0008620689655172415
+   }
+  },
+  "false_lists": {
+   "b3_raw": [
+    "city->tz_src8"
+   ],
+   "b3_norm": [
+    "city->tz_src8"
+   ],
+   "b1": [
+    "city->tz_src8"
+   ],
+   "ours": [],
+   "planner": [],
+   "b9": [
+    "city->country_src8",
+    "city->tz_src8"
+   ]
+  },
+  "missed_lists": {
+   "b3_raw": [
+    "admin1->country",
+    "admin1->country_e2",
+    "city->admin1",
+    "city->country",
+    "city->country_e2",
+    "tz->country",
+    "tz->country_e2"
+   ],
+   "b1": [
+    "admin1->country",
+    "admin1->country_e2",
+    "city->admin1",
+    "city->country",
+    "city->country_e2",
+    "tz->country",
+    "tz->country_e2"
+   ],
+   "ours": [],
+   "b9": []
+  },
+  "derived": {
+   "n_certified_base": 10,
+   "n_derived_total": 73,
+   "n_violating_bound": 0,
+   "list": [
+    {
+     "lhs": [
+      "city"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city"
+     ],
+     "rhs": "admin1",
+     "bound": 0.0426081298712155,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city"
+     ],
+     "rhs": "fcode",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.04518207725179202,
+     "g3": 0.01902499999999996,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1"
+     ],
+     "rhs": "tz",
+     "bound": 0.04260244738676489,
+     "g3": 0.004262499999999947,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.04564986289858143,
+     "g3": 0.019275000000000042,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0057874999999999455,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.0489516499923181,
+     "g3": 0.025024999999999964,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country"
+     ],
+     "rhs": "admin1",
+     "bound": 0.0426081298712155,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country"
+     ],
+     "rhs": "fcode",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.04518207725179202,
+     "g3": 0.01902499999999996,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "admin1"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "admin1"
+     ],
+     "rhs": "tz",
+     "bound": 0.04260244738676489,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "admin1"
+     ],
+     "rhs": "fcode",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "admin1"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.04518207725179202,
+     "g3": 0.01902499999999996,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz"
+     ],
+     "rhs": "admin1",
+     "bound": 0.0426081298712155,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz"
+     ],
+     "rhs": "fcode",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.04518207725179202,
+     "g3": 0.01902499999999996,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "fcode"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "fcode"
+     ],
+     "rhs": "admin1",
+     "bound": 0.0426081298712155,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "fcode"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "fcode"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.04518207725179202,
+     "g3": 0.01902499999999996,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e2"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e2"
+     ],
+     "rhs": "admin1",
+     "bound": 0.0426081298712155,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e2"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e2"
+     ],
+     "rhs": "fcode",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e8"
+     ],
+     "rhs": "admin1",
+     "bound": 0.0426081298712155,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e8"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e8"
+     ],
+     "rhs": "fcode",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_e8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.04518207725179202,
+     "g3": 0.00046250000000003233,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_src8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_src8"
+     ],
+     "rhs": "admin1",
+     "bound": 0.0426081298712155,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_src8"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_src8"
+     ],
+     "rhs": "fcode",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "country_src8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.04518207725179202,
+     "g3": 0.017662500000000025,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz_src8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz_src8"
+     ],
+     "rhs": "admin1",
+     "bound": 0.0426081298712155,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz_src8"
+     ],
+     "rhs": "tz",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz_src8"
+     ],
+     "rhs": "fcode",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "city",
+      "tz_src8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.04518207725179202,
+     "g3": 0.01747500000000002,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "country",
+      "admin1"
+     ],
+     "rhs": "tz",
+     "bound": 0.04260244738676489,
+     "g3": 0.004262499999999947,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "country",
+      "admin1"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.04564986289858143,
+     "g3": 0.019275000000000042,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "country",
+      "tz"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.0489516499923181,
+     "g3": 0.019275000000000042,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "tz"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "tz"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.04564986289858143,
+     "g3": 0.019275000000000042,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "fcode"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "fcode"
+     ],
+     "rhs": "tz",
+     "bound": 0.04260244738676489,
+     "g3": 0.002687499999999954,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "fcode"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.04564986289858143,
+     "g3": 0.019275000000000042,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_e2"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_e2"
+     ],
+     "rhs": "tz",
+     "bound": 0.04260244738676489,
+     "g3": 0.0041999999999999815,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_e8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_e8"
+     ],
+     "rhs": "tz",
+     "bound": 0.04260244738676489,
+     "g3": 0.003950000000000009,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_e8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.04564986289858143,
+     "g3": 0.004824999999999968,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_src8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_src8"
+     ],
+     "rhs": "tz",
+     "bound": 0.04260244738676489,
+     "g3": 0.004012499999999974,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "country_src8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.04564986289858143,
+     "g3": 0.018199999999999994,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "tz_src8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "tz_src8"
+     ],
+     "rhs": "tz",
+     "bound": 0.04260244738676489,
+     "g3": 8.750000000001812e-05,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "admin1",
+      "tz_src8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.04564986289858143,
+     "g3": 0.01816249999999997,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "fcode"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.004612500000000019,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "fcode"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.0489516499923181,
+     "g3": 0.023850000000000038,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "country_e2"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 1.2499999999970868e-05,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "country_e8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.00022500000000003073,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "country_e8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.0489516499923181,
+     "g3": 0.012462500000000043,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "country_src8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.00026250000000005436,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "country_src8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.0489516499923181,
+     "g3": 0.019012499999999988,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "tz_src8"
+     ],
+     "rhs": "country",
+     "bound": 0.047569621269221346,
+     "g3": 0.005475000000000008,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "tz",
+      "tz_src8"
+     ],
+     "rhs": "country_e2",
+     "bound": 0.0489516499923181,
+     "g3": 0.024162499999999976,
+     "violated": false
+    }
+   ]
+  },
+  "sec": {
+   "proxy": 22.05353530496359,
+   "tane": 1.3244633078575134,
+   "certify": 5.262259587645531
+  }
+ }
+]

@@ -1,0 +1,70 @@
+{
+ "geonames_16k": {
+  "canon_all": 42452.666666666664,
+  "canon_variant_only": 42452.666666666664,
+  "canon_inverse_aware": 34633.666666666664,
+  "attrs_seed0": {
+   "city": [
+    29987,
+    15510
+   ],
+   "country": [
+    2000,
+    196
+   ],
+   "admin1": [
+    10611,
+    2154
+   ]
+  }
+ },
+ "tax": {
+  "canon_all": 84574.66666666667,
+  "canon_variant_only": 84574.66666666667,
+  "canon_inverse_aware": 55744.0,
+  "attrs_seed0": {
+   "f_name": [
+    39471,
+    9991
+   ],
+   "city": [
+    45221,
+    17829
+   ],
+   "state": [
+    104,
+    52
+   ]
+  }
+ },
+ "ndc": {
+  "canon_all": 6653.0,
+  "canon_variant_only": 6653.0,
+  "canon_inverse_aware": 6653.0,
+  "attrs_seed0": {
+   "labeler": [
+    6653,
+    5109
+   ]
+  }
+ },
+ "geonames_128k": {
+  "canon_all": 246493.0,
+  "canon_variant_only": 246493.0,
+  "canon_inverse_aware": 216965.0,
+  "attrs_seed0": {
+   "city": [
+    212449,
+    105074
+   ],
+   "country": [
+    3050,
+    220
+   ],
+   "admin1": [
+    31103,
+    3256
+   ]
+  }
+ }
+}

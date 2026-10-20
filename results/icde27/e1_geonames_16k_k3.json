@@ -1,0 +1,4401 @@
+[
+ {
+  "dataset": "geonames16000",
+  "meta": {
+   "n_cities": 16000,
+   "rho": 0.2,
+   "seed": 0,
+   "near_miss": [
+    0.02,
+    0.08
+   ],
+   "conflict": [
+    0.08
+   ],
+   "conflict_exact": [
+    0.08
+   ]
+  },
+  "seed": 0,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "theta0": 0.9,
+  "grid": [
+   0.85,
+   0.9,
+   0.95
+  ],
+  "k": 3,
+  "proxy": "hybrid",
+  "rows": 80000,
+  "distinct": {
+   "city": 29987,
+   "country": 2000,
+   "admin1": 10611,
+   "tz": 295,
+   "fcode": 16,
+   "country_e2": 1989,
+   "country_e8": 1959,
+   "country_src8": 1953,
+   "tz_src8": 295
+  },
+  "canon_all": 42598,
+  "proxy_sec": 23.703298455104232,
+  "fds": [
+   {
+    "fd": "city->country",
+    "g3": 0.0,
+    "truth": true,
+    "canon_cost": 31987,
+    "b0_exact_g3": 0.15568749999999998,
+    "b1_quot_g3": {
+     "0.85": 0.16407499999999997,
+     "0.9": 0.15466250000000004,
+     "0.95": 0.1562
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 1029,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 725,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04480635219771704,
+      "lb": -0.015804054667171184,
+      "mean": 0.018,
+      "samples": 500,
+      "calls": 1661,
+      "theta": 0.85,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 608,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.00065
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 132,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.00065
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0,
+     "calls": 31987
+    },
+    "b5_pairwise": {
+     "g3": 0.0012999999999999678,
+     "calls": 117827
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 412,
+      "m": 300
+     },
+     {
+      "g3": 0.0,
+      "calls": 1208,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 4840,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->admin1",
+    "g3": 0.0,
+    "truth": true,
+    "canon_cost": 40598,
+    "b0_exact_g3": 0.15552500000000002,
+    "b1_quot_g3": {
+     "0.85": 0.11595,
+     "0.9": 0.1401,
+     "0.95": 0.1540125
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04222577208927786,
+      "lb": -0.03555910542261119,
+      "mean": 0.0033333333333333335,
+      "samples": 300,
+      "calls": 1171,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04222577208927786,
+      "lb": -0.03555910542261119,
+      "mean": 0.0033333333333333335,
+      "samples": 300,
+      "calls": 862,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.049493943905335805,
+      "lb": -0.005753320688701959,
+      "mean": 0.022857142857142857,
+      "samples": 700,
+      "calls": 2719,
+      "theta": 0.85,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03167113454816229,
+      "lb": -0.026671134548162292,
+      "mean": 0.0025,
+      "samples": 400,
+      "calls": 1033,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0013625
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.04222577208927786,
+      "lb": -0.03555910542261119,
+      "mean": 0.0033333333333333335,
+      "samples": 300,
+      "calls": 285,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0013625
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0,
+     "calls": 40598
+    },
+    "b5_pairwise": {
+     "g3": 0.004437499999999983,
+     "calls": 145747
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 538,
+      "m": 300
+     },
+     {
+      "g3": 0.0,
+      "calls": 1584,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 6199,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "admin1->country",
+    "g3": 0.0,
+    "truth": true,
+    "canon_cost": 12611,
+    "b0_exact_g3": 0.18443750000000003,
+    "b1_quot_g3": {
+     "0.85": 0.17998749999999997,
+     "0.9": 0.18132499999999996,
+     "0.95": 0.1851625
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 512,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 459,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04753823397962994,
+      "lb": -0.027538233979629935,
+      "mean": 0.01,
+      "samples": 400,
+      "calls": 637,
+      "theta": 0.85,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 160,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 8.75e-05
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 64,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 8.75e-05
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0,
+     "calls": 12611
+    },
+    "b5_pairwise": {
+     "g3": 0.001475000000000004,
+     "calls": 41290
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 359,
+      "m": 300
+     },
+     {
+      "g3": 0.0,
+      "calls": 916,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 2652,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "country->admin1",
+    "g3": 0.7826500000000001,
+    "truth": false,
+    "canon_cost": 12611,
+    "b0_exact_g3": 0.809525,
+    "b1_quot_g3": {
+     "0.85": 0.7979375,
+     "0.9": 0.80785,
+     "0.95": 0.809525
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 1.013112656764245,
+      "lb": 0.6942844727637785,
+      "mean": 0.85,
+      "samples": 100,
+      "calls": 110,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 1.013112656764245,
+      "lb": 0.6942844727637785,
+      "mean": 0.85,
+      "samples": 100,
+      "calls": 109,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 1.035942580063662,
+      "lb": 0.6635485274305459,
+      "mean": 0.85,
+      "samples": 100,
+      "calls": 249,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.999010916810825,
+      "lb": 0.6660843687609298,
+      "mean": 0.83,
+      "samples": 100,
+      "calls": 101,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.1095625
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.9916875656346754,
+      "lb": 0.6520577364969512,
+      "mean": 0.82,
+      "samples": 100,
+      "calls": 106,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.1095625
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.7826500000000001,
+     "calls": 12611
+    },
+    "b5_pairwise": {
+     "g3": 0.78285,
+     "calls": 41290
+    },
+    "b7_sample": [
+     {
+      "g3": 0.53,
+      "calls": 153,
+      "m": 100
+     },
+     {
+      "g3": 0.7,
+      "calls": 905,
+      "m": 1000
+     },
+     {
+      "g3": 0.767,
+      "calls": 2596,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "fcode->country",
+    "g3": 0.8279875,
+    "truth": false,
+    "canon_cost": 2000,
+    "b0_exact_g3": 0.863175,
+    "b1_quot_g3": {
+     "0.85": 0.8626375,
+     "0.9": 0.86305,
+     "0.95": 0.863175
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.974168781284857,
+      "lb": 0.6164112974616824,
+      "mean": 0.8,
+      "samples": 100,
+      "calls": 15,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.974168781284857,
+      "lb": 0.6164112974616824,
+      "mean": 0.8,
+      "samples": 100,
+      "calls": 15,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.975534538170693,
+      "lb": 0.5703517649311406,
+      "mean": 0.77,
+      "samples": 100,
+      "calls": 30,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.974168781284857,
+      "lb": 0.6164112974616824,
+      "mean": 0.8,
+      "samples": 100,
+      "calls": 15,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.974168781284857,
+      "lb": 0.6164112974616824,
+      "mean": 0.8,
+      "samples": 100,
+      "calls": 15,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.8279875,
+     "calls": 2000
+    },
+    "b5_pairwise": {
+     "g3": 0.8279875,
+     "calls": 6685
+    },
+    "b7_sample": [
+     {
+      "g3": 0.75,
+      "calls": 58,
+      "m": 100
+     },
+     {
+      "g3": 0.823,
+      "calls": 256,
+      "m": 1000
+     },
+     {
+      "g3": 0.8291999999999999,
+      "calls": 659,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "admin1->city",
+    "g3": 0.7378125,
+    "truth": false,
+    "canon_cost": 40598,
+    "b0_exact_g3": 0.713125,
+    "b1_quot_g3": {
+     "0.85": 0.751,
+     "0.9": 0.73245,
+     "0.95": 0.7166250000000001
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9016738305493931,
+      "lb": 0.527402407320572,
+      "mean": 0.7,
+      "samples": 100,
+      "calls": 227,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9016738305493931,
+      "lb": 0.527402407320572,
+      "mean": 0.7,
+      "samples": 100,
+      "calls": 211,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 1.0288749749289399,
+      "lb": 0.6603222858985957,
+      "mean": 0.84,
+      "samples": 100,
+      "calls": 533,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9016738305493931,
+      "lb": 0.527402407320572,
+      "mean": 0.7,
+      "samples": 100,
+      "calls": 197,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.115625
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.8371675692153974,
+      "lb": 0.4301147236370346,
+      "mean": 0.63,
+      "samples": 100,
+      "calls": 155,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.115625
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.7378125,
+     "calls": 40598
+    },
+    "b5_pairwise": {
+     "g3": 0.7509875,
+     "calls": 145747
+    },
+    "b7_sample": [
+     {
+      "g3": 0.10999999999999999,
+      "calls": 189,
+      "m": 100
+     },
+     {
+      "g3": 0.41500000000000004,
+      "calls": 1639,
+      "m": 1000
+     },
+     {
+      "g3": 0.607,
+      "calls": 6247,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "tz->country",
+    "g3": 0.004937500000000039,
+    "truth": true,
+    "canon_cost": 2000,
+    "b0_exact_g3": 0.204075,
+    "b1_quot_g3": {
+     "0.85": 0.1876,
+     "0.9": 0.19491250000000004,
+     "0.95": 0.20357499999999995
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 43,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 43,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04954279392401304,
+      "lb": -0.04287612725734637,
+      "mean": 0.0033333333333333335,
+      "samples": 300,
+      "calls": 37,
+      "theta": 0.85,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 44,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 45,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.004937500000000039,
+     "calls": 2000
+    },
+    "b5_pairwise": {
+     "g3": 0.006437499999999985,
+     "calls": 6685
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0033333333333332993,
+      "calls": 125,
+      "m": 300
+     },
+     {
+      "g3": 0.006000000000000005,
+      "calls": 267,
+      "m": 1000
+     },
+     {
+      "g3": 0.00539999999999996,
+      "calls": 623,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "country->tz",
+    "g3": 0.12361250000000001,
+    "truth": false,
+    "canon_cost": 2000,
+    "b0_exact_g3": 0.12270000000000003,
+    "b1_quot_g3": {
+     "0.85": 0.12855000000000005,
+     "0.9": 0.12327500000000002,
+     "0.95": 0.12293750000000003
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.21490853411961486,
+      "lb": 0.050273100543785615,
+      "mean": 0.13333333333333333,
+      "samples": 300,
+      "calls": 113,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.21490853411961486,
+      "lb": 0.050273100543785615,
+      "mean": 0.13333333333333333,
+      "samples": 300,
+      "calls": 106,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.17762307029061053,
+      "lb": 0.05297442934833664,
+      "mean": 0.128,
+      "samples": 500,
+      "calls": 251,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.21490853411961486,
+      "lb": 0.050273100543785615,
+      "mean": 0.13333333333333333,
+      "samples": 300,
+      "calls": 21,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0067
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.195152463525668,
+      "lb": 0.05520598231759709,
+      "mean": 0.125,
+      "samples": 400,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0067
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.12361250000000001,
+     "calls": 2000
+    },
+    "b5_pairwise": {
+     "g3": 0.12361250000000001,
+     "calls": 6685
+    },
+    "b7_sample": [
+     {
+      "g3": 0.11333333333333329,
+      "calls": 115,
+      "m": 300
+     },
+     {
+      "g3": 0.137,
+      "calls": 250,
+      "m": 1000
+     },
+     {
+      "g3": 0.127,
+      "calls": 631,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->country_e2",
+    "g3": 0.020112499999999978,
+    "truth": true,
+    "canon_cost": 31976,
+    "b0_exact_g3": 0.16805000000000003,
+    "b1_quot_g3": {
+     "0.85": 0.17756249999999996,
+     "0.9": 0.1676375,
+     "0.95": 0.16862500000000002
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04583672892398412,
+      "lb": -0.018932693899779134,
+      "mean": 0.015,
+      "samples": 400,
+      "calls": 1086,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04583672892398412,
+      "lb": -0.018932693899779134,
+      "mean": 0.015,
+      "samples": 400,
+      "calls": 781,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04998445468728309,
+      "lb": 0.03156449123134962,
+      "mean": 0.04140625,
+      "samples": 12800,
+      "calls": 18772,
+      "theta": 0.85,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03971756013324643,
+      "lb": -0.013916027021587035,
+      "mean": 0.014,
+      "samples": 500,
+      "calls": 721,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0045
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.046836844806000574,
+      "lb": -0.03350351147266724,
+      "mean": 0.006666666666666667,
+      "samples": 300,
+      "calls": 45,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0045
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.020112499999999978,
+     "calls": 31976
+    },
+    "b5_pairwise": {
+     "g3": 0.020387500000000003,
+     "calls": 117803
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 540,
+      "m": 400
+     },
+     {
+      "g3": 0.0010000000000000009,
+      "calls": 1203,
+      "m": 1000
+     },
+     {
+      "g3": 0.007199999999999984,
+      "calls": 4791,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->country_e8",
+    "g3": 0.07997500000000002,
+    "truth": false,
+    "canon_cost": 31946,
+    "b0_exact_g3": 0.205075,
+    "b1_quot_g3": {
+     "0.85": 0.2185125,
+     "0.9": 0.2064125,
+     "0.95": 0.20587500000000003
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.12955523372558936,
+      "lb": 0.05007542189186459,
+      "mean": 0.087,
+      "samples": 1000,
+      "calls": 2410,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.12955523372558936,
+      "lb": 0.05007542189186459,
+      "mean": 0.087,
+      "samples": 1000,
+      "calls": 1742,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.1215063299244939,
+      "lb": 0.050647283328350216,
+      "mean": 0.09583333333333334,
+      "samples": 1200,
+      "calls": 2342,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.10742891032834129,
+      "lb": 0.04365562008831692,
+      "mean": 0.08181818181818182,
+      "samples": 1100,
+      "calls": 1436,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0155
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.09120415740909317,
+      "lb": 0.050006857474740804,
+      "mean": 0.0732258064516129,
+      "samples": 3100,
+      "calls": 325,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0155
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.07997500000000002,
+     "calls": 31946
+    },
+    "b5_pairwise": {
+     "g3": 0.07745000000000002,
+     "calls": 117710
+    },
+    "b7_sample": [
+     {
+      "g3": 0.01200000000000001,
+      "calls": 1244,
+      "m": 1000
+     },
+     {
+      "g3": 0.026800000000000046,
+      "calls": 4826,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->country_src8",
+    "g3": 0.07976249999999996,
+    "truth": false,
+    "canon_cost": 31940,
+    "b0_exact_g3": 0.15413750000000004,
+    "b1_quot_g3": {
+     "0.85": 0.18438750000000004,
+     "0.9": 0.16178749999999997,
+     "0.95": 0.15557500000000002
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.11091010000725363,
+      "lb": 0.05115439222876625,
+      "mean": 0.08133333333333333,
+      "samples": 1500,
+      "calls": 3183,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.11091010000725363,
+      "lb": 0.05115439222876625,
+      "mean": 0.08133333333333333,
+      "samples": 1500,
+      "calls": 2489,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.0985392122497107,
+      "lb": 0.050484500245430476,
+      "mean": 0.08153846153846153,
+      "samples": 2600,
+      "calls": 3319,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.08905699844176672,
+      "lb": 0.040075984744354705,
+      "mean": 0.064,
+      "samples": 2000,
+      "calls": 2257,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0383
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.03861319786988839,
+      "lb": -0.023613197869888393,
+      "mean": 0.0075,
+      "samples": 400,
+      "calls": 33,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0383
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.07976249999999996,
+     "calls": 31940
+    },
+    "b5_pairwise": {
+     "g3": 0.060462499999999975,
+     "calls": 117696
+    },
+    "b7_sample": [
+     {
+      "g3": 0.009000000000000008,
+      "calls": 1227,
+      "m": 1000
+     },
+     {
+      "g3": 0.011333333333333306,
+      "calls": 1739,
+      "m": 1500
+     },
+     {
+      "g3": 0.027800000000000047,
+      "calls": 4858,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->tz_src8",
+    "g3": 0.0798375,
+    "truth": false,
+    "canon_cost": 29987,
+    "b0_exact_g3": 0.0,
+    "b1_quot_g3": {
+     "0.85": 0.03893749999999996,
+     "0.9": 0.012187500000000018,
+     "0.95": 0.0013625000000000442
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.15782547686783585,
+      "lb": 0.052947065416692675,
+      "mean": 0.10833333333333334,
+      "samples": 600,
+      "calls": 1048,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.15782547686783585,
+      "lb": 0.052947065416692675,
+      "mean": 0.10833333333333334,
+      "samples": 600,
+      "calls": 835,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.08569379244188337,
+      "lb": 0.05026893540430154,
+      "mean": 0.07533333333333334,
+      "samples": 4500,
+      "calls": 3072,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.09860082578411901,
+      "lb": 0.0413528671065711,
+      "mean": 0.06933333333333333,
+      "samples": 1500,
+      "calls": 1331,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.03905
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.04789814726831611,
+      "lb": -0.017380771900332236,
+      "mean": 0.0175,
+      "samples": 400,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.03905
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0798375,
+     "calls": 29987
+    },
+    "b5_pairwise": {
+     "g3": 0.05916250000000001,
+     "calls": 111142
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0016666666666667052,
+      "calls": 578,
+      "m": 600
+     },
+     {
+      "g3": 0.0050000000000000044,
+      "calls": 952,
+      "m": 1000
+     },
+     {
+      "g3": 0.026000000000000023,
+      "calls": 4207,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->tz",
+    "g3": 0.0,
+    "truth": true,
+    "canon_cost": 29987,
+    "b0_exact_g3": 0.0,
+    "b1_quot_g3": {
+     "0.85": 0.011924999999999963,
+     "0.9": 0.0011624999999999552,
+     "0.95": 3.7500000000023626e-05
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 587,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 415,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.0484692795351465,
+      "lb": 0.0005679195176762422,
+      "mean": 0.024,
+      "samples": 1000,
+      "calls": 413,
+      "theta": 0.85,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 297,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0007
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0007
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0,
+     "calls": 29987
+    },
+    "b5_pairwise": {
+     "g3": 0.0,
+     "calls": 111142
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 297,
+      "m": 300
+     },
+     {
+      "g3": 0.0,
+      "calls": 957,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 4201,
+      "m": 5000
+     }
+    ]
+   }
+  ],
+  "alpha_per_fd": 0.0038461538461538464,
+  "run_calls_inverse": 11534,
+  "run_calls_alias_only": 8792,
+  "run_calls_grid_inverse": 34035,
+  "run_calls_ann_nubar": 8221,
+  "run_calls_b9_noaudit": 1205
+ },
+ {
+  "dataset": "geonames16000",
+  "meta": {
+   "n_cities": 16000,
+   "rho": 0.2,
+   "seed": 1,
+   "near_miss": [
+    0.02,
+    0.08
+   ],
+   "conflict": [
+    0.08
+   ],
+   "conflict_exact": [
+    0.08
+   ]
+  },
+  "seed": 1,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "theta0": 0.9,
+  "grid": [
+   0.85,
+   0.9,
+   0.95
+  ],
+  "k": 3,
+  "proxy": "hybrid",
+  "rows": 80000,
+  "distinct": {
+   "city": 29888,
+   "country": 1962,
+   "admin1": 10505,
+   "tz": 291,
+   "fcode": 16,
+   "country_e2": 1958,
+   "country_e8": 1922,
+   "country_src8": 1921,
+   "tz_src8": 291
+  },
+  "canon_all": 42355,
+  "proxy_sec": 21.643855853006244,
+  "fds": [
+   {
+    "fd": "city->country",
+    "g3": 0.0,
+    "truth": true,
+    "canon_cost": 31850,
+    "b0_exact_g3": 0.15364999999999995,
+    "b1_quot_g3": {
+     "0.85": 0.1614,
+     "0.9": 0.15217499999999995,
+     "0.95": 0.15418750000000003
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 1007,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 723,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04379594660067589,
+      "lb": -0.01230312523195613,
+      "mean": 0.016666666666666666,
+      "samples": 600,
+      "calls": 2006,
+      "theta": 0.85,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 568,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.000525
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 124,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.000525
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0,
+     "calls": 31850
+    },
+    "b5_pairwise": {
+     "g3": 0.0003874999999999851,
+     "calls": 117788
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 415,
+      "m": 300
+     },
+     {
+      "g3": 0.0,
+      "calls": 1216,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 4799,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->admin1",
+    "g3": 0.0,
+    "truth": true,
+    "canon_cost": 40393,
+    "b0_exact_g3": 0.15495000000000003,
+    "b1_quot_g3": {
+     "0.85": 0.11727500000000002,
+     "0.9": 0.13878749999999995,
+     "0.95": 0.152775
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 1197,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 871,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04992579653711399,
+      "lb": 0.017972769522983635,
+      "mean": 0.03225806451612903,
+      "samples": 3100,
+      "calls": 9310,
+      "theta": 0.85,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 816,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0011
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 281,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0011
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0,
+     "calls": 40393
+    },
+    "b5_pairwise": {
+     "g3": 0.003662500000000013,
+     "calls": 145636
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 536,
+      "m": 300
+     },
+     {
+      "g3": 0.0,
+      "calls": 1620,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 6220,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "admin1->country",
+    "g3": 0.0,
+    "truth": true,
+    "canon_cost": 12467,
+    "b0_exact_g3": 0.18217499999999998,
+    "b1_quot_g3": {
+     "0.85": 0.177925,
+     "0.9": 0.17907499999999998,
+     "0.95": 0.183075
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 520,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 449,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04408990469749083,
+      "lb": -0.02908990469749083,
+      "mean": 0.0075,
+      "samples": 400,
+      "calls": 555,
+      "theta": 0.85,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 197,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 1.25e-05
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 62,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 1.25e-05
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0,
+     "calls": 12467
+    },
+    "b5_pairwise": {
+     "g3": 0.0004750000000000032,
+     "calls": 40882
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 364,
+      "m": 300
+     },
+     {
+      "g3": 0.0,
+      "calls": 886,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 2615,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "country->admin1",
+    "g3": 0.786,
+    "truth": false,
+    "canon_cost": 12467,
+    "b0_exact_g3": 0.8126249999999999,
+    "b1_quot_g3": {
+     "0.85": 0.80055,
+     "0.9": 0.8103,
+     "0.95": 0.8127875
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 1.0003779805496908,
+      "lb": 0.6733884565064948,
+      "mean": 0.83,
+      "samples": 100,
+      "calls": 112,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 1.0003779805496908,
+      "lb": 0.6733884565064948,
+      "mean": 0.83,
+      "samples": 100,
+      "calls": 107,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9970969994457578,
+      "lb": 0.5972362311827507,
+      "mean": 0.8,
+      "samples": 100,
+      "calls": 171,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9858839305314173,
+      "lb": 0.6440547086864754,
+      "mean": 0.81,
+      "samples": 100,
+      "calls": 107,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.1028625
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.9632006809133781,
+      "lb": 0.6046567731688148,
+      "mean": 0.78,
+      "samples": 100,
+      "calls": 96,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.1028625
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.786,
+     "calls": 12467
+    },
+    "b5_pairwise": {
+     "g3": 0.7862875,
+     "calls": 40882
+    },
+    "b7_sample": [
+     {
+      "g3": 0.51,
+      "calls": 142,
+      "m": 100
+     },
+     {
+      "g3": 0.7030000000000001,
+      "calls": 875,
+      "m": 1000
+     },
+     {
+      "g3": 0.7572,
+      "calls": 2640,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "fcode->country",
+    "g3": 0.8175125,
+    "truth": false,
+    "canon_cost": 1962,
+    "b0_exact_g3": 0.8533625,
+    "b1_quot_g3": {
+     "0.85": 0.853125,
+     "0.9": 0.8533625,
+     "0.95": 0.8533625
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9598617375545845,
+      "lb": 0.5946254271224019,
+      "mean": 0.78,
+      "samples": 100,
+      "calls": 19,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9598617375545845,
+      "lb": 0.5946254271224019,
+      "mean": 0.78,
+      "samples": 100,
+      "calls": 19,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9836125743160083,
+      "lb": 0.5889024610055096,
+      "mean": 0.78,
+      "samples": 100,
+      "calls": 39,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9598617375545845,
+      "lb": 0.5946254271224019,
+      "mean": 0.78,
+      "samples": 100,
+      "calls": 19,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.9598617375545845,
+      "lb": 0.5946254271224019,
+      "mean": 0.78,
+      "samples": 100,
+      "calls": 20,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.8175125,
+     "calls": 1962
+    },
+    "b5_pairwise": {
+     "g3": 0.8175125,
+     "calls": 6517
+    },
+    "b7_sample": [
+     {
+      "g3": 0.79,
+      "calls": 58,
+      "m": 100
+     },
+     {
+      "g3": 0.8160000000000001,
+      "calls": 247,
+      "m": 1000
+     },
+     {
+      "g3": 0.8202,
+      "calls": 626,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "admin1->city",
+    "g3": 0.7422,
+    "truth": false,
+    "canon_cost": 40393,
+    "b0_exact_g3": 0.717425,
+    "b1_quot_g3": {
+     "0.85": 0.7542,
+     "0.9": 0.7366874999999999,
+     "0.95": 0.7207375
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9266064301848144,
+      "lb": 0.5430775352678824,
+      "mean": 0.74,
+      "samples": 100,
+      "calls": 217,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9266064301848144,
+      "lb": 0.5430775352678824,
+      "mean": 0.74,
+      "samples": 100,
+      "calls": 212,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 1.0145543696136845,
+      "lb": 0.6425294909457104,
+      "mean": 0.82,
+      "samples": 100,
+      "calls": 396,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9188409521769249,
+      "lb": 0.5322445614977875,
+      "mean": 0.73,
+      "samples": 100,
+      "calls": 194,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.117025
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.875504718450136,
+      "lb": 0.4724336540122209,
+      "mean": 0.68,
+      "samples": 100,
+      "calls": 170,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.117025
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.7422,
+     "calls": 40393
+    },
+    "b5_pairwise": {
+     "g3": 0.756325,
+     "calls": 145636
+    },
+    "b7_sample": [
+     {
+      "g3": 0.14,
+      "calls": 192,
+      "m": 100
+     },
+     {
+      "g3": 0.41800000000000004,
+      "calls": 1622,
+      "m": 1000
+     },
+     {
+      "g3": 0.616,
+      "calls": 6231,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "tz->country",
+    "g3": 0.005762500000000004,
+    "truth": true,
+    "canon_cost": 1962,
+    "b0_exact_g3": 0.20186249999999994,
+    "b1_quot_g3": {
+     "0.85": 0.18581250000000005,
+     "0.9": 0.19276249999999995,
+     "0.95": 0.20142499999999997
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 50,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 50,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04759021580633914,
+      "lb": -0.027590215806339136,
+      "mean": 0.01,
+      "samples": 400,
+      "calls": 52,
+      "theta": 0.85,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 50,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 50,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.005762500000000004,
+     "calls": 1962
+    },
+    "b5_pairwise": {
+     "g3": 0.006262499999999949,
+     "calls": 6517
+    },
+    "b7_sample": [
+     {
+      "g3": 0.00666666666666671,
+      "calls": 115,
+      "m": 300
+     },
+     {
+      "g3": 0.007000000000000006,
+      "calls": 242,
+      "m": 1000
+     },
+     {
+      "g3": 0.006199999999999983,
+      "calls": 607,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "country->tz",
+    "g3": 0.12062499999999998,
+    "truth": false,
+    "canon_cost": 1962,
+    "b0_exact_g3": 0.11968749999999995,
+    "b1_quot_g3": {
+     "0.85": 0.12598750000000003,
+     "0.9": 0.12019999999999997,
+     "0.95": 0.11985000000000001
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.15201495372756796,
+      "lb": 0.05183362471325945,
+      "mean": 0.11,
+      "samples": 600,
+      "calls": 190,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.15201495372756796,
+      "lb": 0.05183362471325945,
+      "mean": 0.11,
+      "samples": 600,
+      "calls": 172,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.20777290221831662,
+      "lb": 0.05324501127582279,
+      "mean": 0.1325,
+      "samples": 400,
+      "calls": 249,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.15068633985347404,
+      "lb": 0.04052486540415122,
+      "mean": 0.098,
+      "samples": 500,
+      "calls": 38,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0110625
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.14319387180317908,
+      "lb": 0.05305492633299817,
+      "mean": 0.10857142857142857,
+      "samples": 700,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0110625
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.12062499999999998,
+     "calls": 1962
+    },
+    "b5_pairwise": {
+     "g3": 0.12062499999999998,
+     "calls": 6517
+    },
+    "b7_sample": [
+     {
+      "g3": 0.09499999999999997,
+      "calls": 200,
+      "m": 600
+     },
+     {
+      "g3": 0.11299999999999999,
+      "calls": 255,
+      "m": 1000
+     },
+     {
+      "g3": 0.11519999999999997,
+      "calls": 638,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->country_e2",
+    "g3": 0.020525000000000015,
+    "truth": true,
+    "canon_cost": 31846,
+    "b0_exact_g3": 0.16671250000000004,
+    "b1_quot_g3": {
+     "0.85": 0.17601250000000002,
+     "0.9": 0.16593749999999996,
+     "0.95": 0.16735
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04962502288290064,
+      "lb": -0.01581326717651386,
+      "mean": 0.02,
+      "samples": 400,
+      "calls": 1116,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04962502288290064,
+      "lb": -0.01581326717651386,
+      "mean": 0.02,
+      "samples": 400,
+      "calls": 779,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04978158013294411,
+      "lb": 0.017598292776235022,
+      "mean": 0.03428571428571429,
+      "samples": 2800,
+      "calls": 4591,
+      "theta": 0.85,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03875184454130004,
+      "lb": 0.006230745957733395,
+      "mean": 0.023333333333333334,
+      "samples": 1500,
+      "calls": 2036,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0046375
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.04683742769483049,
+      "lb": -0.03350409436149716,
+      "mean": 0.006666666666666667,
+      "samples": 300,
+      "calls": 46,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0046375
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.020525000000000015,
+     "calls": 31846
+    },
+    "b5_pairwise": {
+     "g3": 0.01990000000000003,
+     "calls": 117776
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0024999999999999467,
+      "calls": 526,
+      "m": 400
+     },
+     {
+      "g3": 0.0,
+      "calls": 1206,
+      "m": 1000
+     },
+     {
+      "g3": 0.007000000000000006,
+      "calls": 4869,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->country_e8",
+    "g3": 0.07863750000000003,
+    "truth": false,
+    "canon_cost": 31810,
+    "b0_exact_g3": 0.2034625,
+    "b1_quot_g3": {
+     "0.85": 0.2165125,
+     "0.9": 0.20457499999999995,
+     "0.95": 0.20435000000000003
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.11618919827474494,
+      "lb": 0.05204746818665619,
+      "mean": 0.09636363636363636,
+      "samples": 1100,
+      "calls": 2607,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.11618919827474494,
+      "lb": 0.05204746818665619,
+      "mean": 0.09636363636363636,
+      "samples": 1100,
+      "calls": 1905,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.10591860769452686,
+      "lb": 0.05156479344316977,
+      "mean": 0.0875,
+      "samples": 2000,
+      "calls": 4828,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.09757739403225951,
+      "lb": 0.04060481764136813,
+      "mean": 0.0809090909090909,
+      "samples": 1100,
+      "calls": 1301,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0144
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.08083411106742835,
+      "lb": 0.0501191923282321,
+      "mean": 0.06924528301886793,
+      "samples": 5300,
+      "calls": 426,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0144
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.07863750000000003,
+     "calls": 31810
+    },
+    "b5_pairwise": {
+     "g3": 0.07523749999999996,
+     "calls": 117635
+    },
+    "b7_sample": [
+     {
+      "g3": 0.006000000000000005,
+      "calls": 1223,
+      "m": 1000
+     },
+     {
+      "g3": 0.010000000000000009,
+      "calls": 1328,
+      "m": 1100
+     },
+     {
+      "g3": 0.02739999999999998,
+      "calls": 4817,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->country_src8",
+    "g3": 0.07981249999999995,
+    "truth": false,
+    "canon_cost": 31809,
+    "b0_exact_g3": 0.15205000000000002,
+    "b1_quot_g3": {
+     "0.85": 0.18145,
+     "0.9": 0.15880000000000005,
+     "0.95": 0.1535875
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.11028133986093334,
+      "lb": 0.050907932582861554,
+      "mean": 0.0825,
+      "samples": 1600,
+      "calls": 3321,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.11028133986093334,
+      "lb": 0.050907932582861554,
+      "mean": 0.0825,
+      "samples": 1600,
+      "calls": 2600,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.10495726855328805,
+      "lb": 0.05009620546058851,
+      "mean": 0.07391304347826087,
+      "samples": 2300,
+      "calls": 4618,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.0682478611253154,
+      "lb": 0.04006553498514904,
+      "mean": 0.05914893617021277,
+      "samples": 4700,
+      "calls": 4420,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0384875
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.04682788471684134,
+      "lb": -0.03349455138350801,
+      "mean": 0.006666666666666667,
+      "samples": 300,
+      "calls": 14,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0384875
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.07981249999999995,
+     "calls": 31809
+    },
+    "b5_pairwise": {
+     "g3": 0.05907499999999999,
+     "calls": 117655
+    },
+    "b7_sample": [
+     {
+      "g3": 0.008000000000000007,
+      "calls": 1198,
+      "m": 1000
+     },
+     {
+      "g3": 0.0068749999999999645,
+      "calls": 1807,
+      "m": 1600
+     },
+     {
+      "g3": 0.024800000000000044,
+      "calls": 4848,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->tz_src8",
+    "g3": 0.07984999999999998,
+    "truth": false,
+    "canon_cost": 29888,
+    "b0_exact_g3": 0.0,
+    "b1_quot_g3": {
+     "0.85": 0.03764999999999996,
+     "0.9": 0.011312499999999948,
+     "0.95": 0.0012499999999999734
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.12621382462270675,
+      "lb": 0.052122562187646986,
+      "mean": 0.09090909090909091,
+      "samples": 1100,
+      "calls": 1939,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.12621382462270675,
+      "lb": 0.052122562187646986,
+      "mean": 0.09090909090909091,
+      "samples": 1100,
+      "calls": 1510,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.11122525375261368,
+      "lb": 0.05129789157499487,
+      "mean": 0.08315789473684211,
+      "samples": 1900,
+      "calls": 2602,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.08337285976115702,
+      "lb": 0.040764793900077555,
+      "mean": 0.0644,
+      "samples": 2500,
+      "calls": 1846,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0393875
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.04683010547538659,
+      "lb": -0.03349677214205325,
+      "mean": 0.006666666666666667,
+      "samples": 300,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0393875
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.07984999999999998,
+     "calls": 29888
+    },
+    "b5_pairwise": {
+     "g3": 0.05830000000000002,
+     "calls": 111271
+    },
+    "b7_sample": [
+     {
+      "g3": 0.006000000000000005,
+      "calls": 952,
+      "m": 1000
+     },
+     {
+      "g3": 0.010909090909090868,
+      "calls": 1052,
+      "m": 1100
+     },
+     {
+      "g3": 0.02300000000000002,
+      "calls": 4212,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->tz",
+    "g3": 0.0,
+    "truth": true,
+    "canon_cost": 29888,
+    "b0_exact_g3": 0.0,
+    "b1_quot_g3": {
+     "0.85": 0.011587499999999973,
+     "0.9": 0.0011624999999999552,
+     "0.95": 1.2499999999970868e-05
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.0422265414730286,
+      "lb": -0.035559874806361934,
+      "mean": 0.0033333333333333335,
+      "samples": 300,
+      "calls": 508,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.0422265414730286,
+      "lb": -0.035559874806361934,
+      "mean": 0.0033333333333333335,
+      "samples": 300,
+      "calls": 407,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04680206820886486,
+      "lb": -0.002742843469072106,
+      "mean": 0.021111111111111112,
+      "samples": 900,
+      "calls": 570,
+      "theta": 0.85,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03167171158597535,
+      "lb": -0.02667171158597535,
+      "mean": 0.0025,
+      "samples": 400,
+      "calls": 232,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0005375
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.0422265414730286,
+      "lb": -0.035559874806361934,
+      "mean": 0.0033333333333333335,
+      "samples": 300,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0005375
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0,
+     "calls": 29888
+    },
+    "b5_pairwise": {
+     "g3": 0.0,
+     "calls": 111271
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 297,
+      "m": 300
+     },
+     {
+      "g3": 0.0,
+      "calls": 962,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 4155,
+      "m": 5000
+     }
+    ]
+   }
+  ],
+  "alpha_per_fd": 0.0038461538461538464,
+  "run_calls_inverse": 12803,
+  "run_calls_alias_only": 9804,
+  "run_calls_grid_inverse": 29987,
+  "run_calls_ann_nubar": 11824,
+  "run_calls_b9_noaudit": 1289
+ },
+ {
+  "dataset": "geonames16000",
+  "meta": {
+   "n_cities": 16000,
+   "rho": 0.2,
+   "seed": 2,
+   "near_miss": [
+    0.02,
+    0.08
+   ],
+   "conflict": [
+    0.08
+   ],
+   "conflict_exact": [
+    0.08
+   ]
+  },
+  "seed": 2,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "theta0": 0.9,
+  "grid": [
+   0.85,
+   0.9,
+   0.95
+  ],
+  "k": 3,
+  "proxy": "hybrid",
+  "rows": 80000,
+  "distinct": {
+   "city": 29808,
+   "country": 2012,
+   "admin1": 10585,
+   "tz": 295,
+   "fcode": 17,
+   "country_e2": 2005,
+   "country_e8": 1980,
+   "country_src8": 1977,
+   "tz_src8": 295
+  },
+  "canon_all": 42405,
+  "proxy_sec": 21.80111525207758,
+  "fds": [
+   {
+    "fd": "city->country",
+    "g3": 0.0,
+    "truth": true,
+    "canon_cost": 31820,
+    "b0_exact_g3": 0.15469999999999995,
+    "b1_quot_g3": {
+     "0.85": 0.16215000000000002,
+     "0.9": 0.15271250000000003,
+     "0.95": 0.15480000000000005
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 984,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 724,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.043556098770185334,
+      "lb": -0.01955609877018533,
+      "mean": 0.012,
+      "samples": 500,
+      "calls": 1723,
+      "theta": 0.85,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 541,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0012
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 121,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0012
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0,
+     "calls": 31820
+    },
+    "b5_pairwise": {
+     "g3": 0.00044999999999995044,
+     "calls": 117741
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 414,
+      "m": 300
+     },
+     {
+      "g3": 0.0,
+      "calls": 1216,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 4834,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->admin1",
+    "g3": 0.0,
+    "truth": true,
+    "canon_cost": 40393,
+    "b0_exact_g3": 0.15425,
+    "b1_quot_g3": {
+     "0.85": 0.11695,
+     "0.9": 0.14026249999999996,
+     "0.95": 0.15269999999999995
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 1192,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 849,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.049913993892930344,
+      "lb": 0.00638909398710355,
+      "mean": 0.027692307692307693,
+      "samples": 1300,
+      "calls": 4549,
+      "theta": 0.85,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 808,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0015625
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 276,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0015625
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0,
+     "calls": 40393
+    },
+    "b5_pairwise": {
+     "g3": 0.0042875,
+     "calls": 145636
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 549,
+      "m": 300
+     },
+     {
+      "g3": 0.0,
+      "calls": 1611,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 6059,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "admin1->country",
+    "g3": 0.0,
+    "truth": true,
+    "canon_cost": 12597,
+    "b0_exact_g3": 0.18351249999999997,
+    "b1_quot_g3": {
+     "0.85": 0.17867500000000003,
+     "0.9": 0.17925000000000002,
+     "0.95": 0.18381250000000005
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 510,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 455,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04414658940650658,
+      "lb": -0.02914658940650658,
+      "mean": 0.0075,
+      "samples": 400,
+      "calls": 583,
+      "theta": 0.85,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 181,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0001375
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 67,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0001375
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0,
+     "calls": 12597
+    },
+    "b5_pairwise": {
+     "g3": 0.00046250000000003233,
+     "calls": 41385
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 370,
+      "m": 300
+     },
+     {
+      "g3": 0.0,
+      "calls": 918,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 2648,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "country->admin1",
+    "g3": 0.7840125,
+    "truth": false,
+    "canon_cost": 12597,
+    "b0_exact_g3": 0.811475,
+    "b1_quot_g3": {
+     "0.85": 0.8022875,
+     "0.9": 0.8104375,
+     "0.95": 0.8118875
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9892132950569147,
+      "lb": 0.6880803314165053,
+      "mean": 0.82,
+      "samples": 100,
+      "calls": 93,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9892132950569147,
+      "lb": 0.6880803314165053,
+      "mean": 0.82,
+      "samples": 100,
+      "calls": 95,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 1.050554561020896,
+      "lb": 0.6902004865420089,
+      "mean": 0.87,
+      "samples": 100,
+      "calls": 196,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9810102699087118,
+      "lb": 0.6653539684562495,
+      "mean": 0.81,
+      "samples": 100,
+      "calls": 79,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.10295
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.9671695754829406,
+      "lb": 0.6428371266606131,
+      "mean": 0.79,
+      "samples": 100,
+      "calls": 77,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.10295
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.7840125,
+     "calls": 12597
+    },
+    "b5_pairwise": {
+     "g3": 0.7843625,
+     "calls": 41385
+    },
+    "b7_sample": [
+     {
+      "g3": 0.49,
+      "calls": 161,
+      "m": 100
+     },
+     {
+      "g3": 0.723,
+      "calls": 919,
+      "m": 1000
+     },
+     {
+      "g3": 0.7562,
+      "calls": 2597,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "fcode->country",
+    "g3": 0.82455,
+    "truth": false,
+    "canon_cost": 2012,
+    "b0_exact_g3": 0.8600125000000001,
+    "b1_quot_g3": {
+     "0.85": 0.85985,
+     "0.9": 0.8599749999999999,
+     "0.95": 0.8600125000000001
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9604051511049628,
+      "lb": 0.5990286122279259,
+      "mean": 0.78,
+      "samples": 100,
+      "calls": 15,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9604051511049628,
+      "lb": 0.5990286122279259,
+      "mean": 0.78,
+      "samples": 100,
+      "calls": 15,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 1.034941124376565,
+      "lb": 0.6744666082115174,
+      "mean": 0.85,
+      "samples": 100,
+      "calls": 43,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9604051511049628,
+      "lb": 0.5990286122279259,
+      "mean": 0.78,
+      "samples": 100,
+      "calls": 15,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.9604051511049628,
+      "lb": 0.5990286122279259,
+      "mean": 0.78,
+      "samples": 100,
+      "calls": 16,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.82455,
+     "calls": 2012
+    },
+    "b5_pairwise": {
+     "g3": 0.82455,
+     "calls": 6745
+    },
+    "b7_sample": [
+     {
+      "g3": 0.78,
+      "calls": 59,
+      "m": 100
+     },
+     {
+      "g3": 0.8069999999999999,
+      "calls": 242,
+      "m": 1000
+     },
+     {
+      "g3": 0.8178,
+      "calls": 630,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "admin1->city",
+    "g3": 0.7337750000000001,
+    "truth": false,
+    "canon_cost": 40393,
+    "b0_exact_g3": 0.71115,
+    "b1_quot_g3": {
+     "0.85": 0.7469,
+     "0.9": 0.729725,
+     "0.95": 0.71465
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9853696884188587,
+      "lb": 0.6566358744702158,
+      "mean": 0.81,
+      "samples": 100,
+      "calls": 211,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9853696884188587,
+      "lb": 0.6566358744702158,
+      "mean": 0.81,
+      "samples": 100,
+      "calls": 207,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 1.0204393878789935,
+      "lb": 0.6576615374785473,
+      "mean": 0.83,
+      "samples": 100,
+      "calls": 496,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9779714220599864,
+      "lb": 0.6365096617347514,
+      "mean": 0.8,
+      "samples": 100,
+      "calls": 202,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.1143875
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.9078973370423112,
+      "lb": 0.522099598972908,
+      "mean": 0.71,
+      "samples": 100,
+      "calls": 160,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.1143875
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.7337750000000001,
+     "calls": 40393
+    },
+    "b5_pairwise": {
+     "g3": 0.7470749999999999,
+     "calls": 145636
+    },
+    "b7_sample": [
+     {
+      "g3": 0.12,
+      "calls": 186,
+      "m": 100
+     },
+     {
+      "g3": 0.42800000000000005,
+      "calls": 1587,
+      "m": 1000
+     },
+     {
+      "g3": 0.6082000000000001,
+      "calls": 6132,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "tz->country",
+    "g3": 0.0057874999999999455,
+    "truth": true,
+    "canon_cost": 2012,
+    "b0_exact_g3": 0.20274999999999999,
+    "b1_quot_g3": {
+     "0.85": 0.1866,
+     "0.9": 0.19328749999999995,
+     "0.95": 0.202125
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.0468281632202104,
+      "lb": -0.03349482988687706,
+      "mean": 0.006666666666666667,
+      "samples": 300,
+      "calls": 51,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.0468281632202104,
+      "lb": -0.03349482988687706,
+      "mean": 0.006666666666666667,
+      "samples": 300,
+      "calls": 51,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04650779497357933,
+      "lb": -0.018507794973579336,
+      "mean": 0.014,
+      "samples": 500,
+      "calls": 57,
+      "theta": 0.85,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.035126137640724184,
+      "lb": -0.025126137640724182,
+      "mean": 0.005,
+      "samples": 400,
+      "calls": 77,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.0468281632202104,
+      "lb": -0.03349482988687706,
+      "mean": 0.006666666666666667,
+      "samples": 300,
+      "calls": 53,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0057874999999999455,
+     "calls": 2012
+    },
+    "b5_pairwise": {
+     "g3": 0.006262499999999949,
+     "calls": 6745
+    },
+    "b7_sample": [
+     {
+      "g3": 0.00666666666666671,
+      "calls": 129,
+      "m": 300
+     },
+     {
+      "g3": 0.006000000000000005,
+      "calls": 244,
+      "m": 1000
+     },
+     {
+      "g3": 0.0033999999999999586,
+      "calls": 627,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "country->tz",
+    "g3": 0.11898750000000002,
+    "truth": false,
+    "canon_cost": 2012,
+    "b0_exact_g3": 0.1181875,
+    "b1_quot_g3": {
+     "0.85": 0.12295,
+     "0.9": 0.11863749999999995,
+     "0.95": 0.11832500000000001
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.20788906880051444,
+      "lb": 0.0635988588127117,
+      "mean": 0.1375,
+      "samples": 400,
+      "calls": 123,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.20788906880051444,
+      "lb": 0.0635988588127117,
+      "mean": 0.1375,
+      "samples": 400,
+      "calls": 110,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.16684698573562898,
+      "lb": 0.05654032079304868,
+      "mean": 0.11428571428571428,
+      "samples": 700,
+      "calls": 306,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.212752697159024,
+      "lb": 0.04749010850265059,
+      "mean": 0.13,
+      "samples": 300,
+      "calls": 28,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0040875
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.20272941233543812,
+      "lb": 0.06093225416169931,
+      "mean": 0.135,
+      "samples": 400,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0040875
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.11898750000000002,
+     "calls": 2012
+    },
+    "b5_pairwise": {
+     "g3": 0.11898750000000002,
+     "calls": 6745
+    },
+    "b7_sample": [
+     {
+      "g3": 0.10250000000000004,
+      "calls": 140,
+      "m": 400
+     },
+     {
+      "g3": 0.11599999999999999,
+      "calls": 247,
+      "m": 1000
+     },
+     {
+      "g3": 0.11780000000000002,
+      "calls": 654,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->country_e2",
+    "g3": 0.01902499999999996,
+    "truth": true,
+    "canon_cost": 31813,
+    "b0_exact_g3": 0.166775,
+    "b1_quot_g3": {
+     "0.85": 0.17542500000000005,
+     "0.9": 0.16528750000000003,
+     "0.95": 0.16695000000000004
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04987102996884729,
+      "lb": 0.01754736719320718,
+      "mean": 0.030384615384615385,
+      "samples": 2600,
+      "calls": 6089,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04987102996884729,
+      "lb": 0.01754736719320718,
+      "mean": 0.030384615384615385,
+      "samples": 2600,
+      "calls": 4481,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04959414123483742,
+      "lb": 0.0221718968341965,
+      "mean": 0.035454545454545454,
+      "samples": 4400,
+      "calls": 8266,
+      "theta": 0.85,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03995476317062806,
+      "lb": 0.015622530929531616,
+      "mean": 0.02358974358974359,
+      "samples": 3900,
+      "calls": 4662,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0048625
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.049773297094868746,
+      "lb": 0.00919611979239994,
+      "mean": 0.02642857142857143,
+      "samples": 1400,
+      "calls": 197,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0048625
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.01902499999999996,
+     "calls": 31813
+    },
+    "b5_pairwise": {
+     "g3": 0.018625000000000003,
+     "calls": 117724
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0010000000000000009,
+      "calls": 1200,
+      "m": 1000
+     },
+     {
+      "g3": 0.0038461538461538325,
+      "calls": 2785,
+      "m": 2600
+     },
+     {
+      "g3": 0.006199999999999983,
+      "calls": 4814,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->country_e8",
+    "g3": 0.07753750000000004,
+    "truth": false,
+    "canon_cost": 31788,
+    "b0_exact_g3": 0.2036,
+    "b1_quot_g3": {
+     "0.85": 0.216175,
+     "0.9": 0.20394999999999996,
+     "0.95": 0.20411250000000003
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.14208338968994486,
+      "lb": 0.05158226182510378,
+      "mean": 0.09375,
+      "samples": 800,
+      "calls": 1506,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.14208338968994486,
+      "lb": 0.05158226182510378,
+      "mean": 0.09375,
+      "samples": 800,
+      "calls": 1121,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.11801942877027125,
+      "lb": 0.05395958187731167,
+      "mean": 0.09125,
+      "samples": 1600,
+      "calls": 4317,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.1573182281692649,
+      "lb": 0.044558310068404314,
+      "mean": 0.102,
+      "samples": 500,
+      "calls": 483,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0165375
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.1028299206461288,
+      "lb": 0.05036551246041907,
+      "mean": 0.07181818181818182,
+      "samples": 2200,
+      "calls": 188,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0165375
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.07753750000000004,
+     "calls": 31788
+    },
+    "b5_pairwise": {
+     "g3": 0.07423749999999996,
+     "calls": 117633
+    },
+    "b7_sample": [
+     {
+      "g3": 0.011249999999999982,
+      "calls": 993,
+      "m": 800
+     },
+     {
+      "g3": 0.010000000000000009,
+      "calls": 1224,
+      "m": 1000
+     },
+     {
+      "g3": 0.027800000000000047,
+      "calls": 4769,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->country_src8",
+    "g3": 0.07986249999999995,
+    "truth": false,
+    "canon_cost": 31785,
+    "b0_exact_g3": 0.15336249999999996,
+    "b1_quot_g3": {
+     "0.85": 0.18243750000000003,
+     "0.9": 0.15952500000000003,
+     "0.95": 0.15436249999999996
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.1507360984755524,
+      "lb": 0.051512096641166655,
+      "mean": 0.09714285714285714,
+      "samples": 700,
+      "calls": 1278,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.1507360984755524,
+      "lb": 0.051512096641166655,
+      "mean": 0.09714285714285714,
+      "samples": 700,
+      "calls": 1034,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.12305471541689997,
+      "lb": 0.050090461679146346,
+      "mean": 0.08692307692307692,
+      "samples": 1300,
+      "calls": 3495,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.12605590889686152,
+      "lb": 0.04010989391001286,
+      "mean": 0.0775,
+      "samples": 800,
+      "calls": 807,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.04045
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.04928736983820006,
+      "lb": -0.007205080619001828,
+      "mean": 0.02,
+      "samples": 600,
+      "calls": 46,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.04045
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.07986249999999995,
+     "calls": 31785
+    },
+    "b5_pairwise": {
+     "g3": 0.05927499999999997,
+     "calls": 117621
+    },
+    "b7_sample": [
+     {
+      "g3": 0.005714285714285672,
+      "calls": 879,
+      "m": 700
+     },
+     {
+      "g3": 0.006000000000000005,
+      "calls": 1201,
+      "m": 1000
+     },
+     {
+      "g3": 0.027200000000000002,
+      "calls": 4806,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->tz_src8",
+    "g3": 0.07982500000000003,
+    "truth": false,
+    "canon_cost": 29808,
+    "b0_exact_g3": 0.0,
+    "b1_quot_g3": {
+     "0.85": 0.038112499999999994,
+     "0.9": 0.0113375,
+     "0.95": 0.0012375000000000025
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.1123354454166687,
+      "lb": 0.05086517261854601,
+      "mean": 0.07875,
+      "samples": 1600,
+      "calls": 2465,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.1123354454166687,
+      "lb": 0.05086517261854601,
+      "mean": 0.07875,
+      "samples": 1600,
+      "calls": 2038,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.09550635605147097,
+      "lb": 0.05032739291145622,
+      "mean": 0.07303030303030303,
+      "samples": 3300,
+      "calls": 4941,
+      "theta": 0.95,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.08013413198830187,
+      "lb": 0.04102163684156773,
+      "mean": 0.06066666666666667,
+      "samples": 3000,
+      "calls": 2272,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0399125
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.046851723249446704,
+      "lb": -0.03351838991611337,
+      "mean": 0.006666666666666667,
+      "samples": 300,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0399125
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.07982500000000003,
+     "calls": 29808
+    },
+    "b5_pairwise": {
+     "g3": 0.05845,
+     "calls": 110996
+    },
+    "b7_sample": [
+     {
+      "g3": 0.006000000000000005,
+      "calls": 962,
+      "m": 1000
+     },
+     {
+      "g3": 0.010624999999999996,
+      "calls": 1484,
+      "m": 1600
+     },
+     {
+      "g3": 0.027800000000000047,
+      "calls": 4200,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->tz",
+    "g3": 0.0,
+    "truth": true,
+    "canon_cost": 29808,
+    "b0_exact_g3": 0.0,
+    "b1_quot_g3": {
+     "0.85": 0.012137500000000023,
+     "0.9": 0.0015374999999999694,
+     "0.95": 3.7500000000023626e-05
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 436,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "alias_only": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 346,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.048285373908774985,
+      "lb": -0.011349188412846573,
+      "mean": 0.018333333333333333,
+      "samples": 600,
+      "calls": 389,
+      "theta": 0.85,
+      "alpha": 0.001282051282051282,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 176,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0012
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.037599663581988796,
+      "lb": -0.037599663581988796,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.0038461538461538464,
+      "nu": 0.0012
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0,
+     "calls": 29808
+    },
+    "b5_pairwise": {
+     "g3": 0.0,
+     "calls": 110996
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 296,
+      "m": 300
+     },
+     {
+      "g3": 0.0,
+      "calls": 958,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 4178,
+      "m": 5000
+     }
+    ]
+   }
+  ],
+  "alpha_per_fd": 0.0038461538461538464,
+  "run_calls_inverse": 14953,
+  "run_calls_alias_only": 11526,
+  "run_calls_grid_inverse": 29361,
+  "run_calls_ann_nubar": 10331,
+  "run_calls_b9_noaudit": 1201
+ }
+]

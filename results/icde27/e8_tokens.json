@@ -1,0 +1,36 @@
+{
+ "model": "qwen2.5-7b-instruct-q4_k_m.gguf",
+ "template": "ChatML (Qwen2.5), system + 4 few-shot pairs + name",
+ "max_tokens_per_call": 24,
+ "output_note": "stored answers are the first line of each reply",
+ "canon_all": {
+  "calls": 6653,
+  "input_tokens": 1361197,
+  "output_tokens_stored": 32918
+ },
+ "input_tokens_per_call": {
+  "min": 199,
+  "mean": 204.59897790470464,
+  "max": 235
+ },
+ "runs": [
+  {
+   "seed": 0,
+   "calls": 3333,
+   "input_tokens": 681854,
+   "output_tokens_stored": 16383
+  },
+  {
+   "seed": 1,
+   "calls": 3337,
+   "input_tokens": 682565,
+   "output_tokens_stored": 16394
+  },
+  {
+   "seed": 2,
+   "calls": 2385,
+   "input_tokens": 487587,
+   "output_tokens_stored": 11530
+  }
+ ]
+}

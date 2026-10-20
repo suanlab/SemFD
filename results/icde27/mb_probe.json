@@ -1,0 +1,9 @@
+{
+ "rows_total": 193750,
+ "rows_artist_language_nonnull": 105297,
+ "artists": 50665,
+ "artist_singleton_share": 0.6027632487910787,
+ "languages_distinct": 2001,
+ "g3_raw_artist_to_language": 0.2742148399289628,
+ "g3_raw_album_to_artist": 0.1903185397279885
+}

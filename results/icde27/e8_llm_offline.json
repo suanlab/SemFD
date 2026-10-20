@@ -1,0 +1,241 @@
+{
+ "model": "qwen2.5-7b-instruct-q4_k_m.gguf",
+ "n_values": 6653,
+ "agreement_full": {
+  "pair_precision": 0.8583548506086315,
+  "pair_recall": 0.5580335731414868,
+  "bcubed_precision": 0.9865726253972157,
+  "bcubed_recall": 0.9127402969015777,
+  "bcubed_f1": 0.9482214125412688,
+  "ref_entities": 5109,
+  "llm_entities": 5478
+ },
+ "agreement_layer1_full": {
+  "pair_precision": 0.0,
+  "pair_recall": 0.0,
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.7679242447016383,
+  "bcubed_f1": 0.8687298078558068,
+  "ref_entities": 5109,
+  "llm_entities": 6653
+ },
+ "sec_mean_all_calls": 9.136239183543667,
+ "fds": [
+  {
+   "seed": 0,
+   "fd": "labcode->labeler",
+   "certified": false,
+   "ub": 0.040173561717583385,
+   "calls": 3004,
+   "g3_llm": 0.03182987480706567,
+   "g3_code": 0.0,
+   "nu_llm": 0.0
+  },
+  {
+   "seed": 0,
+   "fd": "labeler->ptype",
+   "certified": true,
+   "ub": 0.03998817971286402,
+   "calls": 223,
+   "g3_llm": 0.029514663008060382,
+   "g3_code": 0.0258446235637112,
+   "nu_llm": 0.002529583261876179
+  },
+  {
+   "seed": 0,
+   "fd": "labeler->labcode",
+   "certified": false,
+   "ub": 0.2811418115110811,
+   "calls": 61,
+   "g3_llm": 0.1310495626822158,
+   "g3_code": 0.12845138055222094,
+   "nu_llm": 0.0051191905333561995
+  },
+  {
+   "seed": 0,
+   "fd": "labeler->mktcat",
+   "certified": false,
+   "ub": 0.20392899941833909,
+   "calls": 27,
+   "g3_llm": 0.10028297033098954,
+   "g3_code": 0.09980277825415884,
+   "nu_llm": 0.002838278168410221
+  },
+  {
+   "seed": 0,
+   "fd": "appno->labeler",
+   "certified": false,
+   "ub": 0.8690728234714493,
+   "calls": 4,
+   "g3_llm": 0.6495369576401989,
+   "g3_code": 0.6527096552906877,
+   "nu_llm": 0.0
+  },
+  {
+   "seed": 0,
+   "fd": "brand->labeler",
+   "certified": false,
+   "ub": 0.5752311622486319,
+   "calls": 7,
+   "g3_llm": 0.4583090379008746,
+   "g3_code": 0.45790601955067745,
+   "nu_llm": 0.0
+  },
+  {
+   "seed": 0,
+   "fd": "generic->labeler",
+   "certified": false,
+   "ub": 0.9182077943237948,
+   "calls": 7,
+   "g3_llm": 0.6586177328074087,
+   "g3_code": 0.6590207511576058,
+   "nu_llm": 0.0
+  },
+  {
+   "seed": 1,
+   "fd": "labcode->labeler",
+   "certified": true,
+   "ub": 0.03995201742598006,
+   "calls": 2933,
+   "g3_llm": 0.03182987480706567,
+   "g3_code": 0.0,
+   "nu_llm": 0.0
+  },
+  {
+   "seed": 1,
+   "fd": "labeler->ptype",
+   "certified": true,
+   "ub": 0.03974446658064842,
+   "calls": 280,
+   "g3_llm": 0.029514663008060382,
+   "g3_code": 0.0258446235637112,
+   "nu_llm": 0.002529583261876179
+  },
+  {
+   "seed": 1,
+   "fd": "labeler->labcode",
+   "certified": false,
+   "ub": 0.21247734387058959,
+   "calls": 82,
+   "g3_llm": 0.1310495626822158,
+   "g3_code": 0.12845138055222094,
+   "nu_llm": 0.0051191905333561995
+  },
+  {
+   "seed": 1,
+   "fd": "labeler->mktcat",
+   "certified": false,
+   "ub": 0.1354732273131208,
+   "calls": 34,
+   "g3_llm": 0.10028297033098954,
+   "g3_code": 0.09980277825415884,
+   "nu_llm": 0.002838278168410221
+  },
+  {
+   "seed": 1,
+   "fd": "appno->labeler",
+   "certified": false,
+   "ub": 0.8547599798938533,
+   "calls": 2,
+   "g3_llm": 0.6495369576401989,
+   "g3_code": 0.6527096552906877,
+   "nu_llm": 0.0
+  },
+  {
+   "seed": 1,
+   "fd": "brand->labeler",
+   "certified": false,
+   "ub": 0.6448872935610821,
+   "calls": 4,
+   "g3_llm": 0.4583090379008746,
+   "g3_code": 0.45790601955067745,
+   "nu_llm": 0.0
+  },
+  {
+   "seed": 1,
+   "fd": "generic->labeler",
+   "certified": false,
+   "ub": 0.8316373050882797,
+   "calls": 2,
+   "g3_llm": 0.6586177328074087,
+   "g3_code": 0.6590207511576058,
+   "nu_llm": 0.0
+  },
+  {
+   "seed": 2,
+   "fd": "labcode->labeler",
+   "certified": true,
+   "ub": 0.03997842081773455,
+   "calls": 1630,
+   "g3_llm": 0.03182987480706567,
+   "g3_code": 0.0,
+   "nu_llm": 0.0
+  },
+  {
+   "seed": 2,
+   "fd": "labeler->ptype",
+   "certified": true,
+   "ub": 0.03979544898092062,
+   "calls": 534,
+   "g3_llm": 0.029514663008060382,
+   "g3_code": 0.0258446235637112,
+   "nu_llm": 0.002529583261876179
+  },
+  {
+   "seed": 2,
+   "fd": "labeler->labcode",
+   "certified": false,
+   "ub": 0.2222438900848418,
+   "calls": 92,
+   "g3_llm": 0.1310495626822158,
+   "g3_code": 0.12845138055222094,
+   "nu_llm": 0.0051191905333561995
+  },
+  {
+   "seed": 2,
+   "fd": "labeler->mktcat",
+   "certified": false,
+   "ub": 0.1360253814774829,
+   "calls": 92,
+   "g3_llm": 0.10028297033098954,
+   "g3_code": 0.09980277825415884,
+   "nu_llm": 0.002838278168410221
+  },
+  {
+   "seed": 2,
+   "fd": "appno->labeler",
+   "certified": false,
+   "ub": 0.8700008731061322,
+   "calls": 9,
+   "g3_llm": 0.6495369576401989,
+   "g3_code": 0.6527096552906877,
+   "nu_llm": 0.0
+  },
+  {
+   "seed": 2,
+   "fd": "brand->labeler",
+   "certified": false,
+   "ub": 0.6929652410007064,
+   "calls": 13,
+   "g3_llm": 0.4583090379008746,
+   "g3_code": 0.45790601955067745,
+   "nu_llm": 0.0
+  },
+  {
+   "seed": 2,
+   "fd": "generic->labeler",
+   "certified": false,
+   "ub": 0.8382222586358073,
+   "calls": 15,
+   "g3_llm": 0.6586177328074087,
+   "g3_code": 0.6590207511576058,
+   "nu_llm": 0.0
+  }
+ ],
+ "run_calls": [
+  3333,
+  3337,
+  2385
+ ],
+ "canon_all_labeler": 6653
+}

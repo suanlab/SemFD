@@ -1,0 +1,4925 @@
+[
+ {
+  "dataset": "ndc116620",
+  "seed": 0,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "alpha_per_fd": 0.0007575757575757576,
+  "theta0": 0.9,
+  "rows": 116620,
+  "n_cands": 66,
+  "n_true": 10,
+  "truth": {
+   "labcode->labeler": 0.0,
+   "labcode->appno": 0.6144743611730407,
+   "labcode->brand": 0.8807065683416224,
+   "labcode->generic": 0.8202538158120392,
+   "labcode->mktcat": 0.09551534899674152,
+   "labcode->ptype": 0.02483279025896068,
+   "labcode->labeler_e2": 0.0202023666609501,
+   "labcode->labeler_e8": 0.0812896587206311,
+   "labeler->labcode": 0.12845138055222094,
+   "labeler->appno": 0.6233064654433202,
+   "labeler->brand": 0.8895129480363574,
+   "labeler->generic": 0.8301920768307323,
+   "labeler->mktcat": 0.09980277825415884,
+   "labeler->ptype": 0.0258446235637112,
+   "appno->labcode": 0.6711713256731264,
+   "appno->labeler": 0.6527096552906877,
+   "appno->brand": 0.4967672783399074,
+   "appno->generic": 0.40439032755959525,
+   "appno->mktcat": 0.02904304578974448,
+   "appno->ptype": 0.016412279197393298,
+   "appno->labeler_e2": 0.6579917681358258,
+   "appno->labeler_e8": 0.6732978905848053,
+   "brand->labcode": 0.4716943920425313,
+   "brand->labeler": 0.45790601955067745,
+   "brand->appno": 0.34377465271823016,
+   "brand->generic": 0.08426513462527874,
+   "brand->mktcat": 0.030586520322414712,
+   "brand->ptype": 0.010847196021265604,
+   "brand->labeler_e2": 0.46309380895215224,
+   "brand->labeler_e8": 0.47960898645172356,
+   "generic->labcode": 0.6718744640713428,
+   "generic->labeler": 0.6590207511576058,
+   "generic->appno": 0.407357228605728,
+   "generic->brand": 0.3298233579145944,
+   "generic->mktcat": 0.06799862802263767,
+   "generic->ptype": 0.023212141999657043,
+   "generic->labeler_e2": 0.6632310066883896,
+   "generic->labeler_e8": 0.6773709483793517,
+   "mktcat->labcode": 0.92124849939976,
+   "mktcat->labeler": 0.8992625621677243,
+   "mktcat->appno": 0.7715228948722346,
+   "mktcat->brand": 0.9838106671239925,
+   "mktcat->generic": 0.9653918710341279,
+   "mktcat->ptype": 0.07482421540044593,
+   "mktcat->labeler_e2": 0.9010032584462356,
+   "mktcat->labeler_e8": 0.9062939461498886,
+   "ptype->labcode": 0.9300034299434059,
+   "ptype->labeler": 0.9088149545532499,
+   "ptype->appno": 0.8480106328245585,
+   "ptype->brand": 0.9913908420511062,
+   "ptype->generic": 0.9765992111130166,
+   "ptype->mktcat": 0.27228605728005484,
+   "ptype->labeler_e2": 0.9101183330475047,
+   "ptype->labeler_e8": 0.9138398216429429,
+   "labeler_e2->labcode": 0.14623563711198762,
+   "labeler_e2->appno": 0.6298662322071686,
+   "labeler_e2->brand": 0.8912279197393242,
+   "labeler_e2->generic": 0.8329703309895387,
+   "labeler_e2->mktcat": 0.11216772423255017,
+   "labeler_e2->ptype": 0.03616875321557189,
+   "labeler_e8->labcode": 0.20042016806722684,
+   "labeler_e8->appno": 0.6490910649974275,
+   "labeler_e8->brand": 0.8962956611215915,
+   "labeler_e8->generic": 0.8420939804493226,
+   "labeler_e8->mktcat": 0.1484308008917853,
+   "labeler_e8->ptype": 0.0667295489624421
+  },
+  "b3_tane_raw": {
+   "n": 8,
+   "false": 0,
+   "missed_true": 2
+  },
+  "b3_tane_norm": {
+   "n": 8,
+   "false": 0,
+   "missed_true": 2
+  },
+  "b1_quotient": {
+   "n": 9,
+   "false": 0,
+   "missed_true": 1
+  },
+  "ours": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "ours_calls_total": 6548,
+  "ours_calls_fwd_inv": [
+   4018,
+   2530
+  ],
+  "planner": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "planner_calls_total": 6548,
+  "b9_noaudit": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "b9_calls_total": 1420,
+  "planner_resolved": 30,
+  "planner_prepass": [],
+  "v_thresh": 2000,
+  "canon_all": 6653,
+  "ours_detail": {
+   "labcode->labeler": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.048431032812421386,
+    "lb": -0.048431032812421386,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 237,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.848545733222074,
+    "lb": 0.37246372265849226,
+    "mean": 0.61,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0467302926313133,
+    "lb": 0.6532697073686866,
+    "mean": 0.85,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0160236417024724,
+    "lb": 0.6060332693188367,
+    "mean": 0.81,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->mktcat": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.13176004030621477,
+    "lb": 0.0505674970575769,
+    "mean": 0.0925,
+    "samples": 1200,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->ptype": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.049684520932934656,
+    "lb": 0.003135396183305862,
+    "mean": 0.025833333333333333,
+    "samples": 1200,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->labeler_e2": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.048717743660130014,
+    "lb": 0.0005757809684141663,
+    "mean": 0.023636363636363636,
+    "samples": 1100,
+    "calls": 432,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->labeler_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.11903976753241735,
+    "lb": 0.05135756480228665,
+    "mean": 0.08055555555555556,
+    "samples": 1800,
+    "calls": 478,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.18222511574020142,
+    "lb": 0.05853221459187943,
+    "mean": 0.125,
+    "samples": 600,
+    "calls": 620,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9373011067214416,
+    "lb": 0.4809270696327162,
+    "mean": 0.71,
+    "samples": 100,
+    "calls": 32,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0939368439288069,
+    "lb": 0.7544804951113676,
+    "mean": 0.92,
+    "samples": 100,
+    "calls": 39,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0536041359763797,
+    "lb": 0.6663958640236203,
+    "mean": 0.86,
+    "samples": 100,
+    "calls": 43,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler->mktcat": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.14338415479746539,
+    "lb": 0.0528922353113279,
+    "mean": 0.09181818181818181,
+    "samples": 1100,
+    "calls": 568,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler->ptype": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.0492713466395635,
+    "lb": 0.00989272340708229,
+    "mean": 0.02736842105263158,
+    "samples": 1900,
+    "calls": 665,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9290979188649381,
+    "lb": 0.47250166102904867,
+    "mean": 0.71,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->labeler": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.939336504990127,
+    "lb": 0.49621115524600523,
+    "mean": 0.71,
+    "samples": 100,
+    "calls": 11,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8419566390008266,
+    "lb": 0.3598059090618051,
+    "mean": 0.6,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.5708454712123087,
+    "lb": 0.11955964028027657,
+    "mean": 0.36,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->mktcat": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04863557065292287,
+    "lb": -0.009890000445179688,
+    "mean": 0.018571428571428572,
+    "samples": 700,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->ptype": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.048427311487555934,
+    "lb": -0.020427311487555937,
+    "mean": 0.014,
+    "samples": 500,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->labeler_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8629559073132881,
+    "lb": 0.3911420442736167,
+    "mean": 0.62,
+    "samples": 100,
+    "calls": 12,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->labeler_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9282153637188255,
+    "lb": 0.46778671625212964,
+    "mean": 0.7,
+    "samples": 100,
+    "calls": 9,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.7373697440997959,
+    "lb": 0.25229186262616343,
+    "mean": 0.49,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->labeler": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6739696878565105,
+    "lb": 0.2022290327713676,
+    "mean": 0.45,
+    "samples": 100,
+    "calls": 14,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6358260155418733,
+    "lb": 0.1549188569044735,
+    "mean": 0.39,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.1234123060725258,
+    "lb": 0.05004938841803242,
+    "mean": 0.08466666666666667,
+    "samples": 1500,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->mktcat": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04876998922083702,
+    "lb": 0.008067742650482667,
+    "mean": 0.027058823529411764,
+    "samples": 1700,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->ptype": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.045650809534696274,
+    "lb": -0.02165080953469627,
+    "mean": 0.012,
+    "samples": 500,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->labeler_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.7325567316938815,
+    "lb": 0.24499112531959133,
+    "mean": 0.48,
+    "samples": 100,
+    "calls": 11,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->labeler_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6721293462767138,
+    "lb": 0.186528823351553,
+    "mean": 0.43,
+    "samples": 100,
+    "calls": 13,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9074845354596378,
+    "lb": 0.4396686603012643,
+    "mean": 0.68,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->labeler": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8783126188614276,
+    "lb": 0.41459226053114995,
+    "mean": 0.66,
+    "samples": 100,
+    "calls": 17,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.5752452461916708,
+    "lb": 0.10582834946840505,
+    "mean": 0.34,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6429220872560861,
+    "lb": 0.1630571886035166,
+    "mean": 0.4,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->mktcat": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.08619413898493433,
+    "lb": 0.05019904977165039,
+    "mean": 0.06836363636363636,
+    "samples": 5500,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->ptype": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04978867300355358,
+    "lb": -0.007976169675793295,
+    "mean": 0.02142857142857143,
+    "samples": 700,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->labeler_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8928243078007513,
+    "lb": 0.42492341577517956,
+    "mean": 0.66,
+    "samples": 100,
+    "calls": 13,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->labeler_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8916251221028608,
+    "lb": 0.41499459216314283,
+    "mean": 0.66,
+    "samples": 100,
+    "calls": 12,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.094553524970887,
+    "lb": 0.7576552287606673,
+    "mean": 0.92,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->labeler": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0805427166850103,
+    "lb": 0.724426424827441,
+    "mean": 0.9,
+    "samples": 100,
+    "calls": 12,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9941547693435319,
+    "lb": 0.5763605530148771,
+    "mean": 0.78,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.139115219165569,
+    "lb": 0.8408847808344311,
+    "mean": 0.99,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1334923167718296,
+    "lb": 0.8265076832281704,
+    "mean": 0.98,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->ptype": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.09141903912639926,
+    "lb": 0.050381524961141594,
+    "mean": 0.07341463414634146,
+    "samples": 4100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->labeler_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0745946074690966,
+    "lb": 0.7098846594508673,
+    "mean": 0.89,
+    "samples": 100,
+    "calls": 10,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->labeler_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0675261264321918,
+    "lb": 0.6924738735678082,
+    "mean": 0.88,
+    "samples": 100,
+    "calls": 9,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.07380990478031,
+    "lb": 0.70619009521969,
+    "mean": 0.89,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->labeler": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.060207642494421,
+    "lb": 0.6797923575055791,
+    "mean": 0.87,
+    "samples": 100,
+    "calls": 12,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0466808751554288,
+    "lb": 0.6691733423113082,
+    "mean": 0.85,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1452867029645164,
+    "lb": 0.8547132970354836,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1329417721753319,
+    "lb": 0.8270582278246681,
+    "mean": 0.98,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->mktcat": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.409589036538747,
+    "lb": 0.10967105071590993,
+    "mean": 0.255,
+    "samples": 200,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->labeler_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0948804422468965,
+    "lb": 0.7451195577531036,
+    "mean": 0.92,
+    "samples": 100,
+    "calls": 11,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->labeler_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0603307797708548,
+    "lb": 0.6934927961275945,
+    "mean": 0.87,
+    "samples": 100,
+    "calls": 11,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e2->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.2312907451801471,
+    "lb": 0.06138558346138792,
+    "mean": 0.1475,
+    "samples": 400,
+    "calls": 168,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e2->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.910164898717072,
+    "lb": 0.44479655377202454,
+    "mean": 0.68,
+    "samples": 100,
+    "calls": 23,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e2->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.081243963139241,
+    "lb": 0.731829774224432,
+    "mean": 0.9,
+    "samples": 100,
+    "calls": 21,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e2->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0525995418836769,
+    "lb": 0.6674004581163232,
+    "mean": 0.86,
+    "samples": 100,
+    "calls": 27,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e2->mktcat": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.19141788871769005,
+    "lb": 0.05305761070896256,
+    "mean": 0.128,
+    "samples": 500,
+    "calls": 141,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e2->ptype": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.049961666862650043,
+    "lb": 0.030302409633175896,
+    "mean": 0.03864406779661017,
+    "samples": 11800,
+    "calls": 2073,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e8->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.37549697573036717,
+    "lb": 0.08697982899664519,
+    "mean": 0.22,
+    "samples": 200,
+    "calls": 48,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e8->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8736641792907278,
+    "lb": 0.4003835601496958,
+    "mean": 0.64,
+    "samples": 100,
+    "calls": 11,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e8->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1072931495296592,
+    "lb": 0.7804073453883374,
+    "mean": 0.94,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e8->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0736437592426955,
+    "lb": 0.7063562407573046,
+    "mean": 0.89,
+    "samples": 100,
+    "calls": 7,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e8->mktcat": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.21187349436622613,
+    "lb": 0.06471105078747487,
+    "mean": 0.142,
+    "samples": 500,
+    "calls": 81,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e8->ptype": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.08513335628631209,
+    "lb": 0.05007353129808896,
+    "mean": 0.06593220338983051,
+    "samples": 5900,
+    "calls": 657,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   }
+  },
+  "false_lists": {
+   "b3_raw": [],
+   "b3_norm": [],
+   "b1": [],
+   "ours": [],
+   "planner": [],
+   "b9": []
+  },
+  "missed_lists": {
+   "b3_raw": [
+    "labcode->labeler",
+    "labcode->labeler_e2"
+   ],
+   "b1": [
+    "labcode->labeler_e2"
+   ],
+   "ours": [],
+   "b9": []
+  },
+  "derived": {
+   "n_certified_base": 10,
+   "n_derived_total": 64,
+   "n_violating_bound": 0,
+   "list": [
+    {
+     "lhs": [
+      "labcode"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode"
+     ],
+     "rhs": "ptype",
+     "bound": 0.049684520932934656,
+     "g3": 0.02483279025896068,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.048717743660130014,
+     "g3": 0.0202023666609501,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler"
+     ],
+     "rhs": "ptype",
+     "bound": 0.0492713466395635,
+     "g3": 0.0258446235637112,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04863557065292287,
+     "g3": 0.02904304578974448,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno"
+     ],
+     "rhs": "ptype",
+     "bound": 0.048427311487555934,
+     "g3": 0.016412279197393298,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04876998922083702,
+     "g3": 0.030586520322414712,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045650809534696274,
+     "g3": 0.010847196021265604,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "generic"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04978867300355358,
+     "g3": 0.023212141999657043,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.049961666862650043,
+     "g3": 0.03616875321557189,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler"
+     ],
+     "rhs": "ptype",
+     "bound": 0.0492713466395635,
+     "g3": 0.02483279025896068,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.048717743660130014,
+     "g3": 0.0202023666609501,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "appno"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "appno"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04863557065292287,
+     "g3": 0.0018950437317784008,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "appno"
+     ],
+     "rhs": "ptype",
+     "bound": 0.048427311487555934,
+     "g3": 0.0015863488252443325,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "appno"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.048717743660130014,
+     "g3": 0.016558051792145423,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "brand"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "brand"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04876998922083702,
+     "g3": 0.00873778082661636,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "brand"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045650809534696274,
+     "g3": 0.001492025381581219,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "brand"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.048717743660130014,
+     "g3": 0.012665066026410599,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "generic"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "generic"
+     ],
+     "rhs": "ptype",
+     "bound": 0.049684520932934656,
+     "g3": 0.001980792316926716,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "generic"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.048717743660130014,
+     "g3": 0.015306122448979553,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "mktcat"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "mktcat"
+     ],
+     "rhs": "ptype",
+     "bound": 0.049684520932934656,
+     "g3": 0.011618933287600774,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "mktcat"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.048717743660130014,
+     "g3": 0.020159492368375886,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "ptype"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "ptype"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.048717743660130014,
+     "g3": 0.0201937918024353,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler_e2"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.049684520932934656,
+     "g3": 0.024318298748070677,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler_e8"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler_e8"
+     ],
+     "rhs": "ptype",
+     "bound": 0.049684520932934656,
+     "g3": 0.023032069970845503,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler_e8"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.048717743660130014,
+     "g3": 0.0026239067055393583,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "appno"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04863557065292287,
+     "g3": 0.0025210084033613356,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "appno"
+     ],
+     "rhs": "ptype",
+     "bound": 0.048427311487555934,
+     "g3": 0.0016292231178185457,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "brand"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04876998922083702,
+     "g3": 0.009792488423940982,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "brand"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045650809534696274,
+     "g3": 0.0015949236837592418,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "generic"
+     ],
+     "rhs": "ptype",
+     "bound": 0.0492713466395635,
+     "g3": 0.002160864345738256,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "mktcat"
+     ],
+     "rhs": "ptype",
+     "bound": 0.0492713466395635,
+     "g3": 0.012133424798490777,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.0492713466395635,
+     "g3": 0.025321557194306288,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "labeler_e8"
+     ],
+     "rhs": "ptype",
+     "bound": 0.0492713466395635,
+     "g3": 0.0239924541245069,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "brand"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04863557065292287,
+     "g3": 0.0004973417938604063,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "brand"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045650809534696274,
+     "g3": 0.0006602641056422387,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "generic"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04863557065292287,
+     "g3": 0.006053850111473191,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "generic"
+     ],
+     "rhs": "ptype",
+     "bound": 0.048427311487555934,
+     "g3": 0.0010718573143543297,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "mktcat"
+     ],
+     "rhs": "ptype",
+     "bound": 0.048427311487555934,
+     "g3": 0.008746355685131157,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "ptype"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04863557065292287,
+     "g3": 0.0183501972217458,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "labeler_e2"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04863557065292287,
+     "g3": 0.0035671411421711596,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.048427311487555934,
+     "g3": 0.002469559252272324,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "labeler_e8"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04863557065292287,
+     "g3": 0.006216772423255024,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "labeler_e8"
+     ],
+     "rhs": "ptype",
+     "bound": 0.048427311487555934,
+     "g3": 0.004604699022466074,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "generic"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04876998922083702,
+     "g3": 0.024095352426684924,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "generic"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045650809534696274,
+     "g3": 0.009346595781169587,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "mktcat"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045650809534696274,
+     "g3": 0.007931744126221885,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "ptype"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04876998922083702,
+     "g3": 0.027765391871034106,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "labeler_e2"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04876998922083702,
+     "g3": 0.009698164980277868,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045650809534696274,
+     "g3": 0.00160349854227404,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "labeler_e8"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04876998922083702,
+     "g3": 0.009166523752358047,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "labeler_e8"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045650809534696274,
+     "g3": 0.0016892471274223553,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "generic",
+      "mktcat"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04978867300355358,
+     "g3": 0.010847196021265604,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "generic",
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04978867300355358,
+     "g3": 0.002306636940490492,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "generic",
+      "labeler_e8"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04978867300355358,
+     "g3": 0.0028640027439547078,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "mktcat",
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.049961666862650043,
+     "g3": 0.013985594237695076,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler_e2",
+      "labeler_e8"
+     ],
+     "rhs": "ptype",
+     "bound": 0.049961666862650043,
+     "g3": 0.025527353798662333,
+     "violated": false
+    }
+   ]
+  },
+  "sec": {
+   "proxy": 7.060584647580981,
+   "tane": 3.1493071168661118,
+   "certify": 17.192605704069138
+  }
+ },
+ {
+  "dataset": "ndc116620",
+  "seed": 1,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "alpha_per_fd": 0.0007575757575757576,
+  "theta0": 0.9,
+  "rows": 116620,
+  "n_cands": 66,
+  "n_true": 10,
+  "truth": {
+   "labcode->labeler": 0.0,
+   "labcode->appno": 0.6144743611730407,
+   "labcode->brand": 0.8807065683416224,
+   "labcode->generic": 0.8202538158120392,
+   "labcode->mktcat": 0.09551534899674152,
+   "labcode->ptype": 0.02483279025896068,
+   "labcode->labeler_e2": 0.02025381581203911,
+   "labcode->labeler_e8": 0.07918881838449665,
+   "labeler->labcode": 0.12845138055222094,
+   "labeler->appno": 0.6233064654433202,
+   "labeler->brand": 0.8895129480363574,
+   "labeler->generic": 0.8301920768307323,
+   "labeler->mktcat": 0.09980277825415884,
+   "labeler->ptype": 0.0258446235637112,
+   "appno->labcode": 0.6711713256731264,
+   "appno->labeler": 0.6527096552906877,
+   "appno->brand": 0.4967672783399074,
+   "appno->generic": 0.40439032755959525,
+   "appno->mktcat": 0.02904304578974448,
+   "appno->ptype": 0.016412279197393298,
+   "appno->labeler_e2": 0.6575030012004802,
+   "appno->labeler_e8": 0.6725947521865889,
+   "brand->labcode": 0.4716943920425313,
+   "brand->labeler": 0.45790601955067745,
+   "brand->appno": 0.34377465271823016,
+   "brand->generic": 0.08426513462527874,
+   "brand->mktcat": 0.030586520322414712,
+   "brand->ptype": 0.010847196021265604,
+   "brand->labeler_e2": 0.4632910306979935,
+   "brand->labeler_e8": 0.478391356542617,
+   "generic->labcode": 0.6718744640713428,
+   "generic->labeler": 0.6590207511576058,
+   "generic->appno": 0.407357228605728,
+   "generic->brand": 0.3298233579145944,
+   "generic->mktcat": 0.06799862802263767,
+   "generic->ptype": 0.023212141999657043,
+   "generic->labeler_e2": 0.6635397015949237,
+   "generic->labeler_e8": 0.6770365288972732,
+   "mktcat->labcode": 0.92124849939976,
+   "mktcat->labeler": 0.8992625621677243,
+   "mktcat->appno": 0.7715228948722346,
+   "mktcat->brand": 0.9838106671239925,
+   "mktcat->generic": 0.9653918710341279,
+   "mktcat->ptype": 0.07482421540044593,
+   "mktcat->labeler_e2": 0.9008489109929686,
+   "mktcat->labeler_e8": 0.9057280054879094,
+   "ptype->labcode": 0.9300034299434059,
+   "ptype->labeler": 0.9088149545532499,
+   "ptype->appno": 0.8480106328245585,
+   "ptype->brand": 0.9913908420511062,
+   "ptype->generic": 0.9765992111130166,
+   "ptype->mktcat": 0.27228605728005484,
+   "ptype->labeler_e2": 0.9099296861601783,
+   "ptype->labeler_e8": 0.9134453781512605,
+   "labeler_e2->labcode": 0.1466215057451552,
+   "labeler_e2->appno": 0.6298662322071686,
+   "labeler_e2->brand": 0.891399416909621,
+   "labeler_e2->generic": 0.8332704510375579,
+   "labeler_e2->mktcat": 0.11191047847710511,
+   "labeler_e2->ptype": 0.0361944777911164,
+   "labeler_e8->labcode": 0.19859372320356716,
+   "labeler_e8->appno": 0.6485937232035671,
+   "labeler_e8->brand": 0.8963299605556508,
+   "labeler_e8->generic": 0.8422140284685302,
+   "labeler_e8->mktcat": 0.1466472303206997,
+   "labeler_e8->ptype": 0.06612930886640367
+  },
+  "b3_tane_raw": {
+   "n": 8,
+   "false": 0,
+   "missed_true": 2
+  },
+  "b3_tane_norm": {
+   "n": 8,
+   "false": 0,
+   "missed_true": 2
+  },
+  "b1_quotient": {
+   "n": 9,
+   "false": 0,
+   "missed_true": 1
+  },
+  "ours": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "ours_calls_total": 6042,
+  "ours_calls_fwd_inv": [
+   3790,
+   2252
+  ],
+  "planner": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "planner_calls_total": 6042,
+  "b9_noaudit": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "b9_calls_total": 1558,
+  "planner_resolved": 30,
+  "planner_prepass": [],
+  "v_thresh": 2000,
+  "canon_all": 6653,
+  "ours_detail": {
+   "labcode->labeler": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.048431032812421386,
+    "lb": -0.048431032812421386,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 224,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8688363537092009,
+    "lb": 0.39312309338541307,
+    "mean": 0.63,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.081496978842637,
+    "lb": 0.7217734373487089,
+    "mean": 0.9,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9943323701017794,
+    "lb": 0.5677123095932097,
+    "mean": 0.78,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->mktcat": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.14186774173671418,
+    "lb": 0.05268481377969471,
+    "mean": 0.103,
+    "samples": 1000,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->ptype": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04908013944643283,
+    "lb": -0.0033190603695539035,
+    "mean": 0.022222222222222223,
+    "samples": 900,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->labeler_e2": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04933562833909503,
+    "lb": 0.001592672259259749,
+    "mean": 0.025454545454545455,
+    "samples": 1100,
+    "calls": 479,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->labeler_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.0978918785607842,
+    "lb": 0.0504642803475487,
+    "mean": 0.073125,
+    "samples": 3200,
+    "calls": 732,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.22109183797777812,
+    "lb": 0.0552800656327115,
+    "mean": 0.14,
+    "samples": 400,
+    "calls": 455,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9203176659646313,
+    "lb": 0.45660169898478975,
+    "mean": 0.69,
+    "samples": 100,
+    "calls": 33,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0682770230242749,
+    "lb": 0.6917229769757252,
+    "mean": 0.88,
+    "samples": 100,
+    "calls": 45,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9856097232297443,
+    "lb": 0.5545247437674341,
+    "mean": 0.77,
+    "samples": 100,
+    "calls": 55,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler->mktcat": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.15434652246723216,
+    "lb": 0.05794346197622052,
+    "mean": 0.11,
+    "samples": 900,
+    "calls": 427,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler->ptype": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.049769970070740986,
+    "lb": 0.0035221375061576035,
+    "mean": 0.02666666666666667,
+    "samples": 1200,
+    "calls": 493,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9145151722454833,
+    "lb": 0.4585251216402403,
+    "mean": 0.68,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->labeler": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8721849977434515,
+    "lb": 0.3999080076157954,
+    "mean": 0.63,
+    "samples": 100,
+    "calls": 13,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.7144224262993283,
+    "lb": 0.22290963184007834,
+    "mean": 0.47,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6094649820597615,
+    "lb": 0.1348828416199817,
+    "mean": 0.36,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->mktcat": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04885700346833742,
+    "lb": 0.002548267472556879,
+    "mean": 0.025,
+    "samples": 1200,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->ptype": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.045462490507732614,
+    "lb": -0.014170847919568168,
+    "mean": 0.016666666666666666,
+    "samples": 600,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->labeler_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.7661821653222629,
+    "lb": 0.2866397901173353,
+    "mean": 0.54,
+    "samples": 100,
+    "calls": 9,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->labeler_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9220218305228465,
+    "lb": 0.4683541695733256,
+    "mean": 0.69,
+    "samples": 100,
+    "calls": 7,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.7474757643832428,
+    "lb": 0.26237783841092666,
+    "mean": 0.51,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->labeler": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.5606537046097871,
+    "lb": 0.10178469708886181,
+    "mean": 0.34,
+    "samples": 100,
+    "calls": 17,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6297952634410953,
+    "lb": 0.15257707089607453,
+    "mean": 0.4,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.14980942881067066,
+    "lb": 0.05166846641838419,
+    "mean": 0.09888888888888889,
+    "samples": 900,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->mktcat": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.0487658676604406,
+    "lb": -0.013008514461805447,
+    "mean": 0.018333333333333333,
+    "samples": 600,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->ptype": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.048431032812421386,
+    "lb": -0.048431032812421386,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->labeler_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.736524683394113,
+    "lb": 0.2451052496997374,
+    "mean": 0.49,
+    "samples": 100,
+    "calls": 11,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->labeler_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.7411241976294578,
+    "lb": 0.26181112875914614,
+    "mean": 0.49,
+    "samples": 100,
+    "calls": 7,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9365887476375095,
+    "lb": 0.4808792847981874,
+    "mean": 0.71,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->labeler": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9303365932384942,
+    "lb": 0.47141230290817326,
+    "mean": 0.7,
+    "samples": 100,
+    "calls": 14,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6581034539920176,
+    "lb": 0.18584929992619623,
+    "mean": 0.43,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.5782760906924977,
+    "lb": 0.10697680325123629,
+    "mean": 0.34,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->mktcat": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.07666504716576313,
+    "lb": 0.050073464698323515,
+    "mean": 0.06608247422680412,
+    "samples": 9700,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->ptype": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04974432923829325,
+    "lb": 0.0011310264521193908,
+    "mean": 0.024545454545454544,
+    "samples": 1100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->labeler_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8880680657257835,
+    "lb": 0.4140434762099365,
+    "mean": 0.65,
+    "samples": 100,
+    "calls": 8,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->labeler_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9299802994937432,
+    "lb": 0.4755380102109479,
+    "mean": 0.7,
+    "samples": 100,
+    "calls": 9,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0941210193425435,
+    "lb": 0.7517831635196299,
+    "mean": 0.92,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->labeler": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.046736403642405,
+    "lb": 0.6532635963575951,
+    "mean": 0.85,
+    "samples": 100,
+    "calls": 7,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9936599579012946,
+    "lb": 0.5633960841049622,
+    "mean": 0.78,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1273625091540904,
+    "lb": 0.8126374908459095,
+    "mean": 0.97,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.139141738781383,
+    "lb": 0.8408582612186171,
+    "mean": 0.99,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->ptype": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.10172410424994548,
+    "lb": 0.05002437806443809,
+    "mean": 0.07653846153846154,
+    "samples": 2600,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->labeler_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.100775980764262,
+    "lb": 0.7592240192357381,
+    "mean": 0.93,
+    "samples": 100,
+    "calls": 11,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->labeler_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.045956153124304,
+    "lb": 0.6665601098545608,
+    "mean": 0.85,
+    "samples": 100,
+    "calls": 15,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.120646877814828,
+    "lb": 0.799353122185172,
+    "mean": 0.96,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->labeler": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0945322736748058,
+    "lb": 0.7454677263251943,
+    "mean": 0.92,
+    "samples": 100,
+    "calls": 5,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0881820429181415,
+    "lb": 0.7318179570818586,
+    "mean": 0.91,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1452867029645164,
+    "lb": 0.8547132970354836,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1328750376389451,
+    "lb": 0.8271249623610547,
+    "mean": 0.98,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->mktcat": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.5467161650820156,
+    "lb": 0.08322276470633541,
+    "mean": 0.31,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->labeler_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0380270752693848,
+    "lb": 0.6560290185693151,
+    "mean": 0.84,
+    "samples": 100,
+    "calls": 9,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->labeler_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0740253488115064,
+    "lb": 0.7075030807577523,
+    "mean": 0.89,
+    "samples": 100,
+    "calls": 10,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e2->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.2099063170633842,
+    "lb": 0.050559083270780236,
+    "mean": 0.135,
+    "samples": 400,
+    "calls": 181,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e2->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8528663938830975,
+    "lb": 0.3704547091798295,
+    "mean": 0.61,
+    "samples": 100,
+    "calls": 34,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e2->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.059422593136038,
+    "lb": 0.7000731703197425,
+    "mean": 0.87,
+    "samples": 100,
+    "calls": 50,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e2->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0311460834334858,
+    "lb": 0.6473602083764888,
+    "mean": 0.83,
+    "samples": 100,
+    "calls": 17,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e2->mktcat": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.17267385195861984,
+    "lb": 0.05140475555733302,
+    "mean": 0.11833333333333333,
+    "samples": 600,
+    "calls": 154,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e2->ptype": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04997624531297824,
+    "lb": 0.030191947302939615,
+    "mean": 0.039224137931034485,
+    "samples": 11600,
+    "calls": 2142,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e8->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.3908935843492848,
+    "lb": 0.09514909259483287,
+    "mean": 0.24,
+    "samples": 200,
+    "calls": 26,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e8->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9240915360583943,
+    "lb": 0.4761015065081315,
+    "mean": 0.69,
+    "samples": 100,
+    "calls": 6,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e8->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0878120613787292,
+    "lb": 0.732187938621271,
+    "mean": 0.91,
+    "samples": 100,
+    "calls": 9,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e8->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0875992720968939,
+    "lb": 0.7324007279031061,
+    "mean": 0.91,
+    "samples": 100,
+    "calls": 4,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e8->mktcat": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.25995707858315353,
+    "lb": 0.05923321237741673,
+    "mean": 0.16333333333333333,
+    "samples": 300,
+    "calls": 33,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e8->ptype": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.10578492596394866,
+    "lb": 0.05019376957275046,
+    "mean": 0.07791666666666666,
+    "samples": 2400,
+    "calls": 291,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   }
+  },
+  "false_lists": {
+   "b3_raw": [],
+   "b3_norm": [],
+   "b1": [],
+   "ours": [],
+   "planner": [],
+   "b9": []
+  },
+  "missed_lists": {
+   "b3_raw": [
+    "labcode->labeler",
+    "labcode->labeler_e2"
+   ],
+   "b1": [
+    "labcode->labeler_e2"
+   ],
+   "ours": [],
+   "b9": []
+  },
+  "derived": {
+   "n_certified_base": 10,
+   "n_derived_total": 64,
+   "n_violating_bound": 0,
+   "list": [
+    {
+     "lhs": [
+      "labcode"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04908013944643283,
+     "g3": 0.02483279025896068,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.04933562833909503,
+     "g3": 0.02025381581203911,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler"
+     ],
+     "rhs": "ptype",
+     "bound": 0.049769970070740986,
+     "g3": 0.0258446235637112,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04885700346833742,
+     "g3": 0.02904304578974448,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045462490507732614,
+     "g3": 0.016412279197393298,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.0487658676604406,
+     "g3": 0.030586520322414712,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand"
+     ],
+     "rhs": "ptype",
+     "bound": 0.048431032812421386,
+     "g3": 0.010847196021265604,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "generic"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04974432923829325,
+     "g3": 0.023212141999657043,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04997624531297824,
+     "g3": 0.0361944777911164,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04908013944643283,
+     "g3": 0.02483279025896068,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.04933562833909503,
+     "g3": 0.02025381581203911,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "appno"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "appno"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04885700346833742,
+     "g3": 0.0018950437317784008,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "appno"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045462490507732614,
+     "g3": 0.0015863488252443325,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "appno"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.04933562833909503,
+     "g3": 0.01652375235808612,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "brand"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "brand"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.0487658676604406,
+     "g3": 0.00873778082661636,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "brand"
+     ],
+     "rhs": "ptype",
+     "bound": 0.048431032812421386,
+     "g3": 0.001492025381581219,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "brand"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.04933562833909503,
+     "g3": 0.012913736923340746,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "generic"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "generic"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04908013944643283,
+     "g3": 0.001980792316926716,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "generic"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.04933562833909503,
+     "g3": 0.015494769336306002,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "mktcat"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "mktcat"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04908013944643283,
+     "g3": 0.011618933287600774,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "mktcat"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.04933562833909503,
+     "g3": 0.020108043217286875,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "ptype"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "ptype"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.04933562833909503,
+     "g3": 0.0201937918024353,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler_e2"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04908013944643283,
+     "g3": 0.024206825587377856,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler_e8"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler_e8"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04908013944643283,
+     "g3": 0.023066369404904807,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler_e8"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.04933562833909503,
+     "g3": 0.002906877036528921,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "appno"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04885700346833742,
+     "g3": 0.0025210084033613356,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "appno"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045462490507732614,
+     "g3": 0.0016292231178185457,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "brand"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.0487658676604406,
+     "g3": 0.009792488423940982,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "brand"
+     ],
+     "rhs": "ptype",
+     "bound": 0.048431032812421386,
+     "g3": 0.0015949236837592418,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "generic"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04974432923829325,
+     "g3": 0.002160864345738256,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "mktcat"
+     ],
+     "rhs": "ptype",
+     "bound": 0.049769970070740986,
+     "g3": 0.012133424798490777,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.049769970070740986,
+     "g3": 0.025210084033613467,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "labeler_e8"
+     ],
+     "rhs": "ptype",
+     "bound": 0.049769970070740986,
+     "g3": 0.024095352426684924,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "brand"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.0487658676604406,
+     "g3": 0.0004973417938604063,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "brand"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045462490507732614,
+     "g3": 0.0006602641056422387,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "generic"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04885700346833742,
+     "g3": 0.006053850111473191,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "generic"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045462490507732614,
+     "g3": 0.0010718573143543297,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "mktcat"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045462490507732614,
+     "g3": 0.008746355685131157,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "ptype"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04885700346833742,
+     "g3": 0.0183501972217458,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "labeler_e2"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04885700346833742,
+     "g3": 0.003652889727319475,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045462490507732614,
+     "g3": 0.002460984393757526,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "labeler_e8"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04885700346833742,
+     "g3": 0.006045275252958282,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "labeler_e8"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045462490507732614,
+     "g3": 0.004433201852169444,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "generic"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.0487658676604406,
+     "g3": 0.024095352426684924,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "generic"
+     ],
+     "rhs": "ptype",
+     "bound": 0.048431032812421386,
+     "g3": 0.009346595781169587,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "mktcat"
+     ],
+     "rhs": "ptype",
+     "bound": 0.048431032812421386,
+     "g3": 0.007931744126221885,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "ptype"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.0487658676604406,
+     "g3": 0.027765391871034106,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "labeler_e2"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.0487658676604406,
+     "g3": 0.009586691819584936,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.048431032812421386,
+     "g3": 0.0016120734007888382,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "labeler_e8"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.0487658676604406,
+     "g3": 0.009235122620476766,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "labeler_e8"
+     ],
+     "rhs": "ptype",
+     "bound": 0.048431032812421386,
+     "g3": 0.0017664208540558723,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "generic",
+      "mktcat"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04974432923829325,
+     "g3": 0.010847196021265604,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "generic",
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04974432923829325,
+     "g3": 0.0022466129308866822,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "generic",
+      "labeler_e8"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04974432923829325,
+     "g3": 0.002692505573658077,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "mktcat",
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04997624531297824,
+     "g3": 0.014234265134625224,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler_e2",
+      "labeler_e8"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04997624531297824,
+     "g3": 0.02535585662836559,
+     "violated": false
+    }
+   ]
+  },
+  "sec": {
+   "proxy": 7.498203011229634,
+   "tane": 3.2509161345660686,
+   "certify": 14.60986360348761
+  }
+ },
+ {
+  "dataset": "ndc116620",
+  "seed": 2,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "alpha_per_fd": 0.0007575757575757576,
+  "theta0": 0.9,
+  "rows": 116620,
+  "n_cands": 66,
+  "n_true": 10,
+  "truth": {
+   "labcode->labeler": 0.0,
+   "labcode->appno": 0.6144743611730407,
+   "labcode->brand": 0.8807065683416224,
+   "labcode->generic": 0.8202538158120392,
+   "labcode->mktcat": 0.09551534899674152,
+   "labcode->ptype": 0.02483279025896068,
+   "labcode->labeler_e2": 0.019559252272337457,
+   "labcode->labeler_e8": 0.07885439890241808,
+   "labeler->labcode": 0.12845138055222094,
+   "labeler->appno": 0.6233064654433202,
+   "labeler->brand": 0.8895129480363574,
+   "labeler->generic": 0.8301920768307323,
+   "labeler->mktcat": 0.09980277825415884,
+   "labeler->ptype": 0.0258446235637112,
+   "appno->labcode": 0.6711713256731264,
+   "appno->labeler": 0.6527096552906877,
+   "appno->brand": 0.4967672783399074,
+   "appno->generic": 0.40439032755959525,
+   "appno->mktcat": 0.02904304578974448,
+   "appno->ptype": 0.016412279197393298,
+   "appno->labeler_e2": 0.6576487737952323,
+   "appno->labeler_e8": 0.6725776024695593,
+   "brand->labcode": 0.4716943920425313,
+   "brand->labeler": 0.45790601955067745,
+   "brand->appno": 0.34377465271823016,
+   "brand->generic": 0.08426513462527874,
+   "brand->mktcat": 0.030586520322414712,
+   "brand->ptype": 0.010847196021265604,
+   "brand->labeler_e2": 0.46308523409363744,
+   "brand->labeler_e8": 0.47862287772251755,
+   "generic->labcode": 0.6718744640713428,
+   "generic->labeler": 0.6590207511576058,
+   "generic->appno": 0.407357228605728,
+   "generic->brand": 0.3298233579145944,
+   "generic->mktcat": 0.06799862802263767,
+   "generic->ptype": 0.023212141999657043,
+   "generic->labeler_e2": 0.6633339049905677,
+   "generic->labeler_e8": 0.6762733664894529,
+   "mktcat->labcode": 0.92124849939976,
+   "mktcat->labeler": 0.8992625621677243,
+   "mktcat->appno": 0.7715228948722346,
+   "mktcat->brand": 0.9838106671239925,
+   "mktcat->generic": 0.9653918710341279,
+   "mktcat->ptype": 0.07482421540044593,
+   "mktcat->labeler_e2": 0.9009003601440576,
+   "mktcat->labeler_e8": 0.905805179214543,
+   "ptype->labcode": 0.9300034299434059,
+   "ptype->labeler": 0.9088149545532499,
+   "ptype->appno": 0.8480106328245585,
+   "ptype->brand": 0.9913908420511062,
+   "ptype->generic": 0.9765992111130166,
+   "ptype->mktcat": 0.27228605728005484,
+   "ptype->labeler_e2": 0.9100154347453266,
+   "ptype->labeler_e8": 0.9134625278682902,
+   "labeler_e2->labcode": 0.14558394786486017,
+   "labeler_e2->appno": 0.6297033098953868,
+   "labeler_e2->brand": 0.8912622191733837,
+   "labeler_e2->generic": 0.8330818041502315,
+   "labeler_e2->mktcat": 0.11179900531641229,
+   "labeler_e2->ptype": 0.03612587892299779,
+   "labeler_e8->labcode": 0.19815640541931057,
+   "labeler_e8->appno": 0.6488080946664381,
+   "labeler_e8->brand": 0.896424283999314,
+   "labeler_e8->generic": 0.8427285199794203,
+   "labeler_e8->mktcat": 0.14740181787000517,
+   "labeler_e8->ptype": 0.06684959698164983
+  },
+  "b3_tane_raw": {
+   "n": 8,
+   "false": 0,
+   "missed_true": 2
+  },
+  "b3_tane_norm": {
+   "n": 8,
+   "false": 0,
+   "missed_true": 2
+  },
+  "b1_quotient": {
+   "n": 9,
+   "false": 0,
+   "missed_true": 1
+  },
+  "ours": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "ours_calls_total": 6324,
+  "ours_calls_fwd_inv": [
+   3880,
+   2444
+  ],
+  "planner": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "planner_calls_total": 6324,
+  "b9_noaudit": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "b9_calls_total": 1360,
+  "planner_resolved": 30,
+  "planner_prepass": [],
+  "v_thresh": 2000,
+  "canon_all": 6653,
+  "ours_detail": {
+   "labcode->labeler": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.048431032812421386,
+    "lb": -0.048431032812421386,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 226,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.871884737108679,
+    "lb": 0.4003158514638311,
+    "mean": 0.64,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0742663450568162,
+    "lb": 0.7057336549431839,
+    "mean": 0.89,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0083790493392009,
+    "lb": 0.5902348152799899,
+    "mean": 0.8,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->mktcat": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.12189215694886799,
+    "lb": 0.05095221408460335,
+    "mean": 0.08866666666666667,
+    "samples": 1500,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->ptype": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.045864129028106805,
+    "lb": -0.020623513697716027,
+    "mean": 0.014,
+    "samples": 500,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->labeler_e2": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04989876838939092,
+    "lb": -0.002577859006752458,
+    "mean": 0.023333333333333334,
+    "samples": 900,
+    "calls": 398,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labcode->labeler_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.10534651840325956,
+    "lb": 0.05000705476198433,
+    "mean": 0.07791666666666666,
+    "samples": 2400,
+    "calls": 591,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.25613808219726847,
+    "lb": 0.0518907223727674,
+    "mean": 0.15,
+    "samples": 300,
+    "calls": 367,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8891156680044204,
+    "lb": 0.43442613366059035,
+    "mean": 0.65,
+    "samples": 100,
+    "calls": 58,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1073811254226484,
+    "lb": 0.7771938947481711,
+    "mean": 0.94,
+    "samples": 100,
+    "calls": 21,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0459492231993348,
+    "lb": 0.6540336911030007,
+    "mean": 0.85,
+    "samples": 100,
+    "calls": 45,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler->mktcat": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.13880456375113023,
+    "lb": 0.050579222819841965,
+    "mean": 0.101,
+    "samples": 1000,
+    "calls": 586,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler->ptype": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04946226698837128,
+    "lb": 0.007403988200120698,
+    "mean": 0.028666666666666667,
+    "samples": 1500,
+    "calls": 624,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9386943562404036,
+    "lb": 0.48954904787017883,
+    "mean": 0.71,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->labeler": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8350077252585839,
+    "lb": 0.36108151769330965,
+    "mean": 0.59,
+    "samples": 100,
+    "calls": 9,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.7145918323490101,
+    "lb": 0.22372630260751417,
+    "mean": 0.47,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6251102527119575,
+    "lb": 0.1492205390484833,
+    "mean": 0.38,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->mktcat": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04961968138293122,
+    "lb": -0.000577849799296714,
+    "mean": 0.024,
+    "samples": 1000,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->ptype": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.044972260326043595,
+    "lb": -0.014953944301595367,
+    "mean": 0.015,
+    "samples": 600,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->labeler_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9219054199787584,
+    "lb": 0.4614710050370111,
+    "mean": 0.69,
+    "samples": 100,
+    "calls": 15,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "appno->labeler_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8938674155421881,
+    "lb": 0.43069359301883364,
+    "mean": 0.67,
+    "samples": 100,
+    "calls": 11,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6657641372770466,
+    "lb": 0.1774155223459525,
+    "mean": 0.42,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->labeler": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.7733881416805515,
+    "lb": 0.2888950008104648,
+    "mean": 0.52,
+    "samples": 100,
+    "calls": 10,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6054463318608164,
+    "lb": 0.1287033353807065,
+    "mean": 0.37,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.11003560714688902,
+    "lb": 0.05013633613136401,
+    "mean": 0.07952380952380952,
+    "samples": 2100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->mktcat": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.049283657169063626,
+    "lb": 0.014922477777441972,
+    "mean": 0.031538461538461536,
+    "samples": 2600,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->ptype": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04671552922316525,
+    "lb": -0.03171552922316525,
+    "mean": 0.0075,
+    "samples": 400,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->labeler_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6695679825620836,
+    "lb": 0.18241900037949055,
+    "mean": 0.43,
+    "samples": 100,
+    "calls": 14,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "brand->labeler_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.7340652944129411,
+    "lb": 0.24305781052812342,
+    "mean": 0.49,
+    "samples": 100,
+    "calls": 17,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8963896390054309,
+    "lb": 0.42590666897913476,
+    "mean": 0.66,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->labeler": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8800391966174526,
+    "lb": 0.4170198502849808,
+    "mean": 0.64,
+    "samples": 100,
+    "calls": 9,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6479883473004416,
+    "lb": 0.16604355179706504,
+    "mean": 0.4,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6387375854609854,
+    "lb": 0.15588403535308337,
+    "mean": 0.4,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->mktcat": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.10111367687273222,
+    "lb": 0.051108967114151325,
+    "mean": 0.07433333333333333,
+    "samples": 3000,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->ptype": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04903618573049454,
+    "lb": 0.006813854069777792,
+    "mean": 0.025,
+    "samples": 1600,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->labeler_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9630425198112647,
+    "lb": 0.5208722673114776,
+    "mean": 0.74,
+    "samples": 100,
+    "calls": 11,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "generic->labeler_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.919608254075634,
+    "lb": 0.4571478364822982,
+    "mean": 0.69,
+    "samples": 100,
+    "calls": 9,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0806015878565427,
+    "lb": 0.7271409618563556,
+    "mean": 0.9,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->labeler": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1007411653782013,
+    "lb": 0.7632165984824422,
+    "mean": 0.93,
+    "samples": 100,
+    "calls": 16,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9727741124748805,
+    "lb": 0.5371580912403386,
+    "mean": 0.76,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.12028119743507,
+    "lb": 0.8035131267652771,
+    "mean": 0.96,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1208361328012095,
+    "lb": 0.8163171214399292,
+    "mean": 0.96,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->ptype": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.09251620230806099,
+    "lb": 0.05048010099199132,
+    "mean": 0.07675675675675675,
+    "samples": 3700,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->labeler_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.059441704861456,
+    "lb": 0.6873242184714169,
+    "mean": 0.87,
+    "samples": 100,
+    "calls": 8,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "mktcat->labeler_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0877076528493472,
+    "lb": 0.7322923471506528,
+    "mean": 0.91,
+    "samples": 100,
+    "calls": 10,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.08789175868056,
+    "lb": 0.73210824131944,
+    "mean": 0.91,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->labeler": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0738823509451492,
+    "lb": 0.7061176490548509,
+    "mean": 0.89,
+    "samples": 100,
+    "calls": 11,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0313672643352962,
+    "lb": 0.6281962803299581,
+    "mean": 0.83,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.139368602817253,
+    "lb": 0.8406313971827472,
+    "mean": 0.99,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.1330537774227887,
+    "lb": 0.8269462225772112,
+    "mean": 0.98,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->mktcat": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.3993863588446315,
+    "lb": 0.13187846805333772,
+    "mean": 0.29,
+    "samples": 200,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->labeler_e2": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0389256389113684,
+    "lb": 0.6503428286466924,
+    "mean": 0.84,
+    "samples": 100,
+    "calls": 15,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "ptype->labeler_e8": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0612417911972958,
+    "lb": 0.6925432192900003,
+    "mean": 0.87,
+    "samples": 100,
+    "calls": 7,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e2->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.2880219336443674,
+    "lb": 0.07433315163981567,
+    "mean": 0.18333333333333332,
+    "samples": 300,
+    "calls": 91,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e2->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8779756340391488,
+    "lb": 0.4082166696719614,
+    "mean": 0.64,
+    "samples": 100,
+    "calls": 25,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e2->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0810422150584973,
+    "lb": 0.7294157902350149,
+    "mean": 0.9,
+    "samples": 100,
+    "calls": 21,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e2->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0164828376305617,
+    "lb": 0.6026482937440859,
+    "mean": 0.81,
+    "samples": 100,
+    "calls": 29,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e2->mktcat": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.25480792999906193,
+    "lb": 0.05325067872279232,
+    "mean": 0.15333333333333332,
+    "samples": 300,
+    "calls": 71,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e2->ptype": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04996384402380408,
+    "lb": 0.031589154036252884,
+    "mean": 0.04028985507246377,
+    "samples": 13800,
+    "calls": 2501,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e8->labcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.32021448091226656,
+    "lb": 0.07727068278183288,
+    "mean": 0.225,
+    "samples": 200,
+    "calls": 51,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e8->appno": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8890364711548183,
+    "lb": 0.4303146297018121,
+    "mean": 0.65,
+    "samples": 100,
+    "calls": 15,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e8->brand": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0817473110505726,
+    "lb": 0.7182526889494274,
+    "mean": 0.9,
+    "samples": 100,
+    "calls": 13,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e8->generic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0528310899458573,
+    "lb": 0.677323664269487,
+    "mean": 0.86,
+    "samples": 100,
+    "calls": 20,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e8->mktcat": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.2151983652692946,
+    "lb": 0.050852495998077174,
+    "mean": 0.1325,
+    "samples": 400,
+    "calls": 39,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   },
+   "labeler_e8->ptype": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.09484374819643862,
+    "lb": 0.05013609643136059,
+    "mean": 0.07333333333333333,
+    "samples": 3600,
+    "calls": 360,
+    "theta": 0.9,
+    "alpha": 0.0007575757575757576
+   }
+  },
+  "false_lists": {
+   "b3_raw": [],
+   "b3_norm": [],
+   "b1": [],
+   "ours": [],
+   "planner": [],
+   "b9": []
+  },
+  "missed_lists": {
+   "b3_raw": [
+    "labcode->labeler",
+    "labcode->labeler_e2"
+   ],
+   "b1": [
+    "labcode->labeler_e2"
+   ],
+   "ours": [],
+   "b9": []
+  },
+  "derived": {
+   "n_certified_base": 10,
+   "n_derived_total": 64,
+   "n_violating_bound": 0,
+   "list": [
+    {
+     "lhs": [
+      "labcode"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045864129028106805,
+     "g3": 0.02483279025896068,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.04989876838939092,
+     "g3": 0.019559252272337457,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04946226698837128,
+     "g3": 0.0258446235637112,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04961968138293122,
+     "g3": 0.02904304578974448,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno"
+     ],
+     "rhs": "ptype",
+     "bound": 0.044972260326043595,
+     "g3": 0.016412279197393298,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.049283657169063626,
+     "g3": 0.030586520322414712,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04671552922316525,
+     "g3": 0.010847196021265604,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "generic"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04903618573049454,
+     "g3": 0.023212141999657043,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04996384402380408,
+     "g3": 0.03612587892299779,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045864129028106805,
+     "g3": 0.02483279025896068,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.04989876838939092,
+     "g3": 0.019559252272337457,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "appno"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "appno"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04961968138293122,
+     "g3": 0.0018950437317784008,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "appno"
+     ],
+     "rhs": "ptype",
+     "bound": 0.044972260326043595,
+     "g3": 0.0015863488252443325,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "appno"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.04989876838939092,
+     "g3": 0.01585491339392897,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "brand"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "brand"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.049283657169063626,
+     "g3": 0.00873778082661636,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "brand"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045864129028106805,
+     "g3": 0.001492025381581219,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "brand"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.04989876838939092,
+     "g3": 0.01224489795918371,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "generic"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "generic"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045864129028106805,
+     "g3": 0.001980792316926716,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "generic"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.04989876838939092,
+     "g3": 0.014825930372148854,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "mktcat"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "mktcat"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045864129028106805,
+     "g3": 0.011618933287600774,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "mktcat"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.04989876838939092,
+     "g3": 0.019439204253129838,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "ptype"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "ptype"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.04989876838939092,
+     "g3": 0.01954210255530786,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler_e2"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045864129028106805,
+     "g3": 0.0244211970502487,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler_e8"
+     ],
+     "rhs": "labeler",
+     "bound": 0.048431032812421386,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler_e8"
+     ],
+     "rhs": "ptype",
+     "bound": 0.045864129028106805,
+     "g3": 0.023203567141142134,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labcode",
+      "labeler_e8"
+     ],
+     "rhs": "labeler_e2",
+     "bound": 0.04989876838939092,
+     "g3": 0.0025896072714800544,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "appno"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04961968138293122,
+     "g3": 0.0025210084033613356,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "appno"
+     ],
+     "rhs": "ptype",
+     "bound": 0.044972260326043595,
+     "g3": 0.0016292231178185457,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "brand"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.049283657169063626,
+     "g3": 0.009792488423940982,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "brand"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04671552922316525,
+     "g3": 0.0015949236837592418,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "generic"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04903618573049454,
+     "g3": 0.002160864345738256,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "mktcat"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04946226698837128,
+     "g3": 0.012133424798490777,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04946226698837128,
+     "g3": 0.025441605213514018,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler",
+      "labeler_e8"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04946226698837128,
+     "g3": 0.024215400445892654,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "brand"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.049283657169063626,
+     "g3": 0.0004973417938604063,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "brand"
+     ],
+     "rhs": "ptype",
+     "bound": 0.044972260326043595,
+     "g3": 0.0006602641056422387,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "generic"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04961968138293122,
+     "g3": 0.006053850111473191,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "generic"
+     ],
+     "rhs": "ptype",
+     "bound": 0.044972260326043595,
+     "g3": 0.0010718573143543297,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "mktcat"
+     ],
+     "rhs": "ptype",
+     "bound": 0.044972260326043595,
+     "g3": 0.008746355685131157,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "ptype"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04961968138293122,
+     "g3": 0.0183501972217458,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "labeler_e2"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04961968138293122,
+     "g3": 0.0033784942548448216,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.044972260326043595,
+     "g3": 0.0023752358086092107,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "labeler_e8"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.04961968138293122,
+     "g3": 0.006045275252958282,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "appno",
+      "labeler_e8"
+     ],
+     "rhs": "ptype",
+     "bound": 0.044972260326043595,
+     "g3": 0.004501800720288163,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "generic"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.049283657169063626,
+     "g3": 0.024095352426684924,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "generic"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04671552922316525,
+     "g3": 0.009346595781169587,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "mktcat"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04671552922316525,
+     "g3": 0.007931744126221885,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "ptype"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.049283657169063626,
+     "g3": 0.027765391871034106,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "labeler_e2"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.049283657169063626,
+     "g3": 0.009612416395129442,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04671552922316525,
+     "g3": 0.0016463728348482531,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "labeler_e8"
+     ],
+     "rhs": "mktcat",
+     "bound": 0.049283657169063626,
+     "g3": 0.009200823186417462,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "brand",
+      "labeler_e8"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04671552922316525,
+     "g3": 0.0017235465614817702,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "generic",
+      "mktcat"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04903618573049454,
+     "g3": 0.010847196021265604,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "generic",
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04903618573049454,
+     "g3": 0.0023409363745497958,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "generic",
+      "labeler_e8"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04903618573049454,
+     "g3": 0.0028125535928656964,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "mktcat",
+      "labeler_e2"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04996384402380408,
+     "g3": 0.014122791973932403,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "labeler_e2",
+      "labeler_e8"
+     ],
+     "rhs": "ptype",
+     "bound": 0.04996384402380408,
+     "g3": 0.025750300120047975,
+     "violated": false
+    }
+   ]
+  },
+  "sec": {
+   "proxy": 8.14345083758235,
+   "tane": 2.3916733618825674,
+   "certify": 14.562050122767687
+  }
+ }
+]

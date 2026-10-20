@@ -1,0 +1,79 @@
+{
+ "dataset": "ndc116620",
+ "delta": 0.05,
+ "alpha": 0.05,
+ "n_cands": 66,
+ "n_true": 10,
+ "splits": [
+  {
+   "split": 0,
+   "S": 33,
+   "H": 33,
+   "H_true": 6,
+   "calls_S_half_delta": 1729,
+   "calls_H_direct": 4199,
+   "S_false_certified": 0,
+   "H_direct_certified_true": 6,
+   "H_covered_by_closure": 0,
+   "H_false_covered": 0,
+   "derived_violations": 0,
+   "tightness": []
+  },
+  {
+   "split": 1,
+   "S": 33,
+   "H": 33,
+   "H_true": 5,
+   "calls_S_half_delta": 3231,
+   "calls_H_direct": 5281,
+   "S_false_certified": 0,
+   "H_direct_certified_true": 5,
+   "H_covered_by_closure": 0,
+   "H_false_covered": 0,
+   "derived_violations": 0,
+   "tightness": []
+  },
+  {
+   "split": 2,
+   "S": 33,
+   "H": 33,
+   "H_true": 3,
+   "calls_S_half_delta": 5559,
+   "calls_H_direct": 3160,
+   "S_false_certified": 0,
+   "H_direct_certified_true": 3,
+   "H_covered_by_closure": 0,
+   "H_false_covered": 0,
+   "derived_violations": 0,
+   "tightness": []
+  },
+  {
+   "split": 3,
+   "S": 33,
+   "H": 33,
+   "H_true": 7,
+   "calls_S_half_delta": 2169,
+   "calls_H_direct": 5171,
+   "S_false_certified": 0,
+   "H_direct_certified_true": 7,
+   "H_covered_by_closure": 0,
+   "H_false_covered": 0,
+   "derived_violations": 0,
+   "tightness": []
+  },
+  {
+   "split": 4,
+   "S": 33,
+   "H": 33,
+   "H_true": 4,
+   "calls_S_half_delta": 6174,
+   "calls_H_direct": 4778,
+   "S_false_certified": 0,
+   "H_direct_certified_true": 4,
+   "H_covered_by_closure": 0,
+   "H_false_covered": 0,
+   "derived_violations": 0,
+   "tightness": []
+  }
+ ]
+}

@@ -1,0 +1,2603 @@
+[
+ {
+  "dataset": "tax200000",
+  "seed": 0,
+  "n_cands": 60,
+  "n_true": 19,
+  "rows": 200000,
+  "tane": {
+   "false": 0,
+   "missed": 8
+  },
+  "ours": {
+   "false": 0,
+   "missed": 0
+  },
+  "calls": 22668,
+  "calls_fwd_inv": [
+   14227,
+   8441
+  ],
+  "canon_all": 84796,
+  "sec": {
+   "tane": 2.6250088568776846,
+   "certify": 360.52322110533714
+  },
+  "fds": [
+   {
+    "lhs": [
+     "f_name",
+     "gender"
+    ],
+    "rhs": "area_code",
+    "g3": 0.90501,
+    "raw_g3": 0.7667349999999999,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0592206915539983,
+    "calls": 67
+   },
+   {
+    "lhs": [
+     "f_name",
+     "gender"
+    ],
+    "rhs": "city",
+    "g3": 0.94274,
+    "raw_g3": 0.7993,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1186385487941908,
+    "calls": 229
+   },
+   {
+    "lhs": [
+     "f_name",
+     "gender"
+    ],
+    "rhs": "state",
+    "g3": 0.88496,
+    "raw_g3": 0.753325,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0584542191097093,
+    "calls": 125
+   },
+   {
+    "lhs": [
+     "f_name",
+     "gender"
+    ],
+    "rhs": "zip",
+    "g3": 0.949585,
+    "raw_g3": 0.802325,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.098865746507644,
+    "calls": 49
+   },
+   {
+    "lhs": [
+     "f_name",
+     "area_code"
+    ],
+    "rhs": "gender",
+    "g3": 1.4999999999987246e-05,
+    "raw_g3": 9.99999999995449e-06,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 618
+   },
+   {
+    "lhs": [
+     "f_name",
+     "area_code"
+    ],
+    "rhs": "city",
+    "g3": 0.07327499999999998,
+    "raw_g3": 0.051795000000000035,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.10298717185426393,
+    "calls": 6642
+   },
+   {
+    "lhs": [
+     "f_name",
+     "area_code"
+    ],
+    "rhs": "state",
+    "g3": 0.0,
+    "raw_g3": 0.010774999999999979,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 512
+   },
+   {
+    "lhs": [
+     "f_name",
+     "area_code"
+    ],
+    "rhs": "zip",
+    "g3": 0.07762000000000002,
+    "raw_g3": 0.05369999999999997,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.10721202182900309,
+    "calls": 3291
+   },
+   {
+    "lhs": [
+     "f_name",
+     "city"
+    ],
+    "rhs": "gender",
+    "g3": 0.0,
+    "raw_g3": 0.0,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 876
+   },
+   {
+    "lhs": [
+     "f_name",
+     "city"
+    ],
+    "rhs": "area_code",
+    "g3": 0.003070000000000017,
+    "raw_g3": 0.0013250000000000206,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04490526393263297,
+    "calls": 1105
+   },
+   {
+    "lhs": [
+     "f_name",
+     "city"
+    ],
+    "rhs": "state",
+    "g3": 0.0014899999999999913,
+    "raw_g3": 0.0012100000000000444,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 774
+   },
+   {
+    "lhs": [
+     "f_name",
+     "city"
+    ],
+    "rhs": "zip",
+    "g3": 0.007310000000000039,
+    "raw_g3": 0.003249999999999975,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04612708920185229,
+    "calls": 1222
+   },
+   {
+    "lhs": [
+     "f_name",
+     "state"
+    ],
+    "rhs": "gender",
+    "g3": 2.5000000000052758e-05,
+    "raw_g3": 5.000000000032756e-06,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.042772925914262766,
+    "calls": 488
+   },
+   {
+    "lhs": [
+     "f_name",
+     "state"
+    ],
+    "rhs": "area_code",
+    "g3": 0.09176499999999999,
+    "raw_g3": 0.05142000000000002,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.1557196157070157,
+    "calls": 898
+   },
+   {
+    "lhs": [
+     "f_name",
+     "state"
+    ],
+    "rhs": "city",
+    "g3": 0.16330999999999996,
+    "raw_g3": 0.09231,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.28435170624484196,
+    "calls": 526
+   },
+   {
+    "lhs": [
+     "f_name",
+     "state"
+    ],
+    "rhs": "zip",
+    "g3": 0.16912000000000005,
+    "raw_g3": 0.09430499999999997,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.3371125875355091,
+    "calls": 202
+   },
+   {
+    "lhs": [
+     "f_name",
+     "zip"
+    ],
+    "rhs": "gender",
+    "g3": 0.0,
+    "raw_g3": 0.0,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 280
+   },
+   {
+    "lhs": [
+     "f_name",
+     "zip"
+    ],
+    "rhs": "area_code",
+    "g3": 0.00017000000000000348,
+    "raw_g3": 0.00013499999999999623,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 278
+   },
+   {
+    "lhs": [
+     "f_name",
+     "zip"
+    ],
+    "rhs": "city",
+    "g3": 5.999999999994898e-05,
+    "raw_g3": 0.00015500000000001624,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 435
+   },
+   {
+    "lhs": [
+     "f_name",
+     "zip"
+    ],
+    "rhs": "state",
+    "g3": 5.500000000002725e-05,
+    "raw_g3": 0.0001100000000000545,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 289
+   },
+   {
+    "lhs": [
+     "gender",
+     "area_code"
+    ],
+    "rhs": "f_name",
+    "g3": 0.994105,
+    "raw_g3": 0.99443,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1372872036997066,
+    "calls": 80
+   },
+   {
+    "lhs": [
+     "gender",
+     "area_code"
+    ],
+    "rhs": "city",
+    "g3": 0.89569,
+    "raw_g3": 0.91639,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0992226392838647,
+    "calls": 68
+   },
+   {
+    "lhs": [
+     "gender",
+     "area_code"
+    ],
+    "rhs": "state",
+    "g3": 0.0,
+    "raw_g3": 0.119255,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "gender",
+     "area_code"
+    ],
+    "rhs": "zip",
+    "g3": 0.98944,
+    "raw_g3": 0.98944,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1311114679728835,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "gender",
+     "city"
+    ],
+    "rhs": "f_name",
+    "g3": 0.838295,
+    "raw_g3": 0.69171,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.029624418706045,
+    "calls": 135
+   },
+   {
+    "lhs": [
+     "gender",
+     "city"
+    ],
+    "rhs": "area_code",
+    "g3": 0.488185,
+    "raw_g3": 0.40317000000000003,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.77920991646313,
+    "calls": 102
+   },
+   {
+    "lhs": [
+     "gender",
+     "city"
+    ],
+    "rhs": "state",
+    "g3": 0.21936999999999995,
+    "raw_g3": 0.255935,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5602440135089135,
+    "calls": 159
+   },
+   {
+    "lhs": [
+     "gender",
+     "city"
+    ],
+    "rhs": "zip",
+    "g3": 0.442995,
+    "raw_g3": 0.383205,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7748838101647234,
+    "calls": 133
+   },
+   {
+    "lhs": [
+     "gender",
+     "state"
+    ],
+    "rhs": "f_name",
+    "g3": 0.99781,
+    "raw_g3": 0.99704,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1433804993684298,
+    "calls": 63
+   },
+   {
+    "lhs": [
+     "gender",
+     "state"
+    ],
+    "rhs": "area_code",
+    "g3": 0.545075,
+    "raw_g3": 0.5427500000000001,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7475742432822495,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "gender",
+     "state"
+    ],
+    "rhs": "city",
+    "g3": 0.89762,
+    "raw_g3": 0.917875,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0867166910989026,
+    "calls": 65
+   },
+   {
+    "lhs": [
+     "gender",
+     "state"
+    ],
+    "rhs": "zip",
+    "g3": 0.994105,
+    "raw_g3": 0.992675,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1433804993684298,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "gender",
+     "zip"
+    ],
+    "rhs": "f_name",
+    "g3": 0.66405,
+    "raw_g3": 0.664175,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.9231791938966069,
+    "calls": 75
+   },
+   {
+    "lhs": [
+     "gender",
+     "zip"
+    ],
+    "rhs": "area_code",
+    "g3": 0.285435,
+    "raw_g3": 0.285435,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5655631482834436,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "gender",
+     "zip"
+    ],
+    "rhs": "city",
+    "g3": 0.0020000000000000018,
+    "raw_g3": 0.17130999999999996,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 215
+   },
+   {
+    "lhs": [
+     "gender",
+     "zip"
+    ],
+    "rhs": "state",
+    "g3": 0.0019449999999999745,
+    "raw_g3": 0.10201499999999997,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04262377371849051,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "area_code",
+     "city"
+    ],
+    "rhs": "f_name",
+    "g3": 0.6335649999999999,
+    "raw_g3": 0.5099400000000001,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8308701680432666,
+    "calls": 152
+   },
+   {
+    "lhs": [
+     "area_code",
+     "city"
+    ],
+    "rhs": "gender",
+    "g3": 0.27586999999999995,
+    "raw_g3": 0.22197500000000003,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.534808982072609,
+    "calls": 107
+   },
+   {
+    "lhs": [
+     "area_code",
+     "city"
+    ],
+    "rhs": "state",
+    "g3": 0.0,
+    "raw_g3": 0.07296499999999995,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 361
+   },
+   {
+    "lhs": [
+     "area_code",
+     "city"
+    ],
+    "rhs": "zip",
+    "g3": 0.221105,
+    "raw_g3": 0.190345,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.39320278415231424,
+    "calls": 224
+   },
+   {
+    "lhs": [
+     "area_code",
+     "state"
+    ],
+    "rhs": "f_name",
+    "g3": 0.99683,
+    "raw_g3": 0.99548,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1433804993684298,
+    "calls": 65
+   },
+   {
+    "lhs": [
+     "area_code",
+     "state"
+    ],
+    "rhs": "gender",
+    "g3": 0.486325,
+    "raw_g3": 0.482395,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7918370057507542,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "area_code",
+     "state"
+    ],
+    "rhs": "city",
+    "g3": 0.89697,
+    "raw_g3": 0.91648,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.064861418463864,
+    "calls": 54
+   },
+   {
+    "lhs": [
+     "area_code",
+     "state"
+    ],
+    "rhs": "zip",
+    "g3": 0.99237,
+    "raw_g3": 0.99,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1433804993684298,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "area_code",
+     "zip"
+    ],
+    "rhs": "f_name",
+    "g3": 0.528035,
+    "raw_g3": 0.52814,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7069239012336624,
+    "calls": 66
+   },
+   {
+    "lhs": [
+     "area_code",
+     "zip"
+    ],
+    "rhs": "gender",
+    "g3": 0.22617500000000001,
+    "raw_g3": 0.22617500000000001,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.3705400189481357,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "area_code",
+     "zip"
+    ],
+    "rhs": "city",
+    "g3": 0.0011250000000000426,
+    "raw_g3": 0.13180499999999995,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04277333754244101,
+    "calls": 227
+   },
+   {
+    "lhs": [
+     "area_code",
+     "zip"
+    ],
+    "rhs": "state",
+    "g3": 0.0,
+    "raw_g3": 0.07757000000000003,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "city",
+     "state"
+    ],
+    "rhs": "f_name",
+    "g3": 0.85819,
+    "raw_g3": 0.650965,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0784845646014691,
+    "calls": 118
+   },
+   {
+    "lhs": [
+     "city",
+     "state"
+    ],
+    "rhs": "gender",
+    "g3": 0.37009000000000003,
+    "raw_g3": 0.28039000000000003,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6623203728308005,
+    "calls": 94
+   },
+   {
+    "lhs": [
+     "city",
+     "state"
+    ],
+    "rhs": "area_code",
+    "g3": 0.408195,
+    "raw_g3": 0.3025,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.656348473725157,
+    "calls": 88
+   },
+   {
+    "lhs": [
+     "city",
+     "state"
+    ],
+    "rhs": "zip",
+    "g3": 0.252505,
+    "raw_g3": 0.218955,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.43594529485380973,
+    "calls": 207
+   },
+   {
+    "lhs": [
+     "city",
+     "zip"
+    ],
+    "rhs": "f_name",
+    "g3": 0.80249,
+    "raw_g3": 0.62849,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0447393197889654,
+    "calls": 115
+   },
+   {
+    "lhs": [
+     "city",
+     "zip"
+    ],
+    "rhs": "gender",
+    "g3": 0.33347000000000004,
+    "raw_g3": 0.261305,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7128783372983654,
+    "calls": 71
+   },
+   {
+    "lhs": [
+     "city",
+     "zip"
+    ],
+    "rhs": "area_code",
+    "g3": 0.36116499999999996,
+    "raw_g3": 0.27764500000000003,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5915445156449985,
+    "calls": 102
+   },
+   {
+    "lhs": [
+     "city",
+     "zip"
+    ],
+    "rhs": "state",
+    "g3": 4.499999999996174e-05,
+    "raw_g3": 0.09033500000000005,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 336
+   },
+   {
+    "lhs": [
+     "state",
+     "zip"
+    ],
+    "rhs": "f_name",
+    "g3": 0.804045,
+    "raw_g3": 0.727365,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.9594830322400034,
+    "calls": 87
+   },
+   {
+    "lhs": [
+     "state",
+     "zip"
+    ],
+    "rhs": "gender",
+    "g3": 0.334105,
+    "raw_g3": 0.30327000000000004,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.659674851196189,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "state",
+     "zip"
+    ],
+    "rhs": "area_code",
+    "g3": 0.3619,
+    "raw_g3": 0.322075,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6131344566169509,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "state",
+     "zip"
+    ],
+    "rhs": "city",
+    "g3": 0.0016049999999999676,
+    "raw_g3": 0.17571000000000003,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 193
+   }
+  ]
+ },
+ {
+  "dataset": "tax200000",
+  "seed": 1,
+  "n_cands": 60,
+  "n_true": 19,
+  "rows": 200000,
+  "tane": {
+   "false": 0,
+   "missed": 8
+  },
+  "ours": {
+   "false": 0,
+   "missed": 0
+  },
+  "calls": 21616,
+  "calls_fwd_inv": [
+   13427,
+   8189
+  ],
+  "canon_all": 84286,
+  "sec": {
+   "tane": 2.898269360885024,
+   "certify": 349.95220956392586
+  },
+  "fds": [
+   {
+    "lhs": [
+     "f_name",
+     "gender"
+    ],
+    "rhs": "area_code",
+    "g3": 0.90501,
+    "raw_g3": 0.76632,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0987111279441124,
+    "calls": 49
+   },
+   {
+    "lhs": [
+     "f_name",
+     "gender"
+    ],
+    "rhs": "city",
+    "g3": 0.94274,
+    "raw_g3": 0.798895,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0932607522588362,
+    "calls": 239
+   },
+   {
+    "lhs": [
+     "f_name",
+     "gender"
+    ],
+    "rhs": "state",
+    "g3": 0.88496,
+    "raw_g3": 0.75311,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1121397365278083,
+    "calls": 102
+   },
+   {
+    "lhs": [
+     "f_name",
+     "gender"
+    ],
+    "rhs": "zip",
+    "g3": 0.949585,
+    "raw_g3": 0.802025,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0924276431772557,
+    "calls": 59
+   },
+   {
+    "lhs": [
+     "f_name",
+     "area_code"
+    ],
+    "rhs": "gender",
+    "g3": 1.4999999999987246e-05,
+    "raw_g3": 9.99999999995449e-06,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.0414890665669158,
+    "calls": 799
+   },
+   {
+    "lhs": [
+     "f_name",
+     "area_code"
+    ],
+    "rhs": "city",
+    "g3": 0.07327499999999998,
+    "raw_g3": 0.05211500000000002,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.12851102374105747,
+    "calls": 3575
+   },
+   {
+    "lhs": [
+     "f_name",
+     "area_code"
+    ],
+    "rhs": "state",
+    "g3": 0.0,
+    "raw_g3": 0.010785000000000045,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 538
+   },
+   {
+    "lhs": [
+     "f_name",
+     "area_code"
+    ],
+    "rhs": "zip",
+    "g3": 0.07762000000000002,
+    "raw_g3": 0.05404500000000001,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.11240100507679521,
+    "calls": 3312
+   },
+   {
+    "lhs": [
+     "f_name",
+     "city"
+    ],
+    "rhs": "gender",
+    "g3": 0.0,
+    "raw_g3": 0.0,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 882
+   },
+   {
+    "lhs": [
+     "f_name",
+     "city"
+    ],
+    "rhs": "area_code",
+    "g3": 0.003070000000000017,
+    "raw_g3": 0.0014450000000000296,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.03931286735623875,
+    "calls": 1127
+   },
+   {
+    "lhs": [
+     "f_name",
+     "city"
+    ],
+    "rhs": "state",
+    "g3": 0.0014899999999999913,
+    "raw_g3": 0.0012999999999999678,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.03931182817193822,
+    "calls": 1130
+   },
+   {
+    "lhs": [
+     "f_name",
+     "city"
+    ],
+    "rhs": "zip",
+    "g3": 0.007310000000000039,
+    "raw_g3": 0.0033849999999999714,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04254599858148337,
+    "calls": 1321
+   },
+   {
+    "lhs": [
+     "f_name",
+     "state"
+    ],
+    "rhs": "gender",
+    "g3": 2.5000000000052758e-05,
+    "raw_g3": 1.4999999999987246e-05,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.03931515347136992,
+    "calls": 584
+   },
+   {
+    "lhs": [
+     "f_name",
+     "state"
+    ],
+    "rhs": "area_code",
+    "g3": 0.09176499999999999,
+    "raw_g3": 0.05221500000000001,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.12431105101274359,
+    "calls": 1647
+   },
+   {
+    "lhs": [
+     "f_name",
+     "state"
+    ],
+    "rhs": "city",
+    "g3": 0.16330999999999996,
+    "raw_g3": 0.09336999999999995,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.25418138046350675,
+    "calls": 565
+   },
+   {
+    "lhs": [
+     "f_name",
+     "state"
+    ],
+    "rhs": "zip",
+    "g3": 0.16912000000000005,
+    "raw_g3": 0.09540000000000004,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.2804900745026959,
+    "calls": 346
+   },
+   {
+    "lhs": [
+     "f_name",
+     "zip"
+    ],
+    "rhs": "gender",
+    "g3": 0.0,
+    "raw_g3": 0.0,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 271
+   },
+   {
+    "lhs": [
+     "f_name",
+     "zip"
+    ],
+    "rhs": "area_code",
+    "g3": 0.00017000000000000348,
+    "raw_g3": 0.00012999999999996348,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 295
+   },
+   {
+    "lhs": [
+     "f_name",
+     "zip"
+    ],
+    "rhs": "city",
+    "g3": 5.999999999994898e-05,
+    "raw_g3": 0.00013499999999999623,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 488
+   },
+   {
+    "lhs": [
+     "f_name",
+     "zip"
+    ],
+    "rhs": "state",
+    "g3": 5.500000000002725e-05,
+    "raw_g3": 8.500000000000174e-05,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 277
+   },
+   {
+    "lhs": [
+     "gender",
+     "area_code"
+    ],
+    "rhs": "f_name",
+    "g3": 0.994105,
+    "raw_g3": 0.99444,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1433804993684298,
+    "calls": 95
+   },
+   {
+    "lhs": [
+     "gender",
+     "area_code"
+    ],
+    "rhs": "city",
+    "g3": 0.89569,
+    "raw_g3": 0.915915,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0790885439894096,
+    "calls": 82
+   },
+   {
+    "lhs": [
+     "gender",
+     "area_code"
+    ],
+    "rhs": "state",
+    "g3": 0.0,
+    "raw_g3": 0.11912500000000004,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "gender",
+     "area_code"
+    ],
+    "rhs": "zip",
+    "g3": 0.98944,
+    "raw_g3": 0.98944,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1433804993684298,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "gender",
+     "city"
+    ],
+    "rhs": "f_name",
+    "g3": 0.838295,
+    "raw_g3": 0.6937599999999999,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0583090788469647,
+    "calls": 198
+   },
+   {
+    "lhs": [
+     "gender",
+     "city"
+    ],
+    "rhs": "area_code",
+    "g3": 0.488185,
+    "raw_g3": 0.403915,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.673233256059443,
+    "calls": 184
+   },
+   {
+    "lhs": [
+     "gender",
+     "city"
+    ],
+    "rhs": "state",
+    "g3": 0.21936999999999995,
+    "raw_g3": 0.25693999999999995,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5211313428948249,
+    "calls": 164
+   },
+   {
+    "lhs": [
+     "gender",
+     "city"
+    ],
+    "rhs": "zip",
+    "g3": 0.442995,
+    "raw_g3": 0.383765,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7400758177049269,
+    "calls": 176
+   },
+   {
+    "lhs": [
+     "gender",
+     "state"
+    ],
+    "rhs": "f_name",
+    "g3": 0.99781,
+    "raw_g3": 0.99706,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1433804993684298,
+    "calls": 74
+   },
+   {
+    "lhs": [
+     "gender",
+     "state"
+    ],
+    "rhs": "area_code",
+    "g3": 0.545075,
+    "raw_g3": 0.54245,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7851372428729723,
+    "calls": 1
+   },
+   {
+    "lhs": [
+     "gender",
+     "state"
+    ],
+    "rhs": "city",
+    "g3": 0.89762,
+    "raw_g3": 0.917515,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0717162888533962,
+    "calls": 65
+   },
+   {
+    "lhs": [
+     "gender",
+     "state"
+    ],
+    "rhs": "zip",
+    "g3": 0.994105,
+    "raw_g3": 0.99265,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1433804993684298,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "gender",
+     "zip"
+    ],
+    "rhs": "f_name",
+    "g3": 0.66405,
+    "raw_g3": 0.66414,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.9013134228818968,
+    "calls": 84
+   },
+   {
+    "lhs": [
+     "gender",
+     "zip"
+    ],
+    "rhs": "area_code",
+    "g3": 0.285435,
+    "raw_g3": 0.285435,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.46753244972408364,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "gender",
+     "zip"
+    ],
+    "rhs": "city",
+    "g3": 0.0020000000000000018,
+    "raw_g3": 0.16891500000000004,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 215
+   },
+   {
+    "lhs": [
+     "gender",
+     "zip"
+    ],
+    "rhs": "state",
+    "g3": 0.0019449999999999745,
+    "raw_g3": 0.10207500000000003,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "area_code",
+     "city"
+    ],
+    "rhs": "f_name",
+    "g3": 0.6335649999999999,
+    "raw_g3": 0.51249,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8377675444618573,
+    "calls": 148
+   },
+   {
+    "lhs": [
+     "area_code",
+     "city"
+    ],
+    "rhs": "gender",
+    "g3": 0.27586999999999995,
+    "raw_g3": 0.22333499999999995,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5488423904821438,
+    "calls": 97
+   },
+   {
+    "lhs": [
+     "area_code",
+     "city"
+    ],
+    "rhs": "state",
+    "g3": 0.0,
+    "raw_g3": 0.07387500000000002,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 362
+   },
+   {
+    "lhs": [
+     "area_code",
+     "city"
+    ],
+    "rhs": "zip",
+    "g3": 0.221105,
+    "raw_g3": 0.190515,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.4042317168840895,
+    "calls": 224
+   },
+   {
+    "lhs": [
+     "area_code",
+     "state"
+    ],
+    "rhs": "f_name",
+    "g3": 0.99683,
+    "raw_g3": 0.99543,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1433804993684298,
+    "calls": 62
+   },
+   {
+    "lhs": [
+     "area_code",
+     "state"
+    ],
+    "rhs": "gender",
+    "g3": 0.486325,
+    "raw_g3": 0.48336999999999997,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8026471104959783,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "area_code",
+     "state"
+    ],
+    "rhs": "city",
+    "g3": 0.89697,
+    "raw_g3": 0.916195,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0793835581018296,
+    "calls": 62
+   },
+   {
+    "lhs": [
+     "area_code",
+     "state"
+    ],
+    "rhs": "zip",
+    "g3": 0.99237,
+    "raw_g3": 0.990015,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1372125521145064,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "area_code",
+     "zip"
+    ],
+    "rhs": "f_name",
+    "g3": 0.528035,
+    "raw_g3": 0.528095,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7711684809445825,
+    "calls": 76
+   },
+   {
+    "lhs": [
+     "area_code",
+     "zip"
+    ],
+    "rhs": "gender",
+    "g3": 0.22617500000000001,
+    "raw_g3": 0.22617500000000001,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.294974697918548,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "area_code",
+     "zip"
+    ],
+    "rhs": "city",
+    "g3": 0.0011250000000000426,
+    "raw_g3": 0.12938499999999997,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.042784341062603294,
+    "calls": 288
+   },
+   {
+    "lhs": [
+     "area_code",
+     "zip"
+    ],
+    "rhs": "state",
+    "g3": 0.0,
+    "raw_g3": 0.07804500000000003,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "city",
+     "state"
+    ],
+    "rhs": "f_name",
+    "g3": 0.85819,
+    "raw_g3": 0.65367,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0659737933924591,
+    "calls": 139
+   },
+   {
+    "lhs": [
+     "city",
+     "state"
+    ],
+    "rhs": "gender",
+    "g3": 0.37009000000000003,
+    "raw_g3": 0.28186500000000003,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7264532729813615,
+    "calls": 83
+   },
+   {
+    "lhs": [
+     "city",
+     "state"
+    ],
+    "rhs": "area_code",
+    "g3": 0.408195,
+    "raw_g3": 0.30274999999999996,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7178203610795587,
+    "calls": 91
+   },
+   {
+    "lhs": [
+     "city",
+     "state"
+    ],
+    "rhs": "zip",
+    "g3": 0.252505,
+    "raw_g3": 0.220005,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5384818315450572,
+    "calls": 106
+   },
+   {
+    "lhs": [
+     "city",
+     "zip"
+    ],
+    "rhs": "f_name",
+    "g3": 0.80249,
+    "raw_g3": 0.6309549999999999,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0071242167170424,
+    "calls": 145
+   },
+   {
+    "lhs": [
+     "city",
+     "zip"
+    ],
+    "rhs": "gender",
+    "g3": 0.33347000000000004,
+    "raw_g3": 0.262645,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5785590899235559,
+    "calls": 73
+   },
+   {
+    "lhs": [
+     "city",
+     "zip"
+    ],
+    "rhs": "area_code",
+    "g3": 0.36116499999999996,
+    "raw_g3": 0.277825,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.630418137864584,
+    "calls": 84
+   },
+   {
+    "lhs": [
+     "city",
+     "zip"
+    ],
+    "rhs": "state",
+    "g3": 4.499999999996174e-05,
+    "raw_g3": 0.09099500000000005,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 357
+   },
+   {
+    "lhs": [
+     "state",
+     "zip"
+    ],
+    "rhs": "f_name",
+    "g3": 0.804045,
+    "raw_g3": 0.72715,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0005422377630235,
+    "calls": 89
+   },
+   {
+    "lhs": [
+     "state",
+     "zip"
+    ],
+    "rhs": "gender",
+    "g3": 0.334105,
+    "raw_g3": 0.303175,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5304006009283709,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "state",
+     "zip"
+    ],
+    "rhs": "area_code",
+    "g3": 0.3619,
+    "raw_g3": 0.32184999999999997,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5663167191129399,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "state",
+     "zip"
+    ],
+    "rhs": "city",
+    "g3": 0.0016049999999999676,
+    "raw_g3": 0.17327499999999996,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 186
+   }
+  ]
+ },
+ {
+  "dataset": "tax200000",
+  "seed": 2,
+  "n_cands": 60,
+  "n_true": 19,
+  "rows": 200000,
+  "tane": {
+   "false": 0,
+   "missed": 8
+  },
+  "ours": {
+   "false": 0,
+   "missed": 0
+  },
+  "calls": 23453,
+  "calls_fwd_inv": [
+   14891,
+   8562
+  ],
+  "canon_all": 84642,
+  "sec": {
+   "tane": 2.4646379966288805,
+   "certify": 340.37539685703814
+  },
+  "fds": [
+   {
+    "lhs": [
+     "f_name",
+     "gender"
+    ],
+    "rhs": "area_code",
+    "g3": 0.90501,
+    "raw_g3": 0.767205,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0998050614483545,
+    "calls": 80
+   },
+   {
+    "lhs": [
+     "f_name",
+     "gender"
+    ],
+    "rhs": "city",
+    "g3": 0.94274,
+    "raw_g3": 0.7997799999999999,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0990691362297356,
+    "calls": 248
+   },
+   {
+    "lhs": [
+     "f_name",
+     "gender"
+    ],
+    "rhs": "state",
+    "g3": 0.88496,
+    "raw_g3": 0.7538050000000001,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1119138610445276,
+    "calls": 119
+   },
+   {
+    "lhs": [
+     "f_name",
+     "gender"
+    ],
+    "rhs": "zip",
+    "g3": 0.949585,
+    "raw_g3": 0.802845,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0990369401210094,
+    "calls": 47
+   },
+   {
+    "lhs": [
+     "f_name",
+     "area_code"
+    ],
+    "rhs": "gender",
+    "g3": 1.4999999999987246e-05,
+    "raw_g3": 1.4999999999987246e-05,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 610
+   },
+   {
+    "lhs": [
+     "f_name",
+     "area_code"
+    ],
+    "rhs": "city",
+    "g3": 0.07327499999999998,
+    "raw_g3": 0.05215000000000003,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.09746676988612887,
+    "calls": 7938
+   },
+   {
+    "lhs": [
+     "f_name",
+     "area_code"
+    ],
+    "rhs": "state",
+    "g3": 0.0,
+    "raw_g3": 0.01073500000000005,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 434
+   },
+   {
+    "lhs": [
+     "f_name",
+     "area_code"
+    ],
+    "rhs": "zip",
+    "g3": 0.07762000000000002,
+    "raw_g3": 0.05408999999999997,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.1172364151026711,
+    "calls": 2370
+   },
+   {
+    "lhs": [
+     "f_name",
+     "city"
+    ],
+    "rhs": "gender",
+    "g3": 0.0,
+    "raw_g3": 0.0,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 853
+   },
+   {
+    "lhs": [
+     "f_name",
+     "city"
+    ],
+    "rhs": "area_code",
+    "g3": 0.003070000000000017,
+    "raw_g3": 0.001314999999999955,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04626810149667759,
+    "calls": 1063
+   },
+   {
+    "lhs": [
+     "f_name",
+     "city"
+    ],
+    "rhs": "state",
+    "g3": 0.0014899999999999913,
+    "raw_g3": 0.0011499999999999844,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 804
+   },
+   {
+    "lhs": [
+     "f_name",
+     "city"
+    ],
+    "rhs": "zip",
+    "g3": 0.007310000000000039,
+    "raw_g3": 0.0032799999999999496,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04527179406516456,
+    "calls": 1211
+   },
+   {
+    "lhs": [
+     "f_name",
+     "state"
+    ],
+    "rhs": "gender",
+    "g3": 2.5000000000052758e-05,
+    "raw_g3": 2.5000000000052758e-05,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.042771473266648354,
+    "calls": 530
+   },
+   {
+    "lhs": [
+     "f_name",
+     "state"
+    ],
+    "rhs": "area_code",
+    "g3": 0.09176499999999999,
+    "raw_g3": 0.05143500000000001,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.12058005517617586,
+    "calls": 1570
+   },
+   {
+    "lhs": [
+     "f_name",
+     "state"
+    ],
+    "rhs": "city",
+    "g3": 0.16330999999999996,
+    "raw_g3": 0.09267000000000003,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.34468642899183266,
+    "calls": 347
+   },
+   {
+    "lhs": [
+     "f_name",
+     "state"
+    ],
+    "rhs": "zip",
+    "g3": 0.16912000000000005,
+    "raw_g3": 0.09475500000000003,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.3287394850506553,
+    "calls": 174
+   },
+   {
+    "lhs": [
+     "f_name",
+     "zip"
+    ],
+    "rhs": "gender",
+    "g3": 0.0,
+    "raw_g3": 0.0,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 274
+   },
+   {
+    "lhs": [
+     "f_name",
+     "zip"
+    ],
+    "rhs": "area_code",
+    "g3": 0.00017000000000000348,
+    "raw_g3": 0.00010500000000002174,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 239
+   },
+   {
+    "lhs": [
+     "f_name",
+     "zip"
+    ],
+    "rhs": "city",
+    "g3": 5.999999999994898e-05,
+    "raw_g3": 0.00012999999999996348,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 434
+   },
+   {
+    "lhs": [
+     "f_name",
+     "zip"
+    ],
+    "rhs": "state",
+    "g3": 5.500000000002725e-05,
+    "raw_g3": 8.500000000000174e-05,
+    "truth": true,
+    "tane": true,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 220
+   },
+   {
+    "lhs": [
+     "gender",
+     "area_code"
+    ],
+    "rhs": "f_name",
+    "g3": 0.994105,
+    "raw_g3": 0.99445,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1433804993684298,
+    "calls": 78
+   },
+   {
+    "lhs": [
+     "gender",
+     "area_code"
+    ],
+    "rhs": "city",
+    "g3": 0.89569,
+    "raw_g3": 0.9160699999999999,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0514688136394787,
+    "calls": 66
+   },
+   {
+    "lhs": [
+     "gender",
+     "area_code"
+    ],
+    "rhs": "state",
+    "g3": 0.0,
+    "raw_g3": 0.11833499999999997,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "gender",
+     "area_code"
+    ],
+    "rhs": "zip",
+    "g3": 0.98944,
+    "raw_g3": 0.98944,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1249479595444047,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "gender",
+     "city"
+    ],
+    "rhs": "f_name",
+    "g3": 0.838295,
+    "raw_g3": 0.6920649999999999,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0519833687788975,
+    "calls": 190
+   },
+   {
+    "lhs": [
+     "gender",
+     "city"
+    ],
+    "rhs": "area_code",
+    "g3": 0.488185,
+    "raw_g3": 0.40325999999999995,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7564560905194561,
+    "calls": 133
+   },
+   {
+    "lhs": [
+     "gender",
+     "city"
+    ],
+    "rhs": "state",
+    "g3": 0.21936999999999995,
+    "raw_g3": 0.25592499999999996,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.3632251910854102,
+    "calls": 438
+   },
+   {
+    "lhs": [
+     "gender",
+     "city"
+    ],
+    "rhs": "zip",
+    "g3": 0.442995,
+    "raw_g3": 0.38334500000000005,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7017372643264848,
+    "calls": 171
+   },
+   {
+    "lhs": [
+     "gender",
+     "state"
+    ],
+    "rhs": "f_name",
+    "g3": 0.99781,
+    "raw_g3": 0.99707,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1433804993684298,
+    "calls": 63
+   },
+   {
+    "lhs": [
+     "gender",
+     "state"
+    ],
+    "rhs": "area_code",
+    "g3": 0.545075,
+    "raw_g3": 0.542835,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.802560757540816,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "gender",
+     "state"
+    ],
+    "rhs": "city",
+    "g3": 0.89762,
+    "raw_g3": 0.91751,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1122547814765786,
+    "calls": 66
+   },
+   {
+    "lhs": [
+     "gender",
+     "state"
+    ],
+    "rhs": "zip",
+    "g3": 0.994105,
+    "raw_g3": 0.992685,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1433804993684298,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "gender",
+     "zip"
+    ],
+    "rhs": "f_name",
+    "g3": 0.66405,
+    "raw_g3": 0.66416,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7951218641228293,
+    "calls": 68
+   },
+   {
+    "lhs": [
+     "gender",
+     "zip"
+    ],
+    "rhs": "area_code",
+    "g3": 0.285435,
+    "raw_g3": 0.285435,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5414501855915261,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "gender",
+     "zip"
+    ],
+    "rhs": "city",
+    "g3": 0.0020000000000000018,
+    "raw_g3": 0.17079500000000003,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 180
+   },
+   {
+    "lhs": [
+     "gender",
+     "zip"
+    ],
+    "rhs": "state",
+    "g3": 0.0019449999999999745,
+    "raw_g3": 0.10137499999999999,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.03931230850864045,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "area_code",
+     "city"
+    ],
+    "rhs": "f_name",
+    "g3": 0.6335649999999999,
+    "raw_g3": 0.51007,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.8816448929868612,
+    "calls": 133
+   },
+   {
+    "lhs": [
+     "area_code",
+     "city"
+    ],
+    "rhs": "gender",
+    "g3": 0.27586999999999995,
+    "raw_g3": 0.22155999999999998,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.523813930706134,
+    "calls": 104
+   },
+   {
+    "lhs": [
+     "area_code",
+     "city"
+    ],
+    "rhs": "state",
+    "g3": 0.0,
+    "raw_g3": 0.07280500000000001,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 345
+   },
+   {
+    "lhs": [
+     "area_code",
+     "city"
+    ],
+    "rhs": "zip",
+    "g3": 0.221105,
+    "raw_g3": 0.19021999999999994,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.3459027602045254,
+    "calls": 235
+   },
+   {
+    "lhs": [
+     "area_code",
+     "state"
+    ],
+    "rhs": "f_name",
+    "g3": 0.99683,
+    "raw_g3": 0.995455,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1433804993684298,
+    "calls": 60
+   },
+   {
+    "lhs": [
+     "area_code",
+     "state"
+    ],
+    "rhs": "gender",
+    "g3": 0.486325,
+    "raw_g3": 0.48316499999999996,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7015095205019835,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "area_code",
+     "state"
+    ],
+    "rhs": "city",
+    "g3": 0.89697,
+    "raw_g3": 0.91633,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0863781631549063,
+    "calls": 60
+   },
+   {
+    "lhs": [
+     "area_code",
+     "state"
+    ],
+    "rhs": "zip",
+    "g3": 0.99237,
+    "raw_g3": 0.99005,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.1310471186489732,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "area_code",
+     "zip"
+    ],
+    "rhs": "f_name",
+    "g3": 0.528035,
+    "raw_g3": 0.5281100000000001,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6848505923983433,
+    "calls": 66
+   },
+   {
+    "lhs": [
+     "area_code",
+     "zip"
+    ],
+    "rhs": "gender",
+    "g3": 0.22617500000000001,
+    "raw_g3": 0.22617500000000001,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.37281563795412365,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "area_code",
+     "zip"
+    ],
+    "rhs": "city",
+    "g3": 0.0011250000000000426,
+    "raw_g3": 0.131745,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 195
+   },
+   {
+    "lhs": [
+     "area_code",
+     "zip"
+    ],
+    "rhs": "state",
+    "g3": 0.0,
+    "raw_g3": 0.07721999999999996,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "city",
+     "state"
+    ],
+    "rhs": "f_name",
+    "g3": 0.85819,
+    "raw_g3": 0.6508050000000001,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0510701786632053,
+    "calls": 124
+   },
+   {
+    "lhs": [
+     "city",
+     "state"
+    ],
+    "rhs": "gender",
+    "g3": 0.37009000000000003,
+    "raw_g3": 0.279965,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7095689979714774,
+    "calls": 69
+   },
+   {
+    "lhs": [
+     "city",
+     "state"
+    ],
+    "rhs": "area_code",
+    "g3": 0.408195,
+    "raw_g3": 0.30235,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.7281021192403947,
+    "calls": 64
+   },
+   {
+    "lhs": [
+     "city",
+     "state"
+    ],
+    "rhs": "zip",
+    "g3": 0.252505,
+    "raw_g3": 0.21925499999999998,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.5343356728329764,
+    "calls": 107
+   },
+   {
+    "lhs": [
+     "city",
+     "zip"
+    ],
+    "rhs": "f_name",
+    "g3": 0.80249,
+    "raw_g3": 0.6291599999999999,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0435574498006424,
+    "calls": 136
+   },
+   {
+    "lhs": [
+     "city",
+     "zip"
+    ],
+    "rhs": "gender",
+    "g3": 0.33347000000000004,
+    "raw_g3": 0.26141499999999995,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.632475552759149,
+    "calls": 89
+   },
+   {
+    "lhs": [
+     "city",
+     "zip"
+    ],
+    "rhs": "area_code",
+    "g3": 0.36116499999999996,
+    "raw_g3": 0.277775,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.6614828346291035,
+    "calls": 71
+   },
+   {
+    "lhs": [
+     "city",
+     "zip"
+    ],
+    "rhs": "state",
+    "g3": 4.499999999996174e-05,
+    "raw_g3": 0.09021000000000001,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 313
+   },
+   {
+    "lhs": [
+     "state",
+     "zip"
+    ],
+    "rhs": "f_name",
+    "g3": 0.804045,
+    "raw_g3": 0.727085,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 1.0150149641505222,
+    "calls": 84
+   },
+   {
+    "lhs": [
+     "state",
+     "zip"
+    ],
+    "rhs": "gender",
+    "g3": 0.334105,
+    "raw_g3": 0.30239000000000005,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.510464264304975,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "state",
+     "zip"
+    ],
+    "rhs": "area_code",
+    "g3": 0.3619,
+    "raw_g3": 0.321655,
+    "truth": false,
+    "tane": false,
+    "certified": false,
+    "ub": 0.595924978364164,
+    "calls": 0
+   },
+   {
+    "lhs": [
+     "state",
+     "zip"
+    ],
+    "rhs": "city",
+    "g3": 0.0016049999999999676,
+    "raw_g3": 0.17529499999999998,
+    "truth": true,
+    "tane": false,
+    "certified": true,
+    "ub": 0.04779563161372589,
+    "calls": 180
+   }
+  ]
+ }
+]

@@ -1,0 +1,2732 @@
+[
+ {
+  "n_cities": 1000,
+  "seed": 0,
+  "rows": 5000,
+  "source": "cities500.txt",
+  "distinct": {
+   "city": 1698,
+   "country": 558,
+   "admin1": 1327,
+   "tz": 134,
+   "fcode": 9,
+   "country_e2": 551,
+   "country_e8": 535,
+   "country_src8": 532,
+   "tz_src8": 134
+  },
+  "sec": {
+   "load": 2.038619615137577,
+   "proxy": 0.3506901040673256,
+   "proxy_per_attr": {
+    "city": 0.1570370439440012,
+    "country": 0.02889764867722988,
+    "admin1": 0.07727034576237202,
+    "tz": 0.0034344494342803955,
+    "fcode": 0.0029931701719760895,
+    "country_e2": 0.02569650672376156,
+    "country_e8": 0.02488318830728531,
+    "country_src8": 0.0249056164175272,
+    "tz_src8": 0.0032891128212213516
+   },
+   "certify_total": 0.7771058697253466
+  },
+  "fds": [
+   {
+    "fd": "city->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 882,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.028693653643131256
+    },
+    "canon_cost": 2256,
+    "b5_pairwise": {
+     "g3": 0.00019999999999997797,
+     "calls": 12820
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 345,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->admin1",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 658,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.028809446841478348
+    },
+    "canon_cost": 3025,
+    "b5_pairwise": {
+     "g3": 0.0,
+     "calls": 16951
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 436,
+     "m": 300
+    }
+   },
+   {
+    "fd": "admin1->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 436,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.022040847688913345
+    },
+    "canon_cost": 1885,
+    "b5_pairwise": {
+     "g3": 0.00019999999999997797,
+     "calls": 10235
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 309,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->tz",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 255,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.023994851857423782
+    },
+    "canon_cost": 1698,
+    "b5_pairwise": {
+     "g3": 0.0,
+     "calls": 9768
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 245,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->country_e8",
+    "g3": 0.08120000000000005,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.1900601638087101,
+     "lb": 0.05569169432532518,
+     "mean": 0.12,
+     "samples": 400,
+     "calls": 259,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.02518000826239586
+    },
+    "canon_cost": 2233,
+    "b5_pairwise": {
+     "g3": 0.08079999999999998,
+     "calls": 12700
+    },
+    "b7_sample": {
+     "g3": 0.04500000000000004,
+     "calls": 427,
+     "m": 400
+    }
+   },
+   {
+    "fd": "city->country_src8",
+    "g3": 0.07999999999999996,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.10123146163201847,
+     "lb": 0.050473305550576775,
+     "mean": 0.07142857142857142,
+     "samples": 2100,
+     "calls": 652,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.054424941539764404
+    },
+    "canon_cost": 2230,
+    "b5_pairwise": {
+     "g3": 0.0736,
+     "calls": 12699
+    },
+    "b7_sample": {
+     "g3": 0.06619047619047624,
+     "calls": 1200,
+     "m": 2100
+    }
+   },
+   {
+    "fd": "city->tz_src8",
+    "g3": 0.07999999999999996,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.12864056380501748,
+     "lb": 0.05033243156839182,
+     "mean": 0.09,
+     "samples": 900,
+     "calls": 125,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.03326546587049961
+    },
+    "canon_cost": 1698,
+    "b5_pairwise": {
+     "g3": 0.07440000000000002,
+     "calls": 9768
+    },
+    "b7_sample": {
+     "g3": 0.05111111111111111,
+     "calls": 542,
+     "m": 900
+    }
+   },
+   {
+    "fd": "admin1->city",
+    "g3": 0.272,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.4466970173685536,
+     "lb": 0.09292056497725537,
+     "mean": 0.28,
+     "samples": 100,
+     "calls": 96,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.016589032486081123
+    },
+    "canon_cost": 3025,
+    "b5_pairwise": {
+     "g3": 0.2832,
+     "calls": 16951
+    },
+    "b7_sample": {
+     "g3": 0.07999999999999996,
+     "calls": 175,
+     "m": 100
+    }
+   }
+  ],
+  "run_calls": 3363,
+  "run_calls_fwd_inv": [
+   2420,
+   943
+  ],
+  "canon_all": 3583
+ },
+ {
+  "n_cities": 1000,
+  "seed": 1,
+  "rows": 5000,
+  "source": "cities500.txt",
+  "distinct": {
+   "city": 1705,
+   "country": 583,
+   "admin1": 1299,
+   "tz": 133,
+   "fcode": 8,
+   "country_e2": 571,
+   "country_e8": 551,
+   "country_src8": 553,
+   "tz_src8": 133
+  },
+  "sec": {
+   "load": 1.8689348232001066,
+   "proxy": 0.2980608828365803,
+   "proxy_per_attr": {
+    "city": 0.11348691210150719,
+    "country": 0.026145096868276596,
+    "admin1": 0.06913459114730358,
+    "tz": 0.003283809870481491,
+    "fcode": 0.002805812284350395,
+    "country_e2": 0.025605252012610435,
+    "country_e8": 0.02550353668630123,
+    "country_src8": 0.025933517143130302,
+    "tz_src8": 0.003240501508116722
+   },
+   "certify_total": 0.7838004752993584
+  },
+  "fds": [
+   {
+    "fd": "city->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 916,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.026624735444784164
+    },
+    "canon_cost": 2288,
+    "b5_pairwise": {
+     "g3": 0.0006000000000000449,
+     "calls": 12995
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 350,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->admin1",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 619,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.02447028085589409
+    },
+    "canon_cost": 3004,
+    "b5_pairwise": {
+     "g3": 0.0006000000000000449,
+     "calls": 16851
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 462,
+     "m": 300
+    }
+   },
+   {
+    "fd": "admin1->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 459,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.01931101828813553
+    },
+    "canon_cost": 1882,
+    "b5_pairwise": {
+     "g3": 0.0006000000000000449,
+     "calls": 10198
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 303,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->tz",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 249,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.02442830428481102
+    },
+    "canon_cost": 1705,
+    "b5_pairwise": {
+     "g3": 0.0,
+     "calls": 9824
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 236,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->country_e8",
+    "g3": 0.07640000000000002,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.10790117718568898,
+     "lb": 0.05068093988175206,
+     "mean": 0.084,
+     "samples": 1500,
+     "calls": 731,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.04998689889907837
+    },
+    "canon_cost": 2256,
+    "b5_pairwise": {
+     "g3": 0.07599999999999996,
+     "calls": 12832
+    },
+    "b7_sample": {
+     "g3": 0.048666666666666636,
+     "calls": 1061,
+     "m": 1500
+    }
+   },
+   {
+    "fd": "city->country_src8",
+    "g3": 0.07999999999999996,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.1106924112733623,
+     "lb": 0.0514226972159847,
+     "mean": 0.08923076923076922,
+     "samples": 1300,
+     "calls": 287,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.04279686138033867
+    },
+    "canon_cost": 2258,
+    "b5_pairwise": {
+     "g3": 0.07440000000000002,
+     "calls": 12860
+    },
+    "b7_sample": {
+     "g3": 0.07461538461538464,
+     "calls": 947,
+     "m": 1300
+    }
+   },
+   {
+    "fd": "city->tz_src8",
+    "g3": 0.07999999999999996,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.11400642543113246,
+     "lb": 0.05217020962431628,
+     "mean": 0.08214285714285714,
+     "samples": 1400,
+     "calls": 93,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.044633276760578156
+    },
+    "canon_cost": 1705,
+    "b5_pairwise": {
+     "g3": 0.07320000000000004,
+     "calls": 9824
+    },
+    "b7_sample": {
+     "g3": 0.06071428571428572,
+     "calls": 721,
+     "m": 1400
+    }
+   },
+   {
+    "fd": "admin1->city",
+    "g3": 0.28059999999999996,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.4968839353759423,
+     "lb": 0.1289469570649094,
+     "mean": 0.32,
+     "samples": 100,
+     "calls": 98,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.01654057949781418
+    },
+    "canon_cost": 3004,
+    "b5_pairwise": {
+     "g3": 0.29800000000000004,
+     "calls": 16851
+    },
+    "b7_sample": {
+     "g3": 0.09999999999999998,
+     "calls": 181,
+     "m": 100
+    }
+   }
+  ],
+  "run_calls": 3452,
+  "run_calls_fwd_inv": [
+   2497,
+   955
+  ],
+  "canon_all": 3587
+ },
+ {
+  "n_cities": 4000,
+  "seed": 0,
+  "rows": 20000,
+  "source": "cities500.txt",
+  "distinct": {
+   "city": 6715,
+   "country": 1150,
+   "admin1": 3937,
+   "tz": 220,
+   "fcode": 11,
+   "country_e2": 1143,
+   "country_e8": 1121,
+   "country_src8": 1112,
+   "tz_src8": 220
+  },
+  "sec": {
+   "load": 3.3125618994235992,
+   "proxy": 12.331832142546773,
+   "proxy_per_attr": {
+    "city": 1.2507473696023226,
+    "country": 0.07136625610291958,
+    "admin1": 0.5439270809292793,
+    "tz": 0.013750266283750534,
+    "fcode": 0.011692935600876808,
+    "country_e2": 0.07024232484400272,
+    "country_e8": 0.07011211104691029,
+    "country_src8": 10.278021605685353,
+    "tz_src8": 0.01308879442512989
+   },
+   "certify_total": 3.253065889701247
+  },
+  "fds": [
+   {
+    "fd": "city->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 1077,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.09021611511707306
+    },
+    "canon_cost": 7865,
+    "b5_pairwise": {
+     "g3": 0.00034999999999996145,
+     "calls": 45721
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 385,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->admin1",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 1128,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.09239467419683933
+    },
+    "canon_cost": 10652,
+    "b5_pairwise": {
+     "g3": 0.0012499999999999734,
+     "calls": 60608
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 507,
+     "m": 300
+    }
+   },
+   {
+    "fd": "admin1->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 621,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.0590397585183382
+    },
+    "canon_cost": 5087,
+    "b5_pairwise": {
+     "g3": 0.00039999999999995595,
+     "calls": 27117
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 378,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->tz",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 639,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.08794815838336945
+    },
+    "canon_cost": 6715,
+    "b5_pairwise": {
+     "g3": 0.0,
+     "calls": 39606
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 273,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->country_e8",
+    "g3": 0.07694999999999996,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.13948844270554328,
+     "lb": 0.05180768631753718,
+     "mean": 0.1,
+     "samples": 700,
+     "calls": 1195,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.10600544139742851
+    },
+    "canon_cost": 7836,
+    "b5_pairwise": {
+     "g3": 0.07640000000000002,
+     "calls": 45566
+    },
+    "b7_sample": {
+     "g3": 0.040000000000000036,
+     "calls": 798,
+     "m": 700
+    }
+   },
+   {
+    "fd": "city->country_src8",
+    "g3": 0.07984999999999998,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.1248914151435932,
+     "lb": 0.050839650498550625,
+     "mean": 0.088,
+     "samples": 1000,
+     "calls": 1191,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.11393536813557148
+    },
+    "canon_cost": 7827,
+    "b5_pairwise": {
+     "g3": 0.0706,
+     "calls": 45532
+    },
+    "b7_sample": {
+     "g3": 0.03500000000000003,
+     "calls": 1052,
+     "m": 1000
+    }
+   },
+   {
+    "fd": "city->tz_src8",
+    "g3": 0.07979999999999998,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.09922657442747922,
+     "lb": 0.050241045919581416,
+     "mean": 0.07571428571428572,
+     "samples": 2100,
+     "calls": 1401,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.1333245486021042
+    },
+    "canon_cost": 6715,
+    "b5_pairwise": {
+     "g3": 0.0706,
+     "calls": 39606
+    },
+    "b7_sample": {
+     "g3": 0.04904761904761901,
+     "calls": 1491,
+     "m": 2100
+    }
+   },
+   {
+    "fd": "admin1->city",
+    "g3": 0.4829,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.8021612174364975,
+     "lb": 0.4227846893998227,
+     "mean": 0.59,
+     "samples": 100,
+     "calls": 84,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.06099129654467106
+    },
+    "canon_cost": 10652,
+    "b5_pairwise": {
+     "g3": 0.49675,
+     "calls": 60608
+    },
+    "b7_sample": {
+     "g3": 0.07999999999999996,
+     "calls": 196,
+     "m": 100
+    }
+   }
+  ],
+  "run_calls": 7336,
+  "run_calls_fwd_inv": [
+   5167,
+   2169
+  ],
+  "canon_all": 11802
+ },
+ {
+  "n_cities": 4000,
+  "seed": 1,
+  "rows": 20000,
+  "source": "cities500.txt",
+  "distinct": {
+   "city": 6732,
+   "country": 1140,
+   "admin1": 3940,
+   "tz": 220,
+   "fcode": 10,
+   "country_e2": 1128,
+   "country_e8": 1097,
+   "country_src8": 1104,
+   "tz_src8": 220
+  },
+  "sec": {
+   "load": 4.197715405374765,
+   "proxy": 2.0100224893540144,
+   "proxy_per_attr": {
+    "city": 1.1810434274375439,
+    "country": 0.06876795552670956,
+    "admin1": 0.5054161604493856,
+    "tz": 0.014492999762296677,
+    "fcode": 0.011892711743712425,
+    "country_e2": 0.0710612628608942,
+    "country_e8": 0.06771351024508476,
+    "country_src8": 0.06643259525299072,
+    "tz_src8": 0.013604028150439262
+   },
+   "certify_total": 2.8583052959293127
+  },
+  "fds": [
+   {
+    "fd": "city->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 1037,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.09233975037932396
+    },
+    "canon_cost": 7872,
+    "b5_pairwise": {
+     "g3": 0.00019999999999997797,
+     "calls": 45555
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 401,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->admin1",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03899086828697432,
+     "lb": -0.03232420162030765,
+     "mean": 0.0033333333333333335,
+     "samples": 300,
+     "calls": 1110,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.09091290459036827
+    },
+    "canon_cost": 10672,
+    "b5_pairwise": {
+     "g3": 0.0010499999999999954,
+     "calls": 60371
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 514,
+     "m": 300
+    }
+   },
+   {
+    "fd": "admin1->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 570,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.054804446175694466
+    },
+    "canon_cost": 5080,
+    "b5_pairwise": {
+     "g3": 0.00024999999999997247,
+     "calls": 27050
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 355,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->tz",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 572,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.08510153368115425
+    },
+    "canon_cost": 6732,
+    "b5_pairwise": {
+     "g3": 0.0,
+     "calls": 39438
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 280,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->country_e8",
+    "g3": 0.07599999999999996,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.1813422006470733,
+     "lb": 0.05030314765561644,
+     "mean": 0.1125,
+     "samples": 400,
+     "calls": 677,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.0844153743237257
+    },
+    "canon_cost": 7829,
+    "b5_pairwise": {
+     "g3": 0.07525000000000004,
+     "calls": 45325
+    },
+    "b7_sample": {
+     "g3": 0.0024999999999999467,
+     "calls": 506,
+     "m": 400
+    }
+   },
+   {
+    "fd": "city->country_src8",
+    "g3": 0.07979999999999998,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.10376612224093991,
+     "lb": 0.05141575516075511,
+     "mean": 0.08352941176470588,
+     "samples": 1700,
+     "calls": 2123,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.11578853987157345
+    },
+    "canon_cost": 7836,
+    "b5_pairwise": {
+     "g3": 0.07089999999999996,
+     "calls": 45363
+    },
+    "b7_sample": {
+     "g3": 0.04058823529411759,
+     "calls": 1647,
+     "m": 1700
+    }
+   },
+   {
+    "fd": "city->tz_src8",
+    "g3": 0.07984999999999998,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.11103444536770579,
+     "lb": 0.05179197023281283,
+     "mean": 0.076875,
+     "samples": 1600,
+     "calls": 1150,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.11676009744405746
+    },
+    "canon_cost": 6732,
+    "b5_pairwise": {
+     "g3": 0.07035000000000002,
+     "calls": 39438
+    },
+    "b7_sample": {
+     "g3": 0.03749999999999998,
+     "calls": 1210,
+     "m": 1600
+    }
+   },
+   {
+    "fd": "admin1->city",
+    "g3": 0.49760000000000004,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.7534368249810502,
+     "lb": 0.35590230057877953,
+     "mean": 0.56,
+     "samples": 100,
+     "calls": 123,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.0411149337887764
+    },
+    "canon_cost": 10672,
+    "b5_pairwise": {
+     "g3": 0.5104,
+     "calls": 60371
+    },
+    "b7_sample": {
+     "g3": 0.08999999999999997,
+     "calls": 189,
+     "m": 100
+    }
+   }
+  ],
+  "run_calls": 7362,
+  "run_calls_fwd_inv": [
+   5173,
+   2189
+  ],
+  "canon_all": 11812
+ },
+ {
+  "n_cities": 16000,
+  "seed": 0,
+  "rows": 80000,
+  "source": "cities500.txt",
+  "distinct": {
+   "city": 26887,
+   "country": 1987,
+   "admin1": 10189,
+   "tz": 292,
+   "fcode": 16,
+   "country_e2": 1974,
+   "country_e8": 1931,
+   "country_src8": 1943,
+   "tz_src8": 292
+  },
+  "sec": {
+   "load": 8.67059525847435,
+   "proxy": 30.525505796074867,
+   "proxy_per_attr": {
+    "city": 14.80336650274694,
+    "country": 0.20041868463158607,
+    "admin1": 13.589941954240203,
+    "tz": 0.052055252715945244,
+    "fcode": 0.04692801274359226,
+    "country_e2": 0.18619396723806858,
+    "country_e8": 0.17742925323545933,
+    "country_src8": 1.393017441034317,
+    "tz_src8": 0.05226583778858185
+   },
+   "certify_total": 11.44598245806992
+  },
+  "fds": [
+   {
+    "fd": "city->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 1183,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.3157353922724724
+    },
+    "canon_cost": 28874,
+    "b5_pairwise": {
+     "g3": 9.999999999998899e-05,
+     "calls": 172689
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 418,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->admin1",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03898626772692738,
+     "lb": -0.03231960106026071,
+     "mean": 0.0033333333333333335,
+     "samples": 300,
+     "calls": 1354,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.3065609447658062
+    },
+    "canon_cost": 37076,
+    "b5_pairwise": {
+     "g3": 0.0015125000000000277,
+     "calls": 216360
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 549,
+     "m": 300
+    }
+   },
+   {
+    "fd": "admin1->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 587,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.10737702623009682
+    },
+    "canon_cost": 12176,
+    "b5_pairwise": {
+     "g3": 9.999999999998899e-05,
+     "calls": 64825
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 365,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->tz",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03899348942161435,
+     "lb": -0.03232682275494768,
+     "mean": 0.0033333333333333335,
+     "samples": 300,
+     "calls": 836,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.31142780743539333
+    },
+    "canon_cost": 26887,
+    "b5_pairwise": {
+     "g3": 0.0,
+     "calls": 162112
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 294,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->country_e8",
+    "g3": 0.07997500000000002,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.1549479330824404,
+     "lb": 0.05245577616844542,
+     "mean": 0.10333333333333333,
+     "samples": 600,
+     "calls": 1569,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.30536299385130405
+    },
+    "canon_cost": 28818,
+    "b5_pairwise": {
+     "g3": 0.07808749999999998,
+     "calls": 172390
+    },
+    "b7_sample": {
+     "g3": 0.00666666666666671,
+     "calls": 766,
+     "m": 600
+    }
+   },
+   {
+    "fd": "city->country_src8",
+    "g3": 0.07997500000000002,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.10876312781383635,
+     "lb": 0.05029797694234463,
+     "mean": 0.08214285714285714,
+     "samples": 1400,
+     "calls": 3246,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.3303392268717289
+    },
+    "canon_cost": 28830,
+    "b5_pairwise": {
+     "g3": 0.06777500000000003,
+     "calls": 172463
+    },
+    "b7_sample": {
+     "g3": 0.01642857142857146,
+     "calls": 1598,
+     "m": 1400
+    }
+   },
+   {
+    "fd": "city->tz_src8",
+    "g3": 0.0798875,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.12614475957525173,
+     "lb": 0.05155799050884243,
+     "mean": 0.087,
+     "samples": 1000,
+     "calls": 1839,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.33532970398664474
+    },
+    "canon_cost": 26887,
+    "b5_pairwise": {
+     "g3": 0.06743750000000004,
+     "calls": 162112
+    },
+    "b7_sample": {
+     "g3": 0.010000000000000009,
+     "calls": 937,
+     "m": 1000
+    }
+   },
+   {
+    "fd": "admin1->city",
+    "g3": 0.6729375,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.8026725184394787,
+     "lb": 0.40925070651098283,
+     "mean": 0.61,
+     "samples": 100,
+     "calls": 184,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.10910040326416492
+    },
+    "canon_cost": 37076,
+    "b5_pairwise": {
+     "g3": 0.6847875,
+     "calls": 216360
+    },
+    "b7_sample": {
+     "g3": 0.14,
+     "calls": 187,
+     "m": 100
+    }
+   }
+  ],
+  "run_calls": 10798,
+  "run_calls_fwd_inv": [
+   7732,
+   3066
+  ],
+  "canon_all": 39063
+ },
+ {
+  "n_cities": 16000,
+  "seed": 1,
+  "rows": 80000,
+  "source": "cities500.txt",
+  "distinct": {
+   "city": 26723,
+   "country": 1923,
+   "admin1": 10145,
+   "tz": 286,
+   "fcode": 15,
+   "country_e2": 1908,
+   "country_e8": 1879,
+   "country_src8": 1866,
+   "tz_src8": 286
+  },
+  "sec": {
+   "load": 9.388603571802378,
+   "proxy": 25.055512407794595,
+   "proxy_per_attr": {
+    "city": 15.203049555420876,
+    "country": 0.1788956467062235,
+    "admin1": 8.500900585204363,
+    "tz": 0.053956687450408936,
+    "fcode": 0.052112506702542305,
+    "country_e2": 0.19855643808841705,
+    "country_e8": 0.17287685722112656,
+    "country_src8": 0.6150493547320366,
+    "tz_src8": 0.05303484573960304
+   },
+   "certify_total": 10.804862106218934
+  },
+  "fds": [
+   {
+    "fd": "city->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.038982353933330716,
+     "lb": -0.03231568726666405,
+     "mean": 0.0033333333333333335,
+     "samples": 300,
+     "calls": 1182,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.3274074513465166
+    },
+    "canon_cost": 28646,
+    "b5_pairwise": {
+     "g3": 9.999999999998899e-05,
+     "calls": 171997
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 421,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->admin1",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.04347666463891539,
+     "lb": -0.030260426570922774,
+     "mean": 0.006666666666666667,
+     "samples": 300,
+     "calls": 1352,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.29440975561738014
+    },
+    "canon_cost": 36868,
+    "b5_pairwise": {
+     "g3": 0.0013250000000000206,
+     "calls": 215514
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 542,
+     "m": 300
+    }
+   },
+   {
+    "fd": "admin1->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 578,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.1054326742887497
+    },
+    "canon_cost": 12068,
+    "b5_pairwise": {
+     "g3": 9.999999999998899e-05,
+     "calls": 64055
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 379,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->tz",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 895,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.3019375130534172
+    },
+    "canon_cost": 26723,
+    "b5_pairwise": {
+     "g3": 0.0,
+     "calls": 161728
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 296,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->country_e8",
+    "g3": 0.0784125,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.14343171737107288,
+     "lb": 0.051290243649162966,
+     "mean": 0.09428571428571429,
+     "samples": 700,
+     "calls": 1845,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.3493613488972187
+    },
+    "canon_cost": 28602,
+    "b5_pairwise": {
+     "g3": 0.07682500000000003,
+     "calls": 171774
+    },
+    "b7_sample": {
+     "g3": 0.004285714285714337,
+     "calls": 884,
+     "m": 700
+    }
+   },
+   {
+    "fd": "city->country_src8",
+    "g3": 0.07992500000000002,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.10590004372770029,
+     "lb": 0.050031903719074594,
+     "mean": 0.07588235294117647,
+     "samples": 1700,
+     "calls": 3732,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.3543342109769583
+    },
+    "canon_cost": 28589,
+    "b5_pairwise": {
+     "g3": 0.06752499999999995,
+     "calls": 171706
+    },
+    "b7_sample": {
+     "g3": 0.01764705882352946,
+     "calls": 1884,
+     "m": 1700
+    }
+   },
+   {
+    "fd": "city->tz_src8",
+    "g3": 0.07994999999999997,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.12171486544338163,
+     "lb": 0.050136330144287505,
+     "mean": 0.088,
+     "samples": 1000,
+     "calls": 1698,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.309984078630805
+    },
+    "canon_cost": 26723,
+    "b5_pairwise": {
+     "g3": 0.06748750000000003,
+     "calls": 161728
+    },
+    "b7_sample": {
+     "g3": 0.01100000000000001,
+     "calls": 927,
+     "m": 1000
+    }
+   },
+   {
+    "fd": "admin1->city",
+    "g3": 0.68325,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.8457845956783918,
+     "lb": 0.4687030605238655,
+     "mean": 0.65,
+     "samples": 100,
+     "calls": 181,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.10179519653320312
+    },
+    "canon_cost": 36868,
+    "b5_pairwise": {
+     "g3": 0.6936,
+     "calls": 215514
+    },
+    "b7_sample": {
+     "g3": 0.07999999999999996,
+     "calls": 193,
+     "m": 100
+    }
+   }
+  ],
+  "run_calls": 11463,
+  "run_calls_fwd_inv": [
+   8157,
+   3306
+  ],
+  "canon_all": 38791
+ },
+ {
+  "n_cities": 64000,
+  "seed": 0,
+  "rows": 320000,
+  "source": "cities500.txt",
+  "distinct": {
+   "city": 106568,
+   "country": 2758,
+   "admin1": 22565,
+   "tz": 343,
+   "fcode": 18,
+   "country_e2": 2747,
+   "country_e8": 2728,
+   "country_src8": 2719,
+   "tz_src8": 343
+  },
+  "sec": {
+   "load": 32.04745621792972,
+   "proxy": 62.53502628579736,
+   "proxy_per_attr": {
+    "city": 35.594832707196474,
+    "country": 0.47972398810088634,
+    "admin1": 23.788864886388183,
+    "tz": 0.2067587599158287,
+    "fcode": 0.19273217022418976,
+    "country_e2": 0.4662918671965599,
+    "country_e8": 0.44335952773690224,
+    "country_src8": 1.0711090359836817,
+    "tz_src8": 0.19869215227663517
+   },
+   "certify_total": 47.896104058250785
+  },
+  "fds": [
+   {
+    "fd": "city->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.04359687508896863,
+     "lb": -0.030263541755635295,
+     "mean": 0.006666666666666667,
+     "samples": 300,
+     "calls": 1278,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 1.1795184034854174
+    },
+    "canon_cost": 109326,
+    "b5_pairwise": {
+     "g3": 6.562499999995808e-05,
+     "calls": 768900
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 420,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->admin1",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 1564,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 1.1967011112719774
+    },
+    "canon_cost": 129133,
+    "b5_pairwise": {
+     "g3": 0.0020468750000000036,
+     "calls": 874263
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 547,
+     "m": 300
+    }
+   },
+   {
+    "fd": "admin1->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 558,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.22453278116881847
+    },
+    "canon_cost": 25323,
+    "b5_pairwise": {
+     "g3": 6.249999999996536e-05,
+     "calls": 134771
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 382,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->tz",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.043609675045088406,
+     "lb": -0.03027634171175507,
+     "mean": 0.006666666666666667,
+     "samples": 300,
+     "calls": 1039,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 1.2192219737917185
+    },
+    "canon_cost": 106568,
+    "b5_pairwise": {
+     "g3": 0.0,
+     "calls": 754196
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 299,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->country_e8",
+    "g3": 0.07828124999999997,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.17080457744616312,
+     "lb": 0.053107732997211235,
+     "mean": 0.106,
+     "samples": 500,
+     "calls": 1690,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 1.1689003240317106
+    },
+    "canon_cost": 109296,
+    "b5_pairwise": {
+     "g3": 0.075028125,
+     "calls": 768774
+    },
+    "b7_sample": {
+     "g3": 0.0020000000000000018,
+     "calls": 663,
+     "m": 500
+    }
+   },
+   {
+    "fd": "city->country_src8",
+    "g3": 0.07988437500000001,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.14265153056164007,
+     "lb": 0.05062900491861545,
+     "mean": 0.09571428571428571,
+     "samples": 700,
+     "calls": 2242,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 1.1754377633333206
+    },
+    "canon_cost": 109287,
+    "b5_pairwise": {
+     "g3": 0.05850624999999998,
+     "calls": 768706
+    },
+    "b7_sample": {
+     "g3": 0.0071428571428571175,
+     "calls": 891,
+     "m": 700
+    }
+   },
+   {
+    "fd": "city->tz_src8",
+    "g3": 0.07992187500000003,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.11843524314303283,
+     "lb": 0.05133881814112708,
+     "mean": 0.08416666666666667,
+     "samples": 1200,
+     "calls": 3614,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 1.1881925836205482
+    },
+    "canon_cost": 106568,
+    "b5_pairwise": {
+     "g3": 0.05851874999999995,
+     "calls": 754196
+    },
+    "b7_sample": {
+     "g3": 0.0033333333333332993,
+     "calls": 1177,
+     "m": 1200
+    }
+   },
+   {
+    "fd": "admin1->city",
+    "g3": 0.823046875,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.9691383593839016,
+     "lb": 0.6543035420626208,
+     "mean": 0.8,
+     "samples": 100,
+     "calls": 218,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.22728960774838924
+    },
+    "canon_cost": 129133,
+    "b5_pairwise": {
+     "g3": 0.8332625,
+     "calls": 874263
+    },
+    "b7_sample": {
+     "g3": 0.06999999999999995,
+     "calls": 192,
+     "m": 100
+    }
+   }
+  ],
+  "run_calls": 12203,
+  "run_calls_fwd_inv": [
+   8997,
+   3206
+  ],
+  "canon_all": 131891
+ },
+ {
+  "n_cities": 64000,
+  "seed": 1,
+  "rows": 320000,
+  "source": "cities500.txt",
+  "distinct": {
+   "city": 106714,
+   "country": 2729,
+   "admin1": 22339,
+   "tz": 329,
+   "fcode": 17,
+   "country_e2": 2723,
+   "country_e8": 2705,
+   "country_src8": 2700,
+   "tz_src8": 329
+  },
+  "sec": {
+   "load": 30.723489057272673,
+   "proxy": 44.74388989061117,
+   "proxy_per_attr": {
+    "city": 31.458129001781344,
+    "country": 0.5043731797486544,
+    "admin1": 10.452494945377111,
+    "tz": 0.2072836421430111,
+    "fcode": 0.19821597263216972,
+    "country_e2": 0.44585571996867657,
+    "country_e8": 0.44850840233266354,
+    "country_src8": 0.7313183899968863,
+    "tz_src8": 0.2016244400292635
+   },
+   "certify_total": 48.06249438226223
+  },
+  "fds": [
+   {
+    "fd": "city->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 1165,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 1.164092781022191
+    },
+    "canon_cost": 109443,
+    "b5_pairwise": {
+     "g3": 8.750000000001812e-05,
+     "calls": 770014
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 430,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->admin1",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.043600317122222516,
+     "lb": -0.03026698378888918,
+     "mean": 0.006666666666666667,
+     "samples": 300,
+     "calls": 1408,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 1.1772594191133976
+    },
+    "canon_cost": 129053,
+    "b5_pairwise": {
+     "g3": 0.001965624999999971,
+     "calls": 874363
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 555,
+     "m": 300
+    }
+   },
+   {
+    "fd": "admin1->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 582,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.22657831199467182
+    },
+    "canon_cost": 25068,
+    "b5_pairwise": {
+     "g3": 9.687499999999627e-05,
+     "calls": 133241
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 373,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->tz",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.04319153712184187,
+     "lb": -0.01819153712184187,
+     "mean": 0.0125,
+     "samples": 400,
+     "calls": 1381,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 1.1821741368621588
+    },
+    "canon_cost": 106714,
+    "b5_pairwise": {
+     "g3": 0.0,
+     "calls": 755568
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 396,
+     "m": 400
+    }
+   },
+   {
+    "fd": "city->country_e8",
+    "g3": 0.07809999999999995,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.1824826994951475,
+     "lb": 0.05588846429507929,
+     "mean": 0.125,
+     "samples": 400,
+     "calls": 1300,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 1.3819605838507414
+    },
+    "canon_cost": 109419,
+    "b5_pairwise": {
+     "g3": 0.07494687499999997,
+     "calls": 769882
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 535,
+     "m": 400
+    }
+   },
+   {
+    "fd": "city->country_src8",
+    "g3": 0.07985937499999995,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.11796517595739023,
+     "lb": 0.05198390573490973,
+     "mean": 0.0875,
+     "samples": 1200,
+     "calls": 3870,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 1.2075586337596178
+    },
+    "canon_cost": 109414,
+    "b5_pairwise": {
+     "g3": 0.05878749999999999,
+     "calls": 769869
+    },
+    "b7_sample": {
+     "g3": 0.0024999999999999467,
+     "calls": 1453,
+     "m": 1200
+    }
+   },
+   {
+    "fd": "city->tz_src8",
+    "g3": 0.07989374999999999,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.14187284511991818,
+     "lb": 0.05027885371761003,
+     "mean": 0.09571428571428571,
+     "samples": 700,
+     "calls": 2068,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 1.1792869661003351
+    },
+    "canon_cost": 106714,
+    "b5_pairwise": {
+     "g3": 0.058496875000000004,
+     "calls": 755568
+    },
+    "b7_sample": {
+     "g3": 0.004285714285714337,
+     "calls": 689,
+     "m": 700
+    }
+   },
+   {
+    "fd": "admin1->city",
+    "g3": 0.820296875,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.990706135033198,
+     "lb": 0.6881236356473758,
+     "mean": 0.83,
+     "samples": 100,
+     "calls": 197,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.22764143906533718
+    },
+    "canon_cost": 129053,
+    "b5_pairwise": {
+     "g3": 0.830890625,
+     "calls": 874363
+    },
+    "b7_sample": {
+     "g3": 0.12,
+     "calls": 196,
+     "m": 100
+    }
+   }
+  ],
+  "run_calls": 11971,
+  "run_calls_fwd_inv": [
+   8780,
+   3191
+  ],
+  "canon_all": 131782
+ },
+ {
+  "n_cities": 128000,
+  "seed": 0,
+  "rows": 640000,
+  "source": "cities500.txt",
+  "distinct": {
+   "city": 212449,
+   "country": 3050,
+   "admin1": 31103,
+   "tz": 356,
+   "fcode": 18,
+   "country_e2": 3044,
+   "country_e8": 3027,
+   "country_src8": 3015,
+   "tz_src8": 356
+  },
+  "sec": {
+   "load": 61.08635598048568,
+   "proxy": 95.09761316515505,
+   "proxy_per_attr": {
+    "city": 70.7051084432751,
+    "country": 0.7769887559115887,
+    "admin1": 19.41195572540164,
+    "tz": 0.4118115119636059,
+    "fcode": 0.3905902002006769,
+    "country_e2": 0.8193295747041702,
+    "country_e8": 0.8343854881823063,
+    "country_src8": 1.120870204642415,
+    "tz_src8": 0.4158644676208496
+   },
+   "certify_total": 115.89604456350207
+  },
+  "fds": [
+   {
+    "fd": "city->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.0435975941900358,
+     "lb": -0.030264260856702467,
+     "mean": 0.006666666666666667,
+     "samples": 300,
+     "calls": 1252,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 2.571660926565528
+    },
+    "canon_cost": 215499,
+    "b5_pairwise": {
+     "g3": 3.281249999997904e-05,
+     "calls": 1539002
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 420,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->admin1",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.046519626345518705,
+     "lb": -0.016519626345518706,
+     "mean": 0.015,
+     "samples": 400,
+     "calls": 1944,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 2.621238375082612
+    },
+    "canon_cost": 243552,
+    "b5_pairwise": {
+     "g3": 0.005285937499999949,
+     "calls": 1700850
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 728,
+     "m": 400
+    }
+   },
+   {
+    "fd": "admin1->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 535,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.35958511009812355
+    },
+    "canon_cost": 34153,
+    "b5_pairwise": {
+     "g3": 3.281249999997904e-05,
+     "calls": 194236
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 361,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->tz",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.048569203189182064,
+     "lb": -0.02856920318918206,
+     "mean": 0.01,
+     "samples": 300,
+     "calls": 1000,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 2.6768228076398373
+    },
+    "canon_cost": 212449,
+    "b5_pairwise": {
+     "g3": 0.0,
+     "calls": 1522808
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 297,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->country_e8",
+    "g3": 0.07830156249999998,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.16445309562086793,
+     "lb": 0.051810965274656916,
+     "mean": 0.108,
+     "samples": 500,
+     "calls": 1688,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 2.5087190363556147
+    },
+    "canon_cost": 215476,
+    "b5_pairwise": {
+     "g3": 0.07478593749999995,
+     "calls": 1538894
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 672,
+     "m": 500
+    }
+   },
+   {
+    "fd": "city->country_src8",
+    "g3": 0.07987187500000004,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.10718688996480231,
+     "lb": 0.05007125553986897,
+     "mean": 0.08066666666666666,
+     "samples": 1500,
+     "calls": 5076,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 3.686958884820342
+    },
+    "canon_cost": 215464,
+    "b5_pairwise": {
+     "g3": 0.05525000000000002,
+     "calls": 1538824
+    },
+    "b7_sample": {
+     "g3": 0.006000000000000005,
+     "calls": 1825,
+     "m": 1500
+    }
+   },
+   {
+    "fd": "city->tz_src8",
+    "g3": 0.07986875000000004,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.1026286386264544,
+     "lb": 0.05114590845357571,
+     "mean": 0.08055555555555556,
+     "samples": 1800,
+     "calls": 5548,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 2.56270894408226
+    },
+    "canon_cost": 212449,
+    "b5_pairwise": {
+     "g3": 0.05513437499999996,
+     "calls": 1522808
+    },
+    "b7_sample": {
+     "g3": 0.0016666666666667052,
+     "calls": 1765,
+     "m": 1800
+    }
+   },
+   {
+    "fd": "admin1->city",
+    "g3": 0.8760890625,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 1.011001094488129,
+     "lb": 0.7097300871850443,
+     "mean": 0.86,
+     "samples": 100,
+     "calls": 196,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.3755297679454088
+    },
+    "canon_cost": 243552,
+    "b5_pairwise": {
+     "g3": 0.8843156249999999,
+     "calls": 1700850
+    },
+    "b7_sample": {
+     "g3": 0.09999999999999998,
+     "calls": 194,
+     "m": 100
+    }
+   }
+  ],
+  "run_calls": 17239,
+  "run_calls_fwd_inv": [
+   12575,
+   4664
+  ],
+  "canon_all": 246602
+ },
+ {
+  "n_cities": 128000,
+  "seed": 1,
+  "rows": 640000,
+  "source": "cities500.txt",
+  "distinct": {
+   "city": 212404,
+   "country": 3027,
+   "admin1": 30953,
+   "tz": 350,
+   "fcode": 17,
+   "country_e2": 3019,
+   "country_e8": 3003,
+   "country_src8": 2998,
+   "tz_src8": 350
+  },
+  "sec": {
+   "load": 69.84575160779059,
+   "proxy": 77.40496227145195,
+   "proxy_per_attr": {
+    "city": 66.08893429487944,
+    "country": 0.8057043515145779,
+    "admin1": 6.58097043260932,
+    "tz": 0.40627703070640564,
+    "fcode": 0.38901996426284313,
+    "country_e2": 0.7456389330327511,
+    "country_e8": 0.7473118714988232,
+    "country_src8": 0.9954024534672499,
+    "tz_src8": 0.44081372767686844
+   },
+   "certify_total": 102.07789078354836
+  },
+  "fds": [
+   {
+    "fd": "city->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.038981516885896246,
+     "lb": -0.03231485021922958,
+     "mean": 0.0033333333333333335,
+     "samples": 300,
+     "calls": 1232,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 2.4048963095992804
+    },
+    "canon_cost": 215431,
+    "b5_pairwise": {
+     "g3": 6.0937500000024514e-05,
+     "calls": 1538644
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 418,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->admin1",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.04359068180132797,
+     "lb": -0.030257348467994633,
+     "mean": 0.006666666666666667,
+     "samples": 300,
+     "calls": 1561,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 4.012094648554921
+    },
+    "canon_cost": 243357,
+    "b5_pairwise": {
+     "g3": 0.005542187500000018,
+     "calls": 1700374
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 550,
+     "m": 300
+    }
+   },
+   {
+    "fd": "admin1->country",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.03436294481011079,
+     "lb": -0.03436294481011079,
+     "mean": 0.0,
+     "samples": 300,
+     "calls": 560,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.33263376727700233
+    },
+    "canon_cost": 33980,
+    "b5_pairwise": {
+     "g3": 6.0937500000024514e-05,
+     "calls": 193660
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 390,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->tz",
+    "g3": 0.0,
+    "truth": true,
+    "ours": {
+     "certified": true,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.043613930445745915,
+     "lb": -0.03028059711241258,
+     "mean": 0.006666666666666667,
+     "samples": 300,
+     "calls": 1083,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 2.332720160484314
+    },
+    "canon_cost": 212404,
+    "b5_pairwise": {
+     "g3": 0.0,
+     "calls": 1522679
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 300,
+     "m": 300
+    }
+   },
+   {
+    "fd": "city->country_e8",
+    "g3": 0.07842968750000001,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.13406656266458397,
+     "lb": 0.050129583404845614,
+     "mean": 0.09125,
+     "samples": 800,
+     "calls": 2833,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 2.402798006311059
+    },
+    "canon_cost": 215407,
+    "b5_pairwise": {
+     "g3": 0.07483593749999995,
+     "calls": 1538547
+    },
+    "b7_sample": {
+     "g3": 0.0012499999999999734,
+     "calls": 1014,
+     "m": 800
+    }
+   },
+   {
+    "fd": "city->country_src8",
+    "g3": 0.07983281249999996,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.1834574804184202,
+     "lb": 0.05120501707283248,
+     "mean": 0.115,
+     "samples": 400,
+     "calls": 1290,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 2.3309910874813795
+    },
+    "canon_cost": 215402,
+    "b5_pairwise": {
+     "g3": 0.05531718750000003,
+     "calls": 1538497
+    },
+    "b7_sample": {
+     "g3": 0.0050000000000000044,
+     "calls": 549,
+     "m": 400
+    }
+   },
+   {
+    "fd": "city->tz_src8",
+    "g3": 0.07987500000000003,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.13319997913799267,
+     "lb": 0.05089617391222474,
+     "mean": 0.1,
+     "samples": 700,
+     "calls": 2272,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 2.6902666930109262
+    },
+    "canon_cost": 212404,
+    "b5_pairwise": {
+     "g3": 0.055332812499999995,
+     "calls": 1522679
+    },
+    "b7_sample": {
+     "g3": 0.0,
+     "calls": 694,
+     "m": 700
+    }
+   },
+   {
+    "fd": "admin1->city",
+    "g3": 0.8746359375,
+    "truth": false,
+    "ours": {
+     "certified": false,
+     "nu_bar": 0.0,
+     "audit": true,
+     "budget_hit": false,
+     "ub": 0.9909509274999992,
+     "lb": 0.6868535271785109,
+     "mean": 0.83,
+     "samples": 100,
+     "calls": 210,
+     "theta": 0.9,
+     "alpha": 0.00625,
+     "sec": 0.34852660074830055
+    },
+    "canon_cost": 243357,
+    "b5_pairwise": {
+     "g3": 0.8829828125,
+     "calls": 1700374
+    },
+    "b7_sample": {
+     "g3": 0.06999999999999995,
+     "calls": 199,
+     "m": 100
+    }
+   }
+  ],
+  "run_calls": 11041,
+  "run_calls_fwd_inv": [
+   8169,
+   2872
+  ],
+  "canon_all": 246384
+ }
+]

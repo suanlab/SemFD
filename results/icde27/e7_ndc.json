@@ -1,0 +1,1237 @@
+{
+ "dataset": "ndc116620",
+ "delta": 0.05,
+ "alpha": 0.05,
+ "runs": [
+  {
+   "p": 0.0,
+   "seed": 0,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.035148165047820014,
+     "g3_clean": 0.0,
+     "g3_noisy": 0.0,
+     "calls": 232
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.04954531765087471,
+     "g3_clean": 0.0258446235637112,
+     "g3_noisy": 0.0258446235637112,
+     "calls": 899
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.2841517344806639,
+     "g3_clean": 0.12845138055222094,
+     "g3_noisy": 0.12845138055222094,
+     "calls": 182
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.15974817245267803,
+     "g3_clean": 0.09980277825415884,
+     "g3_noisy": 0.09980277825415884,
+     "calls": 336
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.8292583860909206,
+     "g3_clean": 0.6527096552906877,
+     "g3_noisy": 0.6527096552906877,
+     "calls": 27
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.7004080950393972,
+     "g3_clean": 0.45790601955067745,
+     "g3_noisy": 0.45790601955067745,
+     "calls": 30
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.78460885819626,
+     "g3_clean": 0.6590207511576058,
+     "g3_noisy": 0.6590207511576058,
+     "calls": 27
+    },
+    {
+     "fd": "labcode->labeler_e2",
+     "certified": true,
+     "ub": 0.04379691786963655,
+     "g3_clean": 0.0202023666609501,
+     "g3_noisy": 0.0202023666609501,
+     "calls": 105
+    },
+    {
+     "fd": "labcode->labeler_e8",
+     "certified": false,
+     "ub": 0.14238621178415933,
+     "g3_clean": 0.0812896587206311,
+     "g3_noisy": 0.0812896587206311,
+     "calls": 148
+    }
+   ],
+   "false_vs_noisy": 0,
+   "false_vs_clean": 0,
+   "missed_vs_clean": 0,
+   "calls": 1986
+  },
+  {
+   "p": 0.0,
+   "seed": 1,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.035148165047820014,
+     "g3_clean": 0.0,
+     "g3_noisy": 0.0,
+     "calls": 227
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.0484158414602506,
+     "g3_clean": 0.0258446235637112,
+     "g3_noisy": 0.0258446235637112,
+     "calls": 747
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.29127433708597406,
+     "g3_clean": 0.12845138055222094,
+     "g3_noisy": 0.12845138055222094,
+     "calls": 211
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.1328190166473644,
+     "g3_clean": 0.09980277825415884,
+     "g3_noisy": 0.09980277825415884,
+     "calls": 437
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.7821340006771695,
+     "g3_clean": 0.6527096552906877,
+     "g3_noisy": 0.6527096552906877,
+     "calls": 22
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.7540167620207547,
+     "g3_clean": 0.45790601955067745,
+     "g3_noisy": 0.45790601955067745,
+     "calls": 19
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.8842577994502191,
+     "g3_clean": 0.6590207511576058,
+     "g3_noisy": 0.6590207511576058,
+     "calls": 30
+    },
+    {
+     "fd": "labcode->labeler_e2",
+     "certified": true,
+     "ub": 0.04687536629697802,
+     "g3_clean": 0.0202023666609501,
+     "g3_noisy": 0.0202023666609501,
+     "calls": 74
+    },
+    {
+     "fd": "labcode->labeler_e8",
+     "certified": false,
+     "ub": 0.1210129248317682,
+     "g3_clean": 0.0812896587206311,
+     "g3_noisy": 0.0812896587206311,
+     "calls": 222
+    }
+   ],
+   "false_vs_noisy": 0,
+   "false_vs_clean": 0,
+   "missed_vs_clean": 0,
+   "calls": 1989
+  },
+  {
+   "p": 0.0,
+   "seed": 2,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.035148165047820014,
+     "g3_clean": 0.0,
+     "g3_noisy": 0.0,
+     "calls": 232
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.04958742211845049,
+     "g3_clean": 0.0258446235637112,
+     "g3_noisy": 0.0258446235637112,
+     "calls": 568
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.19963229956722423,
+     "g3_clean": 0.12845138055222094,
+     "g3_noisy": 0.12845138055222094,
+     "calls": 330
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.13941258761077213,
+     "g3_clean": 0.09980277825415884,
+     "g3_noisy": 0.09980277825415884,
+     "calls": 508
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.8719800765071232,
+     "g3_clean": 0.6527096552906877,
+     "g3_noisy": 0.6527096552906877,
+     "calls": 24
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.6582975733452979,
+     "g3_clean": 0.45790601955067745,
+     "g3_noisy": 0.45790601955067745,
+     "calls": 31
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.9019043517694116,
+     "g3_clean": 0.6590207511576058,
+     "g3_noisy": 0.6590207511576058,
+     "calls": 33
+    },
+    {
+     "fd": "labcode->labeler_e2",
+     "certified": true,
+     "ub": 0.044132917114229134,
+     "g3_clean": 0.0202023666609501,
+     "g3_noisy": 0.0202023666609501,
+     "calls": 95
+    },
+    {
+     "fd": "labcode->labeler_e8",
+     "certified": false,
+     "ub": 0.10339882108865811,
+     "g3_clean": 0.0812896587206311,
+     "g3_noisy": 0.0812896587206311,
+     "calls": 391
+    }
+   ],
+   "false_vs_noisy": 0,
+   "false_vs_clean": 0,
+   "missed_vs_clean": 0,
+   "calls": 2212
+  },
+  {
+   "p": 0.01,
+   "seed": 0,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.035148165047820014,
+     "g3_clean": 0.0,
+     "g3_noisy": 0.002941176470588225,
+     "calls": 241
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.04956166872865117,
+     "g3_clean": 0.0258446235637112,
+     "g3_noisy": 0.027010804321728643,
+     "calls": 1580
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.2007567906152051,
+     "g3_clean": 0.12845138055222094,
+     "g3_noisy": 0.12910306979934827,
+     "calls": 331
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.1344796326443768,
+     "g3_clean": 0.09980277825415884,
+     "g3_noisy": 0.10061738981306811,
+     "calls": 359
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.8478660392070815,
+     "g3_clean": 0.6527096552906877,
+     "g3_noisy": 0.6527268050077173,
+     "calls": 17
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.7683056045030335,
+     "g3_clean": 0.45790601955067745,
+     "g3_noisy": 0.4580346424284,
+     "calls": 19
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.8729602189999693,
+     "g3_clean": 0.6590207511576058,
+     "g3_noisy": 0.6591150746012691,
+     "calls": 29
+    },
+    {
+     "fd": "labcode->labeler_e2",
+     "certified": true,
+     "ub": 0.044431228544407564,
+     "g3_clean": 0.0202023666609501,
+     "g3_noisy": 0.023092093980449313,
+     "calls": 71
+    },
+    {
+     "fd": "labcode->labeler_e8",
+     "certified": false,
+     "ub": 0.1382736219755266,
+     "g3_clean": 0.0812896587206311,
+     "g3_noisy": 0.08400788886983368,
+     "calls": 128
+    }
+   ],
+   "false_vs_noisy": 0,
+   "false_vs_clean": 0,
+   "missed_vs_clean": 0,
+   "calls": 2775
+  },
+  {
+   "p": 0.01,
+   "seed": 1,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.035148165047820014,
+     "g3_clean": 0.0,
+     "g3_noisy": 0.0013634025038586906,
+     "calls": 213
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.04983974534956741,
+     "g3_clean": 0.0258446235637112,
+     "g3_noisy": 0.026101869319156257,
+     "calls": 2047
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.1780011822778553,
+     "g3_clean": 0.12845138055222094,
+     "g3_noisy": 0.12912021951637798,
+     "calls": 334
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.15547165123822243,
+     "g3_clean": 0.09980277825415884,
+     "g3_noisy": 0.1000943234436632,
+     "calls": 198
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.7811576303379988,
+     "g3_clean": 0.6527096552906877,
+     "g3_noisy": 0.6527182301492025,
+     "calls": 13
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.7215290488106543,
+     "g3_clean": 0.45790601955067745,
+     "g3_noisy": 0.45799176813582576,
+     "calls": 14
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.7944630785431749,
+     "g3_clean": 0.6590207511576058,
+     "g3_noisy": 0.6590379008746357,
+     "calls": 17
+    },
+    {
+     "fd": "labcode->labeler_e2",
+     "certified": true,
+     "ub": 0.04828599254499479,
+     "g3_clean": 0.0202023666609501,
+     "g3_noisy": 0.021531469730749486,
+     "calls": 95
+    },
+    {
+     "fd": "labcode->labeler_e8",
+     "certified": false,
+     "ub": 0.10294101255406525,
+     "g3_clean": 0.0812896587206311,
+     "g3_noisy": 0.08252443834676726,
+     "calls": 230
+    }
+   ],
+   "false_vs_noisy": 0,
+   "false_vs_clean": 0,
+   "missed_vs_clean": 0,
+   "calls": 3161
+  },
+  {
+   "p": 0.01,
+   "seed": 2,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.044437775190638254,
+     "g3_clean": 0.0,
+     "g3_noisy": 0.0069199108214714755,
+     "calls": 236
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.049938545249018126,
+     "g3_clean": 0.0258446235637112,
+     "g3_noisy": 0.026522037386383146,
+     "calls": 1844
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.3264028067277194,
+     "g3_clean": 0.12845138055222094,
+     "g3_noisy": 0.1292145429600412,
+     "calls": 147
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.16770024116891713,
+     "g3_clean": 0.09980277825415884,
+     "g3_noisy": 0.10046304235980108,
+     "calls": 238
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.8109528209025465,
+     "g3_clean": 0.6527096552906877,
+     "g3_noisy": 0.6529326016120733,
+     "calls": 28
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.7452139302303236,
+     "g3_clean": 0.45790601955067745,
+     "g3_noisy": 0.45848910992968617,
+     "calls": 17
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.8385093077374012,
+     "g3_clean": 0.6590207511576058,
+     "g3_noisy": 0.6592179729034471,
+     "calls": 26
+    },
+    {
+     "fd": "labcode->labeler_e2",
+     "certified": true,
+     "ub": 0.04710108686336689,
+     "g3_clean": 0.0202023666609501,
+     "g3_noisy": 0.02695935517063963,
+     "calls": 157
+    },
+    {
+     "fd": "labcode->labeler_e8",
+     "certified": false,
+     "ub": 0.13398872585268315,
+     "g3_clean": 0.0812896587206311,
+     "g3_noisy": 0.08751500600240092,
+     "calls": 143
+    }
+   ],
+   "false_vs_noisy": 0,
+   "false_vs_clean": 0,
+   "missed_vs_clean": 0,
+   "calls": 2836
+  },
+  {
+   "p": 0.02,
+   "seed": 0,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.039766126360864976,
+     "g3_clean": 0.0,
+     "g3_noisy": 0.0040473332190018585,
+     "calls": 220
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.048452071400076055,
+     "g3_clean": 0.0258446235637112,
+     "g3_noisy": 0.026770708283313294,
+     "calls": 724
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.22476470031658613,
+     "g3_clean": 0.12845138055222094,
+     "g3_noisy": 0.12908592008231867,
+     "calls": 344
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.17396755747243553,
+     "g3_clean": 0.09980277825415884,
+     "g3_noisy": 0.10075458754930544,
+     "calls": 229
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.8175394440755245,
+     "g3_clean": 0.6527096552906877,
+     "g3_noisy": 0.6527353798662322,
+     "calls": 28
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.63263894229772,
+     "g3_clean": 0.45790601955067745,
+     "g3_noisy": 0.4580603670039445,
+     "calls": 23
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.883114534897402,
+     "g3_clean": 0.6590207511576058,
+     "g3_noisy": 0.6591236494597839,
+     "calls": 26
+    },
+    {
+     "fd": "labcode->labeler_e2",
+     "certified": true,
+     "ub": 0.04931134397697738,
+     "g3_clean": 0.0202023666609501,
+     "g3_noisy": 0.02417252615331844,
+     "calls": 139
+    },
+    {
+     "fd": "labcode->labeler_e8",
+     "certified": false,
+     "ub": 0.12563517348372785,
+     "g3_clean": 0.0812896587206311,
+     "g3_noisy": 0.0850368718916138,
+     "calls": 214
+    }
+   ],
+   "false_vs_noisy": 0,
+   "false_vs_clean": 0,
+   "missed_vs_clean": 0,
+   "calls": 1947
+  },
+  {
+   "p": 0.02,
+   "seed": 1,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.035148165047820014,
+     "g3_clean": 0.0,
+     "g3_noisy": 0.0037815126050420034,
+     "calls": 228
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.04991877189268604,
+     "g3_clean": 0.0258446235637112,
+     "g3_noisy": 0.02661636083004626,
+     "calls": 2208
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.18980193715929733,
+     "g3_clean": 0.12845138055222094,
+     "g3_noisy": 0.12937746527182303,
+     "calls": 218
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.1568171392488901,
+     "g3_clean": 0.09980277825415884,
+     "g3_noisy": 0.10049734179386038,
+     "calls": 247
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.8152819282140129,
+     "g3_clean": 0.6527096552906877,
+     "g3_noisy": 0.6527611044417767,
+     "calls": 14
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.6466407443236811,
+     "g3_clean": 0.45790601955067745,
+     "g3_noisy": 0.4580946664380038,
+     "calls": 17
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.8506871048610356,
+     "g3_clean": 0.6590207511576058,
+     "g3_noisy": 0.6590722003086948,
+     "calls": 14
+    },
+    {
+     "fd": "labcode->labeler_e2",
+     "certified": true,
+     "ub": 0.04935701382863189,
+     "g3_clean": 0.0202023666609501,
+     "g3_noisy": 0.02393243011490309,
+     "calls": 254
+    },
+    {
+     "fd": "labcode->labeler_e8",
+     "certified": false,
+     "ub": 0.09814110081753848,
+     "g3_clean": 0.0812896587206311,
+     "g3_noisy": 0.08482250042874295,
+     "calls": 272
+    }
+   ],
+   "false_vs_noisy": 0,
+   "false_vs_clean": 0,
+   "missed_vs_clean": 0,
+   "calls": 3472
+  },
+  {
+   "p": 0.02,
+   "seed": 2,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.04665639167086438,
+     "g3_clean": 0.0,
+     "g3_noisy": 0.00789744469216258,
+     "calls": 231
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.04978521879765292,
+     "g3_clean": 0.0258446235637112,
+     "g3_noisy": 0.026950780312124833,
+     "calls": 1826
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.21218332956963826,
+     "g3_clean": 0.12845138055222094,
+     "g3_noisy": 0.1297033098953867,
+     "calls": 172
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.11400714785353602,
+     "g3_clean": 0.09980277825415884,
+     "g3_noisy": 0.10086606070999826,
+     "calls": 347
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.9329369783851656,
+     "g3_clean": 0.6527096552906877,
+     "g3_noisy": 0.6530012004801921,
+     "calls": 15
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.6503659604038576,
+     "g3_clean": 0.45790601955067745,
+     "g3_noisy": 0.45852340936374547,
+     "calls": 14
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.8709263356576751,
+     "g3_clean": 0.6590207511576058,
+     "g3_noisy": 0.6592522723375065,
+     "calls": 12
+    },
+    {
+     "fd": "labcode->labeler_e2",
+     "certified": true,
+     "ub": 0.04875454341917852,
+     "g3_clean": 0.0202023666609501,
+     "g3_noisy": 0.027902589607271433,
+     "calls": 79
+    },
+    {
+     "fd": "labcode->labeler_e8",
+     "certified": false,
+     "ub": 0.11911947063558076,
+     "g3_clean": 0.0812896587206311,
+     "g3_noisy": 0.08842394100497342,
+     "calls": 175
+    }
+   ],
+   "false_vs_noisy": 0,
+   "false_vs_clean": 0,
+   "missed_vs_clean": 0,
+   "calls": 2871
+  },
+  {
+   "p": 0.05,
+   "seed": 0,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.04684378746452995,
+     "g3_clean": 0.0,
+     "g3_noisy": 0.010229806208197578,
+     "calls": 275
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.04950702314460868,
+     "g3_clean": 0.0258446235637112,
+     "g3_noisy": 0.02714800205796608,
+     "calls": 886
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.22105592855634537,
+     "g3_clean": 0.12845138055222094,
+     "g3_noisy": 0.12815126050420167,
+     "calls": 330
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.16309076163335479,
+     "g3_clean": 0.09980277825415884,
+     "g3_noisy": 0.10135482764534387,
+     "calls": 313
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.8192530097974834,
+     "g3_clean": 0.6527096552906877,
+     "g3_noisy": 0.6532327216600926,
+     "calls": 26
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.7792240221483162,
+     "g3_clean": 0.45790601955067745,
+     "g3_noisy": 0.45842051106156745,
+     "calls": 21
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.8405944306203632,
+     "g3_clean": 0.6590207511576058,
+     "g3_noisy": 0.6594151946492883,
+     "calls": 24
+    },
+    {
+     "fd": "labcode->labeler_e2",
+     "certified": true,
+     "ub": 0.04731165798354538,
+     "g3_clean": 0.0202023666609501,
+     "g3_noisy": 0.03018350197221742,
+     "calls": 99
+    },
+    {
+     "fd": "labcode->labeler_e8",
+     "certified": false,
+     "ub": 0.13934065734579587,
+     "g3_clean": 0.0812896587206311,
+     "g3_noisy": 0.09061052992625618,
+     "calls": 177
+    }
+   ],
+   "false_vs_noisy": 0,
+   "false_vs_clean": 0,
+   "missed_vs_clean": 0,
+   "calls": 2151
+  },
+  {
+   "p": 0.05,
+   "seed": 1,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.047098661421816346,
+     "g3_clean": 0.0,
+     "g3_noisy": 0.00962956611215915,
+     "calls": 282
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.04994964635466584,
+     "g3_clean": 0.0258446235637112,
+     "g3_noisy": 0.027285199794203407,
+     "calls": 2068
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.16907881526289423,
+     "g3_clean": 0.12845138055222094,
+     "g3_noisy": 0.13089521522894876,
+     "calls": 320
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.1602545349859597,
+     "g3_clean": 0.09980277825415884,
+     "g3_noisy": 0.10127765391871035,
+     "calls": 236
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.8677488579931595,
+     "g3_clean": 0.6527096552906877,
+     "g3_noisy": 0.6527782541588063,
+     "calls": 21
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.7209480952820423,
+     "g3_clean": 0.45790601955067745,
+     "g3_noisy": 0.45845481049562686,
+     "calls": 13
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.837005887626641,
+     "g3_clean": 0.6590207511576058,
+     "g3_noisy": 0.6594837935174069,
+     "calls": 11
+    },
+    {
+     "fd": "labcode->labeler_e2",
+     "certified": true,
+     "ub": 0.04942816406895345,
+     "g3_clean": 0.0202023666609501,
+     "g3_noisy": 0.029548962442119686,
+     "calls": 236
+    },
+    {
+     "fd": "labcode->labeler_e8",
+     "certified": false,
+     "ub": 0.15254885998337137,
+     "g3_clean": 0.0812896587206311,
+     "g3_noisy": 0.09011318813239577,
+     "calls": 78
+    }
+   ],
+   "false_vs_noisy": 0,
+   "false_vs_clean": 0,
+   "missed_vs_clean": 0,
+   "calls": 3265
+  },
+  {
+   "p": 0.05,
+   "seed": 2,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.04867194216302607,
+     "g3_clean": 0.0,
+     "g3_noisy": 0.01639512948036359,
+     "calls": 288
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.049768121627107295,
+     "g3_clean": 0.0258446235637112,
+     "g3_noisy": 0.027611044417767072,
+     "calls": 1364
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.2273603700332349,
+     "g3_clean": 0.12845138055222094,
+     "g3_noisy": 0.1301149031040988,
+     "calls": 259
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.16955719890341586,
+     "g3_clean": 0.09980277825415884,
+     "g3_noisy": 0.10188646887326358,
+     "calls": 264
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.8615506557482332,
+     "g3_clean": 0.6527096552906877,
+     "g3_noisy": 0.6543817527010805,
+     "calls": 21
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.7226700834998687,
+     "g3_clean": 0.45790601955067745,
+     "g3_noisy": 0.45942376950780317,
+     "calls": 17
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.8230451423219881,
+     "g3_clean": 0.6590207511576058,
+     "g3_noisy": 0.6597324644143372,
+     "calls": 19
+    },
+    {
+     "fd": "labcode->labeler_e2",
+     "certified": true,
+     "ub": 0.049785713479899504,
+     "g3_clean": 0.0202023666609501,
+     "g3_noisy": 0.03613445378151259,
+     "calls": 322
+    },
+    {
+     "fd": "labcode->labeler_e8",
+     "certified": false,
+     "ub": 0.13402096353537346,
+     "g3_clean": 0.0812896587206311,
+     "g3_noisy": 0.09599554107357233,
+     "calls": 106
+    }
+   ],
+   "false_vs_noisy": 0,
+   "false_vs_clean": 0,
+   "missed_vs_clean": 0,
+   "calls": 2660
+  },
+  {
+   "p": 0.1,
+   "seed": 0,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.048935502376088805,
+     "g3_clean": 0.0,
+     "g3_noisy": 0.019156233922140276,
+     "calls": 554
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.04911063155564962,
+     "g3_clean": 0.0258446235637112,
+     "g3_noisy": 0.02827988338192422,
+     "calls": 1280
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.2754897872739924,
+     "g3_clean": 0.12845138055222094,
+     "g3_noisy": 0.130620819756474,
+     "calls": 168
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.19138395760922602,
+     "g3_clean": 0.09980277825415884,
+     "g3_noisy": 0.10264963128108384,
+     "calls": 167
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.883878639265715,
+     "g3_clean": 0.6527096552906877,
+     "g3_noisy": 0.6536957640198937,
+     "calls": 15
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.650092852682401,
+     "g3_clean": 0.45790601955067745,
+     "g3_noisy": 0.4591150746012691,
+     "calls": 23
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.8267266715890255,
+     "g3_clean": 0.6590207511576058,
+     "g3_noisy": 0.6599382610186932,
+     "calls": 24
+    },
+    {
+     "fd": "labcode->labeler_e2",
+     "certified": true,
+     "ub": 0.049914332296334525,
+     "g3_clean": 0.0202023666609501,
+     "g3_noisy": 0.03892985765734869,
+     "calls": 1777
+    },
+    {
+     "fd": "labcode->labeler_e8",
+     "certified": false,
+     "ub": 0.13427051595801132,
+     "g3_clean": 0.0812896587206311,
+     "g3_noisy": 0.09889384325158634,
+     "calls": 57
+    }
+   ],
+   "false_vs_noisy": 0,
+   "false_vs_clean": 0,
+   "missed_vs_clean": 0,
+   "calls": 4065
+  },
+  {
+   "p": 0.1,
+   "seed": 1,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.043652860558086974,
+     "g3_clean": 0.0,
+     "g3_noisy": 0.01747556165323272,
+     "calls": 270
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.048672516967469166,
+     "g3_clean": 0.0258446235637112,
+     "g3_noisy": 0.0282112845138055,
+     "calls": 1213
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.21957032531896142,
+     "g3_clean": 0.12845138055222094,
+     "g3_noisy": 0.13269593551706393,
+     "calls": 275
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.14139583722908622,
+     "g3_clean": 0.09980277825415884,
+     "g3_noisy": 0.10175784599554105,
+     "calls": 382
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.819868483425986,
+     "g3_clean": 0.6527096552906877,
+     "g3_noisy": 0.6532412965186074,
+     "calls": 14
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.6234096986581583,
+     "g3_clean": 0.45790601955067745,
+     "g3_noisy": 0.4591922483279026,
+     "calls": 20
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.8555069634080872,
+     "g3_clean": 0.6590207511576058,
+     "g3_noisy": 0.6598267878580004,
+     "calls": 22
+    },
+    {
+     "fd": "labcode->labeler_e2",
+     "certified": true,
+     "ub": 0.04895920723796657,
+     "g3_clean": 0.0202023666609501,
+     "g3_noisy": 0.03719773623735212,
+     "calls": 85
+    },
+    {
+     "fd": "labcode->labeler_e8",
+     "certified": false,
+     "ub": 0.12834385858463923,
+     "g3_clean": 0.0812896587206311,
+     "g3_noisy": 0.09720459612416399,
+     "calls": 170
+    }
+   ],
+   "false_vs_noisy": 0,
+   "false_vs_clean": 0,
+   "missed_vs_clean": 0,
+   "calls": 2451
+  },
+  {
+   "p": 0.1,
+   "seed": 2,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.04937904222813309,
+     "g3_clean": 0.0,
+     "g3_noisy": 0.02382095695421027,
+     "calls": 651
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.04966854443918768,
+     "g3_clean": 0.0258446235637112,
+     "g3_noisy": 0.02917166866746701,
+     "calls": 1026
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.22986304333704716,
+     "g3_clean": 0.12845138055222094,
+     "g3_noisy": 0.1311610358429086,
+     "calls": 216
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.20472530172116957,
+     "g3_clean": 0.09980277825415884,
+     "g3_noisy": 0.10346424283999311,
+     "calls": 138
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.8650163520157936,
+     "g3_clean": 0.6527096552906877,
+     "g3_noisy": 0.6546046990224661,
+     "calls": 21
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.7270984171070496,
+     "g3_clean": 0.45790601955067745,
+     "g3_noisy": 0.45975818898988163,
+     "calls": 25
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.8763591290950508,
+     "g3_clean": 0.6590207511576058,
+     "g3_noisy": 0.6600154347453266,
+     "calls": 30
+    },
+    {
+     "fd": "labcode->labeler_e2",
+     "certified": false,
+     "ub": 0.051711812905000064,
+     "g3_clean": 0.0202023666609501,
+     "g3_noisy": 0.04332018521694392,
+     "calls": 1914
+    },
+    {
+     "fd": "labcode->labeler_e8",
+     "certified": false,
+     "ub": 0.15453762195029205,
+     "g3_clean": 0.0812896587206311,
+     "g3_noisy": 0.10264963128108384,
+     "calls": 39
+    }
+   ],
+   "false_vs_noisy": 0,
+   "false_vs_clean": 0,
+   "missed_vs_clean": 1,
+   "calls": 4060
+  }
+ ]
+}

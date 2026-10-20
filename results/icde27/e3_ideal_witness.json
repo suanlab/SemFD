@@ -1,0 +1,133 @@
+{
+ "reps": 200,
+ "fds": [
+  {
+   "fd": "city->country_e3",
+   "g3": 0.029649999999999954,
+   "proxy": {
+    "EB": 0.03665,
+    "cert_rate": 1.0,
+    "false_cert_rate": 0.0,
+    "samples_mean": 2666.0
+   },
+   "ideal": {
+    "EB": 0.0308,
+    "cert_rate": 1.0,
+    "false_cert_rate": 0.0,
+    "samples_mean": 1030.5
+   }
+  },
+  {
+   "fd": "city->country_e4",
+   "g3": 0.03939999999999999,
+   "proxy": {
+    "EB": 0.0471,
+    "cert_rate": 0.15,
+    "false_cert_rate": 0.0,
+    "samples_mean": 18192.0
+   },
+   "ideal": {
+    "EB": 0.04075,
+    "cert_rate": 0.96,
+    "false_cert_rate": 0.0,
+    "samples_mean": 6445.0
+   }
+  },
+  {
+   "fd": "city->country_e5",
+   "g3": 0.04859999999999998,
+   "proxy": {
+    "EB": 0.05805,
+    "cert_rate": 0.015,
+    "false_cert_rate": 0.0,
+    "samples_mean": 12475.0
+   },
+   "ideal": {
+    "EB": 0.05005,
+    "cert_rate": 0.05,
+    "false_cert_rate": 0.0,
+    "samples_mean": 18948.0
+   }
+  },
+  {
+   "fd": "city->country_e6",
+   "g3": 0.057949999999999946,
+   "proxy": {
+    "EB": 0.0694,
+    "cert_rate": 0.0,
+    "false_cert_rate": 0.0,
+    "samples_mean": 2355.5
+   },
+   "ideal": {
+    "EB": 0.05935,
+    "cert_rate": 0.005,
+    "false_cert_rate": 0.005,
+    "samples_mean": 10135.0
+   }
+  },
+  {
+   "fd": "city->country_e7",
+   "g3": 0.06799999999999995,
+   "proxy": {
+    "EB": 0.08175,
+    "cert_rate": 0.0,
+    "false_cert_rate": 0.0,
+    "samples_mean": 905.5
+   },
+   "ideal": {
+    "EB": 0.07,
+    "cert_rate": 0.0,
+    "false_cert_rate": 0.0,
+    "samples_mean": 2235.0
+   }
+  },
+  {
+   "fd": "city->country_src4",
+   "g3": 0.04005000000000003,
+   "proxy": {
+    "EB": 0.04045,
+    "cert_rate": 0.94,
+    "false_cert_rate": 0.0,
+    "samples_mean": 6455.0
+   },
+   "ideal": {
+    "EB": 0.041,
+    "cert_rate": 0.9,
+    "false_cert_rate": 0.0,
+    "samples_mean": 7343.0
+   }
+  },
+  {
+   "fd": "city->country_src6",
+   "g3": 0.05974999999999997,
+   "proxy": {
+    "EB": 0.06045,
+    "cert_rate": 0.0,
+    "false_cert_rate": 0.0,
+    "samples_mean": 8339.5
+   },
+   "ideal": {
+    "EB": 0.0615,
+    "cert_rate": 0.0,
+    "false_cert_rate": 0.0,
+    "samples_mean": 6785.5
+   }
+  },
+  {
+   "fd": "city->country_src7",
+   "g3": 0.06989999999999996,
+   "proxy": {
+    "EB": 0.07065,
+    "cert_rate": 0.0,
+    "false_cert_rate": 0.0,
+    "samples_mean": 2056.0
+   },
+   "ideal": {
+    "EB": 0.0722,
+    "cert_rate": 0.0,
+    "false_cert_rate": 0.0,
+    "samples_mean": 1750.0
+   }
+  }
+ ]
+}

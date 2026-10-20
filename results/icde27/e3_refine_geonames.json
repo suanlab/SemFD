@@ -1,0 +1,136 @@
+{
+ "dataset": "geonames4000",
+ "reps": 200,
+ "delta": 0.05,
+ "alpha": 0.05,
+ "fds": [
+  {
+   "fd": "city->country_e3",
+   "g3": 0.029649999999999954,
+   "proxy": {
+    "cert_rate": 1.0,
+    "false_cert_rate": 0.0,
+    "samples_mean": 2666.0,
+    "calls_mean": 4802.56
+   },
+   "refine": {
+    "cert_rate": 1.0,
+    "false_cert_rate": 0.0,
+    "samples_mean": 1828.0,
+    "calls_mean": 4220.695
+   }
+  },
+  {
+   "fd": "city->country_e4",
+   "g3": 0.03939999999999999,
+   "proxy": {
+    "cert_rate": 0.15,
+    "false_cert_rate": 0.0,
+    "samples_mean": 18192.0,
+    "calls_mean": 10782.085
+   },
+   "refine": {
+    "cert_rate": 0.78,
+    "false_cert_rate": 0.0,
+    "samples_mean": 11655.0,
+    "calls_mean": 9676.85
+   }
+  },
+  {
+   "fd": "city->country_e5",
+   "g3": 0.04859999999999998,
+   "proxy": {
+    "cert_rate": 0.015,
+    "false_cert_rate": 0.0,
+    "samples_mean": 12475.0,
+    "calls_mean": 9496.12
+   },
+   "refine": {
+    "cert_rate": 0.015,
+    "false_cert_rate": 0.0,
+    "samples_mean": 18331.5,
+    "calls_mean": 11036.005
+   }
+  },
+  {
+   "fd": "city->country_e6",
+   "g3": 0.057949999999999946,
+   "proxy": {
+    "cert_rate": 0.0,
+    "false_cert_rate": 0.0,
+    "samples_mean": 2355.5,
+    "calls_mean": 4834.74
+   },
+   "refine": {
+    "cert_rate": 0.0,
+    "false_cert_rate": 0.0,
+    "samples_mean": 4047.0,
+    "calls_mean": 6243.32
+   }
+  },
+  {
+   "fd": "city->country_e7",
+   "g3": 0.06799999999999995,
+   "proxy": {
+    "cert_rate": 0.0,
+    "false_cert_rate": 0.0,
+    "samples_mean": 905.5,
+    "calls_mean": 2614.65
+   },
+   "refine": {
+    "cert_rate": 0.0,
+    "false_cert_rate": 0.0,
+    "samples_mean": 1055.5,
+    "calls_mean": 2967.87
+   }
+  },
+  {
+   "fd": "city->country_src4",
+   "g3": 0.04005000000000003,
+   "proxy": {
+    "cert_rate": 0.94,
+    "false_cert_rate": 0.0,
+    "samples_mean": 6455.0,
+    "calls_mean": 7156.745
+   },
+   "refine": {
+    "cert_rate": 0.93,
+    "false_cert_rate": 0.0,
+    "samples_mean": 6768.5,
+    "calls_mean": 7538.2
+   }
+  },
+  {
+   "fd": "city->country_src6",
+   "g3": 0.05974999999999997,
+   "proxy": {
+    "cert_rate": 0.0,
+    "false_cert_rate": 0.0,
+    "samples_mean": 8339.5,
+    "calls_mean": 8515.18
+   },
+   "refine": {
+    "cert_rate": 0.0,
+    "false_cert_rate": 0.0,
+    "samples_mean": 7600.0,
+    "calls_mean": 8617.875
+   }
+  },
+  {
+   "fd": "city->country_src7",
+   "g3": 0.06989999999999996,
+   "proxy": {
+    "cert_rate": 0.0,
+    "false_cert_rate": 0.0,
+    "samples_mean": 2056.0,
+    "calls_mean": 4472.43
+   },
+   "refine": {
+    "cert_rate": 0.0,
+    "false_cert_rate": 0.0,
+    "samples_mean": 2010.5,
+    "calls_mean": 4641.08
+   }
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+# sha256 of dataset files used for results/icde27 (snapshot 2026-10-16)
+07806ae1d6b8d3b8decd53246952ba394bd479f84ea92762223410adb033cf44  data/ndc/x/product.txt
+201290927ae92e65b3940d776b3df5b4d953c5dfd9abb231715a2e65ecca87b0  data/tax/clean.csv
+8dd3429ec4791b2ed1a688c308a57a9f3d1a94f77d1f4e98294a67273270b973  data/tax/dirty.csv
+b5b4355ac000c82b70854bb98f711b110a39834d2b2a9a606b35a5f91a49339d  data/geonames/cities15000.txt
+b131857bcb01dd86bc399ce4ae8fe67c0efadeecf0f50ec32d4ddbba98d7227f  data/geonames/cities500.txt
+1da92a6323a5fec3176f3f743bf4cf4040fd56a876da55e46fbca23c863aa60a  data/geonames/admin1CodesASCII.txt
+c55f638cfaafb4fe45a9aa15120a0f1f78e8a34a8e1847d7b9320cf740fbc9ab  data/geonames/countryInfo.txt
+5b6811e75530438e511e4b6f64213e6f99987551d3f32d4ce9f1333d7ebf76e2  data/musicbrainz/mb200k.csv.dapo

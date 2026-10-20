@@ -1,0 +1,19 @@
+# python 3.12.14
+numpy==2.5.4
+pandas==3.0.6
+scipy==1.18.1
+scikit-learn==1.9.1
+rapidfuzz==3.14.6
+faiss-cpu==1.15.1
+desbordante==2.5.0
+sentence-transformers==6.1.0
+torch==2.14.1+cpu
+llama-cpp-python==0.3.36
+matplotlib==3.11.2
+huggingface-hub==1.33.0
+transformers==5.19.0
+# --- models and external artifacts used for results/icde27 (2026-10-16..19) ---
+# embedding model: BAAI/bge-small-en-v1.5, HF revision 5c38ec7c405ec4b44b94cc5a9bb96e735b38267a
+# LLM oracle (E8): Qwen2.5-7B-Instruct Q4_K_M GGUF (bartowski), sha256 65b8fcd92af6b4fefa935c625d1ac27ea29dcb6ee14589c55a8f115ceaaa1423
+# FastRFD: github.com/YukinoMR/FastRFD commit ee5b66ddb07abc3e57f460d908a4ac8e16baafa8 + baselines/fastrfd_pom.xml, JDK 21, Maven 3.9.9
+pytest==9.1.1

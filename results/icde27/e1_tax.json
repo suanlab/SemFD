@@ -1,0 +1,2973 @@
+[
+ {
+  "dataset": "tax200000",
+  "meta": {
+   "rho": 0.2,
+   "seed": 0,
+   "near_miss": [
+    0.02,
+    0.08
+   ]
+  },
+  "seed": 0,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "theta0": 0.9,
+  "grid": [
+   0.85,
+   0.9,
+   0.95
+  ],
+  "k": 5,
+  "proxy": "hybrid",
+  "rows": 200000,
+  "distinct": {
+   "f_name": 39471,
+   "gender": 2,
+   "area_code": 273,
+   "city": 45221,
+   "state": 104,
+   "zip": 39062,
+   "city_e2": 44717,
+   "city_e8": 43209
+  },
+  "canon_all": 84796,
+  "proxy_sec": 148.65037570148706,
+  "fds": [
+   {
+    "fd": "zip->city",
+    "g3": 0.0020000000000000018,
+    "truth": true,
+    "canon_cost": 45221,
+    "b0_exact_g3": 0.18883000000000005,
+    "b1_quot_g3": {
+     "0.85": 0.146385,
+     "0.9": 0.177875,
+     "0.95": 0.18820000000000003
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04083622774648849,
+      "lb": -0.034169561079821824,
+      "mean": 0.0033333333333333335,
+      "samples": 300,
+      "calls": 336,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04317465040999292,
+      "lb": -0.04317465040999292,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 340,
+      "theta": 0.85,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.030628976291070264,
+      "lb": -0.025628976291070266,
+      "mean": 0.0025,
+      "samples": 400,
+      "calls": 436,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.04083622774648849,
+      "lb": -0.034169561079821824,
+      "mean": 0.0033333333333333335,
+      "samples": 300,
+      "calls": 336,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0020000000000000018,
+     "calls": 45221
+    },
+    "b5_pairwise": {
+     "g3": 0.04230999999999996,
+     "calls": 312357
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 283,
+      "m": 300
+     },
+     {
+      "g3": 0.0030000000000000027,
+      "calls": 897,
+      "m": 1000
+     },
+     {
+      "g3": 0.0013999999999999568,
+      "calls": 3616,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "zip->state",
+    "g3": 0.0019599999999999618,
+    "truth": true,
+    "canon_cost": 104,
+    "b0_exact_g3": 0.11387000000000003,
+    "b1_quot_g3": {
+     "0.85": 0.11387000000000003,
+     "0.9": 0.11387000000000003,
+     "0.95": 0.11387000000000003
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04052724625282249,
+      "lb": -0.03386057958615582,
+      "mean": 0.0033333333333333335,
+      "samples": 300,
+      "calls": 74,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04317465040999292,
+      "lb": -0.04317465040999292,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 75,
+      "theta": 0.85,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.030397240170820763,
+      "lb": -0.025397240170820765,
+      "mean": 0.0025,
+      "samples": 400,
+      "calls": 79,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.04052724625282249,
+      "lb": -0.03386057958615582,
+      "mean": 0.0033333333333333335,
+      "samples": 300,
+      "calls": 74,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0019599999999999618,
+     "calls": 104
+    },
+    "b5_pairwise": {
+     "g3": 0.006700000000000039,
+     "calls": 692
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 81,
+      "m": 300
+     },
+     {
+      "g3": 0.0010000000000000009,
+      "calls": 97,
+      "m": 1000
+     },
+     {
+      "g3": 0.0020000000000000018,
+      "calls": 104,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "truth": true,
+    "canon_cost": 104,
+    "b0_exact_g3": 0.119255,
+    "b1_quot_g3": {
+     "0.85": 0.119255,
+     "0.9": 0.119255,
+     "0.95": 0.119255
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03585056848553885,
+      "lb": -0.03585056848553885,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 16,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04317465040999292,
+      "lb": -0.04317465040999292,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 12,
+      "theta": 0.85,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03585056848553885,
+      "lb": -0.03585056848553885,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 13,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.03585056848553885,
+      "lb": -0.03585056848553885,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 16,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0,
+     "calls": 104
+    },
+    "b5_pairwise": {
+     "g3": 0.0047800000000000065,
+     "calls": 692
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 81,
+      "m": 300
+     },
+     {
+      "g3": 0.0,
+      "calls": 100,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 104,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 0.00017000000000000348,
+    "truth": true,
+    "canon_cost": 39471,
+    "b0_exact_g3": 0.00013499999999999623,
+    "b1_quot_g3": {
+     "0.85": 0.09896499999999997,
+     "0.9": 0.014665000000000039,
+     "0.95": 0.0003750000000000142
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04983019312164668,
+      "lb": 0.005937236147209882,
+      "mean": 0.028,
+      "samples": 1000,
+      "calls": 2752,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.047687343533840736,
+      "lb": 0.005550522079565561,
+      "mean": 0.025384615384615384,
+      "samples": 1300,
+      "calls": 3755,
+      "theta": 0.9,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03966082661251816,
+      "lb": 0.0003062727120331024,
+      "mean": 0.019,
+      "samples": 1000,
+      "calls": 1381,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.007885
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.046797625100548426,
+      "lb": -0.0060985364421419185,
+      "mean": 0.02,
+      "samples": 600,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.007885
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.00017000000000000348,
+     "calls": 39471
+    },
+    "b5_pairwise": {
+     "g3": 0.000160000000000049,
+     "calls": 268630
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 961,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 4244,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->state",
+    "g3": 0.227935,
+    "truth": false,
+    "canon_cost": 45325,
+    "b0_exact_g3": 0.275625,
+    "b1_quot_g3": {
+     "0.85": 0.322005,
+     "0.9": 0.28746000000000005,
+     "0.95": 0.27624000000000004
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.3745901421843184,
+      "lb": 0.12991630577230573,
+      "mean": 0.265,
+      "samples": 200,
+      "calls": 504,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.3717152280174731,
+      "lb": 0.0984764708853936,
+      "mean": 0.235,
+      "samples": 200,
+      "calls": 1326,
+      "theta": 0.95,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.3467577449426368,
+      "lb": 0.10729968686523261,
+      "mean": 0.235,
+      "samples": 200,
+      "calls": 321,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.049235
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.3411119859619836,
+      "lb": 0.10345324812030114,
+      "mean": 0.23,
+      "samples": 200,
+      "calls": 3,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.049235
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.227935,
+     "calls": 45325
+    },
+    "b5_pairwise": {
+     "g3": 0.22602,
+     "calls": 313049
+    },
+    "b7_sample": [
+     {
+      "g3": 0.010000000000000009,
+      "calls": 263,
+      "m": 200
+     },
+     {
+      "g3": 0.04700000000000004,
+      "calls": 986,
+      "m": 1000
+     },
+     {
+      "g3": 0.11240000000000006,
+      "calls": 3772,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.546935,
+    "truth": false,
+    "canon_cost": 104,
+    "b0_exact_g3": 0.5453399999999999,
+    "b1_quot_g3": {
+     "0.85": 0.5453399999999999,
+     "0.9": 0.5453399999999999,
+     "0.95": 0.5453399999999999
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.6834458937293334,
+      "lb": 0.30168547254859235,
+      "mean": 0.52,
+      "samples": 100,
+      "calls": 27,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.7654283089713867,
+      "lb": 0.3116110651838607,
+      "mean": 0.54,
+      "samples": 100,
+      "calls": 40,
+      "theta": 0.95,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.6834458937293334,
+      "lb": 0.30168547254859235,
+      "mean": 0.52,
+      "samples": 100,
+      "calls": 1,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.6639249678050105,
+      "lb": 0.27952919585920244,
+      "mean": 0.5,
+      "samples": 100,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.546935,
+     "calls": 104
+    },
+    "b5_pairwise": {
+     "g3": 0.546935,
+     "calls": 692
+    },
+    "b7_sample": [
+     {
+      "g3": 0.30000000000000004,
+      "calls": 52,
+      "m": 100
+     },
+     {
+      "g3": 0.45699999999999996,
+      "calls": 97,
+      "m": 1000
+     },
+     {
+      "g3": 0.509,
+      "calls": 104,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->zip",
+    "g3": 0.45848,
+    "truth": false,
+    "canon_cost": 45221,
+    "b0_exact_g3": 0.40903500000000004,
+    "b1_quot_g3": {
+     "0.85": 0.46731999999999996,
+     "0.9": 0.42447999999999997,
+     "0.95": 0.40986500000000003
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.7173647475557148,
+      "lb": 0.30932556170217834,
+      "mean": 0.51,
+      "samples": 100,
+      "calls": 199,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.6824752182240521,
+      "lb": 0.22729913048655698,
+      "mean": 0.45,
+      "samples": 100,
+      "calls": 615,
+      "theta": 0.95,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.7173647475557148,
+      "lb": 0.30932556170217834,
+      "mean": 0.51,
+      "samples": 100,
+      "calls": 137,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.08988
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.6883644141897736,
+      "lb": 0.27941523628492804,
+      "mean": 0.48,
+      "samples": 100,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.08988
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.45848,
+     "calls": 45221
+    },
+    "b5_pairwise": {
+     "g3": 0.4508,
+     "calls": 312357
+    },
+    "b7_sample": [
+     {
+      "g3": 0.030000000000000027,
+      "calls": 100,
+      "m": 100
+     },
+     {
+      "g3": 0.14400000000000002,
+      "calls": 867,
+      "m": 1000
+     },
+     {
+      "g3": 0.25739999999999996,
+      "calls": 3670,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.530205,
+    "truth": false,
+    "canon_cost": 45221,
+    "b0_exact_g3": 0.45093000000000005,
+    "b1_quot_g3": {
+     "0.85": 0.502725,
+     "0.9": 0.46497999999999995,
+     "0.95": 0.45179499999999995
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.5899487131665639,
+      "lb": 0.21762358676354407,
+      "mean": 0.44,
+      "samples": 100,
+      "calls": 190,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.8019222891265092,
+      "lb": 0.3523394584795422,
+      "mean": 0.58,
+      "samples": 100,
+      "calls": 533,
+      "theta": 0.95,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.5899487131665639,
+      "lb": 0.21762358676354407,
+      "mean": 0.44,
+      "samples": 100,
+      "calls": 116,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.094975
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.5523503847659372,
+      "lb": 0.17496687146553416,
+      "mean": 0.39,
+      "samples": 100,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.094975
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.530205,
+     "calls": 45221
+    },
+    "b5_pairwise": {
+     "g3": 0.51494,
+     "calls": 312357
+    },
+    "b7_sample": [
+     {
+      "g3": 0.020000000000000018,
+      "calls": 97,
+      "m": 100
+     },
+     {
+      "g3": 0.08399999999999996,
+      "calls": 891,
+      "m": 1000
+     },
+     {
+      "g3": 0.21519999999999995,
+      "calls": 3652,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.021639999999999993,
+    "truth": true,
+    "canon_cost": 44717,
+    "b0_exact_g3": 0.20452000000000004,
+    "b1_quot_g3": {
+     "0.85": 0.16301500000000002,
+     "0.9": 0.19376499999999997,
+     "0.95": 0.20389500000000005
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.0495344162701963,
+      "lb": -0.02760316522784407,
+      "mean": 0.013333333333333334,
+      "samples": 300,
+      "calls": 290,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.0449231910228794,
+      "lb": -0.026239757540003315,
+      "mean": 0.01,
+      "samples": 400,
+      "calls": 340,
+      "theta": 0.85,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.0353422398577435,
+      "lb": -0.015342239857743497,
+      "mean": 0.01,
+      "samples": 500,
+      "calls": 480,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.0495344162701963,
+      "lb": -0.02760316522784407,
+      "mean": 0.013333333333333334,
+      "samples": 300,
+      "calls": 313,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.021639999999999993,
+     "calls": 44717
+    },
+    "b5_pairwise": {
+     "g3": 0.06171000000000004,
+     "calls": 309229
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 292,
+      "m": 300
+     },
+     {
+      "g3": 0.0020000000000000018,
+      "calls": 902,
+      "m": 1000
+     },
+     {
+      "g3": 0.0046000000000000485,
+      "calls": 3687,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.08080500000000002,
+    "truth": false,
+    "canon_cost": 43209,
+    "b0_exact_g3": 0.251035,
+    "b1_quot_g3": {
+     "0.85": 0.21243,
+     "0.9": 0.24102500000000004,
+     "0.95": 0.250455
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.12206110135043603,
+      "lb": 0.0505393640866461,
+      "mean": 0.08083333333333333,
+      "samples": 1200,
+      "calls": 1107,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.15511242609466963,
+      "lb": 0.05201903661582636,
+      "mean": 0.095,
+      "samples": 800,
+      "calls": 3107,
+      "theta": 0.95,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.1425260674014977,
+      "lb": 0.041196459614796795,
+      "mean": 0.08666666666666667,
+      "samples": 600,
+      "calls": 574,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.12206110135043603,
+      "lb": 0.0505393640866461,
+      "mean": 0.08083333333333333,
+      "samples": 1200,
+      "calls": 1151,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.08080500000000002,
+     "calls": 43209
+    },
+    "b5_pairwise": {
+     "g3": 0.11750499999999997,
+     "calls": 299074
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0030000000000000027,
+      "calls": 898,
+      "m": 1000
+     },
+     {
+      "g3": 0.00666666666666671,
+      "calls": 1053,
+      "m": 1200
+     },
+     {
+      "g3": 0.018199999999999994,
+      "calls": 3669,
+      "m": 5000
+     }
+    ]
+   }
+  ],
+  "alpha_per_fd": 0.005,
+  "run_calls_inverse": 5495,
+  "run_calls_grid_inverse": 10143,
+  "run_calls_ann_nubar": 3538,
+  "run_calls_b9_noaudit": 1893
+ },
+ {
+  "dataset": "tax200000",
+  "meta": {
+   "rho": 0.2,
+   "seed": 1,
+   "near_miss": [
+    0.02,
+    0.08
+   ]
+  },
+  "seed": 1,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "theta0": 0.9,
+  "grid": [
+   0.85,
+   0.9,
+   0.95
+  ],
+  "k": 5,
+  "proxy": "hybrid",
+  "rows": 200000,
+  "distinct": {
+   "f_name": 39523,
+   "gender": 2,
+   "area_code": 273,
+   "city": 44659,
+   "state": 104,
+   "zip": 39062,
+   "city_e2": 44150,
+   "city_e8": 42721
+  },
+  "canon_all": 84286,
+  "proxy_sec": 54.43173554353416,
+  "fds": [
+   {
+    "fd": "zip->city",
+    "g3": 0.0020000000000000018,
+    "truth": true,
+    "canon_cost": 44659,
+    "b0_exact_g3": 0.18612499999999998,
+    "b1_quot_g3": {
+     "0.85": 0.14425500000000002,
+     "0.9": 0.17550500000000002,
+     "0.95": 0.18554499999999996
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04046841270991945,
+      "lb": -0.033801746043252784,
+      "mean": 0.0033333333333333335,
+      "samples": 300,
+      "calls": 354,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04317465040999292,
+      "lb": -0.04317465040999292,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 329,
+      "theta": 0.85,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.030353115013643486,
+      "lb": -0.025353115013643488,
+      "mean": 0.0025,
+      "samples": 400,
+      "calls": 465,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.04046841270991945,
+      "lb": -0.033801746043252784,
+      "mean": 0.0033333333333333335,
+      "samples": 300,
+      "calls": 354,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0020000000000000018,
+     "calls": 44659
+    },
+    "b5_pairwise": {
+     "g3": 0.041830000000000034,
+     "calls": 308598
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 276,
+      "m": 300
+     },
+     {
+      "g3": 0.0020000000000000018,
+      "calls": 898,
+      "m": 1000
+     },
+     {
+      "g3": 0.0013999999999999568,
+      "calls": 3652,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "zip->state",
+    "g3": 0.0019599999999999618,
+    "truth": true,
+    "canon_cost": 104,
+    "b0_exact_g3": 0.11397500000000005,
+    "b1_quot_g3": {
+     "0.85": 0.11397500000000005,
+     "0.9": 0.11397500000000005,
+     "0.95": 0.11397500000000005
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03585056848553885,
+      "lb": -0.03585056848553885,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 73,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04317465040999292,
+      "lb": -0.04317465040999292,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 75,
+      "theta": 0.85,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03585056848553885,
+      "lb": -0.03585056848553885,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 73,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.03585056848553885,
+      "lb": -0.03585056848553885,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 73,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0019599999999999618,
+     "calls": 104
+    },
+    "b5_pairwise": {
+     "g3": 0.0066150000000000375,
+     "calls": 692
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0033333333333332993,
+      "calls": 81,
+      "m": 300
+     },
+     {
+      "g3": 0.0030000000000000027,
+      "calls": 101,
+      "m": 1000
+     },
+     {
+      "g3": 0.0010000000000000009,
+      "calls": 104,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "truth": true,
+    "canon_cost": 104,
+    "b0_exact_g3": 0.11912500000000004,
+    "b1_quot_g3": {
+     "0.85": 0.11912500000000004,
+     "0.9": 0.11912500000000004,
+     "0.95": 0.11912500000000004
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03585056848553885,
+      "lb": -0.03585056848553885,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 16,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04317465040999292,
+      "lb": -0.04317465040999292,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 12,
+      "theta": 0.85,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03585056848553885,
+      "lb": -0.03585056848553885,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 16,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.03585056848553885,
+      "lb": -0.03585056848553885,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 16,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0,
+     "calls": 104
+    },
+    "b5_pairwise": {
+     "g3": 0.0046800000000000175,
+     "calls": 692
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 79,
+      "m": 300
+     },
+     {
+      "g3": 0.0,
+      "calls": 100,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 104,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 0.00017000000000000348,
+    "truth": true,
+    "canon_cost": 39523,
+    "b0_exact_g3": 0.000160000000000049,
+    "b1_quot_g3": {
+     "0.85": 0.09672999999999998,
+     "0.9": 0.01391500000000001,
+     "0.95": 0.0003849999999999687
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04404943991663087,
+      "lb": -0.011768734798456686,
+      "mean": 0.016,
+      "samples": 500,
+      "calls": 1464,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.048036221755324834,
+      "lb": -0.016036221755324834,
+      "mean": 0.016,
+      "samples": 500,
+      "calls": 2038,
+      "theta": 0.9,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03534390636819345,
+      "lb": -0.015343906368193447,
+      "mean": 0.01,
+      "samples": 500,
+      "calls": 752,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.00752
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.04072052084616452,
+      "lb": -0.02072052084616452,
+      "mean": 0.01,
+      "samples": 400,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.00752
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.00017000000000000348,
+     "calls": 39523
+    },
+    "b5_pairwise": {
+     "g3": 0.00016499999999997073,
+     "calls": 269105
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 491,
+      "m": 500
+     },
+     {
+      "g3": 0.0,
+      "calls": 960,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 4222,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->state",
+    "g3": 0.227935,
+    "truth": false,
+    "canon_cost": 44763,
+    "b0_exact_g3": 0.27663499999999996,
+    "b1_quot_g3": {
+     "0.85": 0.32236,
+     "0.9": 0.28803,
+     "0.95": 0.27732500000000004
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.39793520190032267,
+      "lb": 0.06293746462947888,
+      "mean": 0.25,
+      "samples": 100,
+      "calls": 249,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.38407881559234847,
+      "lb": 0.10717355316034974,
+      "mean": 0.245,
+      "samples": 200,
+      "calls": 1351,
+      "theta": 0.95,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.3775056339551267,
+      "lb": 0.05533422404497587,
+      "mean": 0.24,
+      "samples": 100,
+      "calls": 150,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.048035
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.315937932286146,
+      "lb": 0.0835503300207962,
+      "mean": 0.2,
+      "samples": 200,
+      "calls": 5,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.048035
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.227935,
+     "calls": 44763
+    },
+    "b5_pairwise": {
+     "g3": 0.22587000000000002,
+     "calls": 309290
+    },
+    "b7_sample": [
+     {
+      "g3": 0.010000000000000009,
+      "calls": 154,
+      "m": 100
+     },
+     {
+      "g3": 0.03500000000000003,
+      "calls": 998,
+      "m": 1000
+     },
+     {
+      "g3": 0.1058,
+      "calls": 3795,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.546935,
+    "truth": false,
+    "canon_cost": 104,
+    "b0_exact_g3": 0.5452049999999999,
+    "b1_quot_g3": {
+     "0.85": 0.5452049999999999,
+     "0.9": 0.5452049999999999,
+     "0.95": 0.5452049999999999
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.80313034262936,
+      "lb": 0.40345407201009986,
+      "mean": 0.6,
+      "samples": 100,
+      "calls": 28,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.8226369533773841,
+      "lb": 0.3703678532879663,
+      "mean": 0.6,
+      "samples": 100,
+      "calls": 41,
+      "theta": 0.95,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.80313034262936,
+      "lb": 0.40345407201009986,
+      "mean": 0.6,
+      "samples": 100,
+      "calls": 4,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.784684238577295,
+      "lb": 0.3810590078334446,
+      "mean": 0.58,
+      "samples": 100,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.546935,
+     "calls": 104
+    },
+    "b5_pairwise": {
+     "g3": 0.546935,
+     "calls": 692
+    },
+    "b7_sample": [
+     {
+      "g3": 0.22999999999999998,
+      "calls": 61,
+      "m": 100
+     },
+     {
+      "g3": 0.482,
+      "calls": 99,
+      "m": 1000
+     },
+     {
+      "g3": 0.5105999999999999,
+      "calls": 104,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->zip",
+    "g3": 0.45848,
+    "truth": false,
+    "canon_cost": 44659,
+    "b0_exact_g3": 0.40969500000000003,
+    "b1_quot_g3": {
+     "0.85": 0.46769000000000005,
+     "0.9": 0.42467,
+     "0.95": 0.41056000000000004
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.6455886847811205,
+      "lb": 0.24548707896524022,
+      "mean": 0.46,
+      "samples": 100,
+      "calls": 257,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.7618954135205854,
+      "lb": 0.3202183774366108,
+      "mean": 0.52,
+      "samples": 100,
+      "calls": 724,
+      "theta": 0.95,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.6193795359599074,
+      "lb": 0.22542017479933296,
+      "mean": 0.44,
+      "samples": 100,
+      "calls": 194,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.08946
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.5768381306589748,
+      "lb": 0.18792077048977937,
+      "mean": 0.4,
+      "samples": 100,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.08946
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.45848,
+     "calls": 44659
+    },
+    "b5_pairwise": {
+     "g3": 0.45072,
+     "calls": 308598
+    },
+    "b7_sample": [
+     {
+      "g3": 0.020000000000000018,
+      "calls": 99,
+      "m": 100
+     },
+     {
+      "g3": 0.11299999999999999,
+      "calls": 906,
+      "m": 1000
+     },
+     {
+      "g3": 0.2592,
+      "calls": 3671,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.530205,
+    "truth": false,
+    "canon_cost": 44659,
+    "b0_exact_g3": 0.45182999999999995,
+    "b1_quot_g3": {
+     "0.85": 0.5027550000000001,
+     "0.9": 0.46570500000000004,
+     "0.95": 0.45260999999999996
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.7262564215467965,
+      "lb": 0.3206678519525885,
+      "mean": 0.53,
+      "samples": 100,
+      "calls": 168,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.7289044312704505,
+      "lb": 0.2687012849991321,
+      "mean": 0.5,
+      "samples": 100,
+      "calls": 490,
+      "theta": 0.95,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.689294926441718,
+      "lb": 0.28665933933926846,
+      "mean": 0.5,
+      "samples": 100,
+      "calls": 119,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.093825
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.6458766353087289,
+      "lb": 0.24894127530307097,
+      "mean": 0.46,
+      "samples": 100,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.093825
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.530205,
+     "calls": 44659
+    },
+    "b5_pairwise": {
+     "g3": 0.51505,
+     "calls": 308598
+    },
+    "b7_sample": [
+     {
+      "g3": 0.030000000000000027,
+      "calls": 96,
+      "m": 100
+     },
+     {
+      "g3": 0.07099999999999995,
+      "calls": 905,
+      "m": 1000
+     },
+     {
+      "g3": 0.21120000000000005,
+      "calls": 3674,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.022155000000000036,
+    "truth": true,
+    "canon_cost": 44150,
+    "b0_exact_g3": 0.20199999999999996,
+    "b1_quot_g3": {
+     "0.85": 0.16113500000000003,
+     "0.9": 0.19162500000000005,
+     "0.95": 0.20144499999999999
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.0482727706688503,
+      "lb": 0.002538656200856998,
+      "mean": 0.024444444444444446,
+      "samples": 900,
+      "calls": 854,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04928148346939295,
+      "lb": -0.02152757132893212,
+      "mean": 0.0175,
+      "samples": 400,
+      "calls": 331,
+      "theta": 0.85,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03912988746741667,
+      "lb": 0.006453151210899847,
+      "mean": 0.02125,
+      "samples": 1600,
+      "calls": 1458,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.0482727706688503,
+      "lb": 0.002538656200856998,
+      "mean": 0.024444444444444446,
+      "samples": 900,
+      "calls": 893,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.022155000000000036,
+     "calls": 44150
+    },
+    "b5_pairwise": {
+     "g3": 0.06062000000000001,
+     "calls": 304946
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0011111111111110628,
+      "calls": 790,
+      "m": 900
+     },
+     {
+      "g3": 0.006000000000000005,
+      "calls": 877,
+      "m": 1000
+     },
+     {
+      "g3": 0.006199999999999983,
+      "calls": 3635,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.07999500000000004,
+    "truth": false,
+    "canon_cost": 42721,
+    "b0_exact_g3": 0.24783999999999995,
+    "b1_quot_g3": {
+     "0.85": 0.20999,
+     "0.9": 0.23814500000000005,
+     "0.95": 0.24731000000000003
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.11781101991965526,
+      "lb": 0.050409841215466884,
+      "mean": 0.08583333333333333,
+      "samples": 1200,
+      "calls": 1066,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.14388322983523397,
+      "lb": 0.05026571350191569,
+      "mean": 0.09222222222222222,
+      "samples": 900,
+      "calls": 3309,
+      "theta": 0.95,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.11861884274677453,
+      "lb": 0.043616094134128994,
+      "mean": 0.08333333333333333,
+      "samples": 900,
+      "calls": 765,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.11781101991965526,
+      "lb": 0.050409841215466884,
+      "mean": 0.08583333333333333,
+      "samples": 1200,
+      "calls": 1095,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.07999500000000004,
+     "calls": 42721
+    },
+    "b5_pairwise": {
+     "g3": 0.11630499999999999,
+     "calls": 295247
+    },
+    "b7_sample": [
+     {
+      "g3": 0.008000000000000007,
+      "calls": 893,
+      "m": 1000
+     },
+     {
+      "g3": 0.008333333333333304,
+      "calls": 1049,
+      "m": 1200
+     },
+     {
+      "g3": 0.014599999999999946,
+      "calls": 3704,
+      "m": 5000
+     }
+    ]
+   }
+  ],
+  "alpha_per_fd": 0.005,
+  "run_calls_inverse": 4529,
+  "run_calls_grid_inverse": 8700,
+  "run_calls_ann_nubar": 3996,
+  "run_calls_b9_noaudit": 2436
+ },
+ {
+  "dataset": "tax200000",
+  "meta": {
+   "rho": 0.2,
+   "seed": 2,
+   "near_miss": [
+    0.02,
+    0.08
+   ]
+  },
+  "seed": 2,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "theta0": 0.9,
+  "grid": [
+   0.85,
+   0.9,
+   0.95
+  ],
+  "k": 5,
+  "proxy": "hybrid",
+  "rows": 200000,
+  "distinct": {
+   "f_name": 39364,
+   "gender": 2,
+   "area_code": 273,
+   "city": 45174,
+   "state": 104,
+   "zip": 39062,
+   "city_e2": 44672,
+   "city_e8": 43184
+  },
+  "canon_all": 84642,
+  "proxy_sec": 51.88230995461345,
+  "fds": [
+   {
+    "fd": "zip->city",
+    "g3": 0.0020000000000000018,
+    "truth": true,
+    "canon_cost": 45174,
+    "b0_exact_g3": 0.18852000000000002,
+    "b1_quot_g3": {
+     "0.85": 0.14663499999999996,
+     "0.9": 0.17772500000000002,
+     "0.95": 0.18789500000000003
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04046867714352323,
+      "lb": -0.03380201047685656,
+      "mean": 0.0033333333333333335,
+      "samples": 300,
+      "calls": 332,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.039813080041154386,
+      "lb": -0.027769295292684924,
+      "mean": 0.0075,
+      "samples": 400,
+      "calls": 455,
+      "theta": 0.85,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03035331333884632,
+      "lb": -0.02535331333884632,
+      "mean": 0.0025,
+      "samples": 400,
+      "calls": 437,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.04046867714352323,
+      "lb": -0.03380201047685656,
+      "mean": 0.0033333333333333335,
+      "samples": 300,
+      "calls": 332,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0020000000000000018,
+     "calls": 45174
+    },
+    "b5_pairwise": {
+     "g3": 0.04369500000000004,
+     "calls": 312068
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0033333333333332993,
+      "calls": 289,
+      "m": 300
+     },
+     {
+      "g3": 0.0010000000000000009,
+      "calls": 893,
+      "m": 1000
+     },
+     {
+      "g3": 0.0021999999999999797,
+      "calls": 3662,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "zip->state",
+    "g3": 0.0019599999999999618,
+    "truth": true,
+    "canon_cost": 104,
+    "b0_exact_g3": 0.11321000000000003,
+    "b1_quot_g3": {
+     "0.85": 0.11321000000000003,
+     "0.9": 0.11321000000000003,
+     "0.95": 0.11321000000000003
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03585056848553885,
+      "lb": -0.03585056848553885,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 76,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04317465040999292,
+      "lb": -0.04317465040999292,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 78,
+      "theta": 0.85,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03585056848553885,
+      "lb": -0.03585056848553885,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 76,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.03585056848553885,
+      "lb": -0.03585056848553885,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 76,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0019599999999999618,
+     "calls": 104
+    },
+    "b5_pairwise": {
+     "g3": 0.006630000000000025,
+     "calls": 692
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 77,
+      "m": 300
+     },
+     {
+      "g3": 0.0020000000000000018,
+      "calls": 101,
+      "m": 1000
+     },
+     {
+      "g3": 0.0006000000000000449,
+      "calls": 104,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "truth": true,
+    "canon_cost": 104,
+    "b0_exact_g3": 0.11833499999999997,
+    "b1_quot_g3": {
+     "0.85": 0.11833499999999997,
+     "0.9": 0.11833499999999997,
+     "0.95": 0.11833499999999997
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03585056848553885,
+      "lb": -0.03585056848553885,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 12,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04317465040999292,
+      "lb": -0.04317465040999292,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 13,
+      "theta": 0.85,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03585056848553885,
+      "lb": -0.03585056848553885,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 12,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.03585056848553885,
+      "lb": -0.03585056848553885,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 12,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0,
+     "calls": 104
+    },
+    "b5_pairwise": {
+     "g3": 0.0047199999999999465,
+     "calls": 692
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 80,
+      "m": 300
+     },
+     {
+      "g3": 0.0,
+      "calls": 99,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 104,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 0.00017000000000000348,
+    "truth": true,
+    "canon_cost": 39364,
+    "b0_exact_g3": 0.00014999999999998348,
+    "b1_quot_g3": {
+     "0.85": 0.09896499999999997,
+     "0.9": 0.014395000000000047,
+     "0.95": 0.0003849999999999687
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04928952105978551,
+      "lb": 0.007853591143417979,
+      "mean": 0.03,
+      "samples": 1100,
+      "calls": 2948,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04983776651073953,
+      "lb": 0.00587859976196713,
+      "mean": 0.028333333333333332,
+      "samples": 1200,
+      "calls": 3716,
+      "theta": 0.9,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.039022205989615186,
+      "lb": -0.005240145160071548,
+      "mean": 0.017142857142857144,
+      "samples": 700,
+      "calls": 929,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.00895
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.04507999795127012,
+      "lb": -0.031746664617936786,
+      "mean": 0.006666666666666667,
+      "samples": 300,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.00895
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.00017000000000000348,
+     "calls": 39364
+    },
+    "b5_pairwise": {
+     "g3": 0.000160000000000049,
+     "calls": 267711
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 968,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 1056,
+      "m": 1100
+     },
+     {
+      "g3": 0.00019999999999997797,
+      "calls": 4225,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->state",
+    "g3": 0.227935,
+    "truth": false,
+    "canon_cost": 45278,
+    "b0_exact_g3": 0.27542,
+    "b1_quot_g3": {
+     "0.85": 0.32169499999999995,
+     "0.9": 0.286925,
+     "0.95": 0.276115
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.4960350170323138,
+      "lb": 0.1136745333750907,
+      "mean": 0.31,
+      "samples": 100,
+      "calls": 321,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.4072854478400719,
+      "lb": 0.12791624705125032,
+      "mean": 0.27,
+      "samples": 200,
+      "calls": 1347,
+      "theta": 0.95,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.4600921195064571,
+      "lb": 0.08890626526552281,
+      "mean": 0.28,
+      "samples": 100,
+      "calls": 241,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.049975
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.4043636339280594,
+      "lb": 0.057269819413127254,
+      "mean": 0.24,
+      "samples": 100,
+      "calls": 3,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.049975
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.227935,
+     "calls": 45278
+    },
+    "b5_pairwise": {
+     "g3": 0.22552000000000005,
+     "calls": 312760
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 155,
+      "m": 100
+     },
+     {
+      "g3": 0.04500000000000004,
+      "calls": 982,
+      "m": 1000
+     },
+     {
+      "g3": 0.11380000000000001,
+      "calls": 3750,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.546935,
+    "truth": false,
+    "canon_cost": 104,
+    "b0_exact_g3": 0.54554,
+    "b1_quot_g3": {
+     "0.85": 0.54554,
+     "0.9": 0.54554,
+     "0.95": 0.54554
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.6814754579053688,
+      "lb": 0.3009381653163725,
+      "mean": 0.53,
+      "samples": 100,
+      "calls": 36,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.7929036848748312,
+      "lb": 0.3387109892715158,
+      "mean": 0.58,
+      "samples": 100,
+      "calls": 42,
+      "theta": 0.95,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.6814754579053688,
+      "lb": 0.3009381653163725,
+      "mean": 0.53,
+      "samples": 100,
+      "calls": 5,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.6814754579053688,
+      "lb": 0.3009381653163725,
+      "mean": 0.53,
+      "samples": 100,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.546935,
+     "calls": 104
+    },
+    "b5_pairwise": {
+     "g3": 0.546935,
+     "calls": 692
+    },
+    "b7_sample": [
+     {
+      "g3": 0.26,
+      "calls": 54,
+      "m": 100
+     },
+     {
+      "g3": 0.505,
+      "calls": 99,
+      "m": 1000
+     },
+     {
+      "g3": 0.5136000000000001,
+      "calls": 104,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->zip",
+    "g3": 0.45848,
+    "truth": false,
+    "canon_cost": 45174,
+    "b0_exact_g3": 0.40883499999999995,
+    "b1_quot_g3": {
+     "0.85": 0.46714,
+     "0.9": 0.42378499999999997,
+     "0.95": 0.40971
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.713503995413382,
+      "lb": 0.30539955213819414,
+      "mean": 0.5,
+      "samples": 100,
+      "calls": 218,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.7671369640530918,
+      "lb": 0.3112947323304137,
+      "mean": 0.54,
+      "samples": 100,
+      "calls": 658,
+      "theta": 0.95,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.6929632967333037,
+      "lb": 0.28143730751453033,
+      "mean": 0.48,
+      "samples": 100,
+      "calls": 169,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.090825
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.6595851467783168,
+      "lb": 0.2484713870288534,
+      "mean": 0.45,
+      "samples": 100,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.090825
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.45848,
+     "calls": 45174
+    },
+    "b5_pairwise": {
+     "g3": 0.450365,
+     "calls": 312068
+    },
+    "b7_sample": [
+     {
+      "g3": 0.020000000000000018,
+      "calls": 99,
+      "m": 100
+     },
+     {
+      "g3": 0.122,
+      "calls": 899,
+      "m": 1000
+     },
+     {
+      "g3": 0.2662,
+      "calls": 3651,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.530205,
+    "truth": false,
+    "canon_cost": 45174,
+    "b0_exact_g3": 0.4506,
+    "b1_quot_g3": {
+     "0.85": 0.5017400000000001,
+     "0.9": 0.46407,
+     "0.95": 0.45137499999999997
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.7775439900140481,
+      "lb": 0.37599292298019116,
+      "mean": 0.57,
+      "samples": 100,
+      "calls": 173,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.8198044938092177,
+      "lb": 0.3711253030823912,
+      "mean": 0.61,
+      "samples": 100,
+      "calls": 470,
+      "theta": 0.95,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.7493985615264611,
+      "lb": 0.3434358911667492,
+      "mean": 0.54,
+      "samples": 100,
+      "calls": 118,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.095555
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.7195953718062946,
+      "lb": 0.31024575459961945,
+      "mean": 0.51,
+      "samples": 100,
+      "calls": 0,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.095555
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.530205,
+     "calls": 45174
+    },
+    "b5_pairwise": {
+     "g3": 0.514265,
+     "calls": 312068
+    },
+    "b7_sample": [
+     {
+      "g3": 0.020000000000000018,
+      "calls": 94,
+      "m": 100
+     },
+     {
+      "g3": 0.08899999999999997,
+      "calls": 891,
+      "m": 1000
+     },
+     {
+      "g3": 0.19879999999999998,
+      "calls": 3664,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.021540000000000004,
+    "truth": true,
+    "canon_cost": 44672,
+    "b0_exact_g3": 0.20386000000000004,
+    "b1_quot_g3": {
+     "0.85": 0.16281,
+     "0.9": 0.19326500000000002,
+     "0.95": 0.20325000000000004
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.048277788594588526,
+      "lb": -0.000271639176354789,
+      "mean": 0.0225,
+      "samples": 800,
+      "calls": 775,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04954875991090679,
+      "lb": -0.008497491406982745,
+      "mean": 0.021666666666666667,
+      "samples": 600,
+      "calls": 515,
+      "theta": 0.85,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.039914658663112064,
+      "lb": 0.003998183329600738,
+      "mean": 0.02,
+      "samples": 1300,
+      "calls": 1211,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.048277788594588526,
+      "lb": -0.000271639176354789,
+      "mean": 0.0225,
+      "samples": 800,
+      "calls": 806,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.021540000000000004,
+     "calls": 44672
+    },
+    "b5_pairwise": {
+     "g3": 0.06194999999999995,
+     "calls": 308576
+    },
+    "b7_sample": [
+     {
+      "g3": 0.003750000000000031,
+      "calls": 723,
+      "m": 800
+     },
+     {
+      "g3": 0.0010000000000000009,
+      "calls": 878,
+      "m": 1000
+     },
+     {
+      "g3": 0.00539999999999996,
+      "calls": 3683,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.07950500000000005,
+    "truth": false,
+    "canon_cost": 43184,
+    "b0_exact_g3": 0.249645,
+    "b1_quot_g3": {
+     "0.85": 0.211615,
+     "0.9": 0.23978999999999995,
+     "0.95": 0.24907500000000005
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.13867675951059877,
+      "lb": 0.05110296927063455,
+      "mean": 0.09375,
+      "samples": 800,
+      "calls": 724,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.09773044579647175,
+      "lb": 0.050096466882199556,
+      "mean": 0.07033333333333333,
+      "samples": 3000,
+      "calls": 4185,
+      "theta": 0.95,
+      "alpha": 0.0016666666666666668,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.15216882115348138,
+      "lb": 0.041569231828212906,
+      "mean": 0.096,
+      "samples": 500,
+      "calls": 419,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.13867675951059877,
+      "lb": 0.05110296927063455,
+      "mean": 0.09375,
+      "samples": 800,
+      "calls": 747,
+      "theta": 0.9,
+      "alpha": 0.005,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.07950500000000005,
+     "calls": 43184
+    },
+    "b5_pairwise": {
+     "g3": 0.11743499999999996,
+     "calls": 298635
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0012499999999999734,
+      "calls": 729,
+      "m": 800
+     },
+     {
+      "g3": 0.007000000000000006,
+      "calls": 882,
+      "m": 1000
+     },
+     {
+      "g3": 0.014800000000000035,
+      "calls": 3702,
+      "m": 5000
+     }
+    ]
+   }
+  ],
+  "alpha_per_fd": 0.005,
+  "run_calls_inverse": 5615,
+  "run_calls_grid_inverse": 11479,
+  "run_calls_ann_nubar": 3617,
+  "run_calls_b9_noaudit": 1976
+ }
+]

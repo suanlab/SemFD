@@ -1,0 +1,2688 @@
+[
+ {
+  "dataset": "ndc116620",
+  "meta": {
+   "seed": 0,
+   "near_miss": [
+    0.02,
+    0.08
+   ]
+  },
+  "seed": 0,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "theta0": 0.95,
+  "grid": [
+   0.85,
+   0.9,
+   0.95
+  ],
+  "k": 5,
+  "proxy": "hybrid",
+  "rows": 116620,
+  "distinct": {
+   "labcode": 5368,
+   "labeler": 6653,
+   "appno": 13119,
+   "brand": 37348,
+   "generic": 16054,
+   "mktcat": 12,
+   "ptype": 7,
+   "labeler_e2": 6605,
+   "labeler_e8": 6465
+  },
+  "canon_all": 6653,
+  "proxy_sec": 5.647959483787417,
+  "fds": [
+   {
+    "fd": "labcode->labeler",
+    "g3": 0.0,
+    "truth": true,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.10704853369919398,
+    "b1_quot_g3": {
+     "0.85": 0.025998971016978234,
+     "0.9": 0.04073915280397877,
+     "0.95": 0.06186760418453097
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.035148165047820014,
+      "lb": -0.035148165047820014,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 225,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04247224697227408,
+      "lb": -0.04247224697227408,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 229,
+      "theta": 0.85,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.035148165047820014,
+      "lb": -0.035148165047820014,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 225,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.035148165047820014,
+      "lb": -0.035148165047820014,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 225,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.00481049562682212,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 214,
+      "m": 300
+     },
+     {
+      "g3": 0.0,
+      "calls": 486,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 1398,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "labeler->ptype",
+    "g3": 0.0258446235637112,
+    "truth": true,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.024695592522723353,
+    "b1_quot_g3": {
+     "0.85": 0.028116961070142388,
+     "0.9": 0.027062253472817654,
+     "0.95": 0.025235808609157973
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.049801359483497204,
+      "lb": 0.0073762983080490445,
+      "mean": 0.028181818181818183,
+      "samples": 1100,
+      "calls": 1022,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.049173139533130794,
+      "lb": 0.00993506390064677,
+      "mean": 0.02875,
+      "samples": 1600,
+      "calls": 1259,
+      "theta": 0.85,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03995771228131744,
+      "lb": 0.01652355654195875,
+      "mean": 0.027837837837837838,
+      "samples": 3700,
+      "calls": 668,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.00040301835019722175
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.049758072799124975,
+      "lb": 0.003954328283063847,
+      "mean": 0.02666666666666667,
+      "samples": 900,
+      "calls": 0,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.00040301835019722175
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0258446235637112,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.0258360487051964,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.020000000000000018,
+      "calls": 488,
+      "m": 1000
+     },
+     {
+      "g3": 0.021818181818181848,
+      "calls": 549,
+      "m": 1100
+     },
+     {
+      "g3": 0.019199999999999995,
+      "calls": 1379,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "labeler->labcode",
+    "g3": 0.12845138055222094,
+    "truth": false,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.10823186417424113,
+    "b1_quot_g3": {
+     "0.85": 0.13606585491339396,
+     "0.9": 0.1264019893671754,
+     "0.95": 0.11500600240096037
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.22061810050677017,
+      "lb": 0.05539485236625542,
+      "mean": 0.13333333333333333,
+      "samples": 300,
+      "calls": 259,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.20817827800129418,
+      "lb": 0.05211570788033838,
+      "mean": 0.1225,
+      "samples": 400,
+      "calls": 1051,
+      "theta": 0.95,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.20692022297182122,
+      "lb": 0.047816394613809335,
+      "mean": 0.12333333333333334,
+      "samples": 300,
+      "calls": 160,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.015966386554621848
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.15638480096013604,
+      "lb": 0.052067581967535935,
+      "mean": 0.1,
+      "samples": 600,
+      "calls": 0,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.015966386554621848
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.12845138055222094,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.12224318298748071,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.08333333333333337,
+      "calls": 205,
+      "m": 300
+     },
+     {
+      "g3": 0.10299999999999998,
+      "calls": 516,
+      "m": 1000
+     },
+     {
+      "g3": 0.13039999999999996,
+      "calls": 1386,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "labeler->mktcat",
+    "g3": 0.09980277825415884,
+    "truth": false,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.09510375578802954,
+    "b1_quot_g3": {
+     "0.85": 0.10144057623049219,
+     "0.9": 0.09894529240267536,
+     "0.95": 0.09685302692505571
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.22987304679937967,
+      "lb": 0.06022026289075515,
+      "mean": 0.14,
+      "samples": 300,
+      "calls": 195,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.2362616444395591,
+      "lb": 0.050768569674898956,
+      "mean": 0.14,
+      "samples": 300,
+      "calls": 742,
+      "theta": 0.95,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.216071305266404,
+      "lb": 0.05371088948100548,
+      "mean": 0.13333333333333333,
+      "samples": 300,
+      "calls": 82,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0073572286057280055
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.1763476291488002,
+      "lb": 0.058708852535769664,
+      "mean": 0.118,
+      "samples": 500,
+      "calls": 0,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0073572286057280055
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.09980277825415884,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.09944263419653576,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.06333333333333335,
+      "calls": 202,
+      "m": 300
+     },
+     {
+      "g3": 0.07699999999999996,
+      "calls": 508,
+      "m": 1000
+     },
+     {
+      "g3": 0.08099999999999996,
+      "calls": 1379,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "appno->labeler",
+    "g3": 0.6527096552906877,
+    "truth": false,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.6603241296518607,
+    "b1_quot_g3": {
+     "0.85": 0.6490053164122792,
+     "0.9": 0.6500257245755445,
+     "0.95": 0.6570313839821643
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.8972415469503752,
+      "lb": 0.5214386984419506,
+      "mean": 0.71,
+      "samples": 100,
+      "calls": 24,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9208622474067435,
+      "lb": 0.5029692326758788,
+      "mean": 0.71,
+      "samples": 100,
+      "calls": 38,
+      "theta": 0.95,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.8972415469503752,
+      "lb": 0.5214386984419506,
+      "mean": 0.71,
+      "samples": 100,
+      "calls": 47,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.8972415469503752,
+      "lb": 0.5214386984419506,
+      "mean": 0.71,
+      "samples": 100,
+      "calls": 67,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.6527096552906877,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.6533527696793002,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.22999999999999998,
+      "calls": 84,
+      "m": 100
+     },
+     {
+      "g3": 0.374,
+      "calls": 490,
+      "m": 1000
+     },
+     {
+      "g3": 0.4578,
+      "calls": 1363,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "brand->labeler",
+    "g3": 0.45790601955067745,
+    "truth": false,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.4675441605213514,
+    "b1_quot_g3": {
+     "0.85": 0.4576487737952324,
+     "0.9": 0.4591750986108729,
+     "0.95": 0.46347110272680503
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.6241334966954531,
+      "lb": 0.22132309342998632,
+      "mean": 0.43,
+      "samples": 100,
+      "calls": 27,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.6478527132633496,
+      "lb": 0.19951882455083889,
+      "mean": 0.43,
+      "samples": 100,
+      "calls": 36,
+      "theta": 0.95,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.6241334966954531,
+      "lb": 0.22132309342998632,
+      "mean": 0.43,
+      "samples": 100,
+      "calls": 35,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.6241334966954531,
+      "lb": 0.22132309342998632,
+      "mean": 0.43,
+      "samples": 100,
+      "calls": 47,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.45790601955067745,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.4582490138912708,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.07999999999999996,
+      "calls": 90,
+      "m": 100
+     },
+     {
+      "g3": 0.15400000000000003,
+      "calls": 501,
+      "m": 1000
+     },
+     {
+      "g3": 0.28559999999999997,
+      "calls": 1440,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "generic->labeler",
+    "g3": 0.6590207511576058,
+    "truth": false,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.6646973074944263,
+    "b1_quot_g3": {
+     "0.85": 0.6584719602126565,
+     "0.9": 0.6593808952152289,
+     "0.95": 0.6624421197050249
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.8408854769629056,
+      "lb": 0.4568916928990795,
+      "mean": 0.64,
+      "samples": 100,
+      "calls": 30,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.8621647920038766,
+      "lb": 0.432391793539029,
+      "mean": 0.64,
+      "samples": 100,
+      "calls": 46,
+      "theta": 0.95,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.8408854769629056,
+      "lb": 0.4568916928990795,
+      "mean": 0.64,
+      "samples": 100,
+      "calls": 36,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.8408854769629056,
+      "lb": 0.4568916928990795,
+      "mean": 0.64,
+      "samples": 100,
+      "calls": 59,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.6590207511576058,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.6594323443663179,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.050000000000000044,
+      "calls": 81,
+      "m": 100
+     },
+     {
+      "g3": 0.276,
+      "calls": 507,
+      "m": 1000
+     },
+     {
+      "g3": 0.47619999999999996,
+      "calls": 1387,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "labcode->labeler_e2",
+    "g3": 0.0202023666609501,
+    "truth": true,
+    "canon_cost": 6605,
+    "b0_exact_g3": 0.12478991596638656,
+    "b1_quot_g3": {
+     "0.85": 0.045592522723375106,
+     "0.9": 0.06000685988681187,
+     "0.95": 0.08065511919053336
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.047671083253977876,
+      "lb": -0.0025681633219870117,
+      "mean": 0.02142857142857143,
+      "samples": 700,
+      "calls": 147,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.044334905069523686,
+      "lb": -0.025790164897773908,
+      "mean": 0.01,
+      "samples": 400,
+      "calls": 55,
+      "theta": 0.85,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.038528161107343556,
+      "lb": 0.0025824161858893947,
+      "mean": 0.019166666666666665,
+      "samples": 1200,
+      "calls": 291,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.047671083253977876,
+      "lb": -0.0025681633219870117,
+      "mean": 0.02142857142857143,
+      "samples": 700,
+      "calls": 258,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0202023666609501,
+     "calls": 6605
+    },
+    "b5_pairwise": {
+     "g3": 0.024275424455496464,
+     "calls": 43236
+    },
+    "b7_sample": [
+     {
+      "g3": 0.017142857142857126,
+      "calls": 401,
+      "m": 700
+     },
+     {
+      "g3": 0.01100000000000001,
+      "calls": 492,
+      "m": 1000
+     },
+     {
+      "g3": 0.018000000000000016,
+      "calls": 1387,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "labcode->labeler_e8",
+    "g3": 0.0812896587206311,
+    "truth": false,
+    "canon_cost": 6465,
+    "b0_exact_g3": 0.17942033956439718,
+    "b1_quot_g3": {
+     "0.85": 0.10518778940147488,
+     "0.9": 0.11886468873263589,
+     "0.95": 0.13805522208883558
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.09498593923977844,
+      "lb": 0.0508298349393015,
+      "mean": 0.07423076923076923,
+      "samples": 2600,
+      "calls": 443,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.09661723448609123,
+      "lb": 0.05098826463478505,
+      "mean": 0.07620689655172413,
+      "samples": 2900,
+      "calls": 659,
+      "theta": 0.95,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.10222539277266902,
+      "lb": 0.04164228518727753,
+      "mean": 0.07153846153846154,
+      "samples": 1300,
+      "calls": 229,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.09498593923977844,
+      "lb": 0.0508298349393015,
+      "mean": 0.07423076923076923,
+      "samples": 2600,
+      "calls": 632,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0812896587206311,
+     "calls": 6465
+    },
+    "b5_pairwise": {
+     "g3": 0.0855685131195335,
+     "calls": 42312
+    },
+    "b7_sample": [
+     {
+      "g3": 0.05500000000000005,
+      "calls": 491,
+      "m": 1000
+     },
+     {
+      "g3": 0.06000000000000005,
+      "calls": 945,
+      "m": 2600
+     },
+     {
+      "g3": 0.0736,
+      "calls": 1380,
+      "m": 5000
+     }
+    ]
+   }
+  ],
+  "alpha_per_fd": 0.005555555555555556,
+  "run_calls_inverse": 2372,
+  "run_calls_grid_inverse": 4115,
+  "run_calls_ann_nubar": 1773,
+  "run_calls_b9_noaudit": 1288
+ },
+ {
+  "dataset": "ndc116620",
+  "meta": {
+   "seed": 1,
+   "near_miss": [
+    0.02,
+    0.08
+   ]
+  },
+  "seed": 1,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "theta0": 0.95,
+  "grid": [
+   0.85,
+   0.9,
+   0.95
+  ],
+  "k": 5,
+  "proxy": "hybrid",
+  "rows": 116620,
+  "distinct": {
+   "labcode": 5368,
+   "labeler": 6653,
+   "appno": 13119,
+   "brand": 37348,
+   "generic": 16054,
+   "mktcat": 12,
+   "ptype": 7,
+   "labeler_e2": 6591,
+   "labeler_e8": 6446
+  },
+  "canon_all": 6653,
+  "proxy_sec": 5.576025232672691,
+  "fds": [
+   {
+    "fd": "labcode->labeler",
+    "g3": 0.0,
+    "truth": true,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.10704853369919398,
+    "b1_quot_g3": {
+     "0.85": 0.025998971016978234,
+     "0.9": 0.04073915280397877,
+     "0.95": 0.06186760418453097
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.035148165047820014,
+      "lb": -0.035148165047820014,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 221,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04247224697227408,
+      "lb": -0.04247224697227408,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 236,
+      "theta": 0.85,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.035148165047820014,
+      "lb": -0.035148165047820014,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 221,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.035148165047820014,
+      "lb": -0.035148165047820014,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 221,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.00481049562682212,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 210,
+      "m": 300
+     },
+     {
+      "g3": 0.0,
+      "calls": 513,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 1401,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "labeler->ptype",
+    "g3": 0.0258446235637112,
+    "truth": true,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.024695592522723353,
+    "b1_quot_g3": {
+     "0.85": 0.028116961070142388,
+     "0.9": 0.027062253472817654,
+     "0.95": 0.025235808609157973
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04895505261574737,
+      "lb": 0.010276787521587807,
+      "mean": 0.03,
+      "samples": 1300,
+      "calls": 1166,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04892474855894717,
+      "lb": 0.0023959488733216183,
+      "mean": 0.026,
+      "samples": 1000,
+      "calls": 982,
+      "theta": 0.85,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03999098582884662,
+      "lb": 0.016898808214407292,
+      "mean": 0.02794871794871795,
+      "samples": 3900,
+      "calls": 633,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.00040301835019722175
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.04952482242352425,
+      "lb": 0.005648534411712591,
+      "mean": 0.027,
+      "samples": 1000,
+      "calls": 0,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.00040301835019722175
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0258446235637112,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.0258360487051964,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.017000000000000015,
+      "calls": 513,
+      "m": 1000
+     },
+     {
+      "g3": 0.021538461538461506,
+      "calls": 635,
+      "m": 1300
+     },
+     {
+      "g3": 0.024399999999999977,
+      "calls": 1400,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "labeler->labcode",
+    "g3": 0.12845138055222094,
+    "truth": false,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.10823186417424113,
+    "b1_quot_g3": {
+     "0.85": 0.13606585491339396,
+     "0.9": 0.1264019893671754,
+     "0.95": 0.11500600240096037
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.22720383498472102,
+      "lb": 0.059520565582737356,
+      "mean": 0.14,
+      "samples": 300,
+      "calls": 256,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.23477829036701126,
+      "lb": 0.05054620481837305,
+      "mean": 0.14,
+      "samples": 300,
+      "calls": 776,
+      "theta": 0.95,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.2107872797083456,
+      "lb": 0.04941308758365845,
+      "mean": 0.12666666666666668,
+      "samples": 300,
+      "calls": 166,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.015966386554621848
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.1464512116675221,
+      "lb": 0.05147180712608097,
+      "mean": 0.09571428571428571,
+      "samples": 700,
+      "calls": 0,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.015966386554621848
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.12845138055222094,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.12224318298748071,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.10666666666666669,
+      "calls": 219,
+      "m": 300
+     },
+     {
+      "g3": 0.10499999999999998,
+      "calls": 500,
+      "m": 1000
+     },
+     {
+      "g3": 0.12060000000000004,
+      "calls": 1352,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "labeler->mktcat",
+    "g3": 0.09980277825415884,
+    "truth": false,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.09510375578802954,
+    "b1_quot_g3": {
+     "0.85": 0.10144057623049219,
+     "0.9": 0.09894529240267536,
+     "0.95": 0.09685302692505571
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.1563197241305223,
+      "lb": 0.056220987361108594,
+      "mean": 0.11333333333333333,
+      "samples": 600,
+      "calls": 338,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.1620834697011745,
+      "lb": 0.05160698243945189,
+      "mean": 0.11333333333333333,
+      "samples": 600,
+      "calls": 830,
+      "theta": 0.95,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.15293349808409826,
+      "lb": 0.04565796431693345,
+      "mean": 0.104,
+      "samples": 500,
+      "calls": 132,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0073572286057280055
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.1355310427477054,
+      "lb": 0.052944536442004836,
+      "mean": 0.1,
+      "samples": 800,
+      "calls": 0,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0073572286057280055
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.09980277825415884,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.09944263419653576,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.046666666666666634,
+      "calls": 345,
+      "m": 600
+     },
+     {
+      "g3": 0.06299999999999994,
+      "calls": 516,
+      "m": 1000
+     },
+     {
+      "g3": 0.08099999999999996,
+      "calls": 1419,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "appno->labeler",
+    "g3": 0.6527096552906877,
+    "truth": false,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.6603241296518607,
+    "b1_quot_g3": {
+     "0.85": 0.6490053164122792,
+     "0.9": 0.6500257245755445,
+     "0.95": 0.6570313839821643
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.8347196219051567,
+      "lb": 0.4684853968321723,
+      "mean": 0.63,
+      "samples": 100,
+      "calls": 21,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.8584654222694993,
+      "lb": 0.4496678647192898,
+      "mean": 0.63,
+      "samples": 100,
+      "calls": 43,
+      "theta": 0.95,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.8347196219051567,
+      "lb": 0.4684853968321723,
+      "mean": 0.63,
+      "samples": 100,
+      "calls": 46,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.8347196219051567,
+      "lb": 0.4684853968321723,
+      "mean": 0.63,
+      "samples": 100,
+      "calls": 60,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.6527096552906877,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.6533527696793002,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.28,
+      "calls": 88,
+      "m": 100
+     },
+     {
+      "g3": 0.368,
+      "calls": 492,
+      "m": 1000
+     },
+     {
+      "g3": 0.4586,
+      "calls": 1397,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "brand->labeler",
+    "g3": 0.45790601955067745,
+    "truth": false,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.4675441605213514,
+    "b1_quot_g3": {
+     "0.85": 0.4576487737952324,
+     "0.9": 0.4591750986108729,
+     "0.95": 0.46347110272680503
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.6462718724994662,
+      "lb": 0.2394704316190234,
+      "mean": 0.44,
+      "samples": 100,
+      "calls": 25,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.6701574744481804,
+      "lb": 0.21732965657755246,
+      "mean": 0.44,
+      "samples": 100,
+      "calls": 60,
+      "theta": 0.95,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.6462718724994662,
+      "lb": 0.2394704316190234,
+      "mean": 0.44,
+      "samples": 100,
+      "calls": 35,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.6462718724994662,
+      "lb": 0.2394704316190234,
+      "mean": 0.44,
+      "samples": 100,
+      "calls": 50,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.45790601955067745,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.4582490138912708,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.010000000000000009,
+      "calls": 82,
+      "m": 100
+     },
+     {
+      "g3": 0.139,
+      "calls": 506,
+      "m": 1000
+     },
+     {
+      "g3": 0.28059999999999996,
+      "calls": 1425,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "generic->labeler",
+    "g3": 0.6590207511576058,
+    "truth": false,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.6646973074944263,
+    "b1_quot_g3": {
+     "0.85": 0.6584719602126565,
+     "0.9": 0.6593808952152289,
+     "0.95": 0.6624421197050249
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.8809755481189,
+      "lb": 0.5048975189823177,
+      "mean": 0.69,
+      "samples": 100,
+      "calls": 32,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9032210612639309,
+      "lb": 0.4832000857150217,
+      "mean": 0.69,
+      "samples": 100,
+      "calls": 52,
+      "theta": 0.95,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.8809755481189,
+      "lb": 0.5048975189823177,
+      "mean": 0.69,
+      "samples": 100,
+      "calls": 41,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.8809755481189,
+      "lb": 0.5048975189823177,
+      "mean": 0.69,
+      "samples": 100,
+      "calls": 61,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.6590207511576058,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.6594323443663179,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.06999999999999995,
+      "calls": 77,
+      "m": 100
+     },
+     {
+      "g3": 0.29800000000000004,
+      "calls": 482,
+      "m": 1000
+     },
+     {
+      "g3": 0.48140000000000005,
+      "calls": 1445,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "labcode->labeler_e2",
+    "g3": 0.02025381581203911,
+    "truth": true,
+    "canon_cost": 6591,
+    "b0_exact_g3": 0.1250042874292574,
+    "b1_quot_g3": {
+     "0.85": 0.04572972045961243,
+     "0.9": 0.060092608471960185,
+     "0.95": 0.0808094666438004
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.048978943278082346,
+      "lb": -0.028978943278082342,
+      "mean": 0.01,
+      "samples": 300,
+      "calls": 73,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04820492772913969,
+      "lb": -0.0005917738301397975,
+      "mean": 0.023333333333333334,
+      "samples": 900,
+      "calls": 101,
+      "theta": 0.85,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.03888076231609869,
+      "lb": -0.01863712801917079,
+      "mean": 0.0125,
+      "samples": 400,
+      "calls": 125,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.048978943278082346,
+      "lb": -0.028978943278082342,
+      "mean": 0.01,
+      "samples": 300,
+      "calls": 129,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.02025381581203911,
+     "calls": 6591
+    },
+    "b5_pairwise": {
+     "g3": 0.024918538844109106,
+     "calls": 43151
+    },
+    "b7_sample": [
+     {
+      "g3": 0.013333333333333308,
+      "calls": 212,
+      "m": 300
+     },
+     {
+      "g3": 0.010000000000000009,
+      "calls": 495,
+      "m": 1000
+     },
+     {
+      "g3": 0.016800000000000037,
+      "calls": 1427,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "labcode->labeler_e8",
+    "g3": 0.07918881838449665,
+    "truth": false,
+    "canon_cost": 6446,
+    "b0_exact_g3": 0.17772251757845992,
+    "b1_quot_g3": {
+     "0.85": 0.10322414680157777,
+     "0.9": 0.11672097410392723,
+     "0.95": 0.13627165151775
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.0897353634889438,
+      "lb": 0.05002155984998954,
+      "mean": 0.069375,
+      "samples": 3200,
+      "calls": 523,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.09094288244734886,
+      "lb": 0.05049063051232988,
+      "mean": 0.07052631578947369,
+      "samples": 3800,
+      "calls": 775,
+      "theta": 0.95,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.10469940978895145,
+      "lb": 0.04000825549070546,
+      "mean": 0.07272727272727272,
+      "samples": 1100,
+      "calls": 247,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.0897353634889438,
+      "lb": 0.05002155984998954,
+      "mean": 0.069375,
+      "samples": 3200,
+      "calls": 803,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.07918881838449665,
+     "calls": 6446
+    },
+    "b5_pairwise": {
+     "g3": 0.08297033098953865,
+     "calls": 42186
+    },
+    "b7_sample": [
+     {
+      "g3": 0.04500000000000004,
+      "calls": 489,
+      "m": 1000
+     },
+     {
+      "g3": 0.06406250000000002,
+      "calls": 1064,
+      "m": 3200
+     },
+     {
+      "g3": 0.06420000000000003,
+      "calls": 1371,
+      "m": 5000
+     }
+    ]
+   }
+  ],
+  "alpha_per_fd": 0.005555555555555556,
+  "run_calls_inverse": 2655,
+  "run_calls_grid_inverse": 3855,
+  "run_calls_ann_nubar": 1646,
+  "run_calls_b9_noaudit": 1324
+ },
+ {
+  "dataset": "ndc116620",
+  "meta": {
+   "seed": 2,
+   "near_miss": [
+    0.02,
+    0.08
+   ]
+  },
+  "seed": 2,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "theta0": 0.95,
+  "grid": [
+   0.85,
+   0.9,
+   0.95
+  ],
+  "k": 5,
+  "proxy": "hybrid",
+  "rows": 116620,
+  "distinct": {
+   "labcode": 5368,
+   "labeler": 6653,
+   "appno": 13119,
+   "brand": 37348,
+   "generic": 16054,
+   "mktcat": 12,
+   "ptype": 7,
+   "labeler_e2": 6596,
+   "labeler_e8": 6459
+  },
+  "canon_all": 6653,
+  "proxy_sec": 5.162424081936479,
+  "fds": [
+   {
+    "fd": "labcode->labeler",
+    "g3": 0.0,
+    "truth": true,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.10704853369919398,
+    "b1_quot_g3": {
+     "0.85": 0.025998971016978234,
+     "0.9": 0.04073915280397877,
+     "0.95": 0.06186760418453097
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.035148165047820014,
+      "lb": -0.035148165047820014,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 220,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04247224697227408,
+      "lb": -0.04247224697227408,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 208,
+      "theta": 0.85,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.035148165047820014,
+      "lb": -0.035148165047820014,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 220,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.035148165047820014,
+      "lb": -0.035148165047820014,
+      "mean": 0.0,
+      "samples": 300,
+      "calls": 220,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.00481049562682212,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.0,
+      "calls": 207,
+      "m": 300
+     },
+     {
+      "g3": 0.0,
+      "calls": 517,
+      "m": 1000
+     },
+     {
+      "g3": 0.0,
+      "calls": 1378,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "labeler->ptype",
+    "g3": 0.0258446235637112,
+    "truth": true,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.024695592522723353,
+    "b1_quot_g3": {
+     "0.85": 0.028116961070142388,
+     "0.9": 0.027062253472817654,
+     "0.95": 0.025235808609157973
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.049119207799766224,
+      "lb": 0.004219657200363103,
+      "mean": 0.024,
+      "samples": 1000,
+      "calls": 871,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.049892485310216866,
+      "lb": 0.016409962050270784,
+      "mean": 0.03333333333333333,
+      "samples": 2400,
+      "calls": 1712,
+      "theta": 0.85,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.039891583049125115,
+      "lb": 0.010498000395422098,
+      "mean": 0.023181818181818182,
+      "samples": 2200,
+      "calls": 445,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.00040301835019722175
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.04778818794324075,
+      "lb": 0.0034949457437403013,
+      "mean": 0.023,
+      "samples": 1000,
+      "calls": 0,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.00040301835019722175
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.0258446235637112,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.0258360487051964,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.016000000000000014,
+      "calls": 509,
+      "m": 1000
+     },
+     {
+      "g3": 0.0242,
+      "calls": 1365,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "labeler->labcode",
+    "g3": 0.12845138055222094,
+    "truth": false,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.10823186417424113,
+    "b1_quot_g3": {
+     "0.85": 0.13606585491339396,
+     "0.9": 0.1264019893671754,
+     "0.95": 0.11500600240096037
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.181698629698682,
+      "lb": 0.061080527643135436,
+      "mean": 0.122,
+      "samples": 500,
+      "calls": 457,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.18590305486156866,
+      "lb": 0.05452748961922138,
+      "mean": 0.122,
+      "samples": 500,
+      "calls": 781,
+      "theta": 0.95,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.17053960304540816,
+      "lb": 0.04419992911481167,
+      "mean": 0.1075,
+      "samples": 400,
+      "calls": 248,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.015966386554621848
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.15563568553310841,
+      "lb": 0.0552529561945466,
+      "mean": 0.11166666666666666,
+      "samples": 600,
+      "calls": 0,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.015966386554621848
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.12845138055222094,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.12224318298748071,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.07799999999999996,
+      "calls": 310,
+      "m": 500
+     },
+     {
+      "g3": 0.10699999999999998,
+      "calls": 501,
+      "m": 1000
+     },
+     {
+      "g3": 0.125,
+      "calls": 1394,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "labeler->mktcat",
+    "g3": 0.09980277825415884,
+    "truth": false,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.09510375578802954,
+    "b1_quot_g3": {
+     "0.85": 0.10144057623049219,
+     "0.9": 0.09894529240267536,
+     "0.95": 0.09685302692505571
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.17514147820045414,
+      "lb": 0.05518706219461426,
+      "mean": 0.11,
+      "samples": 500,
+      "calls": 287,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.17283075201845502,
+      "lb": 0.053750543406285115,
+      "mean": 0.10833333333333334,
+      "samples": 600,
+      "calls": 739,
+      "theta": 0.95,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.1753204378221579,
+      "lb": 0.04344416141304079,
+      "mean": 0.1,
+      "samples": 400,
+      "calls": 105,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0073572286057280055
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.1687944026070855,
+      "lb": 0.05157392096092002,
+      "mean": 0.106,
+      "samples": 500,
+      "calls": 0,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0073572286057280055
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.09980277825415884,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.09944263419653576,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.06399999999999995,
+      "calls": 299,
+      "m": 500
+     },
+     {
+      "g3": 0.05800000000000005,
+      "calls": 515,
+      "m": 1000
+     },
+     {
+      "g3": 0.08819999999999995,
+      "calls": 1353,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "appno->labeler",
+    "g3": 0.6527096552906877,
+    "truth": false,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.6603241296518607,
+    "b1_quot_g3": {
+     "0.85": 0.6490053164122792,
+     "0.9": 0.6500257245755445,
+     "0.95": 0.6570313839821643
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.8252350804779129,
+      "lb": 0.4293027239459418,
+      "mean": 0.62,
+      "samples": 100,
+      "calls": 28,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.8450233288492881,
+      "lb": 0.4016879009429636,
+      "mean": 0.62,
+      "samples": 100,
+      "calls": 36,
+      "theta": 0.95,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.8252350804779129,
+      "lb": 0.4293027239459418,
+      "mean": 0.62,
+      "samples": 100,
+      "calls": 47,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.8252350804779129,
+      "lb": 0.4293027239459418,
+      "mean": 0.62,
+      "samples": 100,
+      "calls": 66,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.6527096552906877,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.6533527696793002,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.21999999999999997,
+      "calls": 80,
+      "m": 100
+     },
+     {
+      "g3": 0.401,
+      "calls": 506,
+      "m": 1000
+     },
+     {
+      "g3": 0.4566,
+      "calls": 1389,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "brand->labeler",
+    "g3": 0.45790601955067745,
+    "truth": false,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.4675441605213514,
+    "b1_quot_g3": {
+     "0.85": 0.4576487737952324,
+     "0.9": 0.4591750986108729,
+     "0.95": 0.46347110272680503
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.45567490754570406,
+      "lb": 0.14073358934541577,
+      "mean": 0.35,
+      "samples": 100,
+      "calls": 18,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.48371828753152146,
+      "lb": 0.12251245263863197,
+      "mean": 0.35,
+      "samples": 100,
+      "calls": 33,
+      "theta": 0.95,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.45567490754570406,
+      "lb": 0.14073358934541577,
+      "mean": 0.35,
+      "samples": 100,
+      "calls": 31,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.45567490754570406,
+      "lb": 0.14073358934541577,
+      "mean": 0.35,
+      "samples": 100,
+      "calls": 46,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.45790601955067745,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.4582490138912708,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.010000000000000009,
+      "calls": 85,
+      "m": 100
+     },
+     {
+      "g3": 0.15900000000000003,
+      "calls": 508,
+      "m": 1000
+     },
+     {
+      "g3": 0.28859999999999997,
+      "calls": 1411,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "generic->labeler",
+    "g3": 0.6590207511576058,
+    "truth": false,
+    "canon_cost": 6653,
+    "b0_exact_g3": 0.6646973074944263,
+    "b1_quot_g3": {
+     "0.85": 0.6584719602126565,
+     "0.9": 0.6593808952152289,
+     "0.95": 0.6624421197050249
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9089917031113166,
+      "lb": 0.5459512223372318,
+      "mean": 0.72,
+      "samples": 100,
+      "calls": 24,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9304197941513037,
+      "lb": 0.5237608812862676,
+      "mean": 0.72,
+      "samples": 100,
+      "calls": 35,
+      "theta": 0.95,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.9089917031113166,
+      "lb": 0.5459512223372318,
+      "mean": 0.72,
+      "samples": 100,
+      "calls": 40,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.9089917031113166,
+      "lb": 0.5459512223372318,
+      "mean": 0.72,
+      "samples": 100,
+      "calls": 60,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.6590207511576058,
+     "calls": 6653
+    },
+    "b5_pairwise": {
+     "g3": 0.6594323443663179,
+     "calls": 43541
+    },
+    "b7_sample": [
+     {
+      "g3": 0.050000000000000044,
+      "calls": 82,
+      "m": 100
+     },
+     {
+      "g3": 0.28700000000000003,
+      "calls": 502,
+      "m": 1000
+     },
+     {
+      "g3": 0.47340000000000004,
+      "calls": 1415,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "labcode->labeler_e2",
+    "g3": 0.019559252272337457,
+    "truth": true,
+    "canon_cost": 6596,
+    "b0_exact_g3": 0.12431829874807065,
+    "b1_quot_g3": {
+     "0.85": 0.045120905505059206,
+     "0.9": 0.059500943234436665,
+     "0.95": 0.08008917852855424
+    },
+    "ours": {
+     "inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04631406969630425,
+      "lb": -0.017094769216269498,
+      "mean": 0.015,
+      "samples": 400,
+      "calls": 66,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.04719388826889459,
+      "lb": -0.0035461727967604634,
+      "mean": 0.02125,
+      "samples": 800,
+      "calls": 91,
+      "theta": 0.85,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": true,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.039345386069326076,
+      "lb": -0.007538234700604735,
+      "mean": 0.016666666666666666,
+      "samples": 600,
+      "calls": 146,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": true,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.04631406969630425,
+      "lb": -0.017094769216269498,
+      "mean": 0.015,
+      "samples": 400,
+      "calls": 134,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.019559252272337457,
+     "calls": 6596
+    },
+    "b5_pairwise": {
+     "g3": 0.024318298748070677,
+     "calls": 43168
+    },
+    "b7_sample": [
+     {
+      "g3": 0.012499999999999956,
+      "calls": 260,
+      "m": 400
+     },
+     {
+      "g3": 0.019000000000000017,
+      "calls": 517,
+      "m": 1000
+     },
+     {
+      "g3": 0.017199999999999993,
+      "calls": 1414,
+      "m": 5000
+     }
+    ]
+   },
+   {
+    "fd": "labcode->labeler_e8",
+    "g3": 0.07885439890241808,
+    "truth": false,
+    "canon_cost": 6459,
+    "b0_exact_g3": 0.17678785800034302,
+    "b1_quot_g3": {
+     "0.85": 0.10264105642256904,
+     "0.9": 0.11614645858343342,
+     "0.95": 0.135388441090722
+    },
+    "ours": {
+     "inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.091151541544553,
+      "lb": 0.05063410798611668,
+      "mean": 0.07689655172413794,
+      "samples": 2900,
+      "calls": 482,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "grid_inverse": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.09359849866410917,
+      "lb": 0.050396089984084694,
+      "mean": 0.07774193548387097,
+      "samples": 3100,
+      "calls": 566,
+      "theta": 0.95,
+      "alpha": 0.001851851851851852,
+      "nu": 0.0
+     },
+     "ann_nubar": {
+      "certified": false,
+      "nu_bar": 0.01,
+      "audit": true,
+      "budget_hit": false,
+      "ub": 0.09342855862338056,
+      "lb": 0.042046561363871846,
+      "mean": 0.07533333333333334,
+      "samples": 1500,
+      "calls": 294,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     },
+     "b9_noaudit": {
+      "certified": false,
+      "nu_bar": 0.0,
+      "audit": false,
+      "budget_hit": false,
+      "ub": 0.091151541544553,
+      "lb": 0.05063410798611668,
+      "mean": 0.07689655172413794,
+      "samples": 2900,
+      "calls": 727,
+      "theta": 0.95,
+      "alpha": 0.005555555555555556,
+      "nu": 0.0
+     }
+    },
+    "b4_canon_all": {
+     "g3": 0.07885439890241808,
+     "calls": 6459
+    },
+    "b5_pairwise": {
+     "g3": 0.08262733664894528,
+     "calls": 42304
+    },
+    "b7_sample": [
+     {
+      "g3": 0.04800000000000004,
+      "calls": 520,
+      "m": 1000
+     },
+     {
+      "g3": 0.06827586206896552,
+      "calls": 1020,
+      "m": 2900
+     },
+     {
+      "g3": 0.07240000000000002,
+      "calls": 1404,
+      "m": 5000
+     }
+    ]
+   }
+  ],
+  "alpha_per_fd": 0.005555555555555556,
+  "run_calls_inverse": 2453,
+  "run_calls_grid_inverse": 4201,
+  "run_calls_ann_nubar": 1576,
+  "run_calls_b9_noaudit": 1253
+ }
+]

@@ -1,0 +1,60 @@
+{
+ "dataset": "tax200000",
+ "rows": 200000,
+ "n_cands": 50,
+ "n_true": 5,
+ "runs": [
+  {
+   "t": 0.0001,
+   "sec": 4109.539445385337,
+   "n": 14,
+   "false": 10,
+   "missed_true": 1,
+   "false_list": [
+    "f_name->area_code",
+    "f_name->city",
+    "f_name->city_e2",
+    "f_name->city_e8",
+    "f_name->state",
+    "f_name->zip",
+    "zip->area_code",
+    "zip->city_e8",
+    "zip->f_name",
+    "zip->gender"
+   ]
+  },
+  {
+   "t": 0.0005,
+   "sec": 4400.279185162857,
+   "n": 28,
+   "false": 24,
+   "missed_true": 1,
+   "false_list": [
+    "city->area_code",
+    "city->f_name",
+    "city->gender",
+    "city->state",
+    "city->zip",
+    "city_e2->area_code",
+    "city_e2->f_name",
+    "city_e2->gender",
+    "city_e2->state",
+    "city_e2->zip",
+    "city_e8->area_code",
+    "city_e8->gender",
+    "city_e8->state",
+    "city_e8->zip",
+    "f_name->area_code",
+    "f_name->city",
+    "f_name->city_e2",
+    "f_name->city_e8",
+    "f_name->state",
+    "f_name->zip",
+    "zip->area_code",
+    "zip->city_e8",
+    "zip->f_name",
+    "zip->gender"
+   ]
+  }
+ ]
+}

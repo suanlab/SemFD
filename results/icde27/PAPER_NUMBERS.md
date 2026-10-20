@@ -1,0 +1,149 @@
+# Numbers quoted in paper/main.tex (generated; do not edit)
+
+- **E2 rows growth**: 128x (5000 -> 640000)
+- **E2 ours calls growth**: 4.1x (3408 -> 14140)
+- **E2 canonicalize-all growth**: 68.8x (3585 -> 246493)
+- **E2 ratio at largest**: 17.4x
+- **E3 geonames setting**: {'n_cities': 4000, 'rho': 0.2, 'seed': 0, 'near_miss': [0.03, 0.04, 0.05, 0.06, 0.07], 'conflict': [0.04, 0.06, 0.07], 'conflict_exact': [0.08]} reps=500
+- **E3 geonames near-threshold city->country_e4**: g3=0.0394 E[B]=0.0471 cert rate=0.126
+- **E3 geonames near-threshold city->country_e5**: g3=0.0486 E[B]=0.0580 cert rate=0.008
+- **E3 geonames near-threshold city->country_src4**: g3=0.0401 E[B]=0.0404 cert rate=0.950
+- **E3 tax setting**: {'rho': 0.2, 'seed': 0, 'near_miss': [0.03, 0.04, 0.05, 0.06, 0.07]} reps=500
+- **E3 tax near-threshold zip->city_e3**: g3=0.0313 E[B]=0.0321 cert rate=1.000
+- **E3 tax near-threshold zip->city_e4**: g3=0.0411 E[B]=0.0421 cert rate=0.866
+- **E3 worst miscoverage Wilson 95% CI**: 23/500: [0.031, 0.068]
+- **E3 max miscoverage**: 0.046
+- **E3 max false-cert rate**: 0.018
+- **B7 geonames_16k m=1000**: false accepted 9/21, calls/run 12547, canon-all 42453
+- **B7 geonames_16k m=5000**: false accepted 9/21, calls/run 47185, canon-all 42453
+- **B7 tax m=1000**: false accepted 6/15, calls/run 6708, canon-all 84575
+- **B7 tax m=5000**: false accepted 3/15, calls/run 26645, canon-all 84575
+- **B7 ndc m=1000**: false accepted 2/18, calls/run 4527, canon-all 6653
+- **B7 ndc m=5000**: false accepted 0/18, calls/run 12553, canon-all 6653
+- **nu max (ANN-only) e1_geonames_16k**: 0.105
+- **nu max (ANN-only) e1_geonames_16k_edit**: 0.052
+- **nu max (ANN-only) e1_geonames_16k_emb**: 0.145
+- **nu max (ANN-only) e1_geonames_16k_k10**: 0.090
+- **nu max (ANN-only) e1_geonames_16k_k3**: 0.117
+- **nu max (ANN-only) e1_geonames_16k_rho0.05**: 0.025
+- **nu max (ANN-only) e1_geonames_16k_rho0.5**: 0.294
+- **nu max (ANN-only) e1_geonames_16k_tfidf**: 0.129
+- **nu max (ANN-only) e1_geonames_16k_th0.8**: 0.061
+- **nu max (ANN-only) e1_geonames_16k_th0.95**: 0.122
+- **nu max (ANN-only) e1_ndc**: 0.021
+- **nu max (ANN-only) e1_ndc_edit**: 0.023
+- **nu max (ANN-only) e1_ndc_emb**: 0.015
+- **nu max (ANN-only) e1_ndc_k10**: 0.014
+- **nu max (ANN-only) e1_ndc_k3**: 0.022
+- **nu max (ANN-only) e1_ndc_tfidf**: 0.019
+- **nu max (ANN-only) e1_ndc_th0.8**: 0.027
+- **nu max (ANN-only) e1_ndc_th0.95**: 0.016
+- **nu max (ANN-only) e1_tax**: 0.096
+- **E1b seconds geonames_16k**: {'proxy': 22.6, 'tane': 1.3, 'certify': 5.2}
+- **E1b planner vs ours calls geonames_16k**: 22449 vs 21759
+- **E1b planner resolved / candidates geonames_16k**: [28, 28, 28] / 58; planner F/M [(0, 0), (0, 0), (0, 0)]
+- **E1b seconds tax**: {'proxy': 93.8, 'tane': 5.4, 'certify': 27.1}
+- **E1b planner vs ours calls tax**: 12275 vs 12297
+- **E1b planner resolved / candidates tax**: [12, 12, 12] / 50; planner F/M [(0, 0), (0, 0), (0, 0)]
+- **E1b seconds ndc**: {'proxy': 7.6, 'tane': 2.9, 'certify': 15.5}
+- **E1b planner vs ours calls ndc**: 6305 vs 6305
+- **E1b planner resolved / candidates ndc**: [30, 30, 30] / 66; planner F/M [(0, 0), (0, 0), (0, 0)]
+- **FastRFD seconds b2_fastrfd_geonames_16k**: [(0.0, 421), (0.001, 449), (0.01, 377), (0.05, 380)]
+- **FastRFD seconds b2_fastrfd_geonames_1k**: [(0.0, 5), (0.001, 6), (0.01, 7), (0.05, 6)]
+- **FastRFD seconds b2_fastrfd_ndc**: [(0.0, 236), (0.001, 262), (0.01, 344), (0.05, 437)]
+- **FastRFD seconds b2_fastrfd_ndc_finegrid**: [(0.0001, 251), (0.0005, 298)]
+- **FastRFD seconds b2_fastrfd_tax**: [(0.0, 4293), (0.001, 6388), (0.01, 4461), (0.05, 3871)]
+- **FastRFD seconds b2_fastrfd_tax_finegrid**: [(0.0001, 4110), (0.0005, 4400)]
+- **E8 n values**: 394
+- **E8 agreement**: {'pair_precision': 0.921, 'pair_recall': 0.403, 'bcubed_precision': 0.965, 'bcubed_recall': 0.569, 'bcubed_f1': 0.716, 'ref_entities': 122, 'llm_entities': 206}
+- **E8 agreement_alnum_normalized**: {'pair_precision': 0.856, 'pair_recall': 0.5, 'bcubed_precision': 0.965, 'bcubed_recall': 0.63, 'bcubed_f1': 0.762, 'ref_entities': 122, 'llm_entities': 195}
+- **E8 agreement_layer1_baseline**: {'pair_precision': 0.0, 'pair_recall': 0.0, 'bcubed_precision': 1.0, 'bcubed_recall': 0.31, 'bcubed_f1': 0.473, 'ref_entities': 122, 'llm_entities': 394}
+- **E8 sec/call (parallel, loaded)**: {'mean': 61.11147677086461, 'p50': 69.11449079588056}
+- **E8 offline full-domain agreement**: {'pair_precision': 0.858, 'pair_recall': 0.558, 'bcubed_precision': 0.987, 'bcubed_recall': 0.913, 'bcubed_f1': 0.948, 'ref_entities': 5109, 'llm_entities': 5478}
+- **E8 offline layer1 baseline agreement**: {'pair_precision': 0.0, 'pair_recall': 0.0, 'bcubed_precision': 1.0, 'bcubed_recall': 0.768, 'bcubed_f1': 0.869, 'ref_entities': 5109, 'llm_entities': 6653}
+- **E8 offline run calls (LLM)**: [3333, 3337, 2385] vs canonicalize-all 6653
+- **E8 offline labcode->labeler**: g3_llm=0.032 g3_code=0.000 certified 2/3 nu_llm=0.0000 calls=[3004, 2933, 1630]
+- **E8 offline labeler->ptype**: g3_llm=0.030 g3_code=0.026 certified 3/3 nu_llm=0.0025 calls=[223, 280, 534]
+- **E8 offline labeler->labcode**: g3_llm=0.131 g3_code=0.128 certified 0/3 nu_llm=0.0051 calls=[61, 82, 92]
+- **E8 offline labeler->mktcat**: g3_llm=0.100 g3_code=0.100 certified 0/3 nu_llm=0.0028 calls=[27, 34, 92]
+- **E8 offline appno->labeler**: g3_llm=0.650 g3_code=0.653 certified 0/3 nu_llm=0.0000 calls=[4, 2, 9]
+- **E8 offline brand->labeler**: g3_llm=0.458 g3_code=0.458 certified 0/3 nu_llm=0.0000 calls=[7, 4, 13]
+- **E8 offline generic->labeler**: g3_llm=0.659 g3_code=0.659 certified 0/3 nu_llm=0.0000 calls=[7, 2, 15]
+- **E8 offline max nu_llm**: 0.0051
+- **E8 all canonicalization calls latency**: n=6653 median 1.6s mean 9.1s (varied with server load; single-process measurement below)
+- **E8 single-process latency**: mean 13.9s p50 13.7s over 20 calls, load [111.82421875, 116.65869140625, 217.13916015625]
+- **NDC running example**: {'labcode': '49035', 'distinct_raw_spellings': 27, 'distinct_layer1_spellings': 12, 'n_tuples': 360, 'oracle_entities_of_49035': ['firm627'], 'labcodes_of_same_firm': ['49035', '79903'], 'table1_rows_present': {'49035|Wal-Mart Stores Inc|OTC MONOGRAPH DRUG': 89, '49035|EQUATE (Wal-Mart Stores, Inc.) (see also WAL-MART INC)|OTC MONOGRAPH DRUG': 26, '49035|WalMart|OTC MONOGRAPH DRUG': 5, '49035|Wal-Mart Stores Inc|ANDA': 69, '79903|WALMART INC.|OTC MONOGRAPH DRUG': 55}}
+- **E9 e9_geonames_16k**: seeds=3 cands=30 true=17 tane F/M=[(0, 9), (0, 9), (0, 9)] ours F/M=[(0, 0), (0, 0), (0, 0)] calls=[11129, 11225, 11041] canon_all=42598
+- **E9 e9_ndc**: seeds=3 cands=105 true=36 tane F/M=[(1, 4), (1, 4), (1, 4)] ours F/M=[(0, 5), (0, 3), (0, 3)] calls=[9513, 9072, 9403] canon_all=6653
+- **E9 e9_tax**: seeds=3 cands=60 true=19 tane F/M=[(0, 8), (0, 8), (0, 8)] ours F/M=[(0, 0), (0, 0), (0, 0)] calls=[22668, 21616, 23453] canon_all=84796
+- **Lower bound at GeoNames-16k city domain**: D=29894, delta=0.05, m=1495, beta-alpha=0.5: q >= 547
+- **Inverse share of our calls (cost table rows)**: 0.19-0.38
+- **certify sample cap (max_n default)**: 20000
+- **semfd/ lines of Python**: 1094
+- **GeoNames country alias list entries**: 16
+- **GeoNames rows per city (make_table default)**: 5
+- **E2 FDs per run**: 8
+- **E8 sample composition**: 394 names = 294 spellings of the largest multi-spelling firms + 100 random (exp/e8_llm_oracle.py --sample 400)
+- **E9 NDC missed true FDs: g3 range / max gap to delta**: 0.038-0.046 / 0.012
+- **planner V0 (as run, e1b)**: 2000
+- **E1 geonames_16k candidates per run**: 13
+- **E1 tax candidates per run**: 10
+- **E1 ndc candidates per run**: 9
+- **E8 calls ratio canon-all / ours**: 2.0-2.8x
+- **E8 true NDC FDs certified (runs)**: 5
+- **B7 s=5000 false accepts natural/probe geonames_16k**: 0/9
+- **B7 s=5000 false accepts natural/probe tax**: 0/3
+- **B7 s=5000 false accepts natural/probe ndc**: 0/0
+- **B7 s=our n: natural false accepted geonames_16k**: 0/12
+- **B7 s=our n: natural false accepted tax**: 9/12
+- **B7 s=our n: natural false accepted ndc**: 4/15
+- **Curated natural geonames_16k: max true g3 / min false g3**: 0.0058 / 0.1190
+- **Curated natural tax: max true g3 / min false g3**: 0.0020 / 0.2279
+- **Curated natural ndc: max true g3 / min false g3**: 0.0258 / 0.0998
+- **NDC natural candidates with 0.03<g3<0.10 (certified runs / runs)**: {'labcode->mktcat': (0.096, '0/3'), 'labeler->mktcat': (0.1, '0/3'), 'brand->generic': (0.084, '0/3'), 'brand->mktcat': (0.031, '3/3'), 'generic->mktcat': (0.068, '0/3'), 'mktcat->ptype': (0.075, '0/3')}
+- **FastRFD all tolerances geonames_16k (t, false, missed)**: [(0.0, 1, 8), (0.001, 7, 2), (0.01, 19, 0), (0.05, 40, 0)]
+- **FastRFD geonames_16k: any tolerance with 0 false and 0 missed?**: False
+- **FastRFD all tolerances tax (t, false, missed)**: [(0.0, 0, 5), (0.0001, 10, 1), (0.0005, 24, 1), (0.001, 25, 1), (0.01, 33, 0), (0.05, 38, 0)]
+- **FastRFD tax: any tolerance with 0 false and 0 missed?**: False
+- **FastRFD all tolerances ndc (t, false, missed)**: [(0.0, 0, 10), (0.0001, 1, 8), (0.0005, 3, 2), (0.001, 13, 2), (0.01, 34, 0), (0.05, 41, 0)]
+- **FastRFD ndc: any tolerance with 0 false and 0 missed?**: False
+- **Break-even price of an inverse lookup, in forward calls (ours = canon-all when fwd + price*inv = canon)**: {'geonames_16k': 4.4, 'tax': 32.7, 'ndc': 1.1, 'geonames_640k': 27.0, 'geonames_640k_8fds': 62.7}
+- **E8 LLM time at the measured mean latency (calls x mean s/call): certification runs / canonicalize-all**: 6.1-8.5 h / 16.9 h (mean 9.1 s/call over all canonicalization calls)
+- **E8 oracle transfer (LLM vs labeler-code oracle, labeler attribute)**: disagreement mass 0.057; max |g3 gap| over labeler FDs 0.032; transferred bounds violated 0/21
+- **E8 input tokens: certification runs (min-max) / canonicalize-all**: 488k-683k / 1.36M (per call 199-235, mean 205; output <= 24/call; calls [3333, 3337, 2385] = E8 offline run_calls)
+- **E8 live replay check**: 200/200 labels identical, 200/200 raw answers identical
+- **Variant-only canonicalize-all vs full**: {'geonames_16k': (42452.666666666664, 42452.666666666664, {'city': [29987, 15510], 'country': [2000, 196], 'admin1': [10611, 2154]}), 'tax': (84574.66666666667, 84574.66666666667, {'f_name': [39471, 9991], 'city': [45221, 17829], 'state': [104, 52]}), 'ndc': (6653.0, 6653.0, {'labeler': [6653, 5109]}), 'geonames_128k': (246493.0, 246493.0, {'city': [212449, 105074], 'country': [3050, 220], 'admin1': [31103, 3256]})}
+- **Tane missed share of true unary FDs (min-max over datasets)**: 0.20-0.80
+- **rho=0.05 ours vs canon-all**: 1.18x
+- **rho=0.05 missed true FDs: max gap to delta**: 0.0035
+- **Ideal-witness diagnostic city->country_e3 (reps=200)**: g3=0.0296 proxy E[B]=0.0367 cert=1.000 | ideal E[B]=0.0308 cert=1.000 falsecert=0.000
+- **Ideal-witness diagnostic city->country_e4 (reps=200)**: g3=0.0394 proxy E[B]=0.0471 cert=0.150 | ideal E[B]=0.0408 cert=0.960 falsecert=0.000
+- **Ideal-witness diagnostic city->country_e5 (reps=200)**: g3=0.0486 proxy E[B]=0.0580 cert=0.015 | ideal E[B]=0.0500 cert=0.050 falsecert=0.000
+- **Ideal-witness diagnostic city->country_e6 (reps=200)**: g3=0.0579 proxy E[B]=0.0694 cert=0.000 | ideal E[B]=0.0593 cert=0.005 falsecert=0.005
+- **Ideal-witness diagnostic city->country_e7 (reps=200)**: g3=0.0680 proxy E[B]=0.0818 cert=0.000 | ideal E[B]=0.0700 cert=0.000 falsecert=0.000
+- **Ideal-witness diagnostic city->country_src4 (reps=200)**: g3=0.0401 proxy E[B]=0.0404 cert=0.940 | ideal E[B]=0.0410 cert=0.900 falsecert=0.000
+- **Ideal-witness diagnostic city->country_src6 (reps=200)**: g3=0.0597 proxy E[B]=0.0604 cert=0.000 | ideal E[B]=0.0615 cert=0.000 falsecert=0.000
+- **Ideal-witness diagnostic city->country_src7 (reps=200)**: g3=0.0699 proxy E[B]=0.0707 cert=0.000 | ideal E[B]=0.0722 cert=0.000 falsecert=0.000
+- **Self-refining witness city->country_e3 (reps=200)**: g3=0.0296 cert proxy=1.000 refine=1.000 | falsecert proxy=0.000 refine=0.000 | calls proxy=4803 refine=4221
+- **Self-refining witness city->country_e4 (reps=200)**: g3=0.0394 cert proxy=0.150 refine=0.780 | falsecert proxy=0.000 refine=0.000 | calls proxy=10782 refine=9677
+- **Self-refining witness city->country_e5 (reps=200)**: g3=0.0486 cert proxy=0.015 refine=0.015 | falsecert proxy=0.000 refine=0.000 | calls proxy=9496 refine=11036
+- **Self-refining witness city->country_e6 (reps=200)**: g3=0.0579 cert proxy=0.000 refine=0.000 | falsecert proxy=0.000 refine=0.000 | calls proxy=4835 refine=6243
+- **Self-refining witness city->country_e7 (reps=200)**: g3=0.0680 cert proxy=0.000 refine=0.000 | falsecert proxy=0.000 refine=0.000 | calls proxy=2615 refine=2968
+- **Self-refining witness city->country_src4 (reps=200)**: g3=0.0401 cert proxy=0.940 refine=0.930 | falsecert proxy=0.000 refine=0.000 | calls proxy=7157 refine=7538
+- **Self-refining witness city->country_src6 (reps=200)**: g3=0.0597 cert proxy=0.000 refine=0.000 | falsecert proxy=0.000 refine=0.000 | calls proxy=8515 refine=8618
+- **Self-refining witness city->country_src7 (reps=200)**: g3=0.0699 cert proxy=0.000 refine=0.000 | falsecert proxy=0.000 refine=0.000 | calls proxy=4472 refine=4641
+- **Self-refining witness: call change on mostly rejected FDs (refine/proxy - 1, min-max)**: +1% to +29% over 5 FDs
+- **E10 updates small (32000 cities, r0=80000 rows, +0.004/-0.002 of r0 per version, 10 versions, 3 seeds, stop_at=0.025)**: initial calls {cold: 30,251, warm: 30,184, maintain: 50,196, canon: 48,580}; mean per-version calls after v0 {cold: 36,547, warm: 13,350, maintain: 11,123, canon: 113}; cumulative {cold: 395,718, warm: 163,685, maintain: 161,427, canon: 49,709}; FDs kept at zero calls per later version: mean 8.9 of 58 (max 10); false certifications {'cold': 0, 'warm': 0, 'maintain': 0}; missed true {'cold': 0, 'warm': 0, 'maintain': 0}; propagated bounds below truth 0; canon/cold initial 1.61x; slack cost maintain/cold initial 1.66x; maintain/canon cumulative 3.25x
+- **E10 updates large (32000 cities, r0=80000 rows, +0.02/-0.01 of r0 per version, 10 versions, 3 seeds, stop_at=0.025)**: initial calls {cold: 30,251, warm: 30,184, maintain: 50,196, canon: 48,580}; mean per-version calls after v0 {cold: 35,483, warm: 13,160, maintain: 14,581, canon: 536}; cumulative {cold: 385,079, warm: 161,782, maintain: 196,007, canon: 53,937}; FDs kept at zero calls per later version: mean 4.7 of 58 (max 10); false certifications {'cold': 0, 'warm': 0, 'maintain': 0}; missed true {'cold': 0, 'warm': 0, 'maintain': 0}; propagated bounds below truth 0; canon/cold initial 1.61x; slack cost maintain/cold initial 1.66x; maintain/canon cumulative 3.63x
+- **E10 updates small128k (128000 cities, r0=320000 rows, +0.004/-0.002 of r0 per version, 10 versions, 1 seeds, stop_at=0.025)**: initial calls {cold: 45,597, warm: 40,566, maintain: 86,385, canon: 168,090}; mean per-version calls after v0 {cold: 50,485, warm: 23,919, maintain: 19,805, canon: 376}; cumulative {cold: 550,449, warm: 279,754, maintain: 284,432, canon: 171,845}; FDs kept at zero calls per later version: mean 8.8 of 58 (max 10); false certifications {'cold': 0, 'warm': 0, 'maintain': 0}; missed true {'cold': 0, 'warm': 0, 'maintain': 0}; propagated bounds below truth 0; canon/cold initial 3.69x; slack cost maintain/cold initial 1.89x; maintain/canon cumulative 1.66x
+- **E11 partial inverse geonames_16k (3 seeds; totals over seeds)**: p=1.0: false 0, missed 0, calls 22,835, max nu 0.000, candidates with nu>0.01 0.0; p=0.8: false 0, missed 0, calls 24,214, max nu 0.079, candidates with nu>0.01 15.7; p=0.5: false 0, missed 0, calls 25,573, max nu 0.104, candidates with nu>0.01 17.0; p=0.0: false 0, missed 0, calls 40,295, max nu 0.124, candidates with nu>0.01 19.3
+- **E11 missed true FDs geonames_16k (seed, p, fd)**: []
+- **E11 audit split geonames_16k (natural candidates with tolerant LHS, seed 0)**: 12 of 12 have mass caught only by condition (ii) > 0; max 0.0647; top: admin1->city g3=0.738 str=0.713 ii=0.0647, admin1->fcode g3=0.309 str=0.280 ii=0.0466, country->admin1 g3=0.783 str=0.810 ii=0.0337
+- **E11 partial inverse tax (3 seeds; totals over seeds)**: p=1.0: false 0, missed 0, calls 11,024, max nu 0.000, candidates with nu>0.01 0.0; p=0.8: false 0, missed 0, calls 10,775, max nu 0.057, candidates with nu>0.01 21.0; p=0.5: false 0, missed 0, calls 10,170, max nu 0.099, candidates with nu>0.01 21.0; p=0.0: false 0, missed 0, calls 9,931, max nu 0.139, candidates with nu>0.01 21.0
+- **E11 missed true FDs tax (seed, p, fd)**: []
+- **E11 audit split tax (natural candidates with tolerant LHS, seed 0)**: 15 of 15 have mass caught only by condition (ii) > 0; max 0.1316; top: f_name->state g3=0.885 str=0.753 ii=0.1316, f_name->area_code g3=0.905 str=0.767 ii=0.1314, f_name->city g3=0.943 str=0.799 ii=0.1313
+- **E11 partial inverse ndc (3 seeds; totals over seeds)**: p=1.0: false 0, missed 2, calls 6,553, max nu 0.000, candidates with nu>0.01 0.0; p=0.8: false 0, missed 0, calls 5,888, max nu 0.022, candidates with nu>0.01 9.3; p=0.5: false 0, missed 1, calls 6,679, max nu 0.029, candidates with nu>0.01 12.0; p=0.0: false 0, missed 0, calls 6,057, max nu 0.036, candidates with nu>0.01 12.0
+- **E11 missed true FDs ndc (seed, p, fd)**: [(0, 1.0, 'labeler_e2->ptype'), (1, 1.0, 'labeler_e2->ptype'), (2, 0.5, 'labeler_e2->ptype')]
+- **E11 audit split ndc (natural candidates with tolerant LHS, seed 0)**: 6 of 6 have mass caught only by condition (ii) > 0; max 0.0192; top: labeler->labcode g3=0.128 str=0.108 ii=0.0192, labeler->generic g3=0.830 str=0.808 ii=0.0092, labeler->appno g3=0.623 str=0.605 ii=0.0079
+- **E1b all unary candidates at 640,000 rows (58 candidates, 2 seeds)**: ours 31,188 (fwd+inv 22,906+8,282) vs canon-all 246,493: 7.9x (7.7-8.1); false [0, 0], missed [0, 0]; TANE raw false/missed [(1, 7), (1, 7)]
+- **MusicBrainz probe (not used)**: {'rows_total': 193750, 'rows_artist_language_nonnull': 105297, 'artists': 50665, 'artist_singleton_share': 0.6027632487910787, 'languages_distinct': 2001, 'g3_raw_artist_to_language': 0.2742148399289628, 'g3_raw_album_to_artist': 0.1903185397279885}
