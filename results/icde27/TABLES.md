@@ -22,7 +22,7 @@ Per FD (mean over seeds): oracle g3, raw g3, ours[inverse] U and calls
 | city->country | 0.000 | 0.155 | True | 0.038 | 3/3 | 1212 | 3/3 | 0.000 |
 | city->admin1 | 0.000 | 0.155 | True | 0.039 | 3/3 | 1416 | 3/3 | 0.000 |
 | admin1->country | 0.000 | 0.183 | True | 0.038 | 3/3 | 581 | 3/3 | 0.000 |
-| country->admin1 | 0.784 | 0.811 | False | 1.000 | 0/3 | 106 | 0/3 | 0.510 |
+| country->admin1 | 0.784 | 0.811 | False | 0.996 | 0/3 | 106 | 0/3 | 0.510 |
 | fcode->country | 0.823 | 0.859 | False | 0.965 | 0/3 | 16 | 0/3 | 0.773 |
 | admin1->city | 0.738 | 0.714 | False | 0.938 | 0/3 | 229 | 0/3 | 0.123 |
 | tz->country | 0.005 | 0.203 | True | 0.041 | 3/3 | 48 | 3/3 | 0.006 |
@@ -57,7 +57,7 @@ Per FD (mean over seeds): oracle g3, raw g3, ours[inverse] U and calls
 | city->country | 0.000 | 0.155 | True | 0.042 | 3/3 | 1635 | 3/3 | 0.000 |
 | city->admin1 | 0.000 | 0.155 | True | 0.048 | 3/3 | 3435 | 3/3 | 0.000 |
 | admin1->country | 0.000 | 0.183 | True | 0.043 | 3/3 | 596 | 3/3 | 0.000 |
-| country->admin1 | 0.784 | 0.811 | False | 0.988 | 0/3 | 82 | 0/3 | 0.510 |
+| country->admin1 | 0.784 | 0.811 | False | 0.986 | 0/3 | 82 | 0/3 | 0.510 |
 | fcode->country | 0.823 | 0.859 | False | 0.965 | 0/3 | 14 | 0/3 | 0.773 |
 | admin1->city | 0.738 | 0.714 | False | 0.933 | 0/3 | 185 | 0/3 | 0.123 |
 | tz->country | 0.005 | 0.203 | True | 0.041 | 3/3 | 43 | 3/3 | 0.006 |
@@ -92,7 +92,7 @@ Per FD (mean over seeds): oracle g3, raw g3, ours[inverse] U and calls
 | city->country | 0.000 | 0.155 | True | 0.042 | 3/3 | 1190 | 3/3 | 0.000 |
 | city->admin1 | 0.000 | 0.155 | True | 0.045 | 3/3 | 1171 | 3/3 | 0.000 |
 | admin1->country | 0.000 | 0.183 | True | 0.039 | 3/3 | 526 | 3/3 | 0.000 |
-| country->admin1 | 0.784 | 0.811 | False | 1.000 | 0/3 | 103 | 0/3 | 0.510 |
+| country->admin1 | 0.784 | 0.811 | False | 0.996 | 0/3 | 103 | 0/3 | 0.510 |
 | fcode->country | 0.823 | 0.859 | False | 0.965 | 0/3 | 15 | 0/3 | 0.773 |
 | admin1->city | 0.738 | 0.714 | False | 0.939 | 0/3 | 221 | 0/3 | 0.123 |
 | tz->country | 0.005 | 0.203 | True | 0.041 | 3/3 | 46 | 3/3 | 0.006 |
@@ -127,7 +127,7 @@ Per FD (mean over seeds): oracle g3, raw g3, ours[inverse] U and calls
 | city->country | 0.000 | 0.155 | True | 0.038 | 3/3 | 1754 | 3/3 | 0.000 |
 | city->admin1 | 0.000 | 0.155 | True | 0.039 | 3/3 | 1954 | 3/3 | 0.000 |
 | admin1->country | 0.000 | 0.183 | True | 0.038 | 3/3 | 791 | 3/3 | 0.000 |
-| country->admin1 | 0.784 | 0.811 | False | 1.000 | 0/3 | 110 | 0/3 | 0.510 |
+| country->admin1 | 0.784 | 0.811 | False | 0.996 | 0/3 | 110 | 0/3 | 0.510 |
 | fcode->country | 0.823 | 0.859 | False | 0.965 | 0/3 | 16 | 0/3 | 0.773 |
 | admin1->city | 0.738 | 0.714 | False | 0.938 | 0/3 | 255 | 0/3 | 0.123 |
 | tz->country | 0.005 | 0.203 | True | 0.041 | 3/3 | 47 | 3/3 | 0.006 |
@@ -162,7 +162,7 @@ Per FD (mean over seeds): oracle g3, raw g3, ours[inverse] U and calls
 | city->country | 0.000 | 0.155 | True | 0.038 | 3/3 | 1007 | 3/3 | 0.000 |
 | city->admin1 | 0.000 | 0.155 | True | 0.039 | 3/3 | 1187 | 3/3 | 0.000 |
 | admin1->country | 0.000 | 0.183 | True | 0.038 | 3/3 | 514 | 3/3 | 0.000 |
-| country->admin1 | 0.784 | 0.811 | False | 1.000 | 0/3 | 105 | 0/3 | 0.510 |
+| country->admin1 | 0.784 | 0.811 | False | 0.996 | 0/3 | 105 | 0/3 | 0.510 |
 | fcode->country | 0.823 | 0.859 | False | 0.965 | 0/3 | 16 | 0/3 | 0.773 |
 | admin1->city | 0.738 | 0.714 | False | 0.938 | 0/3 | 218 | 0/3 | 0.123 |
 | tz->country | 0.005 | 0.203 | True | 0.041 | 3/3 | 48 | 3/3 | 0.006 |
@@ -267,7 +267,7 @@ Per FD (mean over seeds): oracle g3, raw g3, ours[inverse] U and calls
 | city->country | 0.000 | 0.155 | True | 0.038 | 3/3 | 986 | 3/3 | 0.000 |
 | city->admin1 | 0.000 | 0.155 | True | 0.038 | 3/3 | 1167 | 3/3 | 0.000 |
 | admin1->country | 0.000 | 0.183 | True | 0.038 | 3/3 | 506 | 3/3 | 0.000 |
-| country->admin1 | 0.784 | 0.811 | False | 1.000 | 0/3 | 107 | 0/3 | 0.510 |
+| country->admin1 | 0.784 | 0.811 | False | 0.996 | 0/3 | 107 | 0/3 | 0.510 |
 | fcode->country | 0.823 | 0.859 | False | 0.965 | 0/3 | 16 | 0/3 | 0.773 |
 | admin1->city | 0.738 | 0.714 | False | 0.936 | 0/3 | 219 | 0/3 | 0.123 |
 | tz->country | 0.005 | 0.203 | True | 0.041 | 3/3 | 48 | 3/3 | 0.006 |
@@ -303,9 +303,9 @@ Per FD (mean over seeds): oracle g3, raw g3, ours[inverse] U and calls
 | city->country | 0.000 | 0.155 | True | 0.168 | 0/3 | 2243 | 0/3 | 0.000 |
 | city->admin1 | 0.000 | 0.155 | True | 0.240 | 0/3 | 1493 | 0/3 | 0.000 |
 | admin1->country | 0.000 | 0.183 | True | 0.060 | 0/3 | 9218 | 3/3 | 0.000 |
-| country->admin1 | 0.784 | 0.811 | False | 0.997 | 0/3 | 27 | 0/3 | 0.510 |
-| fcode->country | 0.823 | 0.859 | False | 0.990 | 0/3 | 1 | 0/3 | 0.773 |
-| admin1->city | 0.738 | 0.714 | False | 0.971 | 0/3 | 152 | 0/3 | 0.123 |
+| country->admin1 | 0.784 | 0.811 | False | 0.983 | 0/3 | 27 | 0/3 | 0.510 |
+| fcode->country | 0.823 | 0.859 | False | 0.978 | 0/3 | 1 | 0/3 | 0.773 |
+| admin1->city | 0.738 | 0.714 | False | 0.959 | 0/3 | 152 | 0/3 | 0.123 |
 | tz->country | 0.005 | 0.203 | True | 0.041 | 3/3 | 5 | 3/3 | 0.006 |
 | country->tz | 0.121 | 0.120 | False | 0.221 | 0/3 | 91 | 0/3 | 0.112 |
 | city->country_e2 | 0.020 | 0.167 | True | 0.170 | 0/3 | 1833 | 0/3 | 0.002 |
@@ -338,9 +338,9 @@ Per FD (mean over seeds): oracle g3, raw g3, ours[inverse] U and calls
 | city->country | 0.000 | 0.155 | True | 0.038 | 3/3 | 1224 | 3/3 | 0.000 |
 | city->admin1 | 0.000 | 0.155 | True | 0.038 | 3/3 | 1413 | 3/3 | 0.000 |
 | admin1->country | 0.000 | 0.183 | True | 0.038 | 3/3 | 613 | 3/3 | 0.000 |
-| country->admin1 | 0.784 | 0.811 | False | 1.000 | 0/3 | 100 | 0/3 | 0.510 |
-| fcode->country | 0.823 | 0.859 | False | 0.977 | 0/3 | 15 | 0/3 | 0.773 |
-| admin1->city | 0.738 | 0.714 | False | 1.000 | 0/3 | 212 | 0/3 | 0.123 |
+| country->admin1 | 0.784 | 0.811 | False | 0.991 | 0/3 | 100 | 0/3 | 0.510 |
+| fcode->country | 0.823 | 0.859 | False | 0.972 | 0/3 | 15 | 0/3 | 0.773 |
+| admin1->city | 0.738 | 0.714 | False | 0.997 | 0/3 | 212 | 0/3 | 0.123 |
 | tz->country | 0.005 | 0.203 | True | 0.045 | 3/3 | 52 | 3/3 | 0.006 |
 | country->tz | 0.121 | 0.120 | False | 0.177 | 0/3 | 180 | 0/3 | 0.115 |
 | city->country_e2 | 0.020 | 0.167 | True | 0.048 | 3/3 | 2765 | 3/3 | 0.002 |

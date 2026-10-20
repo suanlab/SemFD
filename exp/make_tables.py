@@ -77,7 +77,7 @@ for p in sorted(R.glob("e1_*.json")):
         by[f["fd"]].append(f)
     for k, fs in by.items():
         out.append(f"| {k} | {np.mean([f['g3'] for f in fs]):.3f} | {np.mean([f['b0_exact_g3'] for f in fs]):.3f} | "
-                   f"{fs[0]['truth']} | {min(1.0, np.mean([f['ours']['inverse']['ub'] for f in fs])):.3f} | "
+                   f"{fs[0]['truth']} | {np.mean([min(1.0, f['ours']['inverse']['ub']) for f in fs]):.3f} | "
                    f"{sum(f['ours']['inverse']['certified'] for f in fs)}/{len(fs)} | "
                    f"{np.mean([f['ours']['inverse']['calls'] for f in fs]):.0f} | "
                    f"{sum(f['ours']['b9_noaudit']['certified'] for f in fs)}/{len(fs)} | "
@@ -315,7 +315,7 @@ def latex():
             ok = sum(f["ours"]["inverse"]["certified"] for f in fs)
             rows.append(f"{nice} & {x.replace('_', chr(92) + '_')}$\\rightarrow${y.replace('_', chr(92) + '_')} & "
                         f"{np.mean([f['g3'] for f in fs]):.3f} & {np.mean([f['b0_exact_g3'] for f in fs]):.3f} & "
-                        f"{ok}/{len(fs)} & {min(1.0, np.mean([f['ours']['inverse']['ub'] for f in fs])):.3f} & "
+                        f"{ok}/{len(fs)} & {np.mean([min(1.0, f['ours']['inverse']['ub']) for f in fs]):.3f} & "
                         f"{np.mean([f['ours']['inverse']['calls'] for f in fs]):,.0f} \\\\")
     (T / "natural.tex").write_text(
         "\\begin{table}[t]\\centering\\footnotesize\\caption{Natural (non-injected) candidate FDs: $g_3$ on the canonical "
