@@ -5,7 +5,7 @@ NOTE: FastRFD silently defaults to the first 1000 tuples although its README
 says -r defaults to -1; we pass -r -1 and assert the tuple count it reports.
 FastRFD discovers minimal RFDs X(<=d_X) -> Y(<=d_Y) whose g1 error (violating
 tuple pairs) is <= t, with per-column edit-distance thresholds from a file. We
-give tolerant columns thresholds {0,1,2,3} and exact columns {0}, run a grid of
+give tolerant columns thresholds {0,1,2,3} (or, with --thr d, the single threshold d) and exact columns {0}, run a grid of
 t, and count X -> Y as accepted if any discovered RFD has LHS = {X} and RHS = Y.
 Scored against oracle truth on the same candidate set as E1b.
 Output: results/icde27/b2_fastrfd_<dataset><tag>.json
@@ -33,13 +33,13 @@ JAVA = Path(os.environ.get("FASTRFD_JAVA", sorted((Path.home() / "opt").glob("jd
 PAT = re.compile(r"^\[(.*)\] --> \[(\w+)\(<=([\d.]+)\)\]$")
 
 
-def run_fastrfd(df, exact, t, timeout):
+def run_fastrfd(df, exact, t, timeout, thr="0,1,2,3"):
     with tempfile.TemporaryDirectory() as d:
         cols = list(df.columns)
         out = df.map(lambda v: layer1(v).replace(",", " "))
         out.columns = [f"{c}(String)" for c in cols]
         out.to_csv(f"{d}/t.csv", index=False)
-        Path(f"{d}/thr.txt").write_text("\n".join("0" if exact[c] else "0,1,2,3" for c in cols))
+        Path(f"{d}/thr.txt").write_text("\n".join("0" if exact[c] else thr for c in cols))
         t0 = time.perf_counter()
         try:
             p = subprocess.run([str(JAVA), "-Xmx200g", "-jar", str(JAR), "-f", f"{d}/t.csv", "-s", f"{d}/thr.txt",
@@ -69,6 +69,8 @@ if __name__ == "__main__":
     ap.add_argument("--rows", type=int, default=0, help="row sample (0 = all)")
     ap.add_argument("--timeout", type=int, default=7200)
     ap.add_argument("--tag", default="")
+    ap.add_argument("--thr", default="0,1,2,3", help="edit-distance thresholds of tolerant columns: the grid (default) "
+                    "or one value chosen without the oracle (review v7 X4)")
     a = ap.parse_args()
     ds = LOADERS[a.dataset](seed=0, **json.loads(a.kw))
     df = ds.df[list(ds.exact)]
@@ -86,9 +88,9 @@ if __name__ == "__main__":
     cands = [(x, y) for x in df.columns for y in df.columns if x != y and base(x) != base(y)]
     truth = {c: g3_codes(ent[c[0]][attrs[c[0]].codes], ent[c[1]][attrs[c[1]].codes]) for c in cands}
     T = {c for c in cands if truth[c] <= a.delta}
-    res = {"dataset": ds.name, "rows": len(df), "n_cands": len(cands), "n_true": len(T), "runs": []}
+    res = {"dataset": ds.name, "rows": len(df), "n_cands": len(cands), "n_true": len(T), "thr": a.thr, "runs": []}
     for t in a.ts:
-        found, sec = run_fastrfd(df, ds.exact, t, a.timeout)
+        found, sec = run_fastrfd(df, ds.exact, t, a.timeout, a.thr)
         if found is None:
             res["runs"].append({"t": t, "timeout": True, "sec": sec})
             print(f"t={t} TIMEOUT", flush=True)

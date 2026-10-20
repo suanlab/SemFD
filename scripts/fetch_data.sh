@@ -8,6 +8,9 @@ for f in cities15000.zip cities500.zip; do curl -sSfL -o data/geonames/$f $G/$f;
 curl -sSfL -o data/geonames/countryInfo.txt $G/countryInfo.txt            # CC BY 4.0
 curl -sSfL -o data/geonames/admin1CodesASCII.txt $G/admin1CodesASCII.txt
 curl -sSfL -o data/geonames/alternateNamesV2.zip $G/alternateNamesV2.zip; unzip -o -q data/geonames/alternateNamesV2.zip alternateNamesV2.txt -d data/geonames   # E11 --registry preferred (snapshot 2026-10-20)
+mkdir -p data/gleif   # GLEIF LEI Golden Copy, CC0 (E16; the paper used the publication of 2026-10-20 08:00, see DATA_SNAPSHOTS.txt)
+curl -sSfL -o data/gleif/lei2.csv.zip "https://goldencopy.gleif.org/storage/golden-copy-files/2026/10/20/1290800/20261020-0800-gleif-goldencopy-lei2-golden-copy.csv.zip" \
+  && unzip -o -q data/gleif/lei2.csv.zip -d data/gleif || echo "GLEIF snapshot no longer served; take the latest from goldencopy.gleif.org (E16 numbers will differ)"
 R=https://raw.githubusercontent.com/BigDaMa/raha/master/datasets/tax          # Raha (Apache-2.0 repo)
 curl -sSfL -o data/tax/clean.csv $R/clean.csv
 curl -sSfL -o data/tax/dirty.csv $R/dirty.csv

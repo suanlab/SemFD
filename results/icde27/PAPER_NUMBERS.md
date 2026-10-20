@@ -49,9 +49,13 @@
 - **E1b planner vs ours calls ndc**: 6305 vs 6305
 - **E1b planner resolved / candidates ndc**: [30, 30, 30] / 66; planner F/M [(0, 0), (0, 0), (0, 0)]
 - **FastRFD seconds b2_fastrfd_geonames_16k**: [(0.0, 421), (0.001, 449), (0.01, 377), (0.05, 380)]
+- **FastRFD seconds b2_fastrfd_geonames_16k_thr1**: [(0.0, 157), (0.001, 168), (0.01, 155), (0.05, 155)]
+- **FastRFD seconds b2_fastrfd_geonames_16k_thr2**: [(0.0, 233), (0.001, 235), (0.01, 240), (0.05, 222)]
 - **FastRFD seconds b2_fastrfd_geonames_1k**: [(0.0, 5), (0.001, 6), (0.01, 7), (0.05, 6)]
 - **FastRFD seconds b2_fastrfd_ndc**: [(0.0, 236), (0.001, 262), (0.01, 344), (0.05, 437)]
 - **FastRFD seconds b2_fastrfd_ndc_finegrid**: [(0.0001, 251), (0.0005, 298)]
+- **FastRFD seconds b2_fastrfd_ndc_thr1**: [(0.0, 212), (0.001, 225), (0.01, 209), (0.05, 189)]
+- **FastRFD seconds b2_fastrfd_ndc_thr2**: [(0.0, 217), (0.001, 213), (0.01, 221), (0.05, 218)]
 - **FastRFD seconds b2_fastrfd_tax**: [(0.0, 4293), (0.001, 6388), (0.01, 4461), (0.05, 3871)]
 - **FastRFD seconds b2_fastrfd_tax_finegrid**: [(0.0001, 4110), (0.0005, 4400)]
 - **E8 n values**: 394
@@ -103,10 +107,14 @@
 - **NDC natural candidates with 0.03<g3<0.10 (certified runs / runs)**: {'labcode->mktcat': (0.096, '0/3'), 'labeler->mktcat': (0.1, '0/3'), 'brand->generic': (0.084, '0/3'), 'brand->mktcat': (0.031, '3/3'), 'generic->mktcat': (0.068, '0/3'), 'mktcat->ptype': (0.075, '0/3')}
 - **FastRFD all tolerances geonames_16k (t, false, missed)**: [(0.0, 1, 8), (0.001, 7, 2), (0.01, 19, 0), (0.05, 40, 0)]
 - **FastRFD geonames_16k: any tolerance with 0 false and 0 missed?**: False
+- **FastRFD geonames_16k, one threshold d=1 on tolerant columns (t, false, missed)**: [(0.0, 0, 10), (0.001, 6, 2), (0.01, 12, 0), (0.05, 40, 0)]; any tolerance with 0 false and 0 missed: False
+- **FastRFD geonames_16k, one threshold d=2 on tolerant columns (t, false, missed)**: [(0.0, 0, 10), (0.001, 4, 2), (0.01, 14, 0), (0.05, 40, 0)]; any tolerance with 0 false and 0 missed: False
 - **FastRFD all tolerances tax (t, false, missed)**: [(0.0, 0, 5), (0.0001, 10, 1), (0.0005, 24, 1), (0.001, 25, 1), (0.01, 33, 0), (0.05, 38, 0)]
 - **FastRFD tax: any tolerance with 0 false and 0 missed?**: False
 - **FastRFD all tolerances ndc (t, false, missed)**: [(0.0, 0, 10), (0.0001, 1, 8), (0.0005, 3, 2), (0.001, 13, 2), (0.01, 34, 0), (0.05, 41, 0)]
 - **FastRFD ndc: any tolerance with 0 false and 0 missed?**: False
+- **FastRFD ndc, one threshold d=1 on tolerant columns (t, false, missed)**: [(0.0, 0, 10), (0.001, 12, 2), (0.01, 34, 0), (0.05, 41, 0)]; any tolerance with 0 false and 0 missed: False
+- **FastRFD ndc, one threshold d=2 on tolerant columns (t, false, missed)**: [(0.0, 0, 10), (0.001, 13, 2), (0.01, 34, 0), (0.05, 41, 0)]; any tolerance with 0 false and 0 missed: False
 - **Break-even price of an inverse lookup, in forward calls (ours = canon-all when fwd + price*inv = canon)**: {'geonames_16k': 4.4, 'tax': 32.7, 'ndc': 1.1, 'geonames_640k': 27.0, 'geonames_640k_8fds': 62.7}
 - **E8 LLM time at the measured mean latency (calls x mean s/call): certification runs / canonicalize-all**: 6.1-8.5 h / 16.9 h (mean 9.1 s/call over all canonicalization calls)
 - **E8 oracle transfer (LLM vs labeler-code oracle, labeler attribute)**: disagreement mass 0.057; max |g3 gap| over labeler FDs 0.032; transferred bounds violated 0/21
@@ -157,6 +165,9 @@
 - **E11 registered-names inverse geonames_16k (3 seeds)**: false 0, missed 0; calls 23,292 vs complete inverse 22,835; max nu 0.112; candidates with nu>0.01 16.7; tuple mass covered by registered names city 0.89-0.89, country 0.85-0.86, admin1 0.80-0.80
 - **E11 registered-names inverse tax (3 seeds)**: false 0, missed 0; calls 10,561 vs complete inverse 11,024; max nu 0.097; candidates with nu>0.01 21.0; tuple mass covered by registered names f_name 0.82-0.82, city 0.81-0.82, state 1.00-1.00
 - **E11 preferred-names inverse geonames_16k (3 seeds; registry = ASCII name + alternateNamesV2 preferred/English, not historic/colloquial; injection unchanged)**: false 0, missed 0; calls 23,675 vs complete inverse 22,835; max nu 0.117; injected alias tuples missing from the registry city 0.75-0.77, country 0.35-0.37
+- **E16 GLEIF as alias registry for NDC labeler names (exact alphanumeric match, ambiguous keys dropped)**: 749 of 6,653 values match one LEI (26 ambiguous); 616 of 5,109 entities linked (26.6% of tuples); spellings returned cover 19.4% of tuples; linked entities with several spellings: 164, of whose spellings GLEIF returns 62% on average
+- **E16 LEI as an independent oracle for labcode -> labeler (tuples whose spelling matches one LEI)**: 22,623 tuples (19.4%); g3 labcode->LEI 0.0033, code-graph oracle 0.0000, raw strings 0.0525
+- **E11 GLEIF inverse ndc (3 seeds, all unary candidates)**: false 0, missed 1 [(1, 'labeler_e2->ptype')]; calls 6,271 vs complete inverse 6,553; max nu 0.035; candidates with nu>0.01 12.0
 - **E13 run-level planner geonames_16k unary (3 seeds)**: calls 38,470 vs certificate only 21,759 (1.77x; per seed 1.68-1.83x), canon-all 42,453; resolved candidates [39, 38, 38] of 58; resolved oracles ['city', 'country_src8']; false 0, missed 0 (certificate only: false 0, missed 0)
 - **E13 run-level planner geonames_16k pairs (3 seeds)**: calls 11,132 vs certificate only 11,132 (1.00x; per seed 1.00-1.00x), canon-all 42,453; resolved candidates [0, 0, 0] of 30; resolved oracles []; false 0, missed 0 (certificate only: false 0, missed 0)
 - **E13 run-level planner tax unary (3 seeds)**: calls 25,005 vs certificate only 12,297 (2.03x; per seed 1.00-4.00x), canon-all 84,575; resolved candidates [26, 10, 10] of 50; resolved oracles ['city_e8', 'state']; false 0, missed 0 (certificate only: false 0, missed 0)

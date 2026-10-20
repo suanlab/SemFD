@@ -62,6 +62,7 @@ Experiments in `exp/`:
 | `e13_planner.py` | two planners evaluated (not used by the system) |
 | `e14_llm_tax_city.py` | second LLM oracle attribute (Tax city names; needs the GGUF model, cached answers included) |
 | `e15_slack.py` | witness-slack decomposition |
+| `e16_gleif.py` | GLEIF as a real alias registry for NDC labelers; LEI as an independent oracle |
 | `e3_refine.py` | self-refining witness (power) |
 
 ## Reproduce
@@ -94,6 +95,7 @@ Datasets are not redistributed. `scripts/fetch_data.sh` downloads them from:
 | Dataset | Source | License |
 |---|---|---|
 | GeoNames | download.geonames.org | CC BY 4.0 |
+| GLEIF LEI Golden Copy | goldencopy.gleif.org | CC0 1.0 |
 | Raha Tax | github.com/BigDaMa/raha | repository Apache-2.0 |
 | FDA NDC directory | accessdata.fda.gov | U.S. Government work |
 | MusicBrainz benchmark | Leipzig DAPO | CC BY 4.0 |

@@ -1,0 +1,102 @@
+{
+ "dataset": "geonames16000",
+ "rows": 80000,
+ "n_cands": 58,
+ "n_true": 10,
+ "thr": "2",
+ "runs": [
+  {
+   "t": 0.0,
+   "sec": 233.19847923144698,
+   "n": 0,
+   "false": 0,
+   "missed_true": 10,
+   "false_list": []
+  },
+  {
+   "t": 0.001,
+   "sec": 234.65168457850814,
+   "n": 12,
+   "false": 4,
+   "missed_true": 2,
+   "false_list": [
+    "admin1->tz_src8",
+    "city->country_e8",
+    "city->country_src8",
+    "city->tz_src8"
+   ]
+  },
+  {
+   "t": 0.01,
+   "sec": 239.5493367165327,
+   "n": 24,
+   "false": 14,
+   "missed_true": 0,
+   "false_list": [
+    "admin1->city",
+    "admin1->country_e8",
+    "admin1->country_src8",
+    "admin1->fcode",
+    "admin1->tz_src8",
+    "city->country_e8",
+    "city->country_src8",
+    "city->tz_src8",
+    "country->tz",
+    "country_e2->tz",
+    "tz->country_e8",
+    "tz->country_src8",
+    "tz_src8->country",
+    "tz_src8->country_e2"
+   ]
+  },
+  {
+   "t": 0.05,
+   "sec": 222.36515464633703,
+   "n": 50,
+   "false": 40,
+   "missed_true": 0,
+   "false_list": [
+    "admin1->city",
+    "admin1->country_e8",
+    "admin1->country_src8",
+    "admin1->fcode",
+    "admin1->tz_src8",
+    "city->country_e8",
+    "city->country_src8",
+    "city->tz_src8",
+    "country->admin1",
+    "country->city",
+    "country->fcode",
+    "country->tz",
+    "country->tz_src8",
+    "country_e2->admin1",
+    "country_e2->city",
+    "country_e2->fcode",
+    "country_e2->tz",
+    "country_e2->tz_src8",
+    "country_e8->admin1",
+    "country_e8->city",
+    "country_e8->fcode",
+    "country_e8->tz",
+    "country_e8->tz_src8",
+    "country_src8->admin1",
+    "country_src8->city",
+    "country_src8->fcode",
+    "country_src8->tz",
+    "country_src8->tz_src8",
+    "tz->admin1",
+    "tz->city",
+    "tz->country_e8",
+    "tz->country_src8",
+    "tz->fcode",
+    "tz_src8->admin1",
+    "tz_src8->city",
+    "tz_src8->country",
+    "tz_src8->country_e2",
+    "tz_src8->country_e8",
+    "tz_src8->country_src8",
+    "tz_src8->fcode"
+   ]
+  }
+ ]
+}

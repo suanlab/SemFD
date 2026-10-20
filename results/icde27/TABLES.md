@@ -823,6 +823,24 @@ False acceptances: seed 0: {'b3_raw': [], 'b3_norm': [], 'b1': [], 'ours': [], '
 | 0.01 | 29 | 19 | 0 | 377 |
 | 0.05 | 50 | 40 | 0 | 380 |
 
+## B2 b2_fastrfd_geonames_16k_thr1: FastRFD (rows=80000, 58 candidates, 10 true)
+
+| g1 tolerance t | found | false | missed true | seconds |
+|---|---|---|---|---|
+| 0.0 | 0 | 0 | 10 | 157 |
+| 0.001 | 14 | 6 | 2 | 168 |
+| 0.01 | 22 | 12 | 0 | 155 |
+| 0.05 | 50 | 40 | 0 | 155 |
+
+## B2 b2_fastrfd_geonames_16k_thr2: FastRFD (rows=80000, 58 candidates, 10 true)
+
+| g1 tolerance t | found | false | missed true | seconds |
+|---|---|---|---|---|
+| 0.0 | 0 | 0 | 10 | 233 |
+| 0.001 | 12 | 4 | 2 | 235 |
+| 0.01 | 24 | 14 | 0 | 240 |
+| 0.05 | 50 | 40 | 0 | 222 |
+
 ## B2 b2_fastrfd_geonames_1k: FastRFD (rows=5000, 58 candidates, 10 true)
 
 | g1 tolerance t | found | false | missed true | seconds |
@@ -847,6 +865,24 @@ False acceptances: seed 0: {'b3_raw': [], 'b3_norm': [], 'b1': [], 'ours': [], '
 |---|---|---|---|---|
 | 0.0001 | 3 | 1 | 8 | 251 |
 | 0.0005 | 11 | 3 | 2 | 298 |
+
+## B2 b2_fastrfd_ndc_thr1: FastRFD (rows=116620, 66 candidates, 10 true)
+
+| g1 tolerance t | found | false | missed true | seconds |
+|---|---|---|---|---|
+| 0.0 | 0 | 0 | 10 | 212 |
+| 0.001 | 20 | 12 | 2 | 225 |
+| 0.01 | 44 | 34 | 0 | 209 |
+| 0.05 | 51 | 41 | 0 | 189 |
+
+## B2 b2_fastrfd_ndc_thr2: FastRFD (rows=116620, 66 candidates, 10 true)
+
+| g1 tolerance t | found | false | missed true | seconds |
+|---|---|---|---|---|
+| 0.0 | 0 | 0 | 10 | 217 |
+| 0.001 | 21 | 13 | 2 | 213 |
+| 0.01 | 44 | 34 | 0 | 221 |
+| 0.05 | 51 | 41 | 0 | 218 |
 
 ## B2 b2_fastrfd_tax: FastRFD (rows=200000, 50 candidates, 5 true)
 

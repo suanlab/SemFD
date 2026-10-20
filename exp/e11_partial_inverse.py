@@ -17,7 +17,8 @@ equals the injected alias vocabulary, it only tests whether the proxy recovers g
 registry lists only the ASCII name and the GeoNames alternate names (alternateNamesV2) marked preferred or English,
 excluding historic and colloquial ones, for cities and countries; other-language, historic and colloquial aliases
 that occur in the data are then missing from the inverse. Output tag _preferred; the share of injected alias tuples
-missing from the registry is recorded.
+missing from the registry is recorded. --registry gleif (NDC): the alias service is GLEIF (exp/e16_gleif.py), a real
+registry whose omissions we do not control. Output tag _gleif.
 
 Part B (p = 1). For every candidate, the exact mean of B over all tuples split into the mass caught
 by condition (i) and the mass caught only by condition (ii) (the cross-cluster audit), next to the
@@ -137,6 +138,11 @@ def preferred_names(gids):
 def registry(dataset, ds, seed, kw, flavor="generator"):
     """Registered names per attribute (Layer-1), as an alias service would list them."""
     from semfd.proxy import layer1
+    if dataset == "ndc" and flavor == "gleif":
+        sys.path.insert(0, str(ROOT / "exp"))
+        from e16_gleif import registry_values
+        kept, _ = registry_values(ds)
+        return {"labeler": kept}
     if dataset == "geonames" and flavor == "preferred":
         sys.path[:0] = [str(ROOT / "pilot")]
         import p0b_geonames
@@ -190,9 +196,9 @@ if __name__ == "__main__":
     ap.add_argument("--theta0", type=float, default=0.9)
     ap.add_argument("--tag", default="")
     ap.add_argument("--official", action="store_true", help="inverse returns registered names only (Part A')")
-    ap.add_argument("--registry", choices=["generator", "preferred"], default="generator")
+    ap.add_argument("--registry", choices=["generator", "preferred", "gleif"], default="generator")
     a = ap.parse_args()
-    suffix = ("_preferred" if a.registry == "preferred" else "_official") if a.official else ""
+    suffix = ({"preferred": "_preferred", "gleif": "_gleif"}.get(a.registry, "_official")) if a.official else ""
     outp = ROOT / f"results/icde27/e11_partial_inverse_{a.dataset}{a.tag}{suffix}.json"
     res = {"args": vars(a), "runs": [], "audit_split": []}
     for s in range(a.seeds):

@@ -518,11 +518,18 @@ def paper_numbers():
     for d in ("geonames_16k", "tax", "ndc"):
         runs_all = []
         for f in sorted(R.glob(f"b2_fastrfd_{d}*.json")):
+            if "_thr" in f.stem:                     # single-threshold runs: reported separately below
+                continue
             runs_all += [r for r in load(f)["runs"] if not r.get("timeout")]
         if runs_all:
             pts = sorted((r["t"], r["false"], r["missed_true"]) for r in runs_all)
             add(f"FastRFD all tolerances {d} (t, false, missed)", pts)
             add(f"FastRFD {d}: any tolerance with 0 false and 0 missed?", any(f == 0 and m == 0 for _, f, m in pts))
+        for f in sorted(R.glob(f"b2_fastrfd_{d}_thr*.json")):
+            e = load(f)
+            pts = [(r["t"], r["false"], r["missed_true"]) for r in e["runs"] if not r.get("timeout")]
+            add(f"FastRFD {d}, one threshold d={e['thr']} on tolerant columns (t, false, missed)",
+                f"{pts}; any tolerance with 0 false and 0 missed: {any(x == 0 and y == 0 for _, x, y in pts)}")
     be = {}
     for key in ("geonames_16k", "tax", "ndc", "geonames_640k"):
         p_ = R / f"e1b_{key}.json"
@@ -707,6 +714,26 @@ def paper_numbers():
             f"calls {np.mean([r['calls'] for r in e['runs']]):,.0f} vs complete inverse {np.mean([r['calls'] for r in full]):,.0f}; "
             f"max nu {max(r['nu_max'] for r in e['runs']):.3f}; injected alias tuples missing from the registry "
             + ", ".join(f"{x} {lo:.2f}-{hi:.2f}" for x, (lo, hi) in miss.items()))
+    pp = R / "e16_gleif.json"
+    if pp.exists():
+        g = load(pp)
+        lo = g["lei_oracle"]
+        add("E16 GLEIF as alias registry for NDC labeler names (exact alphanumeric match, ambiguous keys dropped)",
+            f"{g['values_matching_one_lei']:,} of {g['labeler_values']:,} values match one LEI ({g['values_ambiguous']} ambiguous); "
+            f"{g['entities_linked']:,} of {g['entities']:,} entities linked ({100 * g['tuple_mass_linked_entities']:.1f}% of tuples); "
+            f"spellings returned cover {100 * g['tuple_mass_returned']:.1f}% of tuples; linked entities with several spellings: "
+            f"{g['multi_spelling_linked_entities']}, of whose spellings GLEIF returns {100 * g['spellings_returned_share_multi']:.0f}% on average")
+        add("E16 LEI as an independent oracle for labcode -> labeler (tuples whose spelling matches one LEI)",
+            f"{lo['tuples']:,} tuples ({100 * lo['tuple_share']:.1f}%); g3 labcode->LEI {lo['g3_labcode_to_lei']:.4f}, "
+            f"code-graph oracle {lo['g3_labcode_to_codegraph']:.4f}, raw strings {lo['g3_labcode_to_string']:.4f}")
+    pp, pf = R / "e11_partial_inverse_ndc_gleif.json", R / "e11_partial_inverse_ndc.json"
+    if pp.exists() and pf.exists():
+        e, full = load(pp), [r for r in load(pf)["runs"] if r["p"] == 1.0]
+        add(f"E11 GLEIF inverse ndc ({len(e['runs'])} seeds, all unary candidates)",
+            f"false {sum(len(r['false']) for r in e['runs'])}, missed {sum(len(r['missed']) for r in e['runs'])} "
+            f"{[(r['seed'], m) for r in e['runs'] for m in r['missed']]}; calls {np.mean([r['calls'] for r in e['runs']]):,.0f} "
+            f"vs complete inverse {np.mean([r['calls'] for r in full]):,.0f}; max nu {max(r['nu_max'] for r in e['runs']):.3f}; "
+            f"candidates with nu>0.01 {np.mean([r['nu_over_0.01'] for r in e['runs']]):.1f}")
     for key in ("geonames_16k", "tax", "ndc"):
         for mode, base_file, base_key in (("unary", f"e1b_{key}.json", "ours_calls_total"), ("pairs", f"e9_{key}.json", "calls")):
             pp = R / f"e13_planner_{key}_{mode}.json"

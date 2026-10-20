@@ -1,0 +1,134 @@
+{
+ "args": {
+  "dataset": "ndc",
+  "kw": "{}",
+  "fractions": [
+   1.0,
+   0.8,
+   0.5,
+   0.0
+  ],
+  "seeds": 3,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "theta0": 0.9,
+  "tag": "",
+  "official": true,
+  "registry": "gleif"
+ },
+ "runs": [
+  {
+   "seed": 0,
+   "p": "official",
+   "n_cands": 66,
+   "n_true": 10,
+   "false": [],
+   "missed": [],
+   "calls": 6081,
+   "nu_max": 0.0341193620305265,
+   "nu_mean": 0.018269212446883516,
+   "nu_over_0.01": 12,
+   "nu": {
+    "labeler->labcode": 0.0190361859029326,
+    "labeler->appno": 0.018478820099468357,
+    "labeler->brand": 0.03249871377122277,
+    "labeler->generic": 0.0341193620305265,
+    "labeler->mktcat": 0.007211456010975819,
+    "labeler->ptype": 0.0027954038758360488,
+    "labeler_e2->labcode": 0.019121934488080947,
+    "labeler_e2->appno": 0.013085234093637455,
+    "labeler_e2->brand": 0.03129823357914594,
+    "labeler_e2->generic": 0.03384496655805179,
+    "labeler_e2->mktcat": 0.007220030869490654,
+    "labeler_e2->ptype": 0.0028039787343508834,
+    "labeler_e8->labcode": 0.019121934488080947,
+    "labeler_e8->appno": 0.012845138055222088,
+    "labeler_e8->brand": 0.03128965872063111,
+    "labeler_e8->generic": 0.03388784085062597,
+    "labeler_e8->mktcat": 0.007322929171668668,
+    "labeler_e8->ptype": 0.0028640027439547247
+   }
+  },
+  {
+   "seed": 1,
+   "p": "official",
+   "n_cands": 66,
+   "n_true": 10,
+   "false": [],
+   "missed": [
+    "labeler_e2->ptype"
+   ],
+   "calls": 6779,
+   "nu_max": 0.03539701594923684,
+   "nu_mean": 0.018545037062444026,
+   "nu_over_0.01": 12,
+   "nu": {
+    "labeler->labcode": 0.0190361859029326,
+    "labeler->appno": 0.018478820099468357,
+    "labeler->brand": 0.03249871377122277,
+    "labeler->generic": 0.0341193620305265,
+    "labeler->mktcat": 0.007211456010975819,
+    "labeler->ptype": 0.0027954038758360488,
+    "labeler_e2->labcode": 0.019859372320356714,
+    "labeler_e2->appno": 0.013136683244726463,
+    "labeler_e2->brand": 0.03169267707082833,
+    "labeler_e2->generic": 0.034102212313496826,
+    "labeler_e2->mktcat": 0.0059338020922654775,
+    "labeler_e2->ptype": 0.0027696793002915453,
+    "labeler_e8->labcode": 0.019782198593723203,
+    "labeler_e8->appno": 0.013162407820270965,
+    "labeler_e8->brand": 0.03539701594923684,
+    "labeler_e8->generic": 0.03408506259646716,
+    "labeler_e8->mktcat": 0.0069885096895901215,
+    "labeler_e8->ptype": 0.0027611044417767106
+   }
+  },
+  {
+   "seed": 2,
+   "p": "official",
+   "n_cands": 66,
+   "n_true": 10,
+   "false": [],
+   "missed": [],
+   "calls": 5953,
+   "nu_max": 0.0341193620305265,
+   "nu_mean": 0.018017683263781704,
+   "nu_over_0.01": 12,
+   "nu": {
+    "labeler->labcode": 0.0190361859029326,
+    "labeler->appno": 0.018478820099468357,
+    "labeler->brand": 0.03249871377122277,
+    "labeler->generic": 0.0341193620305265,
+    "labeler->mktcat": 0.007211456010975819,
+    "labeler->ptype": 0.0027954038758360488,
+    "labeler_e2->labcode": 0.01897616189332876,
+    "labeler_e2->appno": 0.019284856799862804,
+    "labeler_e2->brand": 0.02969473503687189,
+    "labeler_e2->generic": 0.029085920082318643,
+    "labeler_e2->mktcat": 0.007297204596124164,
+    "labeler_e2->ptype": 0.0028125535928657176,
+    "labeler_e8->labcode": 0.019722174584119363,
+    "labeler_e8->appno": 0.013848396501457727,
+    "labeler_e8->brand": 0.03005487909449494,
+    "labeler_e8->generic": 0.02942033956439719,
+    "labeler_e8->mktcat": 0.007125707425827474,
+    "labeler_e8->ptype": 0.00285542788543989
+   }
+  }
+ ],
+ "audit_split": [],
+ "coverage": [
+  {
+   "seed": 0,
+   "labeler": 0.193989024181101
+  },
+  {
+   "seed": 1,
+   "labeler": 0.193989024181101
+  },
+  {
+   "seed": 2,
+   "labeler": 0.193989024181101
+  }
+ ]
+}

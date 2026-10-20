@@ -59,6 +59,10 @@ for m in unary pairs; do
   run e13_tax_$m exp/e13_planner.py --dataset tax --mode $m
   run e13_ndc_$m exp/e13_planner.py --dataset ndc --mode $m; done
 run e15_slack exp/e15_slack.py
+# review-v7 additions: FastRFD with one oracle-free threshold; GLEIF as a real alias registry for NDC
+for d in 1 2; do run b2_geonames_16k_thr$d exp/b2_fastrfd.py --dataset geonames --kw "$G16" --tag _16k_thr$d --thr $d --timeout 7200
+  run b2_ndc_thr$d exp/b2_fastrfd.py --dataset ndc --tag _thr$d --thr $d --timeout 7200; done
+setsid nohup bash -c "$P exp/e16_gleif.py --prep && $P exp/e16_gleif.py && $P exp/e11_partial_inverse.py --dataset ndc --official --registry gleif" > $L/e16_gleif.log 2>&1 < /dev/null &
 # E8 (LLM oracle; needs llama-cpp-python and the GGUF in $E8_MODEL). Sequential and long: run separately:
 #   OMP_NUM_THREADS=1 nice -n 15 .venv/bin/python -I exp/e8_llm_oracle.py --canon --procs 4 --threads 6
 #   .venv/bin/python -I exp/e8_llm_oracle.py --offline --seeds 3

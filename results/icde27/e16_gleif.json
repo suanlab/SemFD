@@ -1,0 +1,21 @@
+{
+ "gleif_file": "20261020-0800-gleif-goldencopy-lei2-golden-copy.csv",
+ "labeler_values": 6653,
+ "entities": 5109,
+ "values_matching_one_lei": 749,
+ "values_ambiguous": 26,
+ "entities_linked": 616,
+ "tuple_mass_linked_entities": 0.2663093808952152,
+ "tuple_mass_returned": 0.193989024181101,
+ "multi_spelling_linked_entities": 164,
+ "spellings_returned_share_multi": 0.6247551736881005,
+ "lei_oracle": {
+  "tuples": 22623,
+  "tuple_share": 0.193989024181101,
+  "labcodes": 713,
+  "leis": 635,
+  "g3_labcode_to_lei": 0.0032710073818680296,
+  "g3_labcode_to_codegraph": 0.0,
+  "g3_labcode_to_string": 0.05251292931971885
+ }
+}
