@@ -53,6 +53,7 @@ run e3_refine exp/e3_refine.py --reps 200
 run e12_hidden_alias exp/e12_hidden_alias.py --seeds 3
 run e11_geonames_official exp/e11_partial_inverse.py --dataset geonames --kw "$G16" --tag _16k --official
 run e11_tax_official exp/e11_partial_inverse.py --dataset tax --official
+run e11_geonames_preferred exp/e11_partial_inverse.py --dataset geonames --kw "$G16" --tag _16k --official --registry preferred
 for m in unary pairs; do
   run e13_geonames_$m exp/e13_planner.py --dataset geonames --kw "$G16" --tag _16k --mode $m
   run e13_tax_$m exp/e13_planner.py --dataset tax --mode $m

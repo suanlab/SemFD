@@ -7,6 +7,7 @@ G=https://download.geonames.org/export/dump
 for f in cities15000.zip cities500.zip; do curl -sSfL -o data/geonames/$f $G/$f; unzip -o -q data/geonames/$f -d data/geonames; done
 curl -sSfL -o data/geonames/countryInfo.txt $G/countryInfo.txt            # CC BY 4.0
 curl -sSfL -o data/geonames/admin1CodesASCII.txt $G/admin1CodesASCII.txt
+curl -sSfL -o data/geonames/alternateNamesV2.zip $G/alternateNamesV2.zip; unzip -o -q data/geonames/alternateNamesV2.zip alternateNamesV2.txt -d data/geonames   # E11 --registry preferred (snapshot 2026-10-20)
 R=https://raw.githubusercontent.com/BigDaMa/raha/master/datasets/tax          # Raha (Apache-2.0 repo)
 curl -sSfL -o data/tax/clean.csv $R/clean.csv
 curl -sSfL -o data/tax/dirty.csv $R/dirty.csv

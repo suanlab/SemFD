@@ -11,7 +11,13 @@ and the measured miss mass nu of every candidate under that incomplete inverse (
 Part A' (--official). A systematic incomplete inverse: the alias lookup returns only an entity's registered
 names (GeoNames: the ASCII name and GeoNames alternate names, country aliases; Tax: the clean value, the state's
 full name and the USPS-style city abbreviations), never typos, drops or other noise, which are left to the proxy.
-Output tag _official; the tuple mass covered by the registered names is recorded per attribute.
+Output tag _official; the tuple mass covered by the registered names is recorded per attribute. Since that registry
+equals the injected alias vocabulary, it only tests whether the proxy recovers generated typos. --registry preferred
+(GeoNames) removes that circularity: injection is unchanged (all ASCII alternate names of cities15000), but the
+registry lists only the ASCII name and the GeoNames alternate names (alternateNamesV2) marked preferred or English,
+excluding historic and colloquial ones, for cities and countries; other-language, historic and colloquial aliases
+that occur in the data are then missing from the inverse. Output tag _preferred; the share of injected alias tuples
+missing from the registry is recorded.
 
 Part B (p = 1). For every candidate, the exact mean of B over all tuples split into the mass caught
 by condition (i) and the mass caught only by condition (ii) (the cross-cluster audit), next to the
@@ -113,9 +119,41 @@ def b_split(ax, ay, xent, yent, theta):
     return float(cond_i.mean()), float((~cond_i & ii[ax.codes]).mean())
 
 
-def registry(dataset, ds, seed, kw):
+def preferred_names(gids):
+    """Layer-1 ASCII names from alternateNamesV2 marked preferred or English, not historic or colloquial."""
+    import pandas as pd
+    from semfd.proxy import layer1
+    out = {}
+    cols = ["id", "gid", "lang", "name", "pref", "short", "colloq", "hist", "from", "to"]
+    for ch in pd.read_csv(ROOT / "data/geonames/alternateNamesV2.txt", sep="\t", header=None, names=cols, dtype=str,
+                          keep_default_na=False, quoting=3, chunksize=2_000_000):
+        ch = ch[ch["gid"].isin(gids) & ((ch["pref"] == "1") | (ch["lang"] == "en")) & (ch["hist"] != "1") & (ch["colloq"] != "1")]
+        for g, n in zip(ch["gid"], ch["name"]):
+            if n.isascii() and any(c.isalpha() for c in n):
+                out.setdefault(g, set()).add(layer1(n))
+    return out
+
+
+def registry(dataset, ds, seed, kw, flavor="generator"):
     """Registered names per attribute (Layer-1), as an alias service would list them."""
     from semfd.proxy import layer1
+    if dataset == "geonames" and flavor == "preferred":
+        sys.path[:0] = [str(ROOT / "pilot")]
+        import p0b_geonames
+        c, a1name, cname = p0b_geonames.load(kw.get("n_cities", 1000), seed)
+        cgid = {}
+        for line in (ROOT / "data/geonames/countryInfo.txt").read_text(encoding="utf-8").splitlines():
+            if line and not line.startswith("#"):
+                f = line.split("\t")
+                cgid[f[0]] = f[16]
+        pref = preferred_names(set(c["gid"]) | set(cgid.values()))
+        city = set(c["key"]) | {n for g in c["gid"] for n in pref.get(g, ())}
+        country = {layer1(v) for v in cname.values()} | {n for cc in cname for n in pref.get(cgid.get(cc), ())}
+        alias_vocab = {"city": set(), "country": {layer1(x) for v in p0b_geonames.COUNTRY_ALIASES.values() for x in v}}
+        for alt, key in zip(c["alt"], c["key"]):
+            alias_vocab["city"] |= {layer1(x) for x in p0b_geonames.ascii_alts(alt, key)}
+        registry.alias_vocab = alias_vocab
+        return {"city": city, "country": country, "admin1": {layer1(v) for v in a1name.values()}}
     if dataset == "geonames":
         sys.path[:0] = [str(ROOT / "pilot")]
         import p0b_geonames
@@ -152,8 +190,10 @@ if __name__ == "__main__":
     ap.add_argument("--theta0", type=float, default=0.9)
     ap.add_argument("--tag", default="")
     ap.add_argument("--official", action="store_true", help="inverse returns registered names only (Part A')")
+    ap.add_argument("--registry", choices=["generator", "preferred"], default="generator")
     a = ap.parse_args()
-    outp = ROOT / f"results/icde27/e11_partial_inverse_{a.dataset}{a.tag}{'_official' if a.official else ''}.json"
+    suffix = ("_preferred" if a.registry == "preferred" else "_official") if a.official else ""
+    outp = ROOT / f"results/icde27/e11_partial_inverse_{a.dataset}{a.tag}{suffix}.json"
     res = {"args": vars(a), "runs": [], "audit_split": []}
     for s in range(a.seeds):
         ds = LOADERS[a.dataset](seed=s, **json.loads(a.kw))
@@ -165,10 +205,16 @@ if __name__ == "__main__":
         af = a.alpha / len(cands)
         if a.official:
             REG.clear()
-            REG.update(registry(a.dataset, ds, s, json.loads(a.kw)))
+            REG.update(registry(a.dataset, ds, s, json.loads(a.kw), a.registry))
             res.setdefault("coverage", []).append(
                 {"seed": s, **{x: float(np.isin(attrs[x].codes, [i for i, v in enumerate(attrs[x].vals) if v in REG.get(x, ())]).mean())
                                for x in REG if x in attrs}})
+            if a.registry == "preferred":         # injected alias tuples (not the clean name) missing from the registry
+                av = registry.alias_vocab
+                res["coverage"][-1]["alias_tuples_missing"] = {
+                    x: float(np.isin(attrs[x].codes, [i for i, v in enumerate(attrs[x].vals) if v in av[x] and v not in REG[x]]).sum()
+                             / max(1, np.isin(attrs[x].codes, [i for i, v in enumerate(attrs[x].vals) if v in av[x]]).sum()))
+                    for x in av}
         if s == 0 and not a.official:
             for x, y in cands:
                 if ds.exact[x]:

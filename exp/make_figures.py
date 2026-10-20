@@ -38,7 +38,7 @@ def fig_scale():
                     color=INK, fontsize=7)
     ax.set_xscale("log")
     ax.set_yscale("log")
-    ax.set_xlabel("rows (GeoNames, 5 per city)")
+    ax.set_xlabel("rows (GeoNames, 5 per city on average)")
     ax.set_ylabel("oracle calls per run")
     ax.grid(True, which="major", color=GRID, linewidth=0.6)
     fig.tight_layout()
