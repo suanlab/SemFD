@@ -1,0 +1,1346 @@
+[
+ {
+  "dataset": "tax200000",
+  "mode": "pairs",
+  "seed": 0,
+  "rows": 200000,
+  "n_cands": 60,
+  "n_true": 19,
+  "false": [],
+  "missed": [],
+  "calls": 22668,
+  "calls_fwd_inv": [
+   14227,
+   8441
+  ],
+  "canon_all": 84796,
+  "resolved_cands": 12,
+  "resolved_oracles": [
+   "state"
+  ],
+  "budget": {
+   "f_name": 39471,
+   "city_e8": 45221,
+   "state": 104
+  },
+  "pilot": 5,
+  "fds": [
+   {
+    "fd": "f_name+gender->area_code",
+    "g3": 0.90501,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "f_name+gender->city",
+    "g3": 0.94274,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "f_name+gender->state",
+    "g3": 0.88496,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "f_name+gender->zip",
+    "g3": 0.949585,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "f_name+area_code->gender",
+    "g3": 1.4999999999987246e-05,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "f_name+area_code->city",
+    "g3": 0.07327499999999998,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.10298717185426393
+   },
+   {
+    "fd": "f_name+area_code->state",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "f_name+area_code->zip",
+    "g3": 0.07762000000000002,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.10721202182900309
+   },
+   {
+    "fd": "f_name+city->gender",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "f_name+city->area_code",
+    "g3": 0.003070000000000017,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04490526393263297
+   },
+   {
+    "fd": "f_name+city->state",
+    "g3": 0.0014899999999999913,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "f_name+city->zip",
+    "g3": 0.007310000000000039,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04612708920185229
+   },
+   {
+    "fd": "f_name+state->gender",
+    "g3": 2.5000000000052758e-05,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.042772925914262766
+   },
+   {
+    "fd": "f_name+state->area_code",
+    "g3": 0.09176499999999999,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.1557196157070157
+   },
+   {
+    "fd": "f_name+state->city",
+    "g3": 0.16330999999999996,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.28435170624484196
+   },
+   {
+    "fd": "f_name+state->zip",
+    "g3": 0.16912000000000005,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.3371125875355091
+   },
+   {
+    "fd": "f_name+zip->gender",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "f_name+zip->area_code",
+    "g3": 0.00017000000000000348,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "f_name+zip->city",
+    "g3": 5.999999999994898e-05,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "f_name+zip->state",
+    "g3": 5.500000000002725e-05,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "gender+area_code->f_name",
+    "g3": 0.994105,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "gender+area_code->city",
+    "g3": 0.89569,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "gender+area_code->state",
+    "g3": 0.0,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.0
+   },
+   {
+    "fd": "gender+area_code->zip",
+    "g3": 0.98944,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.98944
+   },
+   {
+    "fd": "gender+city->f_name",
+    "g3": 0.838295,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "gender+city->area_code",
+    "g3": 0.488185,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.77920991646313
+   },
+   {
+    "fd": "gender+city->state",
+    "g3": 0.21936999999999995,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.5602440135089135
+   },
+   {
+    "fd": "gender+city->zip",
+    "g3": 0.442995,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.7748838101647234
+   },
+   {
+    "fd": "gender+state->f_name",
+    "g3": 0.99781,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "gender+state->area_code",
+    "g3": 0.545075,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.545075
+   },
+   {
+    "fd": "gender+state->city",
+    "g3": 0.89762,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "gender+state->zip",
+    "g3": 0.994105,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.994105
+   },
+   {
+    "fd": "gender+zip->f_name",
+    "g3": 0.66405,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.9231791938966069
+   },
+   {
+    "fd": "gender+zip->area_code",
+    "g3": 0.285435,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.285435
+   },
+   {
+    "fd": "gender+zip->city",
+    "g3": 0.0020000000000000018,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "gender+zip->state",
+    "g3": 0.0019449999999999745,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.0019449999999999745
+   },
+   {
+    "fd": "area_code+city->f_name",
+    "g3": 0.6335649999999999,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.8308701680432666
+   },
+   {
+    "fd": "area_code+city->gender",
+    "g3": 0.27586999999999995,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.534808982072609
+   },
+   {
+    "fd": "area_code+city->state",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "area_code+city->zip",
+    "g3": 0.221105,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.39320278415231424
+   },
+   {
+    "fd": "area_code+state->f_name",
+    "g3": 0.99683,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "area_code+state->gender",
+    "g3": 0.486325,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.486325
+   },
+   {
+    "fd": "area_code+state->city",
+    "g3": 0.89697,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "area_code+state->zip",
+    "g3": 0.99237,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.99237
+   },
+   {
+    "fd": "area_code+zip->f_name",
+    "g3": 0.528035,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.7069239012336624
+   },
+   {
+    "fd": "area_code+zip->gender",
+    "g3": 0.22617500000000001,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.22617500000000001
+   },
+   {
+    "fd": "area_code+zip->city",
+    "g3": 0.0011250000000000426,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04277333754244101
+   },
+   {
+    "fd": "area_code+zip->state",
+    "g3": 0.0,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.0
+   },
+   {
+    "fd": "city+state->f_name",
+    "g3": 0.85819,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "city+state->gender",
+    "g3": 0.37009000000000003,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.6623203728308005
+   },
+   {
+    "fd": "city+state->area_code",
+    "g3": 0.408195,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.656348473725157
+   },
+   {
+    "fd": "city+state->zip",
+    "g3": 0.252505,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.43594529485380973
+   },
+   {
+    "fd": "city+zip->f_name",
+    "g3": 0.80249,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "city+zip->gender",
+    "g3": 0.33347000000000004,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.7128783372983654
+   },
+   {
+    "fd": "city+zip->area_code",
+    "g3": 0.36116499999999996,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.5915445156449985
+   },
+   {
+    "fd": "city+zip->state",
+    "g3": 4.499999999996174e-05,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "state+zip->f_name",
+    "g3": 0.804045,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.9594830322400034
+   },
+   {
+    "fd": "state+zip->gender",
+    "g3": 0.334105,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.334105
+   },
+   {
+    "fd": "state+zip->area_code",
+    "g3": 0.3619,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.3619
+   },
+   {
+    "fd": "state+zip->city",
+    "g3": 0.0016049999999999676,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   }
+  ]
+ },
+ {
+  "dataset": "tax200000",
+  "mode": "pairs",
+  "seed": 1,
+  "rows": 200000,
+  "n_cands": 60,
+  "n_true": 19,
+  "false": [],
+  "missed": [],
+  "calls": 21616,
+  "calls_fwd_inv": [
+   13427,
+   8189
+  ],
+  "canon_all": 84286,
+  "resolved_cands": 12,
+  "resolved_oracles": [
+   "state"
+  ],
+  "budget": {
+   "f_name": 39523,
+   "city_e8": 44659,
+   "state": 104
+  },
+  "pilot": 5,
+  "fds": [
+   {
+    "fd": "f_name+gender->area_code",
+    "g3": 0.90501,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "f_name+gender->city",
+    "g3": 0.94274,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "f_name+gender->state",
+    "g3": 0.88496,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "f_name+gender->zip",
+    "g3": 0.949585,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "f_name+area_code->gender",
+    "g3": 1.4999999999987246e-05,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.0414890665669158
+   },
+   {
+    "fd": "f_name+area_code->city",
+    "g3": 0.07327499999999998,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.12851102374105747
+   },
+   {
+    "fd": "f_name+area_code->state",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "f_name+area_code->zip",
+    "g3": 0.07762000000000002,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.11240100507679521
+   },
+   {
+    "fd": "f_name+city->gender",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "f_name+city->area_code",
+    "g3": 0.003070000000000017,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.03931286735623875
+   },
+   {
+    "fd": "f_name+city->state",
+    "g3": 0.0014899999999999913,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.03931182817193822
+   },
+   {
+    "fd": "f_name+city->zip",
+    "g3": 0.007310000000000039,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04254599858148337
+   },
+   {
+    "fd": "f_name+state->gender",
+    "g3": 2.5000000000052758e-05,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.03931515347136992
+   },
+   {
+    "fd": "f_name+state->area_code",
+    "g3": 0.09176499999999999,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.12431105101274359
+   },
+   {
+    "fd": "f_name+state->city",
+    "g3": 0.16330999999999996,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.25418138046350675
+   },
+   {
+    "fd": "f_name+state->zip",
+    "g3": 0.16912000000000005,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.2804900745026959
+   },
+   {
+    "fd": "f_name+zip->gender",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "f_name+zip->area_code",
+    "g3": 0.00017000000000000348,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "f_name+zip->city",
+    "g3": 5.999999999994898e-05,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "f_name+zip->state",
+    "g3": 5.500000000002725e-05,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "gender+area_code->f_name",
+    "g3": 0.994105,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "gender+area_code->city",
+    "g3": 0.89569,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "gender+area_code->state",
+    "g3": 0.0,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.0
+   },
+   {
+    "fd": "gender+area_code->zip",
+    "g3": 0.98944,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.98944
+   },
+   {
+    "fd": "gender+city->f_name",
+    "g3": 0.838295,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "gender+city->area_code",
+    "g3": 0.488185,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.673233256059443
+   },
+   {
+    "fd": "gender+city->state",
+    "g3": 0.21936999999999995,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.5211313428948249
+   },
+   {
+    "fd": "gender+city->zip",
+    "g3": 0.442995,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.7400758177049269
+   },
+   {
+    "fd": "gender+state->f_name",
+    "g3": 0.99781,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "gender+state->area_code",
+    "g3": 0.545075,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.545075
+   },
+   {
+    "fd": "gender+state->city",
+    "g3": 0.89762,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "gender+state->zip",
+    "g3": 0.994105,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.994105
+   },
+   {
+    "fd": "gender+zip->f_name",
+    "g3": 0.66405,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.9013134228818968
+   },
+   {
+    "fd": "gender+zip->area_code",
+    "g3": 0.285435,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.285435
+   },
+   {
+    "fd": "gender+zip->city",
+    "g3": 0.0020000000000000018,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "gender+zip->state",
+    "g3": 0.0019449999999999745,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.0019449999999999745
+   },
+   {
+    "fd": "area_code+city->f_name",
+    "g3": 0.6335649999999999,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.8377675444618573
+   },
+   {
+    "fd": "area_code+city->gender",
+    "g3": 0.27586999999999995,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.5488423904821438
+   },
+   {
+    "fd": "area_code+city->state",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "area_code+city->zip",
+    "g3": 0.221105,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.4042317168840895
+   },
+   {
+    "fd": "area_code+state->f_name",
+    "g3": 0.99683,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "area_code+state->gender",
+    "g3": 0.486325,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.486325
+   },
+   {
+    "fd": "area_code+state->city",
+    "g3": 0.89697,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "area_code+state->zip",
+    "g3": 0.99237,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.99237
+   },
+   {
+    "fd": "area_code+zip->f_name",
+    "g3": 0.528035,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.7711684809445825
+   },
+   {
+    "fd": "area_code+zip->gender",
+    "g3": 0.22617500000000001,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.22617500000000001
+   },
+   {
+    "fd": "area_code+zip->city",
+    "g3": 0.0011250000000000426,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.042784341062603294
+   },
+   {
+    "fd": "area_code+zip->state",
+    "g3": 0.0,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.0
+   },
+   {
+    "fd": "city+state->f_name",
+    "g3": 0.85819,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "city+state->gender",
+    "g3": 0.37009000000000003,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.7264532729813615
+   },
+   {
+    "fd": "city+state->area_code",
+    "g3": 0.408195,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.7178203610795587
+   },
+   {
+    "fd": "city+state->zip",
+    "g3": 0.252505,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.5384818315450572
+   },
+   {
+    "fd": "city+zip->f_name",
+    "g3": 0.80249,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "city+zip->gender",
+    "g3": 0.33347000000000004,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.5785590899235559
+   },
+   {
+    "fd": "city+zip->area_code",
+    "g3": 0.36116499999999996,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.630418137864584
+   },
+   {
+    "fd": "city+zip->state",
+    "g3": 4.499999999996174e-05,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "state+zip->f_name",
+    "g3": 0.804045,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "state+zip->gender",
+    "g3": 0.334105,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.334105
+   },
+   {
+    "fd": "state+zip->area_code",
+    "g3": 0.3619,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.3619
+   },
+   {
+    "fd": "state+zip->city",
+    "g3": 0.0016049999999999676,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   }
+  ]
+ },
+ {
+  "dataset": "tax200000",
+  "mode": "pairs",
+  "seed": 2,
+  "rows": 200000,
+  "n_cands": 60,
+  "n_true": 19,
+  "false": [],
+  "missed": [],
+  "calls": 23453,
+  "calls_fwd_inv": [
+   14891,
+   8562
+  ],
+  "canon_all": 84642,
+  "resolved_cands": 12,
+  "resolved_oracles": [
+   "state"
+  ],
+  "budget": {
+   "f_name": 39364,
+   "city_e8": 45174,
+   "state": 104
+  },
+  "pilot": 5,
+  "fds": [
+   {
+    "fd": "f_name+gender->area_code",
+    "g3": 0.90501,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "f_name+gender->city",
+    "g3": 0.94274,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "f_name+gender->state",
+    "g3": 0.88496,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "f_name+gender->zip",
+    "g3": 0.949585,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "f_name+area_code->gender",
+    "g3": 1.4999999999987246e-05,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "f_name+area_code->city",
+    "g3": 0.07327499999999998,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.09746676988612887
+   },
+   {
+    "fd": "f_name+area_code->state",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "f_name+area_code->zip",
+    "g3": 0.07762000000000002,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.1172364151026711
+   },
+   {
+    "fd": "f_name+city->gender",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "f_name+city->area_code",
+    "g3": 0.003070000000000017,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04626810149667759
+   },
+   {
+    "fd": "f_name+city->state",
+    "g3": 0.0014899999999999913,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "f_name+city->zip",
+    "g3": 0.007310000000000039,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04527179406516456
+   },
+   {
+    "fd": "f_name+state->gender",
+    "g3": 2.5000000000052758e-05,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.042771473266648354
+   },
+   {
+    "fd": "f_name+state->area_code",
+    "g3": 0.09176499999999999,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.12058005517617586
+   },
+   {
+    "fd": "f_name+state->city",
+    "g3": 0.16330999999999996,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.34468642899183266
+   },
+   {
+    "fd": "f_name+state->zip",
+    "g3": 0.16912000000000005,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.3287394850506553
+   },
+   {
+    "fd": "f_name+zip->gender",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "f_name+zip->area_code",
+    "g3": 0.00017000000000000348,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "f_name+zip->city",
+    "g3": 5.999999999994898e-05,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "f_name+zip->state",
+    "g3": 5.500000000002725e-05,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "gender+area_code->f_name",
+    "g3": 0.994105,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "gender+area_code->city",
+    "g3": 0.89569,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "gender+area_code->state",
+    "g3": 0.0,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.0
+   },
+   {
+    "fd": "gender+area_code->zip",
+    "g3": 0.98944,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.98944
+   },
+   {
+    "fd": "gender+city->f_name",
+    "g3": 0.838295,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "gender+city->area_code",
+    "g3": 0.488185,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.7564560905194561
+   },
+   {
+    "fd": "gender+city->state",
+    "g3": 0.21936999999999995,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.3632251910854102
+   },
+   {
+    "fd": "gender+city->zip",
+    "g3": 0.442995,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.7017372643264848
+   },
+   {
+    "fd": "gender+state->f_name",
+    "g3": 0.99781,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "gender+state->area_code",
+    "g3": 0.545075,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.545075
+   },
+   {
+    "fd": "gender+state->city",
+    "g3": 0.89762,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "gender+state->zip",
+    "g3": 0.994105,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.994105
+   },
+   {
+    "fd": "gender+zip->f_name",
+    "g3": 0.66405,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.7951218641228293
+   },
+   {
+    "fd": "gender+zip->area_code",
+    "g3": 0.285435,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.285435
+   },
+   {
+    "fd": "gender+zip->city",
+    "g3": 0.0020000000000000018,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "gender+zip->state",
+    "g3": 0.0019449999999999745,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.0019449999999999745
+   },
+   {
+    "fd": "area_code+city->f_name",
+    "g3": 0.6335649999999999,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.8816448929868612
+   },
+   {
+    "fd": "area_code+city->gender",
+    "g3": 0.27586999999999995,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.523813930706134
+   },
+   {
+    "fd": "area_code+city->state",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "area_code+city->zip",
+    "g3": 0.221105,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.3459027602045254
+   },
+   {
+    "fd": "area_code+state->f_name",
+    "g3": 0.99683,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "area_code+state->gender",
+    "g3": 0.486325,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.486325
+   },
+   {
+    "fd": "area_code+state->city",
+    "g3": 0.89697,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "area_code+state->zip",
+    "g3": 0.99237,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.99237
+   },
+   {
+    "fd": "area_code+zip->f_name",
+    "g3": 0.528035,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.6848505923983433
+   },
+   {
+    "fd": "area_code+zip->gender",
+    "g3": 0.22617500000000001,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.22617500000000001
+   },
+   {
+    "fd": "area_code+zip->city",
+    "g3": 0.0011250000000000426,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "area_code+zip->state",
+    "g3": 0.0,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.0
+   },
+   {
+    "fd": "city+state->f_name",
+    "g3": 0.85819,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "city+state->gender",
+    "g3": 0.37009000000000003,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.7095689979714774
+   },
+   {
+    "fd": "city+state->area_code",
+    "g3": 0.408195,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.7281021192403947
+   },
+   {
+    "fd": "city+state->zip",
+    "g3": 0.252505,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.5343356728329764
+   },
+   {
+    "fd": "city+zip->f_name",
+    "g3": 0.80249,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "city+zip->gender",
+    "g3": 0.33347000000000004,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.632475552759149
+   },
+   {
+    "fd": "city+zip->area_code",
+    "g3": 0.36116499999999996,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.6614828346291035
+   },
+   {
+    "fd": "city+zip->state",
+    "g3": 4.499999999996174e-05,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   },
+   {
+    "fd": "state+zip->f_name",
+    "g3": 0.804045,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "state+zip->gender",
+    "g3": 0.334105,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.334105
+   },
+   {
+    "fd": "state+zip->area_code",
+    "g3": 0.3619,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.3619
+   },
+   {
+    "fd": "state+zip->city",
+    "g3": 0.0016049999999999676,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04779563161372589
+   }
+  ]
+ }
+]

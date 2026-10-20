@@ -79,7 +79,7 @@
 - **Lower bound at GeoNames-16k city domain**: D=29894, delta=0.05, m=1495, beta-alpha=0.5: q >= 547
 - **Inverse share of our calls (cost table rows)**: 0.19-0.38
 - **certify sample cap (max_n default)**: 20000
-- **semfd/ lines of Python**: 1094
+- **semfd/ lines of Python**: 1159
 - **GeoNames country alias list entries**: 16
 - **GeoNames rows per city (make_table default)**: 5
 - **E2 FDs per run**: 8
@@ -153,6 +153,25 @@
 - **E11 missed true FDs ndc (seed, p, fd)**: [(0, 1.0, 'labeler_e2->ptype'), (1, 1.0, 'labeler_e2->ptype'), (2, 0.5, 'labeler_e2->ptype')]
 - **E11 audit split ndc (natural candidates with tolerant LHS, seed 0)**: 6 of 6 have mass caught only by condition (ii) > 0; max 0.0192; top: labeler->labcode g3=0.128 str=0.108 ii=0.0192, labeler->generic g3=0.830 str=0.808 ii=0.0092, labeler->appno g3=0.623 str=0.605 ii=0.0079
 - **E11 no-audit mean (condition (i) mass) below oracle g3 ndc (natural, tolerant LHS, seed 0)**: 5 of 6; max shortfall 0.006; true FDs among them 0; crossing delta=0.05 0
+- **E11 registered-names inverse geonames_16k (3 seeds)**: false 0, missed 0; calls 23,292 vs complete inverse 22,835; max nu 0.112; candidates with nu>0.01 16.7; tuple mass covered by registered names city 0.89-0.89, country 0.85-0.86, admin1 0.80-0.80
+- **E11 registered-names inverse tax (3 seeds)**: false 0, missed 0; calls 10,561 vs complete inverse 11,024; max nu 0.097; candidates with nu>0.01 21.0; tuple mass covered by registered names f_name 0.82-0.82, city 0.81-0.82, state 1.00-1.00
+- **E13 run-level planner geonames_16k unary (3 seeds)**: calls 38,470 vs certificate only 21,759 (1.77x), canon-all 42,453; resolved candidates [39, 38, 38] of 58; resolved oracles ['city', 'country_src8']; false 0, missed 0 (certificate only: false 0, missed 0)
+- **E13 run-level planner geonames_16k pairs (3 seeds)**: calls 11,132 vs certificate only 11,132 (1.00x), canon-all 42,453; resolved candidates [0, 0, 0] of 30; resolved oracles []; false 0, missed 0 (certificate only: false 0, missed 0)
+- **E13 run-level planner tax unary (3 seeds)**: calls 25,005 vs certificate only 12,297 (2.03x), canon-all 84,575; resolved candidates [26, 10, 10] of 50; resolved oracles ['city_e8', 'state']; false 0, missed 0 (certificate only: false 0, missed 0)
+- **E13 run-level planner tax pairs (3 seeds)**: calls 22,579 vs certificate only 22,579 (1.00x), canon-all 84,575; resolved candidates [12, 12, 12] of 60; resolved oracles ['state']; false 0, missed 0 (certificate only: false 0, missed 0)
+- **E13 run-level planner ndc unary (3 seeds)**: calls 6,910 vs certificate only 6,305 (1.10x), canon-all 6,653; resolved candidates [61, 61, 61] of 66; resolved oracles ['labeler_e8']; false 0, missed 0 (certificate only: false 0, missed 0)
+- **E13 run-level planner ndc pairs (3 seeds)**: calls 7,545 vs certificate only 9,329 (0.81x), canon-all 6,653; resolved candidates [100, 100, 100] of 105; resolved oracles ['labeler_e8']; false 0, missed 0 (certificate only: false 0, missed 11)
+- **E14 LLM oracle on Tax city (10,000 rows, 6,500 values, 5,420 entities)**: B-cubed F1 0.90 (Layer-1 strings 0.91); pair precision 0.38, pair recall 0.58; LLM entities 5,277; mean s/call 1.44
+- **E14 city calls per run vs canonicalize-all**: 1,584-3,992 vs 6,500 (1.6-4.1x)
+- **E14 city->area_code**: certified 0/3; g3 LLM 0.309, g3 Tax oracle 0.276; nu under LLM 0.0635; U 0.363-0.487
+- **E14 city->state**: certified 0/3; g3 LLM 0.192, g3 Tax oracle 0.144; nu under LLM 0.0607; U 0.262-0.333
+- **E14 city->zip**: certified 0/3; g3 LLM 0.366, g3 Tax oracle 0.326; nu under LLM 0.0676; U 0.459-0.557
+- **E14 zip->city**: certified 3/3; g3 LLM 0.029, g3 Tax oracle 0.002; nu under LLM 0.0000; U 0.039-0.040
+- **E14 decisions vs LLM truth (over seeds)**: true certified 3/3, false certified 0/9; max nu 0.0676 vs declared 0.01
+- **E15 witness-slack bound g3 <= mu <= g3 + eps_pi + eps_rep (E1 lists, tolerant LHS, seed 0)**: holds on 19 of 19 candidates
+- **E15 true natural FDs geonames: max mu-g3 / max eps_pi+eps_rep**: 0.004 / 0.019 (city->country, city->admin1, admin1->country, city->tz)
+- **E15 true natural FDs tax: max mu-g3 / max eps_pi+eps_rep**: 0.026 / 0.164 (f_name->gender)
+- **E15 true natural FDs ndc: max mu-g3 / max eps_pi+eps_rep**: 0.004 / 0.085 (labeler->ptype)
 - **E12 hidden aliases (GeoNames 16000 cities, rho=0.5, 3 seeds)**: injected mass 0.074-0.074 (available 0.074-0.074); g3 0.074-0.074 (false at delta=0.05: 3/3); string g3 0.236-0.238; neighbor-only (nu_bar=0.01) certified 3/3, U 0.038-0.038, measured nu 0.136-0.138, calls 1161-1199, audited sample mean 0.000-0.000; inverse certified 0/3, U 0.210-0.275, audited sample mean 0.143-0.165, calls 986-1499
 - **E1b all unary candidates at 640,000 rows (58 candidates, 2 seeds)**: ours 31,188 (fwd+inv 22,906+8,282) vs canon-all 246,493: 7.9x (7.7-8.1); false [0, 0], missed [0, 0]; TANE raw false/missed [(1, 7), (1, 7)]
 - **MusicBrainz probe (not used)**: {'rows_total': 193750, 'rows_artist_language_nonnull': 105297, 'artists': 50665, 'artist_singleton_share': 0.6027632487910787, 'languages_distinct': 2001, 'g3_raw_artist_to_language': 0.2742148399289628, 'g3_raw_album_to_artist': 0.1903185397279885}

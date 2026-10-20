@@ -59,6 +59,9 @@ Experiments in `exp/`:
 | `e10_updates.py` | certificates under updates |
 | `e11_partial_inverse.py` | incomplete inverse access and the audit split |
 | `e12_hidden_alias.py` | hidden aliases: neighbor-only mode fails where the inverse rejects |
+| `e13_planner.py` | two planners evaluated (not used by the system) |
+| `e14_llm_tax_city.py` | second LLM oracle attribute (Tax city names; needs the GGUF model, cached answers included) |
+| `e15_slack.py` | witness-slack decomposition |
 | `e3_refine.py` | self-refining witness (power) |
 
 ## Reproduce

@@ -678,6 +678,59 @@ def paper_numbers():
         add(f"E11 no-audit mean (condition (i) mass) below oracle g3 {key} (natural, tolerant LHS, seed 0)",
             f"{len(under)} of {len(nat)}; max shortfall {max((f['g3'] - f['mass_i'] for f in under), default=0):.3f}; "
             f"true FDs among them {sum(f['g3'] <= 0.05 for f in under)}; crossing delta=0.05 {sum(f['mass_i'] <= 0.05 < f['g3'] for f in under)}")
+    for key in ("geonames_16k", "tax"):
+        pp, pf = R / f"e11_partial_inverse_{key}_official.json", R / f"e11_partial_inverse_{key}.json"
+        if pp.exists() and pf.exists():
+            e, full = load(pp), [r for r in load(pf)["runs"] if r["p"] == 1.0]
+            cov = {x: (min(c[x] for c in e["coverage"]), max(c[x] for c in e["coverage"])) for x in e["coverage"][0] if x != "seed"}
+            add(f"E11 registered-names inverse {key} ({len(e['runs'])} seeds)",
+                f"false {sum(len(r['false']) for r in e['runs'])}, missed {sum(len(r['missed']) for r in e['runs'])}; "
+                f"calls {np.mean([r['calls'] for r in e['runs']]):,.0f} vs complete inverse {np.mean([r['calls'] for r in full]):,.0f}; "
+                f"max nu {max(r['nu_max'] for r in e['runs']):.3f}; candidates with nu>0.01 {np.mean([r['nu_over_0.01'] for r in e['runs']]):.1f}; "
+                "tuple mass covered by registered names " + ", ".join(f"{x} {lo:.2f}-{hi:.2f}" for x, (lo, hi) in cov.items()))
+    for key in ("geonames_16k", "tax", "ndc"):
+        for mode, base_file, base_key in (("unary", f"e1b_{key}.json", "ours_calls_total"), ("pairs", f"e9_{key}.json", "calls")):
+            pp = R / f"e13_planner_{key}_{mode}.json"
+            if pp.exists() and (R / base_file).exists():
+                rr, bb = load(pp), load(R / base_file)
+                pc, bc = np.mean([r["calls"] for r in rr]), np.mean([r[base_key] for r in bb])
+                add(f"E13 run-level planner {key} {mode} ({len(rr)} seeds)",
+                    f"calls {pc:,.0f} vs certificate only {bc:,.0f} ({pc / bc:.2f}x), canon-all {np.mean([r['canon_all'] for r in rr]):,.0f}; "
+                    f"resolved candidates {[r['resolved_cands'] for r in rr]} of {rr[0]['n_cands']}; resolved oracles {rr[0]['resolved_oracles']}; "
+                    f"false {sum(len(r['false']) for r in rr)}, missed {sum(len(r['missed']) for r in rr)} (certificate only: "
+                    + (f"false {sum(r['ours']['false'] for r in bb)}, missed {sum(r['ours']['missed'] if mode == 'pairs' else r['ours']['missed_true'] for r in bb)})"))
+    pp = R / "e14_llm_tax_city.json"
+    if pp.exists():
+        e = load(pp)
+        ag, l1 = e["agreement"], e["agreement_layer1_baseline"]
+        add(f"E14 LLM oracle on Tax city ({e['rows']:,} rows, {e['n_values']:,} values, {e['n_entities']:,} entities)",
+            f"B-cubed F1 {ag['bcubed_f1']:.2f} (Layer-1 strings {l1['bcubed_f1']:.2f}); pair precision {ag['pair_precision']:.2f}, "
+            f"pair recall {ag['pair_recall']:.2f}; LLM entities {ag['llm_entities']:,}; mean s/call {e['sec_per_call']['mean']:.2f}")
+        rc = e["run_city_calls"]
+        add("E14 city calls per run vs canonicalize-all",
+            f"{min(rc):,}-{max(rc):,} vs {e['canon_all_city']:,} ({e['canon_all_city'] / max(rc):.1f}-{e['canon_all_city'] / min(rc):.1f}x)")
+        fds = sorted({f["fd"] for f in e["fds"]})
+        for fd in fds:
+            rr = [f for f in e["fds"] if f["fd"] == fd]
+            add(f"E14 {fd}", f"certified {sum(f['certified'] for f in rr)}/{len(rr)}; g3 LLM {rr[0]['g3_llm']:.3f}, "
+                f"g3 Tax oracle {rr[0]['g3_code']:.3f}; nu under LLM {max(f['nu_llm'] for f in rr):.4f}; "
+                f"U {min(f['ub'] for f in rr):.3f}-{max(f['ub'] for f in rr):.3f}")
+        tl = [f for f in e["fds"] if f["g3_llm"] <= 0.05]
+        fl = [f for f in e["fds"] if f["g3_llm"] > 0.05]
+        add("E14 decisions vs LLM truth (over seeds)",
+            f"true certified {sum(f['certified'] for f in tl)}/{len(tl)}, false certified {sum(f['certified'] for f in fl)}/{len(fl)}; "
+            f"max nu {max(f['nu_llm'] for f in e['fds']):.4f} vs declared 0.01")
+    pp = R / "e15_slack.json"
+    if pp.exists():
+        rows = load(pp)
+        add("E15 witness-slack bound g3 <= mu <= g3 + eps_pi + eps_rep (E1 lists, tolerant LHS, seed 0)",
+            f"holds on {sum(r['holds'] for r in rows)} of {len(rows)} candidates")
+        for d in dict.fromkeys(r["dataset"] for r in rows):
+            tn = [r for r in rows if r["dataset"] == d and not r["probe"] and r["g3"] <= 0.05]
+            if tn:
+                add(f"E15 true natural FDs {d}: max mu-g3 / max eps_pi+eps_rep",
+                    f"{max(r['mu'] - r['g3'] for r in tn):.3f} / {max(r['eps_pi'] + r['eps_rep'] for r in tn):.3f} "
+                    f"({', '.join(r['fd'] for r in tn)})")
     pp = R / "e12_hidden_alias.json"
     if pp.exists():
         e12 = load(pp)

@@ -1,0 +1,1466 @@
+[
+ {
+  "dataset": "ndc116620",
+  "mode": "unary",
+  "seed": 0,
+  "rows": 116620,
+  "n_cands": 66,
+  "n_true": 10,
+  "false": [],
+  "missed": [],
+  "calls": 6967,
+  "calls_fwd_inv": [
+   6653,
+   314
+  ],
+  "canon_all": 6653,
+  "resolved_cands": 61,
+  "resolved_oracles": [
+   "labeler_e8"
+  ],
+  "budget": {
+   "labeler_e8": 6653
+  },
+  "pilot": 5,
+  "fds": [
+   {
+    "fd": "labcode->labeler",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.048431032812421386
+   },
+   {
+    "fd": "labcode->appno",
+    "g3": 0.6144743611730407,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6144743611730407
+   },
+   {
+    "fd": "labcode->brand",
+    "g3": 0.8807065683416224,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8807065683416224
+   },
+   {
+    "fd": "labcode->generic",
+    "g3": 0.8202538158120392,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8202538158120392
+   },
+   {
+    "fd": "labcode->mktcat",
+    "g3": 0.09551534899674152,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.09551534899674152
+   },
+   {
+    "fd": "labcode->ptype",
+    "g3": 0.02483279025896068,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.02483279025896068
+   },
+   {
+    "fd": "labcode->labeler_e2",
+    "g3": 0.0202023666609501,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.048717743660130014
+   },
+   {
+    "fd": "labcode->labeler_e8",
+    "g3": 0.0812896587206311,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.11903976753241735
+   },
+   {
+    "fd": "labeler->labcode",
+    "g3": 0.12845138055222094,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.18222511574020142
+   },
+   {
+    "fd": "labeler->appno",
+    "g3": 0.6233064654433202,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.9373011067214416
+   },
+   {
+    "fd": "labeler->brand",
+    "g3": 0.8895129480363574,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8895129480363574
+   },
+   {
+    "fd": "labeler->generic",
+    "g3": 0.8301920768307323,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8301920768307323
+   },
+   {
+    "fd": "labeler->mktcat",
+    "g3": 0.09980277825415884,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.09980277825415884
+   },
+   {
+    "fd": "labeler->ptype",
+    "g3": 0.0258446235637112,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.0258446235637112
+   },
+   {
+    "fd": "appno->labcode",
+    "g3": 0.6711713256731264,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6711713256731264
+   },
+   {
+    "fd": "appno->labeler",
+    "g3": 0.6527096552906877,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6527096552906877
+   },
+   {
+    "fd": "appno->brand",
+    "g3": 0.4967672783399074,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.4967672783399074
+   },
+   {
+    "fd": "appno->generic",
+    "g3": 0.40439032755959525,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.40439032755959525
+   },
+   {
+    "fd": "appno->mktcat",
+    "g3": 0.02904304578974448,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.02904304578974448
+   },
+   {
+    "fd": "appno->ptype",
+    "g3": 0.016412279197393298,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.016412279197393298
+   },
+   {
+    "fd": "appno->labeler_e2",
+    "g3": 0.6579917681358258,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6579917681358258
+   },
+   {
+    "fd": "appno->labeler_e8",
+    "g3": 0.6732978905848053,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6732978905848053
+   },
+   {
+    "fd": "brand->labcode",
+    "g3": 0.4716943920425313,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.4716943920425313
+   },
+   {
+    "fd": "brand->labeler",
+    "g3": 0.45790601955067745,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.45790601955067745
+   },
+   {
+    "fd": "brand->appno",
+    "g3": 0.34377465271823016,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.34377465271823016
+   },
+   {
+    "fd": "brand->generic",
+    "g3": 0.08426513462527874,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.08426513462527874
+   },
+   {
+    "fd": "brand->mktcat",
+    "g3": 0.030586520322414712,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.030586520322414712
+   },
+   {
+    "fd": "brand->ptype",
+    "g3": 0.010847196021265604,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.010847196021265604
+   },
+   {
+    "fd": "brand->labeler_e2",
+    "g3": 0.46309380895215224,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.46309380895215224
+   },
+   {
+    "fd": "brand->labeler_e8",
+    "g3": 0.47960898645172356,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.47960898645172356
+   },
+   {
+    "fd": "generic->labcode",
+    "g3": 0.6718744640713428,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6718744640713428
+   },
+   {
+    "fd": "generic->labeler",
+    "g3": 0.6590207511576058,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6590207511576058
+   },
+   {
+    "fd": "generic->appno",
+    "g3": 0.407357228605728,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.407357228605728
+   },
+   {
+    "fd": "generic->brand",
+    "g3": 0.3298233579145944,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.3298233579145944
+   },
+   {
+    "fd": "generic->mktcat",
+    "g3": 0.06799862802263767,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.06799862802263767
+   },
+   {
+    "fd": "generic->ptype",
+    "g3": 0.023212141999657043,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.023212141999657043
+   },
+   {
+    "fd": "generic->labeler_e2",
+    "g3": 0.6632310066883896,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6632310066883896
+   },
+   {
+    "fd": "generic->labeler_e8",
+    "g3": 0.6773709483793517,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6773709483793517
+   },
+   {
+    "fd": "mktcat->labcode",
+    "g3": 0.92124849939976,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.92124849939976
+   },
+   {
+    "fd": "mktcat->labeler",
+    "g3": 0.8992625621677243,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8992625621677243
+   },
+   {
+    "fd": "mktcat->appno",
+    "g3": 0.7715228948722346,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.7715228948722346
+   },
+   {
+    "fd": "mktcat->brand",
+    "g3": 0.9838106671239925,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9838106671239925
+   },
+   {
+    "fd": "mktcat->generic",
+    "g3": 0.9653918710341279,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9653918710341279
+   },
+   {
+    "fd": "mktcat->ptype",
+    "g3": 0.07482421540044593,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.07482421540044593
+   },
+   {
+    "fd": "mktcat->labeler_e2",
+    "g3": 0.9010032584462356,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9010032584462356
+   },
+   {
+    "fd": "mktcat->labeler_e8",
+    "g3": 0.9062939461498886,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9062939461498886
+   },
+   {
+    "fd": "ptype->labcode",
+    "g3": 0.9300034299434059,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9300034299434059
+   },
+   {
+    "fd": "ptype->labeler",
+    "g3": 0.9088149545532499,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9088149545532499
+   },
+   {
+    "fd": "ptype->appno",
+    "g3": 0.8480106328245585,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8480106328245585
+   },
+   {
+    "fd": "ptype->brand",
+    "g3": 0.9913908420511062,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9913908420511062
+   },
+   {
+    "fd": "ptype->generic",
+    "g3": 0.9765992111130166,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9765992111130166
+   },
+   {
+    "fd": "ptype->mktcat",
+    "g3": 0.27228605728005484,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.27228605728005484
+   },
+   {
+    "fd": "ptype->labeler_e2",
+    "g3": 0.9101183330475047,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9101183330475047
+   },
+   {
+    "fd": "ptype->labeler_e8",
+    "g3": 0.9138398216429429,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9138398216429429
+   },
+   {
+    "fd": "labeler_e2->labcode",
+    "g3": 0.14623563711198762,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.14623563711198762
+   },
+   {
+    "fd": "labeler_e2->appno",
+    "g3": 0.6298662322071686,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6298662322071686
+   },
+   {
+    "fd": "labeler_e2->brand",
+    "g3": 0.8912279197393242,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8912279197393242
+   },
+   {
+    "fd": "labeler_e2->generic",
+    "g3": 0.8329703309895387,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8329703309895387
+   },
+   {
+    "fd": "labeler_e2->mktcat",
+    "g3": 0.11216772423255017,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.11216772423255017
+   },
+   {
+    "fd": "labeler_e2->ptype",
+    "g3": 0.03616875321557189,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.03616875321557189
+   },
+   {
+    "fd": "labeler_e8->labcode",
+    "g3": 0.20042016806722684,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.20042016806722684
+   },
+   {
+    "fd": "labeler_e8->appno",
+    "g3": 0.6490910649974275,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6490910649974275
+   },
+   {
+    "fd": "labeler_e8->brand",
+    "g3": 0.8962956611215915,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8962956611215915
+   },
+   {
+    "fd": "labeler_e8->generic",
+    "g3": 0.8420939804493226,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8420939804493226
+   },
+   {
+    "fd": "labeler_e8->mktcat",
+    "g3": 0.1484308008917853,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.1484308008917853
+   },
+   {
+    "fd": "labeler_e8->ptype",
+    "g3": 0.0667295489624421,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.0667295489624421
+   }
+  ]
+ },
+ {
+  "dataset": "ndc116620",
+  "mode": "unary",
+  "seed": 1,
+  "rows": 116620,
+  "n_cands": 66,
+  "n_true": 10,
+  "false": [],
+  "missed": [],
+  "calls": 6900,
+  "calls_fwd_inv": [
+   6653,
+   247
+  ],
+  "canon_all": 6653,
+  "resolved_cands": 61,
+  "resolved_oracles": [
+   "labeler_e8"
+  ],
+  "budget": {
+   "labeler_e8": 6653
+  },
+  "pilot": 5,
+  "fds": [
+   {
+    "fd": "labcode->labeler",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.048431032812421386
+   },
+   {
+    "fd": "labcode->appno",
+    "g3": 0.6144743611730407,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6144743611730407
+   },
+   {
+    "fd": "labcode->brand",
+    "g3": 0.8807065683416224,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8807065683416224
+   },
+   {
+    "fd": "labcode->generic",
+    "g3": 0.8202538158120392,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8202538158120392
+   },
+   {
+    "fd": "labcode->mktcat",
+    "g3": 0.09551534899674152,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.09551534899674152
+   },
+   {
+    "fd": "labcode->ptype",
+    "g3": 0.02483279025896068,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.02483279025896068
+   },
+   {
+    "fd": "labcode->labeler_e2",
+    "g3": 0.02025381581203911,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04933562833909503
+   },
+   {
+    "fd": "labcode->labeler_e8",
+    "g3": 0.07918881838449665,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.0978918785607842
+   },
+   {
+    "fd": "labeler->labcode",
+    "g3": 0.12845138055222094,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.22109183797777812
+   },
+   {
+    "fd": "labeler->appno",
+    "g3": 0.6233064654433202,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.9203176659646313
+   },
+   {
+    "fd": "labeler->brand",
+    "g3": 0.8895129480363574,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8895129480363574
+   },
+   {
+    "fd": "labeler->generic",
+    "g3": 0.8301920768307323,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8301920768307323
+   },
+   {
+    "fd": "labeler->mktcat",
+    "g3": 0.09980277825415884,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.09980277825415884
+   },
+   {
+    "fd": "labeler->ptype",
+    "g3": 0.0258446235637112,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.0258446235637112
+   },
+   {
+    "fd": "appno->labcode",
+    "g3": 0.6711713256731264,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6711713256731264
+   },
+   {
+    "fd": "appno->labeler",
+    "g3": 0.6527096552906877,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6527096552906877
+   },
+   {
+    "fd": "appno->brand",
+    "g3": 0.4967672783399074,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.4967672783399074
+   },
+   {
+    "fd": "appno->generic",
+    "g3": 0.40439032755959525,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.40439032755959525
+   },
+   {
+    "fd": "appno->mktcat",
+    "g3": 0.02904304578974448,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.02904304578974448
+   },
+   {
+    "fd": "appno->ptype",
+    "g3": 0.016412279197393298,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.016412279197393298
+   },
+   {
+    "fd": "appno->labeler_e2",
+    "g3": 0.6575030012004802,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6575030012004802
+   },
+   {
+    "fd": "appno->labeler_e8",
+    "g3": 0.6725947521865889,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6725947521865889
+   },
+   {
+    "fd": "brand->labcode",
+    "g3": 0.4716943920425313,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.4716943920425313
+   },
+   {
+    "fd": "brand->labeler",
+    "g3": 0.45790601955067745,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.45790601955067745
+   },
+   {
+    "fd": "brand->appno",
+    "g3": 0.34377465271823016,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.34377465271823016
+   },
+   {
+    "fd": "brand->generic",
+    "g3": 0.08426513462527874,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.08426513462527874
+   },
+   {
+    "fd": "brand->mktcat",
+    "g3": 0.030586520322414712,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.030586520322414712
+   },
+   {
+    "fd": "brand->ptype",
+    "g3": 0.010847196021265604,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.010847196021265604
+   },
+   {
+    "fd": "brand->labeler_e2",
+    "g3": 0.4632910306979935,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.4632910306979935
+   },
+   {
+    "fd": "brand->labeler_e8",
+    "g3": 0.478391356542617,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.478391356542617
+   },
+   {
+    "fd": "generic->labcode",
+    "g3": 0.6718744640713428,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6718744640713428
+   },
+   {
+    "fd": "generic->labeler",
+    "g3": 0.6590207511576058,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6590207511576058
+   },
+   {
+    "fd": "generic->appno",
+    "g3": 0.407357228605728,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.407357228605728
+   },
+   {
+    "fd": "generic->brand",
+    "g3": 0.3298233579145944,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.3298233579145944
+   },
+   {
+    "fd": "generic->mktcat",
+    "g3": 0.06799862802263767,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.06799862802263767
+   },
+   {
+    "fd": "generic->ptype",
+    "g3": 0.023212141999657043,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.023212141999657043
+   },
+   {
+    "fd": "generic->labeler_e2",
+    "g3": 0.6635397015949237,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6635397015949237
+   },
+   {
+    "fd": "generic->labeler_e8",
+    "g3": 0.6770365288972732,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6770365288972732
+   },
+   {
+    "fd": "mktcat->labcode",
+    "g3": 0.92124849939976,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.92124849939976
+   },
+   {
+    "fd": "mktcat->labeler",
+    "g3": 0.8992625621677243,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8992625621677243
+   },
+   {
+    "fd": "mktcat->appno",
+    "g3": 0.7715228948722346,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.7715228948722346
+   },
+   {
+    "fd": "mktcat->brand",
+    "g3": 0.9838106671239925,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9838106671239925
+   },
+   {
+    "fd": "mktcat->generic",
+    "g3": 0.9653918710341279,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9653918710341279
+   },
+   {
+    "fd": "mktcat->ptype",
+    "g3": 0.07482421540044593,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.07482421540044593
+   },
+   {
+    "fd": "mktcat->labeler_e2",
+    "g3": 0.9008489109929686,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9008489109929686
+   },
+   {
+    "fd": "mktcat->labeler_e8",
+    "g3": 0.9057280054879094,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9057280054879094
+   },
+   {
+    "fd": "ptype->labcode",
+    "g3": 0.9300034299434059,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9300034299434059
+   },
+   {
+    "fd": "ptype->labeler",
+    "g3": 0.9088149545532499,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9088149545532499
+   },
+   {
+    "fd": "ptype->appno",
+    "g3": 0.8480106328245585,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8480106328245585
+   },
+   {
+    "fd": "ptype->brand",
+    "g3": 0.9913908420511062,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9913908420511062
+   },
+   {
+    "fd": "ptype->generic",
+    "g3": 0.9765992111130166,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9765992111130166
+   },
+   {
+    "fd": "ptype->mktcat",
+    "g3": 0.27228605728005484,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.27228605728005484
+   },
+   {
+    "fd": "ptype->labeler_e2",
+    "g3": 0.9099296861601783,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9099296861601783
+   },
+   {
+    "fd": "ptype->labeler_e8",
+    "g3": 0.9134453781512605,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9134453781512605
+   },
+   {
+    "fd": "labeler_e2->labcode",
+    "g3": 0.1466215057451552,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.1466215057451552
+   },
+   {
+    "fd": "labeler_e2->appno",
+    "g3": 0.6298662322071686,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6298662322071686
+   },
+   {
+    "fd": "labeler_e2->brand",
+    "g3": 0.891399416909621,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.891399416909621
+   },
+   {
+    "fd": "labeler_e2->generic",
+    "g3": 0.8332704510375579,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8332704510375579
+   },
+   {
+    "fd": "labeler_e2->mktcat",
+    "g3": 0.11191047847710511,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.11191047847710511
+   },
+   {
+    "fd": "labeler_e2->ptype",
+    "g3": 0.0361944777911164,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.0361944777911164
+   },
+   {
+    "fd": "labeler_e8->labcode",
+    "g3": 0.19859372320356716,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.19859372320356716
+   },
+   {
+    "fd": "labeler_e8->appno",
+    "g3": 0.6485937232035671,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6485937232035671
+   },
+   {
+    "fd": "labeler_e8->brand",
+    "g3": 0.8963299605556508,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8963299605556508
+   },
+   {
+    "fd": "labeler_e8->generic",
+    "g3": 0.8422140284685302,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8422140284685302
+   },
+   {
+    "fd": "labeler_e8->mktcat",
+    "g3": 0.1466472303206997,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.1466472303206997
+   },
+   {
+    "fd": "labeler_e8->ptype",
+    "g3": 0.06612930886640367,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.06612930886640367
+   }
+  ]
+ },
+ {
+  "dataset": "ndc116620",
+  "mode": "unary",
+  "seed": 2,
+  "rows": 116620,
+  "n_cands": 66,
+  "n_true": 10,
+  "false": [],
+  "missed": [],
+  "calls": 6863,
+  "calls_fwd_inv": [
+   6653,
+   210
+  ],
+  "canon_all": 6653,
+  "resolved_cands": 61,
+  "resolved_oracles": [
+   "labeler_e8"
+  ],
+  "budget": {
+   "labeler_e8": 6653
+  },
+  "pilot": 5,
+  "fds": [
+   {
+    "fd": "labcode->labeler",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.048431032812421386
+   },
+   {
+    "fd": "labcode->appno",
+    "g3": 0.6144743611730407,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6144743611730407
+   },
+   {
+    "fd": "labcode->brand",
+    "g3": 0.8807065683416224,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8807065683416224
+   },
+   {
+    "fd": "labcode->generic",
+    "g3": 0.8202538158120392,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8202538158120392
+   },
+   {
+    "fd": "labcode->mktcat",
+    "g3": 0.09551534899674152,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.09551534899674152
+   },
+   {
+    "fd": "labcode->ptype",
+    "g3": 0.02483279025896068,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.02483279025896068
+   },
+   {
+    "fd": "labcode->labeler_e2",
+    "g3": 0.019559252272337457,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04989876838939092
+   },
+   {
+    "fd": "labcode->labeler_e8",
+    "g3": 0.07885439890241808,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.10534651840325956
+   },
+   {
+    "fd": "labeler->labcode",
+    "g3": 0.12845138055222094,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.25613808219726847
+   },
+   {
+    "fd": "labeler->appno",
+    "g3": 0.6233064654433202,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.8891156680044204
+   },
+   {
+    "fd": "labeler->brand",
+    "g3": 0.8895129480363574,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8895129480363574
+   },
+   {
+    "fd": "labeler->generic",
+    "g3": 0.8301920768307323,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8301920768307323
+   },
+   {
+    "fd": "labeler->mktcat",
+    "g3": 0.09980277825415884,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.09980277825415884
+   },
+   {
+    "fd": "labeler->ptype",
+    "g3": 0.0258446235637112,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.0258446235637112
+   },
+   {
+    "fd": "appno->labcode",
+    "g3": 0.6711713256731264,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6711713256731264
+   },
+   {
+    "fd": "appno->labeler",
+    "g3": 0.6527096552906877,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6527096552906877
+   },
+   {
+    "fd": "appno->brand",
+    "g3": 0.4967672783399074,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.4967672783399074
+   },
+   {
+    "fd": "appno->generic",
+    "g3": 0.40439032755959525,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.40439032755959525
+   },
+   {
+    "fd": "appno->mktcat",
+    "g3": 0.02904304578974448,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.02904304578974448
+   },
+   {
+    "fd": "appno->ptype",
+    "g3": 0.016412279197393298,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.016412279197393298
+   },
+   {
+    "fd": "appno->labeler_e2",
+    "g3": 0.6576487737952323,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6576487737952323
+   },
+   {
+    "fd": "appno->labeler_e8",
+    "g3": 0.6725776024695593,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6725776024695593
+   },
+   {
+    "fd": "brand->labcode",
+    "g3": 0.4716943920425313,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.4716943920425313
+   },
+   {
+    "fd": "brand->labeler",
+    "g3": 0.45790601955067745,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.45790601955067745
+   },
+   {
+    "fd": "brand->appno",
+    "g3": 0.34377465271823016,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.34377465271823016
+   },
+   {
+    "fd": "brand->generic",
+    "g3": 0.08426513462527874,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.08426513462527874
+   },
+   {
+    "fd": "brand->mktcat",
+    "g3": 0.030586520322414712,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.030586520322414712
+   },
+   {
+    "fd": "brand->ptype",
+    "g3": 0.010847196021265604,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.010847196021265604
+   },
+   {
+    "fd": "brand->labeler_e2",
+    "g3": 0.46308523409363744,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.46308523409363744
+   },
+   {
+    "fd": "brand->labeler_e8",
+    "g3": 0.47862287772251755,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.47862287772251755
+   },
+   {
+    "fd": "generic->labcode",
+    "g3": 0.6718744640713428,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6718744640713428
+   },
+   {
+    "fd": "generic->labeler",
+    "g3": 0.6590207511576058,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6590207511576058
+   },
+   {
+    "fd": "generic->appno",
+    "g3": 0.407357228605728,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.407357228605728
+   },
+   {
+    "fd": "generic->brand",
+    "g3": 0.3298233579145944,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.3298233579145944
+   },
+   {
+    "fd": "generic->mktcat",
+    "g3": 0.06799862802263767,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.06799862802263767
+   },
+   {
+    "fd": "generic->ptype",
+    "g3": 0.023212141999657043,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.023212141999657043
+   },
+   {
+    "fd": "generic->labeler_e2",
+    "g3": 0.6633339049905677,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6633339049905677
+   },
+   {
+    "fd": "generic->labeler_e8",
+    "g3": 0.6762733664894529,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6762733664894529
+   },
+   {
+    "fd": "mktcat->labcode",
+    "g3": 0.92124849939976,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.92124849939976
+   },
+   {
+    "fd": "mktcat->labeler",
+    "g3": 0.8992625621677243,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8992625621677243
+   },
+   {
+    "fd": "mktcat->appno",
+    "g3": 0.7715228948722346,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.7715228948722346
+   },
+   {
+    "fd": "mktcat->brand",
+    "g3": 0.9838106671239925,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9838106671239925
+   },
+   {
+    "fd": "mktcat->generic",
+    "g3": 0.9653918710341279,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9653918710341279
+   },
+   {
+    "fd": "mktcat->ptype",
+    "g3": 0.07482421540044593,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.07482421540044593
+   },
+   {
+    "fd": "mktcat->labeler_e2",
+    "g3": 0.9009003601440576,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9009003601440576
+   },
+   {
+    "fd": "mktcat->labeler_e8",
+    "g3": 0.905805179214543,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.905805179214543
+   },
+   {
+    "fd": "ptype->labcode",
+    "g3": 0.9300034299434059,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9300034299434059
+   },
+   {
+    "fd": "ptype->labeler",
+    "g3": 0.9088149545532499,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9088149545532499
+   },
+   {
+    "fd": "ptype->appno",
+    "g3": 0.8480106328245585,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8480106328245585
+   },
+   {
+    "fd": "ptype->brand",
+    "g3": 0.9913908420511062,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9913908420511062
+   },
+   {
+    "fd": "ptype->generic",
+    "g3": 0.9765992111130166,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9765992111130166
+   },
+   {
+    "fd": "ptype->mktcat",
+    "g3": 0.27228605728005484,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.27228605728005484
+   },
+   {
+    "fd": "ptype->labeler_e2",
+    "g3": 0.9100154347453266,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9100154347453266
+   },
+   {
+    "fd": "ptype->labeler_e8",
+    "g3": 0.9134625278682902,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9134625278682902
+   },
+   {
+    "fd": "labeler_e2->labcode",
+    "g3": 0.14558394786486017,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.14558394786486017
+   },
+   {
+    "fd": "labeler_e2->appno",
+    "g3": 0.6297033098953868,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6297033098953868
+   },
+   {
+    "fd": "labeler_e2->brand",
+    "g3": 0.8912622191733837,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8912622191733837
+   },
+   {
+    "fd": "labeler_e2->generic",
+    "g3": 0.8330818041502315,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8330818041502315
+   },
+   {
+    "fd": "labeler_e2->mktcat",
+    "g3": 0.11179900531641229,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.11179900531641229
+   },
+   {
+    "fd": "labeler_e2->ptype",
+    "g3": 0.03612587892299779,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.03612587892299779
+   },
+   {
+    "fd": "labeler_e8->labcode",
+    "g3": 0.19815640541931057,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.19815640541931057
+   },
+   {
+    "fd": "labeler_e8->appno",
+    "g3": 0.6488080946664381,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.6488080946664381
+   },
+   {
+    "fd": "labeler_e8->brand",
+    "g3": 0.896424283999314,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.896424283999314
+   },
+   {
+    "fd": "labeler_e8->generic",
+    "g3": 0.8427285199794203,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8427285199794203
+   },
+   {
+    "fd": "labeler_e8->mktcat",
+    "g3": 0.14740181787000517,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.14740181787000517
+   },
+   {
+    "fd": "labeler_e8->ptype",
+    "g3": 0.06684959698164983,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.06684959698164983
+   }
+  ]
+ }
+]

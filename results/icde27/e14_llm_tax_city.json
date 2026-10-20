@@ -1,0 +1,161 @@
+{
+ "model": "qwen2.5-7b-instruct-q4_k_m.gguf",
+ "rows": 10000,
+ "n_values": 6500,
+ "n_entities": 5420,
+ "sec_per_call": {
+  "mean": 1.438687087004861,
+  "p50": 1.3972723428159952
+ },
+ "agreement": {
+  "pair_precision": 0.38362068965517243,
+  "pair_recall": 0.5772405660377359,
+  "bcubed_precision": 0.8887500422654269,
+  "bcubed_recall": 0.9173501332001333,
+  "bcubed_f1": 0.9028236425962963,
+  "ref_entities": 5420,
+  "llm_entities": 5277
+ },
+ "agreement_layer1_baseline": {
+  "pair_precision": 0.0,
+  "pair_recall": 0.0,
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.8338461538461537,
+  "bcubed_f1": 0.9093959731543623,
+  "ref_entities": 5420,
+  "llm_entities": 6500
+ },
+ "fds": [
+  {
+   "seed": 0,
+   "fd": "zip->city",
+   "certified": true,
+   "ub": 0.03969468227618937,
+   "city_calls": 3506,
+   "g3_llm": 0.029200000000000004,
+   "g3_code": 0.0016000000000000458,
+   "nu_llm": 0.0
+  },
+  {
+   "seed": 0,
+   "fd": "city->state",
+   "certified": false,
+   "ub": 0.26425312344930546,
+   "city_calls": 267,
+   "g3_llm": 0.19199999999999995,
+   "g3_code": 0.14400000000000002,
+   "nu_llm": 0.0607
+  },
+  {
+   "seed": 0,
+   "fd": "city->zip",
+   "certified": false,
+   "ub": 0.5565803956010227,
+   "city_calls": 128,
+   "g3_llm": 0.36560000000000004,
+   "g3_code": 0.32589999999999997,
+   "nu_llm": 0.0676
+  },
+  {
+   "seed": 0,
+   "fd": "city->area_code",
+   "certified": false,
+   "ub": 0.42476645892214754,
+   "city_calls": 91,
+   "g3_llm": 0.3095,
+   "g3_code": 0.2761,
+   "nu_llm": 0.0635
+  },
+  {
+   "seed": 1,
+   "fd": "zip->city",
+   "certified": true,
+   "ub": 0.039366223302286785,
+   "city_calls": 866,
+   "g3_llm": 0.029200000000000004,
+   "g3_code": 0.0016000000000000458,
+   "nu_llm": 0.0
+  },
+  {
+   "seed": 1,
+   "fd": "city->state",
+   "certified": false,
+   "ub": 0.3329902877294463,
+   "city_calls": 247,
+   "g3_llm": 0.19199999999999995,
+   "g3_code": 0.14400000000000002,
+   "nu_llm": 0.0607
+  },
+  {
+   "seed": 1,
+   "fd": "city->zip",
+   "certified": false,
+   "ub": 0.46082930724859694,
+   "city_calls": 246,
+   "g3_llm": 0.36560000000000004,
+   "g3_code": 0.32589999999999997,
+   "nu_llm": 0.0676
+  },
+  {
+   "seed": 1,
+   "fd": "city->area_code",
+   "certified": false,
+   "ub": 0.36303783165688863,
+   "city_calls": 256,
+   "g3_llm": 0.3095,
+   "g3_code": 0.2761,
+   "nu_llm": 0.0635
+  },
+  {
+   "seed": 2,
+   "fd": "zip->city",
+   "certified": true,
+   "ub": 0.03932297459921534,
+   "city_calls": 552,
+   "g3_llm": 0.029200000000000004,
+   "g3_code": 0.0016000000000000458,
+   "nu_llm": 0.0
+  },
+  {
+   "seed": 2,
+   "fd": "city->state",
+   "certified": false,
+   "ub": 0.2624530602268748,
+   "city_calls": 535,
+   "g3_llm": 0.19199999999999995,
+   "g3_code": 0.14400000000000002,
+   "nu_llm": 0.0607
+  },
+  {
+   "seed": 2,
+   "fd": "city->zip",
+   "certified": false,
+   "ub": 0.4593226613530712,
+   "city_calls": 285,
+   "g3_llm": 0.36560000000000004,
+   "g3_code": 0.32589999999999997,
+   "nu_llm": 0.0676
+  },
+  {
+   "seed": 2,
+   "fd": "city->area_code",
+   "certified": false,
+   "ub": 0.48666337072174826,
+   "city_calls": 212,
+   "g3_llm": 0.3095,
+   "g3_code": 0.2761,
+   "nu_llm": 0.0635
+  }
+ ],
+ "run_city_calls": [
+  3992,
+  1615,
+  1584
+ ],
+ "run_calls": [
+  4064,
+  1678,
+  1655
+ ],
+ "canon_all_city": 6500
+}

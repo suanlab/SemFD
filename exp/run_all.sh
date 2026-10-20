@@ -51,6 +51,12 @@ run e10_small128k exp/e10_updates.py --ins 0.004 --dele 0.002 --n-cities 128000 
 run e3_refine exp/e3_refine.py --reps 200
 # review-v6 addition: hidden aliases (neighbor-only mode fails, inverse rejects)
 run e12_hidden_alias exp/e12_hidden_alias.py --seeds 3
+run e11_geonames_official exp/e11_partial_inverse.py --dataset geonames --kw "$G16" --tag _16k --official
+run e11_tax_official exp/e11_partial_inverse.py --dataset tax --official
+for m in unary pairs; do
+  run e13_geonames_$m exp/e13_planner.py --dataset geonames --kw "$G16" --tag _16k --mode $m
+  run e13_tax_$m exp/e13_planner.py --dataset tax --mode $m
+  run e13_ndc_$m exp/e13_planner.py --dataset ndc --mode $m; done
 # E8 (LLM oracle; needs llama-cpp-python and the GGUF in $E8_MODEL). Sequential and long: run separately:
 #   OMP_NUM_THREADS=1 nice -n 15 .venv/bin/python -I exp/e8_llm_oracle.py --canon --procs 4 --threads 6
 #   .venv/bin/python -I exp/e8_llm_oracle.py --offline --seeds 3
@@ -60,6 +66,8 @@ wait
 if [ "${WITH_E8:-0}" = "1" ]; then   # LLM oracle (hours on CPU; needs llama-cpp-python and $E8_MODEL)
   OMP_NUM_THREADS=1 $P exp/e8_llm_oracle.py --canon --procs 4 --threads 6 > $L/e8_canon_all.log 2>&1
   $P exp/e8_llm_oracle.py --offline --seeds 3 > $L/e8_offline.log 2>&1
+  OMP_NUM_THREADS=1 $P exp/e14_llm_tax_city.py --canon --procs 4 --threads 6 > $L/e14_canon.log 2>&1
+  $P exp/e14_llm_tax_city.py --seeds 3 > $L/e14_offline.log 2>&1
   $P exp/e8_llm_oracle.py --tokens --seeds 3 > $L/e8_tokens.log 2>&1
   $P exp/e8_llm_oracle.py --sample 400 > $L/e8_sample.log 2>&1
   $P exp/e8_llm_oracle.py --sample 400 --timing 20 --threads 16 > $L/e8_latency.log 2>&1

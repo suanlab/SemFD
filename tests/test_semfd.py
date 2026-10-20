@@ -162,3 +162,21 @@ def test_oracle_transfer_lemma():
         assert abs(gf - gg) <= m + 1e-12
         # brute-force minimality on small domains: no smaller deletion set of whole values works
     assert disagreement_mass([0, 0, 1, 2], {0: "a", 1: "a", 2: "b"}.__getitem__, {0: "x", 1: "y", 2: "z"}.__getitem__) == 0.25
+
+
+def test_witness_slack_bound():
+    """Paper Prop. (witness slack): g3 <= mu <= g3 + eps_pi + eps_rep under inverse access; mu agrees with the
+    independent condition-(i)/(ii) split of exp/e11_partial_inverse.py."""
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "exp"))
+    from e11_partial_inverse import b_split
+    from e15_slack import slack_terms
+    xs, ys, xo, yo = _toy()
+    for k, theta in ((1, 0.99), (3, 0.9), (3, 0.6), (5, 0.3)):
+        ax, ay = Attr("x", xs, proxy="edit", k=k), Attr("y", ys, exact=True)
+        xent = np.array([xo[v] for v in ax.vals])
+        yent = np.array([yo[v] for v in ay.vals])
+        g3 = g3_codes(xent[ax.codes], yent[ay.codes])
+        mu, ep, er = slack_terms(ax, ay, xent, yent, theta)
+        ci, cii = b_split(ax, ay, xent, yent, theta)
+        assert abs(mu - (ci + cii)) < 1e-12
+        assert g3 - 1e-12 <= mu <= g3 + ep + er + 1e-12

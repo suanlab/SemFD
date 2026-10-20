@@ -8,6 +8,11 @@ inverse were complete (nu_bar = 0), over all unary candidates (family-wise alpha
 Recorded per run: false certifications and missed true FDs against the oracle truth, oracle calls,
 and the measured miss mass nu of every candidate under that incomplete inverse (Thm 1).
 
+Part A' (--official). A systematic incomplete inverse: the alias lookup returns only an entity's registered
+names (GeoNames: the ASCII name and GeoNames alternate names, country aliases; Tax: the clean value, the state's
+full name and the USPS-style city abbreviations), never typos, drops or other noise, which are left to the proxy.
+Output tag _official; the tuple mass covered by the registered names is recorded per attribute.
+
 Part B (p = 1). For every candidate, the exact mean of B over all tuples split into the mass caught
 by condition (i) and the mass caught only by condition (ii) (the cross-cluster audit), next to the
 oracle g3 and the string-level g3, so the audit's contribution on natural candidates is visible.
@@ -31,7 +36,12 @@ from semfd.oracle import Canonicalizer, total_calls  # noqa: E402
 from semfd.probes import base_attr as base, is_probe_fd  # noqa: E402
 
 
-def keep(v, p, seed):
+REG = {}          # --official: base attribute -> set of registered (Layer-1) names
+
+
+def keep(v, p, seed, attr=None):
+    if p == "official":
+        return v in REG.get(base(attr), ())
     if p >= 1:
         return True
     h = int(hashlib.sha1(f"{seed}|{v}".encode()).hexdigest()[:8], 16) / 16 ** 8
@@ -46,7 +56,7 @@ def oracles(ds, p, seed):
             if key not in by_table:
                 tab, by_ent = ds.oracle[a], {}
                 for v, e in tab.items():
-                    if keep(v, p, seed):
+                    if keep(v, p, seed, a):
                         by_ent.setdefault(e, []).append(v)
                 by_table[key] = Canonicalizer(tab.__getitem__, lambda e, b=by_ent: b.get(e, []), name=a)
             out[a] = by_table[key]
@@ -55,13 +65,13 @@ def oracles(ds, p, seed):
     return out
 
 
-def nu_partial(ax, ay, xent, yent, theta, tab, p, seed):
+def nu_partial(ax, ay, xent, yent, theta, tab, p, seed, attr=None):
     """Miss mass of Thm 1 when N(a) = proxy neighbors + the kept spellings of a's entity."""
     lab, rep, prio = witness(ax, ay, theta)
     by_ent = {}
     for v, e in enumerate(xent):
         by_ent.setdefault(e, []).append(v)
-    known = np.array([tab is None or keep(ax.vals[v], p, seed) for v in range(len(ax.vals))])
+    known = np.array([tab is None or keep(ax.vals[v], p, seed, attr) for v in range(len(ax.vals))])
     bad = np.zeros(len(xent), bool)
     for vs in by_ent.values():
         if len(vs) < 2:
@@ -103,6 +113,34 @@ def b_split(ax, ay, xent, yent, theta):
     return float(cond_i.mean()), float((~cond_i & ii[ax.codes]).mean())
 
 
+def registry(dataset, ds, seed, kw):
+    """Registered names per attribute (Layer-1), as an alias service would list them."""
+    from semfd.proxy import layer1
+    if dataset == "geonames":
+        sys.path[:0] = [str(ROOT / "pilot")]
+        import p0b_geonames
+        c, a1name, cname = p0b_geonames.load(kw.get("n_cities", 1000), seed)
+        city = set(c["key"])
+        for alt, key in zip(c["alt"], c["key"]):
+            city |= {layer1(x) for x in p0b_geonames.ascii_alts(alt, key)}
+        country = {layer1(v) for v in cname.values()} | {layer1(x) for v in p0b_geonames.COUNTRY_ALIASES.values() for x in v}
+        return {"city": city, "country": country, "admin1": {layer1(v) for v in a1name.values()}}
+    if dataset == "tax":
+        import pandas as pd
+        from semfd.data import _abbr_variants
+        c = pd.read_csv(ROOT / "data/tax/clean.csv", dtype=str, keep_default_na=False)
+        sname = {}
+        for line in (ROOT / "data/geonames/admin1CodesASCII.txt").read_text(encoding="utf-8").splitlines():
+            f = line.split("\t")
+            if f[0].startswith("US."):
+                sname[f[0][3:]] = f[2]
+        reg = {x: {layer1(v) for v in c[x].unique()} for x in ("f_name", "city", "state")}
+        reg["state"] |= {layer1(sname[v]) for v in c["state"].unique() if v in sname}
+        reg["city"] |= {layer1(w) for v in c["city"].unique() for w in _abbr_variants(v)}
+        return reg
+    raise ValueError(f"no registry for {dataset}")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--dataset", default="geonames")
@@ -113,8 +151,9 @@ if __name__ == "__main__":
     ap.add_argument("--alpha", type=float, default=0.05)
     ap.add_argument("--theta0", type=float, default=0.9)
     ap.add_argument("--tag", default="")
+    ap.add_argument("--official", action="store_true", help="inverse returns registered names only (Part A')")
     a = ap.parse_args()
-    outp = ROOT / f"results/icde27/e11_partial_inverse_{a.dataset}{a.tag}.json"
+    outp = ROOT / f"results/icde27/e11_partial_inverse_{a.dataset}{a.tag}{'_official' if a.official else ''}.json"
     res = {"args": vars(a), "runs": [], "audit_split": []}
     for s in range(a.seeds):
         ds = LOADERS[a.dataset](seed=s, **json.loads(a.kw))
@@ -124,7 +163,13 @@ if __name__ == "__main__":
         cands = [(x, y) for x in names for y in names if x != y and base(x) != base(y)]
         truth = {(x, y): g3_codes(ent[x][attrs[x].codes], ent[y][attrs[y].codes]) for x, y in cands}
         af = a.alpha / len(cands)
-        if s == 0:
+        if a.official:
+            REG.clear()
+            REG.update(registry(a.dataset, ds, s, json.loads(a.kw)))
+            res.setdefault("coverage", []).append(
+                {"seed": s, **{x: float(np.isin(attrs[x].codes, [i for i, v in enumerate(attrs[x].vals) if v in REG.get(x, ())]).mean())
+                               for x in REG if x in attrs}})
+        if s == 0 and not a.official:
             for x, y in cands:
                 if ds.exact[x]:
                     continue
@@ -132,7 +177,7 @@ if __name__ == "__main__":
                 res["audit_split"].append({"fd": f"{x}->{y}", "probe": is_probe_fd(f"{x}->{y}"), "g3": truth[(x, y)],
                                            "g3_string": g3_codes(attrs[x].codes, attrs[y].codes),
                                            "mass_i": ci, "mass_ii_only": cii})
-        for p in a.fractions:
+        for p in (["official"] if a.official else a.fractions):
             orcs = oracles(ds, p, s)
             cert, nus = set(), {}
             for x, y in cands:
@@ -142,7 +187,7 @@ if __name__ == "__main__":
                     cert.add((x, y))
                 if not ds.exact[x]:
                     nus[f"{x}->{y}"] = nu_partial(attrs[x], attrs[y], ent[x], ent[y], a.theta0,
-                                                  ds.oracle.get(x), p, s)
+                                                  ds.oracle.get(x), p, s, x)
             T = {c for c in cands if truth[c] <= a.delta}
             rec = {"seed": s, "p": p, "n_cands": len(cands), "n_true": len(T),
                    "false": sorted(f"{x}->{y}" for x, y in cert - T),

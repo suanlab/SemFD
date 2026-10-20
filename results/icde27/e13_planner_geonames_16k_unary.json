@@ -1,0 +1,1307 @@
+[
+ {
+  "dataset": "geonames16000",
+  "mode": "unary",
+  "seed": 0,
+  "rows": 80000,
+  "n_cands": 58,
+  "n_true": 10,
+  "false": [],
+  "missed": [],
+  "calls": 38459,
+  "calls_fwd_inv": [
+   35287,
+   3172
+  ],
+  "canon_all": 42598,
+  "resolved_cands": 39,
+  "resolved_oracles": [
+   "city",
+   "country_src8"
+  ],
+  "budget": {
+   "city": 29987,
+   "country_src8": 2000,
+   "admin1": 10611
+  },
+  "pilot": 5,
+  "fds": [
+   {
+    "fd": "city->country",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.047569621269221346
+   },
+   {
+    "fd": "city->admin1",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.03994510219655181
+   },
+   {
+    "fd": "city->tz",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.047569621269221346
+   },
+   {
+    "fd": "city->fcode",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04261758580630718
+   },
+   {
+    "fd": "city->country_e2",
+    "g3": 0.020112499999999978,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.020112499999999978
+   },
+   {
+    "fd": "city->country_e8",
+    "g3": 0.07997500000000002,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.07997500000000002
+   },
+   {
+    "fd": "city->country_src8",
+    "g3": 0.07976249999999996,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.07976249999999996
+   },
+   {
+    "fd": "city->tz_src8",
+    "g3": 0.0798375,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.0798375
+   },
+   {
+    "fd": "country->city",
+    "g3": 0.9539124999999999,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9539124999999999
+   },
+   {
+    "fd": "country->admin1",
+    "g3": 0.7826500000000001,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "country->tz",
+    "g3": 0.12361250000000001,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.12361250000000001
+   },
+   {
+    "fd": "country->fcode",
+    "g3": 0.42761249999999995,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.42761249999999995
+   },
+   {
+    "fd": "country->tz_src8",
+    "g3": 0.1933125,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.1933125
+   },
+   {
+    "fd": "admin1->city",
+    "g3": 0.7378125,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.891688084211048
+   },
+   {
+    "fd": "admin1->country",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.047569621269221346
+   },
+   {
+    "fd": "admin1->tz",
+    "g3": 0.004275000000000029,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04953713491895128
+   },
+   {
+    "fd": "admin1->fcode",
+    "g3": 0.30871249999999995,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.5630171186843693
+   },
+   {
+    "fd": "admin1->country_e2",
+    "g3": 0.020675,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.049708221128841976
+   },
+   {
+    "fd": "admin1->country_e8",
+    "g3": 0.082125,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.12194447924405202
+   },
+   {
+    "fd": "admin1->country_src8",
+    "g3": 0.0798875,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.11955096988473052
+   },
+   {
+    "fd": "admin1->tz_src8",
+    "g3": 0.0838875,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.1449754240119
+   },
+   {
+    "fd": "tz->city",
+    "g3": 0.9390000000000001,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9390000000000001
+   },
+   {
+    "fd": "tz->country",
+    "g3": 0.004937500000000039,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.004937500000000039
+   },
+   {
+    "fd": "tz->admin1",
+    "g3": 0.7098249999999999,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.9830839512326036
+   },
+   {
+    "fd": "tz->fcode",
+    "g3": 0.42241249999999997,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.42241249999999997
+   },
+   {
+    "fd": "tz->country_e2",
+    "g3": 0.02553749999999999,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.02553749999999999
+   },
+   {
+    "fd": "tz->country_e8",
+    "g3": 0.08673750000000002,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.08673750000000002
+   },
+   {
+    "fd": "tz->country_src8",
+    "g3": 0.0844125,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.0844125
+   },
+   {
+    "fd": "fcode->city",
+    "g3": 0.9941625,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9941625
+   },
+   {
+    "fd": "fcode->country",
+    "g3": 0.8279875,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8279875
+   },
+   {
+    "fd": "fcode->admin1",
+    "g3": 0.9695,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "fcode->tz",
+    "g3": 0.83265,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.83265
+   },
+   {
+    "fd": "fcode->country_e2",
+    "g3": 0.83,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.83
+   },
+   {
+    "fd": "fcode->country_e8",
+    "g3": 0.8356125,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8356125
+   },
+   {
+    "fd": "fcode->country_src8",
+    "g3": 0.8350124999999999,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8350124999999999
+   },
+   {
+    "fd": "fcode->tz_src8",
+    "g3": 0.840575,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.840575
+   },
+   {
+    "fd": "country_e2->city",
+    "g3": 0.9548375,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9548375
+   },
+   {
+    "fd": "country_e2->admin1",
+    "g3": 0.7873875,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "country_e2->tz",
+    "g3": 0.14195000000000002,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.14195000000000002
+   },
+   {
+    "fd": "country_e2->fcode",
+    "g3": 0.432825,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.432825
+   },
+   {
+    "fd": "country_e2->tz_src8",
+    "g3": 0.21004999999999996,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.21004999999999996
+   },
+   {
+    "fd": "country_e8->city",
+    "g3": 0.9573875000000001,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9573875000000001
+   },
+   {
+    "fd": "country_e8->admin1",
+    "g3": 0.8007875,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "country_e8->tz",
+    "g3": 0.19558750000000003,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.19558750000000003
+   },
+   {
+    "fd": "country_e8->fcode",
+    "g3": 0.44823749999999996,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.44823749999999996
+   },
+   {
+    "fd": "country_e8->tz_src8",
+    "g3": 0.2597625,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.2597625
+   },
+   {
+    "fd": "country_src8->city",
+    "g3": 0.9570375,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9570375
+   },
+   {
+    "fd": "country_src8->admin1",
+    "g3": 0.7996875,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "country_src8->tz",
+    "g3": 0.19338750000000005,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.19338750000000005
+   },
+   {
+    "fd": "country_src8->fcode",
+    "g3": 0.44772500000000004,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.44772500000000004
+   },
+   {
+    "fd": "country_src8->tz_src8",
+    "g3": 0.23296249999999996,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.23296249999999996
+   },
+   {
+    "fd": "tz_src8->city",
+    "g3": 0.9431875,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9431875
+   },
+   {
+    "fd": "tz_src8->country",
+    "g3": 0.08398749999999999,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.08398749999999999
+   },
+   {
+    "fd": "tz_src8->admin1",
+    "g3": 0.7331624999999999,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.926619600361001
+   },
+   {
+    "fd": "tz_src8->fcode",
+    "g3": 0.441825,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.441825
+   },
+   {
+    "fd": "tz_src8->country_e2",
+    "g3": 0.10276249999999998,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.10276249999999998
+   },
+   {
+    "fd": "tz_src8->country_e8",
+    "g3": 0.15942500000000004,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.15942500000000004
+   },
+   {
+    "fd": "tz_src8->country_src8",
+    "g3": 0.12917500000000004,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.12917500000000004
+   }
+  ]
+ },
+ {
+  "dataset": "geonames16000",
+  "mode": "unary",
+  "seed": 1,
+  "rows": 80000,
+  "n_cands": 58,
+  "n_true": 10,
+  "false": [],
+  "missed": [],
+  "calls": 38598,
+  "calls_fwd_inv": [
+   35078,
+   3520
+  ],
+  "canon_all": 42355,
+  "resolved_cands": 38,
+  "resolved_oracles": [
+   "city",
+   "country_src8"
+  ],
+  "budget": {
+   "city": 29888,
+   "country_src8": 1962,
+   "admin1": 10505
+  },
+  "pilot": 5,
+  "fds": [
+   {
+    "fd": "city->country",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.047569621269221346
+   },
+   {
+    "fd": "city->admin1",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.047569621269221346
+   },
+   {
+    "fd": "city->tz",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.047569621269221346
+   },
+   {
+    "fd": "city->fcode",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.039145933716698916
+   },
+   {
+    "fd": "city->country_e2",
+    "g3": 0.020525000000000015,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.048693219553211264
+   },
+   {
+    "fd": "city->country_e8",
+    "g3": 0.07863750000000003,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.07863750000000003
+   },
+   {
+    "fd": "city->country_src8",
+    "g3": 0.07981249999999995,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.07981249999999995
+   },
+   {
+    "fd": "city->tz_src8",
+    "g3": 0.07984999999999998,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.07984999999999998
+   },
+   {
+    "fd": "country->city",
+    "g3": 0.955175,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.955175
+   },
+   {
+    "fd": "country->admin1",
+    "g3": 0.786,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.9826666566630551
+   },
+   {
+    "fd": "country->tz",
+    "g3": 0.12062499999999998,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.12062499999999998
+   },
+   {
+    "fd": "country->fcode",
+    "g3": 0.42381250000000004,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.42381250000000004
+   },
+   {
+    "fd": "country->tz_src8",
+    "g3": 0.19076249999999995,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.19076249999999995
+   },
+   {
+    "fd": "admin1->city",
+    "g3": 0.7422,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.9191683072118488
+   },
+   {
+    "fd": "admin1->country",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.047569621269221346
+   },
+   {
+    "fd": "admin1->tz",
+    "g3": 0.0036249999999999893,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.047569621269221346
+   },
+   {
+    "fd": "admin1->fcode",
+    "g3": 0.30955,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.5473061955989291
+   },
+   {
+    "fd": "admin1->country_e2",
+    "g3": 0.02092499999999997,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.047257830920191465
+   },
+   {
+    "fd": "admin1->country_e8",
+    "g3": 0.0803625,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.12303279052463134
+   },
+   {
+    "fd": "admin1->country_src8",
+    "g3": 0.07987500000000003,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.12288635492443122
+   },
+   {
+    "fd": "admin1->tz_src8",
+    "g3": 0.08323749999999996,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.15000713500535212
+   },
+   {
+    "fd": "tz->city",
+    "g3": 0.9422875,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9422875
+   },
+   {
+    "fd": "tz->country",
+    "g3": 0.005762500000000004,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.005762500000000004
+   },
+   {
+    "fd": "tz->admin1",
+    "g3": 0.7183999999999999,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.9180819020247165
+   },
+   {
+    "fd": "tz->fcode",
+    "g3": 0.41884999999999994,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.41884999999999994
+   },
+   {
+    "fd": "tz->country_e2",
+    "g3": 0.026662500000000033,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.026662500000000033
+   },
+   {
+    "fd": "tz->country_e8",
+    "g3": 0.0858875,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.0858875
+   },
+   {
+    "fd": "tz->country_src8",
+    "g3": 0.08504999999999996,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.08504999999999996
+   },
+   {
+    "fd": "fcode->city",
+    "g3": 0.993325,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.993325
+   },
+   {
+    "fd": "fcode->country",
+    "g3": 0.8175125,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8175125
+   },
+   {
+    "fd": "fcode->admin1",
+    "g3": 0.9662125,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "fcode->tz",
+    "g3": 0.8227875,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8227875
+   },
+   {
+    "fd": "fcode->country_e2",
+    "g3": 0.8195125,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8195125
+   },
+   {
+    "fd": "fcode->country_e8",
+    "g3": 0.82535,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.82535
+   },
+   {
+    "fd": "fcode->country_src8",
+    "g3": 0.824975,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.824975
+   },
+   {
+    "fd": "fcode->tz_src8",
+    "g3": 0.8302,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8302
+   },
+   {
+    "fd": "country_e2->city",
+    "g3": 0.955975,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.955975
+   },
+   {
+    "fd": "country_e2->admin1",
+    "g3": 0.7905,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "country_e2->tz",
+    "g3": 0.13875000000000004,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.13875000000000004
+   },
+   {
+    "fd": "country_e2->fcode",
+    "g3": 0.42956249999999996,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.42956249999999996
+   },
+   {
+    "fd": "country_e2->tz_src8",
+    "g3": 0.2073625,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.2073625
+   },
+   {
+    "fd": "country_e8->city",
+    "g3": 0.95855,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.95855
+   },
+   {
+    "fd": "country_e8->admin1",
+    "g3": 0.803375,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "country_e8->tz",
+    "g3": 0.19169999999999998,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.19169999999999998
+   },
+   {
+    "fd": "country_e8->fcode",
+    "g3": 0.4446,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.4446
+   },
+   {
+    "fd": "country_e8->tz_src8",
+    "g3": 0.25593750000000004,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.25593750000000004
+   },
+   {
+    "fd": "country_src8->city",
+    "g3": 0.9582625,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9582625
+   },
+   {
+    "fd": "country_src8->admin1",
+    "g3": 0.8028875,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "country_src8->tz",
+    "g3": 0.19017499999999998,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.19017499999999998
+   },
+   {
+    "fd": "country_src8->fcode",
+    "g3": 0.443825,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.443825
+   },
+   {
+    "fd": "country_src8->tz_src8",
+    "g3": 0.23086249999999997,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.23086249999999997
+   },
+   {
+    "fd": "tz_src8->city",
+    "g3": 0.946075,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.946075
+   },
+   {
+    "fd": "tz_src8->country",
+    "g3": 0.08465,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.08465
+   },
+   {
+    "fd": "tz_src8->admin1",
+    "g3": 0.7400625000000001,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.9339004625262957
+   },
+   {
+    "fd": "tz_src8->fcode",
+    "g3": 0.44067500000000004,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.44067500000000004
+   },
+   {
+    "fd": "tz_src8->country_e2",
+    "g3": 0.1038,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.1038
+   },
+   {
+    "fd": "tz_src8->country_e8",
+    "g3": 0.15813750000000004,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.15813750000000004
+   },
+   {
+    "fd": "tz_src8->country_src8",
+    "g3": 0.13080000000000003,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.13080000000000003
+   }
+  ]
+ },
+ {
+  "dataset": "geonames16000",
+  "mode": "unary",
+  "seed": 2,
+  "rows": 80000,
+  "n_cands": 58,
+  "n_true": 10,
+  "false": [],
+  "missed": [],
+  "calls": 38353,
+  "calls_fwd_inv": [
+   34993,
+   3360
+  ],
+  "canon_all": 42405,
+  "resolved_cands": 38,
+  "resolved_oracles": [
+   "city",
+   "country_src8"
+  ],
+  "budget": {
+   "city": 29808,
+   "country_src8": 2012,
+   "admin1": 10585
+  },
+  "pilot": 5,
+  "fds": [
+   {
+    "fd": "city->country",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.047569621269221346
+   },
+   {
+    "fd": "city->admin1",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.0426081298712155
+   },
+   {
+    "fd": "city->tz",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.047569621269221346
+   },
+   {
+    "fd": "city->fcode",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.047569621269221346
+   },
+   {
+    "fd": "city->country_e2",
+    "g3": 0.01902499999999996,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04518207725179202
+   },
+   {
+    "fd": "city->country_e8",
+    "g3": 0.07753750000000004,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.07753750000000004
+   },
+   {
+    "fd": "city->country_src8",
+    "g3": 0.07986249999999995,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.07986249999999995
+   },
+   {
+    "fd": "city->tz_src8",
+    "g3": 0.07982500000000003,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.07982500000000003
+   },
+   {
+    "fd": "country->city",
+    "g3": 0.9512,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9512
+   },
+   {
+    "fd": "country->admin1",
+    "g3": 0.7840125,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "country->tz",
+    "g3": 0.11898750000000002,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.11898750000000002
+   },
+   {
+    "fd": "country->fcode",
+    "g3": 0.43251249999999997,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.43251249999999997
+   },
+   {
+    "fd": "country->tz_src8",
+    "g3": 0.18918749999999995,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.18918749999999995
+   },
+   {
+    "fd": "admin1->city",
+    "g3": 0.7337750000000001,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "admin1->country",
+    "g3": 0.0,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.047569621269221346
+   },
+   {
+    "fd": "admin1->tz",
+    "g3": 0.004262499999999947,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04260244738676489
+   },
+   {
+    "fd": "admin1->fcode",
+    "g3": 0.30823750000000005,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.537413338191267
+   },
+   {
+    "fd": "admin1->country_e2",
+    "g3": 0.019275000000000042,
+    "mode": "certificate",
+    "certified": true,
+    "ub": 0.04564986289858143
+   },
+   {
+    "fd": "admin1->country_e8",
+    "g3": 0.07898749999999999,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.1263364774301734
+   },
+   {
+    "fd": "admin1->country_src8",
+    "g3": 0.0799375,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.13211941359263818
+   },
+   {
+    "fd": "admin1->tz_src8",
+    "g3": 0.08374999999999999,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.1665791695948792
+   },
+   {
+    "fd": "tz->city",
+    "g3": 0.9361625,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9361625
+   },
+   {
+    "fd": "tz->country",
+    "g3": 0.0057874999999999455,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.0057874999999999455
+   },
+   {
+    "fd": "tz->admin1",
+    "g3": 0.715125,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.8450849693080537
+   },
+   {
+    "fd": "tz->fcode",
+    "g3": 0.42656249999999996,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.42656249999999996
+   },
+   {
+    "fd": "tz->country_e2",
+    "g3": 0.025024999999999964,
+    "mode": "resolved",
+    "certified": true,
+    "ub": 0.025024999999999964
+   },
+   {
+    "fd": "tz->country_e8",
+    "g3": 0.08443750000000005,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.08443750000000005
+   },
+   {
+    "fd": "tz->country_src8",
+    "g3": 0.08536250000000001,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.08536250000000001
+   },
+   {
+    "fd": "fcode->city",
+    "g3": 0.9933375,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9933375
+   },
+   {
+    "fd": "fcode->country",
+    "g3": 0.82455,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.82455
+   },
+   {
+    "fd": "fcode->admin1",
+    "g3": 0.9672875,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "fcode->tz",
+    "g3": 0.8287375,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8287375
+   },
+   {
+    "fd": "fcode->country_e2",
+    "g3": 0.82605,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.82605
+   },
+   {
+    "fd": "fcode->country_e8",
+    "g3": 0.8318375,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8318375
+   },
+   {
+    "fd": "fcode->country_src8",
+    "g3": 0.8318625,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.8318625
+   },
+   {
+    "fd": "fcode->tz_src8",
+    "g3": 0.835725,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.835725
+   },
+   {
+    "fd": "country_e2->city",
+    "g3": 0.952225,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.952225
+   },
+   {
+    "fd": "country_e2->admin1",
+    "g3": 0.788175,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "country_e2->tz",
+    "g3": 0.13611249999999997,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.13611249999999997
+   },
+   {
+    "fd": "country_e2->fcode",
+    "g3": 0.4373125,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.4373125
+   },
+   {
+    "fd": "country_e2->tz_src8",
+    "g3": 0.2047875,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.2047875
+   },
+   {
+    "fd": "country_e8->city",
+    "g3": 0.9548375,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9548375
+   },
+   {
+    "fd": "country_e8->admin1",
+    "g3": 0.800675,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 1.0
+   },
+   {
+    "fd": "country_e8->tz",
+    "g3": 0.18866249999999996,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.18866249999999996
+   },
+   {
+    "fd": "country_e8->fcode",
+    "g3": 0.45281249999999995,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.45281249999999995
+   },
+   {
+    "fd": "country_e8->tz_src8",
+    "g3": 0.2531,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.2531
+   },
+   {
+    "fd": "country_src8->city",
+    "g3": 0.9543,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9543
+   },
+   {
+    "fd": "country_src8->admin1",
+    "g3": 0.801025,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.9756315518900183
+   },
+   {
+    "fd": "country_src8->tz",
+    "g3": 0.18955,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.18955
+   },
+   {
+    "fd": "country_src8->fcode",
+    "g3": 0.452325,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.452325
+   },
+   {
+    "fd": "country_src8->tz_src8",
+    "g3": 0.2296125,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.2296125
+   },
+   {
+    "fd": "tz_src8->city",
+    "g3": 0.9409875,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.9409875
+   },
+   {
+    "fd": "tz_src8->country",
+    "g3": 0.08476249999999996,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.08476249999999996
+   },
+   {
+    "fd": "tz_src8->admin1",
+    "g3": 0.737525,
+    "mode": "certificate",
+    "certified": false,
+    "ub": 0.955729681986599
+   },
+   {
+    "fd": "tz_src8->fcode",
+    "g3": 0.44815000000000005,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.44815000000000005
+   },
+   {
+    "fd": "tz_src8->country_e2",
+    "g3": 0.10229999999999995,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.10229999999999995
+   },
+   {
+    "fd": "tz_src8->country_e8",
+    "g3": 0.15683749999999996,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.15683749999999996
+   },
+   {
+    "fd": "tz_src8->country_src8",
+    "g3": 0.13055000000000005,
+    "mode": "resolved",
+    "certified": false,
+    "ub": 0.13055000000000005
+   }
+  ]
+ }
+]

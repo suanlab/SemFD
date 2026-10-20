@@ -1,0 +1,192 @@
+[
+ {
+  "dataset": "geonames",
+  "fd": "city->country",
+  "probe": false,
+  "g3": 0.0,
+  "mu": 0.0018375,
+  "eps_pi": 0.019075,
+  "eps_rep": 0.0,
+  "holds": true
+ },
+ {
+  "dataset": "geonames",
+  "fd": "city->admin1",
+  "probe": false,
+  "g3": 0.0,
+  "mu": 0.0037625,
+  "eps_pi": 0.019075,
+  "eps_rep": 0.0,
+  "holds": true
+ },
+ {
+  "dataset": "geonames",
+  "fd": "admin1->country",
+  "probe": false,
+  "g3": 0.0,
+  "mu": 0.000275,
+  "eps_pi": 0.013725,
+  "eps_rep": 0.0,
+  "holds": true
+ },
+ {
+  "dataset": "geonames",
+  "fd": "country->admin1",
+  "probe": false,
+  "g3": 0.7826500000000001,
+  "mu": 0.8060375,
+  "eps_pi": 0.9662375,
+  "eps_rep": 0.0,
+  "holds": true
+ },
+ {
+  "dataset": "geonames",
+  "fd": "admin1->city",
+  "probe": false,
+  "g3": 0.7378125,
+  "mu": 0.7616875,
+  "eps_pi": 0.8864375,
+  "eps_rep": 0.0001875,
+  "holds": true
+ },
+ {
+  "dataset": "geonames",
+  "fd": "country->tz",
+  "probe": false,
+  "g3": 0.12361250000000001,
+  "mu": 0.1266125,
+  "eps_pi": 0.0899625,
+  "eps_rep": 0.0,
+  "holds": true
+ },
+ {
+  "dataset": "geonames",
+  "fd": "city->country_e2",
+  "probe": true,
+  "g3": 0.020112499999999978,
+  "mu": 0.0256375,
+  "eps_pi": 0.049825,
+  "eps_rep": 0.0002625,
+  "holds": true
+ },
+ {
+  "dataset": "geonames",
+  "fd": "city->country_e8",
+  "probe": true,
+  "g3": 0.07997500000000002,
+  "mu": 0.0957125,
+  "eps_pi": 0.1385875,
+  "eps_rep": 0.0011875,
+  "holds": true
+ },
+ {
+  "dataset": "geonames",
+  "fd": "city->country_src8",
+  "probe": true,
+  "g3": 0.07976249999999996,
+  "mu": 0.0819,
+  "eps_pi": 0.29745,
+  "eps_rep": 0.000175,
+  "holds": true
+ },
+ {
+  "dataset": "geonames",
+  "fd": "city->tz_src8",
+  "probe": true,
+  "g3": 0.0798375,
+  "mu": 0.0818625,
+  "eps_pi": 0.2953625,
+  "eps_rep": 0.0,
+  "holds": true
+ },
+ {
+  "dataset": "geonames",
+  "fd": "city->tz",
+  "probe": false,
+  "g3": 0.0,
+  "mu": 0.0021625,
+  "eps_pi": 0.019075,
+  "eps_rep": 0.0,
+  "holds": true
+ },
+ {
+  "dataset": "tax",
+  "fd": "f_name->gender",
+  "probe": false,
+  "g3": 0.00017000000000000348,
+  "mu": 0.02608,
+  "eps_pi": 0.16416,
+  "eps_rep": 0.0,
+  "holds": true
+ },
+ {
+  "dataset": "tax",
+  "fd": "city->state",
+  "probe": false,
+  "g3": 0.227935,
+  "mu": 0.26048,
+  "eps_pi": 0.43254,
+  "eps_rep": 0.00014,
+  "holds": true
+ },
+ {
+  "dataset": "tax",
+  "fd": "state->area_code",
+  "probe": false,
+  "g3": 0.546935,
+  "mu": 0.55863,
+  "eps_pi": 0.499145,
+  "eps_rep": 0.0,
+  "holds": true
+ },
+ {
+  "dataset": "tax",
+  "fd": "city->zip",
+  "probe": false,
+  "g3": 0.45848,
+  "mu": 0.49167,
+  "eps_pi": 0.612685,
+  "eps_rep": 0.0,
+  "holds": true
+ },
+ {
+  "dataset": "tax",
+  "fd": "city->area_code",
+  "probe": false,
+  "g3": 0.530205,
+  "mu": 0.562125,
+  "eps_pi": 0.685635,
+  "eps_rep": 0.0,
+  "holds": true
+ },
+ {
+  "dataset": "ndc",
+  "fd": "labeler->ptype",
+  "probe": false,
+  "g3": 0.0258446235637112,
+  "mu": 0.030106328245583947,
+  "eps_pi": 0.08528554278854399,
+  "eps_rep": 0.0,
+  "holds": true
+ },
+ {
+  "dataset": "ndc",
+  "fd": "labeler->labcode",
+  "probe": false,
+  "g3": 0.12845138055222094,
+  "mu": 0.14560967244040474,
+  "eps_pi": 0.19094494940833476,
+  "eps_rep": 0.0,
+  "holds": true
+ },
+ {
+  "dataset": "ndc",
+  "fd": "labeler->mktcat",
+  "probe": false,
+  "g3": 0.09980277825415884,
+  "mu": 0.1053164122791974,
+  "eps_pi": 0.15029154518950438,
+  "eps_rep": 0.0,
+  "holds": true
+ }
+]
