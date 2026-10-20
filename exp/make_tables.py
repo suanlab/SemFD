@@ -691,8 +691,10 @@ def paper_numbers():
             f"string g3 {min(r['g3_string'] for r in rr):.3f}-{max(r['g3_string'] for r in rr):.3f}; "
             f"neighbor-only (nu_bar={cf['nu_bar']}) certified {sum(ours('ann_nubar', 'certified'))}/{len(rr)}, "
             f"U {min(ours('ann_nubar', 'ub')):.3f}-{max(ours('ann_nubar', 'ub')):.3f}, measured nu {min(ours('ann_nubar', 'nu')):.3f}-{max(ours('ann_nubar', 'nu')):.3f}, "
-            f"calls {min(ours('ann_nubar', 'calls'))}-{max(ours('ann_nubar', 'calls'))}; "
+            f"calls {min(ours('ann_nubar', 'calls'))}-{max(ours('ann_nubar', 'calls'))}, "
+            f"audited sample mean {min(ours('ann_nubar', 'mean')):.3f}-{max(ours('ann_nubar', 'mean')):.3f}; "
             f"inverse certified {sum(ours('inverse', 'certified'))}/{len(rr)}, U {min(ours('inverse', 'ub')):.3f}-{max(ours('inverse', 'ub')):.3f}, "
+            f"audited sample mean {min(ours('inverse', 'mean')):.3f}-{max(ours('inverse', 'mean')):.3f}, "
             f"calls {min(ours('inverse', 'calls'))}-{max(ours('inverse', 'calls'))}")
     pp = R / "e1b_geonames_640k.json"
     if pp.exists():
