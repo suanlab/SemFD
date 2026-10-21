@@ -1,0 +1,3387 @@
+[
+ {
+  "dataset": "gpg81586",
+  "seed": 0,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "alpha_per_fd": 0.00125,
+  "theta0": 0.9,
+  "rows": 81586,
+  "n_cands": 40,
+  "n_true": 10,
+  "truth": {
+   "name->empid": 0.0,
+   "name->postcode": 0.0,
+   "name->sic": 0.037334836859265086,
+   "name->size": 0.152734537788346,
+   "name->year": 0.8310249307479225,
+   "cn->empid": 0.0,
+   "cn->postcode": 0.0,
+   "cn->sic": 0.037334836859265086,
+   "cn->size": 0.152734537788346,
+   "cn->year": 0.8310249307479225,
+   "empid->name": 0.0,
+   "empid->cn": 0.0,
+   "empid->postcode": 0.0,
+   "empid->sic": 0.037334836859265086,
+   "empid->size": 0.152734537788346,
+   "empid->year": 0.8310249307479225,
+   "postcode->name": 0.3173215992939965,
+   "postcode->cn": 0.3173215992939965,
+   "postcode->empid": 0.3173215992939965,
+   "postcode->sic": 0.2783565807859192,
+   "postcode->size": 0.2846444242884809,
+   "postcode->year": 0.8418356090505724,
+   "sic->name": 0.7923173093422891,
+   "sic->cn": 0.7923173093422891,
+   "sic->empid": 0.7923173093422891,
+   "sic->postcode": 0.7592479101806683,
+   "sic->size": 0.45966219694555444,
+   "sic->year": 0.8496310641531635,
+   "size->name": 0.9992890937170593,
+   "size->cn": 0.9992890937170593,
+   "size->empid": 0.9992890937170593,
+   "size->postcode": 0.9939450395901258,
+   "size->sic": 0.9404799843110337,
+   "size->year": 0.8750398352658544,
+   "year->name": 0.9998774299512171,
+   "year->cn": 0.9998774299512171,
+   "year->empid": 0.9998774299512171,
+   "year->postcode": 0.9952565391121025,
+   "year->sic": 0.9408967224768956,
+   "year->size": 0.5436717083813399
+  },
+  "b3_tane_raw": {
+   "n": 9,
+   "false": 0,
+   "missed_true": 1
+  },
+  "b3_tane_norm": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "b1_quotient": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "ours": {
+   "n": 9,
+   "false": 0,
+   "missed_true": 1
+  },
+  "ours_calls_total": 21677,
+  "ours_calls_fwd_inv": [
+   12211,
+   9466
+  ],
+  "planner": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "planner_calls_total": 21413,
+  "b9_noaudit": {
+   "n": 9,
+   "false": 0,
+   "missed_true": 1
+  },
+  "b9_calls_total": 776,
+  "planner_resolved": 38,
+  "planner_prepass": [],
+  "v_thresh": 2000,
+  "canon_all": 15221,
+  "ours_detail": {
+   "name->empid": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04848810161706362,
+    "lb": 0.0,
+    "mean": 0.016,
+    "samples": 500,
+    "calls": 2231,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "name->postcode": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04768597148433864,
+    "lb": 0.0,
+    "mean": 0.01,
+    "samples": 400,
+    "calls": 1361,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "name->sic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.05742697659713114,
+    "lb": 0.04060017349920994,
+    "mean": 0.04915,
+    "samples": 20000,
+    "calls": 17939,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "name->size": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.24164333783781577,
+    "lb": 0.050095589817280475,
+    "mean": 0.14333333333333334,
+    "samples": 300,
+    "calls": 77,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "name->year": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9997899264447431,
+    "lb": 0.6084452726638198,
+    "mean": 0.8,
+    "samples": 100,
+    "calls": 13,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "cn->empid": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.045092530893004794,
+    "lb": 0.0,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "cn->postcode": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.045092530893004794,
+    "lb": 0.0,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "cn->sic": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04946071951092061,
+    "lb": 0.01960620645714727,
+    "mean": 0.03441176470588235,
+    "samples": 3400,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "cn->size": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.24979094865999768,
+    "lb": 0.057479122359571325,
+    "mean": 0.15333333333333332,
+    "samples": 300,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "cn->year": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.6843273465217244,
+    "mean": 0.85,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "empid->name": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.045092530893004794,
+    "lb": 0.0,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 31,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "empid->cn": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.045092530893004794,
+    "lb": 0.0,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "empid->postcode": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.045092530893004794,
+    "lb": 0.0,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "empid->sic": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04988259796015476,
+    "lb": 0.023815497295101344,
+    "mean": 0.03596153846153846,
+    "samples": 5200,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "empid->size": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.23625311900657547,
+    "lb": 0.05233743936156687,
+    "mean": 0.14666666666666667,
+    "samples": 300,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "empid->year": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.6508638789774074,
+    "mean": 0.84,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "postcode->name": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.5491916322997926,
+    "lb": 0.11300600368379599,
+    "mean": 0.34,
+    "samples": 100,
+    "calls": 9,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "postcode->cn": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.5215174293127924,
+    "lb": 0.0870956214954999,
+    "mean": 0.31,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "postcode->empid": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6151019389389689,
+    "lb": 0.154802725892156,
+    "mean": 0.38,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "postcode->sic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.44653821007608485,
+    "lb": 0.16633565452112836,
+    "mean": 0.335,
+    "samples": 200,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "postcode->size": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.5265915443231,
+    "lb": 0.09205109532168798,
+    "mean": 0.3,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "postcode->year": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.7144227463037076,
+    "mean": 0.88,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "sic->name": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.6109368261443962,
+    "mean": 0.81,
+    "samples": 100,
+    "calls": 5,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "sic->cn": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9692755196945338,
+    "lb": 0.5573915502326081,
+    "mean": 0.76,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "sic->empid": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9423322338640843,
+    "lb": 0.5117439080841062,
+    "mean": 0.73,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "sic->postcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9927007645888113,
+    "lb": 0.5938612505444006,
+    "mean": 0.79,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "sic->size": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6778963810655574,
+    "lb": 0.21405011100312854,
+    "mean": 0.44,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "sic->year": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.689597930547715,
+    "mean": 0.87,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "size->name": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 3,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "size->cn": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "size->empid": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "size->postcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "size->sic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.7691450139247448,
+    "mean": 0.93,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "size->year": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.6377058299094129,
+    "mean": 0.83,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "year->name": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 8,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "year->cn": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "year->empid": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "year->postcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "year->sic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8365195553117932,
+    "mean": 0.98,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "year->size": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6338136601393954,
+    "lb": 0.16916653872780466,
+    "mean": 0.4,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   }
+  },
+  "false_lists": {
+   "b3_raw": [],
+   "b3_norm": [],
+   "b1": [],
+   "ours": [],
+   "planner": [],
+   "b9": []
+  },
+  "missed_lists": {
+   "b3_raw": [
+    "empid->name"
+   ],
+   "b1": [],
+   "ours": [
+    "name->sic"
+   ],
+   "b9": [
+    "name->sic"
+   ]
+  },
+  "derived": {
+   "n_certified_base": 9,
+   "n_derived_total": 49,
+   "n_violating_bound": 0,
+   "list": [
+    {
+     "lhs": [
+      "name"
+     ],
+     "rhs": "empid",
+     "bound": 0.04848810161706362,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name"
+     ],
+     "rhs": "postcode",
+     "bound": 0.04768597148433864,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn"
+     ],
+     "rhs": "empid",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn"
+     ],
+     "rhs": "sic",
+     "bound": 0.04946071951092061,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid"
+     ],
+     "rhs": "name",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid"
+     ],
+     "rhs": "cn",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid"
+     ],
+     "rhs": "sic",
+     "bound": 0.04988259796015476,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "cn"
+     ],
+     "rhs": "empid",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "cn"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "cn"
+     ],
+     "rhs": "sic",
+     "bound": 0.04946071951092061,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "empid"
+     ],
+     "rhs": "cn",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "empid"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "empid"
+     ],
+     "rhs": "sic",
+     "bound": 0.04988259796015476,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "postcode"
+     ],
+     "rhs": "empid",
+     "bound": 0.04848810161706362,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "sic"
+     ],
+     "rhs": "empid",
+     "bound": 0.04848810161706362,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "sic"
+     ],
+     "rhs": "postcode",
+     "bound": 0.04768597148433864,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "size"
+     ],
+     "rhs": "empid",
+     "bound": 0.04848810161706362,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "size"
+     ],
+     "rhs": "postcode",
+     "bound": 0.04768597148433864,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "year"
+     ],
+     "rhs": "empid",
+     "bound": 0.04848810161706362,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "year"
+     ],
+     "rhs": "postcode",
+     "bound": 0.04768597148433864,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "empid"
+     ],
+     "rhs": "name",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "empid"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "empid"
+     ],
+     "rhs": "sic",
+     "bound": 0.04946071951092061,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "postcode"
+     ],
+     "rhs": "empid",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "postcode"
+     ],
+     "rhs": "sic",
+     "bound": 0.04946071951092061,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "sic"
+     ],
+     "rhs": "empid",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "sic"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "size"
+     ],
+     "rhs": "empid",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "size"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "size"
+     ],
+     "rhs": "sic",
+     "bound": 0.04946071951092061,
+     "g3": 0.030605741181084944,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "year"
+     ],
+     "rhs": "empid",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "year"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "year"
+     ],
+     "rhs": "sic",
+     "bound": 0.04946071951092061,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "postcode"
+     ],
+     "rhs": "name",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "postcode"
+     ],
+     "rhs": "cn",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "postcode"
+     ],
+     "rhs": "sic",
+     "bound": 0.04988259796015476,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "sic"
+     ],
+     "rhs": "name",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "sic"
+     ],
+     "rhs": "cn",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "sic"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "size"
+     ],
+     "rhs": "name",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "size"
+     ],
+     "rhs": "cn",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "size"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "size"
+     ],
+     "rhs": "sic",
+     "bound": 0.04988259796015476,
+     "g3": 0.030605741181084944,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "year"
+     ],
+     "rhs": "name",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "year"
+     ],
+     "rhs": "cn",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "year"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "year"
+     ],
+     "rhs": "sic",
+     "bound": 0.04988259796015476,
+     "g3": 0.0,
+     "violated": false
+    }
+   ]
+  },
+  "sec": {
+   "proxy": 43.31142224743962,
+   "tane": 0.9968948643654585,
+   "certify": 4.28620788641274
+  }
+ },
+ {
+  "dataset": "gpg81586",
+  "seed": 1,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "alpha_per_fd": 0.00125,
+  "theta0": 0.9,
+  "rows": 81586,
+  "n_cands": 40,
+  "n_true": 10,
+  "truth": {
+   "name->empid": 0.0,
+   "name->postcode": 0.0,
+   "name->sic": 0.037334836859265086,
+   "name->size": 0.152734537788346,
+   "name->year": 0.8310249307479225,
+   "cn->empid": 0.0,
+   "cn->postcode": 0.0,
+   "cn->sic": 0.037334836859265086,
+   "cn->size": 0.152734537788346,
+   "cn->year": 0.8310249307479225,
+   "empid->name": 0.0,
+   "empid->cn": 0.0,
+   "empid->postcode": 0.0,
+   "empid->sic": 0.037334836859265086,
+   "empid->size": 0.152734537788346,
+   "empid->year": 0.8310249307479225,
+   "postcode->name": 0.3173215992939965,
+   "postcode->cn": 0.3173215992939965,
+   "postcode->empid": 0.3173215992939965,
+   "postcode->sic": 0.2783565807859192,
+   "postcode->size": 0.2846444242884809,
+   "postcode->year": 0.8418356090505724,
+   "sic->name": 0.7923173093422891,
+   "sic->cn": 0.7923173093422891,
+   "sic->empid": 0.7923173093422891,
+   "sic->postcode": 0.7592479101806683,
+   "sic->size": 0.45966219694555444,
+   "sic->year": 0.8496310641531635,
+   "size->name": 0.9992890937170593,
+   "size->cn": 0.9992890937170593,
+   "size->empid": 0.9992890937170593,
+   "size->postcode": 0.9939450395901258,
+   "size->sic": 0.9404799843110337,
+   "size->year": 0.8750398352658544,
+   "year->name": 0.9998774299512171,
+   "year->cn": 0.9998774299512171,
+   "year->empid": 0.9998774299512171,
+   "year->postcode": 0.9952565391121025,
+   "year->sic": 0.9408967224768956,
+   "year->size": 0.5436717083813399
+  },
+  "b3_tane_raw": {
+   "n": 9,
+   "false": 0,
+   "missed_true": 1
+  },
+  "b3_tane_norm": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "b1_quotient": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "ours": {
+   "n": 9,
+   "false": 0,
+   "missed_true": 1
+  },
+  "ours_calls_total": 22092,
+  "ours_calls_fwd_inv": [
+   12456,
+   9636
+  ],
+  "planner": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "planner_calls_total": 21427,
+  "b9_noaudit": {
+   "n": 9,
+   "false": 0,
+   "missed_true": 1
+  },
+  "b9_calls_total": 779,
+  "planner_resolved": 38,
+  "planner_prepass": [],
+  "v_thresh": 2000,
+  "canon_all": 15221,
+  "ours_detail": {
+   "name->empid": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.046091249598180534,
+    "lb": 0.0,
+    "mean": 0.02,
+    "samples": 700,
+    "calls": 3025,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "name->postcode": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.047701701828011527,
+    "lb": 0.0,
+    "mean": 0.01,
+    "samples": 400,
+    "calls": 1347,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "name->sic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.05973049329183868,
+    "lb": 0.04217248889365095,
+    "mean": 0.0485,
+    "samples": 20000,
+    "calls": 17591,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "name->size": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.29177639499319175,
+    "lb": 0.05403156529258313,
+    "mean": 0.185,
+    "samples": 200,
+    "calls": 55,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "name->year": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9998597774805247,
+    "lb": 0.6130758717623547,
+    "mean": 0.8,
+    "samples": 100,
+    "calls": 14,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "cn->empid": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.045092530893004794,
+    "lb": 0.0,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "cn->postcode": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.045092530893004794,
+    "lb": 0.0,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "cn->sic": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04993275982755349,
+    "lb": 0.02667966760867542,
+    "mean": 0.03785714285714286,
+    "samples": 7000,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "cn->size": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.21641494540276812,
+    "lb": 0.05604781879827499,
+    "mean": 0.135,
+    "samples": 400,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "cn->year": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.6563757730566202,
+    "mean": 0.84,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "empid->name": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.045092530893004794,
+    "lb": 0.0,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 28,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "empid->cn": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.045092530893004794,
+    "lb": 0.0,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "empid->postcode": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.045092530893004794,
+    "lb": 0.0,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "empid->sic": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.049199020656274406,
+    "lb": 0.016322911091883212,
+    "mean": 0.03148148148148148,
+    "samples": 2700,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "empid->size": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.20876009444246524,
+    "lb": 0.05390742626578966,
+    "mean": 0.135,
+    "samples": 400,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "empid->year": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.6219336626187905,
+    "mean": 0.8,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "postcode->name": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.5493152165228395,
+    "lb": 0.10414078702800003,
+    "mean": 0.33,
+    "samples": 100,
+    "calls": 7,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "postcode->cn": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.5619353656192994,
+    "lb": 0.1206794599814314,
+    "mean": 0.35,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "postcode->empid": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.47650093895362966,
+    "lb": 0.05067374722074372,
+    "mean": 0.26,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "postcode->sic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.627232740977431,
+    "lb": 0.1672172816225119,
+    "mean": 0.39,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "postcode->size": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.5076589333961491,
+    "lb": 0.07868520464726123,
+    "mean": 0.3,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "postcode->year": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.6942946655686726,
+    "mean": 0.87,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "sic->name": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9997868289600604,
+    "lb": 0.6162713797986895,
+    "mean": 0.8,
+    "samples": 100,
+    "calls": 7,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "sic->cn": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9846255837658378,
+    "lb": 0.5870502381800135,
+    "mean": 0.78,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "sic->empid": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9527119354848019,
+    "lb": 0.5298140397995099,
+    "mean": 0.74,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "sic->postcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9911292224698729,
+    "lb": 0.5861796868995375,
+    "mean": 0.79,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "sic->size": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.7752961295084466,
+    "lb": 0.31150640152240505,
+    "mean": 0.54,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "sic->year": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.6764520472799591,
+    "mean": 0.86,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "size->name": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 6,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "size->cn": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "size->empid": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "size->postcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8505177164266164,
+    "mean": 0.99,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "size->sic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8498229887928666,
+    "mean": 0.99,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "size->year": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.6558961407056735,
+    "mean": 0.84,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "year->name": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 12,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "year->cn": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "year->empid": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "year->postcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8389301368886296,
+    "mean": 0.98,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "year->sic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.7544703703732728,
+    "mean": 0.92,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "year->size": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.7404109464094231,
+    "lb": 0.27100567127078823,
+    "mean": 0.51,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   }
+  },
+  "false_lists": {
+   "b3_raw": [],
+   "b3_norm": [],
+   "b1": [],
+   "ours": [],
+   "planner": [],
+   "b9": []
+  },
+  "missed_lists": {
+   "b3_raw": [
+    "empid->name"
+   ],
+   "b1": [],
+   "ours": [
+    "name->sic"
+   ],
+   "b9": [
+    "name->sic"
+   ]
+  },
+  "derived": {
+   "n_certified_base": 9,
+   "n_derived_total": 49,
+   "n_violating_bound": 0,
+   "list": [
+    {
+     "lhs": [
+      "name"
+     ],
+     "rhs": "empid",
+     "bound": 0.046091249598180534,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name"
+     ],
+     "rhs": "postcode",
+     "bound": 0.047701701828011527,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn"
+     ],
+     "rhs": "empid",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn"
+     ],
+     "rhs": "sic",
+     "bound": 0.04993275982755349,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid"
+     ],
+     "rhs": "name",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid"
+     ],
+     "rhs": "cn",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid"
+     ],
+     "rhs": "sic",
+     "bound": 0.049199020656274406,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "cn"
+     ],
+     "rhs": "empid",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "cn"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "cn"
+     ],
+     "rhs": "sic",
+     "bound": 0.04993275982755349,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "empid"
+     ],
+     "rhs": "cn",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "empid"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "empid"
+     ],
+     "rhs": "sic",
+     "bound": 0.049199020656274406,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "postcode"
+     ],
+     "rhs": "empid",
+     "bound": 0.046091249598180534,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "sic"
+     ],
+     "rhs": "empid",
+     "bound": 0.046091249598180534,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "sic"
+     ],
+     "rhs": "postcode",
+     "bound": 0.047701701828011527,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "size"
+     ],
+     "rhs": "empid",
+     "bound": 0.046091249598180534,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "size"
+     ],
+     "rhs": "postcode",
+     "bound": 0.047701701828011527,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "year"
+     ],
+     "rhs": "empid",
+     "bound": 0.046091249598180534,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "year"
+     ],
+     "rhs": "postcode",
+     "bound": 0.047701701828011527,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "empid"
+     ],
+     "rhs": "name",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "empid"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "empid"
+     ],
+     "rhs": "sic",
+     "bound": 0.049199020656274406,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "postcode"
+     ],
+     "rhs": "empid",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "postcode"
+     ],
+     "rhs": "sic",
+     "bound": 0.04993275982755349,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "sic"
+     ],
+     "rhs": "empid",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "sic"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "size"
+     ],
+     "rhs": "empid",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "size"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "size"
+     ],
+     "rhs": "sic",
+     "bound": 0.04993275982755349,
+     "g3": 0.030605741181084944,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "year"
+     ],
+     "rhs": "empid",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "year"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "year"
+     ],
+     "rhs": "sic",
+     "bound": 0.04993275982755349,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "postcode"
+     ],
+     "rhs": "name",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "postcode"
+     ],
+     "rhs": "cn",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "postcode"
+     ],
+     "rhs": "sic",
+     "bound": 0.049199020656274406,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "sic"
+     ],
+     "rhs": "name",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "sic"
+     ],
+     "rhs": "cn",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "sic"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "size"
+     ],
+     "rhs": "name",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "size"
+     ],
+     "rhs": "cn",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "size"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "size"
+     ],
+     "rhs": "sic",
+     "bound": 0.049199020656274406,
+     "g3": 0.030605741181084944,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "year"
+     ],
+     "rhs": "name",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "year"
+     ],
+     "rhs": "cn",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "year"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "year"
+     ],
+     "rhs": "sic",
+     "bound": 0.049199020656274406,
+     "g3": 0.0,
+     "violated": false
+    }
+   ]
+  },
+  "sec": {
+   "proxy": 8.768366139382124,
+   "tane": 0.9747162237763405,
+   "certify": 4.3681143168359995
+  }
+ },
+ {
+  "dataset": "gpg81586",
+  "seed": 2,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "alpha_per_fd": 0.00125,
+  "theta0": 0.9,
+  "rows": 81586,
+  "n_cands": 40,
+  "n_true": 10,
+  "truth": {
+   "name->empid": 0.0,
+   "name->postcode": 0.0,
+   "name->sic": 0.037334836859265086,
+   "name->size": 0.152734537788346,
+   "name->year": 0.8310249307479225,
+   "cn->empid": 0.0,
+   "cn->postcode": 0.0,
+   "cn->sic": 0.037334836859265086,
+   "cn->size": 0.152734537788346,
+   "cn->year": 0.8310249307479225,
+   "empid->name": 0.0,
+   "empid->cn": 0.0,
+   "empid->postcode": 0.0,
+   "empid->sic": 0.037334836859265086,
+   "empid->size": 0.152734537788346,
+   "empid->year": 0.8310249307479225,
+   "postcode->name": 0.3173215992939965,
+   "postcode->cn": 0.3173215992939965,
+   "postcode->empid": 0.3173215992939965,
+   "postcode->sic": 0.2783565807859192,
+   "postcode->size": 0.2846444242884809,
+   "postcode->year": 0.8418356090505724,
+   "sic->name": 0.7923173093422891,
+   "sic->cn": 0.7923173093422891,
+   "sic->empid": 0.7923173093422891,
+   "sic->postcode": 0.7592479101806683,
+   "sic->size": 0.45966219694555444,
+   "sic->year": 0.8496310641531635,
+   "size->name": 0.9992890937170593,
+   "size->cn": 0.9992890937170593,
+   "size->empid": 0.9992890937170593,
+   "size->postcode": 0.9939450395901258,
+   "size->sic": 0.9404799843110337,
+   "size->year": 0.8750398352658544,
+   "year->name": 0.9998774299512171,
+   "year->cn": 0.9998774299512171,
+   "year->empid": 0.9998774299512171,
+   "year->postcode": 0.9952565391121025,
+   "year->sic": 0.9408967224768956,
+   "year->size": 0.5436717083813399
+  },
+  "b3_tane_raw": {
+   "n": 9,
+   "false": 0,
+   "missed_true": 1
+  },
+  "b3_tane_norm": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "b1_quotient": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "ours": {
+   "n": 9,
+   "false": 0,
+   "missed_true": 1
+  },
+  "ours_calls_total": 21845,
+  "ours_calls_fwd_inv": [
+   12367,
+   9478
+  ],
+  "planner": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "planner_calls_total": 21289,
+  "b9_noaudit": {
+   "n": 10,
+   "false": 0,
+   "missed_true": 0
+  },
+  "b9_calls_total": 892,
+  "planner_resolved": 38,
+  "planner_prepass": [],
+  "v_thresh": 2000,
+  "canon_all": 15221,
+  "ours_detail": {
+   "name->empid": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04767009536773438,
+    "lb": 0.0,
+    "mean": 0.01,
+    "samples": 400,
+    "calls": 1881,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "name->postcode": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04779161482533504,
+    "lb": 0.0,
+    "mean": 0.0125,
+    "samples": 400,
+    "calls": 1383,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "name->sic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.057217537617709084,
+    "lb": 0.040610801955972956,
+    "mean": 0.05005,
+    "samples": 20000,
+    "calls": 18436,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "name->size": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.3087700693568333,
+    "lb": 0.05233919723474542,
+    "mean": 0.175,
+    "samples": 200,
+    "calls": 49,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "name->year": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9708366206881825,
+    "lb": 0.5538843657850776,
+    "mean": 0.77,
+    "samples": 100,
+    "calls": 18,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "cn->empid": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.045092530893004794,
+    "lb": 0.0,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "cn->postcode": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.045092530893004794,
+    "lb": 0.0,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "cn->sic": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04998530660750443,
+    "lb": 0.023763151738260557,
+    "mean": 0.0372,
+    "samples": 5000,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "cn->size": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.2643972342901067,
+    "lb": 0.06731150998197473,
+    "mean": 0.17,
+    "samples": 300,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "cn->year": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9846817662956503,
+    "lb": 0.5854081100291436,
+    "mean": 0.78,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "empid->name": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.045092530893004794,
+    "lb": 0.0,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 29,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "empid->cn": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.045092530893004794,
+    "lb": 0.0,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "empid->postcode": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.045092530893004794,
+    "lb": 0.0,
+    "mean": 0.0,
+    "samples": 300,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "empid->sic": {
+    "certified": true,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.04973389153685921,
+    "lb": 0.021665963158516544,
+    "mean": 0.037894736842105266,
+    "samples": 3800,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "empid->size": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.22011342530382222,
+    "lb": 0.059696412896194526,
+    "mean": 0.1425,
+    "samples": 400,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "empid->year": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9913633650494398,
+    "lb": 0.5932337042051719,
+    "mean": 0.79,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "postcode->name": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.399687412050342,
+    "lb": 0.11438077413325914,
+    "mean": 0.255,
+    "samples": 200,
+    "calls": 16,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "postcode->cn": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.5770782625315088,
+    "lb": 0.12177160255462,
+    "mean": 0.34,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "postcode->empid": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.43693338924048614,
+    "lb": 0.14412314597847567,
+    "mean": 0.3,
+    "samples": 200,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "postcode->sic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.5168022370997302,
+    "lb": 0.08008066911237471,
+    "mean": 0.3,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "postcode->size": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.5207319801050615,
+    "lb": 0.08656711242288026,
+    "mean": 0.31,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "postcode->year": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.649754890979173,
+    "mean": 0.84,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "sic->name": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.6596854310442207,
+    "mean": 0.83,
+    "samples": 100,
+    "calls": 15,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "sic->cn": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9816783068013665,
+    "lb": 0.5709783559414688,
+    "mean": 0.78,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "sic->empid": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.6172430559443448,
+    "mean": 0.81,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "sic->postcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.9662874083550281,
+    "lb": 0.5495127822378153,
+    "mean": 0.76,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "sic->size": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.6499191879292063,
+    "lb": 0.1874607121655888,
+    "mean": 0.42,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "sic->year": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.6505856708159331,
+    "mean": 0.84,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "size->name": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 8,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "size->cn": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8507019909249802,
+    "mean": 0.99,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "size->empid": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "size->postcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8498229887928666,
+    "mean": 0.99,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "size->sic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.7822841421088313,
+    "mean": 0.94,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "size->year": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.6503346889414184,
+    "mean": 0.84,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "year->name": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 10,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "year->cn": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "year->empid": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "year->postcode": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8647288027937334,
+    "mean": 1.0,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "year->sic": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 1.0,
+    "lb": 0.8096367462622098,
+    "mean": 0.96,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   },
+   "year->size": {
+    "certified": false,
+    "nu_bar": 0.0,
+    "audit": true,
+    "budget_hit": false,
+    "ub": 0.8493694001437561,
+    "lb": 0.41638008093336165,
+    "mean": 0.61,
+    "samples": 100,
+    "calls": 0,
+    "theta": 0.9,
+    "alpha": 0.00125
+   }
+  },
+  "false_lists": {
+   "b3_raw": [],
+   "b3_norm": [],
+   "b1": [],
+   "ours": [],
+   "planner": [],
+   "b9": []
+  },
+  "missed_lists": {
+   "b3_raw": [
+    "empid->name"
+   ],
+   "b1": [],
+   "ours": [
+    "name->sic"
+   ],
+   "b9": []
+  },
+  "derived": {
+   "n_certified_base": 9,
+   "n_derived_total": 49,
+   "n_violating_bound": 0,
+   "list": [
+    {
+     "lhs": [
+      "name"
+     ],
+     "rhs": "empid",
+     "bound": 0.04767009536773438,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name"
+     ],
+     "rhs": "postcode",
+     "bound": 0.04779161482533504,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn"
+     ],
+     "rhs": "empid",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn"
+     ],
+     "rhs": "sic",
+     "bound": 0.04998530660750443,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid"
+     ],
+     "rhs": "name",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid"
+     ],
+     "rhs": "cn",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid"
+     ],
+     "rhs": "sic",
+     "bound": 0.04973389153685921,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "cn"
+     ],
+     "rhs": "empid",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "cn"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "cn"
+     ],
+     "rhs": "sic",
+     "bound": 0.04998530660750443,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "empid"
+     ],
+     "rhs": "cn",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "empid"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "empid"
+     ],
+     "rhs": "sic",
+     "bound": 0.04973389153685921,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "postcode"
+     ],
+     "rhs": "empid",
+     "bound": 0.04767009536773438,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "sic"
+     ],
+     "rhs": "empid",
+     "bound": 0.04767009536773438,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "sic"
+     ],
+     "rhs": "postcode",
+     "bound": 0.04779161482533504,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "size"
+     ],
+     "rhs": "empid",
+     "bound": 0.04767009536773438,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "size"
+     ],
+     "rhs": "postcode",
+     "bound": 0.04779161482533504,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "year"
+     ],
+     "rhs": "empid",
+     "bound": 0.04767009536773438,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "name",
+      "year"
+     ],
+     "rhs": "postcode",
+     "bound": 0.04779161482533504,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "empid"
+     ],
+     "rhs": "name",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "empid"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "empid"
+     ],
+     "rhs": "sic",
+     "bound": 0.04973389153685921,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "postcode"
+     ],
+     "rhs": "empid",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "postcode"
+     ],
+     "rhs": "sic",
+     "bound": 0.04998530660750443,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "sic"
+     ],
+     "rhs": "empid",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "sic"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "size"
+     ],
+     "rhs": "empid",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "size"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "size"
+     ],
+     "rhs": "sic",
+     "bound": 0.04998530660750443,
+     "g3": 0.030605741181084944,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "year"
+     ],
+     "rhs": "empid",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "year"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "cn",
+      "year"
+     ],
+     "rhs": "sic",
+     "bound": 0.04998530660750443,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "postcode"
+     ],
+     "rhs": "name",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "postcode"
+     ],
+     "rhs": "cn",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "postcode"
+     ],
+     "rhs": "sic",
+     "bound": 0.04973389153685921,
+     "g3": 0.037334836859265086,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "sic"
+     ],
+     "rhs": "name",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "sic"
+     ],
+     "rhs": "cn",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "sic"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "size"
+     ],
+     "rhs": "name",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "size"
+     ],
+     "rhs": "cn",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "size"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "size"
+     ],
+     "rhs": "sic",
+     "bound": 0.04973389153685921,
+     "g3": 0.030605741181084944,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "year"
+     ],
+     "rhs": "name",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "year"
+     ],
+     "rhs": "cn",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "year"
+     ],
+     "rhs": "postcode",
+     "bound": 0.045092530893004794,
+     "g3": 0.0,
+     "violated": false
+    },
+    {
+     "lhs": [
+      "empid",
+      "year"
+     ],
+     "rhs": "sic",
+     "bound": 0.04973389153685921,
+     "g3": 0.0,
+     "violated": false
+    }
+   ]
+  },
+  "sec": {
+   "proxy": 8.93408366292715,
+   "tane": 0.9658844713121653,
+   "certify": 4.277719039469957
+  }
+ }
+]

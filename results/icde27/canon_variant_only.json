@@ -66,5 +66,16 @@
     3256
    ]
   }
+ },
+ "gpg": {
+  "canon_all": 15221.0,
+  "canon_variant_only": 15221.0,
+  "canon_inverse_aware": 15221.0,
+  "attrs_seed0": {
+   "name": [
+    15221,
+    13783
+   ]
+  }
  }
 }

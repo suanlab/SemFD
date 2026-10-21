@@ -15,7 +15,8 @@ from semfd.data import LOADERS  # noqa: E402
 from semfd.proxy import layer1  # noqa: E402
 
 SETS = {"geonames_16k": ("geonames", {"n_cities": 16000}), "tax": ("tax", {}), "ndc": ("ndc", {}),
-        "geonames_128k": ("geonames", {"n_cities": 128000, "source": "cities500.txt"})}   # E2's largest size (2 seeds)
+        "geonames_128k": ("geonames", {"n_cities": 128000, "source": "cities500.txt"}),   # E2's largest size (2 seeds)
+        "gpg": ("gpg", {})}
 out = {}
 for key, (name, kw) in SETS.items():
     per_seed = []

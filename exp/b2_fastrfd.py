@@ -85,7 +85,7 @@ if __name__ == "__main__":
         ent[c] = [eid[x] for x in e]
     import numpy as np
     ent = {c: np.array(v) for c, v in ent.items()}
-    cands = [(x, y) for x in df.columns for y in df.columns if x != y and base(x) != base(y)]
+    cands = [(x, y) for x in df.columns for y in df.columns if x != y and base(x) != base(y) and (x, y) not in ds.exclude]
     truth = {c: g3_codes(ent[c[0]][attrs[c[0]].codes], ent[c[1]][attrs[c[1]].codes]) for c in cands}
     T = {c for c in cands if truth[c] <= a.delta}
     res = {"dataset": ds.name, "rows": len(df), "n_cands": len(cands), "n_true": len(T), "thr": a.thr, "runs": []}

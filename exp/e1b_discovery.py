@@ -56,7 +56,7 @@ def run_one(ds, delta, alpha, theta0, k, seed, v_thresh=2000):
     t_proxy = time.perf_counter() - t0
     names = list(attrs)
     ent = ds.entity_codes(attrs)
-    cands = [(x, y) for x in names for y in names if x != y and base(x) != base(y)]
+    cands = [(x, y) for x in names for y in names if x != y and base(x) != base(y) and (x, y) not in ds.exclude]
     truth = {(x, y): g3_codes(ent[x][attrs[x].codes], ent[y][attrs[y].codes]) for x, y in cands}
     raw = ds.df[names]
     norm = raw.apply(lambda s: s.map(layer1))

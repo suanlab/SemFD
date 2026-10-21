@@ -667,6 +667,29 @@ False acceptances: seed 0: {'b3_raw': ['city->tz_src8'], 'b3_norm': ['city->tz_s
 - missed true by ours: natural 0, probe 0 (over seeds)
 - missed true by b9: natural 0, probe 0 (over seeds)
 
+## E1b e1b_gpg: discovery over all unary candidates (3 seeds)
+
+candidates=40, true=10, rows=81586
+
+| method | found | **false** | missed true | oracle calls |
+|---|---|---|---|---|
+| b3_tane_raw | 9.0 | 0 | 1.0 | 0 |
+| b3_tane_norm | 10.0 | 0 | 0.0 | 0 |
+| b1_quotient | 10.0 | 0 | 0.0 | 0 |
+| b9_noaudit | 9.3 | 0 | 0.7 | 816 |
+| ours | 9.0 | 0 | 1.0 | 21871 |
+| planner | 10.0 | 0 | 0.0 | 21376 |
+| canonicalize-all | – | – | – | 15221 |
+
+Certified closure: base certified 9.0, derived FDs (|LHS|≤2, bound ≤ δ) 49.0, derived bound violated by truth: 0
+
+False acceptances: seed 0: {'b3_raw': [], 'b3_norm': [], 'b1': [], 'ours': [], 'planner': [], 'b9': []}; seed 1: {'b3_raw': [], 'b3_norm': [], 'b1': [], 'ours': [], 'planner': [], 'b9': []}; seed 2: {'b3_raw': [], 'b3_norm': [], 'b1': [], 'ours': [], 'planner': [], 'b9': []}
+
+- missed true by b3_raw: natural 3, probe 0 (over seeds)
+- missed true by b1: natural 0, probe 0 (over seeds)
+- missed true by ours: natural 3, probe 0 (over seeds)
+- missed true by b9: natural 2, probe 0 (over seeds)
+
 ## E1b e1b_ndc: discovery over all unary candidates (3 seeds)
 
 candidates=66, true=10, rows=116620

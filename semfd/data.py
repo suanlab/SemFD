@@ -28,6 +28,7 @@ class Dataset:
     oracle: dict                     # attr -> {layer1 value: entity id}
     fds: list = field(default_factory=list)
     meta: dict = field(default_factory=dict)
+    exclude: set = field(default_factory=set)   # candidate pairs true by construction of the oracle (not evaluated)
 
     def attrs(self, proxy="hybrid", k=5):
         return {a: Attr(a, self.df[a], exact=self.exact[a], proxy=proxy, k=k) for a in self.exact}
@@ -332,4 +333,57 @@ def ndc(seed=0, near_miss=(0.02, 0.08)):
     return ds
 
 
-LOADERS = {"geonames": geonames, "tax": tax, "musicbrainz": musicbrainz, "ndc": ndc}
+def gpg(seed=0, years=range(2017, 2026)):
+    """UK gender pay gap reports 2017-2025 (gender-pay-gap.service.gov.uk, Open Government Licence;
+    data/gpg/gpg<year>.csv). Employers type their own name every year, so one company appears under
+    several spellings and, after renames, under different names (natural aliases). Oracle for the
+    employer name = its Companies House company number, an identifier assigned outside this data.
+    Kept: reports with a company number; names that occur with more than one company number
+    (homonyms) are dropped. name<->cn candidates hold by construction and are excluded.
+    seed only affects sampling in the experiments (the table is fixed)."""
+    import pandas as pd
+    fr = []
+    for y in years:
+        d = pd.read_csv(ROOT / f"data/gpg/gpg{y}.csv", dtype=str, keep_default_na=False)
+        d["year"] = str(y)
+        fr.append(d)
+    d = pd.concat(fr, ignore_index=True)
+    d["cn"] = d["CompanyNumber"].str.strip().str.upper()
+    d = d[d["cn"] != ""].copy()
+    d["name"] = d["EmployerName"]
+    key = d["name"].map(layer1)
+    homonym = d.groupby(key)["cn"].transform("nunique") > 1
+    d = d[~homonym.to_numpy()].copy()
+    d["empid"] = d["EmployerId"].str.strip()
+    d["postcode"] = d["PostCode"].str.upper().str.replace(" ", "", regex=False)
+    d["sic"] = d["SicCodes"].map(lambda s: ",".join(sorted(x.strip() for x in s.replace("\n", ",").split(",") if x.strip())))
+    d["size"] = d["EmployerSize"]
+    cols = ["name", "cn", "empid", "postcode", "sic", "size", "year"]
+    df = d[cols].reset_index(drop=True)
+    oracle = {"name": dict(zip(df["name"].map(layer1), df["cn"]))}
+    exact = {a: a != "name" for a in cols}
+    fds = [("empid", "name"), ("name", "empid"), ("name", "sic"), ("name", "size"), ("name", "postcode"),
+           ("postcode", "name"), ("sic", "name")]
+    return Dataset(f"gpg{len(df)}", df, exact, oracle, fds, {"seed": seed, "years": [min(years), max(years)],
+                                                             "homonym_rows_dropped": int(homonym.sum())},
+                   exclude={("name", "cn"), ("cn", "name")})
+
+
+def companies_house_names():
+    """Registered names per company number from the Companies House Free Company Data Product (public register data,
+    no licence stated, not redistributed; data/companieshouse/BasicCompanyDataAsOneFile-*.csv): current name and up to ten previous
+    names, Layer-1 normalized. A real alias registry whose omissions we do not control."""
+    import pandas as pd
+    f = sorted((ROOT / "data/companieshouse").glob("BasicCompanyDataAsOneFile-*.csv"))[-1]
+    want = {"CompanyName", "CompanyNumber"} | {f"PreviousName_{i}.CompanyName" for i in range(1, 11)}
+    out = {}
+    for ch in pd.read_csv(f, usecols=lambda c: c.strip() in want, dtype=str, keep_default_na=False, chunksize=500_000):
+        ch.columns = [c.strip() for c in ch.columns]
+        num = ch["CompanyNumber"].str.strip().str.upper()
+        names = [ch[c] for c in ch.columns if c != "CompanyNumber"]
+        for i, n in enumerate(num):
+            out[n] = {layer1(x.iat[i]) for x in names if x.iat[i]}
+    return out, f.name
+
+
+LOADERS = {"geonames": geonames, "tax": tax, "musicbrainz": musicbrainz, "ndc": ndc, "gpg": gpg}

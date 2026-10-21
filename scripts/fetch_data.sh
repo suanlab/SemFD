@@ -11,6 +11,11 @@ curl -sSfL -o data/geonames/alternateNamesV2.zip $G/alternateNamesV2.zip; unzip 
 mkdir -p data/gleif   # GLEIF LEI Golden Copy, CC0 (E16; the paper used the publication of 2026-10-20 08:00, see DATA_SNAPSHOTS.txt)
 curl -sSfL -o data/gleif/lei2.csv.zip "https://goldencopy.gleif.org/storage/golden-copy-files/2026/10/20/1290800/20261020-0800-gleif-goldencopy-lei2-golden-copy.csv.zip" \
   && unzip -o -q data/gleif/lei2.csv.zip -d data/gleif || echo "GLEIF snapshot no longer served; take the latest from goldencopy.gleif.org (E16 numbers will differ)"
+mkdir -p data/gpg data/companieshouse   # UK gender pay gap reports (Open Government Licence v3.0); Companies House Free Company Data Product (no licence stated; not redistributed)
+for y in 2017 2018 2019 2020 2021 2022 2023 2024 2025; do curl -sSfL -o data/gpg/gpg$y.csv "https://gender-pay-gap.service.gov.uk/viewing/download-data/$y"; sleep 1; done
+curl -sSfL -o data/companieshouse/BasicCompanyDataAsOneFile-2026-10-01.zip https://download.companieshouse.gov.uk/BasicCompanyDataAsOneFile-2026-10-01.zip \
+  && unzip -o -q data/companieshouse/BasicCompanyDataAsOneFile-2026-10-01.zip -d data/companieshouse \
+  || echo "Companies House snapshot of 2026-10-01 no longer served; take the latest monthly file (GPG registry numbers will differ)"
 R=https://raw.githubusercontent.com/BigDaMa/raha/master/datasets/tax          # Raha (Apache-2.0 repo)
 curl -sSfL -o data/tax/clean.csv $R/clean.csv
 curl -sSfL -o data/tax/dirty.csv $R/dirty.csv

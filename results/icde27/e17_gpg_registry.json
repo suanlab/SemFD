@@ -1,0 +1,59 @@
+{
+ "register_file": "BasicCompanyDataAsOneFile-2026-10-01.csv",
+ "rows": 81586,
+ "companies": 13783,
+ "spellings": 15221,
+ "companies_in_register": 12695,
+ "multi_spelling_companies": 1328,
+ "multi_spelling_rows": 9853,
+ "share_spellings_registered_multi": 0.8889934738955825,
+ "tuple_mass_registered": 0.9480915843404506,
+ "spellings_without_proxy_edge_multi": 1345,
+ "spellings_multi": 2766,
+ "tuple_mass_without_proxy_edge": 0.058809109406025545,
+ "hidden_registered": 1272,
+ "examples_hidden": [
+  [
+   "10442565 ltd",
+   "hive 360 employer limited"
+  ],
+  [
+   "1509 group",
+   "the royal grammar school, guildford"
+  ],
+  [
+   "1stop halal limited",
+   "shazan foods limited"
+  ],
+  [
+   "2 agriculture growing limited",
+   "hook 2 sisters limited"
+  ],
+  [
+   "2 sisters red meat limited",
+   "kepak group limited"
+  ],
+  [
+   "3011maplesign ltd",
+   "azebra pay ltd"
+  ],
+  [
+   "9999 dw estates limited",
+   "sdi fitness (dw) limited"
+  ],
+  [
+   "a h worth limited",
+   "q v foods limited"
+  ],
+  [
+   "a m support services limited",
+   "am services group limited",
+   "pinnacle b2b limited",
+   "pinnacle workplace limited"
+  ],
+  [
+   "a novo uk ltd",
+   "ingram micro services ltd"
+  ]
+ ]
+}

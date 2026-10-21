@@ -18,7 +18,8 @@ registry lists only the ASCII name and the GeoNames alternate names (alternateNa
 excluding historic and colloquial ones, for cities and countries; other-language, historic and colloquial aliases
 that occur in the data are then missing from the inverse. Output tag _preferred; the share of injected alias tuples
 missing from the registry is recorded. --registry gleif (NDC): the alias service is GLEIF (exp/e16_gleif.py), a real
-registry whose omissions we do not control. Output tag _gleif.
+registry whose omissions we do not control. Output tag _gleif. --registry companieshouse (gpg): the alias service is the
+Companies House register (current and up to ten previous names per company number). Output tag _companieshouse.
 
 Part B (p = 1). For every candidate, the exact mean of B over all tuples split into the mass caught
 by condition (i) and the mass caught only by condition (ii) (the cross-cluster audit), next to the
@@ -138,6 +139,12 @@ def preferred_names(gids):
 def registry(dataset, ds, seed, kw, flavor="generator"):
     """Registered names per attribute (Layer-1), as an alias service would list them."""
     from semfd.proxy import layer1
+    if dataset == "gpg" and flavor == "companieshouse":
+        from semfd.data import companies_house_names
+        reg, fname = companies_house_names()
+        registry.source = fname
+        tab = ds.oracle["name"]
+        return {"name": {v for v, cn in tab.items() if v in reg.get(cn, ())}}
     if dataset == "ndc" and flavor == "gleif":
         sys.path.insert(0, str(ROOT / "exp"))
         from e16_gleif import registry_values
@@ -196,9 +203,9 @@ if __name__ == "__main__":
     ap.add_argument("--theta0", type=float, default=0.9)
     ap.add_argument("--tag", default="")
     ap.add_argument("--official", action="store_true", help="inverse returns registered names only (Part A')")
-    ap.add_argument("--registry", choices=["generator", "preferred", "gleif"], default="generator")
+    ap.add_argument("--registry", choices=["generator", "preferred", "gleif", "companieshouse"], default="generator")
     a = ap.parse_args()
-    suffix = ({"preferred": "_preferred", "gleif": "_gleif"}.get(a.registry, "_official")) if a.official else ""
+    suffix = ({"preferred": "_preferred", "gleif": "_gleif", "companieshouse": "_companieshouse"}.get(a.registry, "_official")) if a.official else ""
     outp = ROOT / f"results/icde27/e11_partial_inverse_{a.dataset}{a.tag}{suffix}.json"
     res = {"args": vars(a), "runs": [], "audit_split": []}
     for s in range(a.seeds):
@@ -206,7 +213,7 @@ if __name__ == "__main__":
         attrs = ds.attrs()
         ent = ds.entity_codes(attrs)
         names = list(attrs)
-        cands = [(x, y) for x in names for y in names if x != y and base(x) != base(y)]
+        cands = [(x, y) for x in names for y in names if x != y and base(x) != base(y) and (x, y) not in ds.exclude]
         truth = {(x, y): g3_codes(ent[x][attrs[x].codes], ent[y][attrs[y].codes]) for x, y in cands}
         af = a.alpha / len(cands)
         if a.official:

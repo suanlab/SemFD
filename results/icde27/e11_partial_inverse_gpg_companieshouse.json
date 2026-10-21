@@ -1,0 +1,99 @@
+{
+ "args": {
+  "dataset": "gpg",
+  "kw": "{}",
+  "fractions": [
+   1.0,
+   0.8,
+   0.5,
+   0.0
+  ],
+  "seeds": 3,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "theta0": 0.9,
+  "tag": "",
+  "official": true,
+  "registry": "companieshouse"
+ },
+ "runs": [
+  {
+   "seed": 0,
+   "p": "official",
+   "n_cands": 40,
+   "n_true": 10,
+   "false": [],
+   "missed": [
+    "name->sic"
+   ],
+   "calls": 21951,
+   "nu_max": 0.0007354202926972764,
+   "nu_mean": 0.00023778589463878605,
+   "nu_over_0.01": 0,
+   "nu": {
+    "name->empid": 4.902801951315177e-05,
+    "name->postcode": 6.128502439143971e-05,
+    "name->sic": 0.00013482705366116735,
+    "name->size": 0.000208369082930895,
+    "name->year": 0.0007354202926972764
+   }
+  },
+  {
+   "seed": 1,
+   "p": "official",
+   "n_cands": 40,
+   "n_true": 10,
+   "false": [],
+   "missed": [
+    "name->sic"
+   ],
+   "calls": 21951,
+   "nu_max": 0.0007354202926972764,
+   "nu_mean": 0.00023778589463878605,
+   "nu_over_0.01": 0,
+   "nu": {
+    "name->empid": 4.902801951315177e-05,
+    "name->postcode": 6.128502439143971e-05,
+    "name->sic": 0.00013482705366116735,
+    "name->size": 0.000208369082930895,
+    "name->year": 0.0007354202926972764
+   }
+  },
+  {
+   "seed": 2,
+   "p": "official",
+   "n_cands": 40,
+   "n_true": 10,
+   "false": [],
+   "missed": [
+    "name->sic"
+   ],
+   "calls": 21955,
+   "nu_max": 0.0007354202926972764,
+   "nu_mean": 0.00023778589463878605,
+   "nu_over_0.01": 0,
+   "nu": {
+    "name->empid": 4.902801951315177e-05,
+    "name->postcode": 6.128502439143971e-05,
+    "name->sic": 0.00013482705366116735,
+    "name->size": 0.000208369082930895,
+    "name->year": 0.0007354202926972764
+   }
+  }
+ ],
+ "audit_split": [],
+ "coverage": [
+  {
+   "seed": 0,
+   "name": 0.9480915843404506
+  },
+  {
+   "seed": 1,
+   "name": 0.9480915843404506
+  },
+  {
+   "seed": 2,
+   "name": 0.9480915843404506
+  }
+ ]
+}

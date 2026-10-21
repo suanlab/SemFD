@@ -83,7 +83,7 @@
 - **Lower bound at GeoNames-16k city domain**: D=29894, delta=0.05, m=1495, beta-alpha=0.5: q >= 547
 - **Inverse share of our calls (cost table rows)**: 0.19-0.38
 - **certify sample cap (max_n default)**: 20000
-- **semfd/ lines of Python**: 1159
+- **semfd/ lines of Python**: 1213
 - **GeoNames country alias list entries**: 16
 - **GeoNames rows per city (make_table default)**: 5
 - **E2 FDs per run**: 8
@@ -121,7 +121,7 @@
 - **E8 transferred bounds of LLM-certified FDs (min-max; any <= delta 0.05?)**: 0.106-0.107 over 5 certificates; False; smallest over all 21: 0.106
 - **E8 input tokens: certification runs (min-max) / canonicalize-all**: 488k-683k / 1.36M (per call 199-235, mean 205; output <= 24/call; calls [3333, 3337, 2385] = E8 offline run_calls)
 - **E8 live replay check**: 200/200 labels identical, 200/200 raw answers identical
-- **Variant-only canonicalize-all vs full**: {'geonames_16k': (42452.666666666664, 42452.666666666664, {'city': [29987, 15510], 'country': [2000, 196], 'admin1': [10611, 2154]}), 'tax': (84574.66666666667, 84574.66666666667, {'f_name': [39471, 9991], 'city': [45221, 17829], 'state': [104, 52]}), 'ndc': (6653.0, 6653.0, {'labeler': [6653, 5109]}), 'geonames_128k': (246493.0, 246493.0, {'city': [212449, 105074], 'country': [3050, 220], 'admin1': [31103, 3256]})}
+- **Variant-only canonicalize-all vs full**: {'geonames_16k': (42452.666666666664, 42452.666666666664, {'city': [29987, 15510], 'country': [2000, 196], 'admin1': [10611, 2154]}), 'tax': (84574.66666666667, 84574.66666666667, {'f_name': [39471, 9991], 'city': [45221, 17829], 'state': [104, 52]}), 'ndc': (6653.0, 6653.0, {'labeler': [6653, 5109]}), 'geonames_128k': (246493.0, 246493.0, {'city': [212449, 105074], 'country': [3050, 220], 'admin1': [31103, 3256]}), 'gpg': (15221.0, 15221.0, {'name': [15221, 13783]})}
 - **Tane missed share of true unary FDs (min-max over datasets)**: 0.20-0.80
 - **E1b no-audit (B9) vs certificate calls per run, ratio, B9 natural false certifications (over seeds)**: {'geonames_16k': (2885, 21759, 7.5, 0), 'tax': (4953, 12297, 2.5, 0), 'ndc': (1446, 6305, 4.4, 0)}
 - **E1 GeoNames default (kNN + alias) / alias-only calls per run, decisions identical (per config)**: [('e1_geonames_16k', 1.5, True), ('e1_geonames_16k_edit', 1.29, True), ('e1_geonames_16k_emb', 1.3, True), ('e1_geonames_16k_k10', 1.89, True), ('e1_geonames_16k_k3', 1.3, True), ('e1_geonames_16k_rho0.05', 1.08, True), ('e1_geonames_16k_rho0.5', 1.59, True), ('e1_geonames_16k_tfidf', 1.28, True), ('e1_geonames_16k_th0.8', 1.56, True), ('e1_geonames_16k_th0.95', 1.42, True)]
@@ -165,6 +165,12 @@
 - **E11 registered-names inverse geonames_16k (3 seeds)**: false 0, missed 0; calls 23,292 vs complete inverse 22,835; max nu 0.112; candidates with nu>0.01 16.7; tuple mass covered by registered names city 0.89-0.89, country 0.85-0.86, admin1 0.80-0.80
 - **E11 registered-names inverse tax (3 seeds)**: false 0, missed 0; calls 10,561 vs complete inverse 11,024; max nu 0.097; candidates with nu>0.01 21.0; tuple mass covered by registered names f_name 0.82-0.82, city 0.81-0.82, state 1.00-1.00
 - **E11 preferred-names inverse geonames_16k (3 seeds; registry = ASCII name + alternateNamesV2 preferred/English, not historic/colloquial; injection unchanged)**: false 0, missed 0; calls 23,675 vs complete inverse 22,835; max nu 0.117; injected alias tuples missing from the registry city 0.75-0.77, country 0.35-0.37
+- **E1b gpg (UK gender pay gap 2017-2025, 81,586 rows; 40 candidates, 10 true; 3 seeds)**: ours false 0, missed 3, calls/run 21,871 (12,345 + 9,527) vs canonicalize-all 15,221; TANE raw false/missed per run 0/1; no audit false 0, calls/run 816; true FDs and g3: [('cn->empid', 0.0), ('cn->postcode', 0.0), ('cn->sic', 0.0373), ('empid->cn', 0.0), ('empid->name', 0.0), ('empid->postcode', 0.0), ('empid->sic', 0.0373), ('name->empid', 0.0), ('name->postcode', 0.0), ('name->sic', 0.0373)]; false FDs below 0.1: []
+- **E1b gpg certificate misses: U at the cap, calls on that FD per run, share of run calls**: {'name->sic': ('U 0.057-0.060', 'samples 20000', 'calls 17,591-18,436', '0.80-0.84')}
+- **E1b gpg TANE raw / normalized misses**: ['empid->name'] / normalized missed 0
+- **E17 gpg natural aliases and Companies House register**: 1,328 of 13,783 companies with several spellings (9,853 of 81,586 rows); 1,345 of their 2,766 spellings have no proxy edge to another spelling of the company (5.9% of tuples); register lists 89% of those companies' spellings and covers 94.8% of tuples; 12,695 companies found in the register
+- **E11 gpg (random omission) (3 seeds)**: p=1.0: false 0, missed 3, calls 22,035, max nu 0.000; p=0.8: false 0, missed 3, calls 21,963, max nu 0.004; p=0.5: false 0, missed 3, calls 21,870, max nu 0.010; p=0.0: false 0, missed 2, calls 21,530, max nu 0.019
+- **E11 gpg_companieshouse (3 seeds)**: p=official: false 0, missed 3, calls 21,952, max nu 0.001; registry coverage of tuples 0.948, 0.948, 0.948
 - **E16 GLEIF as alias registry for NDC labeler names (exact alphanumeric match, ambiguous keys dropped)**: 749 of 6,653 values match one LEI (26 ambiguous); 616 of 5,109 entities linked (26.6% of tuples); spellings returned cover 19.4% of tuples; linked entities with several spellings: 164, of whose spellings GLEIF returns 62% on average
 - **E16 LEI as an independent oracle for labcode -> labeler (tuples whose spelling matches one LEI)**: 22,623 tuples (19.4%); g3 labcode->LEI 0.0033, code-graph oracle 0.0000, raw strings 0.0525
 - **E11 GLEIF inverse ndc (3 seeds, all unary candidates)**: false 0, missed 1 [(1, 'labeler_e2->ptype')]; calls 6,271 vs complete inverse 6,553; max nu 0.035; candidates with nu>0.01 12.0
