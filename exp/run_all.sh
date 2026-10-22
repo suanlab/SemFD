@@ -66,6 +66,7 @@ for d in 1 2; do run b2_geonames_16k_thr$d exp/b2_fastrfd.py --dataset geonames 
 run e1b_gpg exp/e1b_discovery.py --dataset gpg --seeds 3
 run e11_gpg exp/e11_partial_inverse.py --dataset gpg
 run e11_gpg_ch exp/e11_partial_inverse.py --dataset gpg --official --registry companieshouse
+run e17_gpg exp/e17_gpg_registry.py
 setsid nohup bash -c "$P exp/e16_gleif.py --prep && $P exp/e16_gleif.py && $P exp/e11_partial_inverse.py --dataset ndc --official --registry gleif" > $L/e16_gleif.log 2>&1 < /dev/null &
 # E8 (LLM oracle; needs llama-cpp-python and the GGUF in $E8_MODEL). Sequential and long: run separately:
 #   OMP_NUM_THREADS=1 nice -n 15 .venv/bin/python -I exp/e8_llm_oracle.py --canon --procs 4 --threads 6

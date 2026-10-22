@@ -48,6 +48,9 @@
 - **E1b seconds ndc**: {'proxy': 7.6, 'tane': 2.9, 'certify': 15.5}
 - **E1b planner vs ours calls ndc**: 6305 vs 6305
 - **E1b planner resolved / candidates ndc**: [30, 30, 30] / 66; planner F/M [(0, 0), (0, 0), (0, 0)]
+- **E1b seconds gpg**: {'proxy': 20.3, 'tane': 1.0, 'certify': 4.3}
+- **E1b planner vs ours calls gpg**: 21376 vs 21871
+- **E1b planner resolved / candidates gpg**: [38, 38, 38] / 40; planner F/M [(0, 0), (0, 0), (0, 0)]
 - **FastRFD seconds b2_fastrfd_geonames_16k**: [(0.0, 421), (0.001, 449), (0.01, 377), (0.05, 380)]
 - **FastRFD seconds b2_fastrfd_geonames_16k_thr1**: [(0.0, 157), (0.001, 168), (0.01, 155), (0.05, 155)]
 - **FastRFD seconds b2_fastrfd_geonames_16k_thr2**: [(0.0, 233), (0.001, 235), (0.01, 240), (0.05, 222)]
@@ -81,7 +84,8 @@
 - **E9 e9_ndc**: seeds=3 cands=105 true=36 tane F/M=[(1, 4), (1, 4), (1, 4)] ours F/M=[(0, 5), (0, 3), (0, 3)] calls=[9513, 9072, 9403] canon_all=6653
 - **E9 e9_tax**: seeds=3 cands=60 true=19 tane F/M=[(0, 8), (0, 8), (0, 8)] ours F/M=[(0, 0), (0, 0), (0, 0)] calls=[22668, 21616, 23453] canon_all=84796
 - **Lower bound at GeoNames-16k city domain**: D=29894, delta=0.05, m=1495, beta-alpha=0.5: q >= 547
-- **Inverse share of our calls (cost table rows)**: 0.19-0.38
+- **Inverse share of our calls (cost table rows)**: 0.186-0.436
+- **Inverse share of our calls (Tables III and VI rows)**: 0.186-0.436
 - **certify sample cap (max_n default)**: 20000
 - **semfd/ lines of Python**: 1213
 - **GeoNames country alias list entries**: 16
@@ -167,6 +171,7 @@
 - **E11 preferred-names inverse geonames_16k (3 seeds; registry = ASCII name + alternateNamesV2 preferred/English, not historic/colloquial; injection unchanged)**: false 0, missed 0; calls 23,675 vs complete inverse 22,835; max nu 0.117; injected alias tuples missing from the registry city 0.75-0.77, country 0.35-0.37
 - **E1b gpg (UK gender pay gap 2017-2025, 81,586 rows; 40 candidates, 10 true; 3 seeds)**: ours false 0, missed 3, calls/run 21,871 (12,345 + 9,527) vs canonicalize-all 15,221; TANE raw false/missed per run 0/1; no audit false 0, calls/run 816; true FDs and g3: [('cn->empid', 0.0), ('cn->postcode', 0.0), ('cn->sic', 0.0373), ('empid->cn', 0.0), ('empid->name', 0.0), ('empid->postcode', 0.0), ('empid->sic', 0.0373), ('name->empid', 0.0), ('name->postcode', 0.0), ('name->sic', 0.0373)]; false FDs below 0.1: []
 - **E1b gpg certificate misses: U at the cap, calls on that FD per run, share of run calls**: {'name->sic': ('U 0.057-0.060', 'samples 20000', 'calls 17,591-18,436', '0.80-0.84')}
+- **E1b gpg audited mean of name->sic (seeds) and cn->sic certified runs**: mean 0.0485-0.0500; cn->sic certified 3/3, empid->sic certified 3/3
 - **E1b gpg TANE raw / normalized misses**: ['empid->name'] / normalized missed 0
 - **E17 gpg natural aliases and Companies House register**: 1,328 of 13,783 companies with several spellings (9,853 of 81,586 rows); 1,345 of their 2,766 spellings have no proxy edge to another spelling of the company (5.9% of tuples); register lists 89% of those companies' spellings and covers 94.8% of tuples; 12,695 companies found in the register
 - **E11 gpg (random omission) (3 seeds)**: p=1.0: false 0, missed 3, calls 22,035, max nu 0.000; p=0.8: false 0, missed 3, calls 21,963, max nu 0.004; p=0.5: false 0, missed 3, calls 21,870, max nu 0.010; p=0.0: false 0, missed 2, calls 21,530, max nu 0.019

@@ -208,7 +208,8 @@ def latex():
         cells = []
         for m in ("b3_tane_raw", "b1_quotient", "b9_noaudit", "ours"):
             n, fa, mi = f(m)
-            cells.append(f"{fa:.0f} / {mi:.0f}" if fa == int(fa) else f"{fa:.1f} / {mi:.0f}")
+            fmt = lambda v: f"{v:.0f}" if abs(v - round(v)) < 1e-9 else f"{v:.1f}"
+            cells.append(f"{fmt(fa)} / {fmt(mi)}")
         b2 = R / f"b2_fastrfd_{key}.json"
         if b2.exists():
             e = load(b2)
@@ -390,7 +391,7 @@ def paper_numbers():
         if "ann_nubar" not in runs[0]["fds"][0]["ours"]:
             continue
         add(f"nu max (ANN-only) {p.stem}", f"{max(x['ours']['ann_nubar']['nu'] for r in runs for x in r['fds']):.3f}")
-    for key in ("geonames_16k", "tax", "ndc"):
+    for key in ("geonames_16k", "tax", "ndc", "gpg"):
         p = R / f"e1b_{key}.json"
         if p.exists():
             runs = load(p)
@@ -447,7 +448,7 @@ def paper_numbers():
         add("Lower bound at GeoNames-16k city domain", f"D={D}, delta=0.05, m={m}, beta-alpha=0.5: "
                                                         f"q >= {math.sqrt(0.5 * D * (D - 1) / m):.0f}")
     shares = []
-    for key in ("geonames_16k", "tax", "ndc"):
+    for key in ("geonames_16k", "tax", "ndc", "gpg", "geonames_640k"):
         pp = R / f"e1b_{key}.json"
         if pp.exists() and "ours_calls_fwd_inv" in load(pp)[0]:
             rr = load(pp)
@@ -459,7 +460,15 @@ def paper_numbers():
             f_, i_ = np.mean([r["run_calls_fwd_inv"][0] for r in big]), np.mean([r["run_calls_fwd_inv"][1] for r in big])
             shares.append(i_ / (f_ + i_))
     if shares:
-        add("Inverse share of our calls (cost table rows)", f"{min(shares):.2f}-{max(shares):.2f}")
+        add("Inverse share of our calls (cost table rows)", f"{min(shares):.3f}-{max(shares):.3f}")
+    for key in ("geonames_16k", "tax", "ndc"):
+        pp = R / f"e9_{key}.json"
+        if pp.exists():
+            rr = load(pp)
+            f_, i_ = np.mean([r["calls_fwd_inv"][0] for r in rr]), np.mean([r["calls_fwd_inv"][1] for r in rr])
+            shares.append(i_ / (f_ + i_))
+    if shares:
+        add("Inverse share of our calls (Tables III and VI rows)", f"{min(shares):.3f}-{max(shares):.3f}")
     # code-level constants quoted in the paper
     import inspect
     sys.path[:0] = [str(ROOT), str(ROOT / "pilot")]
@@ -733,6 +742,10 @@ def paper_numbers():
                  f"calls {min(r['ours_detail'][m]['calls'] for r in rr):,}-{max(r['ours_detail'][m]['calls'] for r in rr):,}",
                  f"{min(r['ours_detail'][m]['calls'] / r['ours_calls_total'] for r in rr):.2f}-{max(r['ours_detail'][m]['calls'] / r['ours_calls_total'] for r in rr):.2f}")
              for m in miss})
+        add("E1b gpg audited mean of name->sic (seeds) and cn->sic certified runs",
+            f"mean {min(r['ours_detail']['name->sic']['mean'] for r in rr):.4f}-{max(r['ours_detail']['name->sic']['mean'] for r in rr):.4f}; "
+            f"cn->sic certified {sum(r['ours_detail']['cn->sic']['certified'] for r in rr)}/{len(rr)}, empid->sic certified "
+            f"{sum(r['ours_detail']['empid->sic']['certified'] for r in rr)}/{len(rr)}")
         add("E1b gpg TANE raw / normalized misses", f"{sorted({x for r in rr for x in r['missed_lists']['b3_raw']})} / normalized missed {rr[0]['b3_tane_norm']['missed_true']}")
     pp = R / "e17_gpg_registry.json"
     if pp.exists():
