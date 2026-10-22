@@ -873,6 +873,15 @@ False acceptances: seed 0: {'b3_raw': [], 'b3_norm': [], 'b1': [], 'ours': [], '
 | 0.01 | 28 | 18 | 0 | 7 |
 | 0.05 | 50 | 40 | 0 | 6 |
 
+## B2 b2_fastrfd_gpg: FastRFD (rows=81586, 40 candidates, 10 true)
+
+| g1 tolerance t | found | false | missed true | seconds |
+|---|---|---|---|---|
+| 0.0 | 6 | 0 | 4 | 234 |
+| 0.001 | 22 | 12 | 0 | 232 |
+| 0.01 | 28 | 18 | 0 | 234 |
+| 0.05 | 28 | 18 | 0 | 223 |
+
 ## B2 b2_fastrfd_ndc: FastRFD (rows=116620, 66 candidates, 10 true)
 
 | g1 tolerance t | found | false | missed true | seconds |

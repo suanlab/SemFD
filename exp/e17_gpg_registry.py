@@ -38,7 +38,7 @@ if __name__ == "__main__":
             hidden[v] = all(u not in nb[v] and v not in nb[u] for u in vs if u != v)
     mv = [v for vs in multi.values() for v in vs]
     ex = [sorted(ax.vals[v] for v in vs) for e, vs in multi.items() if any(hidden[v] for v in vs)][:10]
-    res = {"register_file": fname, "rows": len(ax.codes), "companies": len(by), "spellings": len(ax.vals),
+    res = {"register_file": fname, "rows": len(ax.codes), "homonym_rows_dropped": ds.meta["homonym_rows_dropped"], "companies": len(by), "spellings": len(ax.vals),
            "companies_in_register": sum(e in reg for e in by), "multi_spelling_companies": len(multi),
            "multi_spelling_rows": int(sum(cnt[v] for v in mv)),
            "share_spellings_registered_multi": float(np.mean([registered[vs].mean() for vs in multi.values()])),

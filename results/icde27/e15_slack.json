@@ -188,5 +188,45 @@
   "eps_pi": 0.15029154518950438,
   "eps_rep": 0.0,
   "holds": true
+ },
+ {
+  "dataset": "gpg",
+  "fd": "name->empid",
+  "probe": false,
+  "g3": 0.0,
+  "mu": 0.018789988478415415,
+  "eps_pi": 0.04554703012771799,
+  "eps_rep": 0.0,
+  "holds": true
+ },
+ {
+  "dataset": "gpg",
+  "fd": "name->sic",
+  "probe": false,
+  "g3": 0.037334836859265086,
+  "mu": 0.048807393425342585,
+  "eps_pi": 0.06005932390361091,
+  "eps_rep": 0.0,
+  "holds": true
+ },
+ {
+  "dataset": "gpg",
+  "fd": "name->size",
+  "probe": false,
+  "g3": 0.152734537788346,
+  "mu": 0.16200083347633173,
+  "eps_pi": 0.07571151913318462,
+  "eps_rep": 0.0,
+  "holds": true
+ },
+ {
+  "dataset": "gpg",
+  "fd": "name->postcode",
+  "probe": false,
+  "g3": 0.0,
+  "mu": 0.0076606280489299634,
+  "eps_pi": 0.04554703012771799,
+  "eps_rep": 0.0,
+  "holds": true
  }
 ]

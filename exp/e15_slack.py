@@ -77,7 +77,7 @@ def slack_terms(ax, ay, xent, yent, theta):
 
 if __name__ == "__main__":
     out = []
-    for name, kw in (("geonames", {"n_cities": 16000}), ("tax", {}), ("ndc", {})):
+    for name, kw in (("geonames", {"n_cities": 16000}), ("tax", {}), ("ndc", {}), ("gpg", {})):
         ds = LOADERS[name](seed=0, **kw)
         attrs = ds.attrs()
         ent = ds.entity_codes(attrs)

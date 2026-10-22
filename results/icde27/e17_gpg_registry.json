@@ -1,6 +1,7 @@
 {
  "register_file": "BasicCompanyDataAsOneFile-2026-10-01.csv",
  "rows": 81586,
+ "homonym_rows_dropped": 176,
  "companies": 13783,
  "spellings": 15221,
  "companies_in_register": 12695,

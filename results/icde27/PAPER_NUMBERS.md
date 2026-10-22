@@ -55,6 +55,7 @@
 - **FastRFD seconds b2_fastrfd_geonames_16k_thr1**: [(0.0, 157), (0.001, 168), (0.01, 155), (0.05, 155)]
 - **FastRFD seconds b2_fastrfd_geonames_16k_thr2**: [(0.0, 233), (0.001, 235), (0.01, 240), (0.05, 222)]
 - **FastRFD seconds b2_fastrfd_geonames_1k**: [(0.0, 5), (0.001, 6), (0.01, 7), (0.05, 6)]
+- **FastRFD seconds b2_fastrfd_gpg**: [(0.0, 234), (0.001, 232), (0.01, 234), (0.05, 223)]
 - **FastRFD seconds b2_fastrfd_ndc**: [(0.0, 236), (0.001, 262), (0.01, 344), (0.05, 437)]
 - **FastRFD seconds b2_fastrfd_ndc_finegrid**: [(0.0001, 251), (0.0005, 298)]
 - **FastRFD seconds b2_fastrfd_ndc_thr1**: [(0.0, 212), (0.001, 225), (0.01, 209), (0.05, 189)]
@@ -119,7 +120,9 @@
 - **FastRFD ndc: any tolerance with 0 false and 0 missed?**: False
 - **FastRFD ndc, one threshold d=1 on tolerant columns (t, false, missed)**: [(0.0, 0, 10), (0.001, 12, 2), (0.01, 34, 0), (0.05, 41, 0)]; any tolerance with 0 false and 0 missed: False
 - **FastRFD ndc, one threshold d=2 on tolerant columns (t, false, missed)**: [(0.0, 0, 10), (0.001, 13, 2), (0.01, 34, 0), (0.05, 41, 0)]; any tolerance with 0 false and 0 missed: False
-- **Break-even price of an inverse lookup, in forward calls (ours = canon-all when fwd + price*inv = canon)**: {'geonames_16k': 4.4, 'tax': 32.7, 'ndc': 1.1, 'geonames_640k': 27.0, 'geonames_640k_8fds': 62.7}
+- **FastRFD all tolerances gpg (t, false, missed)**: [(0.0, 0, 4), (0.001, 12, 0), (0.01, 18, 0), (0.05, 18, 0)]
+- **FastRFD gpg: any tolerance with 0 false and 0 missed?**: False
+- **Break-even price of an inverse lookup, in forward calls (ours = canon-all when fwd + price*inv = canon)**: {'geonames_16k': 4.4, 'tax': 32.7, 'ndc': 1.1, 'gpg': 0.3, 'geonames_640k': 27.0, 'geonames_640k_8fds': 62.7}
 - **E8 LLM time at the measured mean latency (calls x mean s/call): certification runs / canonicalize-all**: 6.1-8.5 h / 16.9 h (mean 9.1 s/call over all canonicalization calls)
 - **E8 oracle transfer (LLM vs labeler-code oracle, labeler attribute)**: disagreement mass 0.057; max |g3 gap| over labeler FDs 0.032; transferred bounds violated 0/21
 - **E8 transferred bounds of LLM-certified FDs (min-max; any <= delta 0.05?)**: 0.106-0.107 over 5 certificates; False; smallest over all 21: 0.106
@@ -169,6 +172,8 @@
 - **E11 registered-names inverse geonames_16k (3 seeds)**: false 0, missed 0; calls 23,292 vs complete inverse 22,835; max nu 0.112; candidates with nu>0.01 16.7; tuple mass covered by registered names city 0.89-0.89, country 0.85-0.86, admin1 0.80-0.80
 - **E11 registered-names inverse tax (3 seeds)**: false 0, missed 0; calls 10,561 vs complete inverse 11,024; max nu 0.097; candidates with nu>0.01 21.0; tuple mass covered by registered names f_name 0.82-0.82, city 0.81-0.82, state 1.00-1.00
 - **E11 preferred-names inverse geonames_16k (3 seeds; registry = ASCII name + alternateNamesV2 preferred/English, not historic/colloquial; injection unchanged)**: false 0, missed 0; calls 23,675 vs complete inverse 22,835; max nu 0.117; injected alias tuples missing from the registry city 0.75-0.77, country 0.35-0.37
+- **E7 GeoNames calls per run at 5% noise vs canonicalize-all of the same (seed-0) table**: 46,918 vs 42,598
+- **GPG rows dropped as homonyms (a name with several company numbers)**: 176
 - **E1b gpg (UK gender pay gap 2017-2025, 81,586 rows; 40 candidates, 10 true; 3 seeds)**: ours false 0, missed 3, calls/run 21,871 (12,345 + 9,527) vs canonicalize-all 15,221; TANE raw false/missed per run 0/1; no audit false 0, calls/run 816; true FDs and g3: [('cn->empid', 0.0), ('cn->postcode', 0.0), ('cn->sic', 0.0373), ('empid->cn', 0.0), ('empid->name', 0.0), ('empid->postcode', 0.0), ('empid->sic', 0.0373), ('name->empid', 0.0), ('name->postcode', 0.0), ('name->sic', 0.0373)]; false FDs below 0.1: []
 - **E1b gpg certificate misses: U at the cap, calls on that FD per run, share of run calls**: {'name->sic': ('U 0.057-0.060', 'samples 20000', 'calls 17,591-18,436', '0.80-0.84')}
 - **E1b gpg audited mean of name->sic (seeds) and cn->sic certified runs**: mean 0.0485-0.0500; cn->sic certified 3/3, empid->sic certified 3/3
@@ -193,10 +198,12 @@
 - **E14 city->zip**: certified 0/3; g3 LLM 0.366, g3 Tax oracle 0.326; nu under LLM 0.0676; U 0.459-0.557
 - **E14 zip->city**: certified 3/3; g3 LLM 0.029, g3 Tax oracle 0.002; nu under LLM 0.0000; U 0.039-0.040
 - **E14 decisions vs LLM truth (over seeds)**: true certified 3/3, false certified 0/9; max nu 0.0676 vs declared 0.01
-- **E15 witness-slack bound g3 <= mu <= g3 + eps_pi + eps_rep (E1 lists, tolerant LHS, seed 0)**: holds on 19 of 19 candidates
+- **E15 gpg name->sic: mu - g3 / eps_pi + eps_rep**: 0.0115 / 0.0601
+- **E15 witness-slack bound g3 <= mu <= g3 + eps_pi + eps_rep (E1 lists, tolerant LHS, seed 0)**: holds on 23 of 23 candidates
 - **E15 true natural FDs geonames: max mu-g3 / max eps_pi+eps_rep**: 0.004 / 0.019 (city->country, city->admin1, admin1->country, city->tz)
 - **E15 true natural FDs tax: max mu-g3 / max eps_pi+eps_rep**: 0.026 / 0.164 (f_name->gender)
 - **E15 true natural FDs ndc: max mu-g3 / max eps_pi+eps_rep**: 0.004 / 0.085 (labeler->ptype)
+- **E15 true natural FDs gpg: max mu-g3 / max eps_pi+eps_rep**: 0.019 / 0.060 (name->empid, name->sic, name->postcode)
 - **E12 hidden aliases (GeoNames 16000 cities, rho=0.5, 3 seeds)**: injected mass 0.074-0.074 (available 0.074-0.074); g3 0.074-0.074 (false at delta=0.05: 3/3); string g3 0.236-0.238; neighbor-only (nu_bar=0.01) certified 3/3, U 0.038-0.038, measured nu 0.136-0.138, calls 1161-1199, audited sample mean 0.000-0.000; inverse certified 0/3, U 0.210-0.275, audited sample mean 0.143-0.165, calls 986-1499
 - **E1b all unary candidates at 640,000 rows (58 candidates, 2 seeds)**: ours 31,188 (fwd+inv 22,906+8,282) vs canon-all 246,493: 7.9x (7.7-8.1); false [0, 0], missed [0, 0]; TANE raw false/missed [(1, 7), (1, 7)]
 - **MusicBrainz probe (not used)**: {'rows_total': 193750, 'rows_artist_language_nonnull': 105297, 'artists': 50665, 'artist_singleton_share': 0.6027632487910787, 'languages_distinct': 2001, 'g3_raw_artist_to_language': 0.2742148399289628, 'g3_raw_album_to_artist': 0.1903185397279885}

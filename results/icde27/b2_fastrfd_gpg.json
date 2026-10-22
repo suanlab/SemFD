@@ -1,0 +1,92 @@
+{
+ "dataset": "gpg81586",
+ "rows": 81586,
+ "n_cands": 40,
+ "n_true": 10,
+ "thr": "0,1,2,3",
+ "runs": [
+  {
+   "t": 0.0,
+   "sec": 234.38104235567153,
+   "n": 6,
+   "false": 0,
+   "missed_true": 4,
+   "false_list": []
+  },
+  {
+   "t": 0.001,
+   "sec": 232.27748381718993,
+   "n": 22,
+   "false": 12,
+   "missed_true": 0,
+   "false_list": [
+    "cn->size",
+    "cn->year",
+    "empid->size",
+    "empid->year",
+    "name->size",
+    "name->year",
+    "postcode->cn",
+    "postcode->empid",
+    "postcode->name",
+    "postcode->sic",
+    "postcode->size",
+    "postcode->year"
+   ]
+  },
+  {
+   "t": 0.01,
+   "sec": 234.0161939729005,
+   "n": 28,
+   "false": 18,
+   "missed_true": 0,
+   "false_list": [
+    "cn->size",
+    "cn->year",
+    "empid->size",
+    "empid->year",
+    "name->size",
+    "name->year",
+    "postcode->cn",
+    "postcode->empid",
+    "postcode->name",
+    "postcode->sic",
+    "postcode->size",
+    "postcode->year",
+    "sic->cn",
+    "sic->empid",
+    "sic->name",
+    "sic->postcode",
+    "sic->size",
+    "sic->year"
+   ]
+  },
+  {
+   "t": 0.05,
+   "sec": 223.1293446365744,
+   "n": 28,
+   "false": 18,
+   "missed_true": 0,
+   "false_list": [
+    "cn->size",
+    "cn->year",
+    "empid->size",
+    "empid->year",
+    "name->size",
+    "name->year",
+    "postcode->cn",
+    "postcode->empid",
+    "postcode->name",
+    "postcode->sic",
+    "postcode->size",
+    "postcode->year",
+    "sic->cn",
+    "sic->empid",
+    "sic->name",
+    "sic->postcode",
+    "sic->size",
+    "sic->year"
+   ]
+  }
+ ]
+}
