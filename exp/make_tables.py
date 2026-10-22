@@ -795,6 +795,20 @@ def paper_numbers():
             f"{[(r['seed'], m) for r in e['runs'] for m in r['missed']]}; calls {np.mean([r['calls'] for r in e['runs']]):,.0f} "
             f"vs complete inverse {np.mean([r['calls'] for r in full]):,.0f}; max nu {max(r['nu_max'] for r in e['runs']):.3f}; "
             f"candidates with nu>0.01 {np.mean([r['nu_over_0.01'] for r in e['runs']]):.1f}")
+    from scipy.stats import beta as _beta                # 20-seed repeats of the incomplete-inverse runs (review E2)
+    for name, f in (("GeoNames registered names", "geonames_16k_s20_official"), ("GeoNames preferred names", "geonames_16k_s20_preferred"),
+                    ("Tax registered names", "tax_s20_official"), ("NDC GLEIF", "ndc_s20_gleif"),
+                    ("GPG Companies House", "gpg_s20_companieshouse")):
+        pp = R / f"e11_partial_inverse_{f}.json"
+        if pp.exists():
+            rr = load(pp)["runs"]
+            n, k = len(rr), sum(bool(r["false"]) for r in rr)
+            ub = 1 - 0.05 ** (1 / n) if k == 0 else float(_beta.ppf(0.95, k + 1, n - k))
+            add(f"E11 repeated incomplete inverse, {name} ({n} seeds; seeds 0-2 are the runs above)",
+                f"runs with a false certification {k}/{n} (false FDs {sum(len(r['false']) for r in rr)}); missed {sum(len(r['missed']) for r in rr)}; "
+                f"max nu {max(r['nu_max'] for r in rr):.3f}; exact one-sided 95% upper bound on the per-run false-certification probability {ub:.3f}; "
+                f"calls/run {np.mean([r['calls'] for r in rr]):,.0f}")
+    add("Exact one-sided 95% upper bound on a per-run failure probability after 0 failures in 3 runs", f"{1 - 0.05 ** (1 / 3):.3f}")
     for key in ("geonames_16k", "tax", "ndc"):
         for mode, base_file, base_key in (("unary", f"e1b_{key}.json", "ours_calls_total"), ("pairs", f"e9_{key}.json", "calls")):
             pp = R / f"e13_planner_{key}_{mode}.json"

@@ -66,9 +66,14 @@ for d in 1 2; do run b2_geonames_16k_thr$d exp/b2_fastrfd.py --dataset geonames 
 run e1b_gpg exp/e1b_discovery.py --dataset gpg --seeds 3
 run e11_gpg exp/e11_partial_inverse.py --dataset gpg
 run e11_gpg_ch exp/e11_partial_inverse.py --dataset gpg --official --registry companieshouse
+# 20-seed repeats of the incomplete-inverse (registry) runs; seeds 0-2 reproduce the 3-seed files
+run e11_geonames_official_s20 exp/e11_partial_inverse.py --dataset geonames --kw "$G16" --tag _16k_s20 --official --seeds 20
+run e11_geonames_preferred_s20 exp/e11_partial_inverse.py --dataset geonames --kw "$G16" --tag _16k_s20 --official --registry preferred --seeds 20
+run e11_tax_official_s20 exp/e11_partial_inverse.py --dataset tax --tag _s20 --official --seeds 20
+run e11_gpg_ch_s20 exp/e11_partial_inverse.py --dataset gpg --tag _s20 --official --registry companieshouse --seeds 20
 run e17_gpg exp/e17_gpg_registry.py
 run b2_gpg exp/b2_fastrfd.py --dataset gpg --timeout 7200
-setsid nohup bash -c "$P exp/e16_gleif.py --prep && $P exp/e16_gleif.py && $P exp/e11_partial_inverse.py --dataset ndc --official --registry gleif" > $L/e16_gleif.log 2>&1 < /dev/null &
+setsid nohup bash -c "$P exp/e16_gleif.py --prep && $P exp/e16_gleif.py && $P exp/e11_partial_inverse.py --dataset ndc --official --registry gleif && $P exp/e11_partial_inverse.py --dataset ndc --tag _s20 --official --registry gleif --seeds 20" > $L/e16_gleif.log 2>&1 < /dev/null &
 # E8 (LLM oracle; needs llama-cpp-python and the GGUF in $E8_MODEL). Sequential and long: run separately:
 #   OMP_NUM_THREADS=1 nice -n 15 .venv/bin/python -I exp/e8_llm_oracle.py --canon --procs 4 --threads 6
 #   .venv/bin/python -I exp/e8_llm_oracle.py --offline --seeds 3
