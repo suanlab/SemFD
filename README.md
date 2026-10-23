@@ -86,8 +86,10 @@ uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r requi
   running the model.
 - **Determinism and drift.** Random streams are seeded per FD with `zlib.crc32`, so a given data snapshot reproduces
   the numbers exactly. GeoNames and the FDA NDC directory change upstream, so `fetch_data.sh` warns when a fresh
-  download differs from the snapshot used in the paper. A full rerun of all 54 jobs on the paper's snapshots
-  (2026-10-21) reproduced every decision, oracle-call count and bound; wall-clock times vary with server load.
+  download differs from the snapshot used in the paper. A full rerun on 2026-10-21 of the 54 jobs then in
+  `run_all.sh`, on the paper's snapshots, reproduced every decision, oracle-call count and bound (wall-clock times vary
+  with server load); experiments added after that date were run once. `exp/make_tables.py` regenerates every table and
+  number byte-identically from the committed JSON.
 
 ## Data sources and licenses
 
