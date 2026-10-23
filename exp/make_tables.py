@@ -808,6 +808,43 @@ def paper_numbers():
                 f"runs with a false certification {k}/{n} (false FDs {sum(len(r['false']) for r in rr)}); missed {sum(len(r['missed']) for r in rr)}; "
                 f"max nu {max(r['nu_max'] for r in rr):.3f}; exact one-sided 95% upper bound on the per-run false-certification probability {ub:.3f}; "
                 f"calls/run {np.mean([r['calls'] for r in rr]):,.0f}")
+    for key in ("geonames_16k", "tax", "ndc", "gpg"):          # E18 variants (pre-registered, literature/prereg_e18_2026-10-23.md)
+        pp = R / f"e18_variants_{key}.json"
+        if not pp.exists():
+            continue
+        e18 = load(pp)
+        runs = e18["runs"]
+        names = list(runs[0]["variants"])
+        plain = [r["variants"]["plain"]["calls"] for r in runs]
+        for v in names:
+            rr = [r["variants"][v] for r in runs if v in r["variants"]]
+            from collections import Counter as _C
+            miss = _C(m for x in rr for m in x["missed"])
+            line = (f"false {sum(len(x['false']) for x in rr)}, missed {sum(len(x['missed']) for x in rr)} {dict(miss)}; "
+                    f"calls/run {np.mean([x['calls'] for x in rr]):,.0f} (fwd {np.mean([x['calls_fwd_inv'][0] for x in rr]):,.0f}, "
+                    f"inv {np.mean([x['calls_fwd_inv'][1] for x in rr]):,.0f}); vs plain {np.mean([x['calls'] / p for x, p in zip(rr, plain)]):.3f}x; "
+                    f"canon-all {rr[0]['canon_all']:,}; decision sec/run {np.mean([x['sec'] for x in rr]):.1f}; proxy sec {np.mean([x['proxy_sec'] for x in rr]):.1f}")
+            if rr[0]["gamma"] is not None:
+                fb = [x["fallback"] for x in rr]
+                line += (f"; fallback in {sum(f is not None for f in fb)}/{len(rr)} runs"
+                         + (f" (at candidate {[f['at_candidate'] for f in fb if f]} of {runs[0]['n_cands']})" if any(fb) else "")
+                         + f"; within (1+gamma)C_full + overshoot in all runs: {all(x['within_bound'] for x in rr)}; "
+                         f"max overshoot {max((x['overshoot'] or 0) for x in rr):.0f}; calls/C_full max {max(x['calls'] / x['canon_all'] for x in rr):.3f}")
+            add(f"E18 {key} {v} ({len(rr)} seeds, all unary candidates, complete inverse)", line)
+        add(f"E18 {key} peak RSS of the run (MB, one process, all variants)", f"{e18['peak_rss_mb']:.0f}")
+    e18s = {k: load(R / f"e18_variants_{k}.json") for k in ("geonames_16k", "tax", "ndc", "gpg") if (R / f"e18_variants_{k}.json").exists()}
+    if e18s:                                                   # E18 ranges over the four datasets (paired with plain per run)
+        def _rat(v, f):
+            return [np.mean([f(r["variants"][v]) / f(r["variants"]["plain"]) for r in e["runs"]]) for e in e18s.values()]
+        for v in next(iter(e18s.values()))["runs"][0]["variants"]:
+            if v == "plain":
+                continue
+            c, t = _rat(v, lambda x: x["calls"]), _rat(v, lambda x: x["sec"])
+            add(f"E18 range over {len(e18s)} datasets: {v} vs plain",
+                f"calls {min(c):.3f}-{max(c):.3f}x (i.e. {100 * (1 - max(c)):.0f}-{100 * (1 - min(c)):.0f}% fewer if positive); "
+                f"decision time {min(t):.1f}-{max(t):.1f}x; per dataset calls " + ", ".join(f"{k} {x:.3f}" for k, x in zip(e18s, c)))
+        add("E18 peak RSS range (MB, one process per dataset, all variants)",
+            f"{min(e['peak_rss_mb'] for e in e18s.values()):.0f}-{max(e['peak_rss_mb'] for e in e18s.values()):.0f}")
     add("Exact one-sided 95% upper bound on a per-run failure probability after 0 failures in 3 runs", f"{1 - 0.05 ** (1 / 3):.3f}")
     for key in ("geonames_16k", "tax", "ndc"):
         for mode, base_file, base_key in (("unary", f"e1b_{key}.json", "ours_calls_total"), ("pairs", f"e9_{key}.json", "calls")):

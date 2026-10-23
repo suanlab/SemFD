@@ -1,0 +1,7145 @@
+{
+ "args": {
+  "dataset": "gpg",
+  "kw": "{}",
+  "seeds": 3,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "theta0": 0.9,
+  "k": 5,
+  "tag": "",
+  "variants": [
+   "plain",
+   "refine",
+   "refine_warm",
+   "tfidf_union",
+   "hybrid_aliasonly",
+   "tfidf_aliasonly",
+   "budget_0.25",
+   "budget_0.5",
+   "budget_1.0"
+  ]
+ },
+ "runs": [
+  {
+   "dataset": "gpg81586",
+   "seed": 0,
+   "rows": 81586,
+   "n_cands": 40,
+   "n_true": 10,
+   "variants": {
+    "plain": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 21677,
+     "calls_fwd_inv": [
+      12211,
+      9466
+     ],
+     "canon_all": 15221,
+     "gamma": null,
+     "overshoot": null,
+     "within_bound": null,
+     "fallback": null,
+     "sec": 5.557742744684219,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "certificate",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 11.068131064996123
+    },
+    "refine": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 21947,
+     "calls_fwd_inv": [
+      12435,
+      9512
+     ],
+     "canon_all": 15221,
+     "gamma": null,
+     "overshoot": null,
+     "within_bound": null,
+     "fallback": null,
+     "sec": 59.261664448305964,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "certificate",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 11.068131064996123
+    },
+    "refine_warm": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 22003,
+     "calls_fwd_inv": [
+      12465,
+      9538
+     ],
+     "canon_all": 15221,
+     "gamma": null,
+     "overshoot": null,
+     "within_bound": null,
+     "fallback": null,
+     "sec": 68.43348236009479,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "certificate",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 11.068131064996123
+    },
+    "tfidf_union": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 21077,
+     "calls_fwd_inv": [
+      11557,
+      9520
+     ],
+     "canon_all": 15221,
+     "gamma": null,
+     "overshoot": null,
+     "within_bound": null,
+     "fallback": null,
+     "sec": 4.406773786991835,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "certificate",
+       "certified": false
+      }
+     ],
+     "proxy": "tfidf",
+     "proxy_sec": 7.126066528260708
+    },
+    "hybrid_aliasonly": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 19466,
+     "calls_fwd_inv": [
+      10000,
+      9466
+     ],
+     "canon_all": 15221,
+     "gamma": null,
+     "overshoot": null,
+     "within_bound": null,
+     "fallback": null,
+     "sec": 4.097729362547398,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "certificate",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 11.068131064996123
+    },
+    "tfidf_aliasonly": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 19583,
+     "calls_fwd_inv": [
+      10063,
+      9520
+     ],
+     "canon_all": 15221,
+     "gamma": null,
+     "overshoot": null,
+     "within_bound": null,
+     "fallback": null,
+     "sec": 4.126185839995742,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "certificate",
+       "certified": false
+      }
+     ],
+     "proxy": "tfidf",
+     "proxy_sec": 7.126066528260708
+    },
+    "budget_0.25": {
+     "false": [],
+     "missed": [],
+     "n_cert": 10,
+     "calls": 16055,
+     "calls_fwd_inv": [
+      15120,
+      935
+     ],
+     "canon_all": 15221,
+     "gamma": 0.25,
+     "overshoot": 81.75,
+     "within_bound": true,
+     "fallback": {
+      "at_candidate": 2,
+      "spent_before": 3887,
+      "resolve_calls": 12168
+     },
+     "sec": 3.805950900539756,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "resolved",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 11.068131064996123
+    },
+    "budget_0.5": {
+     "false": [],
+     "missed": [],
+     "n_cert": 10,
+     "calls": 17159,
+     "calls_fwd_inv": [
+      14999,
+      2160
+     ],
+     "canon_all": 15221,
+     "gamma": 0.5,
+     "overshoot": 65.5,
+     "within_bound": true,
+     "fallback": {
+      "at_candidate": 2,
+      "spent_before": 7676,
+      "resolve_calls": 9483
+     },
+     "sec": 3.945379175245762,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "resolved",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 11.068131064996123
+    },
+    "budget_1.0": {
+     "false": [],
+     "missed": [],
+     "n_cert": 10,
+     "calls": 20494,
+     "calls_fwd_inv": [
+      14792,
+      5702
+     ],
+     "canon_all": 15221,
+     "gamma": 1.0,
+     "overshoot": 30.0,
+     "within_bound": true,
+     "fallback": {
+      "at_candidate": 2,
+      "spent_before": 15251,
+      "resolve_calls": 5243
+     },
+     "sec": 4.12466842122376,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "resolved",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 11.068131064996123
+    }
+   }
+  },
+  {
+   "dataset": "gpg81586",
+   "seed": 1,
+   "rows": 81586,
+   "n_cands": 40,
+   "n_true": 10,
+   "variants": {
+    "plain": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 22092,
+     "calls_fwd_inv": [
+      12456,
+      9636
+     ],
+     "canon_all": 15221,
+     "gamma": null,
+     "overshoot": null,
+     "within_bound": null,
+     "fallback": null,
+     "sec": 4.410225868225098,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "certificate",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 8.883574815467
+    },
+    "refine": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 22343,
+     "calls_fwd_inv": [
+      12662,
+      9681
+     ],
+     "canon_all": 15221,
+     "gamma": null,
+     "overshoot": null,
+     "within_bound": null,
+     "fallback": null,
+     "sec": 59.56360026821494,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "certificate",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 8.883574815467
+    },
+    "refine_warm": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 22403,
+     "calls_fwd_inv": [
+      12693,
+      9710
+     ],
+     "canon_all": 15221,
+     "gamma": null,
+     "overshoot": null,
+     "within_bound": null,
+     "fallback": null,
+     "sec": 64.17646026425064,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "certificate",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 8.883574815467
+    },
+    "tfidf_union": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 21339,
+     "calls_fwd_inv": [
+      11715,
+      9624
+     ],
+     "canon_all": 15221,
+     "gamma": null,
+     "overshoot": null,
+     "within_bound": null,
+     "fallback": null,
+     "sec": 4.290436819195747,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "certificate",
+       "certified": false
+      }
+     ],
+     "proxy": "tfidf",
+     "proxy_sec": 6.9743106085807085
+    },
+    "hybrid_aliasonly": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 19826,
+     "calls_fwd_inv": [
+      10190,
+      9636
+     ],
+     "canon_all": 15221,
+     "gamma": null,
+     "overshoot": null,
+     "within_bound": null,
+     "fallback": null,
+     "sec": 4.038784168660641,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "certificate",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 8.883574815467
+    },
+    "tfidf_aliasonly": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 19807,
+     "calls_fwd_inv": [
+      10183,
+      9624
+     ],
+     "canon_all": 15221,
+     "gamma": null,
+     "overshoot": null,
+     "within_bound": null,
+     "fallback": null,
+     "sec": 4.06112858466804,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "certificate",
+       "certified": false
+      }
+     ],
+     "proxy": "tfidf",
+     "proxy_sec": 6.9743106085807085
+    },
+    "budget_0.25": {
+     "false": [],
+     "missed": [],
+     "n_cert": 10,
+     "calls": 16054,
+     "calls_fwd_inv": [
+      15111,
+      943
+     ],
+     "canon_all": 15221,
+     "gamma": 0.25,
+     "overshoot": 234.75,
+     "within_bound": true,
+     "fallback": {
+      "at_candidate": 1,
+      "spent_before": 4040,
+      "resolve_calls": 12014
+     },
+     "sec": 3.7803159207105637,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "resolved",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 8.883574815467
+    },
+    "budget_0.5": {
+     "false": [],
+     "missed": [],
+     "n_cert": 10,
+     "calls": 17156,
+     "calls_fwd_inv": [
+      14988,
+      2168
+     ],
+     "canon_all": 15221,
+     "gamma": 0.5,
+     "overshoot": 145.5,
+     "within_bound": true,
+     "fallback": {
+      "at_candidate": 2,
+      "spent_before": 7756,
+      "resolve_calls": 9400
+     },
+     "sec": 3.797109220176935,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "resolved",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 8.883574815467
+    },
+    "budget_1.0": {
+     "false": [],
+     "missed": [],
+     "n_cert": 10,
+     "calls": 20388,
+     "calls_fwd_inv": [
+      14788,
+      5600
+     ],
+     "canon_all": 15221,
+     "gamma": 1.0,
+     "overshoot": 38.0,
+     "within_bound": true,
+     "fallback": {
+      "at_candidate": 2,
+      "spent_before": 15259,
+      "resolve_calls": 5129
+     },
+     "sec": 3.9236341044306755,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "resolved",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 8.883574815467
+    }
+   }
+  },
+  {
+   "dataset": "gpg81586",
+   "seed": 2,
+   "rows": 81586,
+   "n_cands": 40,
+   "n_true": 10,
+   "variants": {
+    "plain": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 21845,
+     "calls_fwd_inv": [
+      12367,
+      9478
+     ],
+     "canon_all": 15221,
+     "gamma": null,
+     "overshoot": null,
+     "within_bound": null,
+     "fallback": null,
+     "sec": 4.417795334011316,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "certificate",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 8.750378655269742
+    },
+    "refine": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 22115,
+     "calls_fwd_inv": [
+      12585,
+      9530
+     ],
+     "canon_all": 15221,
+     "gamma": null,
+     "overshoot": null,
+     "within_bound": null,
+     "fallback": null,
+     "sec": 57.55310264788568,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "certificate",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 8.750378655269742
+    },
+    "refine_warm": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 22166,
+     "calls_fwd_inv": [
+      12606,
+      9560
+     ],
+     "canon_all": 15221,
+     "gamma": null,
+     "overshoot": null,
+     "within_bound": null,
+     "fallback": null,
+     "sec": 61.38001773506403,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "certificate",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 8.750378655269742
+    },
+    "tfidf_union": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 21143,
+     "calls_fwd_inv": [
+      11622,
+      9521
+     ],
+     "canon_all": 15221,
+     "gamma": null,
+     "overshoot": null,
+     "within_bound": null,
+     "fallback": null,
+     "sec": 4.250541673973203,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "certificate",
+       "certified": false
+      }
+     ],
+     "proxy": "tfidf",
+     "proxy_sec": 6.9938572235405445
+    },
+    "hybrid_aliasonly": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 19545,
+     "calls_fwd_inv": [
+      10067,
+      9478
+     ],
+     "canon_all": 15221,
+     "gamma": null,
+     "overshoot": null,
+     "within_bound": null,
+     "fallback": null,
+     "sec": 4.022851971909404,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "certificate",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 8.750378655269742
+    },
+    "tfidf_aliasonly": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 19632,
+     "calls_fwd_inv": [
+      10111,
+      9521
+     ],
+     "canon_all": 15221,
+     "gamma": null,
+     "overshoot": null,
+     "within_bound": null,
+     "fallback": null,
+     "sec": 4.033859491348267,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "certificate",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "certificate",
+       "certified": false
+      }
+     ],
+     "proxy": "tfidf",
+     "proxy_sec": 6.9938572235405445
+    },
+    "budget_0.25": {
+     "false": [],
+     "missed": [],
+     "n_cert": 10,
+     "calls": 16033,
+     "calls_fwd_inv": [
+      15098,
+      935
+     ],
+     "canon_all": 15221,
+     "gamma": 0.25,
+     "overshoot": 75.75,
+     "within_bound": true,
+     "fallback": {
+      "at_candidate": 2,
+      "spent_before": 3881,
+      "resolve_calls": 12152
+     },
+     "sec": 3.8829941917210817,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "resolved",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 8.750378655269742
+    },
+    "budget_0.5": {
+     "false": [],
+     "missed": [],
+     "n_cert": 10,
+     "calls": 17133,
+     "calls_fwd_inv": [
+      14958,
+      2175
+     ],
+     "canon_all": 15221,
+     "gamma": 0.5,
+     "overshoot": 36.5,
+     "within_bound": true,
+     "fallback": {
+      "at_candidate": 2,
+      "spent_before": 7647,
+      "resolve_calls": 9486
+     },
+     "sec": 4.227272531017661,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "resolved",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 8.750378655269742
+    },
+    "budget_1.0": {
+     "false": [],
+     "missed": [],
+     "n_cert": 10,
+     "calls": 20392,
+     "calls_fwd_inv": [
+      14735,
+      5657
+     ],
+     "canon_all": 15221,
+     "gamma": 1.0,
+     "overshoot": 69.0,
+     "within_bound": true,
+     "fallback": {
+      "at_candidate": 2,
+      "spent_before": 15290,
+      "resolve_calls": 5102
+     },
+     "sec": 4.16465524956584,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "mode": "certificate",
+       "certified": true
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "mode": "resolved",
+       "certified": true
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "mode": "resolved",
+       "certified": false
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "mode": "resolved",
+       "certified": false
+      }
+     ],
+     "proxy": "hybrid",
+     "proxy_sec": 8.750378655269742
+    }
+   }
+  }
+ ],
+ "peak_rss_mb": 1808.95703125
+}

@@ -90,4 +90,7 @@ if [ "${WITH_E8:-0}" = "1" ]; then   # LLM oracle (hours on CPU; needs llama-cpp
   $P exp/e8_llm_oracle.py --sample 400 --timing 20 --threads 16 > $L/e8_latency.log 2>&1
   $P exp/e8_llm_oracle.py --replay-check 200 --threads 12 > $L/e8_replay_check.log 2>&1
 fi
+# E18 (pre-registered variants: refine, refine-warm, proxy x audit, run-wide budget); same streams as E1b
+run e18_geonames16k exp/e18_variants.py --dataset geonames --kw "$G16" --tag _16k
+for d in tax ndc gpg; do run e18_$d exp/e18_variants.py --dataset $d; done
 echo "done; now: $P exp/make_tables.py && $P exp/make_figures.py"

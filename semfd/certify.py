@@ -94,9 +94,13 @@ def certify(ax, ay, fx, fy, theta, delta, alpha, rng, inverse=False, nu_bar=0.0,
     refine (needs inverse): before each batch, every entity whose alias class was fetched in
     EARLIER batches becomes its own cluster (its in-data spellings, removed from their proxy
     clusters), and representatives/priorities are recomputed. The witness used for a sample
-    depends only on earlier samples, so each conditional mean of B is >= g3 (Thm 1 holds for
-    any witness) and the time-uniform bound covers their weighted average; no extra calls.
-    Alias classes fetched before this call (shared caches) are not used, so runs stay comparable."""
+    depends only on information obtained before it, so each conditional mean of B is >= g3
+    (Thm 1 holds for any witness). The bound before the running intersection covers the weighted
+    average of these means; the returned running minimum is only an upper bound on the fixed g3
+    (TR, Prop. "Predictable witnesses"), which is all the decision uses. No extra calls.
+    refine=True ignores alias classes fetched before this call (shared caches), so runs stay
+    comparable; refine="warm" also uses them (fetched by earlier candidates, hence before any
+    sample of this one)."""
     target = delta - nu_bar
     stop = target if stop_at is None else min(stop_at - nu_bar, target)
     lab, rep, prio = witness(ax, ay, theta)
@@ -105,7 +109,7 @@ def certify(ax, ay, fx, fy, theta, delta, alpha, rng, inverse=False, nu_bar=0.0,
     xidx = {v: i for i, v in enumerate(xv)} if inverse else None
     if refine:
         lab = lab.copy()
-        nxt, n_ref = int(lab.max()) + 1, len(fx.inv_cache)   # entities fetched before this call: not used
+        nxt, n_ref = int(lab.max()) + 1, (0 if refine == "warm" else len(fx.inv_cache))   # True: earlier fetches unused
     c0 = fx.calls + (fy.calls if fy is not fx else 0)
     n = len(ax.codes)
     bs = []
