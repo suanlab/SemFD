@@ -238,6 +238,7 @@
 - **E18 range over 4 datasets: budget_0.5 vs plain**: calls 0.784-1.468x (i.e. -47-22% fewer if positive); decision time 0.8-1.0x; per dataset calls geonames_16k 1.468, tax 1.000, ndc 1.126, gpg 0.784
 - **E18 range over 4 datasets: budget_1.0 vs plain**: calls 0.934-1.000x (i.e. 0-7% fewer if positive); decision time 0.9-1.0x; per dataset calls geonames_16k 1.000, tax 1.000, ndc 1.000, gpg 0.934
 - **E18 peak RSS range (MB, one process per dataset, all variants)**: 954-3089
+- **NDC probe labeler_e2->ptype: oracle g3 per seed (E1b truth)**: 0.0362, 0.0362, 0.0361
 - **Exact one-sided 95% upper bound on a per-run failure probability after 0 failures in 3 runs**: 0.632
 - **E13 run-level planner geonames_16k unary (3 seeds)**: calls 38,470 vs certificate only 21,759 (1.77x; per seed 1.68-1.83x), canon-all 42,453; resolved candidates [39, 38, 38] of 58; resolved oracles ['city', 'country_src8']; false 0, missed 0 (certificate only: false 0, missed 0)
 - **E13 run-level planner geonames_16k pairs (3 seeds)**: calls 11,132 vs certificate only 11,132 (1.00x; per seed 1.00-1.00x), canon-all 42,453; resolved candidates [0, 0, 0] of 30; resolved oracles []; false 0, missed 0 (certificate only: false 0, missed 0)

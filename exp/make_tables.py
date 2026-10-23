@@ -845,6 +845,9 @@ def paper_numbers():
                 f"decision time {min(t):.1f}-{max(t):.1f}x; per dataset calls " + ", ".join(f"{k} {x:.3f}" for k, x in zip(e18s, c)))
         add("E18 peak RSS range (MB, one process per dataset, all variants)",
             f"{min(e['peak_rss_mb'] for e in e18s.values()):.0f}-{max(e['peak_rss_mb'] for e in e18s.values()):.0f}")
+    if (R / "e1b_ndc.json").exists():                       # the NDC probe missed in E11 (paper, "Incomplete inverse")
+        add("NDC probe labeler_e2->ptype: oracle g3 per seed (E1b truth)",
+            ", ".join(f"{r['truth']['labeler_e2->ptype']:.4f}" for r in load(R / "e1b_ndc.json")))
     add("Exact one-sided 95% upper bound on a per-run failure probability after 0 failures in 3 runs", f"{1 - 0.05 ** (1 / 3):.3f}")
     for key in ("geonames_16k", "tax", "ndc"):
         for mode, base_file, base_key in (("unary", f"e1b_{key}.json", "ours_calls_total"), ("pairs", f"e9_{key}.json", "calls")):
@@ -942,11 +945,11 @@ def latex_e9():
             continue
         runs = load(p)
         mf = lambda k, w: np.mean([r[k][w] for r in runs])
-        oc, ca = np.mean([r["calls"] for r in runs]), runs[0]["canon_all"]
+        oc, ca = np.mean([r["calls"] for r in runs]), np.mean([r["canon_all"] for r in runs])
         fi = (f"{np.mean([r['calls_fwd_inv'][0] for r in runs]):,.0f} + {np.mean([r['calls_fwd_inv'][1] for r in runs]):,.0f}"
               if "calls_fwd_inv" in runs[0] else "--")
         rows.append(f"{nice} & {runs[0]['n_cands']}/{runs[0]['n_true']} & {mf('tane', 'false'):.0f} / {mf('tane', 'missed'):.0f} & "
-                    f"{mf('ours', 'false'):.0f} / {mf('ours', 'missed'):.1f} & {oc:,.0f} ({fi}) & {ca:,} \\\\")
+                    f"{mf('ours', 'false'):.0f} / {mf('ours', 'missed'):.1f} & {oc:,.0f} ({fi}) & {ca:,.0f} \\\\")
     (ROOT / "paper/tables/e9.tex").write_text(
         "\\begin{table}[t]\\centering\\small\\caption{Two-attribute left-hand sides $\\{A,B\\}\\rightarrow Y$: false accepted / true "
         "missed per run (mean over 3 seeds; candidates/true in parentheses), our oracle calls per run (forward + inverse) and the cost of "
