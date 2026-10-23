@@ -35,7 +35,7 @@ Modules in `semfd/`:
 - `closure.py`: certified closure.
 - `maintain.py`: bound propagation under updates.
 - `composite.py`: two-attribute left-hand sides.
-- `planner.py`: two rules that choose between certifying and resolving (per-candidate cap: E1b variant; run-level budget: E13), not used by the system.
+- `planner.py`: the per-candidate cap (E1b variant) and the run-level extrapolating planner (E13), evaluated in the paper and not used by the system; the pre-registered run-wide budget is in `exp/e18_variants.py`.
 - `baselines.py`: the baselines.
 - `data.py`: dataset loaders and probe injection.
 
@@ -59,11 +59,12 @@ Experiments in `exp/`:
 | `e10_updates.py` | certificates under updates |
 | `e11_partial_inverse.py` | incomplete inverse access and the audit split |
 | `e12_hidden_alias.py` | hidden aliases: neighbor-only mode fails where the inverse rejects |
-| `e13_planner.py` | two planners evaluated (not used by the system) |
+| `e13_planner.py` | run-level extrapolating planner (not used by the system) |
 | `e14_llm_tax_city.py` | second LLM oracle attribute (Tax city names; needs the GGUF model, cached answers included) |
 | `e15_slack.py` | witness-slack decomposition |
 | `e16_gleif.py` | GLEIF as a real alias registry for NDC labelers; LEI as an independent oracle |
 | `e17_gpg_registry.py` | UK gender pay gap reports: natural aliases and the Companies House register as alias service |
+| `e18_variants.py` | pre-registered variants over all unary candidates: alias-only and TF-IDF audits, self-refining witness, run-wide budget rule |
 | `e3_refine.py` | self-refining witness (power) |
 
 ## Reproduce
