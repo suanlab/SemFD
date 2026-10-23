@@ -852,7 +852,7 @@ def paper_numbers():
             line = (f"false {sum(len(x['false']) for x in rr)}, missed {sum(len(x['missed']) for x in rr)} {dict(miss)}; "
                     f"calls/run {np.mean([x['calls'] for x in rr]):,.0f} (fwd {np.mean([x['calls_fwd_inv'][0] for x in rr]):,.0f}, "
                     f"inv {np.mean([x['calls_fwd_inv'][1] for x in rr]):,.0f}); vs plain {np.mean([x['calls'] / p for x, p in zip(rr, plain)]):.3f}x; "
-                    f"canon-all {rr[0]['canon_all']:,}; decision sec/run {np.mean([x['sec'] for x in rr]):.1f}; proxy sec {np.mean([x['proxy_sec'] for x in rr]):.1f}")
+                    f"canon-all {np.mean([x['canon_all'] for x in rr]):,.0f}; decision sec/run {np.mean([x['sec'] for x in rr]):.1f}; proxy sec {np.mean([x['proxy_sec'] for x in rr]):.1f}")
             if rr[0]["gamma"] is not None:
                 fb = [x["fallback"] for x in rr]
                 line += (f"; fallback in {sum(f is not None for f in fb)}/{len(rr)} runs"
@@ -876,6 +876,69 @@ def paper_numbers():
                 f"decision time {min(t):.1f}-{max(t):.1f}x; per dataset calls " + ", ".join(f"{k} {x:.3f}" for k, x in zip(e18s, c)))
         add("E18 peak RSS range (MB, one process per dataset, all variants)",
             f"{min(e['peak_rss_mb'] for e in e18s.values()):.0f}-{max(e['peak_rss_mb'] for e in e18s.values()):.0f}")
+    if (R / "e18_diag_gpg.json").exists():                  # MODIFY.md H1/H2: exact witness means (diagnostic only)
+        dg = load(R / "e18_diag_gpg.json")["rows"]
+        for v in ("plain", "refine", "refine_warm"):
+            rr = [r for r in dg if r["variant"] == v]
+            add(f"E18 diagnostic GPG name->sic {v} ({len(rr)} seeds)",
+                f"g3 {rr[0]['g3']:.4f}; exact mean of initial witness {np.mean([r['mu_initial'] for r in rr]):.4f}"
+                + (f"; of final refined witness {min(r['mu_final'] for r in rr):.4f}-{max(r['mu_final'] for r in rr):.4f}"
+                   if "mu_final" in rr[0] else "")
+                + f"; running mean of B {min(r['mean_B'] for r in rr):.4f}-{max(r['mean_B'] for r in rr):.4f}; "
+                f"U {min(r['ub'] for r in rr):.4f}-{max(r['ub'] for r in rr):.4f}; certified {sum(r['certified'] for r in rr)}/{len(rr)}; "
+                f"samples {sorted({r['samples'] for r in rr})}; calls on this candidate {min(r['calls'] for r in rr):,}-{max(r['calls'] for r in rr):,}")
+    if (R / "e18_diag_sim.json").exists():
+        ds_ = load(R / "e18_diag_sim.json")
+        for k in ("initial_witness", "refine_running_mean", "refine_final_witness_frozen", "refine_warm_final_witness_frozen"):
+            x = ds_[k]
+            add(f"E18 diagnostic simulation, fresh i.i.d. samples, mean of {k.replace('_', ' ')}",
+                f"mu {x['mu']:.4f}: certified within 20,000 samples in {100 * x['p_certify_within_cap']:.0f}% of 500 runs"
+                + (f", median {x['median_samples']:,.0f} samples" if x["median_samples"] else ""))
+    if (R / "e20_scaling.json").exists():                    # E20 (pre-registered): N, D, |C| varied separately
+        e20 = load(R / "e20_scaling.json")
+        tags = list(dict.fromkeys(r["tag"] for r in e20))
+        for t in tags:
+            rr = [r for r in e20 if r["tag"] == t]
+            tf = [f for r in rr for f in r["fds"] if f["g3"] <= 0.05]
+            add(f"E20 {t} ({len(rr)} seeds)",
+                f"rows {rr[0]['rows']:,}; distinct city {', '.join(f'{r['distinct']['city']:,}' for r in rr)}; candidates {rr[0]['n_cands']}; "
+                f"calls {', '.join(f'{r['calls']:,}' for r in rr)} (canon-all {', '.join(f'{r['canon_all']:,}' for r in rr)}; "
+                f"ratio {', '.join(f'{r['calls'] / r['canon_all']:.2f}' for r in rr)}); samples {', '.join(f'{r['samples']:,}' for r in rr)}; "
+                f"false {sum(len(r['false']) for r in rr)}, missed {sum(len(r['missed']) for r in rr)}; "
+                f"samples per true FD {min(f['samples'] for f in tf)}-{max(f['samples'] for f in tf)}; "
+                f"false-FD g3 {min(f['g3'] for r in rr for f in r['fds'] if f['g3'] > 0.05):.3f}-"
+                f"{max(f['g3'] for r in rr for f in r['fds'] if 0.05 < f['g3'] < 0.2):.3f} (probes below 0.2); "
+                f"max alias class (city) {max(r['alias_class']['city']['max'] for r in rr)}")
+    e19c = [load(R / f"e19_certify_s{s}.json") for s in range(3) if (R / f"e19_certify_s{s}.json").exists()]
+    if (R / "e19_resolve.json").exists() and e19c:          # E19 (pre-registered): live LLM, end to end
+        rv = load(R / "e19_resolve.json")
+        exact = {f["fd"]: f["certified"] for f in rv["fds"]}
+        add("E19 resolve arm (live LLM, one process)",
+            f"wall {rv['wall_sec'] / 60:.1f} min (model load {rv['model_load_sec']:.0f} s, separate); LLM calls {rv['llm_calls']:,}; "
+            f"summed call latency {rv['llm_sec_sum'] / 60:.1f} min, median {rv['llm_sec_p50']:.2f} s; exact decisions "
+            f"{sum(exact.values())} true of {len(exact)}; load avg {min(x[1] for x in rv['loadavg_1m']):.0f}-{max(x[1] for x in rv['loadavg_1m']):.0f}")
+        e8c = load(R / "e8_llm_canon.json")["out"] if (R / "e8_llm_canon.json").exists() else {}
+        e8t = load(R / "e8_tokens.json")["runs"] if (R / "e8_tokens.json").exists() else []
+        for c in e19c:
+            dec = {f["fd"]: f["certified"] for f in c["fds"]}
+            fp = sum(dec[k] and not exact[k] for k in dec)
+            fn = sum(exact[k] and not dec[k] for k in dec)
+            same = sum(e8c.get(v) == o for v, o in c["answers"].items())
+            rep = next((r["calls"] for r in e8t if r["seed"] == c["seed"]), None)
+            add(f"E19 certify arm seed {c['seed']} (live LLM, neighbour-only, declared nu_bar 0.01)",
+                f"wall {c['wall_sec'] / 60:.1f} min (proxy {c['phases']['proxy_sec']:.0f} s); LLM calls {c['llm_calls']:,} "
+                f"(E8 replay {rep}); summed call latency {c['llm_sec_sum'] / 60:.1f} min, median {c['llm_sec_p50']:.2f} s; "
+                f"false certifications vs resolve arm {fp}, true FDs not certified {fn}; answers identical to the E8 cache "
+                f"{same}/{len(c['answers'])}; load avg {min(x[1] for x in c['loadavg_1m']):.0f}-{max(x[1] for x in c['loadavg_1m']):.0f}")
+        w = [c["wall_sec"] for c in e19c]
+        add("E19 resolve wall / certify wall (mean over seeds)",
+            f"{rv['wall_sec'] / np.mean(w):.2f}x (per seed {min(rv['wall_sec'] / x for x in w):.2f}-{max(rv['wall_sec'] / x for x in w):.2f}x); "
+            f"summed latency {rv['llm_sec_sum'] / np.mean([c['llm_sec_sum'] for c in e19c]):.2f}x; "
+            f"calls {rv['llm_calls'] / np.mean([c['llm_calls'] for c in e19c]):.2f}x")
+    if (R / "e19_proxy_cold.json").exists():
+        pc = load(R / "e19_proxy_cold.json")
+        add("E19 NDC proxy-index build, empty vs cached embedding cache (s)",
+            f"cold {min(pc['cold_sec']):.0f}-{max(pc['cold_sec']):.0f}, cached {min(pc['cached_sec']):.1f}-{max(pc['cached_sec']):.1f}")
     if (R / "e1b_ndc.json").exists():                       # the NDC probe missed in E11 (paper, "Incomplete inverse")
         add("NDC probe labeler_e2->ptype: oracle g3 per seed (E1b truth)",
             ", ".join(f"{r['truth']['labeler_e2->ptype']:.4f}" for r in load(R / "e1b_ndc.json")))
@@ -990,11 +1053,41 @@ def latex_e9():
         "\n\\bottomrule\\end{tabular}\\end{table}\n")
 
 
+
+def latex_e18():
+    """E18 (pre-registered): plain vs alias-only audits over all unary candidates, complete inverse."""
+    rows = []
+    for key, nice in (("geonames_16k", "GeoNames"), ("tax", "Tax"), ("ndc", "NDC"), ("gpg", "GPG")):
+        p = R / f"e18_variants_{key}.json"
+        if not p.exists():
+            continue
+        runs = load(p)["runs"]
+        m = lambda v: np.mean([r["variants"][v]["calls"] for r in runs])
+        miss = lambda v: np.mean([len(r["variants"][v]["missed"]) + len(r["variants"][v]["false"]) for r in runs])
+        same = all(r["variants"][v]["missed"] == r["variants"]["plain"]["missed"]
+                   and r["variants"][v]["false"] == r["variants"]["plain"]["false"]
+                   for r in runs for v in ("hybrid_aliasonly", "tfidf_aliasonly"))
+        assert same, key                                       # the table claims identical decisions
+        rows.append(f"{nice} & {runs[0]['n_cands']}/{runs[0]['n_true']} & {m('plain'):,.0f} & {m('hybrid_aliasonly'):,.0f} & "
+                    f"{m('tfidf_aliasonly'):,.0f} & {np.mean([r['variants']['plain']['canon_all'] for r in runs]):,.0f} & "
+                    f"{miss('plain'):.0f} \\\\")
+    if rows:
+        (ROOT / "paper/tables/e18.tex").write_text(
+            "\\begin{table}[t]\\centering\\small\\caption{All unary candidates under a complete inverse (E18, pre-registered): "
+            "oracle calls per run (mean over 3 seeds) for the audit of Algorithm~\\ref{alg:cert} (proxy neighbors and aliases, used in all "
+            "other tables), the audit of aliases only (same hybrid proxy, or TF-IDF), and canonicalizing every value. All three audits made "
+            "identical decisions; wrong decisions per run in the last column. Candidates include injected probes. Generated by exp/make\\_tables.py.}"
+            "\\label{tab:e18}\n\\setlength{\\tabcolsep}{3pt}\\begin{tabular}{lcrrrrc}\\toprule\n"
+            "data & cand./true & default & aliases & TF-IDF al. & canon.-all & wrong \\\\\\midrule\n" + "\n".join(rows) +
+            "\n\\bottomrule\\end{tabular}\\end{table}\n")
+
+
 latex_e9()
+latex_e18()
 paper_numbers()
 
 
-def fit_tables(names=("e1b", "sensitivity", "e9")):
+def fit_tables(names=("e1b", "sensitivity", "e9", "e18")):
     """Scale the tabulars that exceed the column width (measured overfull) to the column width."""
     for n in names:
         f = ROOT / f"paper/tables/{n}.tex"

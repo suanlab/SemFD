@@ -180,3 +180,44 @@ def test_witness_slack_bound():
         ci, cii = b_split(ax, ay, xent, yent, theta)
         assert abs(mu - (ci + cii)) < 1e-12
         assert g3 - 1e-12 <= mu <= g3 + ep + er + 1e-12
+
+
+@pytest.mark.parametrize("refine", [True, "warm"])
+def test_refined_witness_bound_dominates_g3(refine):
+    """Self-refining witnesses (TR, Prop. "Predictable witnesses"): the returned bound still covers g3, also when
+    alias classes fetched by an earlier candidate on the same oracle are reused ("warm")."""
+    xs, ys, xo, yo = _toy()
+    ax, ay = Attr("x", xs, proxy="edit", k=3), Attr("y", ys, exact=True)
+    az = Attr("z", pd.Series([f"z{xo[layer1(v)] % 7}" for v in xs]), exact=True)
+    xent = np.array([xo[v] for v in ax.vals])
+    yent = np.array([yo[v] for v in ay.vals])
+    g3 = g3_codes(xent[ax.codes], yent[ay.codes])
+    fails = 0
+    for i in range(40):
+        fx = Canonicalizer.from_table(xo, inverse=True)
+        fy = Canonicalizer(lambda v: v, (lambda e: [e]), free=True)
+        certify(ax, az, fx, fy, 0.9, 0.05, 0.05, np.random.default_rng(1000 + i), inverse=True, max_n=2000)
+        r = certify(ax, ay, fx, fy, 0.9, 0.05, 0.05, np.random.default_rng(i), inverse=True, max_n=4000, refine=refine)
+        fails += r["ub"] < g3
+    assert fails <= 4
+
+
+def test_call_budget_stops_within_one_batch():
+    """max_calls (E18 run-wide budget): sampling stops at the first batch boundary at or above the cap, so the
+    overshoot is at most one batch of calls, each sample costing at most 3 + 3*kappa calls (Thm. 2)."""
+    xs, ys, xo, yo = _toy(n_ent=200)
+    ax, ay = Attr("x", xs, proxy="edit", k=3), Attr("y", ys, exact=True)
+    kappa = max(len(n) for n in ax.nbrs) + max(sum(1 for e in xo.values() if e == x) for x in set(xo.values()))
+    for cap, batch in ((50, 100), (200, 20), (1, 10)):
+        fx = Canonicalizer.from_table(xo, inverse=True)
+        fy = Canonicalizer(lambda v: v, (lambda e: [e]), free=True)
+        r = certify(ax, ay, fx, fy, 0.9, 0.05, 0.05, np.random.default_rng(0), inverse=True, max_n=4000,
+                    batch=batch, max_calls=cap)
+        assert r["budget_hit"] and cap <= r["calls"] <= cap + batch * (3 + 3 * kappa)
+    fx = Canonicalizer.from_table(xo, inverse=True)
+    fy = Canonicalizer(lambda v: v, (lambda e: [e]), free=True)
+    big = certify(ax, ay, fx, fy, 0.9, 0.05, 0.05, np.random.default_rng(0), inverse=True, max_n=4000, max_calls=10**9)
+    fx = Canonicalizer.from_table(xo, inverse=True)
+    fy = Canonicalizer(lambda v: v, (lambda e: [e]), free=True)
+    ref = certify(ax, ay, fx, fy, 0.9, 0.05, 0.05, np.random.default_rng(0), inverse=True, max_n=4000)
+    assert not big["budget_hit"] and big["certified"] == ref["certified"] and big["ub"] == ref["ub"]

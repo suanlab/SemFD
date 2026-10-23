@@ -65,6 +65,9 @@ Experiments in `exp/`:
 | `e16_gleif.py` | GLEIF as a real alias registry for NDC labelers; LEI as an independent oracle |
 | `e17_gpg_registry.py` | UK gender pay gap reports: natural aliases and the Companies House register as alias service |
 | `e18_variants.py` | pre-registered variants over all unary candidates: alias-only and TF-IDF audits, self-refining witness, run-wide budget rule |
+| `e18_diag_gpg.py`, `e18_diag_sim.py` | diagnostic: exact witness means of GPG name->sic (from the truth, never an algorithm input) and a simulation of certifying a frozen refined witness |
+| `e19_end_to_end.py`, `run_e19.sh`, `e19_proxy_cold.py` | pre-registered end-to-end wall clock with a live local LLM oracle: certify vs canonicalize-all on NDC (several hours; needs the GGUF model) |
+| `e20_scaling.py` | pre-registered scaling with rows, domain size and candidate count varied separately (GeoNames) |
 | `e3_refine.py` | self-refining witness (power) |
 
 ## Reproduce

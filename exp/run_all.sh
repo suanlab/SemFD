@@ -93,4 +93,9 @@ fi
 # E18 (pre-registered variants: refine, refine-warm, proxy x audit, run-wide budget); same streams as E1b
 run e18_geonames16k exp/e18_variants.py --dataset geonames --kw "$G16" --tag _16k
 for d in tax ndc gpg; do run e18_$d exp/e18_variants.py --dataset $d; done
+# E18 diagnostic (MODIFY.md H1/H2; exact witness means from the truth, diagnosis only) and its simulation
+(setsid nohup sh -c "$P exp/e18_diag_gpg.py && $P exp/e18_diag_sim.py" > $L/e18_diag.log 2>&1 < /dev/null &)
+# E20 (pre-registered): N, D and |C| varied separately on GeoNames
+run e20_scaling exp/e20_scaling.py
+# E19 (pre-registered, live local LLM, several hours, needs the GGUF model): exp/run_e19.sh
 echo "done; now: $P exp/make_tables.py && $P exp/make_figures.py"

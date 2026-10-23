@@ -1,0 +1,23 @@
+{
+ "alpha_per_candidate": 0.00125,
+ "initial_witness": {
+  "mu": 0.04880739342534259,
+  "p_certify_within_cap": 0.002,
+  "median_samples": 14500.0
+ },
+ "refine_running_mean": {
+  "mu": 0.04331666666666667,
+  "p_certify_within_cap": 0.304,
+  "median_samples": 11750.0
+ },
+ "refine_final_witness_frozen": {
+  "mu": 0.03981892318126476,
+  "p_certify_within_cap": 0.876,
+  "median_samples": 8900.0
+ },
+ "refine_warm_final_witness_frozen": {
+  "mu": 0.039050817542225384,
+  "p_certify_within_cap": 0.958,
+  "median_samples": 7700.0
+ }
+}

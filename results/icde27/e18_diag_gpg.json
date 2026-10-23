@@ -1,0 +1,117 @@
+{
+ "target": "name->sic",
+ "delta": 0.05,
+ "rows": [
+  {
+   "seed": 0,
+   "variant": "plain",
+   "g3": 0.037334836859265086,
+   "mu_initial": 0.048807393425342585,
+   "certified": false,
+   "ub": 0.05742697659713114,
+   "samples": 20000,
+   "calls": 17939,
+   "mean_B": 0.04915
+  },
+  {
+   "seed": 0,
+   "variant": "refine",
+   "g3": 0.037334836859265086,
+   "mu_initial": 0.048807393425342585,
+   "certified": false,
+   "ub": 0.052939345671024804,
+   "samples": 20000,
+   "calls": 18215,
+   "mean_B": 0.04365,
+   "mu_final": 0.04008040595200157,
+   "classes_split": 8606
+  },
+  {
+   "seed": 0,
+   "variant": "refine_warm",
+   "g3": 0.037334836859265086,
+   "mu_initial": 0.048807393425342585,
+   "certified": false,
+   "ub": 0.05196900219558947,
+   "samples": 20000,
+   "calls": 18231,
+   "mean_B": 0.0429,
+   "mu_final": 0.039675924791018065,
+   "classes_split": 9459
+  },
+  {
+   "seed": 1,
+   "variant": "plain",
+   "g3": 0.037334836859265086,
+   "mu_initial": 0.048807393425342585,
+   "certified": false,
+   "ub": 0.05973049329183868,
+   "samples": 20000,
+   "calls": 17591,
+   "mean_B": 0.0485
+  },
+  {
+   "seed": 1,
+   "variant": "refine",
+   "g3": 0.037334836859265086,
+   "mu_initial": 0.048807393425342585,
+   "certified": false,
+   "ub": 0.055668913388223995,
+   "samples": 20000,
+   "calls": 17836,
+   "mean_B": 0.04285,
+   "mu_final": 0.039504326722722034,
+   "classes_split": 8604
+  },
+  {
+   "seed": 1,
+   "variant": "refine_warm",
+   "g3": 0.037334836859265086,
+   "mu_initial": 0.048807393425342585,
+   "certified": false,
+   "ub": 0.054434358495637256,
+   "samples": 20000,
+   "calls": 17861,
+   "mean_B": 0.0416,
+   "mu_final": 0.038523766332459,
+   "classes_split": 9649
+  },
+  {
+   "seed": 2,
+   "variant": "plain",
+   "g3": 0.037334836859265086,
+   "mu_initial": 0.048807393425342585,
+   "certified": false,
+   "ub": 0.057217537617709084,
+   "samples": 20000,
+   "calls": 18436,
+   "mean_B": 0.05005
+  },
+  {
+   "seed": 2,
+   "variant": "refine",
+   "g3": 0.037334836859265086,
+   "mu_initial": 0.048807393425342585,
+   "certified": false,
+   "ub": 0.052143334954044517,
+   "samples": 20000,
+   "calls": 18709,
+   "mean_B": 0.04345,
+   "mu_final": 0.039872036869070676,
+   "classes_split": 8735
+  },
+  {
+   "seed": 2,
+   "variant": "refine_warm",
+   "g3": 0.037334836859265086,
+   "mu_initial": 0.048807393425342585,
+   "certified": false,
+   "ub": 0.05123763020054008,
+   "samples": 20000,
+   "calls": 18727,
+   "mean_B": 0.04235,
+   "mu_final": 0.038952761503199075,
+   "classes_split": 9494
+  }
+ ]
+}
