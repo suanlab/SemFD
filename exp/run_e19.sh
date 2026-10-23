@@ -1,6 +1,7 @@
 #!/bin/bash
 # E19 run order fixed in literature/prereg_e19_2026-10-23.md
 cd "$(dirname "$0")/.." || exit 1
+mkdir -p logs
 PY=.venv/bin/python
 export OMP_NUM_THREADS=16 MKL_NUM_THREADS=16 OPENBLAS_NUM_THREADS=16
 for step in "certify --seed 0" "resolve" "certify --seed 1" "certify --seed 2"; do
