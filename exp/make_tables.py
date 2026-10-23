@@ -808,6 +808,11 @@ def paper_numbers():
                 f"runs with a false certification {k}/{n} (false FDs {sum(len(r['false']) for r in rr)}); missed {sum(len(r['missed']) for r in rr)}; "
                 f"max nu {max(r['nu_max'] for r in rr):.3f}; exact one-sided 95% upper bound on the per-run false-certification probability {ub:.3f}; "
                 f"calls/run {np.mean([r['calls'] for r in rr]):,.0f}")
+    _sc = {suf: np.mean([r["run_calls_inverse"] for r in load(R / f"e1_geonames_16k{suf}.json")])
+           for suf in ("", "_edit") if (R / f"e1_geonames_16k{suf}.json").exists()}
+    if len(_sc) == 2:                                          # paper, "Proxies and the miss mass" (hybrid rationale)
+        add("E1 GeoNames TF-IDF nbrs + edit score vs hybrid: calls/run (ratio)",
+            f"{_sc['_edit']:,.0f} vs {_sc['']:,.0f} ({_sc['_edit'] / _sc['']:.2f}x)")
     for key in ("geonames_16k", "tax", "ndc", "gpg"):          # E18 variants (pre-registered, literature/prereg_e18_2026-10-23.md)
         pp = R / f"e18_variants_{key}.json"
         if not pp.exists():
@@ -829,7 +834,9 @@ def paper_numbers():
                 line += (f"; fallback in {sum(f is not None for f in fb)}/{len(rr)} runs"
                          + (f" (at candidate {[f['at_candidate'] for f in fb if f]} of {runs[0]['n_cands']})" if any(fb) else "")
                          + f"; within (1+gamma)C_full + overshoot in all runs: {all(x['within_bound'] for x in rr)}; "
-                         f"max overshoot {max((x['overshoot'] or 0) for x in rr):.0f}; calls/C_full max {max(x['calls'] / x['canon_all'] for x in rr):.3f}")
+                         f"max overshoot {max((x['overshoot'] or 0) for x in rr):.0f}; calls/C_full max {max(x['calls'] / x['canon_all'] for x in rr):.3f}, "
+                         f"mean {np.mean([x['calls'] / x['canon_all'] for x in rr]):.3f}"
+                         + (f"; first exactly decided candidate (1-based) {[f['at_candidate'] + 1 for f in fb if f]}" if any(fb) else ""))
             add(f"E18 {key} {v} ({len(rr)} seeds, all unary candidates, complete inverse)", line)
         add(f"E18 {key} peak RSS of the run (MB, one process, all variants)", f"{e18['peak_rss_mb']:.0f}")
     e18s = {k: load(R / f"e18_variants_{k}.json") for k in ("geonames_16k", "tax", "ndc", "gpg") if (R / f"e18_variants_{k}.json").exists()}
