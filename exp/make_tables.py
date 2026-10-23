@@ -386,6 +386,9 @@ def paper_numbers():
             calls = np.mean([sum(next(z for z in x["b7_sample"] if z["m"] == mm)["calls"] for x in r["fds"]) for r in runs])
             add(f"B7 {key} m={mm}", f"false accepted {sum(a and not t for a, t in acc)}/{sum(not t for a, t in acc)}, "
                                    f"calls/run {calls:.0f}, canon-all {np.mean([r['canon_all'] for r in runs]):.0f}")
+        mm_calls = np.mean([sum(next(z for z in x["b7_sample"] if z["m"] == 5000)["calls"] for x in r["fds"]) for r in runs])
+        add(f"B7 {key} m=5000 calls / ours (inverse) on the same curated candidates",
+            f"{mm_calls:,.0f} / {np.mean([r['run_calls_inverse'] for r in runs]):,.0f} = {mm_calls / np.mean([r['run_calls_inverse'] for r in runs]):.2f}x")
     for p in sorted(R.glob("e1_*.json")):
         runs = load(p)
         if "ann_nubar" not in runs[0]["fds"][0]["ours"]:
@@ -398,11 +401,21 @@ def paper_numbers():
             add(f"E1b seconds {key}", {k: round(float(np.mean([r['sec'][k] for r in runs])), 1) for k in runs[0]["sec"]})
             add(f"E1b planner vs ours calls {key}", f"{np.mean([r['planner_calls_total'] for r in runs]):.0f} vs "
                                                    f"{np.mean([r['ours_calls_total'] for r in runs]):.0f}")
+            add(f"E1b planner (per-candidate cap) calls / canon-all {key}",
+                f"{np.mean([r['planner_calls_total'] for r in runs]) / np.mean([r['canon_all'] for r in runs]):.2f}x")
+            rej = [d["samples"] for r in runs for d in r["ours_detail"].values() if not d["certified"]]
+            add(f"E1b rejected candidate-runs stopping at the first batch of 100 samples {key}",
+                f"{sum(n <= 100 for n in rej)}/{len(rej)}; median samples {np.median(rej):.0f}")
             add(f"E1b planner resolved / candidates {key}", f"{[r['planner_resolved'] for r in runs]} / {runs[0]['n_cands']}; "
                                                           f"planner F/M {[(r['planner']['false'], r['planner']['missed_true']) for r in runs]}")
     for p in sorted(R.glob("b2_fastrfd_*.json")):
         e = load(p)
         add(f"FastRFD seconds {p.stem}", [(r["t"], round(r["sec"])) for r in e["runs"]])
+    _fr = [(p.stem, r["sec"]) for k in ("geonames_16k", "tax", "ndc", "gpg") for p in sorted(R.glob(f"b2_fastrfd_{k}*.json"))
+           for r in load(p)["runs"]]
+    if _fr:                                                    # paper, timing sentence ("on the same tables")
+        add("FastRFD minutes on the evaluated tables (all runs incl. thresholds and fine grids)",
+            f"{min(x for _, x in _fr) / 60:.1f}-{max(x for _, x in _fr) / 60:.1f} min over {len(_fr)} runs")
     # LLM
     if (R / "e8_llm.json").exists():
         e = load(R / "e8_llm.json")
@@ -691,6 +704,9 @@ def paper_numbers():
                         f"calls {np.mean([r['calls'] for r in rr]):,.0f}, max nu {max(r['nu_max'] for r in rr):.3f}, "
                         f"candidates with nu>0.01 {np.mean([r['nu_over_0.01'] for r in rr]):.1f}")
         add(f"E11 partial inverse {key} ({len({r['seed'] for r in e11['runs']})} seeds; totals over seeds)", "; ".join(rows))
+        _c1 = np.mean([r["calls"] for r in e11["runs"] if r["p"] == 1.0])
+        add(f"E11 partial inverse {key}: calls / complete inverse (p<1)",
+            ", ".join(f"p={p_}: {np.mean([r['calls'] for r in e11['runs'] if r['p'] == p_]) / _c1:.2f}x" for p_ in ps if p_ != 1.0))
         add(f"E11 missed true FDs {key} (seed, p, fd)", [(r["seed"], r["p"], m) for r in e11["runs"] for m in r["missed"]])
         nat = [f for f in e11["audit_split"] if not f["probe"]]
         fired = [f for f in nat if f["mass_ii_only"] > 0]

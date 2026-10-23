@@ -16,10 +16,13 @@
 - **E3 max false-cert rate**: 0.018
 - **B7 geonames_16k m=1000**: false accepted 9/21, calls/run 12547, canon-all 42453
 - **B7 geonames_16k m=5000**: false accepted 9/21, calls/run 47185, canon-all 42453
+- **B7 geonames_16k m=5000 calls / ours (inverse) on the same curated candidates**: 47,185 / 15,045 = 3.14x
 - **B7 tax m=1000**: false accepted 6/15, calls/run 6708, canon-all 84575
 - **B7 tax m=5000**: false accepted 3/15, calls/run 26645, canon-all 84575
+- **B7 tax m=5000 calls / ours (inverse) on the same curated candidates**: 26,645 / 5,213 = 5.11x
 - **B7 ndc m=1000**: false accepted 2/18, calls/run 4527, canon-all 6653
 - **B7 ndc m=5000**: false accepted 0/18, calls/run 12553, canon-all 6653
+- **B7 ndc m=5000 calls / ours (inverse) on the same curated candidates**: 12,553 / 2,659 = 4.72x
 - **nu max (ANN-only) e1_geonames_16k**: 0.105
 - **nu max (ANN-only) e1_geonames_16k_edit**: 0.052
 - **nu max (ANN-only) e1_geonames_16k_emb**: 0.145
@@ -41,15 +44,23 @@
 - **nu max (ANN-only) e1_tax**: 0.096
 - **E1b seconds geonames_16k**: {'proxy': 22.6, 'tane': 1.3, 'certify': 5.2}
 - **E1b planner vs ours calls geonames_16k**: 22449 vs 21759
+- **E1b planner (per-candidate cap) calls / canon-all geonames_16k**: 0.53x
+- **E1b rejected candidate-runs stopping at the first batch of 100 samples geonames_16k**: 88/144; median samples 100
 - **E1b planner resolved / candidates geonames_16k**: [28, 28, 28] / 58; planner F/M [(0, 0), (0, 0), (0, 0)]
 - **E1b seconds tax**: {'proxy': 93.8, 'tane': 5.4, 'certify': 27.1}
 - **E1b planner vs ours calls tax**: 12275 vs 12297
+- **E1b planner (per-candidate cap) calls / canon-all tax**: 0.15x
+- **E1b rejected candidate-runs stopping at the first batch of 100 samples tax**: 130/135; median samples 100
 - **E1b planner resolved / candidates tax**: [12, 12, 12] / 50; planner F/M [(0, 0), (0, 0), (0, 0)]
 - **E1b seconds ndc**: {'proxy': 7.6, 'tane': 2.9, 'certify': 15.5}
 - **E1b planner vs ours calls ndc**: 6305 vs 6305
+- **E1b planner (per-candidate cap) calls / canon-all ndc**: 0.95x
+- **E1b rejected candidate-runs stopping at the first batch of 100 samples ndc**: 130/168; median samples 100
 - **E1b planner resolved / candidates ndc**: [30, 30, 30] / 66; planner F/M [(0, 0), (0, 0), (0, 0)]
 - **E1b seconds gpg**: {'proxy': 20.3, 'tane': 1.0, 'certify': 4.3}
 - **E1b planner vs ours calls gpg**: 21376 vs 21871
+- **E1b planner (per-candidate cap) calls / canon-all gpg**: 1.40x
+- **E1b rejected candidate-runs stopping at the first batch of 100 samples gpg**: 78/93; median samples 100
 - **E1b planner resolved / candidates gpg**: [38, 38, 38] / 40; planner F/M [(0, 0), (0, 0), (0, 0)]
 - **FastRFD seconds b2_fastrfd_geonames_16k**: [(0.0, 421), (0.001, 449), (0.01, 377), (0.05, 380)]
 - **FastRFD seconds b2_fastrfd_geonames_16k_thr1**: [(0.0, 157), (0.001, 168), (0.01, 155), (0.05, 155)]
@@ -62,6 +73,7 @@
 - **FastRFD seconds b2_fastrfd_ndc_thr2**: [(0.0, 217), (0.001, 213), (0.01, 221), (0.05, 218)]
 - **FastRFD seconds b2_fastrfd_tax**: [(0.0, 4293), (0.001, 6388), (0.01, 4461), (0.05, 3871)]
 - **FastRFD seconds b2_fastrfd_tax_finegrid**: [(0.0001, 4110), (0.0005, 4400)]
+- **FastRFD minutes on the evaluated tables (all runs incl. thresholds and fine grids)**: 2.6-106.5 min over 36 runs
 - **E8 n values**: 394
 - **E8 agreement**: {'pair_precision': 0.921, 'pair_recall': 0.403, 'bcubed_precision': 0.965, 'bcubed_recall': 0.569, 'bcubed_f1': 0.716, 'ref_entities': 122, 'llm_entities': 206}
 - **E8 agreement_alnum_normalized**: {'pair_precision': 0.856, 'pair_recall': 0.5, 'bcubed_precision': 0.965, 'bcubed_recall': 0.63, 'bcubed_f1': 0.762, 'ref_entities': 122, 'llm_entities': 195}
@@ -158,14 +170,17 @@
 - **E10 updates large (32000 cities, r0=80000 rows, +0.02/-0.01 of r0 per version, 10 versions, 3 seeds, stop_at=0.025)**: initial calls {cold: 30,251, warm: 30,184, maintain: 50,196, canon: 48,580}; mean per-version calls after v0 {cold: 35,483, warm: 13,160, maintain: 14,581, canon: 536}; cumulative {cold: 385,079, warm: 161,782, maintain: 196,007, canon: 53,937}; FDs kept at zero calls per later version: mean 4.7 of 58 (max 10); false certifications {'cold': 0, 'warm': 0, 'maintain': 0}; missed true {'cold': 0, 'warm': 0, 'maintain': 0}; propagated bounds below truth 0; canon/cold initial 1.61x; slack cost maintain/cold initial 1.66x; maintain/canon cumulative 3.63x; maintain vs warm cumulative +21.2%
 - **E10 updates small128k (128000 cities, r0=320000 rows, +0.004/-0.002 of r0 per version, 10 versions, 1 seeds, stop_at=0.025)**: initial calls {cold: 45,597, warm: 40,566, maintain: 86,385, canon: 168,090}; mean per-version calls after v0 {cold: 50,485, warm: 23,919, maintain: 19,805, canon: 376}; cumulative {cold: 550,449, warm: 279,754, maintain: 284,432, canon: 171,845}; FDs kept at zero calls per later version: mean 8.8 of 58 (max 10); false certifications {'cold': 0, 'warm': 0, 'maintain': 0}; missed true {'cold': 0, 'warm': 0, 'maintain': 0}; propagated bounds below truth 0; canon/cold initial 3.69x; slack cost maintain/cold initial 1.89x; maintain/canon cumulative 1.66x; maintain vs warm cumulative +1.7%
 - **E11 partial inverse geonames_16k (3 seeds; totals over seeds)**: p=1.0: false 0, missed 0, calls 22,835, max nu 0.000, candidates with nu>0.01 0.0; p=0.8: false 0, missed 0, calls 24,214, max nu 0.079, candidates with nu>0.01 15.7; p=0.5: false 0, missed 0, calls 25,573, max nu 0.104, candidates with nu>0.01 17.0; p=0.0: false 0, missed 0, calls 40,295, max nu 0.124, candidates with nu>0.01 19.3
+- **E11 partial inverse geonames_16k: calls / complete inverse (p<1)**: p=0.8: 1.06x, p=0.5: 1.12x, p=0.0: 1.76x
 - **E11 missed true FDs geonames_16k (seed, p, fd)**: []
 - **E11 audit split geonames_16k (natural candidates with tolerant LHS, seed 0)**: 12 of 12 have mass caught only by condition (ii) > 0; max 0.0647; top: admin1->city g3=0.738 str=0.713 ii=0.0647, admin1->fcode g3=0.309 str=0.280 ii=0.0466, country->admin1 g3=0.783 str=0.810 ii=0.0337
 - **E11 no-audit mean (condition (i) mass) below oracle g3 geonames_16k (natural, tolerant LHS, seed 0)**: 6 of 12; max shortfall 0.041; true FDs among them 0; crossing delta=0.05 0
 - **E11 partial inverse tax (3 seeds; totals over seeds)**: p=1.0: false 0, missed 0, calls 11,024, max nu 0.000, candidates with nu>0.01 0.0; p=0.8: false 0, missed 0, calls 10,775, max nu 0.057, candidates with nu>0.01 21.0; p=0.5: false 0, missed 0, calls 10,170, max nu 0.099, candidates with nu>0.01 21.0; p=0.0: false 0, missed 0, calls 9,931, max nu 0.139, candidates with nu>0.01 21.0
+- **E11 partial inverse tax: calls / complete inverse (p<1)**: p=0.8: 0.98x, p=0.5: 0.92x, p=0.0: 0.90x
 - **E11 missed true FDs tax (seed, p, fd)**: []
 - **E11 audit split tax (natural candidates with tolerant LHS, seed 0)**: 15 of 15 have mass caught only by condition (ii) > 0; max 0.1316; top: f_name->state g3=0.885 str=0.753 ii=0.1316, f_name->area_code g3=0.905 str=0.767 ii=0.1314, f_name->city g3=0.943 str=0.799 ii=0.1313
 - **E11 no-audit mean (condition (i) mass) below oracle g3 tax (natural, tolerant LHS, seed 0)**: 13 of 15; max shortfall 0.129; true FDs among them 0; crossing delta=0.05 0
 - **E11 partial inverse ndc (3 seeds; totals over seeds)**: p=1.0: false 0, missed 2, calls 6,553, max nu 0.000, candidates with nu>0.01 0.0; p=0.8: false 0, missed 0, calls 5,888, max nu 0.022, candidates with nu>0.01 9.3; p=0.5: false 0, missed 1, calls 6,679, max nu 0.029, candidates with nu>0.01 12.0; p=0.0: false 0, missed 0, calls 6,057, max nu 0.036, candidates with nu>0.01 12.0
+- **E11 partial inverse ndc: calls / complete inverse (p<1)**: p=0.8: 0.90x, p=0.5: 1.02x, p=0.0: 0.92x
 - **E11 missed true FDs ndc (seed, p, fd)**: [(0, 1.0, 'labeler_e2->ptype'), (1, 1.0, 'labeler_e2->ptype'), (2, 0.5, 'labeler_e2->ptype')]
 - **E11 audit split ndc (natural candidates with tolerant LHS, seed 0)**: 6 of 6 have mass caught only by condition (ii) > 0; max 0.0192; top: labeler->labcode g3=0.128 str=0.108 ii=0.0192, labeler->generic g3=0.830 str=0.808 ii=0.0092, labeler->appno g3=0.623 str=0.605 ii=0.0079
 - **E11 no-audit mean (condition (i) mass) below oracle g3 ndc (natural, tolerant LHS, seed 0)**: 5 of 6; max shortfall 0.006; true FDs among them 0; crossing delta=0.05 0
