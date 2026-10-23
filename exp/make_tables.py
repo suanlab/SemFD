@@ -939,6 +939,16 @@ def paper_numbers():
         pc = load(R / "e19_proxy_cold.json")
         add("E19 NDC proxy-index build, empty vs cached embedding cache (s)",
             f"cold {min(pc['cold_sec']):.0f}-{max(pc['cold_sec']):.0f}, cached {min(pc['cached_sec']):.1f}-{max(pc['cached_sec']):.1f}")
+    if (R / "e21_natural_audit.json").exists():              # E21 (pre-registered): audit on natural data
+        e21 = load(R / "e21_natural_audit.json")
+        rows = [r for d in e21["datasets"].values() for r in d["candidates"]]
+        sizes = ", ".join(f"{k} {len(d['candidates'])}" for k, d in e21["datasets"].items())
+        add(f"E21 natural candidates ({sizes})",
+            f"audit-decisive (mu_i < delta <= mu) {sum(r['audit_decisive'] for r in rows)}; raw strings hide a violation "
+            f"(g3_raw <= delta < g3_oracle) {sum(r['raw_hides_violation'] for r in rows)}; audit mass mu - mu_i "
+            f"{min(r['mu'] - r['mu_i'] for r in rows):.3f}-{max(r['mu'] - r['mu_i'] for r in rows):.3f}; g3_oracle - g3_raw "
+            f"{min(r['g3_oracle'] - r['g3_raw'] for r in rows):.3f}-{max(r['g3_oracle'] - r['g3_raw'] for r in rows):.3f}; "
+            f"true (g3_oracle <= delta) {sum(r['g3_oracle'] <= e21['delta'] for r in rows)}")
     if (R / "e1b_ndc.json").exists():                       # the NDC probe missed in E11 (paper, "Incomplete inverse")
         add("NDC probe labeler_e2->ptype: oracle g3 per seed (E1b truth)",
             ", ".join(f"{r['truth']['labeler_e2->ptype']:.4f}" for r in load(R / "e1b_ndc.json")))

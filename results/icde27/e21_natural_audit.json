@@ -1,0 +1,182 @@
+{
+ "delta": 0.05,
+ "theta": 0.9,
+ "datasets": {
+  "gpg_ext": {
+   "rows": 81586,
+   "lhs": "name",
+   "distinct_lhs": 15221,
+   "candidates": [
+    {
+     "fd": "name->empid",
+     "g3_oracle": 0.0,
+     "g3_raw": 0.0,
+     "mu_i": 0.01679209668325448,
+     "mu": 0.018789988478415415,
+     "audit_decisive": false,
+     "raw_hides_violation": false
+    },
+    {
+     "fd": "name->postcode",
+     "g3_oracle": 0.0,
+     "g3_raw": 0.0,
+     "mu_i": 0.006618782634275488,
+     "mu": 0.0076606280489299634,
+     "audit_decisive": false,
+     "raw_hides_violation": false
+    },
+    {
+     "fd": "name->sic",
+     "g3_oracle": 0.037334836859265086,
+     "g3_raw": 0.034074473561640506,
+     "mu_i": 0.043843306449635966,
+     "mu": 0.048807393425342585,
+     "audit_decisive": false,
+     "raw_hides_violation": false
+    },
+    {
+     "fd": "name->size",
+     "g3_oracle": 0.152734537788346,
+     "g3_raw": 0.14653249331993234,
+     "mu_i": 0.15333513102738214,
+     "mu": 0.1620008334763317,
+     "audit_decisive": false,
+     "raw_hides_violation": false
+    },
+    {
+     "fd": "name->year",
+     "g3_oracle": 0.8310249307479225,
+     "g3_raw": 0.8134116147378226,
+     "mu_i": 0.8158630157134803,
+     "mu": 0.8316745520064718,
+     "audit_decisive": false,
+     "raw_hides_violation": false
+    },
+    {
+     "fd": "name->address",
+     "g3_oracle": 0.0,
+     "g3_raw": 0.0,
+     "mu_i": 0.00953594979530802,
+     "mu": 0.01095776236118942,
+     "audit_decisive": false,
+     "raw_hides_violation": false
+    },
+    {
+     "fd": "name->person",
+     "g3_oracle": 0.45837521143333415,
+     "g3_raw": 0.44278430122815193,
+     "mu_i": 0.4472703650136053,
+     "mu": 0.46454048488711297,
+     "audit_decisive": false,
+     "raw_hides_violation": false
+    },
+    {
+     "fd": "name->curname",
+     "g3_oracle": 0.0,
+     "g3_raw": 0.0,
+     "mu_i": 0.01679209668325448,
+     "mu": 0.018789988478415415,
+     "audit_decisive": false,
+     "raw_hides_violation": false
+    },
+    {
+     "fd": "name->link",
+     "g3_oracle": 0.4804378202142524,
+     "g3_raw": 0.4679111612286422,
+     "mu_i": 0.47079155737503986,
+     "mu": 0.48424974873140003,
+     "audit_decisive": false,
+     "raw_hides_violation": false
+    }
+   ]
+  },
+  "ndc_ext": {
+   "rows": 116620,
+   "lhs": "labeler",
+   "distinct_lhs": 6653,
+   "candidates": [
+    {
+     "fd": "labeler->labcode",
+     "g3_oracle": 0.12845138055222094,
+     "g3_raw": 0.10823186417424113,
+     "mu_i": 0.12640198936717545,
+     "mu": 0.14560967244040474,
+     "audit_decisive": false,
+     "raw_hides_violation": false
+    },
+    {
+     "fd": "labeler->appno",
+     "g3_oracle": 0.6233064654433202,
+     "g3_raw": 0.6052135139770194,
+     "mu_i": 0.6198336477448122,
+     "mu": 0.627773966729549,
+     "audit_decisive": false,
+     "raw_hides_violation": false
+    },
+    {
+     "fd": "labeler->brand",
+     "g3_oracle": 0.8895129480363574,
+     "g3_raw": 0.8681015263248156,
+     "mu_i": 0.8839735894357743,
+     "mu": 0.8918281598353627,
+     "audit_decisive": false,
+     "raw_hides_violation": false
+    },
+    {
+     "fd": "labeler->generic",
+     "g3_oracle": 0.8301920768307323,
+     "g3_raw": 0.8075030012004802,
+     "mu_i": 0.8243268736065855,
+     "mu": 0.8335705710855771,
+     "audit_decisive": false,
+     "raw_hides_violation": false
+    },
+    {
+     "fd": "labeler->mktcat",
+     "g3_oracle": 0.09980277825415884,
+     "g3_raw": 0.09510375578802954,
+     "mu_i": 0.09894529240267536,
+     "mu": 0.10531641227919739,
+     "audit_decisive": false,
+     "raw_hides_violation": false
+    },
+    {
+     "fd": "labeler->ptype",
+     "g3_oracle": 0.0258446235637112,
+     "g3_raw": 0.024695592522723353,
+     "mu_i": 0.0270622534728177,
+     "mu": 0.03010632824558395,
+     "audit_decisive": false,
+     "raw_hides_violation": false
+    },
+    {
+     "fd": "labeler->dosage",
+     "g3_oracle": 0.519996570056594,
+     "g3_raw": 0.49795918367346936,
+     "mu_i": 0.5123906705539358,
+     "mu": 0.5249099639855942,
+     "audit_decisive": false,
+     "raw_hides_violation": false
+    },
+    {
+     "fd": "labeler->route",
+     "g3_oracle": 0.16764705882352937,
+     "g3_raw": 0.15950094323443664,
+     "mu_i": 0.16558909277996914,
+     "mu": 0.17112845138055222,
+     "audit_decisive": false,
+     "raw_hides_violation": false
+    },
+    {
+     "fd": "labeler->substance",
+     "g3_oracle": 0.8172183158977877,
+     "g3_raw": 0.7947007374378323,
+     "mu_i": 0.811190190361859,
+     "mu": 0.8204424626993655,
+     "audit_decisive": false,
+     "raw_hides_violation": false
+    }
+   ]
+  }
+ }
+}

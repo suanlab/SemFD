@@ -68,6 +68,7 @@ Experiments in `exp/`:
 | `e18_diag_gpg.py`, `e18_diag_sim.py` | diagnostic: exact witness means of GPG name->sic (from the truth, never an algorithm input) and a simulation of certifying a frozen refined witness |
 | `e19_end_to_end.py`, `run_e19.sh`, `e19_proxy_cold.py` | pre-registered end-to-end wall clock with a live local LLM oracle: certify vs canonicalize-all on NDC (several hours; needs the GGUF model) |
 | `e20_scaling.py` | pre-registered scaling with rows, domain size and candidate count varied separately (GeoNames) |
+| `e21_natural_audit.py` | pre-registered check whether the audit changes a decision on natural data (GPG names, NDC labelers; exact means from the truth) |
 | `e3_refine.py` | self-refining witness (power) |
 
 ## Reproduce

@@ -97,5 +97,7 @@ for d in tax ndc gpg; do run e18_$d exp/e18_variants.py --dataset $d; done
 (setsid nohup sh -c "$P exp/e18_diag_gpg.py && $P exp/e18_diag_sim.py" > $L/e18_diag.log 2>&1 < /dev/null &)
 # E20 (pre-registered): N, D and |C| varied separately on GeoNames
 run e20_scaling exp/e20_scaling.py
+# E21 (pre-registered): does the audit change a decision on natural data
+run e21_natural_audit exp/e21_natural_audit.py
 # E19 (pre-registered, live local LLM, several hours, needs the GGUF model): exp/run_e19.sh
 echo "done; now: $P exp/make_tables.py && $P exp/make_figures.py"

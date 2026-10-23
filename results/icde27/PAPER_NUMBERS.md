@@ -288,6 +288,7 @@
 - **E19 certify arm seed 2 (live LLM, neighbour-only, declared nu_bar 0.01)**: wall 27.5 min (proxy 2 s); LLM calls 2,385 (E8 replay 2385); summed call latency 27.4 min, median 0.66 s; false certifications vs resolve arm 0, true FDs not certified 0; answers identical to the E8 cache 2377/2385; load avg 22-40
 - **E19 resolve wall / certify wall (mean over seeds)**: 2.07x (per seed 1.81-2.66x); summed latency 2.08x; calls 2.19x
 - **E19 NDC proxy-index build, empty vs cached embedding cache (s)**: cold 2-15, cached 1.9-1.9
+- **E21 natural candidates (gpg_ext 9, ndc_ext 9)**: audit-decisive (mu_i < delta <= mu) 0; raw strings hide a violation (g3_raw <= delta < g3_oracle) 0; audit mass mu - mu_i 0.001-0.019; g3_oracle - g3_raw 0.000-0.023; true (g3_oracle <= delta) 6
 - **NDC probe labeler_e2->ptype: oracle g3 per seed (E1b truth)**: 0.0362, 0.0362, 0.0361
 - **Exact one-sided 95% upper bound on a per-run failure probability after 0 failures in 3 runs**: 0.632
 - **E13 run-level planner geonames_16k unary (3 seeds)**: calls 38,470 vs certificate only 21,759 (1.77x; per seed 1.68-1.83x), canon-all 42,453; resolved candidates [39, 38, 38] of 58; resolved oracles ['city', 'country_src8']; false 0, missed 0 (certificate only: false 0, missed 0)
