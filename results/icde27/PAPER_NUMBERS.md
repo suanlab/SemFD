@@ -44,21 +44,29 @@
 - **nu max (ANN-only) e1_tax**: 0.096
 - **E1b seconds geonames_16k**: {'proxy': 22.6, 'tane': 1.3, 'certify': 5.2}
 - **E1b planner vs ours calls geonames_16k**: 22449 vs 21759
+- **E1b ours calls / canon-all geonames_16k**: 0.51x
+- **E1b planner (per-candidate cap) vs ours, change in calls geonames_16k**: +3.2%
 - **E1b planner (per-candidate cap) calls / canon-all geonames_16k**: 0.53x
 - **E1b rejected candidate-runs stopping at the first batch of 100 samples geonames_16k**: 88/144; median samples 100
 - **E1b planner resolved / candidates geonames_16k**: [28, 28, 28] / 58; planner F/M [(0, 0), (0, 0), (0, 0)]
 - **E1b seconds tax**: {'proxy': 93.8, 'tane': 5.4, 'certify': 27.1}
 - **E1b planner vs ours calls tax**: 12275 vs 12297
+- **E1b ours calls / canon-all tax**: 0.15x
+- **E1b planner (per-candidate cap) vs ours, change in calls tax**: -0.2%
 - **E1b planner (per-candidate cap) calls / canon-all tax**: 0.15x
 - **E1b rejected candidate-runs stopping at the first batch of 100 samples tax**: 130/135; median samples 100
 - **E1b planner resolved / candidates tax**: [12, 12, 12] / 50; planner F/M [(0, 0), (0, 0), (0, 0)]
 - **E1b seconds ndc**: {'proxy': 7.6, 'tane': 2.9, 'certify': 15.5}
 - **E1b planner vs ours calls ndc**: 6305 vs 6305
+- **E1b ours calls / canon-all ndc**: 0.95x
+- **E1b planner (per-candidate cap) vs ours, change in calls ndc**: +0.0%
 - **E1b planner (per-candidate cap) calls / canon-all ndc**: 0.95x
 - **E1b rejected candidate-runs stopping at the first batch of 100 samples ndc**: 130/168; median samples 100
 - **E1b planner resolved / candidates ndc**: [30, 30, 30] / 66; planner F/M [(0, 0), (0, 0), (0, 0)]
 - **E1b seconds gpg**: {'proxy': 20.3, 'tane': 1.0, 'certify': 4.3}
 - **E1b planner vs ours calls gpg**: 21376 vs 21871
+- **E1b ours calls / canon-all gpg**: 1.44x
+- **E1b planner (per-candidate cap) vs ours, change in calls gpg**: -2.3%
 - **E1b planner (per-candidate cap) calls / canon-all gpg**: 1.40x
 - **E1b rejected candidate-runs stopping at the first batch of 100 samples gpg**: 78/93; median samples 100
 - **E1b planner resolved / candidates gpg**: [38, 38, 38] / 40; planner F/M [(0, 0), (0, 0), (0, 0)]
@@ -94,8 +102,11 @@
 - **E8 single-process latency**: mean 13.9s p50 13.7s over 20 calls, load [111.82421875, 116.65869140625, 217.13916015625]
 - **NDC running example**: {'labcode': '49035', 'distinct_raw_spellings': 27, 'distinct_layer1_spellings': 12, 'n_tuples': 360, 'oracle_entities_of_49035': ['firm627'], 'labcodes_of_same_firm': ['49035', '79903'], 'table1_rows_present': {'49035|Wal-Mart Stores Inc|OTC MONOGRAPH DRUG': 89, '49035|EQUATE (Wal-Mart Stores, Inc.) (see also WAL-MART INC)|OTC MONOGRAPH DRUG': 26, '49035|WalMart|OTC MONOGRAPH DRUG': 5, '49035|Wal-Mart Stores Inc|ANDA': 69, '79903|WALMART INC.|OTC MONOGRAPH DRUG': 55}}
 - **E9 e9_geonames_16k**: seeds=3 cands=30 true=17 tane F/M=[(0, 9), (0, 9), (0, 9)] ours F/M=[(0, 0), (0, 0), (0, 0)] calls=[11129, 11225, 11041] canon_all=42598
+- **E9 e9_geonames_16k calls / canon-all (mean over seeds)**: 11,132 / 42,453 = 0.26x
 - **E9 e9_ndc**: seeds=3 cands=105 true=36 tane F/M=[(1, 4), (1, 4), (1, 4)] ours F/M=[(0, 5), (0, 3), (0, 3)] calls=[9513, 9072, 9403] canon_all=6653
+- **E9 e9_ndc calls / canon-all (mean over seeds)**: 9,329 / 6,653 = 1.40x
 - **E9 e9_tax**: seeds=3 cands=60 true=19 tane F/M=[(0, 8), (0, 8), (0, 8)] ours F/M=[(0, 0), (0, 0), (0, 0)] calls=[22668, 21616, 23453] canon_all=84796
+- **E9 e9_tax calls / canon-all (mean over seeds)**: 22,579 / 84,575 = 0.27x
 - **Lower bound at GeoNames-16k city domain**: D=29894, delta=0.05, m=1495, beta-alpha=0.5: q >= 547
 - **Inverse share of our calls (cost table rows)**: 0.186-0.436
 - **Inverse share of our calls (Tables III and VI rows)**: 0.186-0.436
@@ -157,14 +168,14 @@
 - **Ideal-witness diagnostic city->country_src4 (reps=200)**: g3=0.0401 proxy E[B]=0.0404 cert=0.940 | ideal E[B]=0.0410 cert=0.900 falsecert=0.000
 - **Ideal-witness diagnostic city->country_src6 (reps=200)**: g3=0.0597 proxy E[B]=0.0604 cert=0.000 | ideal E[B]=0.0615 cert=0.000 falsecert=0.000
 - **Ideal-witness diagnostic city->country_src7 (reps=200)**: g3=0.0699 proxy E[B]=0.0707 cert=0.000 | ideal E[B]=0.0722 cert=0.000 falsecert=0.000
-- **Self-refining witness city->country_e3 (reps=200)**: g3=0.0296 cert proxy=1.000 refine=1.000 | falsecert proxy=0.000 refine=0.000 | calls proxy=4803 refine=4221
-- **Self-refining witness city->country_e4 (reps=200)**: g3=0.0394 cert proxy=0.150 refine=0.780 | falsecert proxy=0.000 refine=0.000 | calls proxy=10782 refine=9677
-- **Self-refining witness city->country_e5 (reps=200)**: g3=0.0486 cert proxy=0.015 refine=0.015 | falsecert proxy=0.000 refine=0.000 | calls proxy=9496 refine=11036
-- **Self-refining witness city->country_e6 (reps=200)**: g3=0.0579 cert proxy=0.000 refine=0.000 | falsecert proxy=0.000 refine=0.000 | calls proxy=4835 refine=6243
-- **Self-refining witness city->country_e7 (reps=200)**: g3=0.0680 cert proxy=0.000 refine=0.000 | falsecert proxy=0.000 refine=0.000 | calls proxy=2615 refine=2968
-- **Self-refining witness city->country_src4 (reps=200)**: g3=0.0401 cert proxy=0.940 refine=0.930 | falsecert proxy=0.000 refine=0.000 | calls proxy=7157 refine=7538
-- **Self-refining witness city->country_src6 (reps=200)**: g3=0.0597 cert proxy=0.000 refine=0.000 | falsecert proxy=0.000 refine=0.000 | calls proxy=8515 refine=8618
-- **Self-refining witness city->country_src7 (reps=200)**: g3=0.0699 cert proxy=0.000 refine=0.000 | falsecert proxy=0.000 refine=0.000 | calls proxy=4472 refine=4641
+- **Self-refining witness city->country_e3 (reps=200)**: g3=0.0296 cert proxy=1.000 refine=1.000 | falsecert proxy=0.000 refine=0.000 | calls proxy=4803 refine=4221 (refine/proxy - 1 = -12%)
+- **Self-refining witness city->country_e4 (reps=200)**: g3=0.0394 cert proxy=0.150 refine=0.780 | falsecert proxy=0.000 refine=0.000 | calls proxy=10782 refine=9677 (refine/proxy - 1 = -10%)
+- **Self-refining witness city->country_e5 (reps=200)**: g3=0.0486 cert proxy=0.015 refine=0.015 | falsecert proxy=0.000 refine=0.000 | calls proxy=9496 refine=11036 (refine/proxy - 1 = +16%)
+- **Self-refining witness city->country_e6 (reps=200)**: g3=0.0579 cert proxy=0.000 refine=0.000 | falsecert proxy=0.000 refine=0.000 | calls proxy=4835 refine=6243 (refine/proxy - 1 = +29%)
+- **Self-refining witness city->country_e7 (reps=200)**: g3=0.0680 cert proxy=0.000 refine=0.000 | falsecert proxy=0.000 refine=0.000 | calls proxy=2615 refine=2968 (refine/proxy - 1 = +14%)
+- **Self-refining witness city->country_src4 (reps=200)**: g3=0.0401 cert proxy=0.940 refine=0.930 | falsecert proxy=0.000 refine=0.000 | calls proxy=7157 refine=7538 (refine/proxy - 1 = +5%)
+- **Self-refining witness city->country_src6 (reps=200)**: g3=0.0597 cert proxy=0.000 refine=0.000 | falsecert proxy=0.000 refine=0.000 | calls proxy=8515 refine=8618 (refine/proxy - 1 = +1%)
+- **Self-refining witness city->country_src7 (reps=200)**: g3=0.0699 cert proxy=0.000 refine=0.000 | falsecert proxy=0.000 refine=0.000 | calls proxy=4472 refine=4641 (refine/proxy - 1 = +4%)
 - **Self-refining witness: call change on mostly rejected FDs (refine/proxy - 1, min-max)**: +1% to +29% over 5 FDs
 - **E10 updates small (32000 cities, r0=80000 rows, +0.004/-0.002 of r0 per version, 10 versions, 3 seeds, stop_at=0.025)**: initial calls {cold: 30,251, warm: 30,184, maintain: 50,196, canon: 48,580}; mean per-version calls after v0 {cold: 36,547, warm: 13,350, maintain: 11,123, canon: 113}; cumulative {cold: 395,718, warm: 163,685, maintain: 161,427, canon: 49,709}; FDs kept at zero calls per later version: mean 8.9 of 58 (max 10); false certifications {'cold': 0, 'warm': 0, 'maintain': 0}; missed true {'cold': 0, 'warm': 0, 'maintain': 0}; propagated bounds below truth 0; canon/cold initial 1.61x; slack cost maintain/cold initial 1.66x; maintain/canon cumulative 3.25x; maintain vs warm cumulative -1.4%
 - **E10 updates large (32000 cities, r0=80000 rows, +0.02/-0.01 of r0 per version, 10 versions, 3 seeds, stop_at=0.025)**: initial calls {cold: 30,251, warm: 30,184, maintain: 50,196, canon: 48,580}; mean per-version calls after v0 {cold: 35,483, warm: 13,160, maintain: 14,581, canon: 536}; cumulative {cold: 385,079, warm: 161,782, maintain: 196,007, canon: 53,937}; FDs kept at zero calls per later version: mean 4.7 of 58 (max 10); false certifications {'cold': 0, 'warm': 0, 'maintain': 0}; missed true {'cold': 0, 'warm': 0, 'maintain': 0}; propagated bounds below truth 0; canon/cold initial 1.61x; slack cost maintain/cold initial 1.66x; maintain/canon cumulative 3.63x; maintain vs warm cumulative +21.2%

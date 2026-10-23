@@ -401,6 +401,10 @@ def paper_numbers():
             add(f"E1b seconds {key}", {k: round(float(np.mean([r['sec'][k] for r in runs])), 1) for k in runs[0]["sec"]})
             add(f"E1b planner vs ours calls {key}", f"{np.mean([r['planner_calls_total'] for r in runs]):.0f} vs "
                                                    f"{np.mean([r['ours_calls_total'] for r in runs]):.0f}")
+            add(f"E1b ours calls / canon-all {key}",
+                f"{np.mean([r['ours_calls_total'] for r in runs]) / np.mean([r['canon_all'] for r in runs]):.2f}x")
+            add(f"E1b planner (per-candidate cap) vs ours, change in calls {key}",
+                f"{100 * (np.mean([r['planner_calls_total'] for r in runs]) / np.mean([r['ours_calls_total'] for r in runs]) - 1):+.1f}%")
             add(f"E1b planner (per-candidate cap) calls / canon-all {key}",
                 f"{np.mean([r['planner_calls_total'] for r in runs]) / np.mean([r['canon_all'] for r in runs]):.2f}x")
             rej = [d["samples"] for r in runs for d in r["ours_detail"].values() if not d["certified"]]
@@ -452,6 +456,9 @@ def paper_numbers():
                              f"tane F/M={[ (r['tane']['false'], r['tane']['missed']) for r in runs]} "
                              f"ours F/M={[ (r['ours']['false'], r['ours']['missed']) for r in runs]} "
                              f"calls={[r['calls'] for r in runs]} canon_all={runs[0]['canon_all']}")
+        add(f"E9 {p.stem} calls / canon-all (mean over seeds)",
+            f"{np.mean([r['calls'] for r in runs]):,.0f} / {np.mean([r['canon_all'] for r in runs]):,.0f} = "
+            f"{np.mean([r['calls'] for r in runs]) / np.mean([r['canon_all'] for r in runs]):.2f}x")
     # lower-bound value at the evaluated scale (Thm lower: q >= sqrt((beta-alpha) D (D-1) / m))
     p = R / "e1_geonames_16k.json"
     if p.exists():
@@ -659,7 +666,8 @@ def paper_numbers():
             add(f"Self-refining witness {f['fd']} (reps={rf['reps']})",
                 f"g3={f['g3']:.4f} cert proxy={f['proxy']['cert_rate']:.3f} refine={f['refine']['cert_rate']:.3f} | "
                 f"falsecert proxy={f['proxy']['false_cert_rate']:.3f} refine={f['refine']['false_cert_rate']:.3f} | "
-                f"calls proxy={f['proxy']['calls_mean']:.0f} refine={f['refine']['calls_mean']:.0f}")
+                f"calls proxy={f['proxy']['calls_mean']:.0f} refine={f['refine']['calls_mean']:.0f} "
+                f"(refine/proxy - 1 = {f['refine']['calls_mean'] / f['proxy']['calls_mean'] - 1:+.0%})")
     if (R / "e3_refine_geonames.json").exists():
         rf = load(R / "e3_refine_geonames.json")
         rej = [f for f in rf["fds"] if f["refine"]["cert_rate"] < 0.5]
