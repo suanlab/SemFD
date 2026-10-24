@@ -22,7 +22,7 @@ def remaining(at, f):
 
 def prepass(attrs, orcs, v_thresh):
     """Canonicalize every non-exact attribute with at most v_thresh distinct
-    values up front (shared by all FDs; P0: certification cannot beat this)."""
+    values up front (shared by all FDs; a heuristic, not a cost optimality guarantee)."""
     done = []
     for a, at in attrs.items():
         if not orcs[a].free and len(at.vals) <= v_thresh:

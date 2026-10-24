@@ -21,9 +21,12 @@ def sim(mu, alpha, target=0.05, cap=20000, batch=100, reps=500):
     ns = []
     for s in range(reps):
         x = (np.random.default_rng(s).random(cap) < mu).astype(float)
-        _, hi = eb_cs(x, alpha)
-        chk = hi[batch - 1::batch] < target
-        ns.append((int(np.argmax(chk)) + 1) * batch if chk.any() else None)
+        lo, hi = eb_cs(x, alpha)
+        upper = hi[batch - 1::batch] < target
+        lower = lo[batch - 1::batch] >= target
+        stops = np.flatnonzero(upper | lower)
+        first = int(stops[0]) if len(stops) else None
+        ns.append((first + 1) * batch if first is not None and upper[first] else None)
     ok = [n for n in ns if n is not None]
     return {"mu": mu, "p_certify_within_cap": len(ok) / reps, "median_samples": float(np.median(ok)) if ok else None}
 

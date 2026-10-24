@@ -34,6 +34,9 @@ def fig_scale():
     for y, col, mk, lab in ((pairs, C3, "s", "pairwise self-join (pair judgements)"),
                             (canon, C2, "^", "canonicalize-all"), (ours, C1, "o", "certificate (ours)")):
         ax.plot(rows, y, color=col, marker=mk, markersize=5, markeredgecolor="white", markeredgewidth=1)
+        values = [[sum(f["b5_pairwise"]["calls"] for f in rr["fds"]) if mk == "s"
+                   else rr["canon_all"] if mk == "^" else rr["run_calls"] for rr in by[c]] for c in C]
+        ax.fill_between(rows, [min(v) for v in values], [max(v) for v in values], color=col, alpha=.15)
         ax.annotate(lab, (rows[-1], y[-1]), xytext=(-4, 6), textcoords="offset points", ha="right",
                     color=INK, fontsize=7)
     ax.set_xscale("log")
@@ -54,6 +57,11 @@ def fig_power():
         e = json.loads(p.read_text())
         pts = sorted((f["EB"], f["cert_rate"], f["false_cert_rate"]) for f in e["fds"] if f["EB"] < 0.12)
         g, c, fc = map(np.array, zip(*pts))
+        z, n = 1.959963984540054, e["reps"]
+        center = (c + z*z/(2*n))/(1+z*z/n)
+        half = z*np.sqrt(c*(1-c)/n + z*z/(4*n*n))/(1+z*z/n)
+        ax.errorbar(g, c, yerr=np.vstack([c-(center-half), (center+half)-c]).clip(min=0),
+                    fmt="none", ecolor=col, capsize=2, linewidth=.8)
         ax.plot(g, c, color=col, marker=mk, markersize=5, markeredgecolor="white", markeredgewidth=1,
                 linestyle="none", label={"geonames": "GeoNames 4k", "tax": "Tax 200k"}[name])
     d = e["delta"]

@@ -101,6 +101,10 @@ def certify(ax, ay, fx, fy, theta, delta, alpha, rng, inverse=False, nu_bar=0.0,
     refine=True ignores alias classes fetched before this call (shared caches), so runs stay
     comparable; refine="warm" also uses them (fetched by earlier candidates, hence before any
     sample of this one)."""
+    if max_n < 0 or batch <= 0:
+        raise ValueError("max_n must be nonnegative and batch must be positive")
+    if len(ax.codes) == 0 or len(ax.codes) != len(ay.codes):
+        raise ValueError("attributes must have equal, nonzero row counts")
     target = delta - nu_bar
     stop = target if stop_at is None else min(stop_at - nu_bar, target)
     lab, rep, prio = witness(ax, ay, theta)
@@ -128,7 +132,7 @@ def certify(ax, ay, fx, fy, theta, delta, alpha, rng, inverse=False, nu_bar=0.0,
             n_ref = len(fx.inv_cache)
             rep, prio = witness_from(lab, ax, ay)
             tl = lab[ax.codes]
-        for t in rng.integers(0, n, size=batch):
+        for t in rng.integers(0, n, size=min(batch, max_n - len(bs))):
             xi, c = int(ax.codes[t]), int(tl[t])
             r = rep[c]
             ry = fy(yv[r])
@@ -153,9 +157,9 @@ def certify(ax, ay, fx, fy, theta, delta, alpha, rng, inverse=False, nu_bar=0.0,
             break
     calls = fx.calls + (fy.calls if fy is not fx else 0) - c0
     if not bs:
-        bs, lo, hi = [1.0], np.array([0.0]), np.array([1.0])
+        lo, hi = np.array([0.0]), np.array([1.0])
     return {"certified": bool(hi[-1] < target), "nu_bar": nu_bar, "audit": audit, "budget_hit": budget_hit, "ub": min(1.0, float(hi[-1])), "lb": max(0.0, float(lo[-1])),
-            "mean": float(np.mean(bs)), "samples": len(bs), "calls": int(calls),
+            "mean": float(np.mean(bs)) if bs else None, "samples": len(bs), "calls": int(calls),
             "theta": theta, "alpha": alpha}
 
 

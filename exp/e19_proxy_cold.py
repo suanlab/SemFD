@@ -23,6 +23,9 @@ def main(reps=3):
     for _ in range(reps):
         with tempfile.TemporaryDirectory() as d:
             proxy.CACHE = Path(d)
+            # A fresh disk path alone leaves embedding_backend._CACHE populated.
+            import embedding_backend
+            embedding_backend._CACHE.clear()
             t = time.perf_counter()
             ds.attrs()
             cold.append(time.perf_counter() - t)
@@ -30,6 +33,7 @@ def main(reps=3):
             ds.attrs()
             warm.append(time.perf_counter() - t)
     res = {"cold_sec": cold, "cached_sec": warm, "threads": os.environ.get("OMP_NUM_THREADS"),
+           "cache_policy": "disk and in-memory vectors cleared before each cold repeat; model weights retained after first repeat",
            "loadavg": os.getloadavg()}
     (ROOT / "results/icde27/e19_proxy_cold.json").write_text(json.dumps(res, indent=1))
     print(res)

@@ -191,7 +191,7 @@ def tax(rho=0.2, seed=0, n_rows=None, near_miss=(0.02, 0.08)):
     """Raha Tax (200k x 15, BART-generated; github.com/BigDaMa/raha). Truth =
     the clean file (cell-aligned). Its own errors are syntactic only, so we
     inject REAL alias conventions at rate rho per cell: state code <-> full name
-    (GeoNames admin1 names) and USPS street-suffix style city abbreviations
+    (GeoNames admin1 names) and city-name abbreviations
     (SAINT<->ST, FORT<->FT, ...), plus typos/drops. Variants that collide with
     another entity's surface are rendered clean (oracle stays a function)."""
     import random
@@ -335,7 +335,7 @@ def ndc(seed=0, near_miss=(0.02, 0.08)):
 
 def gpg(seed=0, years=range(2017, 2026)):
     """UK gender pay gap reports 2017-2025 (gender-pay-gap.service.gov.uk, Open Government Licence;
-    data/gpg/gpg<year>.csv). Employers type their own name every year, so one company appears under
+    data/gpg/gpg<year>.csv). Employer names are recorded by reporting year; the official service sources private/voluntary-sector names from Companies House. One company appears under
     several spellings and, after renames, under different names (natural aliases). Oracle for the
     employer name = its Companies House company number, an identifier assigned outside this data.
     Kept: reports with a company number; names that occur with more than one company number

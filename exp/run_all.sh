@@ -1,10 +1,20 @@
 #!/usr/bin/env bash
 # Reproduce every number in results/icde27 (ICDE 2027 submission). Needs scripts/fetch_data.sh first,
 # and FastRFD built per baselines/README.md for b2_fastrfd.py. Runs jobs in parallel; ~hours on 100+ cores.
-set -u
+set -euo pipefail
 cd "$(dirname "$0")/.."
-P=".venv/bin/python -I"; L=results/icde27/logs; mkdir -p $L
-run() { local log=$1; shift; setsid nohup $P "$@" > $L/$log.log 2>&1 < /dev/null & }
+P="${PYTHON:-.venv/bin/python} -I"; L=results/icde27/logs; mkdir -p "$L"
+pids=(); job_names=()
+run() { local log=$1; shift; $P "$@" > "$L/$log.log" 2>&1 < /dev/null & pids+=("$!"); job_names+=("$log"); }
+run_shell() { local log=$1; shift; bash -c "$1" > "$L/$log.log" 2>&1 < /dev/null & pids+=("$!"); job_names+=("$log"); }
+wait_jobs() {
+  local failed=0 i
+  for i in "${!pids[@]}"; do
+    if ! wait "${pids[$i]}"; then echo "FAILED: ${job_names[$i]} (see $L)" >&2; failed=1; fi
+  done
+  pids=(); job_names=()
+  return "$failed"
+}
 G16='{"n_cities":16000}'
 for d in tax ndc; do
   run e1_$d exp/e1_main.py --dataset $d --seeds 3
@@ -73,18 +83,19 @@ run e11_tax_official_s20 exp/e11_partial_inverse.py --dataset tax --tag _s20 --o
 run e11_gpg_ch_s20 exp/e11_partial_inverse.py --dataset gpg --tag _s20 --official --registry companieshouse --seeds 20
 run e17_gpg exp/e17_gpg_registry.py
 run b2_gpg exp/b2_fastrfd.py --dataset gpg --timeout 7200
-setsid nohup bash -c "$P exp/e16_gleif.py --prep && $P exp/e16_gleif.py && $P exp/e11_partial_inverse.py --dataset ndc --official --registry gleif && $P exp/e11_partial_inverse.py --dataset ndc --tag _s20 --official --registry gleif --seeds 20" > $L/e16_gleif.log 2>&1 < /dev/null &
+run_shell e16_gleif "$P exp/e16_gleif.py --prep && $P exp/e16_gleif.py && $P exp/e11_partial_inverse.py --dataset ndc --official --registry gleif && $P exp/e11_partial_inverse.py --dataset ndc --tag _s20 --official --registry gleif --seeds 20"
 # E8 (LLM oracle; needs llama-cpp-python and the GGUF in $E8_MODEL). Sequential and long: run separately:
 #   OMP_NUM_THREADS=1 nice -n 15 .venv/bin/python -I exp/e8_llm_oracle.py --canon --procs 4 --threads 6
 #   .venv/bin/python -I exp/e8_llm_oracle.py --offline --seeds 3
 #   .venv/bin/python -I exp/e8_llm_oracle.py --tokens --seeds 3      # prompt tokens (tokenizer only, no inference)
 #   .venv/bin/python -I exp/e8_llm_oracle.py --sample 400 --timing 20 --threads 16   # latency measurement
-wait
+wait_jobs || exit 1
 if [ "${WITH_E8:-0}" = "1" ]; then   # LLM oracle (hours on CPU; needs llama-cpp-python and $E8_MODEL)
   OMP_NUM_THREADS=1 $P exp/e8_llm_oracle.py --canon --procs 4 --threads 6 > $L/e8_canon_all.log 2>&1
   $P exp/e8_llm_oracle.py --offline --seeds 3 > $L/e8_offline.log 2>&1
   OMP_NUM_THREADS=1 $P exp/e14_llm_tax_city.py --canon --procs 4 --threads 6 > $L/e14_canon.log 2>&1
   $P exp/e14_llm_tax_city.py --seeds 3 > $L/e14_offline.log 2>&1
+  $P exp/e8_llm_oracle.py --transfer > "$L/e8_transfer.log" 2>&1
   $P exp/e8_llm_oracle.py --tokens --seeds 3 > $L/e8_tokens.log 2>&1
   $P exp/e8_llm_oracle.py --sample 400 > $L/e8_sample.log 2>&1
   $P exp/e8_llm_oracle.py --sample 400 --timing 20 --threads 16 > $L/e8_latency.log 2>&1
@@ -94,10 +105,11 @@ fi
 run e18_geonames16k exp/e18_variants.py --dataset geonames --kw "$G16" --tag _16k
 for d in tax ndc gpg; do run e18_$d exp/e18_variants.py --dataset $d; done
 # E18 diagnostic (MODIFY.md H1/H2; exact witness means from the truth, diagnosis only) and its simulation
-(setsid nohup sh -c "$P exp/e18_diag_gpg.py && $P exp/e18_diag_sim.py" > $L/e18_diag.log 2>&1 < /dev/null &)
+run_shell e18_diag "$P exp/e18_diag_gpg.py && $P exp/e18_diag_sim.py"
 # E20 (pre-registered): N, D and |C| varied separately on GeoNames
 run e20_scaling exp/e20_scaling.py
 # E21 (pre-registered): does the audit change a decision on natural data
 run e21_natural_audit exp/e21_natural_audit.py
 # E19 (pre-registered, live local LLM, several hours, needs the GGUF model): exp/run_e19.sh
+wait_jobs || exit 1
 echo "done; now: $P exp/make_tables.py && $P exp/make_figures.py"

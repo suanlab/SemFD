@@ -79,7 +79,9 @@ Requires Python 3.12, CPU only. The paper's runs used a shared server with two I
 uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r requirements.lock
 ./scripts/fetch_data.sh                       # downloads data and checks it against results/icde27/DATA_SNAPSHOTS.txt
 .venv/bin/python -m pytest -q tests/          # unit tests (< 1 min)
-./exp/run_all.sh                              # all experiments, in parallel; WITH_E8=1 also reruns the LLM study (hours)
+./exp/run_all.sh                              # non-LLM experiments; WITH_E8=1 adds E8/E14 (hours)
+./exp/run_e19.sh                              # separate live LLM timing study (hours)
+.venv/bin/python -I exp/e19_proxy_cold.py      # proxy build with empty caches
 .venv/bin/python -I exp/make_tables.py && .venv/bin/python -I exp/make_figures.py
 ```
 
@@ -89,8 +91,8 @@ uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r requi
   `E8_MODEL`. `requirements.lock` lists its sha256. All 6,653 cached LLM answers are included in
   `results/icde27/e8_llm_canon.json`, so `exp/e8_llm_oracle.py --offline` reproduces the certification results without
   running the model.
-- **Determinism and drift.** Random streams are seeded per FD with `zlib.crc32`, so a given data snapshot reproduces
-  the numbers exactly. GeoNames and the FDA NDC directory change upstream, so `fetch_data.sh` warns when a fresh
+- **Determinism and drift.** Random streams are seeded per FD with `zlib.crc32`; exact replay also requires the same
+  proxy/model versions, caches and execution environment. GeoNames and the FDA NDC directory change upstream, so `fetch_data.sh` warns when a fresh
   download differs from the snapshot used in the paper. A full rerun on 2026-10-21 of the 54 jobs then in
   `run_all.sh`, on the paper's snapshots, reproduced every decision, oracle-call count and bound (wall-clock times vary
   with server load); experiments added after that date were run once. `exp/make_tables.py` regenerates every table and
@@ -113,3 +115,11 @@ Datasets are not redistributed. `scripts/fetch_data.sh` downloads them from:
 Desbordante (AGPL-3.0) is used as a library. FastRFD is built from its upstream repository and is not redistributed.
 
 The code in this repository is released under the MIT license (`LICENSE`).
+
+## Known limitations of the evidence
+
+- E19 live LLM answers differ slightly across runs (10–13 normalized labels per certification seed differ from the resolve run): E19 is a timing study, not a validation against one fixed mapping; the E8 replay fixes one mapping.
+- GPG employer names and company numbers both come from Companies House for private and voluntary-sector employers, so the register study tests alias coverage, not independent identity truth.
+- The embedding cache key contains the model name and the values but not the model revision; pin a revision for fresh reproduction.
+- A replay of NDC E1b reproduced decisions, samples and calls; stored historical bounds were unclipped while the current code reports bounds clipped to [0, 1].
+
