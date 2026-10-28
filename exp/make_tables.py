@@ -938,6 +938,16 @@ def paper_numbers():
             f"{rv['wall_sec'] / np.mean(w):.2f}x (per seed {min(rv['wall_sec'] / x for x in w):.2f}-{max(rv['wall_sec'] / x for x in w):.2f}x); "
             f"summed latency {rv['llm_sec_sum'] / np.mean([c['llm_sec_sum'] for c in e19c]):.2f}x; "
             f"calls {rv['llm_calls'] / np.mean([c['llm_calls'] for c in e19c]):.2f}x")
+    if (R / "e22_fixed_oracle.json").exists():               # E22 (pre-registered): E19 certify vs one fixed oracle
+        e22 = load(R / "e22_fixed_oracle.json")
+        runs = e22["runs"]
+        miss = [(r["seed"], d["fd"], d["ub"]) for r in runs for d in r["fds"] if d["reference_true"] and not d["certified"]]
+        live = [d["same_as_e19_live"] for r in runs for d in r["fds"] if d["same_as_e19_live"] is not None]
+        add(f"E22 E19 certify replayed against the resolve arm's saved labels (seeds {runs[0]['seed']}-{runs[-1]['seed']})",
+            f"false certifications {sum(r['false_cert'] for r in runs)} of {sum(len(r['fds']) for r in runs)} decisions; "
+            f"true FDs missed {len(miss)} ({'; '.join(f's{s} {fd} U={u:.4f}' for s, fd, u in miss)}); "
+            f"calls {min(r['calls'] for r in runs):,}-{max(r['calls'] for r in runs):,} vs {e22['resolve_calls']:,}; "
+            f"decisions equal to E19 live (seeds 0-2) {sum(live)}/{len(live)}")
     if (R / "e19_proxy_cold.json").exists():
         pc = load(R / "e19_proxy_cold.json")
         add("E19 NDC proxy-index build, empty vs cached embedding cache (s)",

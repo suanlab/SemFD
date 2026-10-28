@@ -67,6 +67,7 @@ Experiments in `exp/`:
 | `e18_variants.py` | pre-registered variants over all unary candidates: alias-only and TF-IDF audits, self-refining witness, run-wide budget rule |
 | `e18_diag_gpg.py`, `e18_diag_sim.py` | diagnostic: exact witness means of GPG name->sic (from the truth, never an algorithm input) and a simulation of certifying a frozen refined witness |
 | `e19_end_to_end.py`, `run_e19.sh`, `e19_proxy_cold.py` | pre-registered end-to-end wall clock with a live local LLM oracle: certify vs canonicalize-all on NDC (several hours; needs the GGUF model) |
+| `e22_fixed_oracle_replay.py` | pre-registered replay of the E19 certify arm (seeds 0–9) against the resolve run's saved answers as one fixed oracle (no LLM call; minutes) |
 | `e20_scaling.py` | pre-registered scaling with rows, domain size and candidate count varied separately (GeoNames) |
 | `e21_natural_audit.py` | pre-registered check whether the audit changes a decision on natural data (GPG names, NDC labelers; exact means from the truth) |
 | `e3_refine.py` | self-refining witness (power) |
@@ -118,7 +119,7 @@ The code in this repository is released under the MIT license (`LICENSE`).
 
 ## Known limitations of the evidence
 
-- E19 live LLM answers differ slightly across runs (10–13 normalized labels per certification seed differ from the resolve run): E19 is a timing study, not a validation against one fixed mapping; the E8 replay fixes one mapping.
+- E19 live LLM answers differ slightly across runs (10–13 normalized labels per certification seed differ from the resolve run): the live E19 decisions are not tests against one fixed mapping. E22 replays the certify arm (seeds 0–9) against the resolve run's saved answers as one fixed oracle: no false certification in 70 decisions, one near-threshold miss.
 - GPG employer names and company numbers both come from Companies House for private and voluntary-sector employers, so the register study tests alias coverage, not independent identity truth.
 - The embedding cache key contains the model name and the values but not the model revision; pin a revision for fresh reproduction.
 - A replay of NDC E1b reproduced decisions, samples and calls; stored historical bounds were unclipped while the current code reports bounds clipped to [0, 1].

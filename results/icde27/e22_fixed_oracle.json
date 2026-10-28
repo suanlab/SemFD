@@ -1,0 +1,670 @@
+{
+ "design": "literature/prereg_e22_2026-10-28.md",
+ "delta": 0.05,
+ "alpha": 0.05,
+ "nu_bar": 0.01,
+ "oracle": "e19_resolve.json answers (fixed)",
+ "resolve_calls": 6653,
+ "resolve_llm_sec_mean": 0.6579253168410709,
+ "reference": {
+  "labcode->labeler": true,
+  "labeler->ptype": true,
+  "labeler->labcode": false,
+  "labeler->mktcat": false,
+  "appno->labeler": false,
+  "brand->labeler": false,
+  "generic->labeler": false
+ },
+ "runs": [
+  {
+   "seed": 0,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.03991614878231552,
+     "samples": 13800,
+     "reference_true": true,
+     "same_as_e19_live": false
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.03998817971286402,
+     "samples": 3600,
+     "reference_true": true,
+     "same_as_e19_live": true
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.2811418115110811,
+     "samples": 200,
+     "reference_true": false,
+     "same_as_e19_live": true
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.20392899941833909,
+     "samples": 300,
+     "reference_true": false,
+     "same_as_e19_live": true
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.8690728234714493,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": true
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.5752311622486319,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": true
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.9182077943237948,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": true
+    }
+   ],
+   "calls": 2902,
+   "false_cert": 0,
+   "missed_true": 0,
+   "llm_sec_estimate": 1909.2992694727877
+  },
+  {
+   "seed": 1,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.039951481659176113,
+     "samples": 15900,
+     "reference_true": true,
+     "same_as_e19_live": true
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.03974446658064842,
+     "samples": 4700,
+     "reference_true": true,
+     "same_as_e19_live": true
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.21247734387058959,
+     "samples": 300,
+     "reference_true": false,
+     "same_as_e19_live": true
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.1354732273131208,
+     "samples": 600,
+     "reference_true": false,
+     "same_as_e19_live": true
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.8547599798938533,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": true
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.6448872935610821,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": true
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.8316373050882797,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": true
+    }
+   ],
+   "calls": 3186,
+   "false_cert": 0,
+   "missed_true": 0,
+   "llm_sec_estimate": 2096.150059455652
+  },
+  {
+   "seed": 2,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.03995526254638257,
+     "samples": 6000,
+     "reference_true": true,
+     "same_as_e19_live": true
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.03979544898092062,
+     "samples": 5300,
+     "reference_true": true,
+     "same_as_e19_live": true
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.2222438900848418,
+     "samples": 300,
+     "reference_true": false,
+     "same_as_e19_live": true
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.1360253814774829,
+     "samples": 600,
+     "reference_true": false,
+     "same_as_e19_live": true
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.8700008731061322,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": true
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.6929652410007064,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": true
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.8382222586358073,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": true
+    }
+   ],
+   "calls": 2371,
+   "false_cert": 0,
+   "missed_true": 0,
+   "llm_sec_estimate": 1559.9409262301792
+  },
+  {
+   "seed": 3,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": false,
+     "ub": 0.04110447086388301,
+     "samples": 20000,
+     "reference_true": true,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.03999807549913589,
+     "samples": 4500,
+     "reference_true": true,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.20257074228470867,
+     "samples": 300,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.27922605137775547,
+     "samples": 200,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.9135469629406447,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.6387247616999207,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.8903768027908944,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    }
+   ],
+   "calls": 3321,
+   "false_cert": 0,
+   "missed_true": 1,
+   "llm_sec_estimate": 2184.9699772291965
+  },
+  {
+   "seed": 4,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.039934942791776826,
+     "samples": 13500,
+     "reference_true": true,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.0399266392839179,
+     "samples": 7600,
+     "reference_true": true,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.19105229757412923,
+     "samples": 300,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.11818178653308496,
+     "samples": 700,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.8492234487776414,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.5075022779446174,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.8562485056973064,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    }
+   ],
+   "calls": 3134,
+   "false_cert": 0,
+   "missed_true": 0,
+   "llm_sec_estimate": 2061.9379429799164
+  },
+  {
+   "seed": 5,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.039989940437749665,
+     "samples": 8800,
+     "reference_true": true,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.03927999495433662,
+     "samples": 1900,
+     "reference_true": true,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.2020654414767736,
+     "samples": 300,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.16554400251445864,
+     "samples": 400,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.7968477668867896,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.6267945621158375,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.832520624683777,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    }
+   ],
+   "calls": 2292,
+   "false_cert": 0,
+   "missed_true": 0,
+   "llm_sec_estimate": 1507.9648261997345
+  },
+  {
+   "seed": 6,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.039789535903764675,
+     "samples": 4800,
+     "reference_true": true,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.03965342385855086,
+     "samples": 5700,
+     "reference_true": true,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.2057280653096128,
+     "samples": 300,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.14248522301755642,
+     "samples": 500,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.7643714651181708,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.6623851134580925,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.8508029440517333,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    }
+   ],
+   "calls": 2325,
+   "false_cert": 0,
+   "missed_true": 0,
+   "llm_sec_estimate": 1529.67636165549
+  },
+  {
+   "seed": 7,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.03983315144248853,
+     "samples": 5400,
+     "reference_true": true,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.039971555541291955,
+     "samples": 4700,
+     "reference_true": true,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.24254854900041412,
+     "samples": 200,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.16053761781562909,
+     "samples": 400,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.8065688994410207,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.6290832968954619,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.8036670169567841,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    }
+   ],
+   "calls": 2202,
+   "false_cert": 0,
+   "missed_true": 0,
+   "llm_sec_estimate": 1448.751547684038
+  },
+  {
+   "seed": 8,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.03999189923337502,
+     "samples": 15300,
+     "reference_true": true,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.03944946995385422,
+     "samples": 3900,
+     "reference_true": true,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.17167855960354472,
+     "samples": 400,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.16760451607837917,
+     "samples": 400,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.8390894878110953,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.6986976098128508,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.8973224903032662,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    }
+   ],
+   "calls": 3097,
+   "false_cert": 0,
+   "missed_true": 0,
+   "llm_sec_estimate": 2037.5947062567966
+  },
+  {
+   "seed": 9,
+   "fds": [
+    {
+     "fd": "labcode->labeler",
+     "certified": true,
+     "ub": 0.0399683155951745,
+     "samples": 9100,
+     "reference_true": true,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->ptype",
+     "certified": true,
+     "ub": 0.03958406913492192,
+     "samples": 900,
+     "reference_true": true,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->labcode",
+     "certified": false,
+     "ub": 0.1973923959894684,
+     "samples": 300,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "labeler->mktcat",
+     "certified": false,
+     "ub": 0.13244575145372306,
+     "samples": 600,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "appno->labeler",
+     "certified": false,
+     "ub": 0.8438204353449695,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "brand->labeler",
+     "certified": false,
+     "ub": 0.5952318545586424,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    },
+    {
+     "fd": "generic->labeler",
+     "certified": false,
+     "ub": 0.8918710328217676,
+     "samples": 100,
+     "reference_true": false,
+     "same_as_e19_live": null
+    }
+   ],
+   "calls": 2315,
+   "false_cert": 0,
+   "missed_true": 0,
+   "llm_sec_estimate": 1523.0971084870791
+  }
+ ]
+}

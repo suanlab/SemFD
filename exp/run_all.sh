@@ -111,5 +111,7 @@ run e20_scaling exp/e20_scaling.py
 # E21 (pre-registered): does the audit change a decision on natural data
 run e21_natural_audit exp/e21_natural_audit.py
 # E19 (pre-registered, live local LLM, several hours, needs the GGUF model): exp/run_e19.sh
+# E22 (pre-registered): E19 certify arm replayed against the saved resolve answers (needs results/icde27/e19_*.json)
+run e22_fixed_oracle exp/e22_fixed_oracle_replay.py
 wait_jobs || exit 1
 echo "done; now: $P exp/make_tables.py && $P exp/make_figures.py"

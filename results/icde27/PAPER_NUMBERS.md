@@ -290,6 +290,7 @@
 - **E19 seed 2 normalized-label differences vs resolve**: 10/2385; oracle mapping differs across arms
 - **E19 certify arm seed 2 (live LLM, neighbour-only, declared nu_bar 0.01)**: wall 27.5 min (proxy 2 s); LLM calls 2,385 (E8 replay 2385); summed call latency 27.4 min, median 0.66 s; false certifications vs resolve arm 0, true FDs not certified 0; answers identical to the E8 cache 2377/2385; load avg 22-40
 - **E19 resolve wall / certify wall (mean over seeds)**: 2.07x (per seed 1.81-2.66x); summed latency 2.08x; calls 2.19x
+- **E22 E19 certify replayed against the resolve arm's saved labels (seeds 0-9)**: false certifications 0 of 70 decisions; true FDs missed 1 (s3 labcode->labeler U=0.0411); calls 2,202-3,321 vs 6,653; decisions equal to E19 live (seeds 0-2) 20/21
 - **E19 NDC proxy-index build, empty vs cached embedding cache (s)**: cold 7-15, cached 1.9-2.0
 - **E21 natural candidates (gpg_ext 9, ndc_ext 9)**: audit-decisive (mu_i < delta <= mu) 0; raw strings hide a violation (g3_raw <= delta < g3_oracle) 0; audit mass mu - mu_i 0.001-0.019; g3_oracle - g3_raw 0.000-0.023; true (g3_oracle <= delta) 6
 - **NDC probe labeler_e2->ptype: oracle g3 per seed (E1b truth)**: 0.0362, 0.0362, 0.0361
