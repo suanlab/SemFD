@@ -3,6 +3,7 @@ Palette: dataviz reference slots 1-3 (validated; slot 3 has <3:1 contrast, so
 every series is also direct-labelled and has its own marker shape)."""
 
 import json
+import sys
 from collections import defaultdict
 from pathlib import Path
 
@@ -15,6 +16,18 @@ ROOT = Path(__file__).resolve().parents[1]
 R, OUT = ROOT / "results/icde27", ROOT / "paper"
 C1, C2, C3 = "#2a78d6", "#eb6834", "#1baf7a"
 INK, MUTED, GRID = "#0b0b0b", "#52514e", "#e4e3df"
+ALLOW_PARTIAL = "--allow-partial" in sys.argv     # otherwise a missing input is an error, not a silently thinner figure
+
+
+def need(p):
+    if p.exists():
+        return True
+    if ALLOW_PARTIAL:
+        print(f"skipping missing {p}", file=sys.stderr)
+        return False
+    raise FileNotFoundError(f"{p} is required (run its experiment, or pass --allow-partial)")
+
+
 plt.rcParams.update({"font.size": 8, "axes.edgecolor": MUTED, "axes.labelcolor": INK, "xtick.color": MUTED,
                      "ytick.color": MUTED, "axes.spines.top": False, "axes.spines.right": False,
                      "lines.linewidth": 2, "pdf.fonttype": 42})
@@ -52,7 +65,7 @@ def fig_power():
     fig, ax = plt.subplots(figsize=(3.4, 2.3))
     for name, col, mk in (("geonames", C1, "o"), ("tax", C2, "^")):
         p = R / f"e3_{name}.json"
-        if not p.exists():
+        if not need(p):
             continue
         e = json.loads(p.read_text())
         pts = sorted((f["EB"], f["cert_rate"], f["false_cert_rate"]) for f in e["fds"] if f["EB"] < 0.12)
@@ -83,11 +96,11 @@ def fig_cost():
         for kind, f, fk, ck in (("unary", f"e1b_{key}.json", "ours_calls_fwd_inv", "canon_all"),
                                 ("2-attr", f"e9_{key}.json", "calls_fwd_inv", "canon_all")):
             p = R / f
-            if not p.exists():
+            if not need(p):
                 continue
             runs = json.loads(p.read_text())
             if fk not in runs[0]:
-                continue
+                raise KeyError(f"{p} has no {fk}: rerun its experiment")
             fw = np.mean([r[fk][0] for r in runs])
             iv = np.mean([r[fk][1] for r in runs])
             rows.append((f"{nice}\n{kind}", fw, iv, np.mean([r[ck] for r in runs])))

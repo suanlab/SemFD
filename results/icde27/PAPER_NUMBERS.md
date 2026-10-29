@@ -111,7 +111,7 @@
 - **Inverse share of our calls (cost table rows)**: 0.186-0.436
 - **Inverse share of our calls (Tables III and VI rows)**: 0.186-0.436
 - **certify sample cap (max_n default)**: 20000
-- **semfd/ lines of Python**: 1221
+- **semfd/ lines of Python**: 1260
 - **GeoNames country alias list entries**: 16
 - **GeoNames rows per city (make_table default)**: 5
 - **E2 FDs per run**: 8
@@ -282,6 +282,18 @@
 - **E20 cands_16 (2 seeds)**: rows 80,000; distinct city 29,987, 29,888; candidates 16; calls 6,759, 17,428 (canon-all 42,596, 42,355; ratio 0.16, 0.41); samples 3,700, 8,400; false 0, missed 0; samples per true FD 300-1900; false-FD g3 0.079-0.193 (probes below 0.2); max alias class (city) 20
 - **E20 cands_32 (2 seeds)**: rows 80,000; distinct city 29,987, 29,888; candidates 32; calls 13,018, 18,347 (canon-all 42,598, 42,355; ratio 0.31, 0.43); samples 10,100, 15,300; false 0, missed 0; samples per true FD 300-1300; false-FD g3 0.079-0.193 (probes below 0.2); max alias class (city) 20
 - **E20 cands_58 (2 seeds)**: rows 80,000; distinct city 29,987, 29,888; candidates 58; calls 20,561, 23,618 (canon-all 42,598, 42,355; ratio 0.48, 0.56); samples 22,400, 26,400; false 0, missed 0; samples per true FD 300-2200; false-FD g3 0.079-0.196 (probes below 0.2); max alias class (city) 20
+- **B2 recheck with empty-LHS rules counted (configurations x t)**: 40 of 40 identical to the saved runs; differing: none; empty-LHS rules printed: none
+- **E23 Tax rows_x1 (2 seeds)**: rows 25,000; distinct city 12,797, 12,744; candidates 10; calls 10,492, 10,470 (canon-all 25,980, 25,989; ratio 0.40, 0.40); samples 22,200, 22,200; false 0, missed 2 (zip->city_e8); probe zip->city_e8 g3 0.0456, 0.0435, share of calls 0.67, 0.67
+- **E23 Tax rows_x4 (2 seeds)**: rows 100,000; distinct city 12,797, 12,744; candidates 10; calls 10,191, 10,488 (canon-all 25,980, 25,989; ratio 0.39, 0.40); samples 22,000, 22,200; false 0, missed 2 (zip->city_e8); probe zip->city_e8 g3 0.0456, 0.0435, share of calls 0.70, 0.68
+- **E23 Tax rows_x16 (2 seeds)**: rows 400,000; distinct city 12,797, 12,744; candidates 10; calls 10,166, 10,087 (canon-all 25,980, 25,989; ratio 0.39, 0.39); samples 22,100, 22,100; false 0, missed 2 (zip->city_e8); probe zip->city_e8 g3 0.0456, 0.0435, share of calls 0.70, 0.70
+- **E23 Tax dom_12500 (2 seeds)**: rows 60,000; distinct city 7,710, 7,669; candidates 10; calls 3,693, 4,272 (canon-all 16,426, 16,383; ratio 0.22, 0.26); samples 2,800, 3,800; false 0, missed 0 (-); probe zip->city_e8 g3 0.0238, 0.0239, share of calls 0.11, 0.21
+- **E23 Tax dom_50000 (2 seeds)**: rows 60,000; distinct city 16,125, 16,108; candidates 10; calls 11,292, 11,294 (canon-all 31,947, 31,935; ratio 0.35, 0.35); samples 22,300, 22,300; false 0, missed 2 (zip->city_e8); probe zip->city_e8 g3 0.0482, 0.0466, share of calls 0.68, 0.68
+- **E23 Tax dom_200000 (2 seeds)**: rows 60,000; distinct city 20,892, 20,591; candidates 10; calls 11,717, 4,689 (canon-all 40,528, 40,139; ratio 0.29, 0.12); samples 20,100, 4,300; false 0, missed 0 (-); probe zip->city_e8 g3 0.0599, 0.0585, share of calls 0.70, 0.28
+- **E23 Tax cands_8 (2 seeds)**: rows 50,000; distinct city 20,251, 20,210; candidates 8; calls 3,238, 798 (canon-all 38,793, 38,726; ratio 0.08, 0.02); samples 1,300, 1,100; false 0, missed 0 (-); probe zip->city_e8 g3 absent, absent, share of calls -, -
+- **E23 Tax cands_16 (2 seeds)**: rows 50,000; distinct city 20,251, 20,210; candidates 16; calls 6,502, 3,880 (canon-all 38,793, 38,726; ratio 0.17, 0.10); samples 6,200, 2,900; false 0, missed 0 (-); probe zip->city_e8 g3 0.0617, absent, share of calls 0.45, -
+- **E23 Tax cands_32 (2 seeds)**: rows 50,000; distinct city 20,251, 20,210; candidates 32; calls 13,073, 11,236 (canon-all 38,793, 38,726; ratio 0.34, 0.29); samples 19,200, 14,500; false 0, missed 0 (-); probe zip->city_e8 g3 0.0617, 0.0611, share of calls 0.56, 0.53
+- **E23 Tax cands_50 (2 seeds)**: rows 50,000; distinct city 20,251, 20,210; candidates 50; calls 11,449, 12,394 (canon-all 38,793, 38,726; ratio 0.30, 0.32); samples 12,000, 13,700; false 0, missed 0 (-); probe zip->city_e8 g3 0.0617, 0.0611, share of calls 0.32, 0.33
+- **E23 Tax rows sweep (x1-x16, both seeds)**: calls 10,087-10,492 (max/min 1.040); false certifications over all 20 runs 0; runs missing zip->city_e8 8
 - **E19 resolve arm (live LLM, one process)**: wall 73.0 min (model load 4 s, separate); LLM calls 6,653; summed call latency 73.0 min, median 0.62 s; exact decisions 2 true of 7; load avg 14-34
 - **E19 seed 0 normalized-label differences vs resolve**: 13/3333; oracle mapping differs across arms
 - **E19 certify arm seed 0 (live LLM, neighbour-only, declared nu_bar 0.01)**: wall 37.7 min (proxy 2 s); LLM calls 3,333 (E8 replay 3333); summed call latency 37.6 min, median 0.64 s; false certifications vs resolve arm 0, true FDs not certified 1; answers identical to the E8 cache 3324/3333; load avg 14-30
@@ -291,6 +303,8 @@
 - **E19 certify arm seed 2 (live LLM, neighbour-only, declared nu_bar 0.01)**: wall 27.5 min (proxy 2 s); LLM calls 2,385 (E8 replay 2385); summed call latency 27.4 min, median 0.66 s; false certifications vs resolve arm 0, true FDs not certified 0; answers identical to the E8 cache 2377/2385; load avg 22-40
 - **E19 resolve wall / certify wall (mean over seeds)**: 2.07x (per seed 1.81-2.66x); summed latency 2.08x; calls 2.19x
 - **E22 E19 certify replayed against the resolve arm's saved labels (seeds 0-9)**: false certifications 0 of 70 decisions; true FDs missed 1 (s3 labcode->labeler U=0.0411); calls 2,202-3,321 vs 6,653; decisions equal to E19 live (seeds 0-2) 20/21
+- **E22 run-level counts**: runs with a false certification 0 of 10 (exact one-sided 95% upper bound on the per-run probability 0.259); true-FD opportunities missed 1 of 20
+- **E22 offline check of the fixed mapping (all 6,653 labels, no inference)**: exact g3 < delta matches the reference decision 7/7; max miss mass nu 0.0051 (declared nu_bar 0.01)
 - **E19 NDC proxy-index build, empty vs cached embedding cache (s)**: cold 7-15, cached 1.9-2.0
 - **E21 natural candidates (gpg_ext 9, ndc_ext 9)**: audit-decisive (mu_i < delta <= mu) 0; raw strings hide a violation (g3_raw <= delta < g3_oracle) 0; audit mass mu - mu_i 0.001-0.019; g3_oracle - g3_raw 0.000-0.023; true (g3_oracle <= delta) 6
 - **NDC probe labeler_e2->ptype: oracle g3 per seed (E1b truth)**: 0.0362, 0.0362, 0.0361

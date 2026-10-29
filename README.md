@@ -69,6 +69,7 @@ Experiments in `exp/`:
 | `e19_end_to_end.py`, `run_e19.sh`, `e19_proxy_cold.py` | pre-registered end-to-end wall clock with a live local LLM oracle: certify vs canonicalize-all on NDC (several hours; needs the GGUF model) |
 | `e22_fixed_oracle_replay.py` | pre-registered replay of the E19 certify arm (seeds 0–9) against the resolve run's saved answers as one fixed oracle (no LLM call; minutes) |
 | `e20_scaling.py` | pre-registered scaling with rows, domain size and candidate count varied separately (GeoNames) |
+| `e23_scaling_tax.py` | the same three sweeps repeated on Tax (pre-registered, 2 seeds) |
 | `e21_natural_audit.py` | pre-registered check whether the audit changes a decision on natural data (GPG names, NDC labelers; exact means from the truth) |
 | `e3_refine.py` | self-refining witness (power) |
 
@@ -77,24 +78,27 @@ Experiments in `exp/`:
 Requires Python 3.12, CPU only. The paper's runs used a shared server with two Intel Xeon Gold 6258R CPUs and 502 GB RAM.
 
 ```bash
-uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r requirements.lock
-./scripts/fetch_data.sh                       # downloads data and checks it against results/icde27/DATA_SNAPSHOTS.txt
+uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r requirements.lock \
+    --extra-index-url https://download.pytorch.org/whl/cpu --index-strategy unsafe-best-match   # torch==...+cpu is on the PyTorch index only
+./scripts/fetch_data.sh                       # downloads data; exits 1 on a mismatch with results/icde27/DATA_SNAPSHOTS.txt
 .venv/bin/python -m pytest -q tests/          # unit tests (< 1 min)
-./exp/run_all.sh                              # non-LLM experiments; WITH_E8=1 adds E8/E14 (hours)
+SEMFD_OVERWRITE=1 JOBS=8 ./exp/run_all.sh     # non-LLM experiments, rewriting results/icde27 in place; WITH_E8=1 adds E8/E14 (hours)
 ./exp/run_e19.sh                              # separate live LLM timing study (hours)
 .venv/bin/python -I exp/e19_proxy_cold.py      # proxy build with empty caches
 .venv/bin/python -I exp/make_tables.py && .venv/bin/python -I exp/make_figures.py
 ```
 
 - **FastRFD baseline.** `exp/b2_fastrfd.py` needs FastRFD built as described in `baselines/README.md` (JDK ≥ 18,
-  Maven). Point to the jar and the JDK with `FASTRFD_JAR` and `FASTRFD_JAVA`.
+  Maven). Point to the jar and the JDK with `FASTRFD_JAR` and `FASTRFD_JAVA` (otherwise `java` on `PATH`); `FASTRFD_XMX` sets the heap (default 200g).
 - **LLM oracle (E8).** Needs `llama-cpp-python` and the Qwen2.5-7B-Instruct Q4_K_M GGUF file; give its path in
   `E8_MODEL`. `requirements.lock` lists its sha256. All 6,653 cached LLM answers are included in
   `results/icde27/e8_llm_canon.json`, so `exp/e8_llm_oracle.py --offline` reproduces the certification results without
   running the model.
 - **Determinism and drift.** Random streams are seeded per FD with `zlib.crc32`; exact replay also requires the same
-  proxy/model versions, caches and execution environment. GeoNames and the FDA NDC directory change upstream, so `fetch_data.sh` warns when a fresh
-  download differs from the snapshot used in the paper. A full rerun on 2026-10-21 of the 54 jobs then in
+  proxy/model versions, caches and execution environment. GeoNames and the FDA NDC directory change upstream, so `fetch_data.sh` stops when a fresh
+  download differs from the snapshot used in the paper (`SEMFD_ALLOW_DRIFT=1` continues; numbers then differ). `run_all.sh` rewrites the committed
+  JSON in place and asks for `SEMFD_OVERWRITE=1`; compare with `git diff results/icde27`. `JOBS` (default 8) limits concurrent jobs and `THREADS` caps
+  library threads per job. A full rerun on 2026-10-21 of the 54 jobs then in
   `run_all.sh`, on the paper's snapshots, reproduced every decision, oracle-call count and bound (wall-clock times vary
   with server load); experiments added after that date were run once. `exp/make_tables.py` regenerates every table and
   number byte-identically from the committed JSON.
@@ -119,8 +123,10 @@ The code in this repository is released under the MIT license (`LICENSE`).
 
 ## Known limitations of the evidence
 
-- E19 live LLM answers differ slightly across runs (10–13 normalized labels per certification seed differ from the resolve run): the live E19 decisions are not tests against one fixed mapping. E22 replays the certify arm (seeds 0–9) against the resolve run's saved answers as one fixed oracle: no false certification in 70 decisions, one near-threshold miss.
+- E19 live LLM answers differ slightly across runs (10–13 normalized labels per certification seed differ from the resolve run): the live E19 decisions are not tests against one fixed mapping. E22 replays the certify arm (seeds 0–9) against the resolve run's saved answers as one fixed oracle: none of the ten runs made a false certification (70 decisions that share a table, oracle and cache per run, so the run is the statistical unit), and one of the twenty true-FD opportunities was missed. An offline check over all 6,653 saved labels (evaluation only) gives a miss mass of at most 0.0051 for this mapping, below the declared 0.01; this does not carry over to another mapping or service.
 - GPG employer names and company numbers both come from Companies House for private and voluntary-sector employers, so the register study tests alias coverage, not independent identity truth.
-- The embedding cache key contains the model name and the values but not the model revision; pin a revision for fresh reproduction.
+- The embedding model is loaded at a pinned revision; the cache key contains the model name and the values, and `results/cache/emb/manifest.json` records the revision and device per model, so vectors from another revision or device are refused. Embeddings run on CPU unless `SEMFD_DEVICE` says otherwise. FAISS HNSW (domains above 30k values) uses all cores by default, as in the paper's runs; `THREADS=n` caps it but may change neighbour sets and therefore calls.
+- FastRFD reads CSV by splitting every line on commas (no quoting), so `b2_fastrfd.py` replaces commas inside values by spaces after Layer-1 normalization. It prints a rule with an empty left-hand side as ` --> [Y(<=d)]`; wrappers before 2026-10-29 dropped those lines, which can hide X → Y for every X. A pre-registered rerun of all 40 saved configuration × t runs with the corrected wrapper (`literature/prereg_b2_recheck_2026-10-29.md`, `results/icde27/b2_recheck/`) printed no such rule and reproduced every count, so the saved B2 results stand. The wrapper now counts them, checks FastRFD's exit code and saves its full output under `results/icde27/logs/`.
+- E23 repeats E20's sweeps on Tax (2 seeds): repeating rows 16× kept calls within 4%, but the domain and candidate sweeps were not monotone, because one injected probe within 0.012 of δ (`zip->city_e8`) took up to 70% of a run's calls and its g3 moves with resampling (0.024–0.060). E23 therefore does not confirm E20's domain and candidate trends on a second dataset. The run's random streams start with `e20|e23|` (prereg said `e23`), a naming difference only.
 - A replay of NDC E1b reproduced decisions, samples and calls; stored historical bounds were unclipped while the current code reports bounds clipped to [0, 1].
 

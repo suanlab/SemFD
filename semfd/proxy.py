@@ -4,6 +4,7 @@ rescoring and threshold partitions pi(theta). Proxies never define truth;
 they only build the repair witness (pi, rep, N)."""
 
 import hashlib
+import os
 import time
 from pathlib import Path
 
@@ -14,7 +15,7 @@ from scipy.sparse.csgraph import connected_components
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 ROOT = Path(__file__).resolve().parents[1]
-CACHE = ROOT / "results/cache/emb"
+CACHE = Path(os.environ.get("SEMFD_EMB_CACHE", ROOT / "results/cache/emb"))
 EMB_MODEL = "BAAI/bge-small-en-v1.5"
 
 
@@ -22,19 +23,45 @@ def layer1(v):
     return " ".join(str(v).strip().lower().strip(".").split())
 
 
+def _check_manifest(model):
+    """The cache key is (model, values); the model revision and device are recorded once per model in
+    CACHE/manifest.json, and vectors are refused if either differs from the current settings (cache files written
+    before the manifest existed were computed with the pinned revision on CPU, the paper's setting)."""
+    import json
+    import sys
+    sys.path.insert(0, str(ROOT))
+    from embedding_backend import _REVISION, device
+    want = {"revision": _REVISION.get(model, "main"), "device": device()}
+    mf = CACHE / "manifest.json"
+    man = json.loads(mf.read_text()) if mf.exists() else {}
+    if model not in man:
+        CACHE.mkdir(parents=True, exist_ok=True)
+        man[model] = want
+        tmp = mf.with_suffix(".tmp")
+        tmp.write_text(json.dumps(man, indent=1))
+        tmp.replace(mf)
+    elif man[model] != want:
+        raise RuntimeError(f"embedding cache {CACHE} was built with {man[model]}, current settings {want}: "
+                           "use another cache directory (SEMFD_EMB_CACHE) or set SEMFD_DEVICE accordingly")
+
+
 def embed(vals, model=EMB_MODEL):
-    """Normalised embeddings with an on-disk cache keyed by (model, values)."""
+    """Normalised embeddings with an on-disk cache keyed by (model, values); see _check_manifest."""
+    _check_manifest(model)
     key = hashlib.sha1((model + "\x00" + "\x00".join(vals)).encode()).hexdigest()[:20]
     f = CACHE / f"{key}.npy"
     if f.exists():
-        return np.load(f)
-    import sys
-    sys.path.insert(0, str(ROOT))
+        E = np.load(f)
+        if E.shape[0] != len(vals) or E.dtype != np.float32:
+            raise RuntimeError(f"corrupt embedding cache file {f}: shape {E.shape}, dtype {E.dtype}")
+        return E
     from embedding_backend import embed as _embed, set_model
     set_model(model)
     E = np.asarray(_embed(list(vals)), dtype=np.float32)
     CACHE.mkdir(parents=True, exist_ok=True)
-    np.save(f, E)
+    tmp = f.with_name(f.stem + ".tmp.npy")
+    np.save(tmp, E)
+    tmp.replace(f)                                   # atomic: a killed run leaves no truncated cache file
     return E
 
 
@@ -70,6 +97,8 @@ def topk_ann(E, k):
         import faiss
     except ImportError:
         return topk_dense(E, k)
+    if os.environ.get("SEMFD_THREADS"):              # unset: faiss's default (all cores), as in the paper's runs
+        faiss.omp_set_num_threads(int(os.environ["SEMFD_THREADS"]))
     E = np.ascontiguousarray(E, dtype=np.float32)
     idx = faiss.IndexHNSWFlat(E.shape[1], 32, faiss.METRIC_INNER_PRODUCT)
     idx.hnsw.efConstruction, idx.hnsw.efSearch = 80, 64

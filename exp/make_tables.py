@@ -908,7 +908,48 @@ def paper_numbers():
                 f"false-FD g3 {min(f['g3'] for r in rr for f in r['fds'] if f['g3'] > 0.05):.3f}-"
                 f"{max(f['g3'] for r in rr for f in r['fds'] if 0.05 < f['g3'] < 0.2):.3f} (probes below 0.2); "
                 f"max alias class (city) {max(r['alias_class']['city']['max'] for r in rr)}")
-    e19c = [load(R / f"e19_certify_s{s}.json") for s in range(3) if (R / f"e19_certify_s{s}.json").exists()]
+    rc = R / "b2_recheck"                                     # B2 recheck (pre-registered 10-29): empty-LHS rules counted
+    if rc.exists() and any(rc.glob("b2_fastrfd_*_recheck*.json")):
+        new = {}
+        for q in sorted(rc.glob("b2_fastrfd_*_recheck*.json")):
+            base_name = re.sub(r"_recheck(_t[\d.]+)?\.json$", ".json", q.name)
+            new.setdefault(base_name, []).extend(load(q)["runs"])
+        same, diff, empty = 0, [], set()
+        for base_name, runs in sorted(new.items()):
+            old = {r["t"]: r for r in load(R / base_name)["runs"]}
+            for r in runs:
+                o = old[r["t"]]
+                empty |= {f"{base_name[11:-5]}:{y}" for y in r.get("empty_lhs_rhs", [])}
+                if all(o.get(k) == r.get(k) for k in ("n", "false", "missed_true", "false_list")):
+                    same += 1
+                else:
+                    diff.append(f"{base_name[11:-5]} t={r['t']}")
+        add("B2 recheck with empty-LHS rules counted (configurations x t)",
+            f"{same} of {same + len(diff)} identical to the saved runs; differing: {', '.join(diff) or 'none'}; "
+            f"empty-LHS rules printed: {', '.join(sorted(empty)) or 'none'}")
+    if (R / "e23_scaling_tax.json").exists():                # E23 (pre-registered): E20's sweeps repeated on Tax
+        e23 = load(R / "e23_scaling_tax.json")
+        want = {f"e23|{t}" for t in ("rows_x1", "rows_x4", "rows_x16", "dom_12500", "dom_50000", "dom_200000",
+                                     "cands_8", "cands_16", "cands_32", "cands_50")}
+        got = {(r["tag"], r["seed"]) for r in e23}
+        assert got == {(t, s) for t in want for s in (0, 1)}, f"E23 incomplete: {sorted(got)}"
+        probe = "zip->city_e8"                               # Tax's injected near-miss probe (closest to delta)
+        for t in dict.fromkeys(r["tag"] for r in e23):
+            rr = sorted((r for r in e23 if r["tag"] == t), key=lambda r: r["seed"])
+            pf = [next((f for f in r["fds"] if f["fd"] == probe), None) for r in rr]
+            add(f"E23 Tax {t[4:]} (2 seeds)",
+                f"rows {rr[0]['rows']:,}; distinct city {', '.join(f'{r['distinct']['city']:,}' for r in rr)}; candidates {rr[0]['n_cands']}; "
+                f"calls {', '.join(f'{r['calls']:,}' for r in rr)} (canon-all {', '.join(f'{r['canon_all']:,}' for r in rr)}; "
+                f"ratio {', '.join(f'{r['calls'] / r['canon_all']:.2f}' for r in rr)}); samples {', '.join(f'{r['samples']:,}' for r in rr)}; "
+                f"false {sum(len(r['false']) for r in rr)}, missed {sum(len(r['missed']) for r in rr)} "
+                f"({', '.join(sorted({m for r in rr for m in r['missed']})) or '-'}); probe {probe} "
+                + f"g3 {', '.join(f'{f['g3']:.4f}' if f else 'absent' for f in pf)}, share of calls "
+                f"{', '.join(f'{f['calls'] / r['calls']:.2f}' if f else '-' for f, r in zip(pf, rr))}")
+        rows = [r["calls"] for r in e23 if r["tag"].startswith("e23|rows_")]
+        add("E23 Tax rows sweep (x1-x16, both seeds)", f"calls {min(rows):,}-{max(rows):,} "
+            f"(max/min {max(rows) / min(rows):.3f}); false certifications over all 20 runs "
+            f"{sum(len(r['false']) for r in e23)}; runs missing {probe} {sum(probe in r['missed'] for r in e23)}")
+    e19c =[load(R / f"e19_certify_s{s}.json") for s in range(3) if (R / f"e19_certify_s{s}.json").exists()]
     if (R / "e19_resolve.json").exists() and e19c:          # E19 (pre-registered): live LLM, end to end
         rv = load(R / "e19_resolve.json")
         exact = {f["fd"]: f["certified"] for f in rv["fds"]}
@@ -948,6 +989,16 @@ def paper_numbers():
             f"true FDs missed {len(miss)} ({'; '.join(f's{s} {fd} U={u:.4f}' for s, fd, u in miss)}); "
             f"calls {min(r['calls'] for r in runs):,}-{max(r['calls'] for r in runs):,} vs {e22['resolve_calls']:,}; "
             f"decisions equal to E19 live (seeds 0-2) {sum(live)}/{len(live)}")
+        n_true = sum(d["reference_true"] for r in runs for d in r["fds"])
+        nf = sum(r["false_cert"] > 0 for r in runs)
+        add("E22 run-level counts", f"runs with a false certification {nf} of {len(runs)}"
+            + (f" (exact one-sided 95% upper bound on the per-run probability {1 - 0.05 ** (1 / len(runs)):.3f})" if nf == 0 else "")
+            + f"; true-FD opportunities missed {len(miss)} of {n_true}")
+        if "offline_fixed_mapping" in e22:                   # added 10-29 (CHECK.md H03): evaluation-only diagnostic
+            off = e22["offline_fixed_mapping"]
+            add("E22 offline check of the fixed mapping (all 6,653 labels, no inference)",
+                f"exact g3 < delta matches the reference decision {sum(d['matches_reference'] for d in off)}/{len(off)}; "
+                f"max miss mass nu {max(d['nu'] for d in off):.4f} (declared nu_bar {e22['nu_bar']})")
     if (R / "e19_proxy_cold.json").exists():
         pc = load(R / "e19_proxy_cold.json")
         add("E19 NDC proxy-index build, empty vs cached embedding cache (s)",

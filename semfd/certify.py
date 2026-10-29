@@ -35,7 +35,9 @@ def eb_cs(xs, alpha, c=0.5, sides=1):
 
 
 def g3_codes(xc, yc):
-    """g3 of X->Y over integer codes (exact, used for ground truth)."""
+    """g3 of X->Y over integer codes (exact, used for ground truth). g3 is defined for nonempty relations."""
+    if len(xc) == 0 or len(xc) != len(yc):
+        raise ValueError(f"g3 needs equal-length nonempty code arrays, got {len(xc)} and {len(yc)}")
     order = np.lexsort((yc, xc))
     x, y = xc[order], yc[order]
     b = np.flatnonzero(np.r_[True, x[1:] != x[:-1], True])

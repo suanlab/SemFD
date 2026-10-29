@@ -1,0 +1,35 @@
+{
+ "dataset": "ndc116620",
+ "rows": 116620,
+ "n_cands": 66,
+ "n_true": 10,
+ "thr": "0,1,2,3",
+ "runs": [
+  {
+   "t": 0.0001,
+   "sec": 203.1308781094849,
+   "n": 3,
+   "false": 1,
+   "missed_true": 8,
+   "false_list": [
+    "brand->generic"
+   ],
+   "empty_lhs_rhs": [],
+   "input_sha256": "3940035b14c15e75d10c26f6cee31490067721cf8a5c6af173725c02a168ba7e"
+  },
+  {
+   "t": 0.0005,
+   "sec": 210.43273272551596,
+   "n": 11,
+   "false": 3,
+   "missed_true": 2,
+   "false_list": [
+    "brand->appno",
+    "brand->generic",
+    "generic->mktcat"
+   ],
+   "empty_lhs_rhs": [],
+   "input_sha256": "3940035b14c15e75d10c26f6cee31490067721cf8a5c6af173725c02a168ba7e"
+  }
+ ]
+}

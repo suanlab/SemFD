@@ -15,6 +15,50 @@
   "brand->labeler": false,
   "generic->labeler": false
  },
+ "offline_fixed_mapping": [
+  {
+   "fd": "labcode->labeler",
+   "g3": 0.0314868804664723,
+   "nu": 0.0,
+   "matches_reference": true
+  },
+  {
+   "fd": "labeler->ptype",
+   "g3": 0.029514663008060382,
+   "nu": 0.002529583261876179,
+   "matches_reference": true
+  },
+  {
+   "fd": "labeler->labcode",
+   "g3": 0.1310581375407306,
+   "nu": 0.0051191905333561995,
+   "matches_reference": true
+  },
+  {
+   "fd": "labeler->mktcat",
+   "g3": 0.10028297033098954,
+   "nu": 0.002838278168410221,
+   "matches_reference": true
+  },
+  {
+   "fd": "appno->labeler",
+   "g3": 0.6495369576401989,
+   "nu": 0.0,
+   "matches_reference": true
+  },
+  {
+   "fd": "brand->labeler",
+   "g3": 0.4582918881838449,
+   "nu": 0.0,
+   "matches_reference": true
+  },
+  {
+   "fd": "generic->labeler",
+   "g3": 0.6586091579488939,
+   "nu": 0.0,
+   "matches_reference": true
+  }
+ ],
  "runs": [
   {
    "seed": 0,

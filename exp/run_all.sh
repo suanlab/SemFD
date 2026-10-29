@@ -1,12 +1,22 @@
 #!/usr/bin/env bash
 # Reproduce every number in results/icde27 (ICDE 2027 submission). Needs scripts/fetch_data.sh first,
-# and FastRFD built per baselines/README.md for b2_fastrfd.py. Runs jobs in parallel; ~hours on 100+ cores.
+# and FastRFD built per baselines/README.md for b2_fastrfd.py. Runs up to JOBS jobs at a time (default 8; the paper's
+# rerun used all ~60 at once on 112 hardware threads and 502 GB). THREADS=n caps OpenMP/BLAS/torch threads per job;
+# unset, the libraries' defaults apply, as in the paper's runs. Results are rewritten in place under results/icde27
+# (they are tracked in git: compare with `git diff results/icde27`), so the script asks for SEMFD_OVERWRITE=1.
 set -euo pipefail
 cd "$(dirname "$0")/.."
+if [ "${SEMFD_OVERWRITE:-0}" != 1 ]; then
+  echo "run_all.sh rewrites the saved results in results/icde27; rerun with SEMFD_OVERWRITE=1, then git diff results/icde27" >&2
+  exit 2
+fi
+JOBS="${JOBS:-8}"
+if [ -n "${THREADS:-}" ]; then export OMP_NUM_THREADS="$THREADS" OPENBLAS_NUM_THREADS="$THREADS" MKL_NUM_THREADS="$THREADS" SEMFD_THREADS="$THREADS"; fi
 P="${PYTHON:-.venv/bin/python} -I"; L=results/icde27/logs; mkdir -p "$L"
 pids=(); job_names=()
-run() { local log=$1; shift; $P "$@" > "$L/$log.log" 2>&1 < /dev/null & pids+=("$!"); job_names+=("$log"); }
-run_shell() { local log=$1; shift; bash -c "$1" > "$L/$log.log" 2>&1 < /dev/null & pids+=("$!"); job_names+=("$log"); }
+throttle() { while [ "$(jobs -rp | wc -l)" -ge "$JOBS" ]; do sleep 5; done; }   # polling keeps every exit status for wait_jobs
+run() { local log=$1; shift; throttle; $P "$@" > "$L/$log.log" 2>&1 < /dev/null & pids+=("$!"); job_names+=("$log"); }
+run_shell() { local log=$1; shift; throttle; bash -c "$1" > "$L/$log.log" 2>&1 < /dev/null & pids+=("$!"); job_names+=("$log"); }
 wait_jobs() {
   local failed=0 i
   for i in "${!pids[@]}"; do
@@ -108,6 +118,8 @@ for d in tax ndc gpg; do run e18_$d exp/e18_variants.py --dataset $d; done
 run_shell e18_diag "$P exp/e18_diag_gpg.py && $P exp/e18_diag_sim.py"
 # E20 (pre-registered): N, D and |C| varied separately on GeoNames
 run e20_scaling exp/e20_scaling.py
+# E23 (pre-registered): the same sweeps on Tax
+run e23_scaling_tax exp/e23_scaling_tax.py
 # E21 (pre-registered): does the audit change a decision on natural data
 run e21_natural_audit exp/e21_natural_audit.py
 # E19 (pre-registered, live local LLM, several hours, needs the GGUF model): exp/run_e19.sh

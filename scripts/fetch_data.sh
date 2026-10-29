@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 # Download every dataset used by exp/ into data/ (not redistributed; see each source's license).
+# The paper's snapshot is checked at the end: a missing snapshot or a hash mismatch exits 1. To fetch the latest files
+# anyway (upstream drift; numbers will differ), run with SEMFD_ALLOW_DRIFT=1.
 set -euo pipefail
 cd "$(dirname "$0")/.."
+drift() { if [ "${SEMFD_ALLOW_DRIFT:-0}" = 1 ]; then echo "WARNING: $1" >&2; else echo "ERROR: $1 (set SEMFD_ALLOW_DRIFT=1 to continue with other files)" >&2; exit 1; fi; }
 mkdir -p data/geonames data/tax data/ndc/x data/musicbrainz
 G=https://download.geonames.org/export/dump
 for f in cities15000.zip cities500.zip; do curl -sSfL -o data/geonames/$f $G/$f; unzip -o -q data/geonames/$f -d data/geonames; done
@@ -10,12 +13,12 @@ curl -sSfL -o data/geonames/admin1CodesASCII.txt $G/admin1CodesASCII.txt
 curl -sSfL -o data/geonames/alternateNamesV2.zip $G/alternateNamesV2.zip; unzip -o -q data/geonames/alternateNamesV2.zip alternateNamesV2.txt -d data/geonames   # E11 --registry preferred (snapshot 2026-10-20)
 mkdir -p data/gleif   # GLEIF LEI Golden Copy, CC0 (E16; the paper used the publication of 2026-10-20 08:00, see DATA_SNAPSHOTS.txt)
 curl -sSfL -o data/gleif/lei2.csv.zip "https://goldencopy.gleif.org/storage/golden-copy-files/2026/10/20/1290800/20261020-0800-gleif-goldencopy-lei2-golden-copy.csv.zip" \
-  && unzip -o -q data/gleif/lei2.csv.zip -d data/gleif || echo "GLEIF snapshot no longer served; take the latest from goldencopy.gleif.org (E16 numbers will differ)"
+  && unzip -o -q data/gleif/lei2.csv.zip -d data/gleif || drift "GLEIF snapshot no longer served; take the latest from goldencopy.gleif.org (E16 numbers will differ)"
 mkdir -p data/gpg data/companieshouse   # UK gender pay gap reports (Open Government Licence v3.0); Companies House Free Company Data Product (no licence stated; not redistributed)
 for y in 2017 2018 2019 2020 2021 2022 2023 2024 2025; do curl -sSfL -o data/gpg/gpg$y.csv "https://gender-pay-gap.service.gov.uk/viewing/download-data/$y"; sleep 1; done
 curl -sSfL -o data/companieshouse/BasicCompanyDataAsOneFile-2026-10-01.zip https://download.companieshouse.gov.uk/BasicCompanyDataAsOneFile-2026-10-01.zip \
   && unzip -o -q data/companieshouse/BasicCompanyDataAsOneFile-2026-10-01.zip -d data/companieshouse \
-  || echo "Companies House snapshot of 2026-10-01 no longer served; take the latest monthly file (GPG registry numbers will differ)"
+  || drift "Companies House snapshot of 2026-10-01 no longer served; take the latest monthly file (GPG registry numbers will differ)"
 R=https://raw.githubusercontent.com/BigDaMa/raha/master/datasets/tax          # Raha (Apache-2.0 repo)
 curl -sSfL -o data/tax/clean.csv $R/clean.csv
 curl -sSfL -o data/tax/dirty.csv $R/dirty.csv
@@ -27,5 +30,5 @@ curl -sSfL -o data/musicbrainz/mb200k.csv.dapo \
 if sha256sum --quiet -c <(grep -v '^#' results/icde27/DATA_SNAPSHOTS.txt); then
   echo "done: all files match results/icde27/DATA_SNAPSHOTS.txt"
 else
-  echo "WARNING: some files differ from the paper's snapshot (upstream drift); numbers may differ slightly" >&2
+  drift "some files differ from the paper's snapshot results/icde27/DATA_SNAPSHOTS.txt (upstream drift); numbers may differ"
 fi

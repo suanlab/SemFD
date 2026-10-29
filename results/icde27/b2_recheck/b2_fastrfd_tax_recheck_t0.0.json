@@ -1,0 +1,19 @@
+{
+ "dataset": "tax200000",
+ "rows": 200000,
+ "n_cands": 50,
+ "n_true": 5,
+ "thr": "0,1,2,3",
+ "runs": [
+  {
+   "t": 0.0,
+   "sec": 4288.114875219762,
+   "n": 0,
+   "false": 0,
+   "missed_true": 5,
+   "false_list": [],
+   "empty_lhs_rhs": [],
+   "input_sha256": "c7ad8ba446c8c272de61111782edcca9a3b6777a5bafa768f885283027d829cb"
+  }
+ ]
+}

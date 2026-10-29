@@ -40,7 +40,9 @@ class CompositeOracle:
 
     @property
     def calls(self):
-        return 0                                 # charged to the component oracles
+        """Always 0: calls are charged to the component oracles, so count cost as the change in
+        sum(p.calls for p in parts), as exp/e9_multi.py does, never from this attribute."""
+        return 0
 
 
 class CompositeAttr:
@@ -54,6 +56,8 @@ class CompositeAttr:
         uniq, self.codes = np.unique(comp, axis=0, return_inverse=True)
         self.codes = self.codes.ravel()
         self.uniq = uniq
+        if any(SEP in v for a in attrs for v in a.vals):
+            raise ValueError(f"a value of {self.name} contains the composite separator {SEP!r}")
         self.vals = [SEP.join(a.vals[c] for a, c in zip(attrs, row)) for row in uniq]
         index = {tuple(row): i for i, row in enumerate(uniq)}
         by_part = [dict() for _ in attrs]           # component code -> composite codes

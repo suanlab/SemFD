@@ -1,6 +1,8 @@
 """E22 (pre-registered, literature/prereg_e22_2026-10-28.md): the E19 certify arm replayed against ONE fixed oracle,
 the LLM answers the E19 resolve run saved for every labeler name. No LLM is called. Reference decisions are the
 resolve arm's exact decisions (g3 under the same labels < delta). Seeds 0-2 match E19; 3-9 are new.
+Also recorded, offline from the full fixed mapping (evaluation only, added 10-29 after the CHECK.md audit): each
+candidate's exact g3 under these labels and the miss mass nu of the neighbour-only witness, to check nu <= nu_bar.
 Output: results/icde27/e22_fixed_oracle.json
 """
 
@@ -15,7 +17,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from semfd.proxy import layer1  # noqa: E402
-from semfd.certify import certify  # noqa: E402
+from semfd.certify import certify, g3_codes, miss_mass  # noqa: E402
 from semfd.oracle import Canonicalizer  # noqa: E402
 from semfd.data import ndc  # noqa: E402
 
@@ -32,6 +34,16 @@ def main(seeds=range(10), delta=0.05, alpha=0.05, nu_bar=0.01):
     ds = ndc(seed=0, near_miss=())
     attrs = ds.attrs()
     af = alpha / len(ds.fds)
+    ent = ds.entity_codes(attrs)
+    labs = [label(answers[v]) for v in attrs["labeler"].vals]
+    ids = {t: i for i, t in enumerate(sorted(set(labs)))}
+    ent["labeler"] = np.array([ids[t] for t in labs])
+    offline = []
+    for x, y in ds.fds:
+        g = float(g3_codes(ent[x][attrs[x].codes], ent[y][attrs[y].codes]))
+        offline.append({"fd": f"{x}->{y}", "g3": g, "nu": float(miss_mass(attrs[x], attrs[y], ent[x], ent[y], 0.9)),
+                        "matches_reference": (g < delta) == ref[f"{x}->{y}"]})
+    print("offline", [(d["fd"], round(d["g3"], 4), round(d["nu"], 5), d["matches_reference"]) for d in offline], flush=True)
     runs = []
     for s in seeds:
         cache = {}
@@ -58,7 +70,7 @@ def main(seeds=range(10), delta=0.05, alpha=0.05, nu_bar=0.01):
               [(d["fd"], "C" if d["certified"] else "-", round(d["ub"], 4)) for d in fds], flush=True)
     out = {"design": "literature/prereg_e22_2026-10-28.md", "delta": delta, "alpha": alpha, "nu_bar": nu_bar,
            "oracle": "e19_resolve.json answers (fixed)", "resolve_calls": res_r["llm_calls"],
-           "resolve_llm_sec_mean": res_r["llm_sec_mean"], "reference": ref, "runs": runs}
+           "resolve_llm_sec_mean": res_r["llm_sec_mean"], "reference": ref, "offline_fixed_mapping": offline, "runs": runs}
     (OUT / "e22_fixed_oracle.json").write_text(json.dumps(out, indent=1))
 
 

@@ -1,0 +1,100 @@
+{
+ "dataset": "gpg81586",
+ "rows": 81586,
+ "n_cands": 40,
+ "n_true": 10,
+ "thr": "0,1,2,3",
+ "runs": [
+  {
+   "t": 0.0,
+   "sec": 185.50336109101772,
+   "n": 6,
+   "false": 0,
+   "missed_true": 4,
+   "false_list": [],
+   "empty_lhs_rhs": [],
+   "input_sha256": "c8ab7be176435569db7f79a0771fd685bc1210dc3babc57102f4364097bc24c5"
+  },
+  {
+   "t": 0.001,
+   "sec": 189.13589879125357,
+   "n": 22,
+   "false": 12,
+   "missed_true": 0,
+   "false_list": [
+    "cn->size",
+    "cn->year",
+    "empid->size",
+    "empid->year",
+    "name->size",
+    "name->year",
+    "postcode->cn",
+    "postcode->empid",
+    "postcode->name",
+    "postcode->sic",
+    "postcode->size",
+    "postcode->year"
+   ],
+   "empty_lhs_rhs": [],
+   "input_sha256": "c8ab7be176435569db7f79a0771fd685bc1210dc3babc57102f4364097bc24c5"
+  },
+  {
+   "t": 0.01,
+   "sec": 194.4346347246319,
+   "n": 28,
+   "false": 18,
+   "missed_true": 0,
+   "false_list": [
+    "cn->size",
+    "cn->year",
+    "empid->size",
+    "empid->year",
+    "name->size",
+    "name->year",
+    "postcode->cn",
+    "postcode->empid",
+    "postcode->name",
+    "postcode->sic",
+    "postcode->size",
+    "postcode->year",
+    "sic->cn",
+    "sic->empid",
+    "sic->name",
+    "sic->postcode",
+    "sic->size",
+    "sic->year"
+   ],
+   "empty_lhs_rhs": [],
+   "input_sha256": "c8ab7be176435569db7f79a0771fd685bc1210dc3babc57102f4364097bc24c5"
+  },
+  {
+   "t": 0.05,
+   "sec": 185.89734767377377,
+   "n": 28,
+   "false": 18,
+   "missed_true": 0,
+   "false_list": [
+    "cn->size",
+    "cn->year",
+    "empid->size",
+    "empid->year",
+    "name->size",
+    "name->year",
+    "postcode->cn",
+    "postcode->empid",
+    "postcode->name",
+    "postcode->sic",
+    "postcode->size",
+    "postcode->year",
+    "sic->cn",
+    "sic->empid",
+    "sic->name",
+    "sic->postcode",
+    "sic->size",
+    "sic->year"
+   ],
+   "empty_lhs_rhs": [],
+   "input_sha256": "c8ab7be176435569db7f79a0771fd685bc1210dc3babc57102f4364097bc24c5"
+  }
+ ]
+}

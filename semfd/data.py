@@ -126,6 +126,8 @@ def inject_source_conflict(df, oracle, x, ysrc, target, seed, name=None):
         chosen.add(e)
         budget -= cnt[e]
     alt = {}
+    if len(set(ye)) < 2:
+        raise ValueError(f"{ysrc} has a single entity: no conflicting value to inject")
     for i in np.flatnonzero(variant):
         if xe[i] in chosen:
             key = (xe[i], xs[i])

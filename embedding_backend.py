@@ -25,12 +25,15 @@ RUN ORDER ON THE GPU BOX (see GPU_EXPERIMENT_GUIDE.md):
 """
 
 import argparse
+import os
 import numpy as np
 
 # ---- model loaded lazily so --help works without torch installed ----------
 _MODEL = None
 _MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 _CACHE = {}
+# Hugging Face revisions the paper's results were computed with (requirements.lock); other models load "main".
+_REVISION = {"BAAI/bge-small-en-v1.5": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"}
 
 
 def set_model(model_name):
@@ -41,15 +44,26 @@ def set_model(model_name):
         _CACHE.clear()
 
 
+def device():
+    """SEMFD_DEVICE (default "cpu", the setting of every result in the paper); "auto" picks CUDA when available."""
+    dev = os.environ.get("SEMFD_DEVICE", "cpu")
+    if dev == "auto":
+        import torch
+        dev = "cuda" if torch.cuda.is_available() else "cpu"
+    return dev
+
+
 def _load(model_name):
     global _MODEL
     set_model(model_name)
     if _MODEL is None:
-        from sentence_transformers import SentenceTransformer  # GPU box only
+        from sentence_transformers import SentenceTransformer
         import torch
-        dev = "cuda" if torch.cuda.is_available() else "cpu"
+        if os.environ.get("SEMFD_THREADS"):
+            torch.set_num_threads(int(os.environ["SEMFD_THREADS"]))
+        dev = device()
         print(f"[embedding_backend] loading {model_name} on {dev}")
-        _MODEL = SentenceTransformer(model_name, device=dev)
+        _MODEL = SentenceTransformer(model_name, device=dev, revision=_REVISION.get(model_name))
     return _MODEL
 
 

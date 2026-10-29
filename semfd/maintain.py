@@ -14,7 +14,9 @@ every later version at once, at zero oracle cost.
 
 
 def propagate(u, n, deleted, inserted):
-    """Valid g3 bound after `deleted` deletions and `inserted` insertions (cumulative)."""
+    """Valid g3 bound after `deleted` deletions and `inserted` insertions (cumulative). If every tuple is deleted
+    the relation is empty, which satisfies every FD; 0 is returned by that convention (the paper defines g3 on
+    nonempty relations only)."""
     n_new = n - deleted + inserted
     if n_new <= 0:
         return 0.0

@@ -1,0 +1,3482 @@
+[
+ {
+  "tag": "e23|rows_x1",
+  "seed": 0,
+  "rows": 25000,
+  "n_cands": 10,
+  "distinct": {
+   "f_name": 13079,
+   "gender": 2,
+   "area_code": 273,
+   "city": 12797,
+   "state": 104,
+   "zip": 16743,
+   "city_e2": 12608,
+   "city_e8": 12098
+  },
+  "calls": 10492,
+  "calls_fwd_inv": [
+   9785,
+   707
+  ],
+  "samples": 22200,
+  "canon_all": 25980,
+  "false": [],
+  "missed": [
+   "zip->city_e8"
+  ],
+  "alias_class": {
+   "f_name": {
+    "max": 5,
+    "mean": 1.4265924956369982
+   },
+   "city": {
+    "max": 20,
+    "mean": 1.3658875013341871
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 20,
+    "mean": 1.360673429743147
+   },
+   "city_e8": {
+    "max": 20,
+    "mean": 1.347966573816156
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 54.22972060739994,
+  "fds": [
+   {
+    "fd": "zip->city",
+    "g3": 0.0016399999999999748,
+    "certified": true,
+    "samples": 300,
+    "calls": 320
+   },
+   {
+    "fd": "zip->state",
+    "g3": 0.0015600000000000058,
+    "certified": true,
+    "samples": 300,
+    "calls": 81
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "certified": true,
+    "samples": 300,
+    "calls": 15
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 7.999999999996898e-05,
+    "certified": true,
+    "samples": 400,
+    "calls": 1341
+   },
+   {
+    "fd": "city->state",
+    "g3": 0.18520000000000003,
+    "certified": false,
+    "samples": 200,
+    "calls": 676
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.53772,
+    "certified": false,
+    "samples": 100,
+    "calls": 25
+   },
+   {
+    "fd": "city->zip",
+    "g3": 0.38815999999999995,
+    "certified": false,
+    "samples": 100,
+    "calls": 339
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.37207999999999997,
+    "certified": false,
+    "samples": 100,
+    "calls": 315
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.012880000000000003,
+    "certified": true,
+    "samples": 400,
+    "calls": 310
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.045599999999999974,
+    "certified": false,
+    "samples": 20000,
+    "calls": 7070
+   }
+  ]
+ },
+ {
+  "tag": "e23|rows_x4",
+  "seed": 0,
+  "rows": 100000,
+  "n_cands": 10,
+  "distinct": {
+   "f_name": 13079,
+   "gender": 2,
+   "area_code": 273,
+   "city": 12797,
+   "state": 104,
+   "zip": 16743,
+   "city_e2": 12608,
+   "city_e8": 12098
+  },
+  "calls": 10191,
+  "calls_fwd_inv": [
+   9582,
+   609
+  ],
+  "samples": 22000,
+  "canon_all": 25980,
+  "false": [],
+  "missed": [
+   "zip->city_e8"
+  ],
+  "alias_class": {
+   "f_name": {
+    "max": 5,
+    "mean": 1.4265924956369982
+   },
+   "city": {
+    "max": 20,
+    "mean": 1.3658875013341871
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 20,
+    "mean": 1.360673429743147
+   },
+   "city_e8": {
+    "max": 20,
+    "mean": 1.347966573816156
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 35.69104620628059,
+  "fds": [
+   {
+    "fd": "zip->city",
+    "g3": 0.0016399999999999748,
+    "certified": true,
+    "samples": 300,
+    "calls": 313
+   },
+   {
+    "fd": "zip->state",
+    "g3": 0.0015600000000000058,
+    "certified": true,
+    "samples": 300,
+    "calls": 80
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "certified": true,
+    "samples": 300,
+    "calls": 10
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 7.999999999996898e-05,
+    "certified": true,
+    "samples": 300,
+    "calls": 1042
+   },
+   {
+    "fd": "city->state",
+    "g3": 0.18520000000000003,
+    "certified": false,
+    "samples": 200,
+    "calls": 698
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.53772,
+    "certified": false,
+    "samples": 100,
+    "calls": 27
+   },
+   {
+    "fd": "city->zip",
+    "g3": 0.38815999999999995,
+    "certified": false,
+    "samples": 100,
+    "calls": 318
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.37207999999999997,
+    "certified": false,
+    "samples": 100,
+    "calls": 271
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.012880000000000003,
+    "certified": true,
+    "samples": 300,
+    "calls": 259
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.045599999999999974,
+    "certified": false,
+    "samples": 20000,
+    "calls": 7173
+   }
+  ]
+ },
+ {
+  "tag": "e23|rows_x16",
+  "seed": 0,
+  "rows": 400000,
+  "n_cands": 10,
+  "distinct": {
+   "f_name": 13079,
+   "gender": 2,
+   "area_code": 273,
+   "city": 12797,
+   "state": 104,
+   "zip": 16743,
+   "city_e2": 12608,
+   "city_e8": 12098
+  },
+  "calls": 10166,
+  "calls_fwd_inv": [
+   9557,
+   609
+  ],
+  "samples": 22100,
+  "canon_all": 25980,
+  "false": [],
+  "missed": [
+   "zip->city_e8"
+  ],
+  "alias_class": {
+   "f_name": {
+    "max": 5,
+    "mean": 1.4265924956369982
+   },
+   "city": {
+    "max": 20,
+    "mean": 1.3658875013341871
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 20,
+    "mean": 1.360673429743147
+   },
+   "city_e8": {
+    "max": 20,
+    "mean": 1.347966573816156
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 32.555143892765045,
+  "fds": [
+   {
+    "fd": "zip->city",
+    "g3": 0.0016399999999999748,
+    "certified": true,
+    "samples": 300,
+    "calls": 309
+   },
+   {
+    "fd": "zip->state",
+    "g3": 0.0015600000000000058,
+    "certified": true,
+    "samples": 300,
+    "calls": 76
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "certified": true,
+    "samples": 300,
+    "calls": 11
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 7.999999999996898e-05,
+    "certified": true,
+    "samples": 300,
+    "calls": 1017
+   },
+   {
+    "fd": "city->state",
+    "g3": 0.18520000000000003,
+    "certified": false,
+    "samples": 200,
+    "calls": 724
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.53772,
+    "certified": false,
+    "samples": 100,
+    "calls": 28
+   },
+   {
+    "fd": "city->zip",
+    "g3": 0.38815999999999995,
+    "certified": false,
+    "samples": 100,
+    "calls": 317
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.37207999999999997,
+    "certified": false,
+    "samples": 100,
+    "calls": 260
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.012880000000000003,
+    "certified": true,
+    "samples": 400,
+    "calls": 329
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.045599999999999974,
+    "certified": false,
+    "samples": 20000,
+    "calls": 7095
+   }
+  ]
+ },
+ {
+  "tag": "e23|dom_12500",
+  "seed": 0,
+  "rows": 60000,
+  "n_cands": 10,
+  "distinct": {
+   "f_name": 8610,
+   "gender": 2,
+   "area_code": 273,
+   "city": 7710,
+   "state": 104,
+   "zip": 9948,
+   "city_e2": 7589,
+   "city_e8": 7239
+  },
+  "calls": 3693,
+  "calls_fwd_inv": [
+   2975,
+   718
+  ],
+  "samples": 2800,
+  "canon_all": 16426,
+  "false": [],
+  "missed": [],
+  "alias_class": {
+   "f_name": {
+    "max": 5,
+    "mean": 1.2121638744192595
+   },
+   "city": {
+    "max": 17,
+    "mean": 1.2341924123579318
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 17,
+    "mean": 1.2313808210287198
+   },
+   "city_e8": {
+    "max": 17,
+    "mean": 1.2244587280108254
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 9.448691790923476,
+  "fds": [
+   {
+    "fd": "zip->city",
+    "g3": 0.0014333333333332865,
+    "certified": true,
+    "samples": 300,
+    "calls": 294
+   },
+   {
+    "fd": "zip->state",
+    "g3": 0.0014333333333332865,
+    "certified": true,
+    "samples": 300,
+    "calls": 76
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "certified": true,
+    "samples": 300,
+    "calls": 18
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 0.00014999999999998348,
+    "certified": true,
+    "samples": 300,
+    "calls": 1003
+   },
+   {
+    "fd": "city->state",
+    "g3": 0.14149999999999996,
+    "certified": false,
+    "samples": 300,
+    "calls": 1085
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.5279499999999999,
+    "certified": false,
+    "samples": 100,
+    "calls": 32
+   },
+   {
+    "fd": "city->zip",
+    "g3": 0.31845,
+    "certified": false,
+    "samples": 100,
+    "calls": 301
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.26770000000000005,
+    "certified": false,
+    "samples": 100,
+    "calls": 281
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.007216666666666649,
+    "certified": true,
+    "samples": 300,
+    "calls": 207
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.023766666666666714,
+    "certified": true,
+    "samples": 700,
+    "calls": 396
+   }
+  ]
+ },
+ {
+  "tag": "e23|dom_50000",
+  "seed": 0,
+  "rows": 60000,
+  "n_cands": 10,
+  "distinct": {
+   "f_name": 15445,
+   "gender": 2,
+   "area_code": 273,
+   "city": 16125,
+   "state": 104,
+   "zip": 20688,
+   "city_e2": 15986,
+   "city_e8": 15519
+  },
+  "calls": 11292,
+  "calls_fwd_inv": [
+   10486,
+   806
+  ],
+  "samples": 22300,
+  "canon_all": 31947,
+  "false": [],
+  "missed": [
+   "zip->city_e8"
+  ],
+  "alias_class": {
+   "f_name": {
+    "max": 6,
+    "mean": 1.5948988021478727
+   },
+   "city": {
+    "max": 20,
+    "mean": 1.4463180554309805
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 20,
+    "mean": 1.4410889750292977
+   },
+   "city_e8": {
+    "max": 20,
+    "mean": 1.4292687419414256
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 54.05239149555564,
+  "fds": [
+   {
+    "fd": "zip->city",
+    "g3": 0.001883333333333348,
+    "certified": true,
+    "samples": 300,
+    "calls": 307
+   },
+   {
+    "fd": "zip->state",
+    "g3": 0.0018333333333333535,
+    "certified": true,
+    "samples": 300,
+    "calls": 85
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "certified": true,
+    "samples": 300,
+    "calls": 12
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 0.00019999999999997797,
+    "certified": true,
+    "samples": 500,
+    "calls": 1575
+   },
+   {
+    "fd": "city->state",
+    "g3": 0.18296666666666672,
+    "certified": false,
+    "samples": 200,
+    "calls": 669
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.53625,
+    "certified": false,
+    "samples": 100,
+    "calls": 24
+   },
+   {
+    "fd": "city->zip",
+    "g3": 0.38221666666666665,
+    "certified": false,
+    "samples": 100,
+    "calls": 307
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.36588333333333334,
+    "certified": false,
+    "samples": 100,
+    "calls": 312
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.01375000000000004,
+    "certified": true,
+    "samples": 400,
+    "calls": 345
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.048183333333333356,
+    "certified": false,
+    "samples": 20000,
+    "calls": 7656
+   }
+  ]
+ },
+ {
+  "tag": "e23|dom_200000",
+  "seed": 0,
+  "rows": 60000,
+  "n_cands": 10,
+  "distinct": {
+   "f_name": 18685,
+   "gender": 2,
+   "area_code": 273,
+   "city": 20892,
+   "state": 104,
+   "zip": 25805,
+   "city_e2": 20820,
+   "city_e8": 20567
+  },
+  "calls": 11717,
+  "calls_fwd_inv": [
+   11105,
+   612
+  ],
+  "samples": 20100,
+  "canon_all": 40528,
+  "false": [],
+  "missed": [],
+  "alias_class": {
+   "f_name": {
+    "max": 7,
+    "mean": 1.8792115055818164
+   },
+   "city": {
+    "max": 20,
+    "mean": 1.5892286627110908
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 20,
+    "mean": 1.5859232175502742
+   },
+   "city_e8": {
+    "max": 20,
+    "mean": 1.577223926380368
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 87.27157952263951,
+  "fds": [
+   {
+    "fd": "zip->city",
+    "g3": 0.0020499999999999963,
+    "certified": true,
+    "samples": 300,
+    "calls": 322
+   },
+   {
+    "fd": "zip->state",
+    "g3": 0.0020000000000000018,
+    "certified": true,
+    "samples": 300,
+    "calls": 76
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "certified": true,
+    "samples": 300,
+    "calls": 13
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 0.00013333333333331865,
+    "certified": true,
+    "samples": 400,
+    "calls": 1257
+   },
+   {
+    "fd": "city->state",
+    "g3": 0.20368333333333333,
+    "certified": false,
+    "samples": 100,
+    "calls": 332
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.54035,
+    "certified": false,
+    "samples": 100,
+    "calls": 31
+   },
+   {
+    "fd": "city->zip",
+    "g3": 0.4167666666666666,
+    "certified": false,
+    "samples": 100,
+    "calls": 321
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.4237666666666666,
+    "certified": false,
+    "samples": 100,
+    "calls": 220
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.017449999999999966,
+    "certified": true,
+    "samples": 1000,
+    "calls": 899
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.05994999999999995,
+    "certified": false,
+    "samples": 17400,
+    "calls": 8246
+   }
+  ]
+ },
+ {
+  "tag": "e23|cands_8",
+  "seed": 0,
+  "rows": 50000,
+  "n_cands": 8,
+  "distinct": {
+   "f_name": 18438,
+   "gender": 2,
+   "area_code": 273,
+   "city": 20251,
+   "state": 104,
+   "zip": 25239,
+   "city_e2": 19998,
+   "city_e8": 19218
+  },
+  "calls": 3238,
+  "calls_fwd_inv": [
+   2498,
+   740
+  ],
+  "samples": 1300,
+  "canon_all": 38793,
+  "false": [],
+  "missed": [],
+  "alias_class": {
+   "f_name": {
+    "max": 7,
+    "mean": 1.8614840989399293
+   },
+   "city": {
+    "max": 20,
+    "mean": 1.568021680216802
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 20,
+    "mean": 1.5597847281803292
+   },
+   "city_e8": {
+    "max": 20,
+    "mean": 1.5390406022263154
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 63.091823568567634,
+  "fds": [
+   {
+    "fd": "state->city",
+    "g3": 0.89846,
+    "certified": false,
+    "samples": 100,
+    "calls": 163
+   },
+   {
+    "fd": "city_e2->state",
+    "g3": 0.21899999999999997,
+    "certified": false,
+    "samples": 100,
+    "calls": 375
+   },
+   {
+    "fd": "gender->state",
+    "g3": 0.97854,
+    "certified": false,
+    "samples": 100,
+    "calls": 10
+   },
+   {
+    "fd": "gender->city_e8",
+    "g3": 0.98112,
+    "certified": false,
+    "samples": 100,
+    "calls": 89
+   },
+   {
+    "fd": "area_code->city_e8",
+    "g3": 0.90312,
+    "certified": false,
+    "samples": 100,
+    "calls": 108
+   },
+   {
+    "fd": "city->f_name",
+    "g3": 0.74106,
+    "certified": false,
+    "samples": 100,
+    "calls": 401
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 0.000140000000000029,
+    "certified": true,
+    "samples": 600,
+    "calls": 1910
+   },
+   {
+    "fd": "f_name->state",
+    "g3": 0.75912,
+    "certified": false,
+    "samples": 100,
+    "calls": 182
+   }
+  ]
+ },
+ {
+  "tag": "e23|cands_16",
+  "seed": 0,
+  "rows": 50000,
+  "n_cands": 16,
+  "distinct": {
+   "f_name": 18438,
+   "gender": 2,
+   "area_code": 273,
+   "city": 20251,
+   "state": 104,
+   "zip": 25239,
+   "city_e2": 19998,
+   "city_e8": 19218
+  },
+  "calls": 6502,
+  "calls_fwd_inv": [
+   5862,
+   640
+  ],
+  "samples": 6200,
+  "canon_all": 38793,
+  "false": [],
+  "missed": [],
+  "alias_class": {
+   "f_name": {
+    "max": 7,
+    "mean": 1.8614840989399293
+   },
+   "city": {
+    "max": 20,
+    "mean": 1.568021680216802
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 20,
+    "mean": 1.5597847281803292
+   },
+   "city_e8": {
+    "max": 20,
+    "mean": 1.5390406022263154
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 53.26400406844914,
+  "fds": [
+   {
+    "fd": "state->city",
+    "g3": 0.89846,
+    "certified": false,
+    "samples": 100,
+    "calls": 146
+   },
+   {
+    "fd": "city_e2->state",
+    "g3": 0.21899999999999997,
+    "certified": false,
+    "samples": 100,
+    "calls": 353
+   },
+   {
+    "fd": "gender->state",
+    "g3": 0.97854,
+    "certified": false,
+    "samples": 100,
+    "calls": 8
+   },
+   {
+    "fd": "gender->city_e8",
+    "g3": 0.98112,
+    "certified": false,
+    "samples": 100,
+    "calls": 87
+   },
+   {
+    "fd": "area_code->city_e8",
+    "g3": 0.90312,
+    "certified": false,
+    "samples": 100,
+    "calls": 104
+   },
+   {
+    "fd": "city->f_name",
+    "g3": 0.74106,
+    "certified": false,
+    "samples": 100,
+    "calls": 361
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 0.000140000000000029,
+    "certified": true,
+    "samples": 400,
+    "calls": 1309
+   },
+   {
+    "fd": "f_name->state",
+    "g3": 0.75912,
+    "certified": false,
+    "samples": 100,
+    "calls": 157
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.016979999999999995,
+    "certified": true,
+    "samples": 400,
+    "calls": 349
+   },
+   {
+    "fd": "city_e2->area_code",
+    "g3": 0.44318,
+    "certified": false,
+    "samples": 100,
+    "calls": 231
+   },
+   {
+    "fd": "state->city_e8",
+    "g3": 0.90644,
+    "certified": false,
+    "samples": 100,
+    "calls": 77
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.06166000000000005,
+    "certified": false,
+    "samples": 4000,
+    "calls": 2927
+   },
+   {
+    "fd": "f_name->city_e2",
+    "g3": 0.8002400000000001,
+    "certified": false,
+    "samples": 100,
+    "calls": 258
+   },
+   {
+    "fd": "state->zip",
+    "g3": 0.9924,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "zip->f_name",
+    "g3": 0.49517999999999995,
+    "certified": false,
+    "samples": 100,
+    "calls": 135
+   },
+   {
+    "fd": "zip->gender",
+    "g3": 0.21199999999999997,
+    "certified": false,
+    "samples": 200,
+    "calls": 0
+   }
+  ]
+ },
+ {
+  "tag": "e23|cands_32",
+  "seed": 0,
+  "rows": 50000,
+  "n_cands": 32,
+  "distinct": {
+   "f_name": 18438,
+   "gender": 2,
+   "area_code": 273,
+   "city": 20251,
+   "state": 104,
+   "zip": 25239,
+   "city_e2": 19998,
+   "city_e8": 19218
+  },
+  "calls": 13073,
+  "calls_fwd_inv": [
+   11935,
+   1138
+  ],
+  "samples": 19200,
+  "canon_all": 38793,
+  "false": [],
+  "missed": [],
+  "alias_class": {
+   "f_name": {
+    "max": 7,
+    "mean": 1.8614840989399293
+   },
+   "city": {
+    "max": 20,
+    "mean": 1.568021680216802
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 20,
+    "mean": 1.5597847281803292
+   },
+   "city_e8": {
+    "max": 20,
+    "mean": 1.5390406022263154
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 54.65173429250717,
+  "fds": [
+   {
+    "fd": "state->city",
+    "g3": 0.89846,
+    "certified": false,
+    "samples": 100,
+    "calls": 170
+   },
+   {
+    "fd": "city_e2->state",
+    "g3": 0.21899999999999997,
+    "certified": false,
+    "samples": 200,
+    "calls": 741
+   },
+   {
+    "fd": "gender->state",
+    "g3": 0.97854,
+    "certified": false,
+    "samples": 100,
+    "calls": 8
+   },
+   {
+    "fd": "gender->city_e8",
+    "g3": 0.98112,
+    "certified": false,
+    "samples": 100,
+    "calls": 89
+   },
+   {
+    "fd": "area_code->city_e8",
+    "g3": 0.90312,
+    "certified": false,
+    "samples": 100,
+    "calls": 90
+   },
+   {
+    "fd": "city->f_name",
+    "g3": 0.74106,
+    "certified": false,
+    "samples": 100,
+    "calls": 372
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 0.000140000000000029,
+    "certified": true,
+    "samples": 500,
+    "calls": 1631
+   },
+   {
+    "fd": "f_name->state",
+    "g3": 0.75912,
+    "certified": false,
+    "samples": 100,
+    "calls": 187
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.016979999999999995,
+    "certified": true,
+    "samples": 600,
+    "calls": 540
+   },
+   {
+    "fd": "city_e2->area_code",
+    "g3": 0.44318,
+    "certified": false,
+    "samples": 100,
+    "calls": 184
+   },
+   {
+    "fd": "state->city_e8",
+    "g3": 0.90644,
+    "certified": false,
+    "samples": 100,
+    "calls": 78
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.06166000000000005,
+    "certified": false,
+    "samples": 14600,
+    "calls": 7332
+   },
+   {
+    "fd": "f_name->city_e2",
+    "g3": 0.8002400000000001,
+    "certified": false,
+    "samples": 100,
+    "calls": 221
+   },
+   {
+    "fd": "state->zip",
+    "g3": 0.9924,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "zip->f_name",
+    "g3": 0.49517999999999995,
+    "certified": false,
+    "samples": 100,
+    "calls": 126
+   },
+   {
+    "fd": "zip->gender",
+    "g3": 0.21199999999999997,
+    "certified": false,
+    "samples": 200,
+    "calls": 0
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "certified": true,
+    "samples": 300,
+    "calls": 6
+   },
+   {
+    "fd": "gender->zip",
+    "g3": 0.99808,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "gender->f_name",
+    "g3": 0.99938,
+    "certified": false,
+    "samples": 100,
+    "calls": 82
+   },
+   {
+    "fd": "gender->city_e2",
+    "g3": 0.9808,
+    "certified": false,
+    "samples": 100,
+    "calls": 31
+   },
+   {
+    "fd": "area_code->gender",
+    "g3": 0.47387999999999997,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.54074,
+    "certified": false,
+    "samples": 100,
+    "calls": 21
+   },
+   {
+    "fd": "area_code->f_name",
+    "g3": 0.9915,
+    "certified": false,
+    "samples": 100,
+    "calls": 139
+   },
+   {
+    "fd": "city_e8->state",
+    "g3": 0.26544,
+    "certified": false,
+    "samples": 100,
+    "calls": 141
+   },
+   {
+    "fd": "city_e2->zip",
+    "g3": 0.42944000000000004,
+    "certified": false,
+    "samples": 100,
+    "calls": 168
+   },
+   {
+    "fd": "city->gender",
+    "g3": 0.32233999999999996,
+    "certified": false,
+    "samples": 100,
+    "calls": 156
+   },
+   {
+    "fd": "state->city_e2",
+    "g3": 0.90046,
+    "certified": false,
+    "samples": 100,
+    "calls": 32
+   },
+   {
+    "fd": "f_name->city",
+    "g3": 0.80028,
+    "certified": false,
+    "samples": 100,
+    "calls": 165
+   },
+   {
+    "fd": "state->f_name",
+    "g3": 0.99704,
+    "certified": false,
+    "samples": 100,
+    "calls": 117
+   },
+   {
+    "fd": "city->zip",
+    "g3": 0.41901999999999995,
+    "certified": false,
+    "samples": 100,
+    "calls": 155
+   },
+   {
+    "fd": "gender->area_code",
+    "g3": 0.97854,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "zip->city",
+    "g3": 0.0018799999999999928,
+    "certified": true,
+    "samples": 300,
+    "calls": 91
+   }
+  ]
+ },
+ {
+  "tag": "e23|cands_50",
+  "seed": 0,
+  "rows": 50000,
+  "n_cands": 50,
+  "distinct": {
+   "f_name": 18438,
+   "gender": 2,
+   "area_code": 273,
+   "city": 20251,
+   "state": 104,
+   "zip": 25239,
+   "city_e2": 19998,
+   "city_e8": 19218
+  },
+  "calls": 11449,
+  "calls_fwd_inv": [
+   9897,
+   1552
+  ],
+  "samples": 12000,
+  "canon_all": 38793,
+  "false": [],
+  "missed": [],
+  "alias_class": {
+   "f_name": {
+    "max": 7,
+    "mean": 1.8614840989399293
+   },
+   "city": {
+    "max": 20,
+    "mean": 1.568021680216802
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 20,
+    "mean": 1.5597847281803292
+   },
+   "city_e8": {
+    "max": 20,
+    "mean": 1.5390406022263154
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 58.37898770906031,
+  "fds": [
+   {
+    "fd": "state->city",
+    "g3": 0.89846,
+    "certified": false,
+    "samples": 100,
+    "calls": 163
+   },
+   {
+    "fd": "city_e2->state",
+    "g3": 0.21899999999999997,
+    "certified": false,
+    "samples": 200,
+    "calls": 809
+   },
+   {
+    "fd": "gender->state",
+    "g3": 0.97854,
+    "certified": false,
+    "samples": 100,
+    "calls": 8
+   },
+   {
+    "fd": "gender->city_e8",
+    "g3": 0.98112,
+    "certified": false,
+    "samples": 100,
+    "calls": 89
+   },
+   {
+    "fd": "area_code->city_e8",
+    "g3": 0.90312,
+    "certified": false,
+    "samples": 100,
+    "calls": 85
+   },
+   {
+    "fd": "city->f_name",
+    "g3": 0.74106,
+    "certified": false,
+    "samples": 100,
+    "calls": 361
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 0.000140000000000029,
+    "certified": true,
+    "samples": 400,
+    "calls": 1335
+   },
+   {
+    "fd": "f_name->state",
+    "g3": 0.75912,
+    "certified": false,
+    "samples": 100,
+    "calls": 164
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.016979999999999995,
+    "certified": true,
+    "samples": 600,
+    "calls": 538
+   },
+   {
+    "fd": "city_e2->area_code",
+    "g3": 0.44318,
+    "certified": false,
+    "samples": 100,
+    "calls": 209
+   },
+   {
+    "fd": "state->city_e8",
+    "g3": 0.90644,
+    "certified": false,
+    "samples": 100,
+    "calls": 79
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.06166000000000005,
+    "certified": false,
+    "samples": 5500,
+    "calls": 3647
+   },
+   {
+    "fd": "f_name->city_e2",
+    "g3": 0.8002400000000001,
+    "certified": false,
+    "samples": 100,
+    "calls": 239
+   },
+   {
+    "fd": "state->zip",
+    "g3": 0.9924,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "zip->f_name",
+    "g3": 0.49517999999999995,
+    "certified": false,
+    "samples": 100,
+    "calls": 133
+   },
+   {
+    "fd": "zip->gender",
+    "g3": 0.21199999999999997,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "certified": true,
+    "samples": 300,
+    "calls": 5
+   },
+   {
+    "fd": "gender->zip",
+    "g3": 0.99808,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "gender->f_name",
+    "g3": 0.99938,
+    "certified": false,
+    "samples": 100,
+    "calls": 89
+   },
+   {
+    "fd": "gender->city_e2",
+    "g3": 0.9808,
+    "certified": false,
+    "samples": 100,
+    "calls": 43
+   },
+   {
+    "fd": "area_code->gender",
+    "g3": 0.47387999999999997,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.54074,
+    "certified": false,
+    "samples": 100,
+    "calls": 18
+   },
+   {
+    "fd": "area_code->f_name",
+    "g3": 0.9915,
+    "certified": false,
+    "samples": 100,
+    "calls": 133
+   },
+   {
+    "fd": "city_e8->state",
+    "g3": 0.26544,
+    "certified": false,
+    "samples": 100,
+    "calls": 227
+   },
+   {
+    "fd": "city_e2->zip",
+    "g3": 0.42944000000000004,
+    "certified": false,
+    "samples": 100,
+    "calls": 217
+   },
+   {
+    "fd": "city->gender",
+    "g3": 0.32233999999999996,
+    "certified": false,
+    "samples": 100,
+    "calls": 170
+   },
+   {
+    "fd": "state->city_e2",
+    "g3": 0.90046,
+    "certified": false,
+    "samples": 100,
+    "calls": 38
+   },
+   {
+    "fd": "f_name->city",
+    "g3": 0.80028,
+    "certified": false,
+    "samples": 100,
+    "calls": 218
+   },
+   {
+    "fd": "state->f_name",
+    "g3": 0.99704,
+    "certified": false,
+    "samples": 100,
+    "calls": 103
+   },
+   {
+    "fd": "city->zip",
+    "g3": 0.41901999999999995,
+    "certified": false,
+    "samples": 100,
+    "calls": 192
+   },
+   {
+    "fd": "gender->area_code",
+    "g3": 0.97854,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "zip->city",
+    "g3": 0.0018799999999999928,
+    "certified": true,
+    "samples": 300,
+    "calls": 161
+   },
+   {
+    "fd": "f_name->area_code",
+    "g3": 0.7821,
+    "certified": false,
+    "samples": 100,
+    "calls": 143
+   },
+   {
+    "fd": "city->state",
+    "g3": 0.20414,
+    "certified": false,
+    "samples": 100,
+    "calls": 183
+   },
+   {
+    "fd": "city_e8->gender",
+    "g3": 0.32504,
+    "certified": false,
+    "samples": 100,
+    "calls": 142
+   },
+   {
+    "fd": "area_code->city_e2",
+    "g3": 0.89708,
+    "certified": false,
+    "samples": 100,
+    "calls": 41
+   },
+   {
+    "fd": "city_e8->f_name",
+    "g3": 0.74964,
+    "certified": false,
+    "samples": 100,
+    "calls": 212
+   },
+   {
+    "fd": "city_e2->gender",
+    "g3": 0.32228,
+    "certified": false,
+    "samples": 100,
+    "calls": 115
+   },
+   {
+    "fd": "area_code->city",
+    "g3": 0.89494,
+    "certified": false,
+    "samples": 100,
+    "calls": 42
+   },
+   {
+    "fd": "zip->area_code",
+    "g3": 0.20021999999999995,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "f_name->city_e8",
+    "g3": 0.80032,
+    "certified": false,
+    "samples": 100,
+    "calls": 246
+   },
+   {
+    "fd": "city_e8->area_code",
+    "g3": 0.47234,
+    "certified": false,
+    "samples": 100,
+    "calls": 148
+   },
+   {
+    "fd": "state->gender",
+    "g3": 0.48954,
+    "certified": false,
+    "samples": 100,
+    "calls": 15
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.43423999999999996,
+    "certified": false,
+    "samples": 100,
+    "calls": 150
+   },
+   {
+    "fd": "area_code->zip",
+    "g3": 0.98476,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "gender->city",
+    "g3": 0.98072,
+    "certified": false,
+    "samples": 100,
+    "calls": 30
+   },
+   {
+    "fd": "f_name->zip",
+    "g3": 0.80186,
+    "certified": false,
+    "samples": 100,
+    "calls": 131
+   },
+   {
+    "fd": "city_e2->f_name",
+    "g3": 0.7429399999999999,
+    "certified": false,
+    "samples": 100,
+    "calls": 249
+   },
+   {
+    "fd": "city_e8->zip",
+    "g3": 0.46306,
+    "certified": false,
+    "samples": 100,
+    "calls": 128
+   },
+   {
+    "fd": "zip->state",
+    "g3": 0.0018200000000000438,
+    "certified": true,
+    "samples": 400,
+    "calls": 1
+   }
+  ]
+ },
+ {
+  "tag": "e23|rows_x1",
+  "seed": 1,
+  "rows": 25000,
+  "n_cands": 10,
+  "distinct": {
+   "f_name": 13141,
+   "gender": 2,
+   "area_code": 273,
+   "city": 12744,
+   "state": 104,
+   "zip": 16692,
+   "city_e2": 12561,
+   "city_e8": 12057
+  },
+  "calls": 10470,
+  "calls_fwd_inv": [
+   9780,
+   690
+  ],
+  "samples": 22200,
+  "canon_all": 25989,
+  "false": [],
+  "missed": [
+   "zip->city_e8"
+  ],
+  "alias_class": {
+   "f_name": {
+    "max": 5,
+    "mean": 1.4346069868995632
+   },
+   "city": {
+    "max": 20,
+    "mean": 1.3538723042600658
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 20,
+    "mean": 1.3491944146079484
+   },
+   "city_e8": {
+    "max": 20,
+    "mean": 1.3337389380530973
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 18.744665399193764,
+  "fds": [
+   {
+    "fd": "zip->city",
+    "g3": 0.0018399999999999528,
+    "certified": true,
+    "samples": 300,
+    "calls": 302
+   },
+   {
+    "fd": "zip->state",
+    "g3": 0.0017200000000000548,
+    "certified": true,
+    "samples": 300,
+    "calls": 82
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "certified": true,
+    "samples": 300,
+    "calls": 9
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 0.000160000000000049,
+    "certified": true,
+    "samples": 400,
+    "calls": 1397
+   },
+   {
+    "fd": "city->state",
+    "g3": 0.18396,
+    "certified": false,
+    "samples": 200,
+    "calls": 721
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.5354,
+    "certified": false,
+    "samples": 100,
+    "calls": 22
+   },
+   {
+    "fd": "city->zip",
+    "g3": 0.38752,
+    "certified": false,
+    "samples": 100,
+    "calls": 287
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.37048000000000003,
+    "certified": false,
+    "samples": 100,
+    "calls": 271
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.012639999999999985,
+    "certified": true,
+    "samples": 400,
+    "calls": 337
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.04352,
+    "certified": false,
+    "samples": 20000,
+    "calls": 7042
+   }
+  ]
+ },
+ {
+  "tag": "e23|rows_x4",
+  "seed": 1,
+  "rows": 100000,
+  "n_cands": 10,
+  "distinct": {
+   "f_name": 13141,
+   "gender": 2,
+   "area_code": 273,
+   "city": 12744,
+   "state": 104,
+   "zip": 16692,
+   "city_e2": 12561,
+   "city_e8": 12057
+  },
+  "calls": 10488,
+  "calls_fwd_inv": [
+   9781,
+   707
+  ],
+  "samples": 22200,
+  "canon_all": 25989,
+  "false": [],
+  "missed": [
+   "zip->city_e8"
+  ],
+  "alias_class": {
+   "f_name": {
+    "max": 5,
+    "mean": 1.4346069868995632
+   },
+   "city": {
+    "max": 20,
+    "mean": 1.3538723042600658
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 20,
+    "mean": 1.3491944146079484
+   },
+   "city_e8": {
+    "max": 20,
+    "mean": 1.3337389380530973
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 16.560420403257012,
+  "fds": [
+   {
+    "fd": "zip->city",
+    "g3": 0.0018399999999999528,
+    "certified": true,
+    "samples": 300,
+    "calls": 299
+   },
+   {
+    "fd": "zip->state",
+    "g3": 0.0017200000000000548,
+    "certified": true,
+    "samples": 300,
+    "calls": 73
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "certified": true,
+    "samples": 300,
+    "calls": 7
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 0.000160000000000049,
+    "certified": true,
+    "samples": 400,
+    "calls": 1335
+   },
+   {
+    "fd": "city->state",
+    "g3": 0.18396,
+    "certified": false,
+    "samples": 200,
+    "calls": 733
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.5354,
+    "certified": false,
+    "samples": 100,
+    "calls": 28
+   },
+   {
+    "fd": "city->zip",
+    "g3": 0.38752,
+    "certified": false,
+    "samples": 100,
+    "calls": 265
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.37048000000000003,
+    "certified": false,
+    "samples": 100,
+    "calls": 339
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.012639999999999985,
+    "certified": true,
+    "samples": 400,
+    "calls": 324
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.04352,
+    "certified": false,
+    "samples": 20000,
+    "calls": 7085
+   }
+  ]
+ },
+ {
+  "tag": "e23|rows_x16",
+  "seed": 1,
+  "rows": 400000,
+  "n_cands": 10,
+  "distinct": {
+   "f_name": 13141,
+   "gender": 2,
+   "area_code": 273,
+   "city": 12744,
+   "state": 104,
+   "zip": 16692,
+   "city_e2": 12561,
+   "city_e8": 12057
+  },
+  "calls": 10087,
+  "calls_fwd_inv": [
+   9476,
+   611
+  ],
+  "samples": 22100,
+  "canon_all": 25989,
+  "false": [],
+  "missed": [
+   "zip->city_e8"
+  ],
+  "alias_class": {
+   "f_name": {
+    "max": 5,
+    "mean": 1.4346069868995632
+   },
+   "city": {
+    "max": 20,
+    "mean": 1.3538723042600658
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 20,
+    "mean": 1.3491944146079484
+   },
+   "city_e8": {
+    "max": 20,
+    "mean": 1.3337389380530973
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 20.16952839680016,
+  "fds": [
+   {
+    "fd": "zip->city",
+    "g3": 0.0018399999999999528,
+    "certified": true,
+    "samples": 300,
+    "calls": 304
+   },
+   {
+    "fd": "zip->state",
+    "g3": 0.0017200000000000548,
+    "certified": true,
+    "samples": 300,
+    "calls": 73
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "certified": true,
+    "samples": 300,
+    "calls": 15
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 0.000160000000000049,
+    "certified": true,
+    "samples": 300,
+    "calls": 959
+   },
+   {
+    "fd": "city->state",
+    "g3": 0.18396,
+    "certified": false,
+    "samples": 200,
+    "calls": 761
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.5354,
+    "certified": false,
+    "samples": 100,
+    "calls": 29
+   },
+   {
+    "fd": "city->zip",
+    "g3": 0.38752,
+    "certified": false,
+    "samples": 100,
+    "calls": 317
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.37048000000000003,
+    "certified": false,
+    "samples": 100,
+    "calls": 275
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.012639999999999985,
+    "certified": true,
+    "samples": 400,
+    "calls": 339
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.04352,
+    "certified": false,
+    "samples": 20000,
+    "calls": 7015
+   }
+  ]
+ },
+ {
+  "tag": "e23|dom_12500",
+  "seed": 1,
+  "rows": 60000,
+  "n_cands": 10,
+  "distinct": {
+   "f_name": 8607,
+   "gender": 2,
+   "area_code": 273,
+   "city": 7669,
+   "state": 104,
+   "zip": 9903,
+   "city_e2": 7546,
+   "city_e8": 7200
+  },
+  "calls": 4272,
+  "calls_fwd_inv": [
+   3511,
+   761
+  ],
+  "samples": 3800,
+  "canon_all": 16383,
+  "false": [],
+  "missed": [],
+  "alias_class": {
+   "f_name": {
+    "max": 4,
+    "mean": 1.2086785563825306
+   },
+   "city": {
+    "max": 18,
+    "mean": 1.2341486964917927
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 18,
+    "mean": 1.2326037242731134
+   },
+   "city_e8": {
+    "max": 17,
+    "mean": 1.225114854517611
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 8.84602689370513,
+  "fds": [
+   {
+    "fd": "zip->city",
+    "g3": 0.0021166666666666556,
+    "certified": true,
+    "samples": 300,
+    "calls": 301
+   },
+   {
+    "fd": "zip->state",
+    "g3": 0.0019166666666666776,
+    "certified": true,
+    "samples": 300,
+    "calls": 82
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "certified": true,
+    "samples": 300,
+    "calls": 9
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 6.666666666665932e-05,
+    "certified": true,
+    "samples": 300,
+    "calls": 927
+   },
+   {
+    "fd": "city->state",
+    "g3": 0.14175000000000004,
+    "certified": false,
+    "samples": 400,
+    "calls": 1309
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.5287666666666666,
+    "certified": false,
+    "samples": 100,
+    "calls": 24
+   },
+   {
+    "fd": "city->zip",
+    "g3": 0.3203166666666667,
+    "certified": false,
+    "samples": 100,
+    "calls": 282
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.27218333333333333,
+    "certified": false,
+    "samples": 100,
+    "calls": 247
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.00818333333333332,
+    "certified": true,
+    "samples": 300,
+    "calls": 192
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.023933333333333362,
+    "certified": true,
+    "samples": 1600,
+    "calls": 899
+   }
+  ]
+ },
+ {
+  "tag": "e23|dom_50000",
+  "seed": 1,
+  "rows": 60000,
+  "n_cands": 10,
+  "distinct": {
+   "f_name": 15484,
+   "gender": 2,
+   "area_code": 273,
+   "city": 16108,
+   "state": 104,
+   "zip": 20671,
+   "city_e2": 15950,
+   "city_e8": 15491
+  },
+  "calls": 11294,
+  "calls_fwd_inv": [
+   10496,
+   798
+  ],
+  "samples": 22300,
+  "canon_all": 31935,
+  "false": [],
+  "missed": [
+   "zip->city_e8"
+  ],
+  "alias_class": {
+   "f_name": {
+    "max": 6,
+    "mean": 1.5989260636100784
+   },
+   "city": {
+    "max": 20,
+    "mean": 1.443110553664218
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 20,
+    "mean": 1.4379733141002524
+   },
+   "city_e8": {
+    "max": 20,
+    "mean": 1.4265586149737546
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 33.14782479591668,
+  "fds": [
+   {
+    "fd": "zip->city",
+    "g3": 0.001883333333333348,
+    "certified": true,
+    "samples": 300,
+    "calls": 312
+   },
+   {
+    "fd": "zip->state",
+    "g3": 0.0018166666666666886,
+    "certified": true,
+    "samples": 300,
+    "calls": 85
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "certified": true,
+    "samples": 300,
+    "calls": 9
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 6.666666666665932e-05,
+    "certified": true,
+    "samples": 500,
+    "calls": 1580
+   },
+   {
+    "fd": "city->state",
+    "g3": 0.18535000000000001,
+    "certified": false,
+    "samples": 200,
+    "calls": 670
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.5362,
+    "certified": false,
+    "samples": 100,
+    "calls": 31
+   },
+   {
+    "fd": "city->zip",
+    "g3": 0.3856333333333334,
+    "certified": false,
+    "samples": 100,
+    "calls": 312
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.36998333333333333,
+    "certified": false,
+    "samples": 100,
+    "calls": 316
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.014733333333333376,
+    "certified": true,
+    "samples": 400,
+    "calls": 343
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.046566666666666645,
+    "certified": false,
+    "samples": 20000,
+    "calls": 7636
+   }
+  ]
+ },
+ {
+  "tag": "e23|dom_200000",
+  "seed": 1,
+  "rows": 60000,
+  "n_cands": 10,
+  "distinct": {
+   "f_name": 18574,
+   "gender": 2,
+   "area_code": 273,
+   "city": 20591,
+   "state": 104,
+   "zip": 25746,
+   "city_e2": 20500,
+   "city_e8": 20293
+  },
+  "calls": 4689,
+  "calls_fwd_inv": [
+   4095,
+   594
+  ],
+  "samples": 4300,
+  "canon_all": 40139,
+  "false": [],
+  "missed": [],
+  "alias_class": {
+   "f_name": {
+    "max": 6,
+    "mean": 1.868235767451217
+   },
+   "city": {
+    "max": 20,
+    "mean": 1.5755604866477926
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 20,
+    "mean": 1.5737755258713342
+   },
+   "city_e8": {
+    "max": 20,
+    "mean": 1.566785052501544
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 72.26487773284316,
+  "fds": [
+   {
+    "fd": "zip->city",
+    "g3": 0.0020000000000000018,
+    "certified": true,
+    "samples": 300,
+    "calls": 317
+   },
+   {
+    "fd": "zip->state",
+    "g3": 0.0019333333333333425,
+    "certified": true,
+    "samples": 300,
+    "calls": 81
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "certified": true,
+    "samples": 300,
+    "calls": 13
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 0.00014999999999998348,
+    "certified": true,
+    "samples": 300,
+    "calls": 950
+   },
+   {
+    "fd": "city->state",
+    "g3": 0.20261666666666667,
+    "certified": false,
+    "samples": 200,
+    "calls": 695
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.5400166666666666,
+    "certified": false,
+    "samples": 100,
+    "calls": 28
+   },
+   {
+    "fd": "city->zip",
+    "g3": 0.4138833333333334,
+    "certified": false,
+    "samples": 100,
+    "calls": 261
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.4220166666666667,
+    "certified": false,
+    "samples": 100,
+    "calls": 262
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.016449999999999965,
+    "certified": true,
+    "samples": 900,
+    "calls": 784
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.058533333333333326,
+    "certified": false,
+    "samples": 1700,
+    "calls": 1298
+   }
+  ]
+ },
+ {
+  "tag": "e23|cands_8",
+  "seed": 1,
+  "rows": 50000,
+  "n_cands": 8,
+  "distinct": {
+   "f_name": 18412,
+   "gender": 2,
+   "area_code": 273,
+   "city": 20210,
+   "state": 104,
+   "zip": 25199,
+   "city_e2": 19939,
+   "city_e8": 19207
+  },
+  "calls": 798,
+  "calls_fwd_inv": [
+   702,
+   96
+  ],
+  "samples": 1100,
+  "canon_all": 38726,
+  "false": [],
+  "missed": [],
+  "alias_class": {
+   "f_name": {
+    "max": 7,
+    "mean": 1.857546408393866
+   },
+   "city": {
+    "max": 20,
+    "mean": 1.5649682515099892
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 20,
+    "mean": 1.5561539061890268
+   },
+   "city_e8": {
+    "max": 20,
+    "mean": 1.53533173461231
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 54.69047191552818,
+  "fds": [
+   {
+    "fd": "zip->f_name",
+    "g3": 0.49578,
+    "certified": false,
+    "samples": 100,
+    "calls": 159
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.54184,
+    "certified": false,
+    "samples": 100,
+    "calls": 90
+   },
+   {
+    "fd": "gender->state",
+    "g3": 0.97844,
+    "certified": false,
+    "samples": 100,
+    "calls": 15
+   },
+   {
+    "fd": "gender->f_name",
+    "g3": 0.99938,
+    "certified": false,
+    "samples": 100,
+    "calls": 99
+   },
+   {
+    "fd": "zip->area_code",
+    "g3": 0.20021999999999995,
+    "certified": false,
+    "samples": 200,
+    "calls": 0
+   },
+   {
+    "fd": "state->city",
+    "g3": 0.89662,
+    "certified": false,
+    "samples": 100,
+    "calls": 141
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "certified": true,
+    "samples": 300,
+    "calls": 14
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.43538,
+    "certified": false,
+    "samples": 100,
+    "calls": 280
+   }
+  ]
+ },
+ {
+  "tag": "e23|cands_16",
+  "seed": 1,
+  "rows": 50000,
+  "n_cands": 16,
+  "distinct": {
+   "f_name": 18412,
+   "gender": 2,
+   "area_code": 273,
+   "city": 20210,
+   "state": 104,
+   "zip": 25199,
+   "city_e2": 19939,
+   "city_e8": 19207
+  },
+  "calls": 3880,
+  "calls_fwd_inv": [
+   3156,
+   724
+  ],
+  "samples": 2900,
+  "canon_all": 38726,
+  "false": [],
+  "missed": [],
+  "alias_class": {
+   "f_name": {
+    "max": 7,
+    "mean": 1.857546408393866
+   },
+   "city": {
+    "max": 20,
+    "mean": 1.5649682515099892
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 20,
+    "mean": 1.5561539061890268
+   },
+   "city_e8": {
+    "max": 20,
+    "mean": 1.53533173461231
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 53.28513946570456,
+  "fds": [
+   {
+    "fd": "zip->f_name",
+    "g3": 0.49578,
+    "certified": false,
+    "samples": 100,
+    "calls": 151
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.54184,
+    "certified": false,
+    "samples": 100,
+    "calls": 87
+   },
+   {
+    "fd": "gender->state",
+    "g3": 0.97844,
+    "certified": false,
+    "samples": 100,
+    "calls": 23
+   },
+   {
+    "fd": "gender->f_name",
+    "g3": 0.99938,
+    "certified": false,
+    "samples": 100,
+    "calls": 100
+   },
+   {
+    "fd": "zip->area_code",
+    "g3": 0.20021999999999995,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "state->city",
+    "g3": 0.89662,
+    "certified": false,
+    "samples": 100,
+    "calls": 145
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "certified": true,
+    "samples": 300,
+    "calls": 9
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.43538,
+    "certified": false,
+    "samples": 100,
+    "calls": 286
+   },
+   {
+    "fd": "state->f_name",
+    "g3": 0.99714,
+    "certified": false,
+    "samples": 100,
+    "calls": 151
+   },
+   {
+    "fd": "city->gender",
+    "g3": 0.31992,
+    "certified": false,
+    "samples": 100,
+    "calls": 186
+   },
+   {
+    "fd": "city_e2->gender",
+    "g3": 0.32074,
+    "certified": false,
+    "samples": 100,
+    "calls": 243
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 9.999999999998899e-05,
+    "certified": true,
+    "samples": 500,
+    "calls": 1600
+   },
+   {
+    "fd": "gender->city_e2",
+    "g3": 0.97998,
+    "certified": false,
+    "samples": 100,
+    "calls": 87
+   },
+   {
+    "fd": "area_code->city",
+    "g3": 0.89368,
+    "certified": false,
+    "samples": 100,
+    "calls": 100
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.018079999999999985,
+    "certified": true,
+    "samples": 800,
+    "calls": 712
+   },
+   {
+    "fd": "state->zip",
+    "g3": 0.99234,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   }
+  ]
+ },
+ {
+  "tag": "e23|cands_32",
+  "seed": 1,
+  "rows": 50000,
+  "n_cands": 32,
+  "distinct": {
+   "f_name": 18412,
+   "gender": 2,
+   "area_code": 273,
+   "city": 20210,
+   "state": 104,
+   "zip": 25199,
+   "city_e2": 19939,
+   "city_e8": 19207
+  },
+  "calls": 11236,
+  "calls_fwd_inv": [
+   10167,
+   1069
+  ],
+  "samples": 14500,
+  "canon_all": 38726,
+  "false": [],
+  "missed": [],
+  "alias_class": {
+   "f_name": {
+    "max": 7,
+    "mean": 1.857546408393866
+   },
+   "city": {
+    "max": 20,
+    "mean": 1.5649682515099892
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 20,
+    "mean": 1.5561539061890268
+   },
+   "city_e8": {
+    "max": 20,
+    "mean": 1.53533173461231
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 61.382061529904604,
+  "fds": [
+   {
+    "fd": "zip->f_name",
+    "g3": 0.49578,
+    "certified": false,
+    "samples": 100,
+    "calls": 142
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.54184,
+    "certified": false,
+    "samples": 100,
+    "calls": 75
+   },
+   {
+    "fd": "gender->state",
+    "g3": 0.97844,
+    "certified": false,
+    "samples": 100,
+    "calls": 21
+   },
+   {
+    "fd": "gender->f_name",
+    "g3": 0.99938,
+    "certified": false,
+    "samples": 100,
+    "calls": 101
+   },
+   {
+    "fd": "zip->area_code",
+    "g3": 0.20021999999999995,
+    "certified": false,
+    "samples": 200,
+    "calls": 0
+   },
+   {
+    "fd": "state->city",
+    "g3": 0.89662,
+    "certified": false,
+    "samples": 100,
+    "calls": 148
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "certified": true,
+    "samples": 300,
+    "calls": 13
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.43538,
+    "certified": false,
+    "samples": 100,
+    "calls": 270
+   },
+   {
+    "fd": "state->f_name",
+    "g3": 0.99714,
+    "certified": false,
+    "samples": 100,
+    "calls": 141
+   },
+   {
+    "fd": "city->gender",
+    "g3": 0.31992,
+    "certified": false,
+    "samples": 100,
+    "calls": 215
+   },
+   {
+    "fd": "city_e2->gender",
+    "g3": 0.32074,
+    "certified": false,
+    "samples": 100,
+    "calls": 203
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 9.999999999998899e-05,
+    "certified": true,
+    "samples": 400,
+    "calls": 1283
+   },
+   {
+    "fd": "gender->city_e2",
+    "g3": 0.97998,
+    "certified": false,
+    "samples": 100,
+    "calls": 89
+   },
+   {
+    "fd": "area_code->city",
+    "g3": 0.89368,
+    "certified": false,
+    "samples": 100,
+    "calls": 90
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.018079999999999985,
+    "certified": true,
+    "samples": 500,
+    "calls": 440
+   },
+   {
+    "fd": "state->zip",
+    "g3": 0.99234,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.06110000000000004,
+    "certified": false,
+    "samples": 10400,
+    "calls": 5987
+   },
+   {
+    "fd": "gender->area_code",
+    "g3": 0.97862,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "city_e2->f_name",
+    "g3": 0.74284,
+    "certified": false,
+    "samples": 100,
+    "calls": 241
+   },
+   {
+    "fd": "state->city_e8",
+    "g3": 0.90438,
+    "certified": false,
+    "samples": 100,
+    "calls": 31
+   },
+   {
+    "fd": "area_code->zip",
+    "g3": 0.98462,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "city_e2->zip",
+    "g3": 0.43257999999999996,
+    "certified": false,
+    "samples": 100,
+    "calls": 146
+   },
+   {
+    "fd": "city_e8->zip",
+    "g3": 0.46446,
+    "certified": false,
+    "samples": 100,
+    "calls": 191
+   },
+   {
+    "fd": "state->city_e2",
+    "g3": 0.89876,
+    "certified": false,
+    "samples": 100,
+    "calls": 43
+   },
+   {
+    "fd": "f_name->city",
+    "g3": 0.79964,
+    "certified": false,
+    "samples": 100,
+    "calls": 245
+   },
+   {
+    "fd": "city_e8->gender",
+    "g3": 0.32265999999999995,
+    "certified": false,
+    "samples": 100,
+    "calls": 114
+   },
+   {
+    "fd": "gender->city_e8",
+    "g3": 0.97986,
+    "certified": false,
+    "samples": 100,
+    "calls": 40
+   },
+   {
+    "fd": "city->f_name",
+    "g3": 0.74088,
+    "certified": false,
+    "samples": 100,
+    "calls": 259
+   },
+   {
+    "fd": "city_e8->area_code",
+    "g3": 0.47218000000000004,
+    "certified": false,
+    "samples": 100,
+    "calls": 121
+   },
+   {
+    "fd": "city_e8->f_name",
+    "g3": 0.7489,
+    "certified": false,
+    "samples": 100,
+    "calls": 255
+   },
+   {
+    "fd": "city->zip",
+    "g3": 0.42112000000000005,
+    "certified": false,
+    "samples": 100,
+    "calls": 167
+   },
+   {
+    "fd": "f_name->zip",
+    "g3": 0.80152,
+    "certified": false,
+    "samples": 100,
+    "calls": 165
+   }
+  ]
+ },
+ {
+  "tag": "e23|cands_50",
+  "seed": 1,
+  "rows": 50000,
+  "n_cands": 50,
+  "distinct": {
+   "f_name": 18412,
+   "gender": 2,
+   "area_code": 273,
+   "city": 20210,
+   "state": 104,
+   "zip": 25199,
+   "city_e2": 19939,
+   "city_e8": 19207
+  },
+  "calls": 12394,
+  "calls_fwd_inv": [
+   10664,
+   1730
+  ],
+  "samples": 13700,
+  "canon_all": 38726,
+  "false": [],
+  "missed": [],
+  "alias_class": {
+   "f_name": {
+    "max": 7,
+    "mean": 1.857546408393866
+   },
+   "city": {
+    "max": 20,
+    "mean": 1.5649682515099892
+   },
+   "state": {
+    "max": 3,
+    "mean": 2.0
+   },
+   "city_e2": {
+    "max": 20,
+    "mean": 1.5561539061890268
+   },
+   "city_e8": {
+    "max": 20,
+    "mean": 1.53533173461231
+   }
+  },
+  "max_nbrs": {
+   "f_name": 10,
+   "city": 10,
+   "state": 10,
+   "city_e2": 10,
+   "city_e8": 10
+  },
+  "sec": 69.20388571918011,
+  "fds": [
+   {
+    "fd": "zip->f_name",
+    "g3": 0.49578,
+    "certified": false,
+    "samples": 100,
+    "calls": 138
+   },
+   {
+    "fd": "state->area_code",
+    "g3": 0.54184,
+    "certified": false,
+    "samples": 100,
+    "calls": 90
+   },
+   {
+    "fd": "gender->state",
+    "g3": 0.97844,
+    "certified": false,
+    "samples": 100,
+    "calls": 17
+   },
+   {
+    "fd": "gender->f_name",
+    "g3": 0.99938,
+    "certified": false,
+    "samples": 100,
+    "calls": 100
+   },
+   {
+    "fd": "zip->area_code",
+    "g3": 0.20021999999999995,
+    "certified": false,
+    "samples": 200,
+    "calls": 0
+   },
+   {
+    "fd": "state->city",
+    "g3": 0.89662,
+    "certified": false,
+    "samples": 100,
+    "calls": 142
+   },
+   {
+    "fd": "area_code->state",
+    "g3": 0.0,
+    "certified": true,
+    "samples": 300,
+    "calls": 11
+   },
+   {
+    "fd": "city->area_code",
+    "g3": 0.43538,
+    "certified": false,
+    "samples": 100,
+    "calls": 285
+   },
+   {
+    "fd": "state->f_name",
+    "g3": 0.99714,
+    "certified": false,
+    "samples": 100,
+    "calls": 149
+   },
+   {
+    "fd": "city->gender",
+    "g3": 0.31992,
+    "certified": false,
+    "samples": 100,
+    "calls": 236
+   },
+   {
+    "fd": "city_e2->gender",
+    "g3": 0.32074,
+    "certified": false,
+    "samples": 100,
+    "calls": 231
+   },
+   {
+    "fd": "f_name->gender",
+    "g3": 9.999999999998899e-05,
+    "certified": true,
+    "samples": 500,
+    "calls": 1530
+   },
+   {
+    "fd": "gender->city_e2",
+    "g3": 0.97998,
+    "certified": false,
+    "samples": 100,
+    "calls": 88
+   },
+   {
+    "fd": "area_code->city",
+    "g3": 0.89368,
+    "certified": false,
+    "samples": 100,
+    "calls": 98
+   },
+   {
+    "fd": "zip->city_e2",
+    "g3": 0.018079999999999985,
+    "certified": true,
+    "samples": 1000,
+    "calls": 883
+   },
+   {
+    "fd": "state->zip",
+    "g3": 0.99234,
+    "certified": false,
+    "samples": 100,
+    "calls": 1
+   },
+   {
+    "fd": "zip->city_e8",
+    "g3": 0.06110000000000004,
+    "certified": false,
+    "samples": 6500,
+    "calls": 4064
+   },
+   {
+    "fd": "gender->area_code",
+    "g3": 0.97862,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "city_e2->f_name",
+    "g3": 0.74284,
+    "certified": false,
+    "samples": 100,
+    "calls": 308
+   },
+   {
+    "fd": "state->city_e8",
+    "g3": 0.90438,
+    "certified": false,
+    "samples": 100,
+    "calls": 42
+   },
+   {
+    "fd": "area_code->zip",
+    "g3": 0.98462,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "city_e2->zip",
+    "g3": 0.43257999999999996,
+    "certified": false,
+    "samples": 100,
+    "calls": 233
+   },
+   {
+    "fd": "city_e8->zip",
+    "g3": 0.46446,
+    "certified": false,
+    "samples": 100,
+    "calls": 180
+   },
+   {
+    "fd": "state->city_e2",
+    "g3": 0.89876,
+    "certified": false,
+    "samples": 100,
+    "calls": 49
+   },
+   {
+    "fd": "f_name->city",
+    "g3": 0.79964,
+    "certified": false,
+    "samples": 100,
+    "calls": 184
+   },
+   {
+    "fd": "city_e8->gender",
+    "g3": 0.32265999999999995,
+    "certified": false,
+    "samples": 100,
+    "calls": 116
+   },
+   {
+    "fd": "gender->city_e8",
+    "g3": 0.97986,
+    "certified": false,
+    "samples": 100,
+    "calls": 43
+   },
+   {
+    "fd": "city->f_name",
+    "g3": 0.74088,
+    "certified": false,
+    "samples": 100,
+    "calls": 267
+   },
+   {
+    "fd": "city_e8->area_code",
+    "g3": 0.47218000000000004,
+    "certified": false,
+    "samples": 100,
+    "calls": 200
+   },
+   {
+    "fd": "city_e8->f_name",
+    "g3": 0.7489,
+    "certified": false,
+    "samples": 100,
+    "calls": 246
+   },
+   {
+    "fd": "city->zip",
+    "g3": 0.42112000000000005,
+    "certified": false,
+    "samples": 100,
+    "calls": 181
+   },
+   {
+    "fd": "f_name->zip",
+    "g3": 0.80152,
+    "certified": false,
+    "samples": 100,
+    "calls": 142
+   },
+   {
+    "fd": "zip->state",
+    "g3": 0.0019599999999999618,
+    "certified": true,
+    "samples": 300,
+    "calls": 6
+   },
+   {
+    "fd": "area_code->city_e2",
+    "g3": 0.89576,
+    "certified": false,
+    "samples": 100,
+    "calls": 45
+   },
+   {
+    "fd": "city_e2->state",
+    "g3": 0.22204000000000002,
+    "certified": false,
+    "samples": 200,
+    "calls": 372
+   },
+   {
+    "fd": "area_code->gender",
+    "g3": 0.47482,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "area_code->city_e8",
+    "g3": 0.90156,
+    "certified": false,
+    "samples": 100,
+    "calls": 39
+   },
+   {
+    "fd": "gender->zip",
+    "g3": 0.9979,
+    "certified": false,
+    "samples": 100,
+    "calls": 0
+   },
+   {
+    "fd": "state->gender",
+    "g3": 0.48712,
+    "certified": false,
+    "samples": 100,
+    "calls": 15
+   },
+   {
+    "fd": "city_e2->area_code",
+    "g3": 0.44506,
+    "certified": false,
+    "samples": 100,
+    "calls": 163
+   },
+   {
+    "fd": "area_code->f_name",
+    "g3": 0.99138,
+    "certified": false,
+    "samples": 100,
+    "calls": 133
+   },
+   {
+    "fd": "zip->city",
+    "g3": 0.0020400000000000418,
+    "certified": true,
+    "samples": 300,
+    "calls": 125
+   },
+   {
+    "fd": "zip->gender",
+    "g3": 0.21077999999999997,
+    "certified": false,
+    "samples": 200,
+    "calls": 0
+   },
+   {
+    "fd": "f_name->state",
+    "g3": 0.75972,
+    "certified": false,
+    "samples": 100,
+    "calls": 128
+   },
+   {
+    "fd": "city_e8->state",
+    "g3": 0.26593999999999995,
+    "certified": false,
+    "samples": 100,
+    "calls": 160
+   },
+   {
+    "fd": "city->state",
+    "g3": 0.20598000000000005,
+    "certified": false,
+    "samples": 200,
+    "calls": 360
+   },
+   {
+    "fd": "f_name->area_code",
+    "g3": 0.78216,
+    "certified": false,
+    "samples": 100,
+    "calls": 165
+   },
+   {
+    "fd": "f_name->city_e2",
+    "g3": 0.79958,
+    "certified": false,
+    "samples": 100,
+    "calls": 178
+   },
+   {
+    "fd": "gender->city",
+    "g3": 0.97996,
+    "certified": false,
+    "samples": 100,
+    "calls": 37
+   },
+   {
+    "fd": "f_name->city_e8",
+    "g3": 0.79956,
+    "certified": false,
+    "samples": 100,
+    "calls": 214
+   }
+  ]
+ }
+]
