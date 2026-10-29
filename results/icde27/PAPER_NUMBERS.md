@@ -296,7 +296,7 @@
 - **E23 Tax rows sweep (x1-x16, both seeds)**: calls 10,087-10,492 (max/min 1.040; largest change vs the unrepeated table 3.7%); false certifications over all 20 runs 0; runs missing zip->city_e8 8
 - **E19 resolve arm (live LLM, one process)**: wall 73.0 min (model load 4 s, separate); LLM calls 6,653; summed call latency 73.0 min, median 0.62 s; exact decisions 2 true of 7; load avg 14-34
 - **E19 seed 0 normalized-label differences vs resolve**: 13/3333; oracle mapping differs across arms
-- **E19 certify arm seed 0 (live LLM, neighbour-only, declared nu_bar 0.01)**: wall 37.7 min (proxy 2 s); LLM calls 3,333 (E8 replay 3333); summed call latency 37.6 min, median 0.64 s; false certifications vs resolve arm 0, true FDs not certified 1; answers identical to the E8 cache 3324/3333; load avg 14-30
+- **E19 certify arm seed 0 (live LLM, neighbour-only, declared nu_bar 0.01)**: wall 37.7 min (proxy 2 s); LLM calls 3,333 (E8 replay 3333); summed call latency 37.6 min, median 0.64 s; false certifications vs resolve arm 0, true FDs not certified 1 (labcode->labeler U=0.04017); answers identical to the E8 cache 3324/3333; load avg 14-30
 - **E19 seed 1 normalized-label differences vs resolve**: 10/3392; oracle mapping differs across arms
 - **E19 certify arm seed 1 (live LLM, neighbour-only, declared nu_bar 0.01)**: wall 40.4 min (proxy 2 s); LLM calls 3,392 (E8 replay 3337); summed call latency 40.3 min, median 0.67 s; false certifications vs resolve arm 0, true FDs not certified 0; answers identical to the E8 cache 3385/3392; load avg 24-40
 - **E19 seed 2 normalized-label differences vs resolve**: 10/2385; oracle mapping differs across arms

@@ -974,7 +974,9 @@ def paper_numbers():
             add(f"E19 certify arm seed {c['seed']} (live LLM, neighbour-only, declared nu_bar 0.01)",
                 f"wall {c['wall_sec'] / 60:.1f} min (proxy {c['phases']['proxy_sec']:.0f} s); LLM calls {c['llm_calls']:,} "
                 f"(E8 replay {rep}); summed call latency {c['llm_sec_sum'] / 60:.1f} min, median {c['llm_sec_p50']:.2f} s; "
-                f"false certifications vs resolve arm {fp}, true FDs not certified {fn}; answers identical to the E8 cache "
+                f"false certifications vs resolve arm {fp}, true FDs not certified {fn}"
+                + "".join(f" ({f['fd']} U={f['ub']:.5f})" for f in c["fds"] if exact[f["fd"]] and not f["certified"])
+                + f"; answers identical to the E8 cache "
                 f"{same}/{len(c['answers'])}; load avg {min(x[1] for x in c['loadavg_1m']):.0f}-{max(x[1] for x in c['loadavg_1m']):.0f}")
         w = [c["wall_sec"] for c in e19c]
         add("E19 resolve wall / certify wall (mean over seeds)",
