@@ -946,8 +946,10 @@ def paper_numbers():
                 + f"g3 {', '.join(f'{f['g3']:.4f}' if f else 'absent' for f in pf)}, share of calls "
                 f"{', '.join(f'{f['calls'] / r['calls']:.2f}' if f else '-' for f, r in zip(pf, rr))}")
         rows = [r["calls"] for r in e23 if r["tag"].startswith("e23|rows_")]
+        x1 = {r["seed"]: r["calls"] for r in e23 if r["tag"] == "e23|rows_x1"}
+        rel = max(abs(r["calls"] / x1[r["seed"]] - 1) for r in e23 if r["tag"] in ("e23|rows_x4", "e23|rows_x16"))
         add("E23 Tax rows sweep (x1-x16, both seeds)", f"calls {min(rows):,}-{max(rows):,} "
-            f"(max/min {max(rows) / min(rows):.3f}); false certifications over all 20 runs "
+            f"(max/min {max(rows) / min(rows):.3f}; largest change vs the unrepeated table {100 * rel:.1f}%); false certifications over all 20 runs "
             f"{sum(len(r['false']) for r in e23)}; runs missing {probe} {sum(probe in r['missed'] for r in e23)}")
     e19c =[load(R / f"e19_certify_s{s}.json") for s in range(3) if (R / f"e19_certify_s{s}.json").exists()]
     if (R / "e19_resolve.json").exists() and e19c:          # E19 (pre-registered): live LLM, end to end

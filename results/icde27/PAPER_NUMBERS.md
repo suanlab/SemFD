@@ -293,7 +293,7 @@
 - **E23 Tax cands_16 (2 seeds)**: rows 50,000; distinct city 20,251, 20,210; candidates 16; calls 6,502, 3,880 (canon-all 38,793, 38,726; ratio 0.17, 0.10); samples 6,200, 2,900; false 0, missed 0 (-); probe zip->city_e8 g3 0.0617, absent, share of calls 0.45, -
 - **E23 Tax cands_32 (2 seeds)**: rows 50,000; distinct city 20,251, 20,210; candidates 32; calls 13,073, 11,236 (canon-all 38,793, 38,726; ratio 0.34, 0.29); samples 19,200, 14,500; false 0, missed 0 (-); probe zip->city_e8 g3 0.0617, 0.0611, share of calls 0.56, 0.53
 - **E23 Tax cands_50 (2 seeds)**: rows 50,000; distinct city 20,251, 20,210; candidates 50; calls 11,449, 12,394 (canon-all 38,793, 38,726; ratio 0.30, 0.32); samples 12,000, 13,700; false 0, missed 0 (-); probe zip->city_e8 g3 0.0617, 0.0611, share of calls 0.32, 0.33
-- **E23 Tax rows sweep (x1-x16, both seeds)**: calls 10,087-10,492 (max/min 1.040); false certifications over all 20 runs 0; runs missing zip->city_e8 8
+- **E23 Tax rows sweep (x1-x16, both seeds)**: calls 10,087-10,492 (max/min 1.040; largest change vs the unrepeated table 3.7%); false certifications over all 20 runs 0; runs missing zip->city_e8 8
 - **E19 resolve arm (live LLM, one process)**: wall 73.0 min (model load 4 s, separate); LLM calls 6,653; summed call latency 73.0 min, median 0.62 s; exact decisions 2 true of 7; load avg 14-34
 - **E19 seed 0 normalized-label differences vs resolve**: 13/3333; oracle mapping differs across arms
 - **E19 certify arm seed 0 (live LLM, neighbour-only, declared nu_bar 0.01)**: wall 37.7 min (proxy 2 s); LLM calls 3,333 (E8 replay 3333); summed call latency 37.6 min, median 0.64 s; false certifications vs resolve arm 0, true FDs not certified 1; answers identical to the E8 cache 3324/3333; load avg 14-30
