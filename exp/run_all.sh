@@ -114,6 +114,10 @@ fi
 # E18 (pre-registered variants: refine, refine-warm, proxy x audit, run-wide budget); same streams as E1b
 run e18_geonames16k exp/e18_variants.py --dataset geonames --kw "$G16" --tag _16k
 for d in tax ndc gpg; do run e18_$d exp/e18_variants.py --dataset $d; done
+# E24 (pre-registered): entity-group (modal) estimator under a complete inverse vs the system; same streams as E1b
+run e24_geonames16k exp/e24_group_baseline.py --dataset geonames --kw "$G16" --tag _16k
+for d in tax ndc gpg; do run e24_$d exp/e24_group_baseline.py --dataset $d; done
+run e24_geonames640k exp/e24_group_baseline.py --dataset geonames --kw '{"n_cities":128000,"source":"cities500.txt"}' --seeds 2 --tag _640k
 # E18 diagnostic (MODIFY.md H1/H2; exact witness means from the truth, diagnosis only) and its simulation
 run_shell e18_diag "$P exp/e18_diag_gpg.py && $P exp/e18_diag_sim.py"
 # E20 (pre-registered): N, D and |C| varied separately on GeoNames

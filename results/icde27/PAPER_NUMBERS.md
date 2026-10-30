@@ -294,6 +294,22 @@
 - **E23 Tax cands_32 (2 seeds)**: rows 50,000; distinct city 20,251, 20,210; candidates 32; calls 13,073, 11,236 (canon-all 38,793, 38,726; ratio 0.34, 0.29); samples 19,200, 14,500; false 0, missed 0 (-); probe zip->city_e8 g3 0.0617, 0.0611, share of calls 0.56, 0.53
 - **E23 Tax cands_50 (2 seeds)**: rows 50,000; distinct city 20,251, 20,210; candidates 50; calls 11,449, 12,394 (canon-all 38,793, 38,726; ratio 0.30, 0.32); samples 12,000, 13,700; false 0, missed 0 (-); probe zip->city_e8 g3 0.0617, 0.0611, share of calls 0.32, 0.33
 - **E23 Tax rows sweep (x1-x16, both seeds)**: calls 10,087-10,492 (max/min 1.040; largest change vs the unrepeated table 3.7%); false certifications over all 20 runs 0; runs missing zip->city_e8 8
+- **E24 geonames_16k plain (3 seeds, all unary candidates, complete inverse)**: false 0, missed 0 {}; calls/run 21,759 (fwd 15,597, inv 6,161); canon-all 42,453; equals the saved E18 plain calls in every run: True
+- **E24 geonames_16k group (3 seeds, all unary candidates, complete inverse)**: false 0, missed 0 {}; calls/run 46,543 (fwd 42,445, inv 4,097); canon-all 42,453; vs plain per run 2.04, 2.21, 2.17x (mean 2.14x)
+- **E24 geonames_16k costliest candidates for group (mean calls group vs plain)**: country->city 20,256 vs 61; country->admin1 5,708 vs 105; fcode->city 4,049 vs 47
+- **E24 tax plain (3 seeds, all unary candidates, complete inverse)**: false 0, missed 0 {}; calls/run 12,297 (fwd 10,015, inv 2,282); canon-all 84,575; equals the saved E18 plain calls in every run: True
+- **E24 tax group (3 seeds, all unary candidates, complete inverse)**: false 0, missed 0 {}; calls/run 86,701 (fwd 84,575, inv 2,127); canon-all 84,575; vs plain per run 6.84, 9.34, 5.81x (mean 7.33x)
+- **E24 tax costliest candidates for group (mean calls group vs plain)**: gender->city 40,594 vs 87; gender->f_name 38,589 vs 81; f_name->city 1,914 vs 234
+- **E24 ndc plain (3 seeds, all unary candidates, complete inverse)**: false 0, missed 0 {}; calls/run 6,305 (fwd 3,896, inv 2,409); canon-all 6,653; equals the saved E18 plain calls in every run: True
+- **E24 ndc group (3 seeds, all unary candidates, complete inverse)**: false 0, missed 0 {}; calls/run 7,871 (fwd 6,653, inv 1,218); canon-all 6,653; vs plain per run 1.20, 1.30, 1.25x (mean 1.25x)
+- **E24 ndc costliest candidates for group (mean calls group vs plain)**: appno->labeler 2,966 vs 11; labcode->labeler_e8 855 vs 600; labcode->labeler_e2 807 vs 436
+- **E24 gpg plain (3 seeds, all unary candidates, complete inverse)**: false 0, missed 3 {'name->sic': 3}; calls/run 21,871 (fwd 12,345, inv 9,527); canon-all 15,221; equals the saved E18 plain calls in every run: True
+- **E24 gpg group (3 seeds, all unary candidates, complete inverse)**: false 0, missed 0 {}; calls/run 17,631 (fwd 15,221, inv 2,410); canon-all 15,221; vs plain per run 0.79, 0.83, 0.79x (mean 0.81x)
+- **E24 gpg costliest candidates for group (mean calls group vs plain)**: size->name 7,728 vs 6; sic->name 4,409 vs 9; name->sic 3,189 vs 17,989
+- **E24 geonames_640k plain (2 seeds, all unary candidates, complete inverse)**: false 0, missed 0 {}; calls/run 31,188 (fwd 22,906, inv 8,282); canon-all 246,493; equals the saved E1b calls in every run: True
+- **E24 geonames_640k group (2 seeds, all unary candidates, complete inverse)**: false 0, missed 0 {}; calls/run 250,918 (fwd 246,393, inv 4,525); canon-all 246,493; vs plain per run 7.85, 8.25x (mean 8.05x)
+- **E24 geonames_640k costliest candidates for group (mean calls group vs plain)**: country->city 154,078 vs 108; fcode->city 27,008 vs 74; tz->city 23,196 vs 90
+- **E24 group vs plain, mean calls ratio per dataset (5 datasets)**: geonames_16k 2.14x, tax 7.33x, ndc 1.25x, gpg 0.81x, geonames_640k 8.05x; range 0.81-8.05x
 - **E19 resolve arm (live LLM, one process)**: wall 73.0 min (model load 4 s, separate); LLM calls 6,653; summed call latency 73.0 min, median 0.62 s; exact decisions 2 true of 7; load avg 14-34
 - **E19 seed 0 normalized-label differences vs resolve**: 13/3333; oracle mapping differs across arms
 - **E19 certify arm seed 0 (live LLM, neighbour-only, declared nu_bar 0.01)**: wall 37.7 min (proxy 2 s); LLM calls 3,333 (E8 replay 3333); summed call latency 37.6 min, median 0.64 s; false certifications vs resolve arm 0, true FDs not certified 1 (labcode->labeler U=0.04017); answers identical to the E8 cache 3324/3333; load avg 14-30

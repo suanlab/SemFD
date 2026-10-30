@@ -1,0 +1,2056 @@
+{
+ "args": {
+  "dataset": "gpg",
+  "kw": "{}",
+  "seeds": 3,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "theta0": 0.9,
+  "k": 5,
+  "tag": "",
+  "variants": [
+   "plain",
+   "group"
+  ]
+ },
+ "runs": [
+  {
+   "dataset": "gpg81586",
+   "seed": 0,
+   "rows": 81586,
+   "n_cands": 40,
+   "n_true": 10,
+   "variants": {
+    "plain": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 21677,
+     "calls_fwd_inv": [
+      12211,
+      9466
+     ],
+     "canon_all": 15221,
+     "sec": 5.294431382790208,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 500,
+       "calls": 2231,
+       "y_calls": null
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 400,
+       "calls": 1361,
+       "y_calls": null
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "certified": false,
+       "samples": 20000,
+       "calls": 17939,
+       "y_calls": null
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "certified": false,
+       "samples": 300,
+       "calls": 77,
+       "y_calls": null
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "certified": false,
+       "samples": 100,
+       "calls": 13,
+       "y_calls": null
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "certified": true,
+       "samples": 3400,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "certified": false,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 31,
+       "y_calls": null
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "certified": true,
+       "samples": 5200,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "certified": false,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "certified": false,
+       "samples": 100,
+       "calls": 9,
+       "y_calls": null
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "certified": false,
+       "samples": 200,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "certified": false,
+       "samples": 100,
+       "calls": 5,
+       "y_calls": null
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "certified": false,
+       "samples": 100,
+       "calls": 3,
+       "y_calls": null
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "certified": false,
+       "samples": 100,
+       "calls": 8,
+       "y_calls": null
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      }
+     ]
+    },
+    "group": {
+     "false": [],
+     "missed": [],
+     "n_cert": 10,
+     "calls": 17140,
+     "calls_fwd_inv": [
+      15221,
+      1919
+     ],
+     "canon_all": 15221,
+     "sec": 4.863370142877102,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 590,
+       "y_calls": 0
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 561,
+       "y_calls": 0
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "certified": true,
+       "samples": 1200,
+       "calls": 2176,
+       "y_calls": 0
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "certified": false,
+       "samples": 200,
+       "calls": 350,
+       "y_calls": 0
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "certified": false,
+       "samples": 100,
+       "calls": 164,
+       "y_calls": 0
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "certified": true,
+       "samples": 2000,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "certified": false,
+       "samples": 200,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 289,
+       "y_calls": 289
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "certified": true,
+       "samples": 1600,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "certified": false,
+       "samples": 200,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "certified": false,
+       "samples": 100,
+       "calls": 346,
+       "y_calls": 346
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "certified": false,
+       "samples": 100,
+       "calls": 4674,
+       "y_calls": 4674
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "certified": false,
+       "samples": 100,
+       "calls": 7945,
+       "y_calls": 7945
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "certified": false,
+       "samples": 100,
+       "calls": 45,
+       "y_calls": 45
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      }
+     ]
+    }
+   }
+  },
+  {
+   "dataset": "gpg81586",
+   "seed": 1,
+   "rows": 81586,
+   "n_cands": 40,
+   "n_true": 10,
+   "variants": {
+    "plain": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 22092,
+     "calls_fwd_inv": [
+      12456,
+      9636
+     ],
+     "canon_all": 15221,
+     "sec": 4.483427081257105,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 700,
+       "calls": 3025,
+       "y_calls": null
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 400,
+       "calls": 1347,
+       "y_calls": null
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "certified": false,
+       "samples": 20000,
+       "calls": 17591,
+       "y_calls": null
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "certified": false,
+       "samples": 200,
+       "calls": 55,
+       "y_calls": null
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "certified": false,
+       "samples": 100,
+       "calls": 14,
+       "y_calls": null
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "certified": true,
+       "samples": 7000,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "certified": false,
+       "samples": 400,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 28,
+       "y_calls": null
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "certified": true,
+       "samples": 2700,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "certified": false,
+       "samples": 400,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "certified": false,
+       "samples": 100,
+       "calls": 7,
+       "y_calls": null
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "certified": false,
+       "samples": 100,
+       "calls": 7,
+       "y_calls": null
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "certified": false,
+       "samples": 100,
+       "calls": 6,
+       "y_calls": null
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "certified": false,
+       "samples": 100,
+       "calls": 12,
+       "y_calls": null
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      }
+     ]
+    },
+    "group": {
+     "false": [],
+     "missed": [],
+     "n_cert": 10,
+     "calls": 18445,
+     "calls_fwd_inv": [
+      15221,
+      3224
+     ],
+     "canon_all": 15221,
+     "sec": 4.605497434735298,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 596,
+       "y_calls": 0
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 581,
+       "y_calls": 0
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "certified": true,
+       "samples": 2900,
+       "calls": 4870,
+       "y_calls": 0
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "certified": false,
+       "samples": 200,
+       "calls": 279,
+       "y_calls": 0
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "certified": false,
+       "samples": 100,
+       "calls": 147,
+       "y_calls": 0
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "certified": true,
+       "samples": 1300,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "certified": false,
+       "samples": 200,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 262,
+       "y_calls": 262
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "certified": true,
+       "samples": 1200,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "certified": false,
+       "samples": 200,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "certified": false,
+       "samples": 100,
+       "calls": 401,
+       "y_calls": 401
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "certified": false,
+       "samples": 100,
+       "calls": 4180,
+       "y_calls": 4180
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "certified": false,
+       "samples": 100,
+       "calls": 7088,
+       "y_calls": 7088
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "certified": false,
+       "samples": 100,
+       "calls": 41,
+       "y_calls": 41
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      }
+     ]
+    }
+   }
+  },
+  {
+   "dataset": "gpg81586",
+   "seed": 2,
+   "rows": 81586,
+   "n_cands": 40,
+   "n_true": 10,
+   "variants": {
+    "plain": {
+     "false": [],
+     "missed": [
+      "name->sic"
+     ],
+     "n_cert": 9,
+     "calls": 21845,
+     "calls_fwd_inv": [
+      12367,
+      9478
+     ],
+     "canon_all": 15221,
+     "sec": 5.55861478112638,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 400,
+       "calls": 1881,
+       "y_calls": null
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 400,
+       "calls": 1383,
+       "y_calls": null
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "certified": false,
+       "samples": 20000,
+       "calls": 18436,
+       "y_calls": null
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "certified": false,
+       "samples": 200,
+       "calls": 49,
+       "y_calls": null
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "certified": false,
+       "samples": 100,
+       "calls": 18,
+       "y_calls": null
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "certified": true,
+       "samples": 5000,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "certified": false,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 29,
+       "y_calls": null
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "certified": true,
+       "samples": 3800,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "certified": false,
+       "samples": 400,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "certified": false,
+       "samples": 200,
+       "calls": 16,
+       "y_calls": null
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "certified": false,
+       "samples": 200,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "certified": false,
+       "samples": 100,
+       "calls": 15,
+       "y_calls": null
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "certified": false,
+       "samples": 100,
+       "calls": 8,
+       "y_calls": null
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "certified": false,
+       "samples": 100,
+       "calls": 10,
+       "y_calls": null
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      }
+     ]
+    },
+    "group": {
+     "false": [],
+     "missed": [],
+     "n_cert": 10,
+     "calls": 17307,
+     "calls_fwd_inv": [
+      15221,
+      2086
+     ],
+     "canon_all": 15221,
+     "sec": 5.65518369525671,
+     "fds": [
+      {
+       "fd": "name->empid",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 594,
+       "y_calls": 0
+      },
+      {
+       "fd": "name->postcode",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 562,
+       "y_calls": 0
+      },
+      {
+       "fd": "name->sic",
+       "g3": 0.037334836859265086,
+       "certified": true,
+       "samples": 1400,
+       "calls": 2522,
+       "y_calls": 0
+      },
+      {
+       "fd": "name->size",
+       "g3": 0.152734537788346,
+       "certified": false,
+       "samples": 200,
+       "calls": 350,
+       "y_calls": 0
+      },
+      {
+       "fd": "name->year",
+       "g3": 0.8310249307479225,
+       "certified": false,
+       "samples": 100,
+       "calls": 159,
+       "y_calls": 0
+      },
+      {
+       "fd": "cn->empid",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "cn->postcode",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "cn->sic",
+       "g3": 0.037334836859265086,
+       "certified": true,
+       "samples": 2900,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "cn->size",
+       "g3": 0.152734537788346,
+       "certified": false,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "cn->year",
+       "g3": 0.8310249307479225,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "empid->name",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 287,
+       "y_calls": 287
+      },
+      {
+       "fd": "empid->cn",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "empid->postcode",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "empid->sic",
+       "g3": 0.037334836859265086,
+       "certified": true,
+       "samples": 1000,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "empid->size",
+       "g3": 0.152734537788346,
+       "certified": false,
+       "samples": 200,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "empid->year",
+       "g3": 0.8310249307479225,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "postcode->name",
+       "g3": 0.3173215992939965,
+       "certified": false,
+       "samples": 100,
+       "calls": 289,
+       "y_calls": 289
+      },
+      {
+       "fd": "postcode->cn",
+       "g3": 0.3173215992939965,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "postcode->empid",
+       "g3": 0.3173215992939965,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "postcode->sic",
+       "g3": 0.2783565807859192,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "postcode->size",
+       "g3": 0.2846444242884809,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "postcode->year",
+       "g3": 0.8418356090505724,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "sic->name",
+       "g3": 0.7923173093422891,
+       "certified": false,
+       "samples": 100,
+       "calls": 4374,
+       "y_calls": 4374
+      },
+      {
+       "fd": "sic->cn",
+       "g3": 0.7923173093422891,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "sic->empid",
+       "g3": 0.7923173093422891,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "sic->postcode",
+       "g3": 0.7592479101806683,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "sic->size",
+       "g3": 0.45966219694555444,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "sic->year",
+       "g3": 0.8496310641531635,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "size->name",
+       "g3": 0.9992890937170593,
+       "certified": false,
+       "samples": 100,
+       "calls": 8152,
+       "y_calls": 8152
+      },
+      {
+       "fd": "size->cn",
+       "g3": 0.9992890937170593,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "size->empid",
+       "g3": 0.9992890937170593,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "size->postcode",
+       "g3": 0.9939450395901258,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "size->sic",
+       "g3": 0.9404799843110337,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "size->year",
+       "g3": 0.8750398352658544,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "year->name",
+       "g3": 0.9998774299512171,
+       "certified": false,
+       "samples": 100,
+       "calls": 18,
+       "y_calls": 18
+      },
+      {
+       "fd": "year->cn",
+       "g3": 0.9998774299512171,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "year->empid",
+       "g3": 0.9998774299512171,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "year->postcode",
+       "g3": 0.9952565391121025,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "year->sic",
+       "g3": 0.9408967224768956,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "year->size",
+       "g3": 0.5436717083813399,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "peak_rss_mb": 1788.03125
+}

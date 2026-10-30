@@ -1,0 +1,3298 @@
+{
+ "args": {
+  "dataset": "ndc",
+  "kw": "{}",
+  "seeds": 3,
+  "delta": 0.05,
+  "alpha": 0.05,
+  "theta0": 0.9,
+  "k": 5,
+  "tag": "",
+  "variants": [
+   "plain",
+   "group"
+  ]
+ },
+ "runs": [
+  {
+   "dataset": "ndc116620",
+   "seed": 0,
+   "rows": 116620,
+   "n_cands": 66,
+   "n_true": 10,
+   "variants": {
+    "plain": {
+     "false": [],
+     "missed": [],
+     "n_cert": 10,
+     "calls": 6548,
+     "calls_fwd_inv": [
+      4018,
+      2530
+     ],
+     "canon_all": 6653,
+     "sec": 10.212517319247127,
+     "fds": [
+      {
+       "fd": "labcode->labeler",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 237,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->appno",
+       "g3": 0.6144743611730407,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->brand",
+       "g3": 0.8807065683416224,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->generic",
+       "g3": 0.8202538158120392,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->mktcat",
+       "g3": 0.09551534899674152,
+       "certified": false,
+       "samples": 1200,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->ptype",
+       "g3": 0.02483279025896068,
+       "certified": true,
+       "samples": 1200,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->labeler_e2",
+       "g3": 0.0202023666609501,
+       "certified": true,
+       "samples": 1100,
+       "calls": 432,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->labeler_e8",
+       "g3": 0.0812896587206311,
+       "certified": false,
+       "samples": 1800,
+       "calls": 478,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler->labcode",
+       "g3": 0.12845138055222094,
+       "certified": false,
+       "samples": 600,
+       "calls": 620,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler->appno",
+       "g3": 0.6233064654433202,
+       "certified": false,
+       "samples": 100,
+       "calls": 32,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler->brand",
+       "g3": 0.8895129480363574,
+       "certified": false,
+       "samples": 100,
+       "calls": 39,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler->generic",
+       "g3": 0.8301920768307323,
+       "certified": false,
+       "samples": 100,
+       "calls": 43,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler->mktcat",
+       "g3": 0.09980277825415884,
+       "certified": false,
+       "samples": 1100,
+       "calls": 568,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler->ptype",
+       "g3": 0.0258446235637112,
+       "certified": true,
+       "samples": 1900,
+       "calls": 665,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->labcode",
+       "g3": 0.6711713256731264,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->labeler",
+       "g3": 0.6527096552906877,
+       "certified": false,
+       "samples": 100,
+       "calls": 11,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->brand",
+       "g3": 0.4967672783399074,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->generic",
+       "g3": 0.40439032755959525,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->mktcat",
+       "g3": 0.02904304578974448,
+       "certified": true,
+       "samples": 700,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->ptype",
+       "g3": 0.016412279197393298,
+       "certified": true,
+       "samples": 500,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->labeler_e2",
+       "g3": 0.6579917681358258,
+       "certified": false,
+       "samples": 100,
+       "calls": 12,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->labeler_e8",
+       "g3": 0.6732978905848053,
+       "certified": false,
+       "samples": 100,
+       "calls": 9,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->labcode",
+       "g3": 0.4716943920425313,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->labeler",
+       "g3": 0.45790601955067745,
+       "certified": false,
+       "samples": 100,
+       "calls": 14,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->appno",
+       "g3": 0.34377465271823016,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->generic",
+       "g3": 0.08426513462527874,
+       "certified": false,
+       "samples": 1500,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->mktcat",
+       "g3": 0.030586520322414712,
+       "certified": true,
+       "samples": 1700,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->ptype",
+       "g3": 0.010847196021265604,
+       "certified": true,
+       "samples": 500,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->labeler_e2",
+       "g3": 0.46309380895215224,
+       "certified": false,
+       "samples": 100,
+       "calls": 11,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->labeler_e8",
+       "g3": 0.47960898645172356,
+       "certified": false,
+       "samples": 100,
+       "calls": 13,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->labcode",
+       "g3": 0.6718744640713428,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->labeler",
+       "g3": 0.6590207511576058,
+       "certified": false,
+       "samples": 100,
+       "calls": 17,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->appno",
+       "g3": 0.407357228605728,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->brand",
+       "g3": 0.3298233579145944,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->mktcat",
+       "g3": 0.06799862802263767,
+       "certified": false,
+       "samples": 5500,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->ptype",
+       "g3": 0.023212141999657043,
+       "certified": true,
+       "samples": 700,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->labeler_e2",
+       "g3": 0.6632310066883896,
+       "certified": false,
+       "samples": 100,
+       "calls": 13,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->labeler_e8",
+       "g3": 0.6773709483793517,
+       "certified": false,
+       "samples": 100,
+       "calls": 12,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->labcode",
+       "g3": 0.92124849939976,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->labeler",
+       "g3": 0.8992625621677243,
+       "certified": false,
+       "samples": 100,
+       "calls": 12,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->appno",
+       "g3": 0.7715228948722346,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->brand",
+       "g3": 0.9838106671239925,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->generic",
+       "g3": 0.9653918710341279,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->ptype",
+       "g3": 0.07482421540044593,
+       "certified": false,
+       "samples": 4100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->labeler_e2",
+       "g3": 0.9010032584462356,
+       "certified": false,
+       "samples": 100,
+       "calls": 10,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->labeler_e8",
+       "g3": 0.9062939461498886,
+       "certified": false,
+       "samples": 100,
+       "calls": 9,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->labcode",
+       "g3": 0.9300034299434059,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->labeler",
+       "g3": 0.9088149545532499,
+       "certified": false,
+       "samples": 100,
+       "calls": 12,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->appno",
+       "g3": 0.8480106328245585,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->brand",
+       "g3": 0.9913908420511062,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->generic",
+       "g3": 0.9765992111130166,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->mktcat",
+       "g3": 0.27228605728005484,
+       "certified": false,
+       "samples": 200,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->labeler_e2",
+       "g3": 0.9101183330475047,
+       "certified": false,
+       "samples": 100,
+       "calls": 11,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->labeler_e8",
+       "g3": 0.9138398216429429,
+       "certified": false,
+       "samples": 100,
+       "calls": 11,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e2->labcode",
+       "g3": 0.14623563711198762,
+       "certified": false,
+       "samples": 400,
+       "calls": 168,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e2->appno",
+       "g3": 0.6298662322071686,
+       "certified": false,
+       "samples": 100,
+       "calls": 23,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e2->brand",
+       "g3": 0.8912279197393242,
+       "certified": false,
+       "samples": 100,
+       "calls": 21,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e2->generic",
+       "g3": 0.8329703309895387,
+       "certified": false,
+       "samples": 100,
+       "calls": 27,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e2->mktcat",
+       "g3": 0.11216772423255017,
+       "certified": false,
+       "samples": 500,
+       "calls": 141,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e2->ptype",
+       "g3": 0.03616875321557189,
+       "certified": true,
+       "samples": 11800,
+       "calls": 2073,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e8->labcode",
+       "g3": 0.20042016806722684,
+       "certified": false,
+       "samples": 200,
+       "calls": 48,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e8->appno",
+       "g3": 0.6490910649974275,
+       "certified": false,
+       "samples": 100,
+       "calls": 11,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e8->brand",
+       "g3": 0.8962956611215915,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e8->generic",
+       "g3": 0.8420939804493226,
+       "certified": false,
+       "samples": 100,
+       "calls": 7,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e8->mktcat",
+       "g3": 0.1484308008917853,
+       "certified": false,
+       "samples": 500,
+       "calls": 81,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e8->ptype",
+       "g3": 0.0667295489624421,
+       "certified": false,
+       "samples": 5900,
+       "calls": 657,
+       "y_calls": null
+      }
+     ]
+    },
+    "group": {
+     "false": [],
+     "missed": [],
+     "n_cert": 10,
+     "calls": 7845,
+     "calls_fwd_inv": [
+      6653,
+      1192
+     ],
+     "canon_all": 6653,
+     "sec": 11.14223519898951,
+     "fds": [
+      {
+       "fd": "labcode->labeler",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 567,
+       "y_calls": 567
+      },
+      {
+       "fd": "labcode->appno",
+       "g3": 0.6144743611730407,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "labcode->brand",
+       "g3": 0.8807065683416224,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "labcode->generic",
+       "g3": 0.8202538158120392,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "labcode->mktcat",
+       "g3": 0.09551534899674152,
+       "certified": false,
+       "samples": 400,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "labcode->ptype",
+       "g3": 0.02483279025896068,
+       "certified": true,
+       "samples": 800,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "labcode->labeler_e2",
+       "g3": 0.0202023666609501,
+       "certified": true,
+       "samples": 600,
+       "calls": 762,
+       "y_calls": 762
+      },
+      {
+       "fd": "labcode->labeler_e8",
+       "g3": 0.0812896587206311,
+       "certified": false,
+       "samples": 500,
+       "calls": 874,
+       "y_calls": 874
+      },
+      {
+       "fd": "labeler->labcode",
+       "g3": 0.12845138055222094,
+       "certified": false,
+       "samples": 300,
+       "calls": 211,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler->appno",
+       "g3": 0.6233064654433202,
+       "certified": false,
+       "samples": 100,
+       "calls": 49,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler->brand",
+       "g3": 0.8895129480363574,
+       "certified": false,
+       "samples": 100,
+       "calls": 51,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler->generic",
+       "g3": 0.8301920768307323,
+       "certified": false,
+       "samples": 100,
+       "calls": 44,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler->mktcat",
+       "g3": 0.09980277825415884,
+       "certified": false,
+       "samples": 300,
+       "calls": 161,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler->ptype",
+       "g3": 0.0258446235637112,
+       "certified": true,
+       "samples": 1000,
+       "calls": 335,
+       "y_calls": 0
+      },
+      {
+       "fd": "appno->labcode",
+       "g3": 0.6711713256731264,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "appno->labeler",
+       "g3": 0.6527096552906877,
+       "certified": false,
+       "samples": 100,
+       "calls": 3009,
+       "y_calls": 3009
+      },
+      {
+       "fd": "appno->brand",
+       "g3": 0.4967672783399074,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "appno->generic",
+       "g3": 0.40439032755959525,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "appno->mktcat",
+       "g3": 0.02904304578974448,
+       "certified": true,
+       "samples": 700,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "appno->ptype",
+       "g3": 0.016412279197393298,
+       "certified": true,
+       "samples": 500,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "appno->labeler_e2",
+       "g3": 0.6579917681358258,
+       "certified": false,
+       "samples": 100,
+       "calls": 119,
+       "y_calls": 119
+      },
+      {
+       "fd": "appno->labeler_e8",
+       "g3": 0.6732978905848053,
+       "certified": false,
+       "samples": 100,
+       "calls": 49,
+       "y_calls": 49
+      },
+      {
+       "fd": "brand->labcode",
+       "g3": 0.4716943920425313,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "brand->labeler",
+       "g3": 0.45790601955067745,
+       "certified": false,
+       "samples": 100,
+       "calls": 99,
+       "y_calls": 99
+      },
+      {
+       "fd": "brand->appno",
+       "g3": 0.34377465271823016,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "brand->generic",
+       "g3": 0.08426513462527874,
+       "certified": false,
+       "samples": 700,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "brand->mktcat",
+       "g3": 0.030586520322414712,
+       "certified": true,
+       "samples": 900,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "brand->ptype",
+       "g3": 0.010847196021265604,
+       "certified": true,
+       "samples": 400,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "brand->labeler_e2",
+       "g3": 0.46309380895215224,
+       "certified": false,
+       "samples": 100,
+       "calls": 34,
+       "y_calls": 34
+      },
+      {
+       "fd": "brand->labeler_e8",
+       "g3": 0.47960898645172356,
+       "certified": false,
+       "samples": 100,
+       "calls": 11,
+       "y_calls": 11
+      },
+      {
+       "fd": "generic->labcode",
+       "g3": 0.6718744640713428,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "generic->labeler",
+       "g3": 0.6590207511576058,
+       "certified": false,
+       "samples": 100,
+       "calls": 72,
+       "y_calls": 72
+      },
+      {
+       "fd": "generic->appno",
+       "g3": 0.407357228605728,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "generic->brand",
+       "g3": 0.3298233579145944,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "generic->mktcat",
+       "g3": 0.06799862802263767,
+       "certified": false,
+       "samples": 1700,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "generic->ptype",
+       "g3": 0.023212141999657043,
+       "certified": true,
+       "samples": 700,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "generic->labeler_e2",
+       "g3": 0.6632310066883896,
+       "certified": false,
+       "samples": 100,
+       "calls": 40,
+       "y_calls": 40
+      },
+      {
+       "fd": "generic->labeler_e8",
+       "g3": 0.6773709483793517,
+       "certified": false,
+       "samples": 100,
+       "calls": 41,
+       "y_calls": 41
+      },
+      {
+       "fd": "mktcat->labcode",
+       "g3": 0.92124849939976,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "mktcat->labeler",
+       "g3": 0.8992625621677243,
+       "certified": false,
+       "samples": 100,
+       "calls": 738,
+       "y_calls": 738
+      },
+      {
+       "fd": "mktcat->appno",
+       "g3": 0.7715228948722346,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "mktcat->brand",
+       "g3": 0.9838106671239925,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "mktcat->generic",
+       "g3": 0.9653918710341279,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "mktcat->ptype",
+       "g3": 0.07482421540044593,
+       "certified": false,
+       "samples": 900,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "mktcat->labeler_e2",
+       "g3": 0.9010032584462356,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "mktcat->labeler_e8",
+       "g3": 0.9062939461498886,
+       "certified": false,
+       "samples": 100,
+       "calls": 1,
+       "y_calls": 1
+      },
+      {
+       "fd": "ptype->labcode",
+       "g3": 0.9300034299434059,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "ptype->labeler",
+       "g3": 0.9088149545532499,
+       "certified": false,
+       "samples": 100,
+       "calls": 30,
+       "y_calls": 30
+      },
+      {
+       "fd": "ptype->appno",
+       "g3": 0.8480106328245585,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "ptype->brand",
+       "g3": 0.9913908420511062,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "ptype->generic",
+       "g3": 0.9765992111130166,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "ptype->mktcat",
+       "g3": 0.27228605728005484,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "ptype->labeler_e2",
+       "g3": 0.9101183330475047,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "ptype->labeler_e8",
+       "g3": 0.9138398216429429,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e2->labcode",
+       "g3": 0.14623563711198762,
+       "certified": false,
+       "samples": 200,
+       "calls": 42,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e2->appno",
+       "g3": 0.6298662322071686,
+       "certified": false,
+       "samples": 100,
+       "calls": 24,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e2->brand",
+       "g3": 0.8912279197393242,
+       "certified": false,
+       "samples": 100,
+       "calls": 18,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e2->generic",
+       "g3": 0.8329703309895387,
+       "certified": false,
+       "samples": 100,
+       "calls": 19,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e2->mktcat",
+       "g3": 0.11216772423255017,
+       "certified": false,
+       "samples": 300,
+       "calls": 53,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e2->ptype",
+       "g3": 0.03616875321557189,
+       "certified": true,
+       "samples": 900,
+       "calls": 136,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e8->labcode",
+       "g3": 0.20042016806722684,
+       "certified": false,
+       "samples": 200,
+       "calls": 34,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e8->appno",
+       "g3": 0.6490910649974275,
+       "certified": false,
+       "samples": 100,
+       "calls": 12,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e8->brand",
+       "g3": 0.8962956611215915,
+       "certified": false,
+       "samples": 100,
+       "calls": 11,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e8->generic",
+       "g3": 0.8420939804493226,
+       "certified": false,
+       "samples": 100,
+       "calls": 13,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e8->mktcat",
+       "g3": 0.1484308008917853,
+       "certified": false,
+       "samples": 200,
+       "calls": 37,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e8->ptype",
+       "g3": 0.0667295489624421,
+       "certified": false,
+       "samples": 1000,
+       "calls": 149,
+       "y_calls": 0
+      }
+     ]
+    }
+   }
+  },
+  {
+   "dataset": "ndc116620",
+   "seed": 1,
+   "rows": 116620,
+   "n_cands": 66,
+   "n_true": 10,
+   "variants": {
+    "plain": {
+     "false": [],
+     "missed": [],
+     "n_cert": 10,
+     "calls": 6042,
+     "calls_fwd_inv": [
+      3790,
+      2252
+     ],
+     "canon_all": 6653,
+     "sec": 8.984306868165731,
+     "fds": [
+      {
+       "fd": "labcode->labeler",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 224,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->appno",
+       "g3": 0.6144743611730407,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->brand",
+       "g3": 0.8807065683416224,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->generic",
+       "g3": 0.8202538158120392,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->mktcat",
+       "g3": 0.09551534899674152,
+       "certified": false,
+       "samples": 1000,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->ptype",
+       "g3": 0.02483279025896068,
+       "certified": true,
+       "samples": 900,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->labeler_e2",
+       "g3": 0.02025381581203911,
+       "certified": true,
+       "samples": 1100,
+       "calls": 479,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->labeler_e8",
+       "g3": 0.07918881838449665,
+       "certified": false,
+       "samples": 3200,
+       "calls": 732,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler->labcode",
+       "g3": 0.12845138055222094,
+       "certified": false,
+       "samples": 400,
+       "calls": 455,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler->appno",
+       "g3": 0.6233064654433202,
+       "certified": false,
+       "samples": 100,
+       "calls": 33,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler->brand",
+       "g3": 0.8895129480363574,
+       "certified": false,
+       "samples": 100,
+       "calls": 45,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler->generic",
+       "g3": 0.8301920768307323,
+       "certified": false,
+       "samples": 100,
+       "calls": 55,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler->mktcat",
+       "g3": 0.09980277825415884,
+       "certified": false,
+       "samples": 900,
+       "calls": 427,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler->ptype",
+       "g3": 0.0258446235637112,
+       "certified": true,
+       "samples": 1200,
+       "calls": 493,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->labcode",
+       "g3": 0.6711713256731264,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->labeler",
+       "g3": 0.6527096552906877,
+       "certified": false,
+       "samples": 100,
+       "calls": 13,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->brand",
+       "g3": 0.4967672783399074,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->generic",
+       "g3": 0.40439032755959525,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->mktcat",
+       "g3": 0.02904304578974448,
+       "certified": true,
+       "samples": 1200,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->ptype",
+       "g3": 0.016412279197393298,
+       "certified": true,
+       "samples": 600,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->labeler_e2",
+       "g3": 0.6575030012004802,
+       "certified": false,
+       "samples": 100,
+       "calls": 9,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->labeler_e8",
+       "g3": 0.6725947521865889,
+       "certified": false,
+       "samples": 100,
+       "calls": 7,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->labcode",
+       "g3": 0.4716943920425313,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->labeler",
+       "g3": 0.45790601955067745,
+       "certified": false,
+       "samples": 100,
+       "calls": 17,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->appno",
+       "g3": 0.34377465271823016,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->generic",
+       "g3": 0.08426513462527874,
+       "certified": false,
+       "samples": 900,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->mktcat",
+       "g3": 0.030586520322414712,
+       "certified": true,
+       "samples": 600,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->ptype",
+       "g3": 0.010847196021265604,
+       "certified": true,
+       "samples": 300,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->labeler_e2",
+       "g3": 0.4632910306979935,
+       "certified": false,
+       "samples": 100,
+       "calls": 11,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->labeler_e8",
+       "g3": 0.478391356542617,
+       "certified": false,
+       "samples": 100,
+       "calls": 7,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->labcode",
+       "g3": 0.6718744640713428,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->labeler",
+       "g3": 0.6590207511576058,
+       "certified": false,
+       "samples": 100,
+       "calls": 14,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->appno",
+       "g3": 0.407357228605728,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->brand",
+       "g3": 0.3298233579145944,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->mktcat",
+       "g3": 0.06799862802263767,
+       "certified": false,
+       "samples": 9700,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->ptype",
+       "g3": 0.023212141999657043,
+       "certified": true,
+       "samples": 1100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->labeler_e2",
+       "g3": 0.6635397015949237,
+       "certified": false,
+       "samples": 100,
+       "calls": 8,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->labeler_e8",
+       "g3": 0.6770365288972732,
+       "certified": false,
+       "samples": 100,
+       "calls": 9,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->labcode",
+       "g3": 0.92124849939976,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->labeler",
+       "g3": 0.8992625621677243,
+       "certified": false,
+       "samples": 100,
+       "calls": 7,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->appno",
+       "g3": 0.7715228948722346,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->brand",
+       "g3": 0.9838106671239925,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->generic",
+       "g3": 0.9653918710341279,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->ptype",
+       "g3": 0.07482421540044593,
+       "certified": false,
+       "samples": 2600,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->labeler_e2",
+       "g3": 0.9008489109929686,
+       "certified": false,
+       "samples": 100,
+       "calls": 11,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->labeler_e8",
+       "g3": 0.9057280054879094,
+       "certified": false,
+       "samples": 100,
+       "calls": 15,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->labcode",
+       "g3": 0.9300034299434059,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->labeler",
+       "g3": 0.9088149545532499,
+       "certified": false,
+       "samples": 100,
+       "calls": 5,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->appno",
+       "g3": 0.8480106328245585,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->brand",
+       "g3": 0.9913908420511062,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->generic",
+       "g3": 0.9765992111130166,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->mktcat",
+       "g3": 0.27228605728005484,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->labeler_e2",
+       "g3": 0.9099296861601783,
+       "certified": false,
+       "samples": 100,
+       "calls": 9,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->labeler_e8",
+       "g3": 0.9134453781512605,
+       "certified": false,
+       "samples": 100,
+       "calls": 10,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e2->labcode",
+       "g3": 0.1466215057451552,
+       "certified": false,
+       "samples": 400,
+       "calls": 181,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e2->appno",
+       "g3": 0.6298662322071686,
+       "certified": false,
+       "samples": 100,
+       "calls": 34,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e2->brand",
+       "g3": 0.891399416909621,
+       "certified": false,
+       "samples": 100,
+       "calls": 50,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e2->generic",
+       "g3": 0.8332704510375579,
+       "certified": false,
+       "samples": 100,
+       "calls": 17,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e2->mktcat",
+       "g3": 0.11191047847710511,
+       "certified": false,
+       "samples": 600,
+       "calls": 154,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e2->ptype",
+       "g3": 0.0361944777911164,
+       "certified": true,
+       "samples": 11600,
+       "calls": 2142,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e8->labcode",
+       "g3": 0.19859372320356716,
+       "certified": false,
+       "samples": 200,
+       "calls": 26,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e8->appno",
+       "g3": 0.6485937232035671,
+       "certified": false,
+       "samples": 100,
+       "calls": 6,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e8->brand",
+       "g3": 0.8963299605556508,
+       "certified": false,
+       "samples": 100,
+       "calls": 9,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e8->generic",
+       "g3": 0.8422140284685302,
+       "certified": false,
+       "samples": 100,
+       "calls": 4,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e8->mktcat",
+       "g3": 0.1466472303206997,
+       "certified": false,
+       "samples": 300,
+       "calls": 33,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e8->ptype",
+       "g3": 0.06612930886640367,
+       "certified": false,
+       "samples": 2400,
+       "calls": 291,
+       "y_calls": null
+      }
+     ]
+    },
+    "group": {
+     "false": [],
+     "missed": [],
+     "n_cert": 10,
+     "calls": 7870,
+     "calls_fwd_inv": [
+      6653,
+      1217
+     ],
+     "canon_all": 6653,
+     "sec": 11.208199312910438,
+     "fds": [
+      {
+       "fd": "labcode->labeler",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 535,
+       "y_calls": 535
+      },
+      {
+       "fd": "labcode->appno",
+       "g3": 0.6144743611730407,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "labcode->brand",
+       "g3": 0.8807065683416224,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "labcode->generic",
+       "g3": 0.8202538158120392,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "labcode->mktcat",
+       "g3": 0.09551534899674152,
+       "certified": false,
+       "samples": 400,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "labcode->ptype",
+       "g3": 0.02483279025896068,
+       "certified": true,
+       "samples": 600,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "labcode->labeler_e2",
+       "g3": 0.02025381581203911,
+       "certified": true,
+       "samples": 500,
+       "calls": 804,
+       "y_calls": 804
+      },
+      {
+       "fd": "labcode->labeler_e8",
+       "g3": 0.07918881838449665,
+       "certified": false,
+       "samples": 500,
+       "calls": 835,
+       "y_calls": 835
+      },
+      {
+       "fd": "labeler->labcode",
+       "g3": 0.12845138055222094,
+       "certified": false,
+       "samples": 300,
+       "calls": 234,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler->appno",
+       "g3": 0.6233064654433202,
+       "certified": false,
+       "samples": 100,
+       "calls": 44,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler->brand",
+       "g3": 0.8895129480363574,
+       "certified": false,
+       "samples": 100,
+       "calls": 58,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler->generic",
+       "g3": 0.8301920768307323,
+       "certified": false,
+       "samples": 100,
+       "calls": 54,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler->mktcat",
+       "g3": 0.09980277825415884,
+       "certified": false,
+       "samples": 300,
+       "calls": 122,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler->ptype",
+       "g3": 0.0258446235637112,
+       "certified": true,
+       "samples": 700,
+       "calls": 280,
+       "y_calls": 0
+      },
+      {
+       "fd": "appno->labcode",
+       "g3": 0.6711713256731264,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "appno->labeler",
+       "g3": 0.6527096552906877,
+       "certified": false,
+       "samples": 100,
+       "calls": 2909,
+       "y_calls": 2909
+      },
+      {
+       "fd": "appno->brand",
+       "g3": 0.4967672783399074,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "appno->generic",
+       "g3": 0.40439032755959525,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "appno->mktcat",
+       "g3": 0.02904304578974448,
+       "certified": true,
+       "samples": 900,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "appno->ptype",
+       "g3": 0.016412279197393298,
+       "certified": true,
+       "samples": 500,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "appno->labeler_e2",
+       "g3": 0.6575030012004802,
+       "certified": false,
+       "samples": 100,
+       "calls": 262,
+       "y_calls": 262
+      },
+      {
+       "fd": "appno->labeler_e8",
+       "g3": 0.6725947521865889,
+       "certified": false,
+       "samples": 100,
+       "calls": 73,
+       "y_calls": 73
+      },
+      {
+       "fd": "brand->labcode",
+       "g3": 0.4716943920425313,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "brand->labeler",
+       "g3": 0.45790601955067745,
+       "certified": false,
+       "samples": 100,
+       "calls": 25,
+       "y_calls": 25
+      },
+      {
+       "fd": "brand->appno",
+       "g3": 0.34377465271823016,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "brand->generic",
+       "g3": 0.08426513462527874,
+       "certified": false,
+       "samples": 500,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "brand->mktcat",
+       "g3": 0.030586520322414712,
+       "certified": true,
+       "samples": 700,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "brand->ptype",
+       "g3": 0.010847196021265604,
+       "certified": true,
+       "samples": 400,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "brand->labeler_e2",
+       "g3": 0.4632910306979935,
+       "certified": false,
+       "samples": 100,
+       "calls": 14,
+       "y_calls": 14
+      },
+      {
+       "fd": "brand->labeler_e8",
+       "g3": 0.478391356542617,
+       "certified": false,
+       "samples": 100,
+       "calls": 153,
+       "y_calls": 153
+      },
+      {
+       "fd": "generic->labcode",
+       "g3": 0.6718744640713428,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "generic->labeler",
+       "g3": 0.6590207511576058,
+       "certified": false,
+       "samples": 100,
+       "calls": 66,
+       "y_calls": 66
+      },
+      {
+       "fd": "generic->appno",
+       "g3": 0.407357228605728,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "generic->brand",
+       "g3": 0.3298233579145944,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "generic->mktcat",
+       "g3": 0.06799862802263767,
+       "certified": false,
+       "samples": 1700,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "generic->ptype",
+       "g3": 0.023212141999657043,
+       "certified": true,
+       "samples": 700,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "generic->labeler_e2",
+       "g3": 0.6635397015949237,
+       "certified": false,
+       "samples": 100,
+       "calls": 48,
+       "y_calls": 48
+      },
+      {
+       "fd": "generic->labeler_e8",
+       "g3": 0.6770365288972732,
+       "certified": false,
+       "samples": 100,
+       "calls": 22,
+       "y_calls": 22
+      },
+      {
+       "fd": "mktcat->labcode",
+       "g3": 0.92124849939976,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "mktcat->labeler",
+       "g3": 0.8992625621677243,
+       "certified": false,
+       "samples": 100,
+       "calls": 699,
+       "y_calls": 699
+      },
+      {
+       "fd": "mktcat->appno",
+       "g3": 0.7715228948722346,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "mktcat->brand",
+       "g3": 0.9838106671239925,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "mktcat->generic",
+       "g3": 0.9653918710341279,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "mktcat->ptype",
+       "g3": 0.07482421540044593,
+       "certified": false,
+       "samples": 600,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "mktcat->labeler_e2",
+       "g3": 0.9008489109929686,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "mktcat->labeler_e8",
+       "g3": 0.9057280054879094,
+       "certified": false,
+       "samples": 100,
+       "calls": 14,
+       "y_calls": 14
+      },
+      {
+       "fd": "ptype->labcode",
+       "g3": 0.9300034299434059,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "ptype->labeler",
+       "g3": 0.9088149545532499,
+       "certified": false,
+       "samples": 100,
+       "calls": 8,
+       "y_calls": 8
+      },
+      {
+       "fd": "ptype->appno",
+       "g3": 0.8480106328245585,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "ptype->brand",
+       "g3": 0.9913908420511062,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "ptype->generic",
+       "g3": 0.9765992111130166,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "ptype->mktcat",
+       "g3": 0.27228605728005484,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "ptype->labeler_e2",
+       "g3": 0.9099296861601783,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "ptype->labeler_e8",
+       "g3": 0.9134453781512605,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e2->labcode",
+       "g3": 0.1466215057451552,
+       "certified": false,
+       "samples": 200,
+       "calls": 44,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e2->appno",
+       "g3": 0.6298662322071686,
+       "certified": false,
+       "samples": 100,
+       "calls": 18,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e2->brand",
+       "g3": 0.891399416909621,
+       "certified": false,
+       "samples": 100,
+       "calls": 25,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e2->generic",
+       "g3": 0.8332704510375579,
+       "certified": false,
+       "samples": 100,
+       "calls": 18,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e2->mktcat",
+       "g3": 0.11191047847710511,
+       "certified": false,
+       "samples": 400,
+       "calls": 69,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e2->ptype",
+       "g3": 0.0361944777911164,
+       "certified": true,
+       "samples": 1200,
+       "calls": 210,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e8->labcode",
+       "g3": 0.19859372320356716,
+       "certified": false,
+       "samples": 200,
+       "calls": 32,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e8->appno",
+       "g3": 0.6485937232035671,
+       "certified": false,
+       "samples": 100,
+       "calls": 12,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e8->brand",
+       "g3": 0.8963299605556508,
+       "certified": false,
+       "samples": 100,
+       "calls": 18,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e8->generic",
+       "g3": 0.8422140284685302,
+       "certified": false,
+       "samples": 100,
+       "calls": 17,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e8->mktcat",
+       "g3": 0.1466472303206997,
+       "certified": false,
+       "samples": 200,
+       "calls": 22,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e8->ptype",
+       "g3": 0.06612930886640367,
+       "certified": false,
+       "samples": 1000,
+       "calls": 126,
+       "y_calls": 0
+      }
+     ]
+    }
+   }
+  },
+  {
+   "dataset": "ndc116620",
+   "seed": 2,
+   "rows": 116620,
+   "n_cands": 66,
+   "n_true": 10,
+   "variants": {
+    "plain": {
+     "false": [],
+     "missed": [],
+     "n_cert": 10,
+     "calls": 6324,
+     "calls_fwd_inv": [
+      3880,
+      2444
+     ],
+     "canon_all": 6653,
+     "sec": 10.385209254920483,
+     "fds": [
+      {
+       "fd": "labcode->labeler",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 226,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->appno",
+       "g3": 0.6144743611730407,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->brand",
+       "g3": 0.8807065683416224,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->generic",
+       "g3": 0.8202538158120392,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->mktcat",
+       "g3": 0.09551534899674152,
+       "certified": false,
+       "samples": 1500,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->ptype",
+       "g3": 0.02483279025896068,
+       "certified": true,
+       "samples": 500,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->labeler_e2",
+       "g3": 0.019559252272337457,
+       "certified": true,
+       "samples": 900,
+       "calls": 398,
+       "y_calls": null
+      },
+      {
+       "fd": "labcode->labeler_e8",
+       "g3": 0.07885439890241808,
+       "certified": false,
+       "samples": 2400,
+       "calls": 591,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler->labcode",
+       "g3": 0.12845138055222094,
+       "certified": false,
+       "samples": 300,
+       "calls": 367,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler->appno",
+       "g3": 0.6233064654433202,
+       "certified": false,
+       "samples": 100,
+       "calls": 58,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler->brand",
+       "g3": 0.8895129480363574,
+       "certified": false,
+       "samples": 100,
+       "calls": 21,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler->generic",
+       "g3": 0.8301920768307323,
+       "certified": false,
+       "samples": 100,
+       "calls": 45,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler->mktcat",
+       "g3": 0.09980277825415884,
+       "certified": false,
+       "samples": 1000,
+       "calls": 586,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler->ptype",
+       "g3": 0.0258446235637112,
+       "certified": true,
+       "samples": 1500,
+       "calls": 624,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->labcode",
+       "g3": 0.6711713256731264,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->labeler",
+       "g3": 0.6527096552906877,
+       "certified": false,
+       "samples": 100,
+       "calls": 9,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->brand",
+       "g3": 0.4967672783399074,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->generic",
+       "g3": 0.40439032755959525,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->mktcat",
+       "g3": 0.02904304578974448,
+       "certified": true,
+       "samples": 1000,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->ptype",
+       "g3": 0.016412279197393298,
+       "certified": true,
+       "samples": 600,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->labeler_e2",
+       "g3": 0.6576487737952323,
+       "certified": false,
+       "samples": 100,
+       "calls": 15,
+       "y_calls": null
+      },
+      {
+       "fd": "appno->labeler_e8",
+       "g3": 0.6725776024695593,
+       "certified": false,
+       "samples": 100,
+       "calls": 11,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->labcode",
+       "g3": 0.4716943920425313,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->labeler",
+       "g3": 0.45790601955067745,
+       "certified": false,
+       "samples": 100,
+       "calls": 10,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->appno",
+       "g3": 0.34377465271823016,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->generic",
+       "g3": 0.08426513462527874,
+       "certified": false,
+       "samples": 2100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->mktcat",
+       "g3": 0.030586520322414712,
+       "certified": true,
+       "samples": 2600,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->ptype",
+       "g3": 0.010847196021265604,
+       "certified": true,
+       "samples": 400,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->labeler_e2",
+       "g3": 0.46308523409363744,
+       "certified": false,
+       "samples": 100,
+       "calls": 14,
+       "y_calls": null
+      },
+      {
+       "fd": "brand->labeler_e8",
+       "g3": 0.47862287772251755,
+       "certified": false,
+       "samples": 100,
+       "calls": 17,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->labcode",
+       "g3": 0.6718744640713428,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->labeler",
+       "g3": 0.6590207511576058,
+       "certified": false,
+       "samples": 100,
+       "calls": 9,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->appno",
+       "g3": 0.407357228605728,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->brand",
+       "g3": 0.3298233579145944,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->mktcat",
+       "g3": 0.06799862802263767,
+       "certified": false,
+       "samples": 3000,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->ptype",
+       "g3": 0.023212141999657043,
+       "certified": true,
+       "samples": 1600,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->labeler_e2",
+       "g3": 0.6633339049905677,
+       "certified": false,
+       "samples": 100,
+       "calls": 11,
+       "y_calls": null
+      },
+      {
+       "fd": "generic->labeler_e8",
+       "g3": 0.6762733664894529,
+       "certified": false,
+       "samples": 100,
+       "calls": 9,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->labcode",
+       "g3": 0.92124849939976,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->labeler",
+       "g3": 0.8992625621677243,
+       "certified": false,
+       "samples": 100,
+       "calls": 16,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->appno",
+       "g3": 0.7715228948722346,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->brand",
+       "g3": 0.9838106671239925,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->generic",
+       "g3": 0.9653918710341279,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->ptype",
+       "g3": 0.07482421540044593,
+       "certified": false,
+       "samples": 3700,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->labeler_e2",
+       "g3": 0.9009003601440576,
+       "certified": false,
+       "samples": 100,
+       "calls": 8,
+       "y_calls": null
+      },
+      {
+       "fd": "mktcat->labeler_e8",
+       "g3": 0.905805179214543,
+       "certified": false,
+       "samples": 100,
+       "calls": 10,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->labcode",
+       "g3": 0.9300034299434059,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->labeler",
+       "g3": 0.9088149545532499,
+       "certified": false,
+       "samples": 100,
+       "calls": 11,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->appno",
+       "g3": 0.8480106328245585,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->brand",
+       "g3": 0.9913908420511062,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->generic",
+       "g3": 0.9765992111130166,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->mktcat",
+       "g3": 0.27228605728005484,
+       "certified": false,
+       "samples": 200,
+       "calls": 0,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->labeler_e2",
+       "g3": 0.9100154347453266,
+       "certified": false,
+       "samples": 100,
+       "calls": 15,
+       "y_calls": null
+      },
+      {
+       "fd": "ptype->labeler_e8",
+       "g3": 0.9134625278682902,
+       "certified": false,
+       "samples": 100,
+       "calls": 7,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e2->labcode",
+       "g3": 0.14558394786486017,
+       "certified": false,
+       "samples": 300,
+       "calls": 91,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e2->appno",
+       "g3": 0.6297033098953868,
+       "certified": false,
+       "samples": 100,
+       "calls": 25,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e2->brand",
+       "g3": 0.8912622191733837,
+       "certified": false,
+       "samples": 100,
+       "calls": 21,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e2->generic",
+       "g3": 0.8330818041502315,
+       "certified": false,
+       "samples": 100,
+       "calls": 29,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e2->mktcat",
+       "g3": 0.11179900531641229,
+       "certified": false,
+       "samples": 300,
+       "calls": 71,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e2->ptype",
+       "g3": 0.03612587892299779,
+       "certified": true,
+       "samples": 13800,
+       "calls": 2501,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e8->labcode",
+       "g3": 0.19815640541931057,
+       "certified": false,
+       "samples": 200,
+       "calls": 51,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e8->appno",
+       "g3": 0.6488080946664381,
+       "certified": false,
+       "samples": 100,
+       "calls": 15,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e8->brand",
+       "g3": 0.896424283999314,
+       "certified": false,
+       "samples": 100,
+       "calls": 13,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e8->generic",
+       "g3": 0.8427285199794203,
+       "certified": false,
+       "samples": 100,
+       "calls": 20,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e8->mktcat",
+       "g3": 0.14740181787000517,
+       "certified": false,
+       "samples": 400,
+       "calls": 39,
+       "y_calls": null
+      },
+      {
+       "fd": "labeler_e8->ptype",
+       "g3": 0.06684959698164983,
+       "certified": false,
+       "samples": 3600,
+       "calls": 360,
+       "y_calls": null
+      }
+     ]
+    },
+    "group": {
+     "false": [],
+     "missed": [],
+     "n_cert": 10,
+     "calls": 7899,
+     "calls_fwd_inv": [
+      6653,
+      1246
+     ],
+     "canon_all": 6653,
+     "sec": 11.009400099515915,
+     "fds": [
+      {
+       "fd": "labcode->labeler",
+       "g3": 0.0,
+       "certified": true,
+       "samples": 300,
+       "calls": 503,
+       "y_calls": 503
+      },
+      {
+       "fd": "labcode->appno",
+       "g3": 0.6144743611730407,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "labcode->brand",
+       "g3": 0.8807065683416224,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "labcode->generic",
+       "g3": 0.8202538158120392,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "labcode->mktcat",
+       "g3": 0.09551534899674152,
+       "certified": false,
+       "samples": 500,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "labcode->ptype",
+       "g3": 0.02483279025896068,
+       "certified": true,
+       "samples": 700,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "labcode->labeler_e2",
+       "g3": 0.019559252272337457,
+       "certified": true,
+       "samples": 600,
+       "calls": 855,
+       "y_calls": 855
+      },
+      {
+       "fd": "labcode->labeler_e8",
+       "g3": 0.07885439890241808,
+       "certified": false,
+       "samples": 600,
+       "calls": 856,
+       "y_calls": 856
+      },
+      {
+       "fd": "labeler->labcode",
+       "g3": 0.12845138055222094,
+       "certified": false,
+       "samples": 200,
+       "calls": 169,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler->appno",
+       "g3": 0.6233064654433202,
+       "certified": false,
+       "samples": 100,
+       "calls": 70,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler->brand",
+       "g3": 0.8895129480363574,
+       "certified": false,
+       "samples": 100,
+       "calls": 55,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler->generic",
+       "g3": 0.8301920768307323,
+       "certified": false,
+       "samples": 100,
+       "calls": 55,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler->mktcat",
+       "g3": 0.09980277825415884,
+       "certified": false,
+       "samples": 400,
+       "calls": 191,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler->ptype",
+       "g3": 0.0258446235637112,
+       "certified": true,
+       "samples": 700,
+       "calls": 285,
+       "y_calls": 0
+      },
+      {
+       "fd": "appno->labcode",
+       "g3": 0.6711713256731264,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "appno->labeler",
+       "g3": 0.6527096552906877,
+       "certified": false,
+       "samples": 100,
+       "calls": 2980,
+       "y_calls": 2980
+      },
+      {
+       "fd": "appno->brand",
+       "g3": 0.4967672783399074,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "appno->generic",
+       "g3": 0.40439032755959525,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "appno->mktcat",
+       "g3": 0.02904304578974448,
+       "certified": true,
+       "samples": 900,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "appno->ptype",
+       "g3": 0.016412279197393298,
+       "certified": true,
+       "samples": 500,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "appno->labeler_e2",
+       "g3": 0.6576487737952323,
+       "certified": false,
+       "samples": 100,
+       "calls": 208,
+       "y_calls": 208
+      },
+      {
+       "fd": "appno->labeler_e8",
+       "g3": 0.6725776024695593,
+       "certified": false,
+       "samples": 100,
+       "calls": 120,
+       "y_calls": 120
+      },
+      {
+       "fd": "brand->labcode",
+       "g3": 0.4716943920425313,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "brand->labeler",
+       "g3": 0.45790601955067745,
+       "certified": false,
+       "samples": 100,
+       "calls": 33,
+       "y_calls": 33
+      },
+      {
+       "fd": "brand->appno",
+       "g3": 0.34377465271823016,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "brand->generic",
+       "g3": 0.08426513462527874,
+       "certified": false,
+       "samples": 800,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "brand->mktcat",
+       "g3": 0.030586520322414712,
+       "certified": true,
+       "samples": 1200,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "brand->ptype",
+       "g3": 0.010847196021265604,
+       "certified": true,
+       "samples": 400,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "brand->labeler_e2",
+       "g3": 0.46308523409363744,
+       "certified": false,
+       "samples": 100,
+       "calls": 13,
+       "y_calls": 13
+      },
+      {
+       "fd": "brand->labeler_e8",
+       "g3": 0.47862287772251755,
+       "certified": false,
+       "samples": 100,
+       "calls": 130,
+       "y_calls": 130
+      },
+      {
+       "fd": "generic->labcode",
+       "g3": 0.6718744640713428,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "generic->labeler",
+       "g3": 0.6590207511576058,
+       "certified": false,
+       "samples": 100,
+       "calls": 50,
+       "y_calls": 50
+      },
+      {
+       "fd": "generic->appno",
+       "g3": 0.407357228605728,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "generic->brand",
+       "g3": 0.3298233579145944,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "generic->mktcat",
+       "g3": 0.06799862802263767,
+       "certified": false,
+       "samples": 1000,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "generic->ptype",
+       "g3": 0.023212141999657043,
+       "certified": true,
+       "samples": 800,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "generic->labeler_e2",
+       "g3": 0.6633339049905677,
+       "certified": false,
+       "samples": 100,
+       "calls": 45,
+       "y_calls": 45
+      },
+      {
+       "fd": "generic->labeler_e8",
+       "g3": 0.6762733664894529,
+       "certified": false,
+       "samples": 100,
+       "calls": 30,
+       "y_calls": 30
+      },
+      {
+       "fd": "mktcat->labcode",
+       "g3": 0.92124849939976,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "mktcat->labeler",
+       "g3": 0.8992625621677243,
+       "certified": false,
+       "samples": 100,
+       "calls": 610,
+       "y_calls": 610
+      },
+      {
+       "fd": "mktcat->appno",
+       "g3": 0.7715228948722346,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "mktcat->brand",
+       "g3": 0.9838106671239925,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "mktcat->generic",
+       "g3": 0.9653918710341279,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "mktcat->ptype",
+       "g3": 0.07482421540044593,
+       "certified": false,
+       "samples": 600,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "mktcat->labeler_e2",
+       "g3": 0.9009003601440576,
+       "certified": false,
+       "samples": 100,
+       "calls": 21,
+       "y_calls": 21
+      },
+      {
+       "fd": "mktcat->labeler_e8",
+       "g3": 0.905805179214543,
+       "certified": false,
+       "samples": 100,
+       "calls": 3,
+       "y_calls": 3
+      },
+      {
+       "fd": "ptype->labcode",
+       "g3": 0.9300034299434059,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "ptype->labeler",
+       "g3": 0.9088149545532499,
+       "certified": false,
+       "samples": 100,
+       "calls": 3,
+       "y_calls": 3
+      },
+      {
+       "fd": "ptype->appno",
+       "g3": 0.8480106328245585,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "ptype->brand",
+       "g3": 0.9913908420511062,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "ptype->generic",
+       "g3": 0.9765992111130166,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "ptype->mktcat",
+       "g3": 0.27228605728005484,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "ptype->labeler_e2",
+       "g3": 0.9100154347453266,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "ptype->labeler_e8",
+       "g3": 0.9134625278682902,
+       "certified": false,
+       "samples": 100,
+       "calls": 0,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e2->labcode",
+       "g3": 0.14558394786486017,
+       "certified": false,
+       "samples": 200,
+       "calls": 43,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e2->appno",
+       "g3": 0.6297033098953868,
+       "certified": false,
+       "samples": 100,
+       "calls": 15,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e2->brand",
+       "g3": 0.8912622191733837,
+       "certified": false,
+       "samples": 100,
+       "calls": 21,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e2->generic",
+       "g3": 0.8330818041502315,
+       "certified": false,
+       "samples": 100,
+       "calls": 20,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e2->mktcat",
+       "g3": 0.11179900531641229,
+       "certified": false,
+       "samples": 200,
+       "calls": 34,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e2->ptype",
+       "g3": 0.03612587892299779,
+       "certified": true,
+       "samples": 1100,
+       "calls": 197,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e8->labcode",
+       "g3": 0.19815640541931057,
+       "certified": false,
+       "samples": 200,
+       "calls": 36,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e8->appno",
+       "g3": 0.6488080946664381,
+       "certified": false,
+       "samples": 100,
+       "calls": 12,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e8->brand",
+       "g3": 0.896424283999314,
+       "certified": false,
+       "samples": 100,
+       "calls": 13,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e8->generic",
+       "g3": 0.8427285199794203,
+       "certified": false,
+       "samples": 100,
+       "calls": 14,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e8->mktcat",
+       "g3": 0.14740181787000517,
+       "certified": false,
+       "samples": 200,
+       "calls": 31,
+       "y_calls": 0
+      },
+      {
+       "fd": "labeler_e8->ptype",
+       "g3": 0.06684959698164983,
+       "certified": false,
+       "samples": 1200,
+       "calls": 178,
+       "y_calls": 0
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "peak_rss_mb": 942.2734375
+}

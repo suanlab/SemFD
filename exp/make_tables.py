@@ -951,6 +951,37 @@ def paper_numbers():
         add("E23 Tax rows sweep (x1-x16, both seeds)", f"calls {min(rows):,}-{max(rows):,} "
             f"(max/min {max(rows) / min(rows):.3f}; largest change vs the unrepeated table {100 * rel:.1f}%); false certifications over all 20 runs "
             f"{sum(len(r['false']) for r in e23)}; runs missing {probe} {sum(probe in r['missed'] for r in e23)}")
+    e24 = {k: load(R / f"e24_group_{k}.json") for k in ("geonames_16k", "tax", "ndc", "gpg", "geonames_640k")
+           if (R / f"e24_group_{k}.json").exists()}           # E24 (pre-registered): entity-group estimator vs the system
+    for key, e in e24.items():
+        runs = e["runs"]
+        ref = (load(R / f"e18_variants_{key}.json")["runs"] if key != "geonames_640k" else
+               [{"variants": {"plain": {"calls": r["ours_calls_total"]}}} for r in load(R / "e1b_geonames_640k.json")])
+        same = all(r["variants"]["plain"]["calls"] == f["variants"]["plain"]["calls"] for r, f in zip(runs, ref))
+        for v in ("plain", "group"):
+            rr = [r["variants"][v] for r in runs]
+            from collections import Counter as _C
+            miss = _C(m for x in rr for m in x["missed"])
+            line = (f"false {sum(len(x['false']) for x in rr)}, missed {sum(len(x['missed']) for x in rr)} {dict(miss)}; "
+                    f"calls/run {np.mean([x['calls'] for x in rr]):,.0f} (fwd {np.mean([x['calls_fwd_inv'][0] for x in rr]):,.0f}, "
+                    f"inv {np.mean([x['calls_fwd_inv'][1] for x in rr]):,.0f}); canon-all {np.mean([x['canon_all'] for x in rr]):,.0f}")
+            if v == "group":
+                rat = [g["calls"] / p["calls"] for g, p in ((r["variants"]["group"], r["variants"]["plain"]) for r in runs)]
+                line += f"; vs plain per run {', '.join(f'{x:.2f}' for x in rat)}x (mean {np.mean(rat):.2f}x)"
+            else:
+                line += f"; equals the saved {'E18 plain' if key != 'geonames_640k' else 'E1b'} calls in every run: {same}"
+            add(f"E24 {key} {v} ({len(rr)} seeds, all unary candidates, complete inverse)", line)
+        fd = {}
+        for r in runs:
+            for g, p in zip(r["variants"]["group"]["fds"], r["variants"]["plain"]["fds"]):
+                fd.setdefault(g["fd"], []).append((g["calls"], p["calls"]))
+        top = sorted(fd.items(), key=lambda kv: -np.mean([g for g, _ in kv[1]]))[:3]
+        add(f"E24 {key} costliest candidates for group (mean calls group vs plain)",
+            "; ".join(f"{k} {np.mean([g for g, _ in v]):,.0f} vs {np.mean([p for _, p in v]):,.0f}" for k, v in top))
+    if e24:
+        rng_ = {k: np.mean([r["variants"]["group"]["calls"] / r["variants"]["plain"]["calls"] for r in e["runs"]]) for k, e in e24.items()}
+        add(f"E24 group vs plain, mean calls ratio per dataset ({len(e24)} datasets)",
+            ", ".join(f"{k} {x:.2f}x" for k, x in rng_.items()) + f"; range {min(rng_.values()):.2f}-{max(rng_.values()):.2f}x")
     e19c =[load(R / f"e19_certify_s{s}.json") for s in range(3) if (R / f"e19_certify_s{s}.json").exists()]
     if (R / "e19_resolve.json").exists() and e19c:          # E19 (pre-registered): live LLM, end to end
         rv = load(R / "e19_resolve.json")
