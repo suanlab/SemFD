@@ -114,7 +114,7 @@ Datasets are not redistributed. `scripts/fetch_data.sh` downloads them from:
 | GLEIF LEI Golden Copy | goldencopy.gleif.org | CC0 1.0 |
 | UK gender pay gap reports | gender-pay-gap.service.gov.uk | Open Government Licence v3.0 |
 | Companies House Free Company Data Product | download.companieshouse.gov.uk | no licence on the download page; Companies House places no restriction on use of register information (s.47 CDPA approvals, GOV.UK "Public task, copyright and Crown copyright"); credited as source; not redistributed |
-| Raha Tax | github.com/BigDaMa/raha | repository Apache-2.0 |
+| Raha Tax (synthetic, generated with BART; Mahdavi and Abedjan, PVLDB 13, Sec. 6.1) | github.com/BigDaMa/raha | repository Apache-2.0 |
 | FDA NDC directory | accessdata.fda.gov | U.S. Government work |
 | MusicBrainz benchmark | Leipzig DAPO | CC BY 4.0 |
 
