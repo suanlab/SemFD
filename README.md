@@ -83,6 +83,7 @@ Requires Python 3.12, CPU only. The paper's runs used a shared server with two I
 uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r requirements.lock \
     --extra-index-url https://download.pytorch.org/whl/cpu --index-strategy unsafe-best-match   # torch==...+cpu is on the PyTorch index only
 ./scripts/fetch_data.sh                       # downloads data; exits 1 on a mismatch with results/icde27/DATA_SNAPSHOTS.txt
+                                              # (or use the archived snapshot, see Data sources below)
 .venv/bin/python -m pytest -q tests/          # unit tests (< 1 min)
 SEMFD_OVERWRITE=1 JOBS=8 ./exp/run_all.sh     # non-LLM experiments, rewriting results/icde27 in place; WITH_E8=1 adds E8/E14 (hours)
 ./exp/run_e19.sh                              # separate live LLM timing study (hours)
@@ -98,7 +99,7 @@ SEMFD_OVERWRITE=1 JOBS=8 ./exp/run_all.sh     # non-LLM experiments, rewriting r
   running the model.
 - **Determinism and drift.** Random streams are seeded per FD with `zlib.crc32`; exact replay also requires the same
   proxy/model versions, caches and execution environment. GeoNames and the FDA NDC directory change upstream, so `fetch_data.sh` stops when a fresh
-  download differs from the snapshot used in the paper (`SEMFD_ALLOW_DRIFT=1` continues; numbers then differ). `run_all.sh` rewrites the committed
+  download differs from the snapshot used in the paper (`SEMFD_ALLOW_DRIFT=1` continues; numbers then differ; the archived snapshot below avoids the drift). `run_all.sh` rewrites the committed
   JSON in place and asks for `SEMFD_OVERWRITE=1`; compare with `git diff results/icde27`. `JOBS` (default 8) limits concurrent jobs and `THREADS` caps
   library threads per job. A full rerun on 2026-10-21 of the 54 jobs then in
   `run_all.sh`, on the paper's snapshots, reproduced every decision, oracle-call count and bound (wall-clock times vary
@@ -107,7 +108,12 @@ SEMFD_OVERWRITE=1 JOBS=8 ./exp/run_all.sh     # non-LLM experiments, rewriting r
 
 ## Data sources and licenses
 
-Datasets are not redistributed. `scripts/fetch_data.sh` downloads them from:
+The input files used for the paper are archived with their original licences at https://doi.org/10.5281/zenodo.23882249,
+except the Companies House file and the exploratory MusicBrainz file. The archive's `verify.sh` unpacks the gzip files into `data/`
+and checks them against their 18 lines of `results/icde27/DATA_SNAPSHOTS.txt`; copy that `data/` into this repository.
+The GPG experiments also need the Companies House file, which `fetch_data.sh` downloads (Companies House may no longer
+serve the 2026-10-01 file).
+`scripts/fetch_data.sh` downloads the current versions from:
 
 | Dataset | Source | License |
 |---|---|---|
