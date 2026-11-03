@@ -982,6 +982,45 @@ def paper_numbers():
         rng_ = {k: np.mean([r["variants"]["group"]["calls"] / r["variants"]["plain"]["calls"] for r in e["runs"]]) for k, e in e24.items()}
         add(f"E24 group vs plain, mean calls ratio per dataset ({len(e24)} datasets)",
             ", ".join(f"{k} {x:.2f}x" for k, x in rng_.items()) + f"; range {min(rng_.values()):.2f}-{max(rng_.values()):.2f}x")
+    if (R / "e25_sec_discovery.json").exists():             # E25 (pre-registered after the 11-03 probe): SEC filer names
+        pr, d = load(R / "e25_sec_probe.json"), load(R / "e25_sec_discovery.json")
+        C, P_ = d["complete"], d["partial"]
+        span = lambda xs, f="{:,}": f.format(min(xs)) + ("" if min(xs) == max(xs) else "-" + f.format(max(xs)))
+        od = lambda fd, k: [r["ours_detail"][fd][k] for r in C]
+        sc = lambda m: f"false {sum(r[m]['false'] for r in C)}, missed {sum(r[m]['missed_true'] for r in C)}"
+        acc = lambda m: sum("name->stprba" in r["false_lists"][m] for r in C)
+        gs = {c["fd"]: c for c in pr["candidates"]}
+        add("E25 SEC table (sub.txt 2015q1-2024q4)",
+            f"rows {pr['rows']:,} (dropped {pr['rows_dropped_ambiguous_name']:,} rows of {pr['ambiguous_names']} names shared by several ciks); "
+            f"ciks {pr['ciks']:,}; names {pr['names']:,}; ciks with several names {pr['multi_name_ciks']:,} "
+            f"({100 * pr['multi_name_tuple_share']:.0f}% of tuples); their name pairs with Levenshtein ratio < 0.9: "
+            f"{pr['multi_name_pairs_lev_below_0.9']:,} of {pr['multi_name_pairs']:,} ({100 * pr['multi_name_pairs_lev_below_0.9'] / pr['multi_name_pairs']:.0f}%)")
+        add("E25 truth", f"{C[0]['n_true']} of {C[0]['n_cands']} unary candidates true under the cik oracle; name->stprba g3 strings "
+            f"{gs['name->stprba']['g3_strings']:.3f}, oracle {gs['name->stprba']['g3_oracle']:.3f}; name->sic oracle {gs['name->sic']['g3_oracle']:.3f}; "
+            f"string-vs-oracle decision flips {sorted({f for r in C for f in r['string_vs_oracle_flips']})}")
+        add(f"E25 ours, complete inverse ({len(C)} seeds)",
+            f"{sc('ours')}; missed {sorted({m for r in C for m in r['missed_lists']['ours']})} with U {span(od('name->sic', 'ub'), '{:.3f}')} "
+            f"at the 20,000-sample cap; name->stprba rejected in {sum(not x for x in od('name->stprba', 'certified'))}/{len(C)} "
+            f"(U {span(od('name->stprba', 'ub'), '{:.3f}')}); calls {span([r['ours_calls_total'] for r in C])} vs canonicalize-all "
+            f"{C[0]['canon_all']:,} ({min(r['ours_calls_total'] for r in C) / C[0]['canon_all']:.2f}-{max(r['ours_calls_total'] for r in C) / C[0]['canon_all']:.2f}x); "
+            f"derived bounds violated {sum(r['derived']['n_violating_bound'] for r in C)} of {sum(r['derived']['n_derived_total'] for r in C)}")
+        add("E25 baselines (summed over seeds)",
+            "; ".join(f"{n}: {sc(m)}, accepts name->stprba in {acc(k)}/{len(C)}" for n, m, k in
+                      (("TANE raw", "b3_tane_raw", "b3_raw"), ("TANE normalized", "b3_tane_norm", "b3_norm"),
+                       ("proxy quotient", "b1_quotient", "b1"), ("no audit", "b9_noaudit", "b9"), ("planner", "planner", "planner")))
+            + f"; planner calls {span([r['planner_calls_total'] for r in C])} ({min(r['planner_calls_total'] for r in C) / C[0]['canon_all']:.2f}-"
+            f"{max(r['planner_calls_total'] for r in C) / C[0]['canon_all']:.2f}x canonicalize-all)")
+        for p in (0.5, 0.0):
+            q = [x for x in P_ if x["p"] == p]
+            add(f"E25 incomplete inverse p={p} (E11 procedure, nu_bar 0, {len(q)} seeds)",
+                f"false {sum(len(x['false']) for x in q)} {sorted({f for x in q for f in x['false']})}; missed {sum(len(x['missed']) for x in q)}; "
+                f"max nu {max(x['nu_max'] for x in q):.3f}")
+        if (R / "e25_sec_nubar.json").exists():
+            n = load(R / "e25_sec_nubar.json")["runs"]
+            add(f"E25 neighbours only, declared nu_bar 0.01 (post-hoc sensitivity, {len(n)} seeds)",
+                f"false {sum(len(r['false']) for r in n)}; name->stprba rejected {sum(not r['fds']['name->stprba']['certified'] for r in n)}/{len(n)} "
+                f"with U {span([r['fds']['name->stprba']['ub'] for r in n], '{:.3f}')}; missed {sum(len(r['missed']) for r in n)} "
+                f"{sorted({m for r in n for m in r['missed']})}")
     e19c =[load(R / f"e19_certify_s{s}.json") for s in range(3) if (R / f"e19_certify_s{s}.json").exists()]
     if (R / "e19_resolve.json").exists() and e19c:          # E19 (pre-registered): live LLM, end to end
         rv = load(R / "e19_resolve.json")

@@ -71,6 +71,8 @@ Experiments in `exp/`:
 | `e20_scaling.py` | pre-registered scaling with rows, domain size and candidate count varied separately (GeoNames) |
 | `e23_scaling_tax.py` | the same three sweeps repeated on Tax (pre-registered, 2 seeds) |
 | `e24_group_baseline.py` | entity-group (modal) estimator under a complete inverse vs the system (pre-registered) |
+| `e25_sec_probe.py`, `e25_sec_discovery.py`, `e25_sec_nubar.py` | SEC EDGAR filer names with the CIK oracle: entry probe and full run (pre-registered), and a post-hoc neighbour-only check with the declared ν̄ = 0.01 |
+| `ra_llm14b.py`, `rebuttal27_summary.py` | after submission, not in the paper: a second LLM oracle (Qwen2.5-14B) on the NDC labeler names (pre-registered), results in `results/rebuttal27/` |
 | `n1_probe_wa.py` | probe for a natural table where the audit could change a decision (Walmart–Amazon brands): entry criterion g3 under the oracle ≤ 2δ with the audit moving the mean across δ; failed (all 12 natural candidates have g3 ≥ 0.153), so the follow-up was not run |
 | `e21_natural_audit.py` | pre-registered check whether the audit changes a decision on natural data (GPG names, NDC labelers; exact means from the truth) |
 | `e3_refine.py` | self-refining witness (power) |
@@ -82,7 +84,7 @@ Requires Python 3.12, CPU only. The paper's runs used a shared server with two I
 ```bash
 uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r requirements.lock \
     --extra-index-url https://download.pytorch.org/whl/cpu --index-strategy unsafe-best-match   # torch==...+cpu is on the PyTorch index only
-./scripts/fetch_data.sh                       # downloads data; exits 1 on a mismatch with results/icde27/DATA_SNAPSHOTS.txt
+SEC_UA='<name> <email>' ./scripts/fetch_data.sh   # downloads data (SEC needs a contact User-Agent); exits 1 on a mismatch with results/icde27/DATA_SNAPSHOTS.txt
                                               # (or use the archived snapshot, see Data sources below)
 .venv/bin/python -m pytest -q tests/          # unit tests (< 1 min)
 SEMFD_OVERWRITE=1 JOBS=8 ./exp/run_all.sh     # non-LLM experiments, rewriting results/icde27 in place; WITH_E8=1 adds E8/E14 (hours)
@@ -109,7 +111,8 @@ SEMFD_OVERWRITE=1 JOBS=8 ./exp/run_all.sh     # non-LLM experiments, rewriting r
 ## Data sources and licenses
 
 The input files used for the paper are archived with their original licences at https://doi.org/10.5281/zenodo.23882249,
-except the Companies House file and the exploratory MusicBrainz file. The archive's `verify.sh` unpacks the gzip files into `data/`
+except the Companies House file, the exploratory MusicBrainz file and the SEC files of E25 (added after the archive;
+`data/sec/fetch.sh` downloads them and `DATA_SNAPSHOTS.txt` lists their hashes). The archive's `verify.sh` unpacks the gzip files into `data/`
 and checks them against their 18 lines of `results/icde27/DATA_SNAPSHOTS.txt`; copy that `data/` into this repository.
 The GPG experiments also need the Companies House file, which `fetch_data.sh` downloads (Companies House may no longer
 serve the 2026-10-01 file).
@@ -123,6 +126,7 @@ serve the 2026-10-01 file).
 | Companies House Free Company Data Product | download.companieshouse.gov.uk | no licence on the download page; Companies House places no restriction on use of register information (s.47 CDPA approvals, GOV.UK "Public task, copyright and Crown copyright"); credited as source; not redistributed |
 | Raha Tax (synthetic, generated with BART; Mahdavi and Abedjan, PVLDB 13, Sec. 6.1) | github.com/BigDaMa/raha | repository Apache-2.0 |
 | FDA NDC directory | accessdata.fda.gov | U.S. Government work |
+| SEC Financial Statement Data Sets (sub.txt 2015q1–2024q4; E25) | sec.gov (needs `SEC_UA='<name> <email>'`, as SEC requires a contact User-Agent) | U.S. Government work |
 | MusicBrainz benchmark | Leipzig DAPO | CC BY 4.0 |
 
 Desbordante (AGPL-3.0) is used as a library. FastRFD is built from its upstream repository and is not redistributed.
@@ -137,5 +141,6 @@ The code in this repository is released under the MIT license (`LICENSE`).
 - FastRFD reads CSV by splitting every line on commas (no quoting), so `b2_fastrfd.py` replaces commas inside values by spaces after Layer-1 normalization. It prints a rule with an empty left-hand side as ` --> [Y(<=d)]`; wrappers before 2026-10-29 dropped those lines, which can hide X → Y for every X. A pre-registered rerun of all 40 saved configuration × t runs with the corrected wrapper (`literature/prereg_b2_recheck_2026-10-29.md`, `results/icde27/b2_recheck/`) printed no such rule and reproduced every count, so the saved B2 results stand. The wrapper now counts them, checks FastRFD's exit code and saves its full output under `results/icde27/logs/`.
 - E23 repeats E20's sweeps on Tax (2 seeds): repeating rows 4× or 16× changed calls by at most 3.7% relative to the unrepeated table, but the domain and candidate sweeps were not monotone, because one injected probe within 0.012 of δ (`zip->city_e8`) took up to 70% of a run's calls and its g3 moves with resampling (0.024–0.060). E23 therefore does not confirm E20's domain and candidate trends on a second dataset. No run made a false certification (0 of 20), but the true probe (g3 0.044–0.048) stopped at the sample cap uncertified in 8 of the 20 runs. The run's random streams start with `e20|e23|` (prereg said `e23`), a naming difference only.
 - E24 (pre-registered) compares the system with a slack-free entity-group estimator that a complete inverse permits: for a sampled tuple, fetch its X-entity's spellings, resolve every Y-value among those tuples and score 1 − modal share (its tuple average is exactly g3; `tests/test_e24_group.py`). Same candidates, α/|C|, confidence sequence and random streams as E18. Neither variant made a false certification. The group estimator missed nothing, but a low-cardinality left-hand side (e.g. country→city) makes it resolve nearly all of dom(Y), so it cost 2.14× the system's calls on GeoNames-16k, 7.33× on Tax, 1.25× on NDC and 8.05× at 640k rows; on GPG, where the system already costs more than resolving, it cost 0.81× and recovered name→sic. The system's runs equal the saved E18/E1b runs. The estimator needs the inverse; the witness also runs without one.
+- E25 (pre-registered in two steps after the first freeze: entry probe, then full run) uses SEC EDGAR submissions 2015–2024 (273,832 rows, 13,110 filers; 30% of the tuples belong to filers with several names, mostly renames). name→stprba holds on strings (g3 0.032) but not on filers (0.063): TANE on raw and normalized strings, the proxy quotient and the estimator without the audit accept it in all 3 seeds, the certificate with inverse access rejects it in all 3, with no false certification over 40 candidates; name→sic stays uncertified at the sample cap, and the cost is 1.31–1.33× resolving. With neighbour sets only and ν̄ = 0 it is certified in all 3 seeds (measured ν 0.048); a post-hoc run with the declared ν̄ = 0.01 rejects it only by that margin (U 0.045–0.049).
 - A replay of NDC E1b reproduced decisions, samples and calls; stored historical bounds were unclipped while the current code reports bounds clipped to [0, 1].
 

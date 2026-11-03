@@ -310,6 +310,13 @@
 - **E24 geonames_640k group (2 seeds, all unary candidates, complete inverse)**: false 0, missed 0 {}; calls/run 250,918 (fwd 246,393, inv 4,525); canon-all 246,493; vs plain per run 7.85, 8.25x (mean 8.05x)
 - **E24 geonames_640k costliest candidates for group (mean calls group vs plain)**: country->city 154,078 vs 108; fcode->city 27,008 vs 74; tz->city 23,196 vs 90
 - **E24 group vs plain, mean calls ratio per dataset (5 datasets)**: geonames_16k 2.14x, tax 7.33x, ndc 1.25x, gpg 0.81x, geonames_640k 8.05x; range 0.81-8.05x
+- **E25 SEC table (sub.txt 2015q1-2024q4)**: rows 273,832 (dropped 1,617 rows of 61 names shared by several ciks); ciks 13,110; names 16,401; ciks with several names 2,832 (30% of tuples); their name pairs with Levenshtein ratio < 0.9: 3,596 of 3,822 (94%)
+- **E25 truth**: 8 of 40 unary candidates true under the cik oracle; name->stprba g3 strings 0.032, oracle 0.063; name->sic oracle 0.039; string-vs-oracle decision flips ['name->stprba']
+- **E25 ours, complete inverse (3 seeds)**: false 0, missed 3; missed ['name->sic'] with U 0.061-0.065 at the 20,000-sample cap; name->stprba rejected in 3/3 (U 0.091-0.104); calls 21,510-21,782 vs canonicalize-all 16,401 (1.31-1.33x); derived bounds violated 0 of 114
+- **E25 baselines (summed over seeds)**: TANE raw: false 3, missed 0, accepts name->stprba in 3/3; TANE normalized: false 3, missed 0, accepts name->stprba in 3/3; proxy quotient: false 3, missed 0, accepts name->stprba in 3/3; no audit: false 3, missed 0, accepts name->stprba in 3/3; planner: false 0, missed 0, accepts name->stprba in 0/3; planner calls 22,762-22,831 (1.39-1.39x canonicalize-all)
+- **E25 incomplete inverse p=0.5 (E11 procedure, nu_bar 0, 3 seeds)**: false 0 []; missed 1; max nu 0.025
+- **E25 incomplete inverse p=0.0 (E11 procedure, nu_bar 0, 3 seeds)**: false 3 ['name->stprba']; missed 0; max nu 0.048
+- **E25 neighbours only, declared nu_bar 0.01 (post-hoc sensitivity, 3 seeds)**: false 0; name->stprba rejected 3/3 with U 0.045-0.049; missed 6 ['cik->sic', 'cityba->stprba', 'name->sic']
 - **E19 resolve arm (live LLM, one process)**: wall 73.0 min (model load 4 s, separate); LLM calls 6,653; summed call latency 73.0 min, median 0.62 s; exact decisions 2 true of 7; load avg 14-34
 - **E19 seed 0 normalized-label differences vs resolve**: 13/3333; oracle mapping differs across arms
 - **E19 certify arm seed 0 (live LLM, neighbour-only, declared nu_bar 0.01)**: wall 37.7 min (proxy 2 s); LLM calls 3,333 (E8 replay 3333); summed call latency 37.6 min, median 0.64 s; false certifications vs resolve arm 0, true FDs not certified 1 (labcode->labeler U=0.04017); answers identical to the E8 cache 3324/3333; load avg 14-30

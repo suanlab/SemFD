@@ -126,6 +126,9 @@ run e20_scaling exp/e20_scaling.py
 run e23_scaling_tax exp/e23_scaling_tax.py
 # E21 (pre-registered): does the audit change a decision on natural data
 run e21_natural_audit exp/e21_natural_audit.py
+# E25 (pre-registered 11-03, probe then full run): SEC filer names with the cik oracle (needs data/sec, SEC_UA for fetching);
+# e25_sec_nubar is a post-hoc sensitivity (declared nu_bar 0.01), labelled as such
+run_shell e25_sec "$P exp/e25_sec_probe.py && $P exp/e25_sec_discovery.py && $P exp/e25_sec_nubar.py"
 # E19 (pre-registered, live local LLM, several hours, needs the GGUF model): exp/run_e19.sh
 # E22 (pre-registered): E19 certify arm replayed against the saved resolve answers (needs results/icde27/e19_*.json)
 run e22_fixed_oracle exp/e22_fixed_oracle_replay.py

@@ -1,0 +1,759 @@
+{
+ "design": "post-hoc sensitivity, see docstring",
+ "nu_bar": 0.01,
+ "runs": [
+  {
+   "seed": 0,
+   "calls": 12393,
+   "fds": {
+    "name->sic": {
+     "certified": true,
+     "ub": 0.03992567126567729,
+     "true": true,
+     "g3": 0.03870256215489787
+    },
+    "name->countryba": {
+     "certified": true,
+     "ub": 0.038356809987824425,
+     "true": true,
+     "g3": 0.016992170381839977
+    },
+    "name->stprba": {
+     "certified": false,
+     "ub": 0.04768920382648075,
+     "true": false,
+     "g3": 0.06293274708580443
+    },
+    "name->cityba": {
+     "certified": false,
+     "ub": 0.1698355981254147,
+     "true": false,
+     "g3": 0.11014052411697683
+    },
+    "name->fye": {
+     "certified": true,
+     "ub": 0.0369449457294543,
+     "true": true,
+     "g3": 0.01771158958777641
+    },
+    "cik->sic": {
+     "certified": false,
+     "ub": 0.04619648825022026,
+     "true": true,
+     "g3": 0.03870256215489787
+    },
+    "cik->countryba": {
+     "certified": true,
+     "ub": 0.0372521598447097,
+     "true": true,
+     "g3": 0.016992170381839977
+    },
+    "cik->stprba": {
+     "certified": false,
+     "ub": 0.07726627642600703,
+     "true": false,
+     "g3": 0.06293274708580443
+    },
+    "cik->cityba": {
+     "certified": false,
+     "ub": 0.1769179844265106,
+     "true": false,
+     "g3": 0.11014052411697683
+    },
+    "cik->fye": {
+     "certified": true,
+     "ub": 0.03645896289873321,
+     "true": true,
+     "g3": 0.01771158958777641
+    },
+    "sic->name": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9362127143650121
+    },
+    "sic->cik": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9362127143650121
+    },
+    "sic->countryba": {
+     "certified": false,
+     "ub": 0.15810008582051965,
+     "true": false,
+     "g3": 0.11941993631131498
+    },
+    "sic->stprba": {
+     "certified": false,
+     "ub": 0.8637869096637433,
+     "true": false,
+     "g3": 0.7374339010780333
+    },
+    "sic->cityba": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.8552433608928102
+    },
+    "sic->fye": {
+     "certified": false,
+     "ub": 0.3207495291098845,
+     "true": false,
+     "g3": 0.21274723187940048
+    },
+    "countryba->name": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9915787782289871
+    },
+    "countryba->cik": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9915787782289871
+    },
+    "countryba->sic": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9066580969353473
+    },
+    "countryba->stprba": {
+     "certified": false,
+     "ub": 0.9726609378231302,
+     "true": false,
+     "g3": 0.7419439656431681
+    },
+    "countryba->cityba": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.8863755879517369
+    },
+    "countryba->fye": {
+     "certified": false,
+     "ub": 0.37478202027815766,
+     "true": false,
+     "g3": 0.22069005813783638
+    },
+    "stprba->name": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9899609979841655
+    },
+    "stprba->cik": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9899609979841655
+    },
+    "stprba->sic": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.8791193140319612
+    },
+    "stprba->countryba": {
+     "certified": false,
+     "ub": 0.10118641700761623,
+     "true": false,
+     "g3": 0.07510809547459751
+    },
+    "stprba->cityba": {
+     "certified": false,
+     "ub": 0.9428803687099392,
+     "true": false,
+     "g3": 0.7149712232317625
+    },
+    "stprba->fye": {
+     "certified": false,
+     "ub": 0.3728306316975478,
+     "true": false,
+     "g3": 0.22300534634374358
+    },
+    "cityba->name": {
+     "certified": false,
+     "ub": 0.9401640963637754,
+     "true": false,
+     "g3": 0.7462531771305034
+    },
+    "cityba->cik": {
+     "certified": false,
+     "ub": 0.93516592421452,
+     "true": false,
+     "g3": 0.7462531771305034
+    },
+    "cityba->sic": {
+     "certified": false,
+     "ub": 0.8820425203716495,
+     "true": false,
+     "g3": 0.6494785123725496
+    },
+    "cityba->countryba": {
+     "certified": true,
+     "ub": 0.03823085855945514,
+     "true": true,
+     "g3": 0.006971427736714442
+    },
+    "cityba->stprba": {
+     "certified": false,
+     "ub": 0.040119290375029835,
+     "true": true,
+     "g3": 0.03272809605889737
+    },
+    "cityba->fye": {
+     "certified": false,
+     "ub": 0.2822196078498575,
+     "true": false,
+     "g3": 0.1803514563674078
+    },
+    "fye->name": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9975934149405475
+    },
+    "fye->cik": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9975934149405475
+    },
+    "fye->sic": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9142905138917292
+    },
+    "fye->countryba": {
+     "certified": false,
+     "ub": 0.15985457336469722,
+     "true": false,
+     "g3": 0.11978877559963774
+    },
+    "fye->stprba": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.8457338806275381
+    },
+    "fye->cityba": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9272948377107131
+    }
+   },
+   "false": [],
+   "missed": [
+    "cik->sic",
+    "cityba->stprba"
+   ]
+  },
+  {
+   "seed": 1,
+   "calls": 12778,
+   "fds": {
+    "name->sic": {
+     "certified": true,
+     "ub": 0.039852846691685,
+     "true": true,
+     "g3": 0.03870256215489787
+    },
+    "name->countryba": {
+     "certified": true,
+     "ub": 0.03786105083402152,
+     "true": true,
+     "g3": 0.016992170381839977
+    },
+    "name->stprba": {
+     "certified": false,
+     "ub": 0.04511020778566008,
+     "true": false,
+     "g3": 0.06293274708580443
+    },
+    "name->cityba": {
+     "certified": false,
+     "ub": 0.10828991089073478,
+     "true": false,
+     "g3": 0.11014052411697683
+    },
+    "name->fye": {
+     "certified": true,
+     "ub": 0.03408977907186883,
+     "true": true,
+     "g3": 0.01771158958777641
+    },
+    "cik->sic": {
+     "certified": false,
+     "ub": 0.04712060462408162,
+     "true": true,
+     "g3": 0.03870256215489787
+    },
+    "cik->countryba": {
+     "certified": true,
+     "ub": 0.03936805762610481,
+     "true": true,
+     "g3": 0.016992170381839977
+    },
+    "cik->stprba": {
+     "certified": false,
+     "ub": 0.07758332827615227,
+     "true": false,
+     "g3": 0.06293274708580443
+    },
+    "cik->cityba": {
+     "certified": false,
+     "ub": 0.16979015277500617,
+     "true": false,
+     "g3": 0.11014052411697683
+    },
+    "cik->fye": {
+     "certified": true,
+     "ub": 0.03988221856040616,
+     "true": true,
+     "g3": 0.01771158958777641
+    },
+    "sic->name": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9362127143650121
+    },
+    "sic->cik": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9362127143650121
+    },
+    "sic->countryba": {
+     "certified": false,
+     "ub": 0.2495370924959804,
+     "true": false,
+     "g3": 0.11941993631131498
+    },
+    "sic->stprba": {
+     "certified": false,
+     "ub": 0.909085573426412,
+     "true": false,
+     "g3": 0.7374339010780333
+    },
+    "sic->cityba": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.8552433608928102
+    },
+    "sic->fye": {
+     "certified": false,
+     "ub": 0.35658342123832354,
+     "true": false,
+     "g3": 0.21274723187940048
+    },
+    "countryba->name": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9915787782289871
+    },
+    "countryba->cik": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9915787782289871
+    },
+    "countryba->sic": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9066580969353473
+    },
+    "countryba->stprba": {
+     "certified": false,
+     "ub": 0.9210837698500475,
+     "true": false,
+     "g3": 0.7419439656431681
+    },
+    "countryba->cityba": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.8863755879517369
+    },
+    "countryba->fye": {
+     "certified": false,
+     "ub": 0.3479316263476695,
+     "true": false,
+     "g3": 0.22069005813783638
+    },
+    "stprba->name": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9899609979841655
+    },
+    "stprba->cik": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9899609979841655
+    },
+    "stprba->sic": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.8791193140319612
+    },
+    "stprba->countryba": {
+     "certified": false,
+     "ub": 0.12183318382846527,
+     "true": false,
+     "g3": 0.07510809547459751
+    },
+    "stprba->cityba": {
+     "certified": false,
+     "ub": 0.9667700482506374,
+     "true": false,
+     "g3": 0.7149712232317625
+    },
+    "stprba->fye": {
+     "certified": false,
+     "ub": 0.3452364738608893,
+     "true": false,
+     "g3": 0.22300534634374358
+    },
+    "cityba->name": {
+     "certified": false,
+     "ub": 0.9688832076706722,
+     "true": false,
+     "g3": 0.7462531771305034
+    },
+    "cityba->cik": {
+     "certified": false,
+     "ub": 0.9760071966455882,
+     "true": false,
+     "g3": 0.7462531771305034
+    },
+    "cityba->sic": {
+     "certified": false,
+     "ub": 0.902268839636996,
+     "true": false,
+     "g3": 0.6494785123725496
+    },
+    "cityba->countryba": {
+     "certified": true,
+     "ub": 0.038451265213510166,
+     "true": true,
+     "g3": 0.006971427736714442
+    },
+    "cityba->stprba": {
+     "certified": true,
+     "ub": 0.03987649490141357,
+     "true": true,
+     "g3": 0.03272809605889737
+    },
+    "cityba->fye": {
+     "certified": false,
+     "ub": 0.49014254351276076,
+     "true": false,
+     "g3": 0.1803514563674078
+    },
+    "fye->name": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9975934149405475
+    },
+    "fye->cik": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9975934149405475
+    },
+    "fye->sic": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9142905138917292
+    },
+    "fye->countryba": {
+     "certified": false,
+     "ub": 0.1936307571825162,
+     "true": false,
+     "g3": 0.11978877559963774
+    },
+    "fye->stprba": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.8457338806275381
+    },
+    "fye->cityba": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9272948377107131
+    }
+   },
+   "false": [],
+   "missed": [
+    "cik->sic"
+   ]
+  },
+  {
+   "seed": 2,
+   "calls": 13652,
+   "fds": {
+    "name->sic": {
+     "certified": false,
+     "ub": 0.04014680017323949,
+     "true": true,
+     "g3": 0.03870256215489787
+    },
+    "name->countryba": {
+     "certified": true,
+     "ub": 0.03962774516711985,
+     "true": true,
+     "g3": 0.016992170381839977
+    },
+    "name->stprba": {
+     "certified": false,
+     "ub": 0.04892836448427709,
+     "true": false,
+     "g3": 0.06293274708580443
+    },
+    "name->cityba": {
+     "certified": false,
+     "ub": 0.10253629641310405,
+     "true": false,
+     "g3": 0.11014052411697683
+    },
+    "name->fye": {
+     "certified": true,
+     "ub": 0.03538694219060603,
+     "true": true,
+     "g3": 0.01771158958777641
+    },
+    "cik->sic": {
+     "certified": false,
+     "ub": 0.04455727338824377,
+     "true": true,
+     "g3": 0.03870256215489787
+    },
+    "cik->countryba": {
+     "certified": true,
+     "ub": 0.038431846920115253,
+     "true": true,
+     "g3": 0.016992170381839977
+    },
+    "cik->stprba": {
+     "certified": false,
+     "ub": 0.08457167251428842,
+     "true": false,
+     "g3": 0.06293274708580443
+    },
+    "cik->cityba": {
+     "certified": false,
+     "ub": 0.20195616685933632,
+     "true": false,
+     "g3": 0.11014052411697683
+    },
+    "cik->fye": {
+     "certified": true,
+     "ub": 0.0391545950879642,
+     "true": true,
+     "g3": 0.01771158958777641
+    },
+    "sic->name": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9362127143650121
+    },
+    "sic->cik": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9362127143650121
+    },
+    "sic->countryba": {
+     "certified": false,
+     "ub": 0.29474498499378265,
+     "true": false,
+     "g3": 0.11941993631131498
+    },
+    "sic->stprba": {
+     "certified": false,
+     "ub": 0.8831827763591069,
+     "true": false,
+     "g3": 0.7374339010780333
+    },
+    "sic->cityba": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.8552433608928102
+    },
+    "sic->fye": {
+     "certified": false,
+     "ub": 0.36250447373405736,
+     "true": false,
+     "g3": 0.21274723187940048
+    },
+    "countryba->name": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9915787782289871
+    },
+    "countryba->cik": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9915787782289871
+    },
+    "countryba->sic": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9066580969353473
+    },
+    "countryba->stprba": {
+     "certified": false,
+     "ub": 0.966083263095542,
+     "true": false,
+     "g3": 0.7419439656431681
+    },
+    "countryba->cityba": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.8863755879517369
+    },
+    "countryba->fye": {
+     "certified": false,
+     "ub": 0.3946303625802705,
+     "true": false,
+     "g3": 0.22069005813783638
+    },
+    "stprba->name": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9899609979841655
+    },
+    "stprba->cik": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9899609979841655
+    },
+    "stprba->sic": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.8791193140319612
+    },
+    "stprba->countryba": {
+     "certified": false,
+     "ub": 0.10540616296878114,
+     "true": false,
+     "g3": 0.07510809547459751
+    },
+    "stprba->cityba": {
+     "certified": false,
+     "ub": 0.992360654879034,
+     "true": false,
+     "g3": 0.7149712232317625
+    },
+    "stprba->fye": {
+     "certified": false,
+     "ub": 0.36117467930829783,
+     "true": false,
+     "g3": 0.22300534634374358
+    },
+    "cityba->name": {
+     "certified": false,
+     "ub": 0.9691208630797412,
+     "true": false,
+     "g3": 0.7462531771305034
+    },
+    "cityba->cik": {
+     "certified": false,
+     "ub": 0.9514963764075681,
+     "true": false,
+     "g3": 0.7462531771305034
+    },
+    "cityba->sic": {
+     "certified": false,
+     "ub": 0.8839124474515114,
+     "true": false,
+     "g3": 0.6494785123725496
+    },
+    "cityba->countryba": {
+     "certified": true,
+     "ub": 0.03536463457219816,
+     "true": true,
+     "g3": 0.006971427736714442
+    },
+    "cityba->stprba": {
+     "certified": false,
+     "ub": 0.0427044177155804,
+     "true": true,
+     "g3": 0.03272809605889737
+    },
+    "cityba->fye": {
+     "certified": false,
+     "ub": 0.28387013626350954,
+     "true": false,
+     "g3": 0.1803514563674078
+    },
+    "fye->name": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9975934149405475
+    },
+    "fye->cik": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9975934149405475
+    },
+    "fye->sic": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9142905138917292
+    },
+    "fye->countryba": {
+     "certified": false,
+     "ub": 0.14844466267836876,
+     "true": false,
+     "g3": 0.11978877559963774
+    },
+    "fye->stprba": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.8457338806275381
+    },
+    "fye->cityba": {
+     "certified": false,
+     "ub": 1.0,
+     "true": false,
+     "g3": 0.9272948377107131
+    }
+   },
+   "false": [],
+   "missed": [
+    "cik->sic",
+    "cityba->stprba",
+    "name->sic"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,131 @@
+{
+ "design": "literature/prereg_rb_sec_probe_2026-11-03.md",
+ "quarters": [
+  "2015q1",
+  "2024q4"
+ ],
+ "sha256_sub": {
+  "sub_2015q1.txt": "7b8e9135ed3e757a37bf110b70d10f005960fc5e2d216f72b337939fdfd1ecb9",
+  "sub_2015q2.txt": "9990e273bf8d48445851593c0850faf2558363cfb9208135d411ec847a577f99",
+  "sub_2015q3.txt": "2ef2b1ec2faa34ffe49dc84b12fee5c4518e71a5c4fec2dd83abac6aeb8bfc30",
+  "sub_2015q4.txt": "90e4189b40223c2c651baf4b4991b37c6f6b7da0fe8419da464f4ddf01035348",
+  "sub_2016q1.txt": "1daa8c5589b4b7679ec9610e5e24dba0f582b2d186143186de91118dccbf9d9d",
+  "sub_2016q2.txt": "9aaea8777cea2996e6d14f595ba1351407c0cc643441b6956753fe719afab030",
+  "sub_2016q3.txt": "c86c01f45c87ada5ad13cd75c76803600814dc531136eec866104a9f1d3a8230",
+  "sub_2016q4.txt": "e55a1274bba3e07cb27a7da02dd932c0743bf12dd2b2eaaf97ca01f97c7f9917",
+  "sub_2017q1.txt": "d1b217900f73851082796fd62a63715cc1d693d03db92cc1611feaf43532aed3",
+  "sub_2017q2.txt": "bf1c8c8f0f125ab32da8deabcbd8a306e57d358e215ec2f2c26f198a7baa6149",
+  "sub_2017q3.txt": "4462a6f224dfa9ae0e511144dd6efe001e73ca302ee17558457c2a649a608cd9",
+  "sub_2017q4.txt": "b8064f8f01634d47728a433bf99d89e90512a083df4453a5b891cd76dddd7ad9",
+  "sub_2018q1.txt": "329d23d92b3494fe264bc69aec420b7cd0c08f89f535d8cbac7295023af81802",
+  "sub_2018q2.txt": "4bf1e2d91223545ed9a5943b95b669f25858471bf55811af9452328664c387b8",
+  "sub_2018q3.txt": "b5772c99e120fb0b4434bdbb86e9851dbed16d71571237eb178d61183c1f17c1",
+  "sub_2018q4.txt": "e8e34077f4b41ac2bdaf46c91e64cd0823c35876e1677ad33a7ba3838e4adf79",
+  "sub_2019q1.txt": "e2f0b40fd5332234da2973e491a33256421b381c80d7a2ab7a9c32cf22d2f0b6",
+  "sub_2019q2.txt": "3fea567e8736663630a36bac19360f18d2ceab4552772415238580940c10d72b",
+  "sub_2019q3.txt": "26df85890173d218cb8b75e54abbb428fcd6943a0111287e49b1296335a78c05",
+  "sub_2019q4.txt": "44ed47fb2a8d3d9a9b1a49282be237290456aaf08859b80c91d9ab3a295f3221",
+  "sub_2020q1.txt": "5c89b0295c403903909c34b9293d9a050f589b0722585f3ee6d6035b16501950",
+  "sub_2020q2.txt": "98b22c06bef3114129df460122f6bb0dc8dc87e217ab393144e56c815f28b09f",
+  "sub_2020q3.txt": "bc21f3f831c75fb4f63952f01dc8823c9537db6a44da020aa8a167e663b325fa",
+  "sub_2020q4.txt": "aa21f0660fed6c25f42ffe6a7b1cb62098bd56f51327aade4884e059a19b5d25",
+  "sub_2021q1.txt": "1b6f2e9bf6d98b959c3150c4c86ccab3f5cfcc640bb66760fe23a44cc5972bfe",
+  "sub_2021q2.txt": "a4abc698a8fe17e33b4e068c0d1d882d4bda80b2c5087a22d0568cf44db1fc9e",
+  "sub_2021q3.txt": "325ebe0b81ae8f58b8838d978964e69c27b29f31a02a6b980af61a3db7236e3c",
+  "sub_2021q4.txt": "2e3112ec4f8e291d091dd20bd584b600f452094930c6838e1e6a582a8c3829ff",
+  "sub_2022q1.txt": "0602161b3e42b93f5497f8c877392237aa6f6f267548813d2c4fb8447af06d2e",
+  "sub_2022q2.txt": "7626538fe45445bd0b926ef15bed0289fccbf97cd8b7a1201688c5c932ab7d90",
+  "sub_2022q3.txt": "bfca5d4af747b5daf2d0c87549460847cf0a80a7dfb180ce7c71028459b0e435",
+  "sub_2022q4.txt": "2329a871f5fc1211f9efbf5de7510f97e852b438b19c67971162a11e162fce84",
+  "sub_2023q1.txt": "cdac82dc4c6cb6ed63b37eabbab49f5c7b7f58e3e0f7495d0280684adbce510c",
+  "sub_2023q2.txt": "ce8187645c8e6ddcd0fe3acad5a9c4f04df1937dd18b40679f02a5a8a2354a54",
+  "sub_2023q3.txt": "39018609468f6ff75d3f79c29bec8b8af266d77b53b9adade9a45365b6909021",
+  "sub_2023q4.txt": "b8124ce83f4f595f0de85c955716a9d683f5e843f8ff14ce2633b2d0079412b7",
+  "sub_2024q1.txt": "4a69e3aa0e42cac4056238f17c260ccb1a35b53cd67c76776c2581818fbfbb66",
+  "sub_2024q2.txt": "b40357b0abfd25415c8512b937d340ad00178e37bac1da937745afbd79589541",
+  "sub_2024q3.txt": "db892c40cddbf8a4d47e351e3f580c317d9bbed36c0e7ca2c4a5097d42549843",
+  "sub_2024q4.txt": "3fe6959d8751761a8ae088e7687ffd28ef86bfeee54314c9bd3f374bc39a8791"
+ },
+ "rows_raw": 275449,
+ "rows_dropped_ambiguous_name": 1617,
+ "ambiguous_names": 61,
+ "rows": 273832,
+ "ciks": 13110,
+ "names": 16401,
+ "multi_name_ciks": 2832,
+ "multi_name_tuple_share": 0.30079756931257123,
+ "multi_name_pairs": 3822,
+ "multi_name_pairs_lev_below_0.9": 3596,
+ "candidates": [
+  {
+   "fd": "name->sic",
+   "g3_strings": 0.02469397294691633,
+   "g3_oracle": 0.03870256215489787,
+   "diff": 0.014008589207981537,
+   "true_oracle": true,
+   "true_strings": true
+  },
+  {
+   "fd": "name->stprba",
+   "g3_strings": 0.032370212393000086,
+   "g3_oracle": 0.06293274708580443,
+   "diff": 0.030562534692804344,
+   "true_oracle": false,
+   "true_strings": true
+  },
+  {
+   "fd": "name->countryba",
+   "g3_strings": 0.008793712933477416,
+   "g3_oracle": 0.016992170381839977,
+   "diff": 0.008198457448362562,
+   "true_oracle": true,
+   "true_strings": true
+  },
+  {
+   "fd": "name->cityba",
+   "g3_strings": 0.06946229805135995,
+   "g3_oracle": 0.11014052411697683,
+   "diff": 0.040678226065616885,
+   "true_oracle": false,
+   "true_strings": false
+  },
+  {
+   "fd": "name->fye",
+   "g3_strings": 0.011057874901399423,
+   "g3_oracle": 0.01771158958777641,
+   "diff": 0.006653714686376988,
+   "true_oracle": true,
+   "true_strings": true
+  },
+  {
+   "fd": "sic->name",
+   "g3_strings": 0.9387580706418533,
+   "g3_oracle": 0.9362127143650121,
+   "diff": -0.0025453562768412707,
+   "true_oracle": false,
+   "true_strings": false
+  },
+  {
+   "fd": "stprba->name",
+   "g3_strings": 0.9902421922930849,
+   "g3_oracle": 0.9899609979841655,
+   "diff": -0.0002811943089193747,
+   "true_oracle": false,
+   "true_strings": false
+  },
+  {
+   "fd": "cityba->name",
+   "g3_strings": 0.7560000292149931,
+   "g3_oracle": 0.7462531771305034,
+   "diff": -0.009746852084489666,
+   "true_oracle": false,
+   "true_strings": false
+  }
+ ],
+ "criteria": {
+  "1_true_name_lhs": true,
+  "2_gap_or_flip": true,
+  "3_multi_share_ge_1pct": true
+ },
+ "pass": true
+}

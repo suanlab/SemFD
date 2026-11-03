@@ -26,6 +26,8 @@ curl -sSfL -o data/ndc/ndctext.zip https://www.accessdata.fda.gov/cder/ndctext.z
 unzip -o -q data/ndc/ndctext.zip -d data/ndc/x
 curl -sSfL -o data/musicbrainz/mb200k.csv.dapo \
   https://dbs.uni-leipzig.de/files/datasets/saeedi/musicbrainz-200-A01.csv.dapo      # CC BY 4.0
+mkdir -p data/sec   # SEC DERA Financial Statement Data Sets, sub.txt 2015q1-2024q4 (U.S. Government work; E25). SEC requires a contact User-Agent:
+if [ -n "${SEC_UA:-}" ]; then data/sec/fetch.sh; else drift "SEC_UA not set (SEC_UA='<name> <email>'); E25 files skipped"; fi
 # verify against the snapshot used for the paper (upstream GeoNames/NDC change over time: a mismatch means drift)
 if sha256sum --quiet -c <(grep -v '^#' results/icde27/DATA_SNAPSHOTS.txt); then
   echo "done: all files match results/icde27/DATA_SNAPSHOTS.txt"
