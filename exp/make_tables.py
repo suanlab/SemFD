@@ -836,7 +836,7 @@ def paper_numbers():
     if len(_sc) == 2:                                          # paper, "Proxies and the miss mass" (hybrid rationale)
         add("E1 GeoNames TF-IDF nbrs + edit score vs hybrid: calls/run (ratio)",
             f"{_sc['_edit']:,.0f} vs {_sc['']:,.0f} ({_sc['_edit'] / _sc['']:.2f}x)")
-    for key in ("geonames_16k", "tax", "ndc", "gpg"):          # E18 variants (pre-registered, literature/prereg_e18_2026-10-23.md)
+    for key in ("geonames_16k", "tax", "ndc", "gpg"):          # E18 variants (pre-registered)
         pp = R / f"e18_variants_{key}.json"
         if not pp.exists():
             continue
@@ -875,7 +875,7 @@ def paper_numbers():
                 f"decision time {min(t):.1f}-{max(t):.1f}x; per dataset calls " + ", ".join(f"{k} {x:.3f}" for k, x in zip(e18s, c)))
         add("E18 peak RSS range (MB, one process per dataset, all variants)",
             f"{min(e['peak_rss_mb'] for e in e18s.values()):.0f}-{max(e['peak_rss_mb'] for e in e18s.values()):.0f}")
-    if (R / "e18_diag_gpg.json").exists():                  # MODIFY.md H1/H2: exact witness means (diagnostic only)
+    if (R / "e18_diag_gpg.json").exists():                  # H1/H2: exact witness means (diagnostic only)
         dg = load(R / "e18_diag_gpg.json")["rows"]
         for v in ("plain", "refine", "refine_warm"):
             rr = [r for r in dg if r["variant"] == v]
@@ -1068,7 +1068,7 @@ def paper_numbers():
         add("E22 run-level counts", f"runs with a false certification {nf} of {len(runs)}"
             + (f" (exact one-sided 95% upper bound on the per-run probability {1 - 0.05 ** (1 / len(runs)):.3f})" if nf == 0 else "")
             + f"; true-FD opportunities missed {len(miss)} of {n_true}")
-        if "offline_fixed_mapping" in e22:                   # added 10-29 (CHECK.md H03): evaluation-only diagnostic
+        if "offline_fixed_mapping" in e22:                   # added 10-29 (external code audit): evaluation-only diagnostic
             off = e22["offline_fixed_mapping"]
             add("E22 offline check of the fixed mapping (all 6,653 labels, no inference)",
                 f"exact g3 < delta matches the reference decision {sum(d['matches_reference'] for d in off)}/{len(off)}; "

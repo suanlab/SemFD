@@ -1,4 +1,4 @@
-"""E24 sanity (prereg_e24_group_baseline_2026-10-31.md): the entity-group estimator's tuple average is exactly g3."""
+"""E24 sanity (pre-registered): the entity-group estimator's tuple average is exactly g3."""
 import sys
 from pathlib import Path
 from types import SimpleNamespace

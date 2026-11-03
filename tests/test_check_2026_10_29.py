@@ -1,4 +1,4 @@
-"""Regressions for the 10-29 audit (CHECK.md H01, H05, M03, L01, L02): FastRFD wrapper, embedding cache
+"""Regressions for the 10-29 audit (external code audit: H01, H05, M03, L01, L02): FastRFD wrapper, embedding cache
 manifest, empty relations, composite separator."""
 import importlib
 import json

@@ -1,4 +1,4 @@
-"""E25 (R-B) post-hoc sensitivity (added after seeing the result; not in the pre-registration): the paper's neighbour-only
+"""E25 post-hoc sensitivity (added after seeing the result; not in the pre-registration): the paper's neighbour-only
 mode with the declared miss mass nu_bar = 0.01 (no inverse), instead of the E11 p = 0 setting with nu_bar = 0, on the
 SEC table. All 40 unary candidates, alpha split over them, seeds 0-2. Writes results/icde27/e25_sec_nubar.json."""
 

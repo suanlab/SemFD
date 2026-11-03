@@ -1,5 +1,5 @@
-"""E21 (pre-registered, literature/prereg_e21_2026-10-24.md): does the cross-cluster audit change a decision on
-NATURAL data? (MODIFY.md P1: "자연 데이터에서 audit가 중요한 결정 또는 검증 작업을 확인").
+"""E21 (pre-registered): does the cross-cluster audit change a decision on
+NATURAL data?.
 
 Natural-alias attributes only, no injected probes: GPG employer names (oracle: company number) and NDC labeler
 names (oracle: labeler-code graph). Left-hand side = the alias-bearing attribute; right-hand sides = every other

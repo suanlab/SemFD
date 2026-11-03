@@ -1,4 +1,4 @@
-"""E20 (pre-registered, literature/prereg_e20_2026-10-24.md): oracle cost with N, D and |C| varied separately.
+"""E20 (pre-registered): oracle cost with N, D and |C| varied separately.
 
 GeoNames, complete inverse, family-wise alpha/|C|, shared oracle caches within a run, 2 seeds.
   rows  : the 16k-city table with every row repeated r = 1, 4, 16 times (N grows, every domain and g3 fixed;

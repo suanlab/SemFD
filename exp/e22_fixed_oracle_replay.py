@@ -1,7 +1,7 @@
-"""E22 (pre-registered, literature/prereg_e22_2026-10-28.md): the E19 certify arm replayed against ONE fixed oracle,
+"""E22 (pre-registered): the E19 certify arm replayed against ONE fixed oracle,
 the LLM answers the E19 resolve run saved for every labeler name. No LLM is called. Reference decisions are the
 resolve arm's exact decisions (g3 under the same labels < delta). Seeds 0-2 match E19; 3-9 are new.
-Also recorded, offline from the full fixed mapping (evaluation only, added 10-29 after the CHECK.md audit): each
+Also recorded, offline from the full fixed mapping (evaluation only, added 10-29 after an external code audit): each
 candidate's exact g3 under these labels and the miss mass nu of the neighbour-only witness, to check nu <= nu_bar.
 Output: results/icde27/e22_fixed_oracle.json
 """

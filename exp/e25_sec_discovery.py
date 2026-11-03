@@ -1,4 +1,4 @@
-"""E25 (R-B) full run (pre-registered, literature/prereg_rb_sec_full_2026-11-03.md): SEC EDGAR filer names, cik as the
+"""E25 full run (pre-registered): SEC EDGAR filer names, cik as the
 oracle. Reuses exp/e1b_discovery.run_one (complete inverse, baselines, closure) and the E11 incomplete-inverse
 procedure unchanged; the loader lives here so that semfd/ is not modified. Writes results/icde27/e25_sec_discovery.json.
 """

@@ -1,4 +1,4 @@
-"""N1 probe (literature/improvement_plan_2026-10-28.md, item N1): is there a NATURAL candidate on Walmart-Amazon
+"""N1 probe: is there a NATURAL candidate on Walmart-Amazon
 (DeepMatcher benchmark, gold product matches) where the cross-cluster audit could change a decision?
 Probe only, not an experiment: no certification runs. Pass criterion fixed in the plan before running:
 some candidate with g3_oracle <= 2*delta and mu_i < delta <= mu (the audit's mass covers the gap to delta).

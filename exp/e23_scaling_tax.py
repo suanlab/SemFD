@@ -1,4 +1,4 @@
-"""E23 (pre-registered, literature/prereg_e23_2026-10-28.md): E20's N / D / |C| separation repeated on Tax.
+"""E23 (pre-registered): E20's N / D / |C| separation repeated on Tax.
   rows  : the 25k-row Tax sample with every row repeated r = 1, 4, 16 times (N grows; domains and g3 fixed).
   dom   : Tax samples of 12.5k, 50k and 200k rows, each resampled with replacement to N = 60,000 rows (D grows).
   cands : the 50k-row sample, nested subsets (fixed random order) of all unary candidates of size 8, 16, 32, all.

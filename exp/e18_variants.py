@@ -1,4 +1,4 @@
-"""E18 (paper Sec. VI; pre-registered in literature/prereg_e18_2026-10-23.md): variants of unary discovery.
+"""E18 (paper Sec. VI; pre-registered): variants of unary discovery.
 
 Same candidates, oracles (complete inverse), alpha/|C| and per-candidate random streams as E1b, so every variant is
 paired with E1b's plain run (the 'plain' variant must reproduce e1b_*.json exactly). Variants:

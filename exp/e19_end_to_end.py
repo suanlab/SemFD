@@ -1,4 +1,4 @@
-"""E19 (pre-registered, literature/prereg_e19_2026-10-23.md): end-to-end wall clock with a live LLM oracle.
+"""E19 (pre-registered): end-to-end wall clock with a live LLM oracle.
 
 NDC labeler names, the seven natural candidates of E8, the same local model and prompt as E8
 (exp/e8_llm_oracle.py), one process, the same number of threads, an EMPTY answer cache at the start of each arm.

@@ -1,4 +1,4 @@
-"""E24 (pre-registered in literature/prereg_e24_group_baseline_2026-10-31.md): entity-group (modal) estimator
+"""E24 (pre-registered): entity-group (modal) estimator
 under a complete inverse, against the system, on E18's unary discovery setting.
 
 Same candidates, oracles (complete inverse), alpha/|C|, confidence sequence, stopping rule and per-candidate random

@@ -1,4 +1,4 @@
-"""Diagnostic for E18 (MODIFY.md Sec. 8, H1 vs H2): why does the self-refining witness not recover GPG name -> sic?
+"""Diagnostic for E18 (hypotheses H1 vs H2): why does the self-refining witness not recover GPG name -> sic?
 
 Replays E18's candidate sequence (same oracles, complete inverse, alpha/|C|, random streams) for the plain, refine and
 refine_warm variants and, for name -> sic only, computes from the oracle truth (diagnostic only, never an algorithm

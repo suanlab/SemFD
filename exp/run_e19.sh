@@ -1,6 +1,6 @@
 #!/bin/bash
 set -euo pipefail
-# E19 run order fixed in literature/prereg_e19_2026-10-23.md
+# E19 run order fixed in the pre-registration
 cd "$(dirname "$0")/.." || exit 1
 mkdir -p logs
 PY=${PYTHON:-.venv/bin/python}

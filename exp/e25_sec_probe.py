@@ -1,4 +1,4 @@
-"""E25 (R-B) entry probe (pre-registered, literature/prereg_rb_sec_probe_2026-11-03.md): SEC EDGAR filer names as a
+"""E25 entry probe (pre-registered): SEC EDGAR filer names as a
 natural-alias table, cik as the oracle. Exact g3 on Layer-1 strings vs under the cik oracle for a fixed candidate
 list; share of multi-name ciks. No sampling, no oracle-call accounting. Writes results/icde27/e25_sec_probe.json.
 """
